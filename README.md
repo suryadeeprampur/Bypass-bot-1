@@ -1,4 +1,6 @@
-Automatically bypass many shortlink sites to skip annoying link shorteners, such as AdFly and Linkvertise, without ads. Reach your destination link more directly.
+Debloated fork of bypass-all-shortlinks.
+
+Automatically bypass many shortlink sites, skip annoying link shorteners, like AdFly or Linkvertise.
 
 ## Install
 Install by clicking this link with the [raw text for the file Bypass_All_Shortlinks.user.js](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)
