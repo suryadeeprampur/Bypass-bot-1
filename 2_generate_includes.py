@@ -22,9 +22,16 @@ def extract_regex_from_js(js_code):
 
 def regex_to_include_line(regex):
     #regex = regex.strip("/")
-    regex = '(' + regex + ')'
-    include_line = "// @include /^(https?:\/\/)(.+)?" + regex + "(\/.*)/"
-    include_line = include_line.replace( "\.*)(\/.*)/", "\.*)/" ) #clean excess in the regex
+
+    #Use @include for more complex regex
+    if '|' in regex:
+        regex = '(' + regex + ')'
+        include_line = "// @include /^(https?:\/\/)(.+)?" + regex + "(\/.*)/"
+        include_line = include_line.replace( "\.*)(\/.*)/", "\.*)/" ) #clean excess in the regex
+
+    #Use @match for simpler regex
+    else:
+        include_line = '// @match *://*.' + regex + '/*'
 
     return include_line
 
