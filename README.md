@@ -1,6 +1,6 @@
 Debloated fork of bypass-all-shortlinks.
 
-Automatically bypass many shortlink sites, skip annoying link shorteners, like AdFly or Linkvertise.
+Automatically bypass many link shorteners [(supported_sites.txt)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/supported_sites.txt)
 
 ## Install
 Install by clicking this link with the [raw text for the file Bypass_All_Shortlinks.user.js](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)
