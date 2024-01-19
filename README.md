@@ -3,7 +3,7 @@ Debloated fork of bypass-all-shortlinks.
 Automatically bypass many link shorteners [(supported_sites.txt)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/supported_sites.txt)
 
 ## Install
-Install by clicking this link with the [raw text for the file Bypass_All_Shortlinks.user.js](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)
+Install with [this link](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)
 
 (you need a userscript manager like [Violentmonkey](https://violentmonkey.github.io/) installed in your web browser)
 
