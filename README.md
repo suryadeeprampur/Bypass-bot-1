@@ -1,4 +1,4 @@
-Debloated fork of bypass-all-shortlinks.
+Debloated fork of *bypass-all-shortlinks*.
 
 Automatically bypass many link shorteners [(supported_sites.txt)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/supported_sites.txt)
 
