@@ -44,7 +44,7 @@ def write_to_file(filename, lines):
 
 def compile_and_print(regex_strings):
     #for regex_string in regex_strings: print(regex_string)
-    #write_to_file('regexs.txt', regex_strings)
+    write_to_file('supported_sites.txt', regex_strings)
 
     include_lines = generate_include_lines(regex_strings)
     print(f"OK: Generated {len(include_lines)} include lines.")
@@ -52,9 +52,14 @@ def compile_and_print(regex_strings):
     #for line in include_lines: print(line)
     write_to_file('includes.txt', include_lines)
 
+def remove_strings_containing_word(word, string_list):
+    return [s for s in string_list if word not in s]
+
 def filter_strings(input_list):
     filtered_list = [string for string in input_list if "." in string and len(string) >= 4]
+    filtered_list = remove_strings_containing_word("google", filtered_list)
     return filtered_list
+
 
 def main():
     file_path = 'untouched_Bypass_All_Shortlinks.user.js'

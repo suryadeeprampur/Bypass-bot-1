@@ -146,7 +146,6 @@
 // @include /^(https?:\/\/)(.+)?(racaty.io)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(racedepartment.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(mega4up.org)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(docs.google.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(uploadhaven.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(novafile.org)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(k2s.cc)(\/.*)/
@@ -192,7 +191,6 @@
 // @include /^(https?:\/\/)(.+)?(filedm.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(gogodl.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(turbobit.net)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(drive.google.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(4shared.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(1ink.cc)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(keeplinks.org)(\/.*)/
@@ -294,7 +292,6 @@
 // @include /^(https?:\/\/)(.+)?(forexrw7.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(newassets.hcaptcha.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(challenges.cloudflare.com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(www.google.com|recaptcha.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((fc-lc|loaninsurehub).com|fc-lc.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(mneyvip.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(jobform.in)(\/.*)/
@@ -589,7 +586,6 @@
 // @include /^(https?:\/\/)(.+)?(multiup.org)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(modsfire.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(pixeldrain.com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(www.google.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(social-unlock.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(networkhint.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(hostratgeber.de)(\/.*)/
@@ -739,7 +735,6 @@
 // @include /^(https?:\/\/)(.+)?(gos2.urlcash.click)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(goes3.urlcash.click)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(r1.foxylinks.site)(\/.*)/
-// @exclude-match *://*google.com/*
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|cloud.google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js

@@ -18,7 +18,7 @@ def modify_script(input_script_path, includes_file_path, output_script_path):
     script_lines = [line for line in script_lines if not line.startswith('// @include')]
 
     # Insert includes and excludes content after the last description line
-    excludes_content = "// @exclude-match *://*google.com/*\n"
+    excludes_content = '' ###"// @exclude-match *://*google.com/*\n"
     script_lines.insert(last_description_line_index + 1, includes_content + excludes_content)
 
     # Write the modified script to the output file
