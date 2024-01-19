@@ -38,9 +38,10 @@ def modify_script_extra(file_path):
 
             #Change source URL
             content = content.replace("https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.user.js",
-                                    "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js")
+                                      "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js")
+            
             content = content.replace("https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.meta.js",
-                                    "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js")
+                                      "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js")
 
             #Remove tracking
             content = content.replace("'https://rotator.nurul-huda.sch.id/?BypassResults=' + url", "'' + url")
@@ -60,9 +61,12 @@ def modify_script_extra(file_path):
         print(f"An error occurred: {e}")
 
 
-# Example usage
-input_script_path = 'untouched_Bypass_All_Shortlinks.user.js'
-includes_file_path = 'includes.txt'
-output_script_path = 'Bypass_All_Shortlinks.user.js'
-modify_script(input_script_path, includes_file_path, output_script_path)
-modify_script_extra(output_script_path)
+def main():
+    input_script_path = 'untouched_Bypass_All_Shortlinks.user.js'
+    includes_file_path = 'includes.txt'
+    output_script_path = 'Bypass_All_Shortlinks.user.js'
+    modify_script(input_script_path, includes_file_path, output_script_path)
+    modify_script_extra(output_script_path)
+
+if __name__ == "__main__":
+    main()
