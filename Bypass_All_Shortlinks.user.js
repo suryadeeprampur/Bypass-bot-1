@@ -116,7 +116,7 @@
 // @match *://*.adbtc.top/*
 // @match *://*.youtube.com/*
 // @match *://*.upload.ee/*
-// @match *://*.appdrive\.*/*
+// @include /^(https?:\/\/)(.+)?(appdrive\.*)/
 // @match *://*.dddrive.me/*
 // @match *://*.uppit.com/*
 // @match *://*.krakenfiles.com/*
@@ -136,8 +136,8 @@
 // @match *://*.files.fm/*
 // @match *://*.megaup.net/*
 // @match *://*.4fnet.org/*
-// @match *://*.oxy\.*/*
-// @match *://*.gdtot\.*/*
+// @include /^(https?:\/\/)(.+)?(oxy\.*)/
+// @include /^(https?:\/\/)(.+)?(gdtot\.*)/
 // @match *://*.mp4upload.com/*
 // @match *://*.drop.download/*
 // @match *://*.workupload.com/*
@@ -335,7 +335,7 @@
 // @include /^(https?:\/\/)(.+)?(writedroid.eu.org|modmania.eu.org|writedroid.in|mytop5.club)(\/.*)/
 // @match *://*.computerpedia.in/*
 // @match *://*.finance.uploadsoon.com/*
-// @match *://*.adclicker\.*/*
+// @include /^(https?:\/\/)(.+)?(adclicker\.*)/
 // @include /^(https?:\/\/)(.+)?(offers4crypto.xyz|ewall.biz)(\/.*)/
 // @match *://*.dl.lk21static.xyz/*
 // @match *://*.easylink.gamingwithtr.com/*

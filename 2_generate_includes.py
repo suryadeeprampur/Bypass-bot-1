@@ -24,7 +24,7 @@ def regex_to_include_line(regex):
     #regex = regex.strip("/")
 
     #Use @include for more complex regex
-    if '|' in regex:
+    if any(char in regex for char in ['|', '(', ')', '*']):
         regex = '(' + regex + ')'
         include_line = "// @include /^(https?:\/\/)(.+)?" + regex + "(\/.*)/"
         include_line = include_line.replace( "\.*)(\/.*)/", "\.*)/" ) #clean excess in the regex
