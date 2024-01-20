@@ -41,8 +41,13 @@ def generate_include_lines(regex_list):
         include_line = regex_to_include_line(regex)
         include_lines.append(include_line)
 
-    #Manual additions of lines
+    # Manual additions of lines
+
+    ## -Adding this so that captchas can be auto-opened by this userscript
     include_lines.append('// @match *://*/recaptcha/api2/*')
+
+    ## -Adding this as a go-to URL for accessing the settings menu in this userscript
+    include_lines.append('// @match https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated*')
 
     return include_lines
 
