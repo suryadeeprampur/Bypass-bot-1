@@ -41,6 +41,9 @@ def generate_include_lines(regex_list):
         include_line = regex_to_include_line(regex)
         include_lines.append(include_line)
 
+    #Manual additions of lines
+    include_lines.append('// @match *://*/recaptcha/api2/*')
+
     return include_lines
 
 def write_to_file(filename, lines):
@@ -74,8 +77,13 @@ def main():
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             js_code = file.read()
+
             regex_strings = extract_regex_from_js(js_code)
             regex_strings = filter_strings(regex_strings)
+
+            #Manual additions
+            regex_strings.append('shrinkme.us')
+
             compile_and_print(regex_strings)
     except FileNotFoundError:
         print(f"Error: File '{file_path}' not found.")
