@@ -67,14 +67,6 @@ def compile_and_print(regex_strings):
     #for line in include_lines: print(line)
     write_to_file('includes.txt', include_lines)
 
-def remove_strings_containing_word(word, string_list):
-    return [s for s in string_list if word not in s]
-
-def filter_strings(input_list):
-    filtered_list = [string for string in input_list if "." in string and len(string) >= 4]
-    filtered_list = remove_strings_containing_word("google", filtered_list)
-    return filtered_list
-
 
 def main():
     file_path = 'untouched_Bypass_All_Shortlinks.user.js'
@@ -84,10 +76,12 @@ def main():
             js_code = file.read()
 
             regex_strings = extract_regex_from_js(js_code)
-            regex_strings = filter_strings(regex_strings)
 
-            #Manual additions
-            regex_strings.append('shrinkme.us')
+            # remove short domains (errors)
+            regex_strings = [s for s in regex_strings if "." in s and len(s) >= 5] 
+            
+            # remove Google domains
+            regex_strings = [s for s in regex_strings if "google" not in s]
 
             compile_and_print(regex_strings)
     except FileNotFoundError:
