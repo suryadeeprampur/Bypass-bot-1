@@ -55,12 +55,16 @@ def modify_script_extra(file_path):
                                       "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js")
 
             #Remove tracking
+
+            ## Remove redirection to tracking site
             content = content.replace("https://rotator.nurul-huda.sch.id/?BypassResults=", "")
             content = content.replace("https://free4u.nurul-huda.or.id/?BypassResults=", "")
             content = content.replace("blog = true", "blog = false")
 
+            ## Remove tracking iframe being injected
             content = remove_lines_with_url(content, "https://menrealitycalc.com/")
 
+            ## Check known issues have been removed and remove antifeature label if corrected
             strings_to_check = [
                 "rotator.nurul-huda.sch.id/?BypassResults=",
                 "free4u.nurul-huda.or.id/?BypassResults=",
@@ -69,7 +73,10 @@ def modify_script_extra(file_path):
             ]
             if does_not_contain_any(content, strings_to_check):
                 content = content.replace("\n// @antifeature    tracking", "")
-
+            else:
+                print("ERROR: TRACKING NOT REMOVED.")
+                open("Bypass_All_Shortlinks.user.js", "w").close() # Clear file
+                return False
 
         # Write the modified content back to the file
         with open(file_path, 'w') as file:
