@@ -42,6 +42,18 @@ def does_not_contain_any(input_string, string_list):
             return False
     return True
 
+def remove_lines_with_strings(js_code, strings_to_remove):
+    # Split the JavaScript code into lines
+    lines = js_code.split('\n')
+    
+    # Filter out lines that start with the specified strings
+    filtered_lines = [line for line in lines if not any(line.startswith(s) for s in strings_to_remove)]
+    
+    # Join the filtered lines back into a string
+    filtered_code = '\n'.join(filtered_lines)
+    
+    return filtered_code
+
 def modify_script_extra(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -67,19 +79,33 @@ def modify_script_extra(file_path):
             ## Remove tracking iframe being injected
             content = remove_lines_with_url(content, "https://menrealitycalc.com/")
 
+            ## Remove weird datalist "adcopy_response" injected
+            strings_to_remove = [
+                "    elementReady('[name=adcopy_response]')",
+                "    const PHRASES = ['1.21 gigawatts'",
+                "    const datalist = document.createElement('datalist')"
+            ]
+            content = remove_lines_with_strings(content, strings_to_remove)
+
+
             ## Check known issues have been removed and remove antifeature label if corrected
             strings_to_check = [
                 "rotator.nurul-huda.sch.id/?BypassResults=",
                 "free4u.nurul-huda.or.id/?BypassResults=",
                 "https://menrealitycalc.com/",
-                "createElement('iframe')"
+                "createElement('iframe')",
+                "adcopy_response"
             ]
             if does_not_contain_any(content, strings_to_check):
                 content = content.replace("\n// @antifeature    tracking", "")
             else:
                 print("ERROR: TRACKING NOT REMOVED.")
-                open("Bypass_All_Shortlinks.user.js", "w").close() # Clear file
+                #open("Bypass_All_Shortlinks.user.js", "w").close() # Clear file
                 return False
+
+            # Check the code ends with a line jump
+            if not content.endswith('\n'):
+                content += '\n'
 
         # Write the modified content back to the file
         with open(file_path, 'w', encoding='utf-8') as file:
