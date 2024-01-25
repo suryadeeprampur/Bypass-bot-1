@@ -3,19 +3,19 @@ def modify_script(input_script_path, includes_file_path, output_script_path):
     with open(input_script_path, 'r') as input_file:
         script_lines = input_file.readlines()
 
-    # Find the last line that starts with "// @description:"
-    last_description_line_index = None
-    for i in range(len(script_lines) - 1, -1, -1):
-        if script_lines[i].startswith('// @description:'):
-            last_description_line_index = i
-            break
-
     # Read the content of the includes file
     with open(includes_file_path, 'r') as includes_file:
         includes_content = includes_file.read()
 
     # Delete lines with "@include" or "@match"
     script_lines = [line for line in script_lines if '@match' not in line and '@include' not in line]
+
+    # Find the last line that starts with "// @description:"
+    last_description_line_index = None
+    for i in range(len(script_lines) - 1, -1, -1):
+        if script_lines[i].startswith('// @description:'):
+            last_description_line_index = i
+            break
 
     # Insert includes
     script_lines.insert(last_description_line_index + 1, includes_content)
