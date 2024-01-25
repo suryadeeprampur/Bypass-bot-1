@@ -113,7 +113,6 @@
 // @match *://*.linkbox.to/*
 // @include /^(https?:\/\/)(.+)?((desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link)(\/.*)/
 // @match *://*.adbtc.top/*
-// @match *://*.youtube.com/*
 // @match *://*.upload.ee/*
 // @include /^(https?:\/\/)(.+)?(appdrive\.*)/
 // @match *://*.dddrive.me/*
@@ -365,7 +364,6 @@
 // @match *://*.autodime.com/*
 // @include /^(https?:\/\/)(.+)?(lootlinks.co|(loot-links|links-loot|loot-link).com|(lootdest|lootlink).org|lootdest.info|linksloot.net)(\/.*)/
 // @match *://*.amritadrino.com/*
-// @match *://*.youtube.com/*
 // @include /^(https?:\/\/)(.+)?(hunterkiller.me|surflink.tech)(\/.*)/
 // @match *://*.coinhub.wiki/*
 // @include /^(https?:\/\/)(.+)?(lyricsbaazaar.com|ezeviral.com)(\/.*)/

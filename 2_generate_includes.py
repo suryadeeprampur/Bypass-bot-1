@@ -41,14 +41,6 @@ def generate_include_lines(regex_list):
         include_line = regex_to_include_line(regex)
         include_lines.append(include_line)
 
-    # Manual additions of lines
-
-    ## -Adding this so that captchas can be auto-opened by this userscript
-    include_lines.append('// @match *://*/recaptcha/api2/*')
-
-    ## -Adding this as a go-to URL for accessing the settings menu in this userscript
-    ###include_lines.append('// @match https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated*')
-
     return include_lines
 
 def write_to_file(filename, lines):
@@ -78,10 +70,14 @@ def main():
             regex_strings = extract_regex_from_js(js_code)
 
             # remove short domains (errors)
-            regex_strings = [s for s in regex_strings if "." in s and len(s) >= 5] 
+            regex_strings = [s for s in regex_strings if "." in s and len(s) >= 5]
             
-            # remove Google domains
-            regex_strings = [s for s in regex_strings if "google" not in s]
+            # remove domains with blocked words
+            blocked_words_for_includes = [
+                "google",
+                "youtube" #youtube is for redirecting shorts, but I remove it to avoid people worrying
+            ]
+            regex_strings = [s for s in regex_strings if not any(word in s for word in blocked_words_for_includes)]
 
             compile_and_print(regex_strings)
     except FileNotFoundError:
