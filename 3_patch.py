@@ -88,6 +88,7 @@ def modify_script_extra(file_path):
                 "    const datalist = document.createElement('datalist')"
             ]
             content = remove_lines_with_strings(content, strings_to_remove)
+            content += '\n}})();\n' # Add closing bracket
 
 
             ## Check known issues have been removed and remove antifeature label if corrected
