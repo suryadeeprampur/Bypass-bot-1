@@ -83,6 +83,8 @@ def modify_script_extra(file_path):
             strings_to_remove = [
                 "    elementReady('[name=adcopy_response]')",
                 "    const PHRASES = ['1.21 gigawatts'",
+                "                     'heart break',",
+                "                     'rolling stone'",
                 "    const datalist = document.createElement('datalist')"
             ]
             content = remove_lines_with_strings(content, strings_to_remove)
