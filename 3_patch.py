@@ -1,19 +1,22 @@
 def modify_script(input_script_path, includes_file_path, output_script_path):
     # Read the content of the input script
-    with open(input_script_path, 'r') as input_file:
+    with open(input_script_path, 'r', encoding='utf-8') as input_file:
         script_lines = input_file.readlines()
 
     # Read the content of the includes file
-    with open(includes_file_path, 'r') as includes_file:
+    with open(includes_file_path, 'r', encoding='utf-8') as includes_file:
         includes_content = includes_file.read()
+
+    # Delete lines non english description (because some characters show up with errors in some sites)
+    script_lines = [s for s in script_lines if not (s.startswith("// @description:") or s.startswith("// @name:"))]
 
     # Delete lines with "@include" or "@match"
     script_lines = [line for line in script_lines if '@match' not in line and '@include' not in line]
 
-    # Find the last line that starts with "// @description:"
+    # Find the last line that starts with "// @description"
     last_description_line_index = None
     for i in range(len(script_lines) - 1, -1, -1):
-        if script_lines[i].startswith('// @description:'):
+        if script_lines[i].startswith('// @description'):
             last_description_line_index = i
             break
 
@@ -41,7 +44,7 @@ def does_not_contain_any(input_string, string_list):
 
 def modify_script_extra(file_path):
     try:
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
 
             #Change title
@@ -52,7 +55,7 @@ def modify_script_extra(file_path):
                                       "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js")
             
             content = content.replace("https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.meta.js",
-                                      "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js")
+                                      "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js")
 
             #Remove tracking
 
@@ -79,7 +82,7 @@ def modify_script_extra(file_path):
                 return False
 
         # Write the modified content back to the file
-        with open(file_path, 'w') as file:
+        with open(file_path, 'w', encoding='utf-8') as file:
             file.write(content)
 
         print("OK: Extra Modifications completed successfully.")
@@ -90,12 +93,37 @@ def modify_script_extra(file_path):
         print(f"An error occurred: {e}")
 
 
+def generate_metadata_file(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    start_index = None
+    end_index = None
+
+    for i, line in enumerate(lines):
+        if line.startswith("// ==UserScript=="):
+            start_index = i
+        elif line.startswith("// ==/UserScript=="):
+            end_index = i
+            break
+
+    if start_index is not None and end_index is not None:
+        metadata_lines = lines[start_index:end_index + 1]
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.writelines(metadata_lines)
+        print("Metadata extracted successfully!")
+    else:
+        print("Could not find metadata in the input file.")
+
+
+
 def main():
     input_script_path = 'untouched_Bypass_All_Shortlinks.user.js'
     includes_file_path = 'includes.txt'
     output_script_path = 'Bypass_All_Shortlinks.user.js'
     modify_script(input_script_path, includes_file_path, output_script_path)
     modify_script_extra(output_script_path)
+    generate_metadata_file("Bypass_All_Shortlinks.user.js", "Bypass_All_Shortlinks.meta.js")
 
 if __name__ == "__main__":
     main()

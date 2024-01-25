@@ -44,7 +44,7 @@ def generate_include_lines(regex_list):
     return include_lines
 
 def write_to_file(filename, lines):
-    with open(filename, 'w') as file:
+    with open(filename, 'w', encoding='utf-8') as file:
         for line in lines:
             file.write(line + '\n')
     print(f"OK: Generated {filename}")
