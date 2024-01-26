@@ -8,12 +8,14 @@ Automatically bypass many link shorteners [(supported_sites.txt)](https://codebe
 (you need a userscript manager like [ViolentMonkey](https://violentmonkey.github.io/) installed in your web browser)
 
 ## Improvements in this fork
-- The script will be loaded only for the sites that are supported. (the original userscript is loaded in every site you visit which is not necessary).
+- *No loading the script indiscriminately on every site.* The script will be loaded only for the sites that are supported. (the original userscript is loaded in every site you visit which is not necessary).
     - _Note: I have removed as supported sites Youtube `*://*.youtube.com/*` (which is used for redirecting shorts), Google `/^(https?:\/\/)(drive|docs)\.google\.com(\/.*)/` (which is used for Auto-DL from Drive/Docs) and Recaptcha `*://*/recaptcha/api2/*` (used for Auto-Open of captchas in many sites). This is to prevent some people from worrying about the script running on sensitive sites. But userscript managers like ViolentMonkey allow to re-enable sites manually if you want those features._
-- The script will not redirect to 'rotator.nurul-huda.sch.id' or 'free4u.nurul-huda.or.id' before your destination URL, which are intermediary sites set by the developer for [collecting analytics](https://i.ibb.co/D1zYG1v/topcountry17-04-2023.jpg) and showing ads.
-- The script will not inject the iframe that is injected for tracking in the original version in this line: 
+- *No useless added redirects.* The script will not redirect to 'rotator.nurul-huda.sch.id' or 'free4u.nurul-huda.or.id' before your destination URL, which are intermediary sites set by the developer for tracking / [collecting analytics](https://i.ibb.co/D1zYG1v/topcountry17-04-2023.jpg) and showing ads.
+- *No injecting unnecesary tracking in every site*. 
+    - The script will not inject the an iframe for tracking. See this line of code: 
 ```let visitors = document.createElement('iframe');visitors.src = 'https://menrealitycalc.com/greasyfork';visitors.style.cssText = "width: 0%; height: 0%; border: none;";document.body.appendChild(visitors);let btz = bp('.banner-ad > script:nth-child(9)' || '.panel-body > script:nth-child(7)' || 'div.adb-top > script:nth-child(10)');```
-- The script will not inject this weird _adcopy_response_ in all the supported sites.
+    - The script will not inject this weird _"adcopy_response"_.
+- Removed all the non-english languages to avoid buggy text characters.
 
 Original script by *bloggerpemula*: [greasyfork.org/scripts/431691](https://greasyfork.org/scripts/431691)
 
