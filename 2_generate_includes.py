@@ -1,18 +1,18 @@
 import re
 
 def extract_regex_from_js(js_code):
-    pattern1 = r'BypassedByBloggerPemula\((.*?),'
+    pattern1 = r'(?<!//)BypassedByBloggerPemula\((.*?),'
     matches1 = re.findall(pattern1, js_code)
     matches1 = [match.strip('/') for match in matches1]
     
-    pattern2 = r"BloggerPemula\('([^']+)',"
+    pattern2 = r"(?<!//)BloggerPemula\('([^']+)',"
     matches2 = re.findall(pattern2, js_code)
     #matches2 = ['/' + s + '/' for s in matches2]
 
-    pattern3 = r"RemoveBp\('([^']+)',"
+    pattern3 = r"(?<!//)RemoveBp\('([^']+)',"
     matches3 = re.findall(pattern3, js_code)
 
-    pattern4 = r'case \'(.*?)\':'
+    pattern4 = r'(?<!//)case \'(.*?)\':'
     matches4 = re.findall(pattern4, js_code)
 
     pattern5 = r"h\.href\.includes\('(.*?)'\)"
