@@ -67,10 +67,13 @@ def main():
             # remove short domains (errors)
             regex_strings = [s for s in regex_strings if "." in s and len(s) >= 5]
 
-            # remove domains with blocked words
+            # remove domains with blocked words (to avoid people worrying)
             blocked_words_for_includes = [
-                "google",
-                "youtube" #youtube is for redirecting shorts, but I remove it to avoid people worrying
+                "google", #drive/docs autoDL, bypass redirects, captchas
+                "youtube", #redirecting shorts
+                "twitter.com", #bypass redirects
+                "tiktok.com", #bypass redirects
+                "vk.com" #bypass redirects
             ]
             regex_strings = [s for s in regex_strings if not any(word in s for word in blocked_words_for_includes)]
 
