@@ -9,7 +9,7 @@ Automatically bypass many link shorteners [(supported_sites.txt)](https://codebe
 
 ## Improvements in this fork
 - **No loading the script indiscriminately on every site.** The script will be loaded only for the sites that are supported. (the original userscript is loaded in every site you visit which is not necessary).
-    - _Note: I have removed as supported sites:
+    - Note: I have removed the following as supported sites:
         - Youtube `*://*.youtube.com/shorts/*`_(@match)_ (which is used for redirecting shorts)
         - Google:
             - Drive/Docs `/^(https?:\/\/)(drive|docs)\.google\.com(\/.*)/`_(@include)_ (which is used for Auto-DL from Drive/Docs)
