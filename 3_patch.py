@@ -29,13 +29,6 @@ def modify_script(input_script_path, includes_file_path, output_script_path):
 
     print(f"OK: @Include lines added. Script successfully modified and saved to {output_script_path}.")
 
-
-def remove_lines_with_url(input_string, url):
-    lines = input_string.split('\n')
-    filtered_lines = [line for line in lines if url not in line]
-    result_string = '\n'.join(filtered_lines)
-    return result_string
-
 def does_not_contain_any(input_string, string_list):
     for string_to_check in string_list:
         if string_to_check in input_string:
@@ -43,15 +36,9 @@ def does_not_contain_any(input_string, string_list):
     return True
 
 def remove_lines_with_strings(js_code, strings_to_remove):
-    # Split the JavaScript code into lines
     lines = js_code.split('\n')
-    
-    # Filter out lines that start with the specified strings
-    filtered_lines = [line for line in lines if not any(line.startswith(s) for s in strings_to_remove)]
-    
-    # Join the filtered lines back into a string
+    filtered_lines = [line for line in lines if not any(s in line for s in strings_to_remove)]
     filtered_code = '\n'.join(filtered_lines)
-    
     return filtered_code
 
 def modify_script_extra(file_path):
@@ -77,7 +64,7 @@ def modify_script_extra(file_path):
             content = content.replace("blog = true", "blog = false")
 
             ## Remove tracking iframe being injected
-            content = remove_lines_with_url(content, "https://menrealitycalc.com/")
+            content = remove_lines_with_strings(content, ["https://menrealitycalc.com/"])
 
             ## Remove weird datalist "adcopy_response" injected
             strings_to_remove = [
