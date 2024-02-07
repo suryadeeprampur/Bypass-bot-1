@@ -24,7 +24,8 @@ Automatically bypass many link shorteners [(supported_sites.txt)](https://codebe
 - **No injecting unnecesary tracking in every site**. 
     - The script will not inject that _iframe_ linking to `menrealitycalc.com`.
     - The script will not inject this weird _"adcopy_response"_. (I don't see a clear purpose for this, since it doesn't seem related in the script to any specific link shortener)
-- Removed all the non-english languages to avoid buggy text characters.
+- **Removed non-latin non-unicode characters** to avoid potential bug warnings.
+- **Added extra bypasses** from the _bypasses_ folder.
 
 Original script by *bloggerpemula*: [greasyfork.org/scripts/431691](https://greasyfork.org/scripts/431691)
 
@@ -33,3 +34,5 @@ Executing these 3 python scripts in order:
 - 1_download_untouched.py
 - 2_generate_includes.py
 - 3_patch.py
+- 4_add_extra_bypasses.py
+

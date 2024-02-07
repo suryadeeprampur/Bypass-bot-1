@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        91.0
+// @version        91.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -651,7 +651,11 @@
 // @match *://*.playstore.pw/*
 // @match *://*.sigmalinks.in/*
 // @match *://*.r1.foxylinks.site/*
-// @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(dana|ovo).id)(\/.*)/
+// @match       https://dropgalaxy.com/drive/*
+// @match       https://dropgalaxy.co/drive/*
+// @match       *://*.shareus.io/*
+// @require     https://code.jquery.com/jquery-2.1.1.min.js
+// @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|aliexpress|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten).*|(dana|ovo).id)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
 // ==/UserScript==
@@ -666,7 +670,7 @@
 // There will be a Special Tricks and Bypass Adblock Codes only for Good Users (Anyone who have good attitude , Good Feedback, will be invited to my group)
 // Change Your Delay in the settings options from 5 to 10 or 20 if you have issues like Your action marked Suspicious,Don't try to bypass ,Don't use Speedster, etc
    const window = unsafeWindow; // Some of My Codes Not Running Well Without this , Please Let Me Know if You Find any Bugs
-   const cfg = new MonkeyConfig({title: 'Bypass Version 91.0 Settings :', menuCommand: true,
+   const cfg = new MonkeyConfig({title: 'Bypass Version 91.1 Settings :', menuCommand: true,
    params: {Announcements : {type: 'text', default: 'Enable Always Ready if You Open Multiple Tabs'},
     SetDelay: {label: "Redirect Delay ", type: "number", default: 5,},
     reCAPTCHA: {label: "Auto Open Recaptcha", type: "checkbox", default: false,},
@@ -1028,7 +1032,7 @@
           if (h.pathname === '/check.php' && h.searchParams.has('alias') && h.searchParams.has('wis') && h.searchParams.has('siw')) {
             return 'https://kiiw.icu/' + h.searchParams.get('alias') + '?wis=' + h.searchParams.get('wis') + '&siw=' + h.searchParams.get('siw');} break;
         default: break;}})(new URL(location.href)); if (bas) {const {isNotifyNeeded, redirectDelay, link} = bas;
-      if (isNotifyNeeded) {notify(`Please Wait in @ Seconds Before Going to the Destination. Don't Forget to Whitelist My Blog from Your Adblocker , Thanks`);}
+      if (isNotifyNeeded) {notify(`Please Wait in @ Seconds , Don't Try to Remove/Replace My Blogs if You Want My Script to be Updated Regularly , Thanks`);}
       setTimeout(() => {location.href = link;}, redirectDelay * 1000);}
     // My Script will automatically download from the site below , Enable it from the Settings
     if (cfg.get('AutoDL') == true) {
@@ -1671,3 +1675,87 @@
         if (elementExists('.fa-check-double')) {console.log('All Available Ads Watched'); setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/dashboard.php');}, 3 * 1000);}
         setInterval(() => {if (Checkvisibility(bp('#submit_captcha'))) {bp("button[type='submit'].g-recaptcha").click();}}, 5 * 1000);}});
 }})();
+
+// ----- Bypass for dropgalaxy -----
+(function() {
+    'use strict';
+    if (/^https?:\/\/dropgalaxy\.(com|co)\/drive\/.*/.test(window.location.href)) {
+        document.addEventListener('DOMContentLoaded', function() {
+
+            function clickButton(selector) {
+                var button = document.querySelector(selector);
+                if (button) {
+                    button.click();
+                    console.log('Button with selector ' + selector + ' clicked!');
+                } else {
+                    console.log('Button with selector ' + selector + ' not found!');
+                }
+            }
+
+            // 1st PAGE - click the hidden button inmediately
+            clickButton('#method_free');
+
+            // 2nd PAGE - 16 seconds delay to click the initially blocked #downloadbtn
+            setTimeout(function() {
+                clickButton('#downloadbtn');
+            }, 16000); // (if you click it from the beginning, it triggers adblock detection)
+
+            // 3rd PAGE - Extract the download link as soon as it is available
+            (function($) {
+                'use strict';
+            
+                // Check for the presence of the form element at regular intervals
+                var intervalId = setInterval(function() {
+                    var $downloadForm = $('#dllink');
+            
+                    // Check if the form element is present
+                    if ($downloadForm.length > 0) {
+                        // Extract the URL from the form action attribute
+                        var url = $downloadForm.attr('action');
+            
+                        // Stop the interval since the URL is found
+                        clearInterval(intervalId);
+            
+                        // Show download link in a popup
+                        //alert('Press OK to go to the download link:\n' + url);
+            
+                        // Redirect to the download link
+                        window.location.href = url;
+                    }
+                }, 1000);
+            
+            })(jQuery);
+
+            
+        });
+    }
+})();
+// ----- ----- -----
+
+// ----- Bypass for shareus.io -----
+(function() {
+    'use strict';
+    if (window.location.hostname === 'shareus.io') {
+        document.addEventListener('DOMContentLoaded', function() {
+            // Define the button selector
+            const buttonSelector = "#root > div > main > div.main-container-1 > div.main-container-2 > div:nth-child(1) > div.adunit-container > button";
+        
+            // Function to click the button
+            function clickButton() {
+                // Find the button element
+                const button = document.querySelector(buttonSelector);
+                if (button) {
+                    button.click();
+                    console.log("Button clicked!");
+                    //clearInterval(intervalId); // Stop attempting once clicked
+                } else {
+                    console.log("Button not found!");
+                }
+            }
+        
+            // Set interval to attempt clicking every 1 second
+            const intervalId = setInterval(clickButton, 1000);
+        });
+    }
+})();
+// ----- ----- -----
