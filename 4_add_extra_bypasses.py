@@ -65,7 +65,7 @@ def process_js_files(folder_path, target_file):
 
 # Main function to execute the process
 def main():
-    fixes_folder = "./bypasses"
+    fixes_folder = "./extra_bypasses"
     target_file = "Bypass_All_Shortlinks.user.js"
     process_js_files(fixes_folder, target_file)
     print("Modification complete.")
