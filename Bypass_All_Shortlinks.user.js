@@ -1717,7 +1717,7 @@
                         clearInterval(intervalId);
             
                         // Show download link in a popup
-                        //alert('Press OK to go to the download link:\n' + url);
+                        alert('Press OK to go to the download link:\n' + url);
             
                         // Redirect to the download link
                         window.location.href = url;
