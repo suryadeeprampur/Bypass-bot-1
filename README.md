@@ -25,7 +25,7 @@ Automatically bypass many link shorteners [(supported_sites.txt)](https://codebe
     - The script will not inject that _iframe_ linking to `menrealitycalc.com`.
     - The script will not inject this weird _"adcopy_response"_. (I don't see a clear purpose for this, since it doesn't seem related in the script to any specific link shortener)
 - **Removed non-latin non-unicode characters** to avoid potential bug warnings.
-- **Added extra bypasses** from the _bypasses_ folder.
+- **Added extra bypasses** from the [bypasses folder](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/bypasses).
 
 Original script by *bloggerpemula*: [greasyfork.org/scripts/431691](https://greasyfork.org/scripts/431691)
 
