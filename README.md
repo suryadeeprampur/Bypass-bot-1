@@ -1,4 +1,4 @@
-Debloated fork of *bypass-all-shortlinks*.
+Debloated fork of *bypass-all-shortlinks*, originally created [bloggerpemula](https://greasyfork.org/users/810571)
 
 Automatically bypass many link shorteners [(supported_sites.txt)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/supported_sites.txt)
 
@@ -37,3 +37,9 @@ Executing these 3 python scripts in order:
 - 3_patch.py
 - 4_add_extra_bypasses.py
 
+## Complementary scripts if needed
+If there is a link shortener this script can't bypass, these are good and could have the missing bypass that you need.
+- [Additional Bypass](https://greasyfork.org/scripts/443888) by [bloggerpemula](https://greasyfork.org/users/810571). *Note: I didn't include this in the debloat process because this script runs only on determined sites, and at this moment is not injecting the iframe to menrealitycalc.com. Also these link shorteners are not as common as the ones in the main script.*
+- [Multi-site Bypasser](https://greasyfork.org/scripts/473661) by [TheCtkHoster](https://greasyfork.org/users/1156764)
+- [Bypass Pahe Links](https://greasyfork.org/scripts/443277) and [Techmny Bypasser for MoviesMod](https://greasyfork.org/scripts/474747) by [NaeemBolchhi](https://greasyfork.org/users/437111)
+- [FMHY Redirect Bypass Section](https://fmhy.net/adblockvpnguide#redirect-bypass). FMHY maintains an updated list with bypass tools.
