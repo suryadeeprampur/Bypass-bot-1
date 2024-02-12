@@ -10,16 +10,14 @@
     if ( window.location.href.startsWith('https://linkspy.cc/tr/') ) {
 
       //----Bypass linkspy.cc----
-      var encodedUrl = window.location.href.split('/tr/')[1];
-      var decodedUrl = atob(encodedUrl);
-      if (!decodedUrl.startsWith('https://clicksfly.com/')) {
+      var decodedUrl = atob(window.location.href.split('/tr/')[1]);
+      var urlParam = new URLSearchParams(decodedUrl).get('url');
+      if (!decodedUrl.startsWith('https://clicksfly.com/') || !urlParam) {
         window.location.assign(decodedUrl);
 
       //----Bypass clicksfly.com----
-      } else if (decodedUrl.startsWith('https://clicksfly.com/')) {
-        var urlParam = new URLSearchParams(decodedUrl).get('url');
-        var decodedURL2 = atob(urlParam);
-        window.location.assign(decodedURL2);
+      } else if (decodedUrl.startsWith('https://clicksfly.com/') && urlParam) {
+        window.location.assign(atob(urlParam));
       }
     }
 

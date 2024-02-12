@@ -7,7 +7,7 @@
 // ----- Bypass for shrinkme.us -----
 (function() {
     'use strict';
-    if (/^https:\/\/shrinkme\.us\//.test(window.location.href)) {
+    if (window.location.href.startsWith("https://shrinkme.us/")) {
       function waitForButton() {
           var button = document.getElementById('invisibleCaptchaShortlink');
           if (button) {

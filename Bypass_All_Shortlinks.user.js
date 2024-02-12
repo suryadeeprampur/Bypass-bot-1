@@ -653,8 +653,8 @@
 // @match       https://dropgalaxy.com/drive/*
 // @match       https://dropgalaxy.co/drive/*
 // @match       *://*.shareus.io/*
-// @match        https://linkspy.cc/tr/*
 // @match       https://m.mundopolo.net/#!*
+// @match        https://linkspy.cc/tr/*
 // @match        https://*.shrinkme.us/*
 // @require     https://code.jquery.com/jquery-2.1.1.min.js
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|aliexpress|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten).*|(dana|ovo).id)(\/.*)/
@@ -1676,6 +1676,7 @@
       if (location.href.includes('autofaucet.dutchycorp.space/ptc/')) {console.log('Viewing Available Ads');
         if (elementExists('.fa-check-double')) {console.log('All Available Ads Watched'); setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/dashboard.php');}, 3 * 1000);}
         setInterval(() => {if (Checkvisibility(bp('#submit_captcha'))) {bp("button[type='submit'].g-recaptcha").click();}}, 5 * 1000);}});
+
 }})();
 
 // ----- Bypass for dropgalaxy -----
@@ -1762,22 +1763,30 @@
 })();
 // ----- ----- -----
 
+// ----- Bypass for mundopolo.net -----
+(function() {
+    'use strict';
+    if ( window.location.href.startsWith('https://m.mundopolo.net/#!') ) {
+      window.location.assign(decodeURIComponent(atob(atob(atob(window.location.href.split('#!')[1])))));
+    }
+})();
+// ----- ----- -----
+
+
 // ----- Bypass for linkspy.cc + clicksfly.com  -----
 (function() {
     'use strict';
     if ( window.location.href.startsWith('https://linkspy.cc/tr/') ) {
 
       //----Bypass linkspy.cc----
-      var encodedUrl = window.location.href.split('/tr/')[1];
-      var decodedUrl = atob(encodedUrl);
-      if (!decodedUrl.startsWith('https://clicksfly.com/')) {
+      var decodedUrl = atob(window.location.href.split('/tr/')[1]);
+      var urlParam = new URLSearchParams(decodedUrl).get('url');
+      if (!decodedUrl.startsWith('https://clicksfly.com/') || !urlParam) {
         window.location.assign(decodedUrl);
 
       //----Bypass clicksfly.com----
-      } else if (decodedUrl.startsWith('https://clicksfly.com/')) {
-        var urlParam = new URLSearchParams(decodedUrl).get('url');
-        var decodedURL2 = atob(urlParam);
-        window.location.assign(decodedURL2);
+      } else if (decodedUrl.startsWith('https://clicksfly.com/') && urlParam) {
+        window.location.assign(atob(urlParam));
       }
     }
 
@@ -1785,24 +1794,10 @@
 // ----- ----- -----
 
 
-// ----- Bypass for mundopolo.net -----
-(function() {
-    'use strict';
-    if ( window.location.href.startsWith('https://m.mundopolo.net/#!') ) {
-      var currentURL = window.location.href;
-      var encodedURL = currentURL.split('#!')[1]
-      var decodedURL = atob(atob(atob(encodedURL))); //base64 decode x3
-      decodedURL = decodeURIComponent(decodedURL);
-      window.location.assign(decodedURL);
-    }
-})();
-// ----- ----- -----
-
-
 // ----- Bypass for shrinkme.us -----
 (function() {
     'use strict';
-    if (/^https:\/\/shrinkme\.us\//.test(window.location.href)) {
+    if (window.location.href.startsWith("https://shrinkme.us/")) {
       function waitForButton() {
           var button = document.getElementById('invisibleCaptchaShortlink');
           if (button) {
