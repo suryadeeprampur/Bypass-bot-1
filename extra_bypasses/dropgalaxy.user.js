@@ -14,12 +14,7 @@
 
             function clickButton(selector) {
                 var button = document.querySelector(selector);
-                if (button) {
-                    button.click();
-                    console.log('Button with selector ' + selector + ' clicked!');
-                } else {
-                    console.log('Button with selector ' + selector + ' not found!');
-                }
+                if (button) {button.click();};
             }
 
             // 1st PAGE - click the hidden button inmediately
@@ -33,30 +28,18 @@
             // 3rd PAGE - Extract the download link as soon as it is available
             (function($) {
                 'use strict';
-            
                 // Check for the presence of the form element at regular intervals
                 var intervalId = setInterval(function() {
                     var $downloadForm = $('#dllink');
-            
-                    // Check if the form element is present
-                    if ($downloadForm.length > 0) {
-                        // Extract the URL from the form action attribute
-                        var url = $downloadForm.attr('action');
-            
-                        // Stop the interval since the URL is found
-                        clearInterval(intervalId);
-            
-                        // Show download link in a popup
-                        alert('Press OK to go to the download link:\n' + url);
-            
-                        // Redirect to the download link
-                        window.location.href = url;
+                    if ($downloadForm.length > 0) { // Check if the form element is present
+                        var url = $downloadForm.attr('action'); // Extract the URL from the form action attribute
+                        clearInterval(intervalId); // Stop the interval since the URL is found
+                        alert('Press OK to go to the download link:\n' + url); // Show download link in a popup
+                        window.location.href = url; // Redirect to the download link
                     }
                 }, 1000);
-            
             })(jQuery);
 
-            
         });
     }
 })();
