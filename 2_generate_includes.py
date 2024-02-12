@@ -72,6 +72,7 @@ def main():
                 "google", #drive/docs autoDL, bypass redirects, captchas
                 "youtube", #redirecting shorts
                 "twitter.com", #bypass redirects
+                "facebook.com", #bypass redirects
                 "tiktok.com", #bypass redirects
                 "vk.com" #bypass redirects
             ]

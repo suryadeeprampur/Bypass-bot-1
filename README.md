@@ -17,6 +17,7 @@ Automatically bypass many link shorteners [(supported_sites.txt)](https://codebe
             - Recaptcha `*://*/recaptcha/api2/*`_(@match)_ or `/^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/`_(@include)_ (used for Auto-Open of captchas in many sites).
         - Twitter `*://*.twitter.com/*`_(@match)_ Bypass redirects
         - TikTok `*://*.tiktok.com/*`_(@match)_ Bypass redirects
+        - Facebook `*://*.facebook.com/*`_(@match)_ Bypass redirects
         - VK `*://*.vk.com/*`_(@match)_ Bypass redirects
 
         Not including these is to prevent some people from worrying about the script running on sensitive sites. These can be re-enabled manually in your userscript manager, adding the mentioned _matching rules_ in the script _settings_.
