@@ -42,5 +42,4 @@ If there is a link shortener this script can't bypass, these are up to date and 
 - [Additional Bypass](https://greasyfork.org/scripts/443888) by [bloggerpemula](https://greasyfork.org/users/810571). *Note: I didn't include this in the debloat process because this script runs only on determined sites, and at this moment is not injecting the iframe to menrealitycalc.com. Also these link shorteners are not as common as the ones in the main script.*
 - [Multi-site Bypasser](https://greasyfork.org/scripts/473661) by [TheCtkHoster](https://greasyfork.org/users/1156764)
 - [Bypass Pahe Links](https://greasyfork.org/scripts/443277) and [Techmny Bypasser for MoviesMod](https://greasyfork.org/scripts/474747) by [NaeemBolchhi](https://greasyfork.org/users/437111)
-- [linkvertise and krnl bypasser](https://greasyfork.org/scripts/427869) by [bypass.city](https://bypass.city/)
 - [FMHY Redirect Bypass Section](https://fmhy.net/adblockvpnguide#redirect-bypass). FMHY maintains an updated list with bypass tools.
