@@ -2,6 +2,8 @@ Debloated fork of *bypass-all-shortlinks*, originally created by *bloggerpemula*
 
 Automatically bypass many link shorteners [(supported_sites.txt)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/supported_sites.txt)
 
+*Note: "faucet" or crypto rewards link shorteners have been removed. The focus will be on content sharing.*
+
 ## Install
 **Install with [this link](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)**
 
