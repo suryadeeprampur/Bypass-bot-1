@@ -134,7 +134,7 @@ def generate_metadata_file(input_file, output_file):
 
 
 def main():
-    input_script_path = 'untouched_Bypass_All_Shortlinks.user.js'
+    input_script_path = 'nofaucet_Bypass_All_Shortlinks.user.js'
     includes_file_path = 'includes.txt'
     output_script_path = 'Bypass_All_Shortlinks.user.js'
     modify_script(input_script_path, includes_file_path, output_script_path)

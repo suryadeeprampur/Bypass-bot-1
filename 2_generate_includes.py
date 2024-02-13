@@ -56,7 +56,7 @@ def generate_include_lines(regex_list):
 
 
 def main():
-    file_path = 'untouched_Bypass_All_Shortlinks.user.js'
+    file_path = 'nofaucet_Bypass_All_Shortlinks.user.js'
 
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
