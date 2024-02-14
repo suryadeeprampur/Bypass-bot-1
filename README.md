@@ -52,7 +52,7 @@ Just in case some of the bypasses in this repository stop working:
 ## Help make this better
 You can help by:
 - Reporting issues to the original script in [greasyfork feedback](https://greasyfork.org/scripts/431691/feedback) or [openuserjs issues](https://openuserjs.org/scripts/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha/issues)
-- Reporting issues here on the[issues](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues) tab. Post examples with the source link shortener and link source website. I will only add/fix content-sharing shortlinks, no faucet / crypto rewards.
+- Reporting issues here on the [issues](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues) tab. Post examples with the source link shortener and link source website. I will only add/fix content-sharing shortlinks, no faucet / crypto rewards.
 - Suggesting to merge other scripts into this one.
 - Editing/Adding code with pull requests.
 
