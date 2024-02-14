@@ -63,6 +63,16 @@ def process_js_files(folder_path, target_file):
         f.seek(0)
         f.writelines(content)
 
+
+    # Clean match lines and add them to supported_sites.txt
+    cleaned_lines = []
+    for line in match_lines:
+        cleaned_line = line.strip().replace("// @match", "").replace("// @include", "").strip()
+        cleaned_lines.append(cleaned_line)
+    with open("supported_sites.txt", 'a', encoding='utf-8') as f:
+        for line in cleaned_lines:
+            f.write(line + '\n')
+
 # Main function to execute the process
 def main():
     fixes_folder = "./extra_bypasses"

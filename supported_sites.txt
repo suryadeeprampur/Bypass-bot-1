@@ -21,7 +21,6 @@ studyuo.com
 go.link4rev.site|go.urlcash.site
 techyinfo.in|techyblogs.in
 olhonagrana.com
-dutchycorp.space
 link.birdurls.com|link.owllink.net|link.illink.net
 (teachsansar|technicalatg|foodxor|cdrab).com|ecq.info|datacheap.io
 ouo.io
@@ -622,3 +621,9 @@ bestlink.pro
 playstore.pw
 sigmalinks.in
 r1.foxylinks.site
+https://dropgalaxy.com/drive/*
+https://dropgalaxy.co/drive/*
+*://*.shareus.io/*
+https://m.mundopolo.net/#!*
+https://linkspy.cc/tr/*
+https://*.shrinkme.us/*
