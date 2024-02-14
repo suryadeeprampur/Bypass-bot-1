@@ -2,8 +2,6 @@ Debloated fork of *bypass-all-shortlinks*, originally created by *bloggerpemula*
 
 Automatically bypass many link shorteners [(supported_sites.txt)](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/supported_sites.txt)
 
-*Note: "faucet" or crypto rewards link shorteners have been removed. The focus will be on content sharing.*
-
 ## Install
 **Install with [this link](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)**
 
@@ -35,7 +33,6 @@ Original script by *bloggerpemula*: [greasyfork.org/scripts/431691](https://grea
 ## How I modify the original userscript
 Executing these 3 python scripts in order:
 - 1_download_untouched.py
-- 1.5_delete_faucets.py
 - 2_generate_includes.py
 - 3_patch.py
 - 4_add_extra_bypasses.py
