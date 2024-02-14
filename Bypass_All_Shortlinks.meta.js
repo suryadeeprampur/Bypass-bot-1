@@ -657,7 +657,6 @@
 // @match       *://*.shareus.io/*
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
-// @include     /(japan-paw.net|programasvirtualespc.net)\/out/
 // @include     /sphinxanime.com\/short/
 // @include     /link.manudatos.com\/#!/
 // @require     https://code.jquery.com/jquery-2.1.1.min.js

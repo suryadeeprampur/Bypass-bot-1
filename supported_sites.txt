@@ -642,6 +642,5 @@ https://*.shrinkme.us/*
 *://*.shareus.io/*
 /mundopolo.net/
 /comohoy.com/
-/(japan-paw.net|programasvirtualespc.net)\/out/
 /sphinxanime.com\/short/
 /link.manudatos.com\/#!/

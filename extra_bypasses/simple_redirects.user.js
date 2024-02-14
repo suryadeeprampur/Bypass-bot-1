@@ -2,7 +2,6 @@
 // @name        simple redirects
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
-// @include     /(japan-paw.net|programasvirtualespc.net)\/out/
 // @include     /sphinxanime.com\/short/
 // @include     /link.manudatos.com\/#!/
 // @run-at      document-start
