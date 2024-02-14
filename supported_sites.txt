@@ -637,7 +637,11 @@ sigmalinks.in
 r1.foxylinks.site
 https://dropgalaxy.com/drive/*
 https://dropgalaxy.co/drive/*
-https://m.mundopolo.net/#!*
 https://linkspy.cc/tr/*
 https://*.shrinkme.us/*
 *://*.shareus.io/*
+/mundopolo.net/
+/comohoy.com/
+/(japan-paw.net|programasvirtualespc.net)\/out/
+/sphinxanime.com\/short/
+/link.manudatos.com\/#!/
