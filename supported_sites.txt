@@ -644,3 +644,8 @@ https://*.shrinkme.us/*
 /comohoy.com/
 /sphinxanime.com\/short/
 /link.manudatos.com\/#!/
+/iconicblogger.com/
+/link.unlockner.com/
+/cybercityhelp.in/
+/www.akcartoons.in/
+/go.moonlinks.in/
