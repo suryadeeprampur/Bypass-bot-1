@@ -36,7 +36,6 @@
 // @include /^(https?:\/\/)(.+)?(go.link4rev.site|go.urlcash.site)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techyinfo.in|techyblogs.in)(\/.*)/
 // @match *://*.olhonagrana.com/*
-// @match *://*.dutchycorp.space/*
 // @include /^(https?:\/\/)(.+)?(link.birdurls.com|link.owllink.net|link.illink.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((teachsansar|technicalatg|foodxor|cdrab).com|ecq.info|datacheap.io)(\/.*)/
 // @match *://*.ouo.io/*
@@ -890,7 +889,6 @@
   BypassedByBloggerPemula(/go.link4rev.site|go.urlcash.site/, function() {location = location.href.replace('go.', '');});
   BypassedByBloggerPemula(/techyinfo.in|techyblogs.in/, {'/verify/': [RexBp, 'http://loans.techyinfo.in/?go='],}, false);
   BypassedByBloggerPemula(/olhonagrana.com/, {'/verify/': [RexBp, 'http://paylinnk.com/'],'/': [RexBp, 'https://syflink.com/']}, false);
-  BypassedByBloggerPemula(/dutchycorp.space/, function() {if (BpParams.has('code')) {location = BpParams.getAll('code') + '?verif=0';}});
   BypassedByBloggerPemula(/link.birdurls.com|link.owllink.net|link.illink.net/, function() {location = location.href.replace('link.', '');});
   BypassedByBloggerPemula(/vk.com/, function() {if (BpParams.has('to') && location.href.includes('/away.php')) {location = decodeURIComponent(BpParams.get('to'));} else {}});
   BypassedByBloggerPemula(/(teachsansar|technicalatg|foodxor|cdrab).com|ecq.info|datacheap.io/, () => waitForElm("#wpsafegenerate > #wpsafe-link > a[href]", safe => redirect(safe.href,false)));

@@ -68,7 +68,7 @@ def modify_script(input_path, output_path):
     content = content.replace(todelete6, '\n')
     content = content.replace(todelete7, '\n')
 
-    crypto_reward_sites = ['faucet', 'mdn.101', 'awgrow.com', 'worldtanr.xyz', 'fadedfeet.com', 'kenzo-flowertag.com', 'homeculina.com', 'lawyex.co', 'yexolo.net', 'ineedskin.com', 'tunebug.com', 'rsinsuranceinfo.com', 'rssoftwareinfo.com', 'rsfinanceinfo.com', 'rseducationinfo.com', 'rsadnetworkinfo.com', 'rshostinginfo.com', 'bitcosite.com', 'vegan4k.com', 'healthyfollicles.com', 'crewbase.net', 'shinchu.net', 'chefknives.expert', 'gametechreviewer.com', 'batmanfactor.com', 'allcryptoz.net', 'vrtier.com', 'gearsadviser.com', 'misterio.ro', 'phineypet.com', 'edonmanor.com', 'shinchu.net']
+    crypto_reward_sites = ['faucet', 'dutchycorp', 'mdn.101', 'awgrow.com', 'worldtanr.xyz', 'fadedfeet.com', 'kenzo-flowertag.com', 'homeculina.com', 'lawyex.co', 'yexolo.net', 'ineedskin.com', 'tunebug.com', 'rsinsuranceinfo.com', 'rssoftwareinfo.com', 'rsfinanceinfo.com', 'rseducationinfo.com', 'rsadnetworkinfo.com', 'rshostinginfo.com', 'bitcosite.com', 'vegan4k.com', 'healthyfollicles.com', 'crewbase.net', 'shinchu.net', 'chefknives.expert', 'gametechreviewer.com', 'batmanfactor.com', 'allcryptoz.net', 'vrtier.com', 'gearsadviser.com', 'misterio.ro', 'phineypet.com', 'edonmanor.com', 'shinchu.net']
 
     content = remove_lines_with_strings_without_exclude(content, crypto_reward_sites)
 

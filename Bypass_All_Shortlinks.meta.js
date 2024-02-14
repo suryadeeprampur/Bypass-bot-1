@@ -36,7 +36,6 @@
 // @include /^(https?:\/\/)(.+)?(go.link4rev.site|go.urlcash.site)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techyinfo.in|techyblogs.in)(\/.*)/
 // @match *://*.olhonagrana.com/*
-// @match *://*.dutchycorp.space/*
 // @include /^(https?:\/\/)(.+)?(link.birdurls.com|link.owllink.net|link.illink.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((teachsansar|technicalatg|foodxor|cdrab).com|ecq.info|datacheap.io)(\/.*)/
 // @match *://*.ouo.io/*
