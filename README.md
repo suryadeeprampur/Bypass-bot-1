@@ -55,4 +55,5 @@ You can help by:
 - Reporting issues here on the [issues](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues) tab. Post examples with the source link shortener and link source website. I will only add/fix content-sharing shortlinks, no faucet / crypto rewards.
 - Suggesting to merge other scripts into this one.
 - Editing/Adding code with pull requests.
+- If a link shortener is showing ads or detecting uBlock Origin (recommended adblocker), report it [here](https://github.com/uBlockOrigin/uAssets/discussions/17361).
 
