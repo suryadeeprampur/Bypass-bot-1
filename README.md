@@ -51,3 +51,9 @@ Just in case some of the bypasses in this repository stop working:
 - [linkvertise and krnl bypasser](https://greasyfork.org/scripts/427869) by bypass.city
 - [loot-link.com bypasser](https://greasyfork.org/scripts/483207) and [work.ink bypasser](https://greasyfork.org/scripts/482848) by [antiworkink](https://greasyfork.org/users/1237543)
 - [FMHY Redirect Bypass Section](https://fmhy.net/adblockvpnguide#redirect-bypass). FMHY maintains an updated list with bypass tools.
+
+## Help make this better
+You can help by:
+- Reporting broken or missing bypasses in the [issues](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues) tab. Post examples with the source link shortener and link source website. I will only add/fix content-sharing shortlinks, no faucet / crypto rewards.
+- Suggesting to merge other scripts into this one.
+- Editing/Adding code with pull requests.
