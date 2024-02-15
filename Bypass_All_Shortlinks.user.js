@@ -657,6 +657,7 @@
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
+// @include     /japan-paw.net\/out/
 // @include     /link.manudatos.com\/#!/
 // @include     /(iconicblogger.com|segurosdevida.site)/
 // @include     /link.unlockner.com/
@@ -1792,6 +1793,9 @@
 
     //sphinxanime.com
     /sphinxanime.com\/short/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
+
+    //japan-paw.net
+    /japan-paw.net\/out/.test(url) ? redirect(atob(url.split('out/?')[1])) : null;
 
     //pasteprivado.blogspot.com
     /link.manudatos.com\/#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;

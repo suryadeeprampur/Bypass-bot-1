@@ -657,6 +657,7 @@
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
+// @include     /japan-paw.net\/out/
 // @include     /link.manudatos.com\/#!/
 // @include     /(iconicblogger.com|segurosdevida.site)/
 // @include     /link.unlockner.com/
