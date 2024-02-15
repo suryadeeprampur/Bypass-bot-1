@@ -4,7 +4,7 @@
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
 // @include     /link.manudatos.com\/#!/
-// @include     /iconicblogger.com/
+// @include     /(iconicblogger.com|segurosdevida.site)/
 // @include     /link.unlockner.com/
 // @include     /cybercityhelp.in/
 // @include     /www.akcartoons.in/
@@ -33,8 +33,10 @@
     //pasteprivado.blogspot.com
     /link.manudatos.com\/#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
 
-    //anime-world.in
-    /iconicblogger.com/.test(url) ? afterDOMLoaded(function() {redirect(document.getElementById('wpsafe-link').querySelector('a').getAttribute('onclick').match(/window\.open\('([^']*)'/)[1])}) : null;
+    //anime-world.in and mandranime.com
+    /(iconicblogger.com|segurosdevida.site)/.test(url) ? afterDOMLoaded(function() {redirect(document.getElementById('wpsafe-link').querySelector('a').getAttribute('onclick').match(/window\.open\('([^']*)'/)[1])}) : null;
+    
+    //anime-world.in 2nd step
     /link.unlockner.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn.get-link')}) : null;
 
     //atozcartoonist.com
@@ -44,6 +46,7 @@
     /www.akcartoons.in/.test(url) ? afterDOMLoaded(function() {document.querySelector('#btn6 > button').click()}) : null;
     /www.akcartoons.in/.test(url) ? afterDOMLoaded(function() {redirect(document.querySelector('a[href*="go.moonlinks.in"]'))}) : null;
     /go.moonlinks.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.btn')}) : null;
+
 })();
 // ----- ----- -----
 

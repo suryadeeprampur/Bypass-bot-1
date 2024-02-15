@@ -660,7 +660,7 @@
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
 // @include     /link.manudatos.com\/#!/
-// @include     /iconicblogger.com/
+// @include     /(iconicblogger.com|segurosdevida.site)/
 // @include     /link.unlockner.com/
 // @include     /cybercityhelp.in/
 // @include     /www.akcartoons.in/

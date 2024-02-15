@@ -645,7 +645,7 @@ https://*.shrinkme.us/*
 /comohoy.com/
 /sphinxanime.com\/short/
 /link.manudatos.com\/#!/
-/iconicblogger.com/
+/(iconicblogger.com|segurosdevida.site)/
 /link.unlockner.com/
 /cybercityhelp.in/
 /www.akcartoons.in/
