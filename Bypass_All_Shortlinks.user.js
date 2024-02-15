@@ -650,8 +650,6 @@
 // @match *://*.playstore.pw/*
 // @match *://*.sigmalinks.in/*
 // @match *://*.r1.foxylinks.site/*
-// @match       https://dropgalaxy.com/drive/*
-// @match       https://dropgalaxy.co/drive/*
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
@@ -669,7 +667,7 @@
 // @include     /ouo.io/
 // @include     /linkspy.cc\/tr/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
-// @require     https://code.jquery.com/jquery-2.1.1.min.js
+// @include     /dropgalaxy.(com|co)\/drive/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|aliexpress|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten).*|(dana|ovo).id)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
@@ -1692,61 +1690,22 @@
 
 }})();
 
-// ----- Bypass for dropgalaxy -----
-(function() {
-    'use strict';
-    if (/^https?:\/\/dropgalaxy\.(com|co)\/drive\/.*/.test(window.location.href)) {
-        document.addEventListener('DOMContentLoaded', function() {
-
-            function clickButton(selector) {
-                var button = document.querySelector(selector);
-                if (button) {button.click();};
-            }
-
-            // 1st PAGE - click the hidden button inmediately
-            clickButton('#method_free');
-
-            // 2nd PAGE - 16 seconds delay to click the initially blocked #downloadbtn
-            setTimeout(function() {
-                clickButton('#downloadbtn');
-            }, 16000); // (if you click it from the beginning, it triggers adblock detection)
-
-            // 3rd PAGE - Extract the download link as soon as it is available
-            (function($) {
-                'use strict';
-                // Check for the presence of the form element at regular intervals
-                var intervalId = setInterval(function() {
-                    var $downloadForm = $('#dllink');
-                    if ($downloadForm.length > 0) { // Check if the form element is present
-                        var url = $downloadForm.attr('action'); // Extract the URL from the form action attribute
-                        clearInterval(intervalId); // Stop the interval since the URL is found
-                        alert('Press OK to go to the download link:\n' + url); // Show download link in a popup
-                        window.location.href = url; // Redirect to the download link
-                    }
-                }, 1000);
-            })(jQuery);
-
-        });
-    }
-})();
-// ----- ----- -----
-
-// ----- Simple redirects -----
+// ----- Extra bypasses -----
 (function() {
     'use strict';
     const url = window.location.href
     const redirect = finalUrl => window.location.assign(finalUrl);
     const getParam = (url, param) => new URLSearchParams(url).get(param);
+    const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton) { clearInterval(intervalId); redirect(linkButton.href); } }, 500); };
-    const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 500) } }, 500); };
-    const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() {
-        let intervalId = setInterval(() => {
-          let button = document.querySelector(selector + ':not(.disabled)');
-          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);}
+    const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
+        let intervalId = setInterval(() => { //Check every 0.5s
+          let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
+          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);} //Redirect or click, with a 0.1s delay
         }, 500);});};
 
     //peliculasgd.net
@@ -1806,6 +1765,20 @@
         var urlParam = getParam(decodedUrl,'url');
         /clicksfly.com/.test(decodedUrl) && urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
     }
+
+    //dropgalaxy
+    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null;
+    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null;
+    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {
+        var intervalId = setInterval(function() {// Keep checking if link is available, every 1s
+            var downloadUrl = document.getElementById('dllink').getAttribute('action');
+            if (downloadUrl) {
+                clearInterval(intervalId);
+                alert('Press OK to go to the download link:\n' + downloadUrl);
+                redirect(downloadUrl)
+            }
+        }, 1000);
+    }) : null;
 
 })();
 // ----- ----- -----

@@ -17,25 +17,26 @@
 // @include     /ouo.io/
 // @include     /linkspy.cc\/tr/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
+// @include     /dropgalaxy.(com|co)\/drive/
 // @run-at      document-start
 // ==/UserScript==
 
-// ----- Simple redirects -----
+// ----- Extra bypasses -----
 (function() {
     'use strict';
     const url = window.location.href
     const redirect = finalUrl => window.location.assign(finalUrl);
     const getParam = (url, param) => new URLSearchParams(url).get(param);
+    const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton) { clearInterval(intervalId); redirect(linkButton.href); } }, 500); };
-    const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 500) } }, 500); };
-    const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() {
-        let intervalId = setInterval(() => {
-          let button = document.querySelector(selector + ':not(.disabled)');
-          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);}
+    const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
+        let intervalId = setInterval(() => { //Check every 0.5s
+          let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
+          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);} //Redirect or click, with a 0.1s delay
         }, 500);});};
 
     //peliculasgd.net
@@ -95,6 +96,20 @@
         var urlParam = getParam(decodedUrl,'url');
         /clicksfly.com/.test(decodedUrl) && urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
     }
+
+    //dropgalaxy
+    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null;
+    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null;
+    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {
+        var intervalId = setInterval(function() {// Keep checking if link is available, every 1s
+            var downloadUrl = document.getElementById('dllink').getAttribute('action');
+            if (downloadUrl) {
+                clearInterval(intervalId);
+                alert('Press OK to go to the download link:\n' + downloadUrl);
+                redirect(downloadUrl)
+            }
+        }, 1000);
+    }) : null;
 
 })();
 // ----- ----- -----
