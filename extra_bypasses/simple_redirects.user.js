@@ -14,6 +14,7 @@
 // @include     /shareus.io/
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
+// @include     /ouo.io/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -72,6 +73,10 @@
         var extractedUrl = document.documentElement.innerHTML.split('\n').find(line => line.includes("document.getElementById('contador').href = 'htt")).split("href")[1].match(/'([^']+)'/)[1];
         extractedUrl.includes('?s=') ? redirect(extractedUrl.split('?s=')[1]) : redirect(extractedUrl);
     }) : null;
+
+    //ouo.io
+    /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
+
 })();
 // ----- ----- -----
 

@@ -653,3 +653,4 @@ https://linkspy.cc/tr/*
 /shareus.io/
 /(verpeliculasonline.org|subtituladas.com)\/enlace/
 /links.cuevana.ac\/short/
+/ouo.io/
