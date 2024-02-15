@@ -15,6 +15,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
+// @include     /linkspy.cc\/tr/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @run-at      document-start
 // ==/UserScript==
@@ -24,6 +25,7 @@
     'use strict';
     const url = window.location.href
     const redirect = finalUrl => window.location.assign(finalUrl);
+    const getParam = (url, param) => new URLSearchParams(url).get(param);
     const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
@@ -84,8 +86,15 @@
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
     //redbtn sites
-    /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/.test(url) ? 
+    /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/.test(url) ?
         redirectOrClickIfExistsEnabledWithDelay('.rd_btn') : null;
+
+    //linkspy.cc & clicksfly.com concatenated
+    if (/linkspy.cc\/tr/.test(url)){
+        var decodedUrl = atob(url.split('/tr/')[1]);
+        var urlParam = getParam(decodedUrl,'url');
+        /clicksfly.com/.test(decodedUrl) && urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
+    }
 
 })();
 // ----- ----- -----
