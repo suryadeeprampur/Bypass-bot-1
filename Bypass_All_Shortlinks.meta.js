@@ -665,6 +665,8 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
+// @include     /fc-lc.xyz/
+// @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @include     /dropgalaxy.(com|co)\/drive/

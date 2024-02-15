@@ -650,6 +650,8 @@ r1.foxylinks.site
 /(verpeliculasonline.org|subtituladas.com)\/enlace/
 /links.cuevana.ac\/short/
 /ouo.io/
+/fc-lc.xyz/
+/1v.to\/t/
 /linkspy.cc\/tr/
 /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 /dropgalaxy.(com|co)\/drive/
