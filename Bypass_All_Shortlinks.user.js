@@ -655,6 +655,7 @@
 // @match        https://linkspy.cc/tr/*
 // @match        https://*.shrinkme.us/*
 // @match       *://*.shareus.io/*
+// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
@@ -1782,6 +1783,28 @@
 
         });
     }
+})();
+// ----- ----- -----
+
+
+// ----- redbtn sites bypass -----
+(function() {
+  'use strict';
+  if (/((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/.test(window.location.href)){
+    document.addEventListener('DOMContentLoaded', function() { //Wait for the page to be loaded
+      var intervalId = setInterval(function() { //check every 0.5s
+        var rdBtn = document.querySelector('.rd_btn');
+        if (rdBtn) {
+          if (rdBtn.href && rdBtn.href.includes("/?re=")){ //If redbtn has link, redirect to it
+              window.location.assign(rdBtn.href)
+              clearInterval(intervalId);
+          } else { //If it doesnt have link, just click it
+            rdBtn.click()
+          }
+        }
+      }, 500);
+    })
+  }
 })();
 // ----- ----- -----
 

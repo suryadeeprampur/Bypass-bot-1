@@ -655,6 +655,7 @@
 // @match        https://linkspy.cc/tr/*
 // @match        https://*.shrinkme.us/*
 // @match       *://*.shareus.io/*
+// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
