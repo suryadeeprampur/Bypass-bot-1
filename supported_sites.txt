@@ -637,7 +637,6 @@ sigmalinks.in
 r1.foxylinks.site
 https://dropgalaxy.com/drive/*
 https://dropgalaxy.co/drive/*
-https://linkspy.cc/tr/*
 https://*.shrinkme.us/*
 *://*.shareus.io/*
 /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
@@ -650,3 +649,4 @@ https://*.shrinkme.us/*
 /cybercityhelp.in/
 /www.akcartoons.in/
 /go.moonlinks.in/
+https://linkspy.cc/tr/*

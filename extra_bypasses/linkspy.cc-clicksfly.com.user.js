@@ -2,6 +2,7 @@
 // @name         LinkSpy concatenated with clicksfly.com Bypass
 // @match        https://linkspy.cc/tr/*
 // @run-at       document-start
+//example ttps://linkspy.cc/tr/aHR0cHM6Ly9jbGlja3NmbHkuY29tL2Z1bGw/YXBpPWNhMDNkN2Q1YzBjODgzMzViMGY5YmVmZDkyMWQ5YWYxMWZmZmM4OTEmdXJsPWFIUjBjSE02THk5M2QzY3VabWxzWldOeWVYQjBMbU5qTDBOdmJuUmhhVzVsY2k5RlFrTTVSRE5GUkVZNUxtaDBiV3c9JnR5cGU9Mg==
 // ==/UserScript==
 
 // ----- Bypass for linkspy.cc + clicksfly.com  -----
