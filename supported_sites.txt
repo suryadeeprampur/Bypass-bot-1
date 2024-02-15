@@ -638,7 +638,6 @@ r1.foxylinks.site
 https://dropgalaxy.com/drive/*
 https://dropgalaxy.co/drive/*
 https://linkspy.cc/tr/*
-/((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 /mundopolo.net/
 /comohoy.com/
 /sphinxanime.com\/short/
@@ -654,3 +653,4 @@ https://linkspy.cc/tr/*
 /(verpeliculasonline.org|subtituladas.com)\/enlace/
 /links.cuevana.ac\/short/
 /ouo.io/
+/((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/

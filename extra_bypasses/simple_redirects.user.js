@@ -15,6 +15,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
+// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -28,7 +29,12 @@
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton) { clearInterval(intervalId); redirect(linkButton.href); } }, 500); };
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
-    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 1000) } }, 500); };
+    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 500) } }, 500); };
+    const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() {
+        let intervalId = setInterval(() => {
+          let button = document.querySelector(selector + ':not(.disabled)');
+          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);}
+        }, 500);});};
 
     //peliculasgd.net
     /mundopolo.net/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
@@ -76,6 +82,10 @@
 
     //ouo.io
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
+
+    //redbtn sites
+    /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/.test(url) ? 
+        redirectOrClickIfExistsEnabledWithDelay('.rd_btn') : null;
 
 })();
 // ----- ----- -----

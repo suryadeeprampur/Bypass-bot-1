@@ -653,7 +653,6 @@
 // @match       https://dropgalaxy.com/drive/*
 // @match       https://dropgalaxy.co/drive/*
 // @match        https://linkspy.cc/tr/*
-// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
@@ -669,6 +668,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
+// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @require     https://code.jquery.com/jquery-2.1.1.min.js
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|aliexpress|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten).*|(dana|ovo).id)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
@@ -1752,28 +1752,6 @@
 // ----- ----- -----
 
 
-// ----- redbtn sites bypass -----
-(function() {
-  'use strict';
-  if (/((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/.test(window.location.href)){
-    document.addEventListener('DOMContentLoaded', function() { //Wait for the page to be loaded
-      var intervalId = setInterval(function() { //check every 0.5s
-        var rdBtn = document.querySelector('.rd_btn');
-        if (rdBtn) {
-          if (rdBtn.href && rdBtn.href.includes("/?re=")){ //If redbtn has link, redirect to it
-              window.location.assign(rdBtn.href)
-              clearInterval(intervalId);
-          } else { //If it doesnt have link, just click it
-            rdBtn.click()
-          }
-        }
-      }, 500);
-    })
-  }
-})();
-// ----- ----- -----
-
-
 // ----- Simple redirects -----
 (function() {
     'use strict';
@@ -1784,7 +1762,12 @@
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton) { clearInterval(intervalId); redirect(linkButton.href); } }, 500); };
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
-    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 1000) } }, 500); };
+    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 500) } }, 500); };
+    const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() {
+        let intervalId = setInterval(() => {
+          let button = document.querySelector(selector + ':not(.disabled)');
+          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);}
+        }, 500);});};
 
     //peliculasgd.net
     /mundopolo.net/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
@@ -1832,6 +1815,10 @@
 
     //ouo.io
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
+
+    //redbtn sites
+    /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/.test(url) ? 
+        redirectOrClickIfExistsEnabledWithDelay('.rd_btn') : null;
 
 })();
 // ----- ----- -----
