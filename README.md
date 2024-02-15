@@ -31,7 +31,7 @@ Automatically bypass many link shorteners [(supported_sites.txt)](https://codebe
 Original script by *bloggerpemula*: [greasyfork.org/scripts/431691](https://greasyfork.org/scripts/431691)
 
 ## How I modify the original userscript
-Executing these 3 python scripts in order:
+Executing these python scripts in order:
 - 1_download_untouched.py
 - 2_generate_includes.py
 - 3_patch.py
