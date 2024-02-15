@@ -11,6 +11,7 @@
 // @include     /go.moonlinks.in/
 // @include     /shrinkme.us/
 // @include     /shareus.io/
+// @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -57,6 +58,9 @@
 
     //shareus.io
     /shareus.io/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#root > div > main > div.main-container-1 > div.main-container-2 > div:nth-child(1) > div.adunit-container > button')}) : null;
+
+    //verpeliculasonline.org && subtituladas.com
+    /(verpeliculasonline.org|subtituladas.com)\/enlace/.test(url) ? afterDOMLoaded(function() {redirect(document.getElementById('link').href.split('?s=')[1])}) : null;
 
 })();
 // ----- ----- -----

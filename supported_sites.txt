@@ -650,3 +650,4 @@ https://linkspy.cc/tr/*
 /go.moonlinks.in/
 /shrinkme.us/
 /shareus.io/
+/(verpeliculasonline.org|subtituladas.com)\/enlace/
