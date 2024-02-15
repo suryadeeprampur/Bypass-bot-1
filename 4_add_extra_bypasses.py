@@ -31,7 +31,7 @@ def process_js_files(folder_path, target_file):
     after_user_script_lines = []
 
     # Traverse through the files in the folder
-    for filename in os.listdir(folder_path):
+    for filename in sorted(os.listdir(folder_path)):
         if filename.endswith(".js"):
             with open(os.path.join(folder_path, filename), 'r', encoding='utf-8') as f:
                 lines = f.readlines()

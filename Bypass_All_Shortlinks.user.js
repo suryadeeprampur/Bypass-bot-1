@@ -652,8 +652,7 @@
 // @match *://*.r1.foxylinks.site/*
 // @match       https://dropgalaxy.com/drive/*
 // @match       https://dropgalaxy.co/drive/*
-// @match        https://*.shrinkme.us/*
-// @match       *://*.shareus.io/*
+// @match        https://linkspy.cc/tr/*
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
@@ -664,7 +663,8 @@
 // @include     /cybercityhelp.in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
-// @match        https://linkspy.cc/tr/*
+// @include     /shrinkme.us/
+// @include     /shareus.io/
 // @require     https://code.jquery.com/jquery-2.1.1.min.js
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|aliexpress|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten).*|(dana|ovo).id)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
@@ -1727,41 +1727,23 @@
 })();
 // ----- ----- -----
 
-// ----- Bypass for shrinkme.us -----
+// ----- Bypass for linkspy.cc + clicksfly.com  -----
 (function() {
     'use strict';
-    if (window.location.href.startsWith("https://shrinkme.us/")) {
-      function waitForButton() {
-          var button = document.getElementById('invisibleCaptchaShortlink');
-          if (button) {
-              button.click();
-          } else {
-              setTimeout(waitForButton, 1000); // Check every second
-          }
+    if ( window.location.href.startsWith('https://linkspy.cc/tr/') ) {
+
+      //----Bypass linkspy.cc----
+      var decodedUrl = atob(window.location.href.split('/tr/')[1]);
+      var urlParam = new URLSearchParams(decodedUrl).get('url');
+      if (!decodedUrl.startsWith('https://clicksfly.com/') || !urlParam) {
+        window.location.assign(decodedUrl);
+
+      //----Bypass clicksfly.com----
+      } else if (decodedUrl.startsWith('https://clicksfly.com/') && urlParam) {
+        window.location.assign(atob(urlParam));
       }
-      waitForButton();
     }
-})();
-// ----- ----- -----
 
-
-// ----- Bypass for shareus.io -----
-(function() {
-    'use strict';
-    if (window.location.hostname === 'shareus.io') {
-        document.addEventListener('DOMContentLoaded', function() { // Wait for the page to be loaded
-
-            function clickButton() {
-                const button = document.querySelector("#root > div > main > div.main-container-1 > div.main-container-2 > div:nth-child(1) > div.adunit-container > button");
-                if (button) {
-                    button.click();
-                    //clearInterval(intervalId); // Stop attempting once clicked
-                }
-            }
-            const intervalId = setInterval(clickButton, 1000); // Set interval to attempt clicking every 1 second
-
-        });
-    }
 })();
 // ----- ----- -----
 
@@ -1794,8 +1776,11 @@
     const url = window.location.href
     const redirect = finalUrl => window.location.assign(finalUrl);
     const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
+    const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
+    const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton) { clearInterval(intervalId); redirect(linkButton.href); } }, 500); };
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
+    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 1000) } }, 500); };
 
     //peliculasgd.net
     /mundopolo.net/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
@@ -1811,7 +1796,7 @@
 
     //anime-world.in and mandranime.com
     /(iconicblogger.com|segurosdevida.site)/.test(url) ? afterDOMLoaded(function() {redirect(document.getElementById('wpsafe-link').querySelector('a').getAttribute('onclick').match(/window\.open\('([^']*)'/)[1])}) : null;
-    
+
     //anime-world.in 2nd step
     /link.unlockner.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn.get-link')}) : null;
 
@@ -1823,26 +1808,11 @@
     /www.akcartoons.in/.test(url) ? afterDOMLoaded(function() {redirect(document.querySelector('a[href*="go.moonlinks.in"]'))}) : null;
     /go.moonlinks.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.btn')}) : null;
 
-})();
-// ----- ----- -----
+    //shrinkme.us
+    /shrinkme.us/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
 
-
-// ----- Bypass for linkspy.cc + clicksfly.com  -----
-(function() {
-    'use strict';
-    if ( window.location.href.startsWith('https://linkspy.cc/tr/') ) {
-
-      //----Bypass linkspy.cc----
-      var decodedUrl = atob(window.location.href.split('/tr/')[1]);
-      var urlParam = new URLSearchParams(decodedUrl).get('url');
-      if (!decodedUrl.startsWith('https://clicksfly.com/') || !urlParam) {
-        window.location.assign(decodedUrl);
-
-      //----Bypass clicksfly.com----
-      } else if (decodedUrl.startsWith('https://clicksfly.com/') && urlParam) {
-        window.location.assign(atob(urlParam));
-      }
-    }
+    //shareus.io
+    /shareus.io/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#root > div > main > div.main-container-1 > div.main-container-2 > div:nth-child(1) > div.adunit-container > button')}) : null;
 
 })();
 // ----- ----- -----
