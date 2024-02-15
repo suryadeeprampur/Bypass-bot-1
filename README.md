@@ -9,7 +9,7 @@ Automatically bypass many link shorteners [(supported_sites.txt)](https://codebe
 
 ## Improvements in this fork
 - **No loading the script indiscriminately on every site.** The script will be loaded only for the sites that are supported. (the original userscript is loaded in every site you visit which is not necessary).
-    - Note: I have removed the following as supported sites:
+    - Note: By default, the script will not run on the following sites (these can be enabled manually):
         - Youtube `*://*.youtube.com/shorts/*`_(@match)_ (which is used for redirecting shorts)
         - Google:
             - Drive/Docs `/^(https?:\/\/)(drive|docs)\.google\.com(\/.*)/`_(@include)_ (which is used for Auto-DL from Drive/Docs)
@@ -20,7 +20,7 @@ Automatically bypass many link shorteners [(supported_sites.txt)](https://codebe
         - Facebook `*://*.facebook.com/*`_(@match)_ Bypass redirects
         - VK `*://*.vk.com/*`_(@match)_ Bypass redirects
 
-        Not including these is to prevent some people from worrying about the script running on sensitive sites. These can be re-enabled manually in your userscript manager, adding the mentioned _matching rules_ in the script _settings_.
+        Not including these by default is to prevent some people from worrying about the script running on sensitive sites. These can be re-enabled manually in your userscript manager, adding the mentioned _matching rules_ in the script _settings_.
 - **No useless added redirects.** The script will not redirect to `rotator.nurul-huda.sch.id` or `free4u.nurul-huda.or.id` before your destination URL, which are intermediary sites set by the developer for tracking / [collecting analytics](https://i.ibb.co/D1zYG1v/topcountry17-04-2023.jpg) and showing ads.
 - **No injecting unnecesary tracking in every site**. 
     - The script will not inject that _iframe_ linking to `menrealitycalc.com`.
