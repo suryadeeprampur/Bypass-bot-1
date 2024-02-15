@@ -12,6 +12,7 @@
 // @include     /shrinkme.us/
 // @include     /shareus.io/
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
+// @include     /links.cuevana.ac\/short/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -62,6 +63,11 @@
     //verpeliculasonline.org && subtituladas.com
     /(verpeliculasonline.org|subtituladas.com)\/enlace/.test(url) ? afterDOMLoaded(function() {redirect(document.getElementById('link').href.split('?s=')[1])}) : null;
 
+    //maxcine.net
+    /links.cuevana.ac\/short/.test(url) ? afterDOMLoaded(function() {
+        var extractedUrl = document.documentElement.innerHTML.split('\n').find(line => line.includes("document.getElementById('contador').href = 'htt")).split("href")[1].match(/'([^']+)'/)[1];
+        extractedUrl.includes('?s=') ? redirect(extractedUrl.split('?s=')[1]) : redirect(extractedUrl);
+    }) : null;
 })();
 // ----- ----- -----
 

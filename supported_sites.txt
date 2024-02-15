@@ -651,3 +651,4 @@ https://linkspy.cc/tr/*
 /shrinkme.us/
 /shareus.io/
 /(verpeliculasonline.org|subtituladas.com)\/enlace/
+/links.cuevana.ac\/short/
