@@ -15,7 +15,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
-// @include     /fc-lc.xyz/
+// @include     /fc-lc.(xyz|com)/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
@@ -30,7 +30,6 @@
     const redirect = finalUrl => window.location.assign(finalUrl);
     const getParam = (url, param) => new URLSearchParams(url).get(param);
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
-    const base64DecodeWithCleaning = (string, times) => {let decoded = string; for (let i = 0; i < times; i++) {decoded = atob(decoded.replace('ø', '').replace('+P', ''));}return decoded;}
     const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
@@ -58,7 +57,7 @@
     /link.manudatos.com\/#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
 
     //intercambiosvirtuales.org
-    /1v.to\/t/.test(url) ? redirect(base64DecodeWithCleaning(url.split('/t/')[1], 5)) : null;
+    /1v.to\/t/.test(url) ? redirect(atob(atob(atob(atob( atob(url.split('/t/')[1]).replace('+P', '') ))))) : null;
 
     //anime-world.in and mandranime.com
     /(iconicblogger.com|segurosdevida.site)/.test(url) ? afterDOMLoaded(function() {redirect(document.getElementById('wpsafe-link').querySelector('a').getAttribute('onclick').match(/window\.open\('([^']*)'/)[1])}) : null;
@@ -77,8 +76,8 @@
     //shrinkme.us
     /shrinkme.us/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
 
-    //fc-lc.xyz
-    /fc-lc.xyz/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    //fc-lc
+    /fc-lc.(xyz|com)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
 
     //shareus.io
     /shareus.io/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#root > div > main > div.main-container-1 > div.main-container-2 > div:nth-child(1) > div.adunit-container > button')}) : null;
