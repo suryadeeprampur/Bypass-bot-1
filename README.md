@@ -23,7 +23,8 @@ Automatically bypass many link shorteners [(supported_sites.txt)](https://codebe
         Not including these by default is to prevent some people from worrying about the script running on sensitive sites. These can be re-enabled manually in your userscript manager, adding the mentioned _matching rules_ in the script _settings_.
 - **No useless added redirects.** The script will not redirect to `rotator.nurul-huda.sch.id` or `free4u.nurul-huda.or.id` before your destination URL, which are intermediary sites set by the developer for tracking / [collecting analytics](https://i.ibb.co/D1zYG1v/topcountry17-04-2023.jpg) and showing ads.
 - **No injecting unnecesary tracking in every site**. 
-    - The script will not inject that _iframe_ linking to `menrealitycalc.com`.
+    - The script will not inject that _iframe_ linking to `menrealitycalc.com`. 
+    _(Tip: this can be avoided in the original script adding this filter to uBlock Origin: `||menrealitycalc.com^$third-party`)_
     - The script will not inject this weird _"adcopy_response"_. (I don't see a clear purpose for this, since it doesn't seem related in the script to any specific link shortener)
 - **Removed non-latin non-unicode characters** to avoid potential bug warnings.
 - **(NEW!) Added extra bypasses** from the [extra_bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) folder.
