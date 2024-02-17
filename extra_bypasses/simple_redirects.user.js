@@ -20,6 +20,7 @@
 // @include     /linkspy.cc\/tr/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @include     /dropgalaxy.(com|co)\/drive/
+// @include     /short-ly.co/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -32,6 +33,7 @@
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
+    const redirectIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button.href) { clearInterval(intervalId); redirect(button.href) } }, 500); };
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton) { clearInterval(intervalId); redirect(linkButton.href); } }, 500); };
     const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 500) } }, 500); };
@@ -118,6 +120,9 @@
             }
         }, 1000);
     }) : null;
+
+    // short-ly.co https://github.com/FastForwardTeam/FastForward/issues/1363
+    /short-ly.co/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-secondary')}) : null;
 
 })();
 // ----- ----- -----
