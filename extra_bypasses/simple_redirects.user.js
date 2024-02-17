@@ -12,6 +12,7 @@
 // @include     /go.moonlinks.in/
 // @include     /shrinkme.us/
 // @include     /shareus.io/
+// @include     /shareus\.io\/go\?sid=/
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
@@ -21,6 +22,7 @@
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
+// @include     /shramikcard.in/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -30,6 +32,7 @@
     const url = window.location.href
     const redirect = finalUrl => window.location.assign(finalUrl);
     const getParam = (url, param) => new URLSearchParams(url).get(param);
+    const popupsToRedirects = () => window.open = (url, target, features) => (window.location.href = url, window);
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
@@ -84,6 +87,13 @@
     //shareus.io https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/2
     /shareus.io/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#root > div > main > div.main-container-1 > div.main-container-2 > div:nth-child(1) > div.adunit-container > button')}) : null;
 
+    // shareus.io (type 2) https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8501665
+    if (/shareus\.io\/go\?sid=/.test(url)){
+      popupsToRedirects();
+      let selector = '#custom-root > div > div:nth-child(3) > div.flex.align-center.space-between.button-texts > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeLarge.MuiButton-containedSizeLarge.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeLarge.MuiButton-containedSizeLarge.css-s7ybtv';
+      afterDOMLoaded(function() {setTimeout(() => { clickIfExists(selector);}, 1000);})
+    }
+
     //verpeliculasonline.org && subtituladas.com
     /(verpeliculasonline.org|subtituladas.com)\/enlace/.test(url) ? afterDOMLoaded(function() {redirect(document.getElementById('link').href.split('?s=')[1])}) : null;
 
@@ -123,6 +133,16 @@
 
     // short-ly.co https://github.com/FastForwardTeam/FastForward/issues/1363
     /short-ly.co/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-secondary')}) : null;
+
+    // multimovies.uno
+    //##Intermediate buttons
+    const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector(buttonSelector); if (button && button.textContent.includes(targetText) && !(targetText == 'Get Link')) { setTimeout(() => button.click(), 500); } }, 2000));
+    /shramikcard.in/.test(url) ? handleShamikcardButtons('#topButton', 'Click to Continue') : null;
+    /shramikcard.in/.test(url) ? handleShamikcardButtons('#topButton', 'Continue') : null;
+    /shramikcard.in/.test(url) ? handleShamikcardButtons('#bottomButton', 'Click to Continue') : null;
+    /shramikcard.in/.test(url) ? handleShamikcardButtons('#bottomButton', 'Continue') : null;
+    //##Final button
+    /shramikcard.in/.test(url) ? (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))() : null; //Final button
 
 })();
 // ----- ----- -----
