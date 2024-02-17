@@ -1748,7 +1748,7 @@
     //fc-lc
     /fc-lc.(xyz|com)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
 
-    //shareus.io
+    //shareus.io https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/2
     /shareus.io/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#root > div > main > div.main-container-1 > div.main-container-2 > div:nth-child(1) > div.adunit-container > button')}) : null;
 
     //verpeliculasonline.org && subtituladas.com
@@ -1763,18 +1763,18 @@
     //ouo.io
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
-    //redbtn sites
+    //rd_btn sites https://github.com/uBlockOrigin/uAssets/issues/22146
     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/.test(url) ?
         redirectOrClickIfExistsEnabledWithDelay('.rd_btn') : null;
 
-    //linkspy.cc & clicksfly.com concatenated
+    //linkspy.cc & clicksfly.com concatenated https://github.com/FastForwardTeam/FastForward/issues/1352
     if (/linkspy.cc\/tr/.test(url)){
         var decodedUrl = atob(url.split('/tr/')[1]);
         var urlParam = getParam(decodedUrl,'url');
         /clicksfly.com/.test(decodedUrl) && urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
     }
 
-    //dropgalaxy
+    //dropgalaxy https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/2
     /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null;
     /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null;
     /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {
