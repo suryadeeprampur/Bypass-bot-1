@@ -669,7 +669,7 @@
 // @include     /fc-lc.(xyz|com)/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
-// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/
+// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
 // @include     /shramikcard.in/
@@ -1781,8 +1781,8 @@
     //ouo.io
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
-    //rd_btn sites https://github.com/uBlockOrigin/uAssets/issues/22146
-    /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.org|theapknews.shop|trendzguruji.me)/.test(url) ?
+    //vegamovies, worldfree4u, ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
+    /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me)/.test(url) ?
         redirectOrClickIfExistsEnabledWithDelay('.rd_btn') : null;
 
     //linkspy.cc & clicksfly.com concatenated https://github.com/FastForwardTeam/FastForward/issues/1352
