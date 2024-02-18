@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        91.1.6
+// @version        91.1.7
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
