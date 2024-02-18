@@ -146,7 +146,6 @@
 // @match *://*.enlacito.com/*
 // @match *://*.webhostingtips.club/*
 // @match *://*.render-state.to/*
-// @match *://*.itscybertech.com/*
 // @include /^(https?:\/\/)(.+)?(michaelemad.com|7misr4day.com)(\/.*)/
 // @match *://*.shareus.io/*
 // @match *://*.adtival.network/*
@@ -677,6 +676,8 @@
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
 // @include     /www\.seriezloaded\.com\.ng\/sl-download\/\?link=/
+// @include     /www.itscybertech.com/
+// @include     /thegadgetking.in/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|aliexpress|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten).*|(dana|ovo).id)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
@@ -1234,7 +1235,7 @@
     BypassedByBloggerPemula(/enlacito.com/, function() {setTimeout(() => {redirect(window.DYykkzwP,false);}, 2 * 1000);});
     BypassedByBloggerPemula(/webhostingtips.club/, {'/safe.php': ['link', 'https://jrlinks.in/safe2.php?link='],}, false);
     BypassedByBloggerPemula(/render-state.to/, function() {if (BpParams.has('link')) {meta(atob(BpParams.get('link')));}});
-    BypassedByBloggerPemula(/itscybertech.com/, function() {if (BpParams.has('data')) {meta(atob(BpParams.get('data')));}});
+    //BypassedByBloggerPemula(/itscybertech.com/, function() {if (BpParams.has('data')) {meta(atob(BpParams.get('data')));}});
     BypassedByBloggerPemula(/michaelemad.com|7misr4day.com/, () => waitForElm('a.s-btn-f', mld => redirect(mld.href, false)));
     BypassedByBloggerPemula(/shareus.io/, function() {if (BpParams.has('sid')) {ReadytoClick('button.MuiButtonBase-root', 2);}});
     BypassedByBloggerPemula(/adtival.network/, function() {if (BpParams.has('shortid')) {meta(atob(BpParams.get('shortid')));}});
@@ -1836,6 +1837,12 @@
 
     // seriezloaded.com.ng
     /www\.seriezloaded\.com\.ng\/sl-download\/\?link=/ .test(url) ? afterDOMLoaded(function() { redirect(document.querySelector('.sl-button').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1]) }) : null;
+
+    // privatemoviez.baby
+    /www.itscybertech.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.button')}) : null;
+    /www.itscybertech.com/.test(url) ? clickIfVisible('#gtbtn2') : null;
+    /www.itscybertech.com/.test(url) ? clickIfVisible('.download') : null;
+    /thegadgetking.in/.test(url) ? popupsToRedirects() && afterDOMLoaded(function() {clickIfExists('#openbtn')}) : null;
 
 })();
 // ----- ----- -----

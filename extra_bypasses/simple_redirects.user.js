@@ -27,6 +27,8 @@
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
 // @include     /www\.seriezloaded\.com\.ng\/sl-download\/\?link=/
+// @include     /www.itscybertech.com/
+// @include     /thegadgetking.in/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -167,6 +169,12 @@
 
     // seriezloaded.com.ng
     /www\.seriezloaded\.com\.ng\/sl-download\/\?link=/ .test(url) ? afterDOMLoaded(function() { redirect(document.querySelector('.sl-button').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1]) }) : null;
+
+    // privatemoviez.baby
+    /www.itscybertech.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.button')}) : null;
+    /www.itscybertech.com/.test(url) ? clickIfVisible('#gtbtn2') : null;
+    /www.itscybertech.com/.test(url) ? clickIfVisible('.download') : null;
+    /thegadgetking.in/.test(url) ? popupsToRedirects() && afterDOMLoaded(function() {clickIfExists('#openbtn')}) : null;
 
 })();
 // ----- ----- -----

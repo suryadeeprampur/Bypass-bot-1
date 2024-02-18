@@ -131,7 +131,6 @@ bildirim.in|bildirim.eu|bildirim.link
 enlacito.com
 webhostingtips.club
 render-state.to
-itscybertech.com
 michaelemad.com|7misr4day.com
 shareus.io
 adtival.network
@@ -662,3 +661,5 @@ r1.foxylinks.site
 /starsddl.me\/short/
 /tech.unblockedgames.world/
 /www\.seriezloaded\.com\.ng\/sl-download\/\?link=/
+/www.itscybertech.com/
+/thegadgetking.in/
