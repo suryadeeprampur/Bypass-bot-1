@@ -24,6 +24,8 @@
 // @include     /short-ly.co/
 // @include     /shramikcard.in/
 // @include     /blogging.techworldx.net/
+// @include     /starsddl.me\/short/
+// @include     /tech.unblockedgames.world/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -152,6 +154,15 @@
     /blogging.techworldx.net/.test(url) ? clickIfVisible('.wait > center:nth-child(1) > img:nth-child(1)') : null;
     /blogging.techworldx.net/.test(url) ? clickIfVisible('#generater > img:nth-child(1)') : null;
     /blogging.techworldx.net/.test(url) ? clickIfVisible('#showlink') : null;
+
+    // starsddl.me
+    /starsddl.me\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
+
+    // https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/229509 (targets files in driveleech.org)
+    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('span.block > a:nth-child(1)')}) : null;
+    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('#verify_button')}) : null;
+    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('#verify_button2')}) : null;
+    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#two_steps_btn')}) : null;
 
 })();
 // ----- ----- -----
