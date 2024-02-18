@@ -658,3 +658,4 @@ r1.foxylinks.site
 /dropgalaxy.(com|co)\/drive/
 /short-ly.co/
 /shramikcard.in/
+/blogging.techworldx.net/
