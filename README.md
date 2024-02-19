@@ -8,7 +8,7 @@ Automatically bypass many link shorteners ([supported shorteners](https://codebe
 (you need a userscript manager like [ViolentMonkey](https://violentmonkey.github.io/) installed in your web browser)
 
 ## Improvements in this fork
-- **Added extra bypasses** from the [extra_bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) folder.
+- **Added more bypasses and some fixes** through the scripts in the [extra_bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) directory.
 - **No loading the script indiscriminately on every site.** The script will be loaded only for the sites that are supported. (the original userscript is loaded in every site you visit which is not necessary).
     - Note: By default, the script will not run on the following sites (these can be enabled manually):
         - Youtube `*://*.youtube.com/shorts/*`_(@match)_ (which is used for redirecting shorts)
