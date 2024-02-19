@@ -8,6 +8,8 @@ Automatically bypass many link shorteners ([supported shorteners](https://codebe
 (you need a userscript manager like [ViolentMonkey](https://violentmonkey.github.io/) installed in your web browser)
 
 ## Improvements in this fork
+- **Disabled the linkvertise bypass. Use [linkvertise and krnl bypasser](https://greasyfork.org/scripts/427869)**, which works better for that shortener. (I disabled it to avoid conflicts between both scripts.)
+- **Added extra bypasses** from the [extra_bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) folder.
 - **No loading the script indiscriminately on every site.** The script will be loaded only for the sites that are supported. (the original userscript is loaded in every site you visit which is not necessary).
     - Note: By default, the script will not run on the following sites (these can be enabled manually):
         - Youtube `*://*.youtube.com/shorts/*`_(@match)_ (which is used for redirecting shorts)
@@ -27,7 +29,6 @@ Automatically bypass many link shorteners ([supported shorteners](https://codebe
     _(Tip: this can be avoided in the original script adding this filter to uBlock Origin: `||menrealitycalc.com^$third-party`)_
     - The script will not inject this weird _"adcopy_response"_. (I don't see a clear purpose for this, since it doesn't seem related in the script to any specific link shortener)
 - **Removed non-latin non-unicode characters** to avoid potential bug warnings.
-- **(NEW!) Added extra bypasses** from the [extra_bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) folder.
 
 Original script by *bloggerpemula*: [greasyfork.org/scripts/431691](https://greasyfork.org/scripts/431691)
 
