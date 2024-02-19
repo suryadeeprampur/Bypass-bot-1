@@ -662,3 +662,4 @@ r1.foxylinks.site
 /seriezloaded.com.ng\/sl-download\/\?link=/
 /www.itscybertech.com/
 /thegadgetking.in/
+/(linkvertise.com|linkvertise.net|link-to.net).*\?r=/

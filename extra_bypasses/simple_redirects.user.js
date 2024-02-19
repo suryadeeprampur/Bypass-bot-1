@@ -29,6 +29,7 @@
 // @include     /seriezloaded.com.ng\/sl-download\/\?link=/
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
+// @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -175,6 +176,9 @@
     /www.itscybertech.com/.test(url) ? clickIfVisible('#gtbtn2') : null;
     /www.itscybertech.com/.test(url) ? clickIfVisible('.download') : null;
     /thegadgetking.in/.test(url) ? popupsToRedirects() && afterDOMLoaded(function() {clickIfExists('#openbtn')}) : null;
+
+    // Linkvertise easy case (when there is '?r=')
+    /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/.test(url) ? redirect(atob((new URLSearchParams(window.location.search)).get('r'))) : null;
 
 })();
 // ----- ----- -----
