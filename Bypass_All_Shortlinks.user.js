@@ -659,6 +659,7 @@
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
 // @include     /shrinkme.us/
+// @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
@@ -1759,6 +1760,10 @@
 
     //shrinkme.us
     /shrinkme.us/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+
+    //test.shrinkurl.org https://github.com/FastForwardTeam/FastForward/issues/1365
+    /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     //fc-lc
     /fc-lc.(xyz|com)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;

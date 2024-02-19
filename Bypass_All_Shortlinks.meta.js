@@ -659,6 +659,7 @@
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
 // @include     /shrinkme.us/
+// @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/

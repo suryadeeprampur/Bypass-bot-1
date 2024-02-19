@@ -644,6 +644,7 @@ r1.foxylinks.site
 /www.akcartoons.in/
 /go.moonlinks.in/
 /shrinkme.us/
+/test.shrinkurl.org/
 /shareus.io/
 /shareus\.io\/go\?sid=/
 /(verpeliculasonline.org|subtituladas.com)\/enlace/
