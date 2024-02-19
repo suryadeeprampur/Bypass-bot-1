@@ -664,3 +664,4 @@ r1.foxylinks.site
 /thegadgetking.in/
 /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
 /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
+/epicload.com\/files/

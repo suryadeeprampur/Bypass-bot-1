@@ -31,6 +31,7 @@
 // @include     /thegadgetking.in/
 // @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
 // @include     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
+// @include     /epicload.com\/files/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -181,6 +182,10 @@
     // Linkvertise
     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/.test(url) ? redirect(atob((new URLSearchParams(window.location.search)).get('r'))) : null;
     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/.test(url) ? redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(url)) : null;
+
+    // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
+    /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-primary')}) : null;
+    /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('.btn-getlink')}) : null;
 
 })();
 // ----- ----- -----
