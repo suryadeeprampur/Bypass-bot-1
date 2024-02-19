@@ -26,7 +26,7 @@
 // @include     /blogging.techworldx.net/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
-// @include     /www\.seriezloaded\.com\.ng\/sl-download\/\?link=/
+// @include     /seriezloaded.com.ng\/sl-download\/\?link=/
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
 // @run-at      document-start
@@ -161,14 +161,14 @@
     // starsddl.me
     /starsddl.me\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
 
-    // https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/229509 (targets files in driveleech.org)
+    // uhdmovies.us
     /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('span.block > a:nth-child(1)')}) : null;
     /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('#verify_button')}) : null;
     /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('#verify_button2')}) : null;
     /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#two_steps_btn')}) : null;
 
     // seriezloaded.com.ng
-    /www\.seriezloaded\.com\.ng\/sl-download\/\?link=/ .test(url) ? afterDOMLoaded(function() { redirect(document.querySelector('.sl-button').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1]) }) : null;
+    /seriezloaded.com.ng\/sl-download\/\?link=/ .test(url) ? afterDOMLoaded(function() { redirect(document.querySelector('.sl-button').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1]) }) : null;
 
     // privatemoviez.baby
     /www.itscybertech.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.button')}) : null;

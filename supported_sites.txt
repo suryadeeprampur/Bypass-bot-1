@@ -659,6 +659,6 @@ r1.foxylinks.site
 /blogging.techworldx.net/
 /starsddl.me\/short/
 /tech.unblockedgames.world/
-/www\.seriezloaded\.com\.ng\/sl-download\/\?link=/
+/seriezloaded.com.ng\/sl-download\/\?link=/
 /www.itscybertech.com/
 /thegadgetking.in/
