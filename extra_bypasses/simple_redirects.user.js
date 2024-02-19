@@ -30,6 +30,7 @@
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
 // @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
+// @include     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -177,8 +178,9 @@
     /www.itscybertech.com/.test(url) ? clickIfVisible('.download') : null;
     /thegadgetking.in/.test(url) ? popupsToRedirects() && afterDOMLoaded(function() {clickIfExists('#openbtn')}) : null;
 
-    // Linkvertise easy case (when there is '?r=')
+    // Linkvertise
     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/.test(url) ? redirect(atob((new URLSearchParams(window.location.search)).get('r'))) : null;
+    /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/.test(url) ? redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(url)) : null;
 
 })();
 // ----- ----- -----
