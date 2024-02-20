@@ -669,3 +669,4 @@ r1.foxylinks.site
 /woowebtools.com|pallabmobile.in/
 /doodrive.com\/f/
 /ipamod.com\/redirect-to/
+/9xflix\.(\w+)\/m\/goto/

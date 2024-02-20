@@ -37,6 +37,7 @@
 // @include     /woowebtools.com|pallabmobile.in/
 // @include     /doodrive.com\/f/
 // @include     /ipamod.com\/redirect-to/
+// @include     /9xflix\.(\w+)\/m\/goto/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -202,8 +203,11 @@
     /woowebtools.com|pallabmobile.in/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('body > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > p:nth-child(4) > button:nth-child(1)')}) : null; //close anti-adblock banner
     /doodrive.com\/f/.test(url) ? window.addEventListener("load", function(event) {setTimeout(function() { clickIfExists('button.uk-button-primary:nth-child(1)')}, 1000) }) : null; //continue button
 
-    //taodung.com
+    // taodung.com
     /ipamod.com\/redirect-to/.test(url) && url.includes('?s=') ? redirect(decodeURIComponent(url.split('?s=')[1])) : null;
+
+    // 9xflix.business
+    /9xflix\.(\w+)\/m\/goto/.test(url) ? redirect(url.split('/goto/')[1]) : null;
 
 })();
 
