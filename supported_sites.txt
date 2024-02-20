@@ -670,3 +670,17 @@ r1.foxylinks.site
 /doodrive.com\/f/
 /ipamod.com\/redirect-to/
 /9xflix\.(\w+)\/m\/goto/
+/bookszone.in/
+/yoshare.net/
+/blog.disheye.com/
+/reminimod.co/
+/techrayzer.com/
+/techfizia.com/
+/tech5s.co/
+/ez4mods.com/
+/ez4short.com/
+/learnmany.in/
+/lksfy.in/
+/droplink.co/
+/lnks.primarchweb.in/
+/highkeyfinance.com/
