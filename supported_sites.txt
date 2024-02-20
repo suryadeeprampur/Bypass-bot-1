@@ -666,3 +666,4 @@ r1.foxylinks.site
 /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
 /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
 /epicload.com\/files/
+/www.gtaall.com\/get-manual/

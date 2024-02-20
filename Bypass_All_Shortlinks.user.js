@@ -681,6 +681,7 @@
 // @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
 // @include     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
 // @include     /epicload.com\/files/
+// @include     /www.gtaall.com\/get-manual/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|aliexpress|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten).*|(dana|ovo).id)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
@@ -1858,6 +1859,19 @@
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
     /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-primary')}) : null;
     /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('.btn-getlink')}) : null;
+
+})();
+
+(function() {
+    //'use strict';
+    const url = window.location.href
+    const boostTimers = () => {const FsT = window.setTimeout; const FsI = window.setInterval;
+        Object.defineProperty(window, 'setTimeout', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsT.apply(this, arguments);}});
+        Object.defineProperty(window, 'setInterval', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsI.apply(this, arguments);}});
+        };
+
+    // www.gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
+    /www.gtaall.com\/get-manual/.test(url) ? boostTimers() : null;
 
 })();
 // ----- ----- -----

@@ -33,6 +33,7 @@
 // @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
 // @include     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
 // @include     /epicload.com\/files/
+// @include     /www.gtaall.com\/get-manual/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -191,6 +192,19 @@
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
     /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-primary')}) : null;
     /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('.btn-getlink')}) : null;
+
+})();
+
+(function() {
+    //'use strict';
+    const url = window.location.href
+    const boostTimers = () => {const FsT = window.setTimeout; const FsI = window.setInterval;
+        Object.defineProperty(window, 'setTimeout', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsT.apply(this, arguments);}});
+        Object.defineProperty(window, 'setInterval', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsI.apply(this, arguments);}});
+        };
+
+    // www.gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
+    /www.gtaall.com\/get-manual/.test(url) ? boostTimers() : null;
 
 })();
 // ----- ----- -----
