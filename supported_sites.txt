@@ -666,3 +666,5 @@ r1.foxylinks.site
 /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
 /epicload.com\/files/
 /www.gtaall.com\/get-manual/
+/woowebtools.com|pallabmobile.in/
+/doodrive.com\/f/
