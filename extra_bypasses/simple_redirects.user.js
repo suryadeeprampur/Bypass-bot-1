@@ -36,6 +36,7 @@
 // @include     /www.gtaall.com\/get-manual/
 // @include     /woowebtools.com|pallabmobile.in/
 // @include     /doodrive.com\/f/
+// @include     /ipamod.com\/redirect-to/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -124,6 +125,7 @@
     }) : null;
 
     //ouo.io
+    /ouo.io/.test(url) && url.includes('?s=') ? redirect(decodeURIComponent(url.split('?s=')[1])) : null;
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
     //vegamovies, worldfree4u, ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
@@ -199,6 +201,9 @@
     /woowebtools.com|pallabmobile.in/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('.hv-grid > div:nth-child(2) > div:nth-child(1) > form:nth-child(2) > button:nth-child(2)')}) : null; //continue button
     /woowebtools.com|pallabmobile.in/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('body > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > p:nth-child(4) > button:nth-child(1)')}) : null; //close anti-adblock banner
     /doodrive.com\/f/.test(url) ? window.addEventListener("load", function(event) {setTimeout(function() { clickIfExists('button.uk-button-primary:nth-child(1)')}, 1000) }) : null; //continue button
+
+    //taodung.com
+    /ipamod.com\/redirect-to/.test(url) && url.includes('?s=') ? redirect(decodeURIComponent(url.split('?s=')[1])) : null;
 
 })();
 

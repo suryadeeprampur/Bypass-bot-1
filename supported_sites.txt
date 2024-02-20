@@ -668,3 +668,4 @@ r1.foxylinks.site
 /www.gtaall.com\/get-manual/
 /woowebtools.com|pallabmobile.in/
 /doodrive.com\/f/
+/ipamod.com\/redirect-to/
