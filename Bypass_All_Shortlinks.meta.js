@@ -293,7 +293,6 @@
 // @match *://*.bloginkz.com/*
 // @match *://*.bastinews.xyz/*
 // @match *://*.autodime.com/*
-// @include /^(https?:\/\/)(.+)?(lootlinks.co|(loot-links|links-loot|loot-link).com|(lootdest|lootlink).org|lootdest.info|linksloot.net)(\/.*)/
 // @match *://*.amritadrino.com/*
 // @include /^(https?:\/\/)(.+)?(hunterkiller.me|surflink.tech)(\/.*)/
 // @match *://*.coinhub.wiki/*
