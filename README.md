@@ -1,6 +1,7 @@
-Debloated fork of *Bypass All Shortlinks* (originally by *bloggerpemula*), with some [additional bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses).
+Debloated fork of *Bypass All Shortlinks* (originally by *bloggerpemula*), with some additional bypasses and fixes.
 
-Automatically bypass many link shorteners ([supported shorteners](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/supported_sites.txt)) ([changelog](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/commits/branch/main/Bypass_All_Shortlinks.user.js))
+Automatically bypass many link shorteners.
+([supported shorteners](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/supported_sites.txt)) ([changelog](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/commits/branch/main/Bypass_All_Shortlinks.user.js))
 
 ## Install
 **Install with [this link](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)**
