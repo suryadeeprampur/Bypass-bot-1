@@ -699,7 +699,7 @@
 // @include     /lnks.primarchweb.in/
 // @include     /highkeyfinance.com/
 // @include     /toonhub4u.net\/redirect\/main.php\?url=/
-// @include     /nhmgujarat.in/
+// @include     /nhmgujarat.in|minijankari.com/
 // @include     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/
 // @include     /aipebel.com/
 // @include     /raretoonsindia.rtilinks.com/

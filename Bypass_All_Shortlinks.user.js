@@ -699,7 +699,7 @@
 // @include     /lnks.primarchweb.in/
 // @include     /highkeyfinance.com/
 // @include     /toonhub4u.net\/redirect\/main.php\?url=/
-// @include     /nhmgujarat.in/
+// @include     /nhmgujarat.in|minijankari.com/
 // @include     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/
 // @include     /aipebel.com/
 // @include     /raretoonsindia.rtilinks.com/
@@ -1931,8 +1931,8 @@
     // toonsouthindia.com (partial bypass. sometimes it makes you disable ublock and click ads to continue)
     const clickIfVisible2 = (selector) => setInterval(() => { const button = document.querySelector(selector); if (button && button.style.display === 'block') { button.click(); clearInterval(intervalId); } }, 1000);
     const clickIfLinkIsReady = buttonSelector => setInterval(() => { const button = document.querySelector(buttonSelector); if (button && button.getAttribute('href') !== '#') button.click(); }, 1000);
-    /nhmgujarat.in/.test(url) ? afterDOMLoaded(function() {clickIfVisible2('#VerifyBtn')}) : null;
-    /nhmgujarat.in/.test(url) ? afterDOMLoaded(function() {clickIfLinkIsReady('#NextBtn')}) : null;
+    /nhmgujarat.in|minijankari.com/.test(url) ? afterDOMLoaded(function() {clickIfVisible2('#VerifyBtn')}) : null;
+    /nhmgujarat.in|minijankari.com/.test(url) ? afterDOMLoaded(function() {clickIfLinkIsReady('#NextBtn')}) : null;
     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#link-btn > a')}) : null;
 
     // rareanimes.net
