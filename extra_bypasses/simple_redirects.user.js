@@ -61,6 +61,7 @@
 // @include     /(do|fast).rtilinks.com/
 // @include     /vidhidepro.com\/d/
 // @include     /www.mirrored.to\/files\/(?!.*\?hash=)/
+// @include     /skyve.io/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -281,6 +282,10 @@
 
     // mirrored.to seen in rareanimes.net
     /www.mirrored.to\/files\/(?!.*\?hash=)/.test(url) ? afterDOMLoaded(function() {redirectIfExists('body > div.container.dl-width > div:nth-child(4) > div > a')}) : null;
+
+    // skyve.io file host, seen on dodi-repacks.site
+    /skyve.io/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null;
+    /skyve.io/.test(url) ? afterDOMLoaded(function() {clickIfExists('.bicon')}) : null; //download button
 
 })();
 

@@ -691,3 +691,4 @@ r1.foxylinks.site
 /(do|fast).rtilinks.com/
 /vidhidepro.com\/d/
 /www.mirrored.to\/files\/(?!.*\?hash=)/
+/skyve.io/
