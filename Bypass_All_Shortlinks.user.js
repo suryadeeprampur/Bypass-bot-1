@@ -494,7 +494,6 @@
 // @match *://*.truevpnlover.com/*
 // @match *://*.battleroyal.online/*
 // @include /^(https?:\/\/)(.+)?(techyblogs.in|techyinfo.in)(\/.*)/
-// @match *://*.highkeyfinance.com/*
 // @include /^(https?:\/\/)(.+)?(apasih.my.id|healthydad.my.id)(\/.*)/
 // @match *://*.financeyogi.net/*
 // @match *://*.iphoto.site/*
@@ -915,7 +914,7 @@
   BloggerPemula('truevpnlover.com', 'grey', 'https://quick91.com/insure.php?grey=');
   BloggerPemula('battleroyal.online', 'link', 'https://zubatecno.com/safe.php?link=');
   BloggerPemula('techyblogs.in|techyinfo.in', 'go', 'https://insurance.techyinfo.in/');
-  BloggerPemula('highkeyfinance.com', 'landhere', 'https://insurance.techymedies.com/');
+  //BloggerPemula('highkeyfinance.com', 'landhere', 'https://insurance.techymedies.com/');
   BloggerPemula('apasih.my.id|healthydad.my.id', 'link', 'https://link.get4llink.com/');
   BloggerPemula('financeyogi.net', 'link', 'https://market.finclub.in/safe2.php?link=');
   BloggerPemula('iphoto.site', 'post', 'https://vietnamtravelguide.top/token.php?post=');

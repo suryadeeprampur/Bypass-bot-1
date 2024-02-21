@@ -494,7 +494,6 @@
 // @match *://*.truevpnlover.com/*
 // @match *://*.battleroyal.online/*
 // @include /^(https?:\/\/)(.+)?(techyblogs.in|techyinfo.in)(\/.*)/
-// @match *://*.highkeyfinance.com/*
 // @include /^(https?:\/\/)(.+)?(apasih.my.id|healthydad.my.id)(\/.*)/
 // @match *://*.financeyogi.net/*
 // @match *://*.iphoto.site/*
