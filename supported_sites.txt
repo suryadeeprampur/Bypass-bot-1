@@ -684,3 +684,5 @@ r1.foxylinks.site
 /lnks.primarchweb.in/
 /highkeyfinance.com/
 /toonhub4u.net\/redirect\/main.php\?url=/
+/nhmgujarat.in/
+/gplinks.co\/[^/#]+\/(?:#|\?pid=)/
