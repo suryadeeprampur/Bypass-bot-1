@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name        extra bypasses
+// @description These bypasses are always merged into Bypass_All_Shortlinks.user.js
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
