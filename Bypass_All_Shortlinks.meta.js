@@ -344,7 +344,6 @@
 // @match *://*.techleets.xyz/*
 // @match *://*.newsturbovid.com/*
 // @match *://*.amanguides.com/*
-// @match *://*.mirrored.to/*
 // @match *://*.viralxns.com/*
 // @match *://*.flybid.net/*
 // @match *://*.8tm.net/*
