@@ -74,8 +74,7 @@ def main():
                 "twitter.com", #bypass redirects
                 "facebook.com", #bypass redirects
                 "tiktok.com", #bypass redirects
-                "vk.com", #bypass redirects
-                "linkvertise" #use greasyfork.org/scripts/427869 instead
+                "vk.com" #bypass redirects
             ]
             regex_strings = [s for s in regex_strings if not any(word in s for word in blocked_words_for_includes)]
 
