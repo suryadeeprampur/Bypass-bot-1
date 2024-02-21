@@ -52,6 +52,7 @@
 // @include     /droplink.co/
 // @include     /lnks.primarchweb.in/
 // @include     /highkeyfinance.com/
+// @include     /toonhub4u.net\/redirect\/main.php\?url=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -244,6 +245,9 @@
     /lksfy.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.btn')}) : null;
     /droplink.co/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.btn')}) : null;
     /lnks.primarchweb.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn--bg-primary')}) : null;
+
+    // toonhub4u.net
+    /toonhub4u.net\/redirect\/main.php\?url=/.test(url) ? redirect(atob(url.split('url=')[1])) : null;
 
 })();
 
