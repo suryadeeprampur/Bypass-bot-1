@@ -686,3 +686,8 @@ r1.foxylinks.site
 /toonhub4u.net\/redirect\/main.php\?url=/
 /nhmgujarat.in/
 /gplinks.co\/[^/#]+\/(?:#|\?pid=)/
+/aipebel.com/
+/raretoonsindia.rtilinks.com/
+/(do|fast).rtilinks.com/
+/vidhidepro.com\/d/
+/www.mirrored.to\/files\/(?!.*\?hash=)/

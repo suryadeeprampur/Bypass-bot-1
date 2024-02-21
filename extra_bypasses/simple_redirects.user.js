@@ -55,6 +55,11 @@
 // @include     /toonhub4u.net\/redirect\/main.php\?url=/
 // @include     /nhmgujarat.in/
 // @include     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/
+// @include     /aipebel.com/
+// @include     /raretoonsindia.rtilinks.com/
+// @include     /(do|fast).rtilinks.com/
+// @include     /vidhidepro.com\/d/
+// @include     /www.mirrored.to\/files\/(?!.*\?hash=)/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -258,6 +263,18 @@
     /nhmgujarat.in/.test(url) ? afterDOMLoaded(function() {clickIfLinkIsReady('#NextBtn')}) : null;
     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#link-btn > a')}) : null;
 
+    // rareanimes.net, for some of the DDL choices (triggers adblock detection with firefox for now)
+    /aipebel.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#wpsafelinkhuman')}) : null;
+    /aipebel.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#wpsafe-generate > a > img')}) : null;
+    /aipebel.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#image3')}) : null;
+    /raretoonsindia.rtilinks.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
+    /(do|fast).rtilinks.com/.test(url) ? window.addEventListener("load", function(event) {redirectIfExists('a[class^="rti_btn"]')}) : null;
+    /vidhidepro.com\/d/.test(url) ? afterDOMLoaded(function() {clickIfExists('body > main > div > center > div > div > a > span')}) : null;
+    /vidhidepro.com\/d/.test(url) ? afterDOMLoaded(function() {clickIfExists('#F1 > button > div > div:nth-child(1) > b')}) : null;
+
+    // mirrored.to seen in rareanimes.net
+    /www.mirrored.to\/files\/(?!.*\?hash=)/.test(url) ? afterDOMLoaded(function() {redirectIfExists('body > div.container.dl-width > div:nth-child(4) > div > a')}) : null;
+
 })();
 
 (function() {
@@ -267,7 +284,6 @@
         Object.defineProperty(window, 'setTimeout', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsT.apply(this, arguments);}});
         Object.defineProperty(window, 'setInterval', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsI.apply(this, arguments);}});
         };
-
     // www.gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
     /www.gtaall.com\/get-manual/.test(url) ? boostTimers() : null;
 
