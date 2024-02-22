@@ -304,7 +304,6 @@
     const redirectIfVisible2 = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button && button.getAttribute('style').includes('block')) { clearInterval(intervalId); redirect(button.querySelector('a').href) } }, 500); };
     /itradercoin.com/.test(url) ? afterDOMLoaded(function() {redirectIfVisible('#yuidea-btn-after')}) : null; //Step 1
     /itradercoin.com/.test(url) ? afterDOMLoaded(function() {redirectIfVisible2('#yuidea-snp')}) : null; // Steps 2-3
-    //last step (necessary)
     /blog.filepresident.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.btn')}) : null;
 
     // mkvmoviespoint.casa
