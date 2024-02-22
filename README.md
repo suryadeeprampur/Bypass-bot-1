@@ -23,7 +23,7 @@ Automatically bypass many link shorteners.
         - VK `*://*.vk.com/*`_(@match)_ Bypass redirects
 
         Not including these by default is to prevent some people from worrying about the script running on sensitive sites. These can be re-enabled manually in your userscript manager, adding the mentioned _matching rules_ in the script _settings_.
-- **No useless added redirects.** The script will not redirect to `rotator.nurul-huda.sch.id` or `free4u.nurul-huda.or.id` before your destination URL, which are intermediary sites set by the developer for tracking / [collecting analytics](https://i.ibb.co/D1zYG1v/topcountry17-04-2023.jpg) and showing ads.
+- **No useless added redirects.** The script will not redirect to `rotator.nurul-huda.sch.id` or `free4u.nurul-huda.or.id` which are sites set by the developer for tracking / [collecting analytics](https://i.ibb.co/D1zYG1v/topcountry17-04-2023.jpg) and showing ads. Note: removing this could break "faucet" (crypto rewards) sites, according to Bloggerpemula, since they add a sometimes necessary delay. I don't try to support those sites with this fork.
 - **No injecting unnecesary tracking in every site**. 
     - The script will not inject that _iframe_ linking to `menrealitycalc.com`. 
     _(Tip: this can be avoided in the original script adding this filter to uBlock Origin: `||menrealitycalc.com^$third-party`)_
