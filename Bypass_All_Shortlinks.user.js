@@ -1816,7 +1816,7 @@
     /ouo.io/.test(url) && url.includes('?s=') ? redirect(decodeURIComponent(url.split('?s=')[1])) : null;
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
-    //vegamovies, worldfree4u, desiremovies.wales ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
+    //vegamovies, worldfree4u, desiremovies.wales, hdhub4u.re ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
     const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
         let intervalId = setInterval(() => { //Check every 0.5s
           let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
