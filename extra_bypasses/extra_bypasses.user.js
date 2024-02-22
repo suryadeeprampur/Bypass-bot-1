@@ -67,6 +67,8 @@
 // @include     /itradercoin.com/
 // @include     /blog.filepresident.com/
 // @include     /gyanigurus.net\/view/
+// @include     /mkvmoviespoint.casa\/goto/
+// @include     /w.linkspoint.net/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -304,6 +306,10 @@
     /itradercoin.com/.test(url) ? afterDOMLoaded(function() {redirectIfVisible2('#yuidea-snp')}) : null; // Steps 2-3
     //last step (necessary)
     /blog.filepresident.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.btn')}) : null;
+
+    // mkvmoviespoint.casa
+    /mkvmoviespoint.casa\/goto/.test(url) ? afterDOMLoaded(function() {redirectIfExists('body > div:nth-child(7) > a:nth-child(1)')}) : null;
+    /w.linkspoint.net/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btnx')}) : null;
 
 })();
 
