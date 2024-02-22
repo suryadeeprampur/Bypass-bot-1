@@ -2,7 +2,7 @@
 // @name       Bypass All Shortlinks Debloated
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
-// @author     Bloggerpemula
+// @author     Amm0ni4
 // @version        91.3
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -10,7 +10,7 @@
 // @grant          GM_xmlhttpRequest
 // @grant          window.onurlchange
 // @grant          GM_registerMenuCommand
-// @icon           https://i.ibb.co/qgr0H1n/BASS-Blogger-Pemula.png
+// @icon           https://cdn-icons-png.flaticon.com/512/14025/14025295.png
 // @require        https://update.greasyfork.org/scripts/439099/1203718/MonkeyConfig%20Modern%20Reloaded.js
 // @description    Bypass All Shortlinks Sites Automatically Skips Annoying Link Shorteners , Skip AdFly , Linkvertise and No Annoying Ads, Directly to Your Destination, and now Support Auto Downloading Your Files
 // @match *://*.earnify.pro/*

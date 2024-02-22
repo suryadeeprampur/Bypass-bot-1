@@ -48,6 +48,8 @@ def modify_script_extra(file_path):
 
             #Change title
             content = content.replace("// @name       Bypass All Shortlinks", "// @name       Bypass All Shortlinks Debloated")
+            content = content.replace("https://i.ibb.co/qgr0H1n/BASS-Blogger-Pemula.png", "https://cdn-icons-png.flaticon.com/512/14025/14025295.png")
+            content = content.replace("@author     Bloggerpemula", "@author     Amm0ni4")
 
             #Change source URL
             content = content.replace("https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.user.js",
