@@ -1868,7 +1868,7 @@
     //##Final button
     /shramikcard.in/.test(url) ? (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))() : null; //Final button
 
-    // ssrmovies.rent
+    // ssrmovies.rent mkvhub.rent
     /blogging.techworldx.net/.test(url) ? clickIfVisible('.wait > center:nth-child(1) > img:nth-child(1)') : null;
     /blogging.techworldx.net/.test(url) ? clickIfVisible('#generater > img:nth-child(1)') : null;
     /blogging.techworldx.net/.test(url) ? clickIfVisible('#showlink') : null;
