@@ -12,7 +12,7 @@
 // @grant          GM_registerMenuCommand
 // @icon           https://cdn-icons-png.flaticon.com/512/14025/14025295.png
 // @require        https://update.greasyfork.org/scripts/439099/1203718/MonkeyConfig%20Modern%20Reloaded.js
-// @description    Bypass All Shortlinks Sites Automatically Skips Annoying Link Shorteners , Skip AdFly , Linkvertise and No Annoying Ads, Directly to Your Destination, and now Support Auto Downloading Your Files
+// @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
 // @match *://*.earnify.pro/*
 // @match *://*.aprovax.com/*
 // @match *://*.lootcash.vip/*
