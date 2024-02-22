@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        91.1.12
+// @version        91.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -38,7 +38,7 @@
 // @match *://*.olhonagrana.com/*
 // @match *://*.dutchycorp.space/*
 // @include /^(https?:\/\/)(.+)?(link.birdurls.com|link.owllink.net|link.illink.net)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((teachsansar|technicalatg|foodxor|cdrab).com|ecq.info|datacheap.io)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((teachsansar|technicalatg|foodxor).com)(\/.*)/
 // @match *://*.ouo.io/*
 // @match *://*.linkbox.to/*
 // @include /^(https?:\/\/)(.+)?((desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link)(\/.*)/
@@ -149,10 +149,9 @@
 // @include /^(https?:\/\/)(.+)?(michaelemad.com|7misr4day.com)(\/.*)/
 // @match *://*.shareus.io/*
 // @match *://*.adtival.network/*
-// @include /^(https?:\/\/)(.+)?(sinonimos.de|quesignifi.ca)(\/.*)/
 // @match *://*.dilink.net/*
 // @match *://*.shortener.goldcontent.site/*
-// @match *://*.admediaflex.com/*
+// @include /^(https?:\/\/)(.+)?((cutnet|cutsy|cutlink).net|(cutty|exego).app)(\/.*)/
 // @match *://*.newsbawa.com/*
 // @include /^(https?:\/\/)(.+)?(askpaccosi.com|paylinks.cloud|healthmart.link|kisalt.com)(\/.*)/
 // @match *://*.ontechhindi.com/*
@@ -160,23 +159,23 @@
 // @match *://*.sfl.gl/*
 // @include /^(https?:\/\/)(.+)?(gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online)(\/.*)/
 // @match *://*.gameblog.in/*
-// @include /^(https?:\/\/)(.+)?((blackleadr|shortcuthigh|newztalkies).com|hubdrive.me)(\/.*)/
 // @match *://*.sharetext.me/*
 // @match *://*.btcsatoshi.net/*
-// @include /^(https?:\/\/)(.+)?((cutado|cutyurls).com|(cutt|cutsy|cutlink).net|(cutty|exego).app)(\/.*)/
 // @match *://*.comohoy.com/*
+// @match *://*.apkw.ru/*
 // @match *://*.ctr.sh/*
-// @match *://*.easycut.io/*
+// @include /^(https?:\/\/)(.+)?((blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net)(\/.*)/
 // @match *://*.programasvirtualespc.net/*
 // @match *://*.hiharshit.in/*
+// @match *://*.easycut.io/*
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techanalyzer.eu|askpaccosi.com|cryptomonitor.in|2the.space|imbb.online)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(hostratgeber.de|(miner-sim|networkhint).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((bitzite|neverdims).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(hostratgeber.de|(miner-sim|networkhint).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(coingraph.us|trendzilla.it|horoscop.info|(infonerd|writeprofit).org)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((tinycmd|tinybc|aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((10short|lollty).pro|mamahawa.com|10short.vip)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(nullscript.info|freebinance.top)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((10short|lollty).pro|mamahawa.com|10short.vip)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((tinycmd|tinybc|aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in)(\/.*)/
 // @match *://*.bitcotasks.com/*
 // @include /^(https?:\/\/)(.+)?(mynewsmedia.co|(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife|revadvert|diethim|techsotta|zutiza|lndianews|newsjov|instantloan5|hitjankari|phixshop|mp4news).com|(rontymobile|myfirstname|snapseedmod|djrajurjm|disking|ignoupur).in)(\/.*)/
@@ -204,7 +203,6 @@
 // @match *://*.1link.club/*
 // @match *://*.1mlink.vip/*
 // @match *://*.zegtrends.com/*
-// @match *://*.techmny.com/*
 // @include /^(https?:\/\/)(.+)?(coincroco.com|surflink.tech)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(bcvc.xyz|bcvc.ink)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(forex-articles.com|fx-22.com)(\/.*)/
@@ -214,10 +212,11 @@
 // @match *://*.altblogger.net/*
 // @match *://*.linkspy.cc/*
 // @include /^(https?:\/\/)(.+)?((webhostingpost|tophostingapp|digitalmarktrend).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(techmny.com|unblockedgames.world)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((chooyomi|blogmado|kredilerim|insuranceleadsinfo).com)(\/.*)/
 // @match *://*.kiktu.com/*
 // @match *://*.fexkomin.xyz/*
-// @match *://*.freebitco.in/*
+// @include /^(https?:\/\/)(.+)?(quesignifi.ca|tiktokcounter.net)(\/.*)/
 // @match *://*.100puan.com/*
 // @match *://*.sub2get.com/*
 // @match *://*.forexrw7.com/*
@@ -244,6 +243,7 @@
 // @include /^(https?:\/\/)(.+)?(ez4mods.com|tech5s.co)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((creditsalah|dissenttimes).com)(\/.*)/
 // @match *://*.alivedesktop.com/*
+// @include /^(https?:\/\/)(.+)?((bnbfree|freeth|freebitco).in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((120898|141989|161989|131989|121989|151989).xyz)(\/.*)/
 // @match *://*.shortearn.net/*
 // @include /^(https?:\/\/)(.+)?((coinsward|blogsward).com|imbb.online)(\/.*)/
@@ -301,7 +301,7 @@
 // @include /^(https?:\/\/)(.+)?((sekilastekno|miuiku|vebma|majalahhewan).com)(\/.*)/
 // @match *://*.coinsrev.com/*
 // @match *://*.zubatecno.com/*
-// @match *://*.wooseotools.com/*
+// @include /^(https?:\/\/)(.+)?((wooseotools|woowebtools).com)(\/.*)/
 // @match *://*.adwerty.com/*
 // @match *://*.modebaca.com/*
 // @match *://*.shopforex.online/*
@@ -318,7 +318,7 @@
 // @match *://*.letsboost.net/*
 // @match *://*.web1s.asia/*
 // @include /^(https?:\/\/)(.+)?((hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|techtrendmakers.com|(exploreera|blogbux|blogesque).net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque|exploreera).net)(\/.*)/
 // @match *://*.coins-town.com/*
 // @include /^(https?:\/\/)(.+)?(slinkware.com|aghtas.com|mazen-ve3.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com)(\/.*)/
@@ -369,18 +369,18 @@
 // @match *://*.foodupe.com/*
 // @match *://*.freethailottery.live/*
 // @match *://*.udrop.com/*
-// @include /^(https?:\/\/)(.+)?((disheye|kreatifparenting|phimne).com|(gurumu|wpcheap).net|sportweb.info)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((financenube|mixrootmods).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(nulledlist.info|earnash.com|my-coins.xyz|earn-bitcoin.online|zimabadko.com|vidoza.xyz|every-crypto.info)(\/.*)/
 // @match *://*.sub2unlock.net/*
 // @include /^(https?:\/\/)(.+)?((starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in)(\/.*)/
 // @match *://*.ronakfitness.com/*
-// @include /^(https?:\/\/)(.+)?(nulledlist.info|earnash.com|my-coins.xyz|earn-bitcoin.online|zimabadko.com|vidoza.xyz|every-crypto.info)(\/.*)/
 // @match *://*.mboost.me/*
-// @include /^(https?:\/\/)(.+)?((cdrab|financenube|mixrootmods).com|datacheap.io|izseo.net|savego.org)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo).net|(sportweb|ecq).info|savego.org|hbz.us|djqunjab.in|datacheap.io)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(readi.online|mbantul.my.id|blog.qnix.me|videoclip.info|moddingzone.in|crypto-fi.net|claimcrypto.cc|xtrabits.click|(cempakajaya|web9academy|onlineincoms|allsoftdrivers|tribuncrypto|poketoonworld|bioinflu|pubgquotes|bico8).com|(techleets|ourcoincash|studyis|healthysamy).xyz)(\/.*)/
 // @match *://*.aiimgvlog.fun/*
-// @include /^(https?:\/\/)(.+)?(dutchycorp.space|dutchycorp.ovh|gtlink.co|seulink.digital|oii.io|hamody.pro|fileku.net|metasafelink.site|(beingtek|fc-lc|atglinks|10short).com|(zagl|shrinkforearn).in|(kiiw|wordcounter).icu|pwrpa.cc|shurt.pw|flyad.vip|antonimos.de|seulink.online)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(dutchycorp.ovh|beast.ink|ckk.ai|onelinks.nl|(viewfr|shortzon|techsamir|ufacw|gawbne|bitcoinwinco|liinkat|links.apksvip|namaidani|cutpaid|link1s|postazap|yeifly|kiddyshort|atglinks|shtfly|cortaly|makemoneywithurl|mtraffics|dz4link|dz-linkk).com|(tmearn|namaidani|cutearn|ccurl|link3s|youshort|illink).net|(s2fly|pglink|snaply|megaurl|megafly|linksbanao).in|(wez|shortlinks).info|(shrink|flyzu).icu|(oko|aii).sh|(24payu|vielink).top|(terafly|hatelink|cashando|zumpa|tlin|weezo|adnews|botfly|linkdam|ar-goal).me|(jameeltips|mitly).us|(forexly|goldly|insurancly).cc|(beycoin|aku2x|moinsider|satoshi-win).xyz|(wedocrypto|yourtechnology|clickmais|flylinks).online|(short1|urlcash|dglinks).site|(shrinkme|tfly).link|(playstore|adsy|clik|shurt).pw|short.express|cryptosh.pro|goo.st|tinygo.co|pndx.live|payskip.org|cryptotracker.space|shortearn.eu|clicklink.fun|lootcash.vip)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(dutchycorp.space|dutchycorp.ovh|gtlink.co|seulink.digital|oii.io|hamody.pro|fileku.net|metasafelink.site|(beingtek|fc-lc|atglinks|10short).com|(zagl|shrinkforearn).in|(kiiw|wordcounter).icu|pwrpa.cc|shurt.pw|(flyad|tapnip).vip|antonimos.de|seulink.online)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(dutchycorp.ovh|beast.ink|ckk.ai|onelinks.nl|(viewfr|shortzon|techsamir|ufacw|gawbne|bitcoinwinco|liinkat|links.apksvip|namaidani|cutpaid|link1s|postazap|yeifly|kiddyshort|atglinks|shtfly|cortaly|makemoneywithurl|mtraffics|dz4link|dz-linkk).com|(tmearn|namaidani|cutearn|ccurl|link3s|youshort|illink).net|(s2fly|pglink|snaply|megaurl|megafly|linksbanao).in|(wez|shortlinks).info|(shrink|flyzu).icu|(oko|aii).sh|(24payu|vielink).top|(terafly|hatelink|cashando|zumpa|tlin|weezo|adnews|botfly|linkdam|ar-goal).me|(jameeltips|mitly).us|(forexly|goldly|insurancly).cc|(beycoin|aku2x|moinsider|satoshi-win).xyz|(wedocrypto|yourtechnology|clickmais|flylinks).online|(short1|urlcash|dglinks).site|(shrinkme|tfly).link|(playstore|adsy|clik|shurt).pw|short.express|cryptosh.pro|goo.st|tinygo.co|pndx.live|(payskip|shrinkurl).org|cryptotracker.space|shortearn.eu|clicklink.fun|(lootcash|tapnip).vip|addurl.biz)(\/.*)/
 // @match *://*.autofaucet.dutchycorp.space/*
 // @match *://*.gocmod.com/*
 // @match *://*.clink1.com/*
@@ -455,7 +455,6 @@
 // @match *://*.techyinfo.in/*
 // @match *://*.gyanitheme.com/*
 // @match *://*.ww1.linktrims.com/*
-// @match *://*.djqunjab.in/*
 // @match *://*.healthynepal.in/*
 // @match *://*.missionhight.in/*
 // @match *://*.tech.techwhom.com/*
@@ -498,8 +497,8 @@
 // @match *://*.iphoto.site/*
 // @match *://*.copy-paste-fonts.com/*
 // @include /^(https?:\/\/)(.+)?(techloadz.com|sportsmediaz.com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((manga2day|gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((kienthucrangmieng|chinhnhacoban|tremamnon|coin-free).com|fanclup.info)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((manga2day|gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia|blog.disheye).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(nguyenvanbao.com|nghiencar.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(fc-lc.xyz|(webhostingpost|tophostingapp|digitalmarktrend).com)(\/.*)/
 // @match *://*.mohtawaa.com/*
@@ -619,7 +618,6 @@
 // @match *://*.techmody.io/*
 // @match *://*.slink.bid/*
 // @match *://*.www.pythondunyasi.com/*
-// @match *://*.gadgets.techymedies.com/*
 // @match *://*.free4u.nurul-huda.or.id/*
 // @match *://*.rotator.nurul-huda.sch.id/*
 // @match *://*.jrlinks.in/*
@@ -711,7 +709,7 @@
 // @include     /itradercoin.com/
 // @include     /blog.filepresident.com/
 // @include     /gyanigurus.net\/view/
-// @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|aliexpress|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten).*|(dana|ovo).id)(\/.*)/
+// @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|nflximg|doubleclick).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram|wikipedia).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten|maybank).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).edu|(.*).gov)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
 // ==/UserScript==
