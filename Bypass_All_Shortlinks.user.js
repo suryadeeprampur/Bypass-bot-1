@@ -665,7 +665,7 @@
 // @include     /fc-lc.(xyz|com)/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
-// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me)(?!.*\?r=)/
+// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz)(?!.*\?r=)/
 // @include     /cybertyrant.com\/\?r=/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
@@ -710,6 +710,7 @@
 // @include     /itradercoin.com\/verify\/\?/
 // @include     /itradercoin.com/
 // @include     /blog.filepresident.com/
+// @include     /gyanigurus.net\/view/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|aliexpress|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten).*|(dana|ovo).id)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
@@ -1815,13 +1816,13 @@
     /ouo.io/.test(url) && url.includes('?s=') ? redirect(decodeURIComponent(url.split('?s=')[1])) : null;
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
-    //vegamovies, worldfree4u, ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
+    //vegamovies, worldfree4u, desiremovies.wales ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
     const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
         let intervalId = setInterval(() => { //Check every 0.5s
           let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
           if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);} //Redirect or click, with a 0.1s delay
         }, 500);});};
-    /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me)(?!.*\?r=)/.test(url) ?
+    /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz)(?!.*\?r=)/.test(url) ?
         redirectOrClickIfExistsEnabledWithDelay('.rd_btn') : null;
 
     //vegamovies
@@ -1829,6 +1830,9 @@
 
     // worldfree4u
     //bloggingvector.shop\/re/.test(url) ? redirect(atob(url.split('/re/')[1].split('?')[0])) : null; // not necessary, the site does this one by itself for now
+
+    // desiremovies.wales
+    /gyanigurus.net\/view/.test(url) ? afterDOMLoaded(function() {clickIfExists('#show_button')}) : null;
 
     //ovagames.com - linkspy.cc & clicksfly.com|shrinkme.io|clk.sh|shrinkearn.com|clk.asia|clk.wiki concatenated - https://github.com/FastForwardTeam/FastForward/issues/1352
     if (/linkspy.cc\/tr/.test(url)){

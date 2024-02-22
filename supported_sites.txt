@@ -650,7 +650,7 @@ r1.foxylinks.site
 /fc-lc.(xyz|com)/
 /1v.to\/t/
 /linkspy.cc\/tr/
-/((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me)(?!.*\?r=)/
+/((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz)(?!.*\?r=)/
 /cybertyrant.com\/\?r=/
 /dropgalaxy.(com|co)\/drive/
 /short-ly.co/
@@ -695,3 +695,4 @@ r1.foxylinks.site
 /itradercoin.com\/verify\/\?/
 /itradercoin.com/
 /blog.filepresident.com/
+/gyanigurus.net\/view/
