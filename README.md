@@ -10,19 +10,7 @@ Automatically bypass many link shorteners.
 
 ## Improvements in this fork
 - **Added more bypasses and some fixes** through the scripts in the [extra_bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) directory.
-- **No loading the script indiscriminately on every site.** The script will be loaded only for the sites that are supported. (the original userscript is loaded in every site you visit which is not necessary).
-    - Note: By default, the script will not run on the following sites (these can be enabled manually):
-        - Youtube `*://*.youtube.com/shorts/*`_(@match)_ (which is used for redirecting shorts)
-        - Google:
-            - Drive/Docs `/^(https?:\/\/)(drive|docs)\.google\.com(\/.*)/`_(@include)_ (which is used for Auto-DL from Drive/Docs)
-            - redirects `/^https?:\/\/(?:www\.)?google\.com\/url.*[?&]q=/`_(@include)_ (used for bypassing these redirects) 
-            - Recaptcha `*://*/recaptcha/api2/*`_(@match)_ or `/^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/`_(@include)_ (used for Auto-Open of captchas in many sites).
-        - Twitter `*://*.twitter.com/*`_(@match)_ Bypass redirects
-        - TikTok `*://*.tiktok.com/*`_(@match)_ Bypass redirects
-        - Facebook `*://*.facebook.com/*`_(@match)_ Bypass redirects
-        - VK `*://*.vk.com/*`_(@match)_ Bypass redirects
-
-        Not including these by default is to prevent some people from worrying about the script running on sensitive sites. These can be re-enabled manually in your userscript manager, adding the mentioned _matching rules_ in the script _settings_.
+- **No loading the script indiscriminately on every site.** The script will be loaded only for the sites that are supported (the original userscript is loaded in most of the sites you visit, which is not necessary). Not including these by default is to prevent some people from worrying about the script running on sensitive sites. These can be re-enabled manually in your userscript manager, adding [optional_matching_rules](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/docs/optional_matching_rules.md) in the script _settings_.
 - **No useless added redirects.** The script will not redirect to `rotator.nurul-huda.sch.id` or `free4u.nurul-huda.or.id` which are sites set by the developer for tracking / [collecting analytics](https://i.ibb.co/D1zYG1v/topcountry17-04-2023.jpg) and showing ads. Note: removing this could break "faucet" (crypto rewards) sites, according to Bloggerpemula, since they add a sometimes necessary delay. I don't try to support those sites with this fork.
 - **No injecting unnecesary tracking in every site**. 
     - The script will not inject that _iframe_ linking to `menrealitycalc.com`. 
