@@ -14,7 +14,7 @@ Automatically bypass many link shorteners.
 - **No useless added redirects.** The script will not redirect to `rotator.nurul-huda.sch.id` or `free4u.nurul-huda.or.id` which are sites set by the developer for tracking / [collecting analytics](https://i.ibb.co/D1zYG1v/topcountry17-04-2023.jpg) and showing ads. Note: removing this could break "faucet" (crypto rewards) sites, according to Bloggerpemula, since they add a sometimes necessary delay. I don't try to support those sites with this fork.
 - **No injecting unnecesary tracking in every site**. 
     - The script will not inject that _iframe_ linking to `menrealitycalc.com`. 
-    _(Tip: this can be avoided in the original script adding this filter to uBlock Origin: `||menrealitycalc.com^$third-party`)_
+    _Tip: this can be avoided in the original script adding this filter to uBlock Origin: `||menrealitycalc.com^$third-party`_
     - The script will not inject this weird _"adcopy_response"_. (I don't see a clear purpose for this, since it doesn't seem related in the script to any specific link shortener)
 - **Removed non-latin non-unicode characters** to avoid potential bug warnings.
 
