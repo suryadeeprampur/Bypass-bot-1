@@ -9,4 +9,4 @@ By default, the script will not run on the following sites:
 - Facebook `*://*.facebook.com/*`_(@match)_ Bypass redirects
 - VK `*://*.vk.com/*`_(@match)_ Bypass redirects
 
-These can be re-enabled manually in your userscript manager, adding the mentioned matching rules in the script settings.
+These can be re-enabled manually in your userscript manager by adding the mentioned matching rules in the script settings.
