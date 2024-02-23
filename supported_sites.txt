@@ -629,6 +629,8 @@ bestlink.pro
 playstore.pw
 sigmalinks.in
 r1.foxylinks.site
+/(free-content.pro|((ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com))\/s\?/
+/adbypass.eu/
 /mundopolo.net/
 /comohoy.com/
 /sphinxanime.com\/short/

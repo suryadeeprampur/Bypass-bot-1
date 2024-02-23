@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.3
+// @version        91.3.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -644,6 +644,8 @@
 // @match *://*.playstore.pw/*
 // @match *://*.sigmalinks.in/*
 // @match *://*.r1.foxylinks.site/*
+// @include      /(free-content.pro|((ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com))\/s\?/
+// @include      /adbypass.eu/
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
@@ -1734,6 +1736,26 @@
         setInterval(() => {if (Checkvisibility(bp('#submit_captcha'))) {bp("button[type='submit'].g-recaptcha").click();}}, 5 * 1000);}});
 
 }})();
+
+// ----- Bypass ad-maven link shorteners -----
+(function() {
+    'use strict';
+    var url = window.location.href;
+    if (/(free-content.pro|((ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com))\/s\?/.test(url)) {
+        GM_setValue('savedShortlink', url);
+        window.location.assign('https://adbypass.eu/');
+    } else if (/adbypass.eu/.test(url)) {
+        window.addEventListener("load", function(event) {
+            var savedShortlink = GM_getValue('savedShortlink', null);
+            var inputField = document.querySelector('#inputt');
+            if (savedShortlink && inputField) {
+                inputField.value = savedShortlink;
+                GM_deleteValue('savedShortlink');
+            }
+        });
+    }
+})();
+// ----- ----- -----
 
 // ----- Extra bypasses -----
 (function() {
