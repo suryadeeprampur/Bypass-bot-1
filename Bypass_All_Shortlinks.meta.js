@@ -318,7 +318,7 @@
 // @match *://*.letsboost.net/*
 // @match *://*.web1s.asia/*
 // @include /^(https?:\/\/)(.+)?((hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque|exploreera).net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net)(\/.*)/
 // @match *://*.coins-town.com/*
 // @include /^(https?:\/\/)(.+)?(slinkware.com|aghtas.com|mazen-ve3.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com)(\/.*)/

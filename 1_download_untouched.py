@@ -21,6 +21,7 @@ def modify_file_with_my_fixes(destination):
     content = content.replace("adbypass.org/bypass?bypass=' + location.href.split('?')[0]", "adbypass.org/bypass?bypass=' + encodeURIComponent(location.href)")
     content = content.replace("BypassedByBloggerPemula(/itscybertech.com", "//BypassedByBloggerPemula(/itscybertech.com")
     content = content.replace("BypassedByBloggerPemula(/linkvertise.com/", "//BypassedByBloggerPemula(/linkvertise.com/")
+    content = content.replace("/stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque|exploreera).net/", "/stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net/")
 
     with open(destination, 'w', encoding='utf-8') as file:
         file.write(content)
