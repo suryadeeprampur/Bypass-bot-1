@@ -1,4 +1,4 @@
-By default, the script will not run on the following sites (these can be enabled manually):
+- By default, the script will not run on the following sites (these can be enabled manually):
     - Youtube `*://*.youtube.com/shorts/*`_(@match)_ (which is used for redirecting shorts)
     - Google:
         - Drive/Docs `/^(https?:\/\/)(drive|docs)\.google\.com(\/.*)/`_(@include)_ (which is used for Auto-DL from Drive/Docs)
