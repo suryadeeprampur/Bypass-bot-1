@@ -329,6 +329,7 @@ cekip.site
 techleets.xyz
 newsturbovid.com
 amanguides.com
+mirrored.to
 viralxns.com
 flybid.net
 8tm.net
@@ -696,3 +697,4 @@ r1.foxylinks.site
 /gyanigurus.net\/view/
 /mkvmoviespoint.casa\/goto/
 /w.linkspoint.net/
+/kingshortener.com/

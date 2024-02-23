@@ -69,6 +69,7 @@
 // @include     /gyanigurus.net\/view/
 // @include     /mkvmoviespoint.casa\/goto/
 // @include     /w.linkspoint.net/
+// @include     /kingshortener.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -131,6 +132,10 @@
 
     //fc-lc
     /fc-lc.(xyz|com)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+
+    //kingshortener.com (seen used in reidostorrents.com)
+    /kingshortener.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /kingshortener.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
     //shareus.io https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/2
     /shareus.io/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#root > div > main > div.main-container-1 > div.main-container-2 > div:nth-child(1) > div.adunit-container > button')}) : null;
