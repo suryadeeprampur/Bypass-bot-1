@@ -29,7 +29,7 @@
         window.addEventListener('load', function() {
             var linkElement = document.querySelector('.form__group > a:nth-child(5)');
             if (linkElement && linkElement.href) {
-                if (confirm('Do you want to redirect to ' + linkElement.href + '?')) {
+                if (confirm('Bypass done.\nRedirect to ' + linkElement.href + ' ?')) {
                     window.location.assign(linkElement.href);
                 }
             }
