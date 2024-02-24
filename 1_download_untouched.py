@@ -28,8 +28,9 @@ def modify_file_with_my_fixes(destination):
         file.write(content)
 
 if __name__ == "__main__":
-    url = "https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.user.js"
+    url1 = "https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.user.js"
+    url2 = "https://openuserjs.org/install/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha.user.js"
     destination = "untouched_Bypass_All_Shortlinks.user.js"
 
-    download_file(url, destination)
+    download_file(url2, destination)
     modify_file_with_my_fixes(destination)
