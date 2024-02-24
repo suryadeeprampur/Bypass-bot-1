@@ -18,7 +18,7 @@ Automatically bypass many link shorteners.
     - The script will not inject this weird _"adcopy_response"_. (I don't see a clear purpose for this, since it doesn't seem related in the script to any specific link shortener)
 - **Removed non-latin non-unicode characters** to avoid potential bug warnings.
 
-Original script by *Bloggerpemula*: [Bypass All Shortlinks Manual Captcha - OpenUserJS](https://openuserjs.org/scripts/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha)
+Original script by *Bloggerpemula*: [Bypass All Shortlinks | GreasyFork](https://greasyfork.org/scripts/431691) / [OpenUserJS](https://openuserjs.org/scripts/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha)
 
 ## How I modify the original userscript
 Executing these python scripts in order:
@@ -29,7 +29,7 @@ Executing these python scripts in order:
 
 ## Help make this better
 You can help by:
-- Reporting issues to the original script in [OpenUserJS issues](https://openuserjs.org/scripts/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha/issues) (before doing this, check the issue is present in the original script)
+- Reporting issues to the original script in [GreasyFork feedback](https://greasyfork.org/scripts/431691/feedback) or [OpenUserJS issues](https://openuserjs.org/scripts/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha/issues) (before doing this, check the issue is present in the original script)
 - Reporting issues here on the [issues](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues) tab. Post examples with the source link shortener and link source website. I will only add/fix content-sharing shortlinks, no faucet / crypto rewards.
 - Suggesting to merge other scripts into this one.
 - Editing/Adding code with pull requests.

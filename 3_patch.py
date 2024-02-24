@@ -50,7 +50,7 @@ def modify_script_extra(file_path):
             content = content.replace("// @name       Bypass All Shortlinks", "// @name       Bypass All Shortlinks Debloated")
             content = content.replace("https://i.ibb.co/qgr0H1n/BASS-Blogger-Pemula.png", "https://cdn-icons-png.flaticon.com/512/14025/14025295.png")
             content = content.replace("@author     Bloggerpemula", "@author     Amm0ni4")
-            content = content.replace("// @description    Bypass All Shortlinks Sites Automatically Skips Annoying Link Shorteners , Skip AdFly , Linkvertise and No Annoying Ads, Directly to Your Destination, and now Support Auto Downloading Your Files",
+            content = content.replace("// @description    Bypass All Shortlinks Sites Automatically Skips Annoying Link Shorteners , Skip AdFly and No Annoying Ads, Directly to Your Destination, and now Support Auto Downloading Your Files",
                                       "// @description    Automatically bypass many link shorteners. Originally by BloggerPemula.\n// @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated\n// @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues")
 
             #Change source URL
@@ -63,6 +63,9 @@ def modify_script_extra(file_path):
             content = content.replace("https://openuserjs.org/meta/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha.meta.js",
                                       "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js")
 
+            # Fixes
+            content = content.replace("case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname))", "case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref='))")
+            content = content.replace("adbypass.org/bypass?bypass=' + location.href.split('?')[0]", "adbypass.org/bypass?bypass=' + encodeURIComponent(location.href)")
 
             #Remove tracking
 

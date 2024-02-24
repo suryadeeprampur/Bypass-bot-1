@@ -17,12 +17,13 @@ def modify_file_with_my_fixes(destination):
     with open(destination, 'r', encoding='utf-8') as file:
         content = file.read()
 
+    # Fixes
     content = content.replace("BloggerPemula('highkeyfinance.com'", "//BloggerPemula('highkeyfinance.com'")
-    content = content.replace("adbypass.org/bypass?bypass=' + location.href.split('?')[0]", "adbypass.org/bypass?bypass=' + encodeURIComponent(location.href)")
     content = content.replace("BypassedByBloggerPemula(/itscybertech.com", "//BypassedByBloggerPemula(/itscybertech.com")
     content = content.replace("BypassedByBloggerPemula(/linkvertise.com/", "//BypassedByBloggerPemula(/linkvertise.com/")
     content = content.replace("/stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque|exploreera).net/", "/stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net/")
-    content = content.replace("case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname))", "case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && /^https?:\/\/work\.ink\/(?!token\b).*/.test(location.href))")
+
+    content += "\n"
 
     with open(destination, 'w', encoding='utf-8') as file:
         file.write(content)
@@ -32,5 +33,5 @@ if __name__ == "__main__":
     url2 = "https://openuserjs.org/install/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha.user.js"
     destination = "untouched_Bypass_All_Shortlinks.user.js"
 
-    download_file(url2, destination)
+    download_file(url1, destination)
     modify_file_with_my_fixes(destination)
