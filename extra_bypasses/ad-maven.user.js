@@ -5,6 +5,7 @@
 // @include      /adbypass.eu/
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @grant        GM_deleteValue
 // @run-at       document-start
 // ==/UserScript==
 
@@ -15,13 +16,22 @@
     if (/(free-content.pro|((ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com))\/s\?/.test(url)) {
         GM_setValue('savedShortlink', url);
         window.location.assign('https://adbypass.eu/');
-    } else if (/adbypass.eu/.test(url)) {
+    } else if (/adbypass.eu/.test(url) && !url.includes('/unblock')) {
         window.addEventListener("load", function(event) {
             var savedShortlink = GM_getValue('savedShortlink', null);
             var inputField = document.querySelector('#inputt');
             if (savedShortlink && inputField) {
                 inputField.value = savedShortlink;
                 GM_deleteValue('savedShortlink');
+            }
+        });
+    } else if (/adbypass.eu\/unblock/.test(url)) {
+        window.addEventListener('load', function() {
+            var linkElement = document.querySelector('.form__group > a:nth-child(5)');
+            if (linkElement && linkElement.href) {
+                if (confirm('Do you want to redirect to ' + linkElement.href + '?')) {
+                    window.location.assign(linkElement.href);
+                }
             }
         });
     }
