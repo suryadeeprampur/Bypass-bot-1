@@ -13,6 +13,8 @@
 // @icon           https://cdn-icons-png.flaticon.com/512/14025/14025295.png
 // @require        https://update.greasyfork.org/scripts/439099/1203718/MonkeyConfig%20Modern%20Reloaded.js
 // @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
+// @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated
+// @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues
 // @match *://*.earnify.pro/*
 // @match *://*.aprovax.com/*
 // @match *://*.lootcash.vip/*
