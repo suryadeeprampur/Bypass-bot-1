@@ -648,6 +648,7 @@
 // @match *://*.r1.foxylinks.site/*
 // @include      /(free-content.pro|((ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com))\/s\?/
 // @include      /adbypass.eu/
+// @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /mundopolo.net/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
