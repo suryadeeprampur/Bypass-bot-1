@@ -70,6 +70,7 @@
 // @include     /mkvmoviespoint.casa\/goto/
 // @include     /w.linkspoint.net/
 // @include     /kingshortener.com/
+// @include     /gdslink.xyz/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -81,6 +82,7 @@
     const getParam = (url, param) => new URLSearchParams(url).get(param);
     const popupsToRedirects = () => window.open = (url, target, features) => (window.location.href = url, window);
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
+    const afterWindowLoaded = (callback) => window.addEventListener('load', callback);
     const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
     const redirectIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button.href) { clearInterval(intervalId); redirect(button.href) } }, 500); };
@@ -314,6 +316,9 @@
     // mkvmoviespoint.casa
     /mkvmoviespoint.casa\/goto/.test(url) ? afterDOMLoaded(function() {redirectIfExists('body > div:nth-child(7) > a:nth-child(1)')}) : null;
     /w.linkspoint.net/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btnx')}) : null;
+
+    // moviehunt.us
+    /gdslink.xyz/.test(url) ? afterDOMLoaded(function() {redirect(document.querySelector('.main-wrap > form:nth-child(2) > input:nth-child(1)').value)}) : null;
 
 })();
 
