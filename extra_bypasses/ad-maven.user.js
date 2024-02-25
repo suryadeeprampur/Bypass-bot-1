@@ -3,13 +3,13 @@
 // @description  These bypasses are always merged into Bypass_All_Shortlinks.user.js
 // @include      /(free-content.pro|((ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com))\/s\?/
 // @include      /adbypass.eu/
-// @grant        GM_setValue
-// @grant        GM_getValue
-// @grant        GM_deleteValue
+// @grant          GM_setValue
+// @grant          GM_getValue
+// @grant          GM_deleteValue
 // @run-at       document-start
 // ==/UserScript==
 
-// ----- Bypass ad-maven link shorteners -----
+// ----- Bypass ad-maven with adbypass.eu -----
 (function() {
     'use strict';
     var url = window.location.href;
@@ -23,6 +23,10 @@
             if (savedShortlink && inputField) {
                 inputField.value = savedShortlink;
                 GM_deleteValue('savedShortlink');
+                setTimeout(function() {
+                    document.querySelector('#bttn').click();
+                    alert('Bypass started. Wait a few seconds.')
+                }, 500);// Wait 0.5 to press the button
             }
         });
     } else if (/adbypass.eu\/unblock/.test(url)) {
