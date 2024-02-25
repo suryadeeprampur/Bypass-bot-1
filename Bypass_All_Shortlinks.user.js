@@ -1785,7 +1785,7 @@
 
     function makeUrlClickable(element) {
         let url = element.textContent.match(/(https?:\/\/\S+)/)[0];
-        if (url && isValidUrl(url)) {
+        if (url && isValidUrl(url) && !url.endsWith('...')) {
             let link = document.createElement('a'); link.href = url; link.textContent = url;
             element.innerHTML = element.innerHTML.replace(url, link.outerHTML);
             return url;
