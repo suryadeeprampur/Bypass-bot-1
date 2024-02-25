@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.4
+// @version        91.4.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -719,6 +719,7 @@
 // @include     /mkvmoviespoint.casa\/goto/
 // @include     /w.linkspoint.net/
 // @include     /kingshortener.com/
+// @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|nflximg|doubleclick).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram|wikipedia).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten|maybank).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).edu|(.*).gov)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
@@ -1550,8 +1551,8 @@
     BypassedByBloggerPemula(/autodime.com/, function() {
       let atd = setInterval(function() {if (Captchacheck()) {clearInterval(atd);ClickIfExists('#button1');}}, 500);
       waitForElm('a.btn-hover.color-1.btn-captcha', odim => redirect(odim.href, false));});
-    BypassedByBloggerPemula(/lootlinks.co|(loot-links|links-loot|loot-link).com|(lootdest|lootlink).org|lootdest.info|linksloot.net/, function() {
-      let lln = bp('body > script');let lls = strBetween(lln.text, `= '`, `,'`).split("'").slice(50, -5);setTimeout(() => {redirect(Decrypter2(lls), false);}, 2 * 1000);});
+    //BypassedByBloggerPemula(/lootlinks.co|(loot-links|links-loot|loot-link).com|(lootdest|lootlink).org|lootdest.info|linksloot.net/, function() {
+      //let lln = bp('body > script');let lls = strBetween(lln.text, `= '`, `,'`).split("'").slice(50, -5);setTimeout(() => {redirect(Decrypter2(lls), false);}, 2 * 1000);});
     BypassedByBloggerPemula(/amritadrino.com/, function() {
       if (elementExists('.g-recaptcha')) {waitForElm('body > b:nth-child(10) > center:nth-child(4) > a:nth-child(64)', amd => redirect(amd.href, false));} else {waitForElm('#tp-snp2', amBtn => amBtn.click());}});
     BypassedByBloggerPemula(/youtube.com/, function() {if (elementExists('#redirect-main-text')) {waitForElm('a#invalid-token-redirect-goto-site-button', yt => redirect(yt.href, false));} else {}});
@@ -2063,3 +2064,97 @@
 })();
 // ----- ----- -----
 
+
+// ----- Bypass look-link ( based on https://greasyfork.org/scripts/483207, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/3) -----
+(function() {
+    'use strict';
+
+    if (/(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(window.location.href)) {
+        alert('Bypass for loot-link starting.\nKeep in mind: \n- You probably need to disable your adblocker.\n- It takes about 5-10s to work.')
+        const window = unsafeWindow;
+        lootlinkBypass();
+
+        function lootlinkBypass(){
+            let initData;
+            let syncer;
+            let sessionData;
+
+            let origFetch = fetch;
+            unsafeWindow.fetch = function (url, ...options) {
+                return new Promise(async (resolve, reject) => {
+                    try {
+                        let res = await origFetch(url, ...options);
+                        try {
+                            if (url.includes(p.CDN_DOMAIN)) {
+                                initData = res.clone();
+                                initData = await initData.text();
+                                initData = '[' + initData.slice(1, -2) + ']';
+                                initData = JSON.parse(initData);
+                                syncer = initData[10];
+                            }
+                            else if (url.includes(syncer) && !sessionData) {
+                                sessionData = res.clone();
+                                sessionData = await sessionData.json();
+                                bypass();
+                            }
+                        } catch (e) {
+                            console.error(e);
+                            let reportError = confirm(`${e.message}\n${e.stack}\n\nwould you like to report this error?`);
+                            if (reportError) {
+                                navigator.clipboard.writeText(e.message + '\n' + e.stack);
+                                window.location.replace('https://discord.gg/keybypass');
+                            }
+                            else {
+                                window.location.reload();
+                            }
+                        }
+                        resolve(res);
+                    } catch (e) {
+                        reject(e);
+                    }
+                });
+            }
+
+            async function bypass() {
+                let urid = sessionData[0].urid;
+
+                let server = initData[9];
+                server = (Number(urid.toString().substr(-5)) % 3) + '.' + server;
+
+                let websocket = new WebSocket(`wss://${server}/c?uid=${urid}&cat=${sessionData[0].task_id}&key=${p.KEY}`);
+                fetch(sessionData[0].action_pixel_url)
+                websocket.onopen = async function (event) {
+                    await fetch(`https://${server}/st?uid=${urid}&cat=${sessionData[0].task_id}`, { method: 'POST', })
+                    await fetch(`https://${syncer}/td?ac=1&urid=${urid}&&cat=${sessionData[0].task_id}&tid=${p.TID}`)
+                };
+                websocket.onmessage = function (event) {
+                    if (event.data.startsWith('r:')) {
+                        let data = event.data.split(':')[1];
+                        data = decryptData(data);
+                        window.location.assign(data);
+                    }
+                };
+            }
+
+            function decryptData(encodedData, keyLength = 5) {
+                let decryptedData = '',
+                    base64Decoded = atob(encodedData),
+                    key = base64Decoded.substring(0, keyLength),
+                    encryptedContent = base64Decoded.substring(keyLength);
+
+                for (let i = 0; i < encryptedContent.length; i++) {
+                    let charCodeEncrypted = encryptedContent.charCodeAt(i),
+                        charCodeKey = key.charCodeAt(i % key.length),
+                        decryptedCharCode = charCodeEncrypted ^ charCodeKey;
+
+                    decryptedData += String.fromCharCode(decryptedCharCode);
+                }
+
+                return decryptedData;
+            }
+        }
+
+    }
+
+})();
+// ----- ----- -----

@@ -701,3 +701,4 @@ r1.foxylinks.site
 /mkvmoviespoint.casa\/goto/
 /w.linkspoint.net/
 /kingshortener.com/
+/(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
