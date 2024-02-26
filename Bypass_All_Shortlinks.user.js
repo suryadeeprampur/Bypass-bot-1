@@ -1755,13 +1755,7 @@
             if (savedShortlink && inputField) {
                 inputField.value = savedShortlink;
                 GM_deleteValue('savedShortlink');
-                setTimeout(function() {
-                    let bypassButton = document.querySelector('#bttn');
-                    if (bypassButton) {
-                        bypassButton.click();
-                        alert('Bypass started. Wait a few seconds.')
-                    }
-                }, 500);// Wait 0.5 to press the button
+                //setTimeout(function() {let bypassButton = document.querySelector('#bttn');if (bypassButton) {bypassButton.click();alert('Bypass started. Wait a few seconds.');}}, 500);
             }
         });
     } else if (/adbypass.eu\/unblock/.test(url)) {
