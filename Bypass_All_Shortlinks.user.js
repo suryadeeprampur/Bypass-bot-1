@@ -683,6 +683,7 @@
 // @include     /thegadgetking.in/
 // @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
 // @include     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
+// @include     /(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include     /epicload.com\/files/
 // @include     /www.gtaall.com\/get-manual/
 // @include     /woowebtools.com|pallabmobile.in/
@@ -1969,7 +1970,7 @@
     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/.test(url) ? redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(url)) : null;
 
     // Ad-maven
-    // /(free-content.pro|((ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com))\/s\?/.test(url) ? redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(url)) : null;
+    // /(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/.test(url) && !/(bypass.city|adbypass.org)/.test(url) ? redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(url)) : null;
 
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
     /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-primary')}) : null;

@@ -683,6 +683,7 @@
 // @include     /thegadgetking.in/
 // @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
 // @include     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
+// @include     /(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include     /epicload.com\/files/
 // @include     /www.gtaall.com\/get-manual/
 // @include     /woowebtools.com|pallabmobile.in/
