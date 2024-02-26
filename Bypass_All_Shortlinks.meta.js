@@ -682,8 +682,9 @@
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
 // @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
-// @include     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
-// @include     /(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /epicload.com\/files/
 // @include     /www.gtaall.com\/get-manual/
 // @include     /woowebtools.com|pallabmobile.in/

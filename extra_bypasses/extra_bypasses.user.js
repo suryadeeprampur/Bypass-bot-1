@@ -33,8 +33,9 @@
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
 // @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
-// @include     /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
-// @include     /(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /epicload.com\/files/
 // @include     /www.gtaall.com\/get-manual/
 // @include     /woowebtools.com|pallabmobile.in/
@@ -238,12 +239,16 @@
     /www.itscybertech.com/.test(url) ? clickIfVisible('.download') : null;
     /thegadgetking.in/.test(url) ? popupsToRedirects() && afterDOMLoaded(function() {clickIfExists('#openbtn')}) : null;
 
-    // Linkvertise
-    /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/.test(url) ? redirect(atob((new URLSearchParams(window.location.search)).get('r'))) : null;
-    /^(https?:\/\/)(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/.test(url) ? redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(url)) : null;
+    // Linkvertise (solve easy case locally, hard case through bypass.city)
+    /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/.test(url) ? redirect(atob((new URLSearchParams(window.location.search)).get('r'))) : null; // Solve locally
+    const solveThroughBypassCity = (linkShortenerUrl) => {if (!/(bypass.city|adbypass.org)/.test(linkShortenerUrl)) {redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(linkShortenerUrl))}};
+    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/.test(url) ? solveThroughBypassCity(url) : null;
 
-    // Ad-maven
-    // /(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/.test(url) && !/(bypass.city|adbypass.org)/.test(url) ? redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(url)) : null;
+    // Ad-maven (optionally solve through bypass.city, but currently solved through adbypass.eu)
+    // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
+
+    // Loot-links (optionally solve through bypass.city, but currently solved locally)
+    // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(url) ? solveThroughBypassCity(url) : null;
 
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
     /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-primary')}) : null;
