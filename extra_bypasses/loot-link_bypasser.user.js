@@ -9,8 +9,8 @@
     'use strict';
 
     if (/(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(window.location.href)) {
-        alert('Bypass for loot-link starting.\nKeep in mind: \n- You probably need to disable your adblocker.\n- It takes about 5-10s to work.')
-        const window = unsafeWindow;
+        //alert('Bypass for loot-link starting.\nKeep in mind: \n- You probably need to disable your adblocker.\n- It takes about 5-10s to work.')
+        //const window = unsafeWindow;
         lootlinkBypass();
 
         function lootlinkBypass(){
