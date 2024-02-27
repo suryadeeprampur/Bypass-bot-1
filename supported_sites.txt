@@ -479,7 +479,6 @@ truevpnlover.com
 battleroyal.online
 techyblogs.in|techyinfo.in
 apasih.my.id|healthydad.my.id
-financeyogi.net
 iphoto.site
 copy-paste-fonts.com
 techloadz.com|sportsmediaz.com
@@ -704,4 +703,7 @@ r1.foxylinks.site
 /w.linkspoint.net/
 /kingshortener.com/
 /gdslink.xyz/
+/financeyogi.net/
+/jrlinks.in/
+/go.tnshort.net/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/

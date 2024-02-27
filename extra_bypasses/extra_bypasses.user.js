@@ -73,6 +73,10 @@
 // @include     /w.linkspoint.net/
 // @include     /kingshortener.com/
 // @include     /gdslink.xyz/
+// @include     /financeyogi.net/
+// @include     /jrlinks.in/
+// @include     /go.tnshort.net/
+
 // @run-at      document-start
 // ==/UserScript==
 
@@ -328,6 +332,13 @@
 
     // moviehunt.us
     /gdslink.xyz/.test(url) ? afterDOMLoaded(function() {redirect(document.querySelector('.main-wrap > form:nth-child(2) > input:nth-child(1)').value)}) : null;
+
+    // link.tnshort.net - https://github.com/FastForwardTeam/FastForward/issues/1368
+    /financeyogi.net/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn5')}) : null;
+    /financeyogi.net/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn2')}) : null;
+    /jrlinks.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn1')}) : null;
+    /jrlinks.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn2')}) : null;
+    /go.tnshort.net/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
 })();
 
