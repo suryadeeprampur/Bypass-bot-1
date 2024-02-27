@@ -76,7 +76,7 @@
 // @include     /financeyogi.net/
 // @include     /jrlinks.in/
 // @include     /go.tnshort.net/
-
+// @include     /www.4fnet.org\/goto/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -339,6 +339,9 @@
     /jrlinks.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn1')}) : null;
     /jrlinks.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn2')}) : null;
     /go.tnshort.net/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
+
+    // 4fnet.org - https://github.com/FastForwardTeam/FastForward/issues/1298
+    /www.4fnet.org\/goto/.test(url) ? redirect(atob(url.split('/goto/')[1])) : null;
 
 })();
 

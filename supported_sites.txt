@@ -493,7 +493,6 @@ vailonxx.com|fun88.bio
 (aduzz|admediaflex|cryptfaucet|phimne|cdrab|tinybc|tinycmd).com|(bit4me|ecq|sportweb|mgame).info|(wpcheap|offerinfo).net|quanngon.org|datacheap.io
 multiup.org
 modsfire.com
-pixeldrain.com
 social-unlock.com
 work.ink
 nft.blogyindia.com
@@ -706,4 +705,5 @@ r1.foxylinks.site
 /financeyogi.net/
 /jrlinks.in/
 /go.tnshort.net/
+/www.4fnet.org\/goto/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
