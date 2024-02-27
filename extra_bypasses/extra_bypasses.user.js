@@ -77,6 +77,7 @@
 // @include     /jrlinks.in/
 // @include     /go.tnshort.net/
 // @include     /www.4fnet.org\/goto/
+// @include     /linkmo.net\/[^?]+\?data=.+$/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -342,6 +343,9 @@
 
     // 4fnet.org - https://github.com/FastForwardTeam/FastForward/issues/1298
     /www.4fnet.org\/goto/.test(url) ? redirect(atob(url.split('/goto/')[1])) : null;
+
+    // linkmo.net - https://github.com/FastForwardTeam/FastForward/issues/1291
+    /linkmo.net\/[^?]+\?data=.+$/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
 })();
 
