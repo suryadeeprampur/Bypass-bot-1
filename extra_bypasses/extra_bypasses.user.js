@@ -79,6 +79,8 @@
 // @include     /www.4fnet.org\/goto/
 // @include     /(linkmo.net|adpayl.ink)\/[^?]+\?data=.+$/
 // @include     /musicc.xyz/
+// @include     /(cravesandflames|codesnse).com/
+// @include     /go.(cravesandflames|codesnse).com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -350,6 +352,10 @@
 
     // musicc.xyz - https://github.com/FastForwardTeam/FastForward/issues/1234 (note: this one is already bypassed by the original script, because it runs on every domain. It was just necessary to let the script run on this domain)
     /musicc.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
+
+    // zshort.net, shotzon.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/5
+    /(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
+    /go.(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
 })();
 

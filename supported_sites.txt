@@ -708,4 +708,6 @@ r1.foxylinks.site
 /www.4fnet.org\/goto/
 /(linkmo.net|adpayl.ink)\/[^?]+\?data=.+$/
 /musicc.xyz/
+/(cravesandflames|codesnse).com/
+/go.(cravesandflames|codesnse).com/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
