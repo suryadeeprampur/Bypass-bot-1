@@ -35,3 +35,11 @@ You can help by:
 - Editing/Adding code with pull requests.
 - If while using uBlock Origin (recommended adblocker), a link shortener is showing ads or detecting you have adblock, report it [here](https://github.com/uBlockOrigin/uAssets/discussions/17361).
 
+## Credits
+This script contains code I took, or redirects to free services from other developers for certain bypasses.
+Thanks to:
+- [BloggerPemula](https://greasyfork.org/users/810571-bloggerpemula)
+- [bypass.city](https://bypass.city/) / [2](https://adbypass.org/) Redirecting to this site to solve most of the l1nkv3rt1s3 cases
+- [antiworkink](https://greasyfork.org/users/1237543-antiworkink) for his loot-link open source bypass.
+- [Ad-Bypass](https://adbypass.eu/) Redirecting to this site for ad-maven links (example: `free-content.pro/s?...`)
+- [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses
