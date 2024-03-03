@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.4.3
+// @version        91.4.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2133,9 +2133,9 @@
                             }
                         } catch (e) {
                             console.error(e);
-                            let reportError = confirm(`${e.message}\n${e.stack}\n\nwould you like to report this error?`);
+                            let reportError = confirm(`${e.message}\n\nwould you like to report this error?`);
                             if (reportError) {
-                                navigator.clipboard.writeText(e.message + '\n' + e.stack);
+                                navigator.clipboard.writeText(e.message);
                                 window.location.replace('https://discord.gg/keybypass');
                             }
                             else {
@@ -2155,11 +2155,11 @@
                 let server = initData[9];
                 server = (Number(urid.toString().substr(-5)) % 3) + '.' + server;
 
-                let websocket = new WebSocket(`wss://${server}/c?uid=${urid}&cat=${sessionData[0].task_id}&key=${p.KEY}`);
+                let websocket = new WebSocket(`wss://${server}/c?uid=${urid}&cat=54&key=${p.KEY}`);
                 fetch(sessionData[0].action_pixel_url)
                 websocket.onopen = async function (event) {
-                    await fetch(`https://${server}/st?uid=${urid}&cat=${sessionData[0].task_id}`, { method: 'POST', })
-                    await fetch(`https://${syncer}/td?ac=1&urid=${urid}&&cat=${sessionData[0].task_id}&tid=${p.TID}`)
+                    await fetch(`https://${server}/st?uid=${urid}&cat=54`, { method: 'POST', })
+                    await fetch(`https://${syncer}/td?ac=1&urid=${urid}&&cat=54&tid=${p.TID}`)
                 };
                 websocket.onmessage = function (event) {
                     if (event.data.startsWith('r:')) {
