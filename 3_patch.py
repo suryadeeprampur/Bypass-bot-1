@@ -67,6 +67,9 @@ def modify_script_extra(file_path):
             content = content.replace("case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname))", "case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref='))")
             content = content.replace("adbypass.org/bypass?bypass=' + location.href.split('?')[0]", "adbypass.org/bypass?bypass=' + encodeURIComponent(location.href)")
 
+            # Remove unused
+            content = content.replace("// @connect        nocaptchaai.com\n", "")
+
             #Remove tracking
 
             ## Remove redirection to tracking site
