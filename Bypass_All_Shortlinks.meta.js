@@ -669,6 +669,7 @@
 // @include     /ouo.io/
 // @include     /exeo.app/
 // @include     /fc-lc.(xyz|com)/
+// @include     /tmail.io/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz)(?!.*\?r=)/

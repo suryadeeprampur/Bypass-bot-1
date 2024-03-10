@@ -20,6 +20,7 @@
 // @include     /ouo.io/
 // @include     /exeo.app/
 // @include     /fc-lc.(xyz|com)/
+// @include     /tmail.io/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz)(?!.*\?r=)/
@@ -146,6 +147,11 @@
 
     //fc-lc
     /fc-lc.(xyz|com)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    // extra steps for some fc-lc cases: https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277
+    /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfExists('#next')}) : null;
+    /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#scroll')}) : null;
+    /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#glink')}) : null;
+    /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#surl')}) : null;
 
     //kingshortener.com (seen used in reidostorrents.com)
     /kingshortener.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
