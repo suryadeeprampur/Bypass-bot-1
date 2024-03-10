@@ -11,6 +11,17 @@
     if (/(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(window.location.href)) {
         //alert('Bypass for loot-link starting.\nKeep in mind: \n- You probably need to disable your adblocker.\n- It takes about 5-10s to work.')
         //const window = unsafeWindow;
+
+        // Overlay text "Bypassing..."
+        setInterval(() => {if (!document.getElementById('bypassOverlay')) {
+            const overlay = document.createElement('div');
+            overlay.id = 'bypassOverlay';
+            overlay.style.cssText = 'position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);padding:20px;z-index:9999;';
+            overlay.innerHTML = '<h1 style="font-size:2em;color:white;margin:0;">Bypassing with userscript...</h1>';
+            document.body.appendChild(overlay);
+        }}, 1000);
+
+        // Do the bypass
         lootlinkBypass();
 
         function lootlinkBypass(){
