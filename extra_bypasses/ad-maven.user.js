@@ -23,7 +23,7 @@
             if (savedShortlink && inputField) {
                 inputField.value = savedShortlink;
                 GM_deleteValue('savedShortlink');
-                setTimeout(function() {let bypassButton = document.querySelector('#bttn');if (bypassButton) {bypassButton.click(); bypassButton.disabled = true;}}, 500);
+                setTimeout(function() {let bypassButton = document.querySelector('#bttn');if (bypassButton) {bypassButton.click(); bypassButton.disabled = true;}}, 1000);
             }
         });
     } else if (/adbypass.eu\/unblock/.test(url)) {
