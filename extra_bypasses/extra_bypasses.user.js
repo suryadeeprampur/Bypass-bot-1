@@ -84,6 +84,7 @@
 // @include     /(cravesandflames|codesnse).com/
 // @include     /go.(cravesandflames|codesnse).com/
 // @include     /empebau.eu\/s/
+// @include     /cpmlink.net\/go/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -152,6 +153,9 @@
     /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#scroll')}) : null;
     /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#glink')}) : null;
     /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#surl')}) : null;
+
+    //cpmlink.net
+    /cpmlink.net\/go/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#btn-main')}) : null;
 
     //kingshortener.com (seen used in reidostorrents.com)
     /kingshortener.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
