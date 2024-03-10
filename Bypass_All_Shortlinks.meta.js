@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.5
+// @version        91.5.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -707,7 +707,7 @@
 // @include     /lnks.primarchweb.in/
 // @include     /highkeyfinance.com/
 // @include     /toonhub4u.net\/redirect\/main.php\?url=/
-// @include     /nhmgujarat.in|minijankari.com/
+// @include     /(nhmgujarat|pmyojanasarkari).in|minijankari.com/
 // @include     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/
 // @include     /aipebel.com/
 // @include     /raretoonsindia.rtilinks.com/
