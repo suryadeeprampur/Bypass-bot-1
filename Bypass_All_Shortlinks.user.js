@@ -667,6 +667,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
+// @include     /exeo.app/
 // @include     /fc-lc.(xyz|com)/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
@@ -730,6 +731,7 @@
 // @include     /musicc.xyz/
 // @include     /(cravesandflames|codesnse).com/
 // @include     /go.(cravesandflames|codesnse).com/
+// @include     /empebau.eu\/s/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|(login|signup|account|officeapps|api|mail|hotmail).live).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|nflximg|doubleclick).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram|wikipedia).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten|maybank).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).edu|(.*).gov)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
@@ -1770,16 +1772,16 @@
             if (savedShortlink && inputField) {
                 inputField.value = savedShortlink;
                 GM_deleteValue('savedShortlink');
-                //setTimeout(function() {let bypassButton = document.querySelector('#bttn');if (bypassButton) {bypassButton.click();alert('Bypass started. Wait a few seconds.');}}, 500);
+                setTimeout(function() {let bypassButton = document.querySelector('#bttn');if (bypassButton) {bypassButton.click(); bypassButton.disabled = true;}}, 500);
             }
         });
     } else if (/adbypass.eu\/unblock/.test(url)) {
         window.addEventListener('load', function() {
             var linkElement = document.querySelector('.form__group > a:nth-child(5)');
             if (linkElement && linkElement.href) {
-                if (confirm('Bypass done.\nRedirect to ' + linkElement.href + ' ?')) {
+                //if (confirm('Bypass done.\nRedirect to ' + linkElement.href + ' ?')) {
                     window.location.assign(linkElement.href);
-                }
+                //}
             }
         });
     }
@@ -1808,7 +1810,7 @@
             if (linkContainerElement && linkContainerElement.innerHTML.includes('http')) {
                 clearInterval(checkInterval);
                 let targetUrl = makeUrlClickable(linkContainerElement);
-                // if (confirm("redirect to " + targetUrl + " ?")) {window.location.assign(targetUrl);};
+                isValidUrl(targetUrl) && window.location.assign(targetUrl);
             }
         }, 500);
       });
@@ -1904,6 +1906,9 @@
     /ouo.io/.test(url) && url.includes('?s=') ? redirect(decodeURIComponent(url.split('?s=')[1])) : null;
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
+    //exeo.app
+    /exeo.app/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
+
     //vegamovies, worldfree4u, desiremovies.wales, hdhub4u.re ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
     const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
         let intervalId = setInterval(() => { //Check every 0.5s
@@ -1986,6 +1991,9 @@
 
     // Ad-maven (optionally solve through bypass.city, but currently solved through adbypass.eu)
     // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
+
+    // empebau.eu used by adbypass.eu
+    /empebau.eu\/s/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#skip > p:nth-child(1) > a:nth-child(1)')}) : null;
 
     // Loot-links (optionally solve through bypass.city, but currently solved locally)
     // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(url) ? solveThroughBypassCity(url) : null;

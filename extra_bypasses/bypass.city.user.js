@@ -27,7 +27,7 @@
             if (linkContainerElement && linkContainerElement.innerHTML.includes('http')) {
                 clearInterval(checkInterval);
                 let targetUrl = makeUrlClickable(linkContainerElement);
-                // if (confirm("redirect to " + targetUrl + " ?")) {window.location.assign(targetUrl);};
+                isValidUrl(targetUrl) && window.location.assign(targetUrl);
             }
         }, 500);
       });

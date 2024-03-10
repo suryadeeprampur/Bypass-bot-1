@@ -23,16 +23,16 @@
             if (savedShortlink && inputField) {
                 inputField.value = savedShortlink;
                 GM_deleteValue('savedShortlink');
-                //setTimeout(function() {let bypassButton = document.querySelector('#bttn');if (bypassButton) {bypassButton.click();alert('Bypass started. Wait a few seconds.');}}, 500);
+                setTimeout(function() {let bypassButton = document.querySelector('#bttn');if (bypassButton) {bypassButton.click(); bypassButton.disabled = true;}}, 500);
             }
         });
     } else if (/adbypass.eu\/unblock/.test(url)) {
         window.addEventListener('load', function() {
             var linkElement = document.querySelector('.form__group > a:nth-child(5)');
             if (linkElement && linkElement.href) {
-                if (confirm('Bypass done.\nRedirect to ' + linkElement.href + ' ?')) {
+                //if (confirm('Bypass done.\nRedirect to ' + linkElement.href + ' ?')) {
                     window.location.assign(linkElement.href);
-                }
+                //}
             }
         });
     }

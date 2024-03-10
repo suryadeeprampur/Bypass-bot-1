@@ -649,6 +649,7 @@ r1.foxylinks.site
 /(verpeliculasonline.org|subtituladas.com)\/enlace/
 /links.cuevana.ac\/short/
 /ouo.io/
+/exeo.app/
 /fc-lc.(xyz|com)/
 /1v.to\/t/
 /linkspy.cc\/tr/
@@ -712,4 +713,5 @@ r1.foxylinks.site
 /musicc.xyz/
 /(cravesandflames|codesnse).com/
 /go.(cravesandflames|codesnse).com/
+/empebau.eu\/s/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
