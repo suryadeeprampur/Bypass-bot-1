@@ -85,6 +85,11 @@
 // @include     /go.(cravesandflames|codesnse).com/
 // @include     /empebau.eu\/s/
 // @include     /cpmlink.net\/go/
+// @include     /10short.com/
+// @include     /zegtrends.com/
+// @include     /icutlink.com/
+// @include     /motakhokhara.blogspot.com/
+// @include     /xpshort.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -375,6 +380,15 @@
     /(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
     /go.(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
+    // psa.wf (adding here stuff missing from the main script)
+    /10short.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn')}) : null;
+    /zegtrends.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.bsub')}) : null;
+    /zegtrends.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#go1')}) : null;
+    /icutlink.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
+    /motakhokhara.blogspot.com/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('a.safeb')}) : null;
+    /motakhokhara.blogspot.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#safesub')}) : null;
+    /xpshort.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
+
 })();
 
 (function() {
@@ -387,6 +401,9 @@
 
     // www.gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
     /www.gtaall.com\/get-manual/.test(url) ? boostTimers() : null;
+
+    // psa.wf (adding here stuff missing from the main script)
+    /motakhokhara.blogspot.com/.test(url) ? boostTimers() : null;
 
 })();
 // ----- ----- -----

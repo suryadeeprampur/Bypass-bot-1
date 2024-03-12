@@ -716,4 +716,9 @@ r1.foxylinks.site
 /go.(cravesandflames|codesnse).com/
 /empebau.eu\/s/
 /cpmlink.net\/go/
+/10short.com/
+/zegtrends.com/
+/icutlink.com/
+/motakhokhara.blogspot.com/
+/xpshort.com/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
