@@ -721,4 +721,6 @@ r1.foxylinks.site
 /icutlink.com/
 /motakhokhara.blogspot.com/
 /xpshort.com/
+/jobzspk.xyz/
+/urls.cx/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
