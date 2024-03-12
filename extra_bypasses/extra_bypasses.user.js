@@ -11,7 +11,7 @@
 // @include     /cybercityhelp.in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
-// @include     /shrinkme.us/
+// @include     /shrinkme.(us|site)/
 // @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/
@@ -147,7 +147,7 @@
     /go.moonlinks.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.btn')}) : null;
 
     //shrinkme.us
-    /shrinkme.us/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /shrinkme.(us|site)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
 
     //test.shrinkurl.org https://github.com/FastForwardTeam/FastForward/issues/1365
     /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;

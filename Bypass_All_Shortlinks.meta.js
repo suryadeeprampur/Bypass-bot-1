@@ -660,7 +660,7 @@
 // @include     /cybercityhelp.in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
-// @include     /shrinkme.us/
+// @include     /shrinkme.(us|site)/
 // @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/
