@@ -708,7 +708,7 @@
 // @include     /lnks.primarchweb.in/
 // @include     /highkeyfinance.com/
 // @include     /toonhub4u.net\/redirect\/main.php\?url=/
-// @include     /(nhmgujarat|pmyojanasarkari).in|minijankari.com/
+// @include     /(nhmgujarat|pmyojanasarkari|gentletrail).in|minijankari.com/
 // @include     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/
 // @include     /aipebel.com/
 // @include     /raretoonsindia.rtilinks.com/
