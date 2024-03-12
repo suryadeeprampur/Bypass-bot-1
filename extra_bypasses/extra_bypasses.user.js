@@ -92,6 +92,7 @@
 // @include     /xpshort.com/
 // @include     /jobzspk.xyz/
 // @include     /urls.cx/
+// @include     /sunci.net/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -395,6 +396,9 @@
     /jobzspk.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn4')}) : null;
     /jobzspk.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn5')}) : null;
     /urls.cx/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.video-button')}) : null;
+
+    //suncy.net (upfiles.com) (seen used in fiuxy2.co)
+    /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
 
 })();
 
