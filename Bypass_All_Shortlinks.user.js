@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.5.2
+// @version        91.5.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -271,7 +271,6 @@
 // @include /^(https?:\/\/)(.+)?(writedroid.eu.org|modmania.eu.org|writedroid.in|mytop5.club)(\/.*)/
 // @match *://*.computerpedia.in/*
 // @match *://*.finance.uploadsoon.com/*
-// @include /^(https?:\/\/)(.+)?(adclicker\.*)/
 // @include /^(https?:\/\/)(.+)?(offers4crypto.xyz|ewall.biz)(\/.*)/
 // @match *://*.dl.lk21static.xyz/*
 // @match *://*.easylink.gamingwithtr.com/*
@@ -742,6 +741,7 @@
 // @include     /jobzspk.xyz/
 // @include     /urls.cx/
 // @include     /sunci.net/
+// @include     /(adclicker.(io|info)|discoveryultrasecure.com)\/url\/\#/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|(login|signup|account|officeapps|api|mail|hotmail).live).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|nflximg|doubleclick).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram|wikipedia).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten|maybank).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).edu|(.*).gov)(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
@@ -1514,8 +1514,8 @@
       let komp = setInterval(function() {if (Captchacheck()) {clearInterval(komp);ClickIfExists('#tp-snp2');}}, 500);});
     BypassedByBloggerPemula(/finance.uploadsoon.com/, function() {ClickIfExists('#tp-snp2.tp-blue.tp-btn', 2);
       ClickIfExists('#btn1.tp-blue.tp-btn', 3);ClickIfExists('#btn2.tp-blue.tp-btn', 4, 'setInterval');});
-    BypassedByBloggerPemula(/adclicker\.*/, function() {if (location.href.includes('url/')) {const adc = atob(atob(atob(location.hash.slice(1))));
-      redirect(new URLSearchParams(adc).get('url'));} else {}});
+    //BypassedByBloggerPemula(/adclicker\.*/, function() {if (location.href.includes('url/')) {const adc = atob(atob(atob(location.hash.slice(1))));
+      //redirect(new URLSearchParams(adc).get('url'));} else {}});
     BypassedByBloggerPemula(/offers4crypto.xyz|ewall.biz/, function() {
       if (elementExists('.g-recaptcha')) {let ofc = setInterval(() => {if (Captchacheck()) {clearInterval(ofc);
             ClickIfExists('#submitBtn');}}, 1 * 1000);} else {}});
@@ -2127,6 +2127,15 @@
 
     //suncy.net (upfiles.com) (seen used in fiuxy2.co)
     /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
+
+    // AdClicker (used in animesgd.net and many others)
+    if (/(adclicker.(io|info)|discoveryultrasecure.com)\/url\/\#/.test(url)){
+        var decodedUrl = decodeURIComponent(atob(atob(atob(url.split('/url/#')[1]))));
+        var urlParam = getParam(decodedUrl,'url');
+        if (decodedUrl.includes('&amp;url=')) {redirect(decodeURIComponent(decodedUrl.split('&amp;url=')[1]))
+        } else if (urlParam) { redirect(decodeURIComponent(urlParam))
+        } else {redirect(decodedUrl)}
+    }
 
 })();
 

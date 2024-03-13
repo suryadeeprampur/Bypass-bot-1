@@ -45,6 +45,10 @@ def modify_file_with_my_fixes(destination):
         redirectIfNotDisabled('a.get-link');"""
     content = content.replace(code_to_replace, code_replacement)
 
+    content = content.replace("BypassedByBloggerPemula(/adclicker", "//BypassedByBloggerPemula(/adclicker")
+    content = content.replace("/adclicker\.*/", "/(adclicker.(io|info)|discoveryultrasecure.com)\/url\/\#/")
+    content = content.replace("redirect(new URLSearchParams(adc).get('url'));} else {}});", "//redirect(new URLSearchParams(adc).get('url'));} else {}});")
+
     content += "\n"
 
     with open(destination, 'w', encoding='utf-8') as file:
