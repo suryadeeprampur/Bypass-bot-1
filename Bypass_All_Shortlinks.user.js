@@ -2056,6 +2056,7 @@
     /toonhub4u.net\/redirect\/main.php\?url=/.test(url) ? redirect(atob(url.split('url=')[1])) : null;
 
     // toonsouthindia.com and psa.wf (partial bypass. sometimes it makes you disable ublock and click ads to continue)
+    /(nhmgujarat|pmyojanasarkari|gentletrail|recruitmentrasta).in|(minijankari|ndlifestylego|raidersixgameapk).com/.test(url) ? afterDOMLoaded(function() {count = 0;}) : null; //Skip the timer
     const clickIfVisible2 = (selector) => setInterval(() => { const button = document.querySelector(selector); if (button && button.style.display === 'block') { button.click(); clearInterval(intervalId); } }, 1000);
     const clickIfLinkIsReady = buttonSelector => setInterval(() => { const button = document.querySelector(buttonSelector); if (button && button.getAttribute('href') !== '#') button.click(); }, 1000);
     /(nhmgujarat|pmyojanasarkari|gentletrail|recruitmentrasta).in|(minijankari|ndlifestylego|raidersixgameapk).com/.test(url) ? afterDOMLoaded(function() {clickIfVisible2('#VerifyBtn')}) : null;
