@@ -220,7 +220,6 @@
 // @include /^(https?:\/\/)(.+)?((chooyomi|blogmado|kredilerim|insuranceleadsinfo).com)(\/.*)/
 // @match *://*.kiktu.com/*
 // @match *://*.fexkomin.xyz/*
-// @include /^(https?:\/\/)(.+)?(quesignifi.ca|tiktokcounter.net)(\/.*)/
 // @match *://*.100puan.com/*
 // @match *://*.sub2get.com/*
 // @match *://*.forexrw7.com/*
@@ -319,7 +318,6 @@
 // @include /^(https?:\/\/)(.+)?(web1s.co|web1s.info|app.covemarkets.com)(\/.*)/
 // @match *://*.suaurl.com/*
 // @match *://*.letsboost.net/*
-// @match *://*.web1s.asia/*
 // @include /^(https?:\/\/)(.+)?((hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net)(\/.*)/
 // @match *://*.coins-town.com/*

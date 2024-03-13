@@ -1,7 +1,7 @@
 import re
 
 def extract_regex_from_js(js_code):
-    pattern1 = r'(?<!//)BypassedByBloggerPemula\((.*?),'
+    pattern1 = r'(?<!//)(?<!/\*)BypassedByBloggerPemula\((.*?),'
     matches1 = re.findall(pattern1, js_code)
     matches1 = [match.strip('/') for match in matches1]
 
