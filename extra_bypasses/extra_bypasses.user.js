@@ -92,7 +92,7 @@
 // @include     /jobzspk.xyz/
 // @include     /urls.cx/
 // @include     /sunci.net/
-// @include     /(adclicker.(io|info)|discoveryultrasecure.com)\/url\/\#/
+// @include     /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
 // @include     /tiktokcounter.net/
 // @run-at      document-start
 // ==/UserScript==
@@ -419,7 +419,7 @@
     /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
 
     // AdClicker (used in animesgd.net and many others)
-    if (/(adclicker.(io|info)|discoveryultrasecure.com)\/url\/\#/.test(url)){
+    if (/(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/.test(url)){
         var decodedUrl = decodeURIComponent(atob(atob(atob(url.split('/url/#')[1]))));
         if (decodedUrl.includes('&amp;url=')) {decodedUrl = decodedUrl.split('&amp;')[1];}
         var urlParam = new URLSearchParams(decodedUrl).get('url');
