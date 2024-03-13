@@ -404,10 +404,9 @@
     // AdClicker (used in animesgd.net and many others)
     if (/(adclicker.(io|info)|discoveryultrasecure.com)\/url\/\#/.test(url)){
         var decodedUrl = decodeURIComponent(atob(atob(atob(url.split('/url/#')[1]))));
-        var urlParam = getParam(decodedUrl,'url');
-        if (decodedUrl.includes('&amp;url=')) {redirect(decodeURIComponent(decodedUrl.split('&amp;url=')[1]))
-        } else if (urlParam) { redirect(decodeURIComponent(urlParam))
-        } else {redirect(decodedUrl)}
+        if (decodedUrl.includes('&amp;url=')) {decodedUrl = decodedUrl.split('&amp;')[1];}
+        var urlParam = new URLSearchParams(decodedUrl).get('url');
+        if (urlParam) {redirect(urlParam);}
     }
 
 })();
