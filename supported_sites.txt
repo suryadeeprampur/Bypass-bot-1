@@ -695,8 +695,7 @@ r1.foxylinks.site
 /vidhidepro.com\/d/
 /www.mirrored.to\/files\/(?!.*\?hash=)/
 /skyve.io/
-/itradercoin.com\/verify\/\?/
-/itradercoin.com/
+/(itradercoin|nichapk|easyworldbusiness|riveh).com/
 /blog.filepresident.com/
 /gyanigurus.net\/view/
 /mkvmoviespoint.casa\/goto/

@@ -713,8 +713,7 @@
 // @include     /vidhidepro.com\/d/
 // @include     /www.mirrored.to\/files\/(?!.*\?hash=)/
 // @include     /skyve.io/
-// @include     /itradercoin.com\/verify\/\?/
-// @include     /itradercoin.com/
+// @include     /(itradercoin|nichapk|easyworldbusiness|riveh).com/
 // @include     /blog.filepresident.com/
 // @include     /gyanigurus.net\/view/
 // @include     /mkvmoviespoint.casa\/goto/

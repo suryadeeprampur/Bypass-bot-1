@@ -713,8 +713,7 @@
 // @include     /vidhidepro.com\/d/
 // @include     /www.mirrored.to\/files\/(?!.*\?hash=)/
 // @include     /skyve.io/
-// @include     /itradercoin.com\/verify\/\?/
-// @include     /itradercoin.com/
+// @include     /(itradercoin|nichapk|easyworldbusiness|riveh).com/
 // @include     /blog.filepresident.com/
 // @include     /gyanigurus.net\/view/
 // @include     /mkvmoviespoint.casa\/goto/
@@ -2084,12 +2083,16 @@
     /skyve.io/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null;
     // /skyve.io/.test(url) ? afterDOMLoaded(function() {clickIfExistsWithConfirmation('.bicon')}) : null; //download button
 
-    // toonworldtamil.com
-    ///itradercoin.com\/verify\/\?/.test(url) ? redirect('https://blog.filepresident.com/' + url.split('/?')[1]) : null; doesnt work, the site doesnt let you get directly to that URL
-    const redirectIfVisible = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button && !button.getAttribute('style').includes('display:none')) { clearInterval(intervalId); redirect(button.href) } }, 500); };
-    const redirectIfVisible2 = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button && button.getAttribute('style').includes('block')) { clearInterval(intervalId); redirect(button.querySelector('a').href) } }, 500); };
-    /itradercoin.com/.test(url) ? afterDOMLoaded(function() {redirectIfVisible('#yuidea-btn-after')}) : null; //Step 1
-    /itradercoin.com/.test(url) ? afterDOMLoaded(function() {redirectIfVisible2('#yuidea-snp')}) : null; // Steps 2-3
+    // toonworldtamil.net
+    ///(itradercoin|nichapk|easyworldbusiness|riveh).com\/verify\/\?/.test(url) ? redirect('https://blog.filepresident.com/' + url.split('/?')[1]) : null; doesnt work, the site doesnt let you get directly to that URL
+    if (/(itradercoin|nichapk|easyworldbusiness|riveh).com/.test(url)) {
+        const redirectIfVisible = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button && !button.getAttribute('style').includes('display:none')) { clearInterval(intervalId); redirect(button.href) } }, 500); };
+        const redirectIfVisible2 = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button && button.getAttribute('style').includes('block')) { clearInterval(intervalId); redirect(button.querySelector('a').href) } }, 500); };
+        afterDOMLoaded(function() {
+            redirectIfVisible('#yuidea-btn-after'); //Step 1
+            count = 0; // skip timer
+            redirectIfVisible2('#yuidea-snp'); // Steps 2-3
+        });}
     /blog.filepresident.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.btn')}) : null;
 
     // mkvmoviespoint.casa
