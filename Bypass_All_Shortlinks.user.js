@@ -707,7 +707,7 @@
 // @include     /lnks.primarchweb.in/
 // @include     /highkeyfinance.com/
 // @include     /toonhub4u.net\/redirect\/main.php\?url=/
-// @include     /(nhmgujarat|pmyojanasarkari|gentletrail).in|minijankari.com/
+// @include     /(nhmgujarat|pmyojanasarkari|gentletrail|recruitmentrasta).in|(minijankari|ndlifestylego|raidersixgameapk).com/
 // @include     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/
 // @include     /aipebel.com/
 // @include     /raretoonsindia.rtilinks.com/
@@ -1071,8 +1071,9 @@
     if (List.includes(location.host)) {ClickIfExists('a.btn.btn-success.btn-lg.get-link', 3, 'setInterval');
     } else if (List1.includes(location.host)) { var form = $('form[id=go-link]');$.ajax({type: 'POST', async: true, url: form.attr('action'),data: form.serialize(),dataType: 'json',
         success: function(data) {redirect(data.url);}});} else if (elementExists('form[id=go-link]')) {
-        const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton && !linkButton.href.includes('/undefined')) { clearInterval(intervalId); setTimeout(function() {redirect(linkButton.href);}, 500) } }, 500); };
-        redirectIfNotDisabled('a.get-link');}
+          const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
+          const redirectOrClickIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button && !button.hasAttribute('disabled') && !button.classList.contains('disabled')) { clearInterval(intervalId); setTimeout(function() { if (button.href && isValidUrl(button.href) && !button.href.includes('/undefined')) { redirect(button.href);} else {button.click();} }, 500) } }, 500); };
+          redirectOrClickIfNotDisabled('a.get-link');}
     const bas = (h => {const b = h.pathname === '/verify/' && /^\?([^&]+)/.test(h.search); const result = {isNotifyNeeded: false,redirectDelay: 0,link: undefined};
       switch (h.host) {
         case 'okrzone.com': if (b) {meta('https://gtlink.co/' + RegExp.$1);} break;
@@ -1834,6 +1835,7 @@
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const afterWindowLoaded = (callback) => window.addEventListener('load', callback);
     const isValidUrl = url => { try { new URL(url); return true; } catch (error) { return false; } };
+    const redirectOrClickIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button && !button.hasAttribute('disabled') && !button.classList.contains('disabled')) { clearInterval(intervalId); setTimeout(function() { if (button.href && isValidUrl(button.href) && !button.href.includes('/undefined')) { redirect(button.href);} else {button.click();} }, 500) } }, 500); };
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
     const redirectIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button.href) { clearInterval(intervalId); redirect(button.href) } }, 500); };
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
@@ -2055,9 +2057,9 @@
     // toonsouthindia.com and psa.wf (partial bypass. sometimes it makes you disable ublock and click ads to continue)
     const clickIfVisible2 = (selector) => setInterval(() => { const button = document.querySelector(selector); if (button && button.style.display === 'block') { button.click(); clearInterval(intervalId); } }, 1000);
     const clickIfLinkIsReady = buttonSelector => setInterval(() => { const button = document.querySelector(buttonSelector); if (button && button.getAttribute('href') !== '#') button.click(); }, 1000);
-    /(nhmgujarat|pmyojanasarkari|gentletrail).in|minijankari.com/.test(url) ? afterDOMLoaded(function() {clickIfVisible2('#VerifyBtn')}) : null;
-    /(nhmgujarat|pmyojanasarkari|gentletrail).in|minijankari.com/.test(url) ? afterDOMLoaded(function() {clickIfLinkIsReady('#NextBtn')}) : null;
-    /gplinks.co\/[^/#]+\/(?:#|\?pid=)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#link-btn > a')}) : null;
+    /(nhmgujarat|pmyojanasarkari|gentletrail|recruitmentrasta).in|(minijankari|ndlifestylego|raidersixgameapk).com/.test(url) ? afterDOMLoaded(function() {clickIfVisible2('#VerifyBtn')}) : null;
+    /(nhmgujarat|pmyojanasarkari|gentletrail|recruitmentrasta).in|(minijankari|ndlifestylego|raidersixgameapk).com/.test(url) ? afterDOMLoaded(function() {clickIfLinkIsReady('#NextBtn')}) : null;
+    // /gplinks.co\/[^/#]+\/(?:#|\?pid=)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#link-btn > a')}) : null; //this line is redudant, already solved by the main chunk of the script
 
     // rareanimes.net
     /aipebel.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#wpsafelinkhuman')}) : null;
