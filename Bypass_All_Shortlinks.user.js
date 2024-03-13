@@ -1404,9 +1404,9 @@
       if (Checkvisibility(bp('.tick.wgicon'))) {clearInterval(kkt); ReadytoClick('.bottom_btn');}}, 1 * 1000);});
     BypassedByBloggerPemula(/fexkomin.xyz/, function() {
       $("a[target='_blank']").removeAttr("target");ClickIfExists('.btn-captcha.btn-danger.btn', 3);});
-    BypassedByBloggerPemula(/quesignifi.ca|tiktokcounter.net/, function() {
+    /*BypassedByBloggerPemula(/quesignifi.ca|tiktokcounter.net/, function() {
       if (elementExists('.h-captcha')) {let ctrsh = setInterval(() => {if (Captchacheck()) {clearInterval(ctrsh);
-      ClickIfExists('#cbt');}}, 1 * 1000);} else {ClickIfExists('#cbt', 5, 'setInterval');}});
+      ClickIfExists('#cbt');}}, 1 * 1000);} else {ClickIfExists('#cbt', 5, 'setInterval');}});*/
     BypassedByBloggerPemula(/100puan.com/, function() {
       ClickIfExists('.big-text', 3);waitForElm('div.bb-sticky-el a', pbz => redirect(pbz.href, false));});
     BypassedByBloggerPemula(/sub2get.com/, function() {
