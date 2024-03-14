@@ -722,5 +722,6 @@ r1.foxylinks.site
 /sunci.net/
 /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
 /tiktokcounter.net/
+/minimilionario.com\/noticia.php\?token=/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/

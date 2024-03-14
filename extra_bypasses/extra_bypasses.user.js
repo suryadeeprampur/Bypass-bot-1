@@ -94,6 +94,7 @@
 // @include     /sunci.net/
 // @include     /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
 // @include     /tiktokcounter.net/
+// @include     /minimilionario.com\/noticia.php\?token=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -425,6 +426,9 @@
         var urlParam = new URLSearchParams(decodedUrl).get('url');
         if (urlParam) {redirect(urlParam);}
     }
+
+    // filmesmega.online
+    /minimilionario.com\/noticia.php\?token=/.test(url) ? redirect(atob(url.split('?token=')[1])) : null;
 
 })();
 
