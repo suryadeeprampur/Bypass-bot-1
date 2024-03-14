@@ -644,7 +644,7 @@
 // @match *://*.sigmalinks.in/*
 // @match *://*.r1.foxylinks.site/*
 // @grant          GM_deleteValue
-// @include      /(free-content.pro|((ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com))\/s\?/
+// @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /mundopolo.net/

@@ -626,7 +626,7 @@ bestlink.pro
 playstore.pw
 sigmalinks.in
 r1.foxylinks.site
-/(free-content.pro|((ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com))\/s\?/
+/^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 /adbypass.eu/
 /(bypass.city|adbypass.org)\/bypass\?bypass=/
 /mundopolo.net/
