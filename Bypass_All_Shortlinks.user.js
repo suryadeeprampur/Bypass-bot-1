@@ -2314,9 +2314,12 @@
                             if (n[1] = n[1].replace("window.location.href", "var nulled"), n[1] = n[1].replace("window.open(f", "location.assign(f"), n[1] = n[1].replace(/(parseInt\(c\.split\("-"\)\[0\]\)<= 0).*?(\)\{)/, "$1$2"), o && t && i && r && c) try {
                                 "loading" === document.readyState ? window.addEventListener("load", (() => {
                                     //Check if there is already access permission before launching the POST requests for the bypass
-                                    let accessGranted = document.getElementById('contador').value.trim() === "IR AL ENLACE";
+                                    let button = document.getElementById('contador');
+                                    let accessGranted = button.value.trim() === "IR AL ENLACE";
                                     if (!accessGranted){
                                         e(c); //Launch the POST requests
+                                    } else if (accessGranted) {
+                                        button.click();
                                     }
                                 }), {
                                     once: !0
