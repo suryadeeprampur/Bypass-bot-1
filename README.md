@@ -43,4 +43,5 @@ Thanks to:
 - [antiworkink](https://greasyfork.org/users/1237543-antiworkink) for the loot-link open source bypass.
 - [Ad-Bypass](https://adbypass.eu/) Redirecting to this site for ad-maven links.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
+- [AdGuard filters](https://github.com/AdguardTeam/AdguardFilters/) for some bypasses.
 
