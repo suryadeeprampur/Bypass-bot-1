@@ -34,8 +34,7 @@
 // @include     /seriezloaded.com.ng\/sl-download\/\?link=/
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
-// @include     /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/
-// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /epicload.com\/files/
@@ -95,6 +94,7 @@
 // @include     /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
 // @include     /tiktokcounter.net/
 // @include     /minimilionario.com\/noticia.php\?token=/
+// @include     /usandoapp.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -275,10 +275,18 @@
     /www.itscybertech.com/.test(url) ? clickIfVisible('.download') : null;
     /thegadgetking.in/.test(url) ? popupsToRedirects() && afterDOMLoaded(function() {clickIfExists('#openbtn')}) : null;
 
-    // Linkvertise (solve easy case locally, hard case through bypass.city)
-    /(linkvertise.com|linkvertise.net|link-to.net).*\?r=/.test(url) ? redirect(atob((new URLSearchParams(window.location.search)).get('r'))) : null; // Solve locally
-    const solveThroughBypassCity = (linkShortenerUrl) => {if (!/(bypass.city|adbypass.org)/.test(linkShortenerUrl)) {redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(linkShortenerUrl))}};
-    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|linkvertise.net|link-to.net)(?!.*\?r=)/.test(url) ? solveThroughBypassCity(url) : null;
+    // Linkvertise
+    if (/linkvertise.com|(linkvertise|link-to).net/.test(url)) {
+        //solve easy case locally
+        let rParam = new URLSearchParams(window.location.search).get('r');
+        if (rParam) {
+            redirect(atob(rParam));
+        // solve hard case through bypass.city
+        } else {
+            const solveThroughBypassCity = (linkShortenerUrl) => {if (!/(bypass.city|adbypass.org)/.test(linkShortenerUrl)) {redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(linkShortenerUrl))}};
+            solveThroughBypassCity(url);
+        }
+    }
 
     // Ad-maven (optionally solve through bypass.city, but currently solved through adbypass.eu)
     // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
@@ -429,6 +437,9 @@
 
     // filmesmega.online
     /minimilionario.com\/noticia.php\?token=/.test(url) ? redirect(atob(url.split('?token=')[1])) : null;
+
+    // ontorrent.org
+    /usandoapp.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.DownloadButOn')}) : null;
 
 })();
 
