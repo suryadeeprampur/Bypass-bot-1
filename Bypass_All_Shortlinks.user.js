@@ -2283,7 +2283,7 @@
 // ----- ----- -----
 
 // ----- Bypass mega-enlace ( Taken from AdGuard https://github.com/AdguardTeam/AdguardFilters/blob/b1622e8b387148509ca355e8070ffa5cdcf87525/SpanishFilter/sections/general_extensions.txt#L108 ) -----
-// used in: pelisenhd.org latinomegahd.net gatonplayseries.com peliculasgd.net tododvdfull.com
+// used in: pelisenhd.org latinomegahd.net gatonplayseries.com peliculasgd.net tododvdfull.com cinemaniahdd.net
 (function() {
     if (/mega-enlace.com/.test(window.location.href)) {
         const window = unsafeWindow; //Added so it works in ViolentMonkey instead of AdGuard
