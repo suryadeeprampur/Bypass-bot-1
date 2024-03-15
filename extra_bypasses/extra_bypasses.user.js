@@ -95,6 +95,7 @@
 // @include     /tiktokcounter.net/
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
+// @include     /v2links.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -405,12 +406,16 @@
     /(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
     /go.(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
-    // psa.wf (adding here stuff missing from the main script)
-    /tiktokcounter.net/.test(url) ? preventForcedFocusOnWindow() : null;
-    /tiktokcounter.net/.test(url) ? afterDOMLoaded(function() {wT9982 = 0;}) : null; //Skip the timer
-    const clickTikTokCounterButtons = () => { let buttonSelector = 'button#cbt.btn.btn-warningbtn.btn-primary'; let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && button.innerHTML.includes('Continue')) { clearInterval(intervalId); isHoverDone = true; setTimeout(function() { button.click();}, 500) } }, 500); };
-    /tiktokcounter.net/.test(url) ? afterDOMLoaded(function() {clickTikTokCounterButtons()}) : null;
+    // olamovies.bar - https://v2links.me/q1z4ssolam //add stuff missing from the main script
+    /v2links.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
+    // psa.wf, olamovies.bar, https://ez4short.com/ar02kkolam - (adding here stuff missing from the main script)
+    /tiktokcounter.net/.test(url) ? preventForcedFocusOnWindow() : null;
+    // /tiktokcounter.net/.test(url) ? afterDOMLoaded(function() {wT9982 = 0;}) : null; //Skip the timer
+    // const clickTikTokCounterButtons = () => { let buttonSelector = 'button#cbt.btn.btn-warningbtn.btn-primary'; let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && button.innerHTML.includes('Continue')) { clearInterval(intervalId); isHoverDone = true; setTimeout(function() { button.click();}, 500) } }, 500); };
+    // /tiktokcounter.net/.test(url) ? afterDOMLoaded(function() {clickTikTokCounterButtons()}) : null;
+
+    // psa.wf
     /10short.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn')}) : null;
     /zegtrends.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.bsub')}) : null;
     /zegtrends.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#go1')}) : null;
