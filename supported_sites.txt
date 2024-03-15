@@ -629,6 +629,7 @@ r1.foxylinks.site
 /adbypass.eu/
 /(bypass.city|adbypass.org)\/bypass\?bypass=/
 /mundopolo.net/
+/onlypc.net\/out#!/
 /comohoy.com/
 /sphinxanime.com\/short/
 /japan-paw.net\/out/

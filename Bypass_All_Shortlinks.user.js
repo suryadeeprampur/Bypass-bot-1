@@ -647,6 +647,7 @@
 // @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /mundopolo.net/
+// @include     /onlypc.net\/out#!/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
 // @include     /japan-paw.net\/out/
@@ -1849,6 +1850,9 @@
 
     //peliculasgd.net
     /mundopolo.net/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    //programasvirtualespc.net
+    /onlypc.net\/out#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
 
     //leak.sx & pornleaks.in
     /comohoy.com/.test(url) ? redirect(atob(url.split('?url=')[1])) : null;

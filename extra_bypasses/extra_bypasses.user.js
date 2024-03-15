@@ -2,6 +2,7 @@
 // @name        extra bypasses
 // @description These bypasses are always merged into Bypass_All_Shortlinks.user.js
 // @include     /mundopolo.net/
+// @include     /onlypc.net\/out#!/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
 // @include     /japan-paw.net\/out/
@@ -123,6 +124,9 @@
 
     //peliculasgd.net
     /mundopolo.net/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    //programasvirtualespc.net
+    /onlypc.net\/out#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
 
     //leak.sx & pornleaks.in
     /comohoy.com/.test(url) ? redirect(atob(url.split('?url=')[1])) : null;

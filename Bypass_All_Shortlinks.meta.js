@@ -647,6 +647,7 @@
 // @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /mundopolo.net/
+// @include     /onlypc.net\/out#!/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
 // @include     /japan-paw.net\/out/
