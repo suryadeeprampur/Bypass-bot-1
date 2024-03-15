@@ -1306,7 +1306,7 @@
     BypassedByBloggerPemula(/dilink.net/, function() {if (typeof(window.url_done) !== 'string') return; redirect(window.url_done);});
     BypassedByBloggerPemula(/shortener.goldcontent.site/, function() {if (BpParams.has('dest')) {meta(atob(BpParams.get('dest')));}});
     BypassedByBloggerPemula(/(cutnet|cutsy|cutlink).net|(cutty|exego).app/, function(){ClickIfExists('#submit-button', 5, 'setInterval');});
-    BypassedByBloggerPemula(/newsbawa.com/, function() {ClickIfExists('#Verify-click-btn', 0.3);ClickIfExists('a#footer-btn.verify-btn', 0.3);});
+    BypassedByBloggerPemula(/newsbawa.com/, function() {ClickIfExists('#Verify-click-btn', 0.3);ClickIfExists('a#footer-btn.verify-btn', 1);});
     BypassedByBloggerPemula(/askpaccosi.com|paylinks.cloud|healthmart.link|kisalt.com/, function() {SubmitIfExists('.box-body > form', 2);});
     BypassedByBloggerPemula(/ontechhindi.com/, function() {EnableRCF();waitForElm('#rtg-generate21 > a', oth => redirect(oth.href, false));});
     BypassedByBloggerPemula(/mhma12.tech|hasri.xyz|soft3arbi.com/, function() {ClickIfExists('#btn6', 2);ClickIfExists('#yuidea-btmbtn', 3);});
