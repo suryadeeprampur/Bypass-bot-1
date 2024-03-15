@@ -234,7 +234,6 @@
 // @include /^(https?:\/\/)(.+)?(examkhata.com|gamelopte.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(rancah.com|menjelajahi.com|shortly.xyz|nyawang.com)(\/.*)/
 // @match *://*.cryptotracker.space/*
-// @match *://*.djxmaza.in/*
 // @match *://*.stfly.me/*
 // @include /^(https?:\/\/)(.+)?(khaddavi.net|contentmenarik.com)(\/.*)/
 // @match *://*.sapnogalpo.online/*
@@ -1437,8 +1436,8 @@
       ClickIfExists('.get-link.btn-lg.btn-success.btn', 5, 'setInterval');});
     BypassedByBloggerPemula(/cryptotracker.space/, function() {
       let cts = setInterval(() => {if (Captchacheck()) {clearInterval(cts);SubmitIfExists('#form-continue');}}, 1 * 1000);});
-    BypassedByBloggerPemula(/djxmaza.in/, function() {ClickIfExists('#dlbtn', 1);
-      ClickIfExists('#downloadbtnf', 2);ClickIfExists('#downloadbtn', 3, 'setInterval');});
+    //BypassedByBloggerPemula(/djxmaza.in/, function() {ClickIfExists('#dlbtn', 1);
+      //ClickIfExists('#downloadbtnf', 2);ClickIfExists('#downloadbtn', 3, 'setInterval');});
     BypassedByBloggerPemula(/stfly.me/, function() {
       if (elementExists('.g-recaptcha')) {} else {ClickIfExists('.form-send.m-2.btn-captcha.btn-outline-primary.btn', 3);}});
     BypassedByBloggerPemula(/khaddavi.net|contentmenarik.com/, function() {parent.open = BpBlock();
