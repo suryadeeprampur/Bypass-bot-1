@@ -728,6 +728,6 @@ r1.foxylinks.site
 /asideway.com/
 /web1s.asia\/api-mode/
 /(linkvip|blitly).io/
-/megalink.pro/
+/^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
