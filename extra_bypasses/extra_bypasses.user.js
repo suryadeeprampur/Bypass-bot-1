@@ -98,6 +98,8 @@
 // @include     /usandoapp.com/
 // @include     /v2links.com/
 // @include     /techtnet.com/
+// @include     /asideway.com/
+// @include     /(linkvip|blitly).io/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -454,6 +456,15 @@
 
     // ontorrent.org
     /usandoapp.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.DownloadButOn')}) : null;
+
+    // web1s - examples:  (nsfw) https://github.com/AdguardTeam/AdguardFilters/issues/154319 / https://t.me/s/cosplaydistrict / https://discord.com/invite/mtMGnm9aTd
+    // asideway sub-link-shortener. example: https://asideway.com/normal/j5GLNIDiHq/
+    /asideway.com/.test(url) ? afterWindowLoaded(function() {count = 0;}) : null;
+    const clickIfVisible4 = (selector, textContent) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button && button.style.display.includes('block') && button.innerText.includes(textContent) && !button.hasAttribute('disabled') ) { clearInterval(intervalId); setTimeout(() => { button.click();}, 500); }}, 500); };
+    /asideway.com/.test(url) ? afterWindowLoaded(function() {clickIfVisible4('#link1s', '1/2')}) : null;
+    /asideway.com/.test(url) ? afterWindowLoaded(function() {clickIfVisible4('#link1s', '2/2')}) : null;
+    // linkvip.io blitly.io sub-link-shortener. example: https://linkvip.io/redirect?api=9VAupEozzdsn3k6tMTcLWL4DJ&url=https://drive.google.com/drive/folders/1vvSM0OXgnZTcALJeThAkIRxzRBRsBGjm?usp=sharing
+    /(linkvip|blitly).io/.test(url) ? url.includes('url=') ? redirect(new URL(url).searchParams.get('url')) : null : null;
 
 })();
 

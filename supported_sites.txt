@@ -295,11 +295,12 @@ freetrx.fun
 socialwolvez.com
 (mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it|businessnews-nigeria|govaf|fahmysport).com|(hightrip|fx-gd|world-trips|otechno|bluetechno|to-travel).net|(newforex|forexit).online
 (blogginglass|arahtekno|mopahealth).com|faucet.work|wildblog.me|jiotech.net|apkupload.in
-anhdep24.com|nguyenvanbao.com|xemsport.com|byboe.com
+(anhdep24|nguyenvanbao|xemsport|byboe|asideway).com
 traffic1s.com
 web1s.co|web1s.info|app.covemarkets.com
 suaurl.com
 letsboost.net
+web1s.asia
 (hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn
 stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net
 coins-town.com
@@ -725,5 +726,7 @@ r1.foxylinks.site
 /usandoapp.com/
 /v2links.com/
 /techtnet.com/
+/asideway.com/
+/(linkvip|blitly).io/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
