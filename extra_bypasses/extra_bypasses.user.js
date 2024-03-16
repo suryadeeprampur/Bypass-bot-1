@@ -101,6 +101,7 @@
 // @include     /asideway.com/
 // @include     /web1s.asia\/api-mode/
 // @include     /(linkvip|blitly).io/
+// @include     /megalink.pro/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -468,6 +469,9 @@
     /asideway.com/.test(url) ? afterWindowLoaded(function() {clickIfVisible4('#link1s', '2/2')}) : null;
     // linkvip.io blitly.io sub-link-shortener. example: https://linkvip.io/redirect?api=9VAupEozzdsn3k6tMTcLWL4DJ&url=https://drive.google.com/drive/folders/1vvSM0OXgnZTcALJeThAkIRxzRBRsBGjm?usp=sharing
     /(linkvip|blitly).io/.test(url) ? url.includes('url=') ? redirect(new URL(url).searchParams.get('url')) : null : null;
+
+    // megalink.pro - https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/235270 - https://megalink.pro/pD6wK (nsfw)
+    /megalink.pro/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.get-link')}) : null;
 
 })();
 
