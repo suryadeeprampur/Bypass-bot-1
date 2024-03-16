@@ -97,6 +97,7 @@
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
 // @include     /v2links.com/
+// @include     /techtnet.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -156,6 +157,10 @@
     /www.akcartoons.in/.test(url) ? afterDOMLoaded(function() {document.querySelector('#btn6 > button').click()}) : null;
     /www.akcartoons.in/.test(url) ? afterDOMLoaded(function() {redirect(document.querySelector('a[href*="go.moonlinks.in"]'))}) : null;
     /go.moonlinks.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.btn')}) : null;
+
+    // linkneverdie.net
+    /techtnet.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /techtnet.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#originalLink')}) : null;
 
     //shrinkme.us
     /shrinkme.(us|site)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
