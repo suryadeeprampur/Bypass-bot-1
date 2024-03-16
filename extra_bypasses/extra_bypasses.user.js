@@ -102,6 +102,7 @@
 // @include     /web1s.asia\/api-mode/
 // @include     /(linkvip|blitly).io/
 // @include     /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
+// @include     /tii.la|oko.sh|shrinke.me/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -212,6 +213,9 @@
 
     //exeo.app
     /exeo.app/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
+
+    // tii.la oko.sh final step
+    /tii.la|oko.sh|shrinke.me/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     //vegamovies, worldfree4u, desiremovies.wales, hdhub4u.re ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
     const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
