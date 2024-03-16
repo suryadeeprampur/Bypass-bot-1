@@ -2197,7 +2197,7 @@
     /(linkvip|blitly).io/.test(url) ? url.includes('url=') ? redirect(new URL(url).searchParams.get('url')) : null : null;
 
     // megalink.pro - https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/235270 - https://megalink.pro/pD6wK (nsfw)
-    /megalink.pro/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.get-link')}) : null;
+    /megalink.pro/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('a.get-link')}) : null;
 
 })();
 
