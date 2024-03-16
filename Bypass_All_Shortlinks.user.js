@@ -2083,7 +2083,7 @@
             clickIfLinkIsReady('#NextBtn');
         });
     }
-    // /gplinks.co\/[^/#]+\/(?:#|\?pid=)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#link-btn > a')}) : null; //this line is redudant, already solved by the main chunk of the script
+    /gplinks.co\/[^/#]+\/(?:#|\?pid=)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#link-btn > a')}) : null;
 
     // rareanimes.net
     /aipebel.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#wpsafelinkhuman')}) : null;
