@@ -99,6 +99,7 @@
 // @include     /v2links.com/
 // @include     /techtnet.com/
 // @include     /asideway.com/
+// @include     /web1s.asia\/api-mode/
 // @include     /(linkvip|blitly).io/
 // @run-at      document-start
 // ==/UserScript==
@@ -458,6 +459,8 @@
     /usandoapp.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.DownloadButOn')}) : null;
 
     // web1s - examples:  (nsfw) https://github.com/AdguardTeam/AdguardFilters/issues/154319 / https://t.me/s/cosplaydistrict / https://discord.com/invite/mtMGnm9aTd
+    /web1s.asia\/api-mode/.test(url) ? afterDOMLoaded(function() {clickIfExists('#submit')}) : null;
+    /web1s.asia\/api-mode/.test(url) ? afterDOMLoaded(function() {clickIfExists('#submit-button')}) : null;
     // asideway sub-link-shortener. example: https://asideway.com/normal/j5GLNIDiHq/
     /asideway.com/.test(url) ? afterWindowLoaded(function() {count = 0;}) : null;
     const clickIfVisible4 = (selector, textContent) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button && button.style.display.includes('block') && button.innerText.includes(textContent) && !button.hasAttribute('disabled') ) { clearInterval(intervalId); setTimeout(() => { button.click();}, 500); }}, 500); };
