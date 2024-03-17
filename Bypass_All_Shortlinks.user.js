@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.5.20
+// @version        91.5.21
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -410,7 +410,6 @@
 // @match *://*.airlike.me/*
 // @match *://*.techhadi.com/*
 // @match *://*.zubatecno.com/*
-// @match *://*.veganab.co/*
 // @match *://*.yosite.net/*
 // @match *://*.battlechamp.in/*
 // @match *://*.adiskblog.in/*
@@ -888,7 +887,7 @@
   BloggerPemula('airlike.me', 'link', 'https://get.airlike.me/');
   BloggerPemula('techhadi.com', 'news', 'https://go.tplinks.in/');
   BloggerPemula('zubatecno.com', 'link', 'https://go.flyzu.icu/');
-  BloggerPemula('veganab.co', 'link', 'https://techy.veganab.co/');
+  //BloggerPemula('veganab.co', 'link', 'https://techy.veganab.co/');
   BloggerPemula('yosite.net', 'link', 'https://loans.yosite.net/');
   BloggerPemula('battlechamp.in', 'link', 'https://get.exurl.in/');
   BloggerPemula('adiskblog.in', 'link', 'https://go.pdiskpro.in/');

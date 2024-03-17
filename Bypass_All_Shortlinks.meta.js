@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.5.20
+// @version        91.5.21
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -410,7 +410,6 @@
 // @match *://*.airlike.me/*
 // @match *://*.techhadi.com/*
 // @match *://*.zubatecno.com/*
-// @match *://*.veganab.co/*
 // @match *://*.yosite.net/*
 // @match *://*.battlechamp.in/*
 // @match *://*.adiskblog.in/*
