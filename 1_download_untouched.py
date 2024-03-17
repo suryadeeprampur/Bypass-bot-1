@@ -51,6 +51,8 @@ def modify_file_with_my_fixes(destination):
     content = content.replace("BloggerPemula('veganab.co'", "//BloggerPemula('veganab.co'")
     content = content.replace("atglinks|", "")
 
+    content = content.replace("|vebma|majalahhewan).com/", "|vebma|majalahhewan).com|crm.cekresi.me/")
+
     content += "\n"
 
     with open(destination, 'w', encoding='utf-8') as file:
