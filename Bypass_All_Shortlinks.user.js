@@ -669,8 +669,7 @@
 // @include     /tmail.io/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
-// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz)(?!.*\?r=)/
-// @include     /cybertyrant.com\/\?r=/
+// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
 // @include     /shramikcard.in/
@@ -1950,11 +1949,10 @@
           let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
           if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);} //Redirect or click, with a 0.1s delay
         }, 500);});};
-    /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz)(?!.*\?r=)/.test(url) ?
-        redirectOrClickIfExistsEnabledWithDelay('.rd_btn') : null;
-
-    //vegamovies
-    /cybertyrant.com\/\?r=/.test(url) ? redirect(atob(url.split('?r=')[1])) : null;
+    if (/((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro)/.test(url)){
+        if (url.includes('?r=')) redirect(atob(url.split('?r=')[1]));
+        else redirectOrClickIfExistsEnabledWithDelay('.rd_btn');
+    }
 
     // worldfree4u
     //bloggingvector.shop\/re/.test(url) ? redirect(atob(url.split('/re/')[1].split('?')[0])) : null; // not necessary, the site does this one by itself for now
