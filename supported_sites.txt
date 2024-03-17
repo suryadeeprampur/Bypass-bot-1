@@ -734,5 +734,6 @@ r1.foxylinks.site
 /veganab.co/
 /camdigest.com/
 /tawda.xyz\/tag/
+/pastebin.com\/raw/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
