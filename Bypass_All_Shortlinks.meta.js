@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.5.18
+// @version        91.5.19
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -749,6 +749,8 @@
 // @include     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com/
 // @include     /shon.xyz/
 // @include     /veganab.co\/\?link=/
+// @include     /veganab.co/
+// @include     /camdigest.com/
 // @include     /tawda.xyz\/tag/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
