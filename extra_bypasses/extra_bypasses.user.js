@@ -101,7 +101,7 @@
 // @include     /web1s.asia\/api-mode/
 // @include     /(linkvip|blitly).io/
 // @include     /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
-// @include     /tii.la|oko.sh|shrinke.me|clk.wiki/
+// @include     /tii.la|oko.sh|shrinke.me|clk.wiki|atglinks.com/
 // @include     /shon.xyz/
 // @run-at      document-start
 // ==/UserScript==
@@ -215,7 +215,7 @@
     /exeo.app/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
 
     // tii.la oko.sh final step
-    /tii.la|oko.sh|shrinke.me|clk.wiki/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /tii.la|oko.sh|shrinke.me|clk.wiki|atglinks.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // shon.xyz, seen in mega-descargas-serie.blogspot.com
     /shon.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-main')}) : null;
