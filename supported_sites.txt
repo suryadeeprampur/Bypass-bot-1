@@ -730,5 +730,6 @@ r1.foxylinks.site
 /(linkvip|blitly).io/
 /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
 /tii.la|oko.sh|shrinke.me|clk.wiki/
+/shon.xyz/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
