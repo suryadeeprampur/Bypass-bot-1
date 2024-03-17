@@ -728,7 +728,9 @@ r1.foxylinks.site
 /web1s.asia\/api-mode/
 /(linkvip|blitly).io/
 /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
-/tii.la|oko.sh|shrinke.me|clk.wiki|atglinks.com/
+/tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com/
 /shon.xyz/
+/veganab.co\/\?link=/
+/tawda.xyz\/tag/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
