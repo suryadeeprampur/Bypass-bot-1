@@ -182,10 +182,10 @@
     //fc-lc
     /fc-lc.(xyz|com)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     // extra steps for some fc-lc cases: https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277
-    /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfExists('#next')}) : null;
-    /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#scroll')}) : null;
-    /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#glink')}) : null;
-    /tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#surl')}) : null;
+    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfExists('#next')}) : null;
+    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#scroll')}) : null;
+    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#glink')}) : null;
+    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#surl')}) : null;
 
     //cpmlink.net
     /cpmlink.net\/go/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#btn-main')}) : null;
