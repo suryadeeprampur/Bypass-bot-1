@@ -675,6 +675,7 @@
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(bstlar.com)/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /epicload.com\/files/
@@ -2013,6 +2014,7 @@
     /thegadgetking.in/.test(url) ? popupsToRedirects() && afterDOMLoaded(function() {clickIfExists('#openbtn')}) : null;
 
     // Linkvertise
+    const solveThroughBypassCity = (linkShortenerUrl) => {if (!/(bypass.city|adbypass.org)/.test(linkShortenerUrl)) {redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(linkShortenerUrl))}};
     if (/linkvertise.com|(linkvertise|link-to).net/.test(url)) {
         //solve easy case locally
         let rParam = new URLSearchParams(window.location.search).get('r');
@@ -2020,10 +2022,12 @@
             redirect(atob(rParam));
         // solve hard case through bypass.city
         } else {
-            const solveThroughBypassCity = (linkShortenerUrl) => {if (!/(bypass.city|adbypass.org)/.test(linkShortenerUrl)) {redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(linkShortenerUrl))}};
             solveThroughBypassCity(url);
         }
     }
+
+    // bstlar.com
+    /bstlar.com/.test(url) ? solveThroughBypassCity(url) : null;
 
     // Ad-maven (optionally solve through bypass.city, but currently solved through adbypass.eu)
     // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
