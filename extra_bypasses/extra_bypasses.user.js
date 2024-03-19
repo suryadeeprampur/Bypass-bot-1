@@ -110,6 +110,7 @@
 // @include     /tawda.xyz\/tag/
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
+// @include     /linegee.net|intercelestial.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -505,6 +506,7 @@
     /megalink.pro\/[a-zA-Z0-9]+$/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {clickIfNotDisabled('a.btn:nth-child(1)')}, 3000)}) : null;
 
     //pahe.ink final step
+    /linegee.net|intercelestial.com/.test(url) ? preventForcedFocusOnWindow() : null;
     /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('center a')}) : null;
 
 })();
