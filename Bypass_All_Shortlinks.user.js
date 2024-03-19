@@ -2219,6 +2219,7 @@
 
     //pahe.ink final step
     /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.post-content > center:nth-child(4) > a:nth-child(2)')}) : null;
+    /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.post-content > center:nth-child(8) > a:nth-child(2)')}) : null;
 
 })();
 
