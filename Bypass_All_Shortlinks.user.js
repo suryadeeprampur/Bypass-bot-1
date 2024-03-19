@@ -2218,8 +2218,7 @@
     /megalink.pro\/[a-zA-Z0-9]+$/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {clickIfNotDisabled('a.btn:nth-child(1)')}, 3000)}) : null;
 
     //pahe.ink final step
-    /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.post-content > center:nth-child(4) > a:nth-child(2)')}) : null;
-    /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.post-content > center:nth-child(8) > a:nth-child(2)')}) : null;
+    /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('center a')}) : null;
 
 })();
 
