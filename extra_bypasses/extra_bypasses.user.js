@@ -109,6 +109,7 @@
 // @include     /camdigest.com/
 // @include     /tawda.xyz\/tag/
 // @include     /pastebin.com\/raw/
+// @include     /spacetica.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -502,6 +503,9 @@
 
     // megalink.pro - https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/235270 - https://megalink.pro/pD6wK (nsfw)
     /megalink.pro\/[a-zA-Z0-9]+$/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {clickIfNotDisabled('a.btn:nth-child(1)')}, 3000)}) : null;
+
+    //pahe.ink final step
+    /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.post-content > center:nth-child(4) > a:nth-child(2)')}) : null;
 
 })();
 
