@@ -53,6 +53,8 @@ def modify_file_with_my_fixes(destination):
 
     content = content.replace("|vebma|majalahhewan).com/", "|vebma|majalahhewan).com|crm.cekresi.me/")
 
+    content = content.replace("case 'work.ink'", "//case 'work.ink'")
+
     content += "\n"
 
     with open(destination, 'w', encoding='utf-8') as file:
