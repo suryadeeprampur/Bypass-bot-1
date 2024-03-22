@@ -39,9 +39,10 @@ You can help by:
 This script contains code I took, or redirects to free services from other developers for certain bypasses.
 Thanks to:
 - [BloggerPemula](https://greasyfork.org/users/810571-bloggerpemula)
-- [bypass.city](https://bypass.city/) / [2](https://adbypass.org/) Redirecting to this site to solve most of the L1nkv3rt1s3 cases and for work.ink links.
-- [antiworkink](https://greasyfork.org/users/1237543-antiworkink) for the loot-link open source bypass.
+- [bypass.city](https://bypass.city/) / [2](https://adbypass.org/) Redirecting to this site to solve most of the L1nkv3rt1s3 cases and for bstlar links.
+- [antiworkink](https://greasyfork.org/users/1237543-antiworkink) for the loot-link bypass.
+- [lem6ns](https://greasyfork.org/en/users/937794-lem6ns) for the work.ink bypass.
 - [Ad-Bypass](https://adbypass.eu/) Redirecting to this site for ad-maven links.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
-- [AdGuard filters](https://github.com/AdguardTeam/AdguardFilters/) for some bypasses.
+- [AdGuard filters](https://github.com/AdguardTeam/AdguardFilters/) for the mega-enlace bypass.
 
