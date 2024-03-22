@@ -17,7 +17,7 @@
             const overlay = document.createElement('div');
             overlay.id = 'bypassOverlay';
             overlay.style.cssText = 'position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);padding:20px;z-index:9999;';
-            overlay.innerHTML = '<h1 style="font-size:2em;color:white;margin:0;">Bypassing with userscript...</h1>';
+            overlay.innerHTML = '<h1 style="font-size:2em;color:white;margin:0;">Bypassing with userscript...(it takes 5-10s)</h1>';
             document.body.appendChild(overlay);
         }}, 1000);
 
