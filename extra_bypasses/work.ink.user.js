@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        work.ink bypass
 // @include     /(work.ink|workink.click)\/.*$/
+// @resource    NOTYF_CSS https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css
 // @require     https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js
 // @run-at      document-start
 // @grant          GM_getResourceText
@@ -11,14 +12,6 @@
 (function() {
     'use strict';
     if (/(work.ink|workink.click)\/.*$/.test(window.location.href)) {
-        // Overlay text "Bypassing..."
-        setInterval(() => {if (!document.getElementById('bypassOverlay')) {
-            const overlay = document.createElement('div');
-            overlay.id = 'bypassOverlay';
-            overlay.style.cssText = 'position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);padding:20px;z-index:9999;';
-            overlay.innerHTML = '<h1 style="font-size:2em;color:white;margin:0;">Bypassing with userscript...(wait 2-3s) (use incognito or delete cookies if stuck)</h1>';
-            document.body.appendChild(overlay);
-        }}, 1000);
 
         document.addEventListener('DOMContentLoaded', function() {
             //--Original script starts here--

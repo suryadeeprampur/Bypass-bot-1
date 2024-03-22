@@ -35,6 +35,7 @@ def process_js_files(folder_path, target_file):
     match_lines = []
     include_lines = []
     require_lines = []
+    resource_lines = []
     after_user_script_lines = []
 
     # Traverse through the files in the folder
@@ -45,7 +46,7 @@ def process_js_files(folder_path, target_file):
 
                 # Find lines with "@match" or "@include" or "@require" or "@grant". Add them if they are not already in the target file.
                 for line in lines:
-                    if "@match" in line or "@include" in line or "@require" in line or "@grant" in line:
+                    if "@match" in line or "@include" in line or "@resource" in line or "@require" in line or "@grant" in line:
                         if line not in target_file_lines:
                             if line.startswith("// @grant"):
                                 grant_lines.append(line)
@@ -54,6 +55,8 @@ def process_js_files(folder_path, target_file):
                             elif line.startswith("// @include"):
                                 include_lines.append(line)
                             elif line.startswith("// @require"):
+                                require_lines.append(line)
+                            elif line.startswith("// @resource"):
                                 require_lines.append(line)
 
                 # Find lines after "// ==/UserScript=="
@@ -70,7 +73,7 @@ def process_js_files(folder_path, target_file):
         exclude_index = next((i for i, line in enumerate(content) if "@exclude" in line), None)
         if exclude_index is not None:
             # Add match_lines and require_lines before the first @exclude line
-            content = content[:exclude_index] + grant_lines + match_lines + include_lines + require_lines  + content[exclude_index:]
+            content = content[:exclude_index] + grant_lines + match_lines + include_lines + require_lines + resource_lines  + content[exclude_index:]
         # Add lines after "// ==/UserScript=="
         content.extend(after_user_script_lines)
         f.seek(0)
