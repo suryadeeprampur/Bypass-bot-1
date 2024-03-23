@@ -111,6 +111,8 @@
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
 // @include     /linegee.net|intercelestial.com/
+// @include     /loanoffering.in/
+// @include     /modijiurl.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -515,6 +517,12 @@
     //pahe.ink final step
     /linegee.net|intercelestial.com/.test(url) ? preventForcedFocusOnWindow() : null;
     /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('center a')}) : null;
+
+    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8878055
+    if (/loanoffering.in/.test(url)) {afterDOMLoaded(function() {
+        clickIfExists('#startButton'); clickIfExists('#verifybtn'); clickIfExists('#tp98');
+        clickIfExists('#tp4'); clickIfExists('#tp3'); clickIfExists('#rtg-snp2'); })}
+    /modijiurl.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('#okiiii')}) : null;
 
 })();
 
