@@ -113,6 +113,7 @@
 // @include     /linegee.net|intercelestial.com/
 // @include     /loanoffering.in/
 // @include     /modijiurl.com/
+// @include     /4hi.in/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -523,6 +524,12 @@
         clickIfExists('#startButton'); clickIfExists('#verifybtn'); clickIfExists('#tp98');
         clickIfExists('#tp4'); clickIfExists('#tp3'); clickIfExists('#rtg-snp2'); })}
     /modijiurl.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('#okiiii')}) : null;
+
+    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8884375
+    if (/4hi.in/.test(url)) { afterDOMLoaded(function() {
+        clickIfExists('.btn-warning:not(.btn-captcha)');
+        clickIfNotDisabled('#invisibleCaptchaShortlink');
+        redirectIfNotDisabled('a.get-link'); })}
 
 })();
 
