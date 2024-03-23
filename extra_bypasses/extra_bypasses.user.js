@@ -114,6 +114,7 @@
 // @include     /loanoffering.in/
 // @include     /modijiurl.com/
 // @include     /4hi.in/
+// @include     /lnk.news/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -530,6 +531,9 @@
         clickIfExists('.btn-warning:not(.btn-captcha)');
         clickIfNotDisabled('#invisibleCaptchaShortlink');
         redirectIfNotDisabled('a.get-link'); })}
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/12
+    /lnk.news/.test(url) ? afterDOMLoaded(function() {clickIfExists('#csubmit')}) : null;
 
 })();
 

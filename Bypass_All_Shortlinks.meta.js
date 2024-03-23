@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.6.8
+// @version        91.6.9
 // @noframes
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -755,6 +755,7 @@
 // @include     /loanoffering.in/
 // @include     /modijiurl.com/
 // @include     /4hi.in/
+// @include     /lnk.news/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
 // @include     /(work.ink|workink.click)\/.*$/
