@@ -756,6 +756,8 @@
 // @include     /modijiurl.com/
 // @include     /4hi.in/
 // @include     /lnk.news/
+// @include     /imagereviser.com/
+// @include     /upshrink.com/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
 // @include     /(work.ink|workink.click)\/.*$/
@@ -2251,6 +2253,12 @@
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/12
     /lnk.news/.test(url) ? afterDOMLoaded(function() {clickIfExists('#csubmit')}) : null;
+
+    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8893133
+    const afterElementVisible = (selector, callback) => {let intervalId = setInterval(() => {let element = document.querySelector(selector);if (element && (element.style.display.includes('block') || !element.style.display.includes('none'))) {clearInterval(intervalId);callback();}}, 500);};
+    /imagereviser.com/.test(url)  ? preventForcedFocusOnWindow() : null;
+    /imagereviser.com/.test(url)  ? afterDOMLoaded(function() {afterElementVisible('#second_btn_div', function() {document.querySelector('#bottom_btn').click();}) }) : null;
+    /upshrink.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
 })();
 

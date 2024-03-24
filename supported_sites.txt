@@ -736,6 +736,8 @@ r1.foxylinks.site
 /modijiurl.com/
 /4hi.in/
 /lnk.news/
+/imagereviser.com/
+/upshrink.com/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
 /(work.ink|workink.click)\/.*$/

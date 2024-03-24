@@ -756,6 +756,8 @@
 // @include     /modijiurl.com/
 // @include     /4hi.in/
 // @include     /lnk.news/
+// @include     /imagereviser.com/
+// @include     /upshrink.com/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
 // @include     /(work.ink|workink.click)\/.*$/
