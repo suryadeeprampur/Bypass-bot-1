@@ -738,6 +738,10 @@ r1.foxylinks.site
 /lnk.news/
 /imagereviser.com/
 /upshrink.com/
+/bangclinic.life/
+/dow-dow-dow-dow-dow.xyz\/download\/\?id=/
+/ofilmetorrent.com\/download\/\?id=/
+/librospdfgratismundo.net/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
 /(work.ink|workink.click)\/.*$/

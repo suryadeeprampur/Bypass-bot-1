@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.6.9
+// @version        91.6.10
 // @noframes
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -758,6 +758,10 @@
 // @include     /lnk.news/
 // @include     /imagereviser.com/
 // @include     /upshrink.com/
+// @include     /bangclinic.life/
+// @include     /dow-dow-dow-dow-dow.xyz\/download\/\?id=/
+// @include     /ofilmetorrent.com\/download\/\?id=/
+// @include     /librospdfgratismundo.net/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
 // @include     /(work.ink|workink.click)\/.*$/

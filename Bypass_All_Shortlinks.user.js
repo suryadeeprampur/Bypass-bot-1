@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.6.9
+// @version        91.6.10
 // @noframes
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -758,6 +758,10 @@
 // @include     /lnk.news/
 // @include     /imagereviser.com/
 // @include     /upshrink.com/
+// @include     /bangclinic.life/
+// @include     /dow-dow-dow-dow-dow.xyz\/download\/\?id=/
+// @include     /ofilmetorrent.com\/download\/\?id=/
+// @include     /librospdfgratismundo.net/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
 // @include     /(work.ink|workink.click)\/.*$/
@@ -2259,6 +2263,22 @@
     /imagereviser.com/.test(url)  ? preventForcedFocusOnWindow() : null;
     /imagereviser.com/.test(url)  ? afterDOMLoaded(function() {afterElementVisible('#second_btn_div', function() {document.querySelector('#bottom_btn').click();}) }) : null;
     /upshrink.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    // comandofilmeshd.org
+    /bangclinic.life/.test(url) ? afterDOMLoaded(function() {redirectIfExists('a.DownloadButOn')}) : null;
+
+    // ofilmetorrent.com
+    /dow-dow-dow-dow-dow.xyz\/download\/\?id=/.test(url) ? redirect(atob(url.split('?id=')[1].split('&')[0])) : null;
+    /ofilmetorrent.com\/download\/\?id=/.test(url) ? afterDOMLoaded(function() {
+        document.querySelectorAll('a[href*="https://dow-dow-dow-dow-dow.xyz/download?id="]').forEach(link => {
+            link.href = atob(link.getAttribute('href').split('?id=')[1].split('&')[0]);
+        }); }) : null;
+
+    // librospdfgratismundo.net
+    /librospdfgratismundo.net/.test ? afterDOMLoaded(function() {
+        document.querySelectorAll('a[href*="https://librospdfgratismundo.net/rt?url="]').forEach(link => {
+            link.href = atob(link.getAttribute('href').split('?url=')[1]);
+        }); }) : null;
 
 })();
 
