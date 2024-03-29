@@ -306,7 +306,8 @@
     // seriezloaded.com.ng
     /seriezloaded.com.ng\/sl-download\/\?link=/ .test(url) ? afterDOMLoaded(function() { redirect(document.querySelector('.sl-button').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1]) }) : null;
 
-    // privatemoviez.baby
+    // privatemoviez.homes
+    /www.itscybertech.com/.test(url) ? popupsToRedirects() : null;
     /www.itscybertech.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.button')}) : null;
     /www.itscybertech.com/.test(url) ? clickIfVisible('#gtbtn2') : null;
     /www.itscybertech.com/.test(url) ? clickIfVisible('.download') : null;
