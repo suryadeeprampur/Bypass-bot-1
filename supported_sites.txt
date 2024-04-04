@@ -742,6 +742,8 @@ r1.foxylinks.site
 /dow-dow-dow-dow-dow.xyz\/download\/\?id=/
 /ofilmetorrent.com\/download\/\?id=/
 /librospdfgratismundo.net/
+/besargaji.com/
+/moneyblink.com\/ready\/go\?u=/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
 /(work.ink|workink.click)\/.*$/

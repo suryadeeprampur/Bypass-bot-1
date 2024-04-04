@@ -121,6 +121,8 @@
 // @include     /dow-dow-dow-dow-dow.xyz\/download\/\?id=/
 // @include     /ofilmetorrent.com\/download\/\?id=/
 // @include     /librospdfgratismundo.net/
+// @include     /besargaji.com/
+// @include     /moneyblink.com\/ready\/go\?u=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -564,6 +566,11 @@
             link.href = atob(link.getAttribute('href').split('?url=')[1]);
         }); }) : null;
 
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/21
+    /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-1')}) : null;
+    /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-2')}) : null;
+    /moneyblink.com\/ready\/go\?u=/.test(url)? redirect(atob(url.split('?u=')[1])) : null;
+
 })();
 
 (function() {
@@ -579,6 +586,9 @@
 
     // psa.wf (adding here stuff missing from the main script)
     /motakhokhara.blogspot.com/.test(url) ? boostTimers() : null;
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/21
+    /besargaji.com/.test(url) ? boostTimers() : null;
 
 })();
 // ----- ----- -----
