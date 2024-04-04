@@ -121,6 +121,7 @@
 // @include     /dow-dow-dow-dow-dow.xyz\/download\/\?id=/
 // @include     /ofilmetorrent.com\/download\/\?id=/
 // @include     /librospdfgratismundo.net/
+// @include     /ps4linux.com\/s/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -563,6 +564,9 @@
         document.querySelectorAll('a[href*="https://librospdfgratismundo.net/rt?url="]').forEach(link => {
             link.href = atob(link.getAttribute('href').split('?url=')[1]);
         }); }) : null;
+
+    // https://github.com/FastForwardTeam/FastForward/issues/1389
+    /ps4linux.com\/s/.test(url) ? afterDOMLoaded(function() {redirect(document.querySelector('#skipaft > a:nth-child(1)').href)}) : null;
 
 })();
 
