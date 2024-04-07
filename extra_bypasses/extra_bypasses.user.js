@@ -125,6 +125,7 @@
 // @include     /besargaji.com/
 // @include     /moneyblink.com\/ready\/go\?u=/
 // @include     /dw-anime.net\/short\/\?anonym=/
+// @include     /fiuxy2.co\/threads/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -134,6 +135,7 @@
     const url = window.location.href
     const redirect = finalUrl => window.location.assign(finalUrl);
     const getParam = (url, param) => new URLSearchParams(url).get(param);
+    const rot13 = str => str.replace(/[A-Za-z]/g, char => String.fromCharCode((char.charCodeAt(0) % 32 + 13) % 26 + (char < 'a' ? 65 : 97)));
     const popupsToRedirects = () => window.open = (url, target, features) => (window.location.href = url, window);
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const afterWindowLoaded = (callback) => window.addEventListener('load', callback);
@@ -563,9 +565,16 @@
         }); }) : null;
 
     // librospdfgratismundo.net
-    /librospdfgratismundo.net/.test ? afterDOMLoaded(function() {
+    /librospdfgratismundo.net/.test(url) ? afterDOMLoaded(function() {
         document.querySelectorAll('a[href*="https://librospdfgratismundo.net/rt?url="]').forEach(link => {
             link.href = atob(link.getAttribute('href').split('?url=')[1]);
+        }); }) : null;
+
+    //fiuxy2.co
+    /fiuxy2.co\/threads/.test(url) ? afterWindowLoaded(function() {
+        document.querySelectorAll('a[href*="mega-enlace.com/ext.php?o="]').forEach(function(element) {
+            if (isValidUrl(element.innerText)) { element.href = element.innerText;};
+            // element.href = rot13(atob(rot13(atob(element.href.split('?o=')[1])))).split('|')[0];
         }); }) : null;
 
     // toonhub4u.net
