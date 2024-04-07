@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.7.2
+// @version        91.7.3
 // @noframes
 // @grant          GM_setValue
 // @grant          GM_getValue
