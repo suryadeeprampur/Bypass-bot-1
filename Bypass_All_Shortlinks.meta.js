@@ -700,6 +700,7 @@
 // @include     /lnks.primarchweb.in/
 // @include     /highkeyfinance.com/
 // @include     /toonhub4u.net\/redirect\/main.php\?url=/
+// @include     /toonhub4u\.net\/([^\/]+)\/$/
 // @include     /mdsuuniversity.org|instander.me|jameen.xyz|dhamakamusic.ink|eternalcbse.i|financialstudy.me|(foreverhealth|newzwala.co|nhmgujarat|jobkijankari|jobwaala|learnwithsaif|lyricsx|smartsetkari|theringtonesworld|recruitmentrasta|mediniweb|pmyojanasarkari|netflixvip|mghindinews|gentletrail|w3hindi|ryzenmusic).in|(anumin|awolio|cgbsesupport|gptproguide|iplquotes|kaisekareblog|minijankari|news36tech|newsloti|odiamusicsong|sugargliderfaqs|picassoappk|geniuseducares|ndlifestylego|raidersixgameapk|sarkariexam365|potter-world|jankari4u|trancebazar|taazaalerts).com/
 // @include     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/
 // @include     /aipebel.com/
