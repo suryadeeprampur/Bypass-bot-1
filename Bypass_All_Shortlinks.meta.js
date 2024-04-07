@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.7.3
+// @version        91.7.4
 // @noframes
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -638,6 +638,7 @@
 // @match *://*.sigmalinks.in/*
 // @match *://*.r1.foxylinks.site/*
 // @grant          GM_deleteValue
+// @grant        GM.xmlHttpRequest
 // @grant          GM_getResourceText
 // @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include      /adbypass.eu/
@@ -765,6 +766,7 @@
 // @include     /librospdfgratismundo.net/
 // @include     /besargaji.com/
 // @include     /moneyblink.com\/ready\/go\?u=/
+// @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
 // @include     /(work.ink|workink.click)\/.*$/

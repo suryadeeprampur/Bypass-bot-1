@@ -43,6 +43,7 @@ Thanks to:
 - [antiworkink](https://greasyfork.org/users/1237543-antiworkink) for the loot-link bypass.
 - [lem6ns](https://greasyfork.org/en/users/937794-lem6ns) for the work.ink bypass.
 - [Ad-Bypass](https://adbypass.eu/) Redirecting to this site for ad-maven links.
+- [StephenP](https://greasyfork.org/users/104167-stephenp) for the filecrypt bypass.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
 - [AdGuard filters](https://github.com/AdguardTeam/AdguardFilters/) for the mega-enlace bypass.
 
