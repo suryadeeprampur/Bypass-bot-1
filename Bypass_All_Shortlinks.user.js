@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8
+// @version        91.8.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -644,7 +644,7 @@
 // @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
-// @include     /mundopolo.net/
+// @include     /(mundopolo.net|d.myfirstdollar.net)/
 // @include     /onlypc.net\/out#!/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
@@ -1868,8 +1868,8 @@
         Object.defineProperty(document, 'visibilityState', {get() {return 'visible';}}); window.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true);
         window.addEventListener('focus', onfocus, true);document.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true); Object.defineProperty(document, 'hidden', {get() {return false;}});};
 
-    //peliculasgd.net
-    /mundopolo.net/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+    //peliculasgd.net, animesgd.net
+    /(mundopolo.net|d.myfirstdollar.net)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
 
     //programasvirtualespc.net
     /onlypc.net\/out#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;

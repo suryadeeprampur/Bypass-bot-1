@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        extra bypasses
 // @description These bypasses are always merged into Bypass_All_Shortlinks.user.js
-// @include     /mundopolo.net/
+// @include     /(mundopolo.net|d.myfirstdollar.net)/
 // @include     /onlypc.net\/out#!/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
@@ -148,8 +148,8 @@
         Object.defineProperty(document, 'visibilityState', {get() {return 'visible';}}); window.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true);
         window.addEventListener('focus', onfocus, true);document.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true); Object.defineProperty(document, 'hidden', {get() {return false;}});};
 
-    //peliculasgd.net
-    /mundopolo.net/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+    //peliculasgd.net, animesgd.net
+    /(mundopolo.net|d.myfirstdollar.net)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
 
     //programasvirtualespc.net
     /onlypc.net\/out#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;

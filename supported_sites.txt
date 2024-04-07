@@ -623,7 +623,7 @@ r1.foxylinks.site
 /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 /adbypass.eu/
 /(bypass.city|adbypass.org)\/bypass\?bypass=/
-/mundopolo.net/
+/(mundopolo.net|d.myfirstdollar.net)/
 /onlypc.net\/out#!/
 /comohoy.com/
 /sphinxanime.com\/short/
