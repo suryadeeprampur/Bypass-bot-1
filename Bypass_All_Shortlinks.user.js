@@ -767,6 +767,7 @@
 // @include     /librospdfgratismundo.net/
 // @include     /besargaji.com/
 // @include     /moneyblink.com\/ready\/go\?u=/
+// @include     /dw-anime.net\/short\/\?anonym=/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -1870,6 +1871,9 @@
 
     //peliculasgd.net, animesgd.net
     /(mundopolo.net|d.myfirstdollar.net)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    // dw-anime.net
+    /dw-anime.net\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
 
     //programasvirtualespc.net
     /onlypc.net\/out#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;

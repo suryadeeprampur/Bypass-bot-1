@@ -124,6 +124,7 @@
 // @include     /librospdfgratismundo.net/
 // @include     /besargaji.com/
 // @include     /moneyblink.com\/ready\/go\?u=/
+// @include     /dw-anime.net\/short\/\?anonym=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -150,6 +151,9 @@
 
     //peliculasgd.net, animesgd.net
     /(mundopolo.net|d.myfirstdollar.net)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    // dw-anime.net
+    /dw-anime.net\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
 
     //programasvirtualespc.net
     /onlypc.net\/out#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
