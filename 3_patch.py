@@ -80,6 +80,10 @@ def modify_script_extra(file_path):
             # Remove unused
             content = content.replace("// @connect        nocaptchaai.com\n", "")
 
+            # Add "@noframes"
+            if not "@noframes" in content:
+                content = content.replace("\n// @version", "\n// @noframes\n// @version")
+
             #Remove tracking
 
             ## Remove redirection to tracking site
