@@ -56,7 +56,7 @@ def modify_file_with_my_fixes(destination):
 
     content = content.replace("case 'work.ink'", "//case 'work.ink'")
 
-    content = content.replace("ClickIfExists('#slu-continue')", "ClickIfExists('#btn-3')")
+    content = content.replace("/(starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in/", "/(starxinvestor|hit-films|sevenjournals|funkeypagali|viewmyknowledge|wikifilmia|nayisahara).com|(iisfvirtual|bookszone|learnmany).in/")
 
     content += "\n"
 
