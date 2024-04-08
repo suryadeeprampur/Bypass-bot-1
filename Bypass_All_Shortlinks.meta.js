@@ -770,6 +770,7 @@
 // @include     /dw-anime.net\/short\/\?anonym=/
 // @include     /fiuxy2.co\/threads/
 // @include     /megalinks.info\/index.php\?v=/
+// @include     /ocultandoo.blogspot.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/

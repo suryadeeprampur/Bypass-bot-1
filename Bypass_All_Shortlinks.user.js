@@ -770,6 +770,7 @@
 // @include     /dw-anime.net\/short\/\?anonym=/
 // @include     /fiuxy2.co\/threads/
 // @include     /megalinks.info\/index.php\?v=/
+// @include     /ocultandoo.blogspot.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -2297,6 +2298,10 @@
             if (isValidUrl(element.innerText)) { element.href = element.innerText;};
             // element.href = rot13(atob(rot13(atob(element.href.split('?o=')[1])))).split('|')[0];
         }); }) : null;
+
+    // ocultandoo (used in fiuxy2.co)
+    /ocultandoo.blogspot.com/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#getlink')}) : null;
+    /ocultandoo.blogspot.com/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#gotolink')}) : null;
 
     // toonhub4u.net
     /toonhub4u.net\/redirect\/main.php\?url=/.test(url) ? redirect(atob(url.split('url=')[1])) : null;

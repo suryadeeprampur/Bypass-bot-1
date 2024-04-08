@@ -749,6 +749,7 @@ r1.foxylinks.site
 /dw-anime.net\/short\/\?anonym=/
 /fiuxy2.co\/threads/
 /megalinks.info\/index.php\?v=/
+/ocultandoo.blogspot.com/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/

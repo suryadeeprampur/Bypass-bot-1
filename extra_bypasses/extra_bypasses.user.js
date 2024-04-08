@@ -127,6 +127,7 @@
 // @include     /dw-anime.net\/short\/\?anonym=/
 // @include     /fiuxy2.co\/threads/
 // @include     /megalinks.info\/index.php\?v=/
+// @include     /ocultandoo.blogspot.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -577,6 +578,10 @@
             if (isValidUrl(element.innerText)) { element.href = element.innerText;};
             // element.href = rot13(atob(rot13(atob(element.href.split('?o=')[1])))).split('|')[0];
         }); }) : null;
+
+    // ocultandoo (used in fiuxy2.co)
+    /ocultandoo.blogspot.com/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#getlink')}) : null;
+    /ocultandoo.blogspot.com/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#gotolink')}) : null;
 
     // toonhub4u.net
     /toonhub4u.net\/redirect\/main.php\?url=/.test(url) ? redirect(atob(url.split('url=')[1])) : null;
