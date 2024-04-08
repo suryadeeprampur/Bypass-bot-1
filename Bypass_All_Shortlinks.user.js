@@ -670,7 +670,7 @@
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
-// @include     /(shramikcard|pmkisanlists).in/
+// @include     /(shramikcard|pmkisanlists).in|cookad.net/
 // @include     /blogging.techworldx.net/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
@@ -2013,7 +2013,8 @@
     // multimovies.space
     //##Intermediate buttons
     const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector(buttonSelector); if (button && button.textContent.includes(targetText) && !(targetText == 'Get Link')) { setTimeout(() => button.click(), 500); } }, 2000));
-    if (/(shramikcard|pmkisanlists).in/.test(url)){
+    if (/(shramikcard|pmkisanlists).in|cookad.net/.test(url)){
+        preventForcedFocusOnWindow();//preventForcedFocusOnWindow not working for this site apparently
         handleShamikcardButtons('#topButton', 'Click to Continue');
         handleShamikcardButtons('#topButton', 'Continue');
         handleShamikcardButtons('#bottomButton', 'Click to Continue');

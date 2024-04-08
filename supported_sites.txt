@@ -649,7 +649,7 @@ r1.foxylinks.site
 /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro)/
 /dropgalaxy.(com|co)\/drive/
 /short-ly.co/
-/(shramikcard|pmkisanlists).in/
+/(shramikcard|pmkisanlists).in|cookad.net/
 /blogging.techworldx.net/
 /starsddl.me\/short/
 /tech.unblockedgames.world/

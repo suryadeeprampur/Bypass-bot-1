@@ -670,7 +670,7 @@
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
-// @include     /(shramikcard|pmkisanlists).in/
+// @include     /(shramikcard|pmkisanlists).in|cookad.net/
 // @include     /blogging.techworldx.net/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
