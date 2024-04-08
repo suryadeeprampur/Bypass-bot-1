@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.2
+// @version        91.8.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -670,7 +670,7 @@
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
-// @include     /shramikcard.in/
+// @include     /(shramikcard|pmkisanlists).in/
 // @include     /blogging.techworldx.net/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
@@ -2010,15 +2010,17 @@
     // short-ly.co https://github.com/FastForwardTeam/FastForward/issues/1363
     /short-ly.co/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-secondary')}) : null;
 
-    // multimovies.uno
+    // multimovies.space
     //##Intermediate buttons
     const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector(buttonSelector); if (button && button.textContent.includes(targetText) && !(targetText == 'Get Link')) { setTimeout(() => button.click(), 500); } }, 2000));
-    /shramikcard.in/.test(url) ? handleShamikcardButtons('#topButton', 'Click to Continue') : null;
-    /shramikcard.in/.test(url) ? handleShamikcardButtons('#topButton', 'Continue') : null;
-    /shramikcard.in/.test(url) ? handleShamikcardButtons('#bottomButton', 'Click to Continue') : null;
-    /shramikcard.in/.test(url) ? handleShamikcardButtons('#bottomButton', 'Continue') : null;
-    //##Final button
-    /shramikcard.in/.test(url) ? (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))() : null; //Final button
+    if (/(shramikcard|pmkisanlists).in/.test(url)){
+        handleShamikcardButtons('#topButton', 'Click to Continue');
+        handleShamikcardButtons('#topButton', 'Continue');
+        handleShamikcardButtons('#bottomButton', 'Click to Continue');
+        handleShamikcardButtons('#bottomButton', 'Continue');
+        //##Final button
+        (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))(); //Final button
+    }
 
     // ssrmovies.rent mkvhub.rent
     /blogging.techworldx.net/.test(url) ? clickIfVisible('.wait > center:nth-child(1) > img:nth-child(1)') : null;
