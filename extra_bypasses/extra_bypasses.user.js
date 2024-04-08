@@ -126,6 +126,7 @@
 // @include     /moneyblink.com\/ready\/go\?u=/
 // @include     /dw-anime.net\/short\/\?anonym=/
 // @include     /fiuxy2.co\/threads/
+// @include     /megalinks.info\/index.php\?v=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -588,6 +589,9 @@
     /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-1')}) : null;
     /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-2')}) : null;
     /moneyblink.com\/ready\/go\?u=/.test(url)? redirect(atob(url.split('?u=')[1])) : null;
+
+    // megalinks (used in peliculasmega1k.com)
+    /megalinks.info\/index.php\?v=/.test(url) ? clickIfExists('#continue') : null;
 
 })();
 

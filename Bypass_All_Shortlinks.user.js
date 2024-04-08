@@ -769,6 +769,7 @@
 // @include     /moneyblink.com\/ready\/go\?u=/
 // @include     /dw-anime.net\/short\/\?anonym=/
 // @include     /fiuxy2.co\/threads/
+// @include     /megalinks.info\/index.php\?v=/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -2308,6 +2309,9 @@
     /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-1')}) : null;
     /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-2')}) : null;
     /moneyblink.com\/ready\/go\?u=/.test(url)? redirect(atob(url.split('?u=')[1])) : null;
+
+    // megalinks (used in peliculasmega1k.com)
+    /megalinks.info\/index.php\?v=/.test(url) ? clickIfExists('#continue') : null;
 
 })();
 
