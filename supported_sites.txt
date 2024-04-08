@@ -725,7 +725,7 @@ r1.foxylinks.site
 /web1s.asia\/api-mode/
 /(linkvip|blitly).io/
 /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
-/tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu/
+/tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app/
 /shon.xyz/
 /veganab.co\/\?link=/
 /veganab.co/
