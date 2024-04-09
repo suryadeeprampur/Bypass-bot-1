@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.3
+// @version        91.8.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -755,7 +755,7 @@
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
 // @include     /linegee.net|intercelestial.com/
-// @include     /loanoffering.in/
+// @include     /loanoffering.in|moonplusnews.com/
 // @include     /modijiurl.com/
 // @include     /4hi.in/
 // @include     /lnk.news/
@@ -2258,8 +2258,8 @@
     /linegee.net|intercelestial.com/.test(url) ? preventForcedFocusOnWindow() : null;
     /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('center a')}) : null;
 
-    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8878055
-    if (/loanoffering.in/.test(url)) {afterDOMLoaded(function() {
+    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8878055 / https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9061651
+    if (/loanoffering.in|moonplusnews.com/.test(url)) {afterDOMLoaded(function() {
         clickIfExists('#startButton'); clickIfExists('#verifybtn'); clickIfExists('#tp98');
         clickIfExists('#tp4'); clickIfExists('#tp3'); clickIfExists('#rtg-snp2'); })}
     /modijiurl.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('#okiiii')}) : null;
