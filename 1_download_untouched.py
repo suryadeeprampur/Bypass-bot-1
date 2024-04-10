@@ -52,7 +52,7 @@ def modify_file_with_my_fixes(destination):
     content = content.replace("BloggerPemula('veganab.co'", "//BloggerPemula('veganab.co'")
     content = content.replace("atglinks|", "")
 
-    content = content.replace("|vebma|majalahhewan).com/", "|vebma|majalahhewan).com|crm.cekresi.me/")
+    content = content.replace("|vebma|majalahhewan).com/", "|vebma|majalahhewan).com|crm.cekresi.me|ai.tempatwisata.pro/")
 
     content = content.replace("case 'work.ink'", "//case 'work.ink'")
 
