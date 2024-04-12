@@ -128,6 +128,7 @@
 // @include     /fiuxy2.co\/threads/
 // @include     /megalinks.info\/index.php\?v=/
 // @include     /ocultandoo.blogspot.com/
+// @include     /rodimalam.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -600,6 +601,14 @@
 
     // megalinks (used in peliculasmega1k.com)
     /megalinks.info\/index.php\?v=/.test(url) ? clickIfExists('#continue') : null;
+
+    // doroni.me - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/24
+    if (/rodimalam.com/.test(url)) { afterDOMLoaded(function() {
+        clickIfExistsNonStop('#SafelinkChecker');
+        let intervalId = setInterval(function() {
+            let targetLink = document.querySelector('a[href*="https://semawur.com/st/?api="]');
+            if (targetLink) { clearInterval(intervalId); redirect(decodeURIComponent(targetLink.href.split('url=')[1])); }; }, 1000);
+        }); }
 
 })();
 

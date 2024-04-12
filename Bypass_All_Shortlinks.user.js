@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.5
+// @version        91.8.6
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -771,6 +771,7 @@
 // @include     /fiuxy2.co\/threads/
 // @include     /megalinks.info\/index.php\?v=/
 // @include     /ocultandoo.blogspot.com/
+// @include     /rodimalam.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -2320,6 +2321,14 @@
 
     // megalinks (used in peliculasmega1k.com)
     /megalinks.info\/index.php\?v=/.test(url) ? clickIfExists('#continue') : null;
+
+    // doroni.me - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/24
+    if (/rodimalam.com/.test(url)) { afterDOMLoaded(function() {
+        clickIfExistsNonStop('#SafelinkChecker');
+        let intervalId = setInterval(function() {
+            let targetLink = document.querySelector('a[href*="https://semawur.com/st/?api="]');
+            if (targetLink) { clearInterval(intervalId); redirect(decodeURIComponent(targetLink.href.split('url=')[1])); }; }, 1000);
+        }); }
 
 })();
 
