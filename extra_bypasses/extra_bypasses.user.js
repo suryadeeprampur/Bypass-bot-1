@@ -24,11 +24,11 @@
 // @include     /tmail.io/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
-// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro)/
+// @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
 // @include     /(shramikcard|pmkisanlists).in|cookad.net/
-// @include     /blogging.techworldx.net/
+// @include     /blogging.techworldx.net|10beasts.biz/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
 // @include     /seriezloaded.com.ng\/sl-download\/\?link=/
@@ -251,13 +251,13 @@
     // shon.xyz, seen in mega-descargas-serie.blogspot.com
     /shon.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-main')}) : null;
 
-    //vegamovies, worldfree4u, desiremovies.wales, hdhub4u.re ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
+    //vegamovies, worldfree4u, desiremovies.wales, hdhub4u.rsvp ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
     const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
         let intervalId = setInterval(() => { //Check every 0.5s
           let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
           if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);} //Redirect or click, with a 0.1s delay
         }, 500);});};
-    if (/((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro)/.test(url)){
+    if (/((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/.test(url)){
         if (url.includes('?r=')) redirect(atob(url.split('?r=')[1]));
         else redirectOrClickIfExistsEnabledWithDelay('.rd_btn');
     }
@@ -305,10 +305,13 @@
         (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))(); //Final button
     }
 
-    // ssrmovies.rent mkvhub.rent
-    /blogging.techworldx.net/.test(url) ? clickIfVisible('.wait > center:nth-child(1) > img:nth-child(1)') : null;
-    /blogging.techworldx.net/.test(url) ? clickIfVisible('#generater > img:nth-child(1)') : null;
-    /blogging.techworldx.net/.test(url) ? clickIfVisible('#showlink') : null;
+    // ssrmovies.rent mkvhub.rent hdhub4u.rsvp
+    if (/blogging.techworldx.net|10beasts.biz/.test(url)) {
+        popupsToRedirects();//popupsToRedirects not working for this site apparently
+        clickIfVisible('.wait > center:nth-child(1) > img:nth-child(1)');
+        clickIfVisible('#generater > img:nth-child(1)');
+        clickIfVisible('#showlink');
+    }
 
     // starsddl.me
     /starsddl.me\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
