@@ -772,6 +772,7 @@
 // @include     /megalinks.info\/index.php\?v=/
 // @include     /ocultandoo.blogspot.com/
 // @include     /rodimalam.com/
+// @include     /platinsport.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -2296,6 +2297,12 @@
             link.href = atob(link.getAttribute('href').split('?url=')[1]);
         }); }) : null;
 
+    // platinsport.com
+    /platinsport.com/.test(url) ? afterDOMLoaded(function() {
+        document.querySelectorAll('a[href*="http://bc.vc/"]').forEach(link => {
+            link.href = 'https://' + link.getAttribute('href').split('/https://')[1];
+        }); }) : null;
+
     //fiuxy2.co
     /fiuxy2.co\/threads/.test(url) ? afterWindowLoaded(function() {
         document.querySelectorAll('a[href*="mega-enlace.com/ext.php?o="]').forEach(function(element) {
@@ -2329,6 +2336,8 @@
             let targetLink = document.querySelector('a[href*="https://semawur.com/st/?api="]');
             if (targetLink) { clearInterval(intervalId); redirect(decodeURIComponent(targetLink.href.split('url=')[1])); }; }, 1000);
         }); }
+
+
 
 })();
 

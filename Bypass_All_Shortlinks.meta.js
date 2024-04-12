@@ -772,6 +772,7 @@
 // @include     /megalinks.info\/index.php\?v=/
 // @include     /ocultandoo.blogspot.com/
 // @include     /rodimalam.com/
+// @include     /platinsport.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
