@@ -2065,8 +2065,8 @@
         }
     }
 
-    // bstlar.com
-    /bstlar.com/.test(url) ? solveThroughBypassCity(url) : null;
+    // bstlar.com - not supported by bypass.city anymore
+    // /bstlar.com/.test(url) ? solveThroughBypassCity(url) : null;
 
     // Ad-maven (optionally solve through bypass.city, but currently solved through adbypass.eu)
     // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
