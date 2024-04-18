@@ -754,7 +754,7 @@
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
 // @include     /linegee.net|intercelestial.com/
-// @include     /loanoffering.in|moonplusnews.com/
+// @include     /(loanoffering|djmp3world).in|moonplusnews.com/
 // @include     /modijiurl.com/
 // @include     /4hi.in/
 // @include     /lnk.news/

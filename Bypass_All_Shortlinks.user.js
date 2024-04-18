@@ -754,7 +754,7 @@
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
 // @include     /linegee.net|intercelestial.com/
-// @include     /loanoffering.in|moonplusnews.com/
+// @include     /(loanoffering|djmp3world).in|moonplusnews.com/
 // @include     /modijiurl.com/
 // @include     /4hi.in/
 // @include     /lnk.news/
@@ -2266,7 +2266,7 @@
     /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('center a')}) : null;
 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8878055 / https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9061651
-    if (/loanoffering.in|moonplusnews.com/.test(url)) {afterDOMLoaded(function() {
+    if (/(loanoffering|djmp3world).in|moonplusnews.com/.test(url)) {afterDOMLoaded(function() {
         clickIfExists('#startButton'); clickIfExists('#verifybtn'); clickIfExists('#tp98');
         clickIfExists('#tp4'); clickIfExists('#tp3'); clickIfExists('#rtg-snp2'); })}
     /modijiurl.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('#okiiii')}) : null;

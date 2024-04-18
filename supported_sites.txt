@@ -733,7 +733,7 @@ r1.foxylinks.site
 /pastebin.com\/raw/
 /spacetica.com/
 /linegee.net|intercelestial.com/
-/loanoffering.in|moonplusnews.com/
+/(loanoffering|djmp3world).in|moonplusnews.com/
 /modijiurl.com/
 /4hi.in/
 /lnk.news/
