@@ -755,6 +755,7 @@ r1.foxylinks.site
 /(lopteapi.com|1link.vip|blitly.io|web1s.com|megalink.pro)\/[^\/]+$/
 /short-url.link\/[^\/]+$/
 /urlx.one\/[^\/]+$/
+/trimorspacks.com|pastescript.com|updrop.link/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
