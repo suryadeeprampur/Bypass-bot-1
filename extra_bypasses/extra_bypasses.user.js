@@ -131,6 +131,7 @@
 // @include     /platinsport.com/
 // @include     /(ay.live|aylink.co|gitlink.pro)\/[^\/]+$/
 // @include     /(lopteapi.com|1link.vip|blitly.io|web1s.com|megalink.pro)\/[^\/]+$/
+// @include     /short-url.link\/[^\/]+$/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -623,7 +624,8 @@
             if (targetLink) { clearInterval(intervalId); redirect(decodeURIComponent(targetLink.href.split('url=')[1])); }; }, 1000);
         }); }
 
-
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/32
+    /short-url.link\/[^\/]+$/.test(url) ? afterDOMLoaded(function() {redirectIfExists('a.go-to-button')}) : null;
 
 })();
 

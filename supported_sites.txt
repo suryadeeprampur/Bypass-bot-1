@@ -753,6 +753,7 @@ r1.foxylinks.site
 /platinsport.com/
 /(ay.live|aylink.co|gitlink.pro)\/[^\/]+$/
 /(lopteapi.com|1link.vip|blitly.io|web1s.com|megalink.pro)\/[^\/]+$/
+/short-url.link\/[^\/]+$/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
