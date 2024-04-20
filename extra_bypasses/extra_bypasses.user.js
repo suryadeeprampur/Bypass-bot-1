@@ -129,6 +129,8 @@
 // @include     /ocultandoo.blogspot.com/
 // @include     /rodimalam.com/
 // @include     /platinsport.com/
+// @include     /(ay.live|aylink.co|gitlink.pro)\/[^\/]+$/
+// @include     /(lopteapi.com|1link.vip|blitly.io|web1s.com|megalink.pro)\/[^\/]+$/
 // @run-at      document-start
 // ==/UserScript==
 
