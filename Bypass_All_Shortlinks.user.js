@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.16
+// @version        91.8.17
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -165,7 +165,7 @@
 // @match *://*.apkw.ru/*
 // @include /^(https?:\/\/)(.+)?((blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro)(\/.*)/
 // @match *://*.programasvirtualespc.net/*
-// @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|techacode.com|azmath.info|expertvn.com|aztravels.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(cryptomonitor.in|2the.space|imbb.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((tinycmd|tinybc).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((bitzite|neverdims).com)(\/.*)/
@@ -231,7 +231,7 @@
 // @match *://*.sapnogalpo.online/*
 // @match *://*.leitup.com/*
 // @match *://*.offeroc.com/*
-// @match *://*.azmath.info/*
+// @include /^(https?:\/\/)(.+)?(azmath.info|expertvn.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((nregajobcard|pradhanmantriupdates).in)(\/.*)/
 // @match *://*.shortearn.net/*
 // @include /^(https?:\/\/)(.+)?(ez4mods.com|tech5s.co)(\/.*)/
@@ -745,7 +745,7 @@
 // @include     /web1s.asia\/api-mode/
 // @include     /(linkvip|blitly).io/
 // @include     /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
-// @include     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc/
+// @include     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in/
 // @include     /shon.xyz/
 // @include     /veganab.co\/\?link=/
 // @include     /veganab.co/
@@ -1354,7 +1354,7 @@
     BypassedByBloggerPemula(/apkw.ru/, function() {if (location.href.includes('/away')) {let apkw = location.href.split('/').slice(-1);redirect(atob(apkw),false);}});
     BypassedByBloggerPemula(/(blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro/, function() {if (BpParams.has('r')) {meta(atob(BpParams.get('r')));}});
     BypassedByBloggerPemula(/programasvirtualespc.net/, function() {if (location.href.includes('out/')) {const pvc = location.href.split('?')[1]; redirect(atob(pvc),false);} else {}});
-    BypassedByBloggerPemula(/trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net/, function() {ClickIfExists('#yuidea', 2);ClickIfExists('#monetiza', 2);ClickIfExists('#btn6', 3);});
+    BypassedByBloggerPemula(/trangchu.news|downfile.site|techacode.com|azmath.info|expertvn.com|aztravels.net/, function() {ClickIfExists('#yuidea', 2);ClickIfExists('#monetiza', 2);ClickIfExists('#btn6', 3);});
     BypassedByBloggerPemula(/cryptomonitor.in|2the.space|imbb.online/, function() {EnableRCF();SubmitIfExists("form[name='dsb']", 3);ClickIfExists('#wpsafe-link > a', 4);});
     BypassedByBloggerPemula(/(tinycmd|tinybc).com/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `handleClick('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/(bitzite|neverdims).com/, function() {EnableRCF();let bitzite = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(bitzite.value)).linkr,false);}, 3 * 1000);});
@@ -1470,7 +1470,7 @@
       if (elementExists('#button_timer')) {waitForElm('input.form-control', leit => redirect(leit.placeholder, false));}});
     BypassedByBloggerPemula(/offeroc.com/, function() {let ofr = setInterval(() => {
         if (Captchacheck()) {clearInterval(ofr);ClickIfExists('.mt-2.btn-success.btn');}}, 1 * 1000);});
-    BypassedByBloggerPemula(/azmath.info/, () => {if (elementExists('#megaurl-verified-captcha')) {
+    BypassedByBloggerPemula(/azmath.info|expertvn.com/, () => {if (elementExists('#megaurl-verified-captcha')) {
       ClickIfExists('button.h-captcha', 3);} else {SubmitIfExists('#megaurl-banner-page', 2);}});
     BypassedByBloggerPemula(/(nregajobcard|pradhanmantriupdates).in/, function() {
       setInterval(() => {ReadytoClick('#topButton.shrs_btn', 1); ReadytoClick('#bottomButton.shrs_btn', 2);}, 3 * 1000);});
@@ -1971,7 +1971,7 @@
     /exeo.app/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
 
     // tii.la oko.sh final step
-    /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // shon.xyz, seen in mega-descargas-serie.blogspot.com
     /shon.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-main')}) : null;

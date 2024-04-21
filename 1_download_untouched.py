@@ -58,6 +58,8 @@ def modify_file_with_my_fixes(destination):
 
     content = content.replace("/(starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in/", "/(starxinvestor|hit-films|sevenjournals|funkeypagali|viewmyknowledge|wikifilmia|nayisahara|careersides).com|(iisfvirtual|bookszone|learnmany).in/")
 
+    content = content.replace("azmath.info", "azmath.info|expertvn.com")
+
     content += "\n"
 
     with open(destination, 'w', encoding='utf-8') as file:

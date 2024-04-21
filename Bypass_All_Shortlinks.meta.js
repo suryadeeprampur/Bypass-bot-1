@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.16
+// @version        91.8.17
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -165,7 +165,7 @@
 // @match *://*.apkw.ru/*
 // @include /^(https?:\/\/)(.+)?((blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro)(\/.*)/
 // @match *://*.programasvirtualespc.net/*
-// @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|techacode.com|azmath.info|expertvn.com|aztravels.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(cryptomonitor.in|2the.space|imbb.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((tinycmd|tinybc).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((bitzite|neverdims).com)(\/.*)/
@@ -231,7 +231,7 @@
 // @match *://*.sapnogalpo.online/*
 // @match *://*.leitup.com/*
 // @match *://*.offeroc.com/*
-// @match *://*.azmath.info/*
+// @include /^(https?:\/\/)(.+)?(azmath.info|expertvn.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((nregajobcard|pradhanmantriupdates).in)(\/.*)/
 // @match *://*.shortearn.net/*
 // @include /^(https?:\/\/)(.+)?(ez4mods.com|tech5s.co)(\/.*)/
@@ -745,7 +745,7 @@
 // @include     /web1s.asia\/api-mode/
 // @include     /(linkvip|blitly).io/
 // @include     /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
-// @include     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc/
+// @include     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in/
 // @include     /shon.xyz/
 // @include     /veganab.co\/\?link=/
 // @include     /veganab.co/
