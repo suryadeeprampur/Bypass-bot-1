@@ -634,7 +634,7 @@ r1.foxylinks.site
 /cybercityhelp.in/
 /www.akcartoons.in/
 /go.moonlinks.in/
-/shrinkme.(us|site)/
+/shrinkme.(us|site|cc)/
 /test.shrinkurl.org/
 /shareus.io/
 /shareus\.io\/go\?sid=/
