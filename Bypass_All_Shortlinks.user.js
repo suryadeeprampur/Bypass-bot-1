@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.18
+// @version        91.8.19
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -746,6 +746,7 @@
 // @include     /web1s.asia\/api-mode/
 // @include     /(linkvip|blitly).io/
 // @include     /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
+// @include     /lnbz.la/
 // @include     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net/
 // @include     /ez4short.com\/[^\/]+\/\?token=[^\/]+$/
 // @include     /shon.xyz/
@@ -1971,6 +1972,9 @@
 
     //exeo.app
     /exeo.app/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
+
+    //oko.sh
+    /lnbz.la/.test(url) ? afterDOMLoaded(function() {timeSec = 0; afterElementVisible('form', function() {clickIfExists('button#getlink.btn-success');}) }) : null;
 
     // tii.la oko.sh final step
     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
