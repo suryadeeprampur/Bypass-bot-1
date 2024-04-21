@@ -718,7 +718,8 @@ r1.foxylinks.site
 /tiktokcounter.net/
 /minimilionario.com\/noticia.php\?token=/
 /usandoapp.com/
-/v2links.com/
+/v2links.(com|me)/
+/utkarshonlinetest.com/
 /techtnet.com/
 /asideway.com/
 /web1s.asia\/api-mode/

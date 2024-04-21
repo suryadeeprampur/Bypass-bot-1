@@ -739,7 +739,8 @@
 // @include     /tiktokcounter.net/
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
-// @include     /v2links.com/
+// @include     /v2links.(com|me)/
+// @include     /utkarshonlinetest.com/
 // @include     /techtnet.com/
 // @include     /asideway.com/
 // @include     /web1s.asia\/api-mode/

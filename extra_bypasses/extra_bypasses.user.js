@@ -96,7 +96,8 @@
 // @include     /tiktokcounter.net/
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
-// @include     /v2links.com/
+// @include     /v2links.(com|me)/
+// @include     /utkarshonlinetest.com/
 // @include     /techtnet.com/
 // @include     /asideway.com/
 // @include     /web1s.asia\/api-mode/
@@ -492,8 +493,9 @@
     /(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
     /go.(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
-    // olamovies.bar - https://v2links.me/q1z4ssolam //add stuff missing from the main script
-    /v2links.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    // olamovies.icu - https://v2links.me/q1z4ssolam //add stuff missing from the main script
+    /v2links.(com|me)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /utkarshonlinetest.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#GetLink')}) : null;
 
     // psa.wf, olamovies.bar, https://ez4short.com/ar02kkolam - (adding here stuff missing from the main script)
     ///tiktokcounter.net/.test(url) ? preventForcedFocusOnWindow() : null;
