@@ -719,7 +719,7 @@ r1.foxylinks.site
 /minimilionario.com\/noticia.php\?token=/
 /usandoapp.com/
 /v2links.(com|me)/
-/utkarshonlinetest.com/
+/(utkarshonlinetest|newsbawa).com/
 /techtnet.com/
 /asideway.com/
 /web1s.asia\/api-mode/

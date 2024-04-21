@@ -97,7 +97,7 @@
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
 // @include     /v2links.(com|me)/
-// @include     /utkarshonlinetest.com/
+// @include     /(utkarshonlinetest|newsbawa).com/
 // @include     /techtnet.com/
 // @include     /asideway.com/
 // @include     /web1s.asia\/api-mode/
@@ -495,7 +495,7 @@
 
     // olamovies.icu - https://v2links.me/q1z4ssolam //add stuff missing from the main script
     /v2links.(com|me)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-    /utkarshonlinetest.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#GetLink')}) : null;
+    /(utkarshonlinetest|newsbawa).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#GetLink')}) : null;
 
     // psa.wf, olamovies.bar, https://ez4short.com/ar02kkolam - (adding here stuff missing from the main script)
     ///tiktokcounter.net/.test(url) ? preventForcedFocusOnWindow() : null;
