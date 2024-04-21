@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.17
+// @version        91.8.18
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -746,6 +746,7 @@
 // @include     /(linkvip|blitly).io/
 // @include     /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
 // @include     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com/
+// @include     /ez4short.com\/[^\/]+\/\?token=[^\/]+$/
 // @include     /shon.xyz/
 // @include     /veganab.co\/\?link=/
 // @include     /veganab.co/
@@ -1507,9 +1508,9 @@
       if (elementExists('#next')) {SubmitIfExists('form.text-center', 3);} else {ClickIfExists('#surl', 5, 'setInterval');}});
     BypassedByBloggerPemula(/exeo.app|exego.app/, function() {ClickIfExists('#submit-button', 2);ClickIfExists('.link-button.button', 3);
       let exeo = setInterval(() => {if (bp('.timer').innerText == '0') {clearInterval(exeo);ReadytoClick('#submit-button');}}, 2 * 1000);});
-    BypassedByBloggerPemula(/quesignifi.ca|tiktokcounter.net/, function() {let profitsfly = setInterval(() => {
+    /* BypassedByBloggerPemula(/quesignifi.ca|tiktokcounter.net/, function() {let profitsfly = setInterval(() => {
       if (elementExists('.h-captcha') && Captchacheck() && bp('#cbt').innerText == 'Continue') {ClickIfExists('.btn-primary.btn-warningbtn.btn', 1);clearInterval(profitsfly);
-      ReadytoClick('.btn-primary.btn-warningbtn.btn', 2);} else if (!elementExists('.h-captcha') && bp('.countdown').innerText == '0') {clearInterval(profitsfly);ReadytoClick('.btn-primary.btn-warningbtn.btn', 1);}}, 2 * 1000);});
+      ReadytoClick('.btn-primary.btn-warningbtn.btn', 2);} else if (!elementExists('.h-captcha') && bp('.countdown').innerText == '0') {clearInterval(profitsfly);ReadytoClick('.btn-primary.btn-warningbtn.btn', 1);}}, 2 * 1000);}); */
     BypassedByBloggerPemula(/(on-scroll|diudemy|maqal360).com/, function() {EnableRCF();let adlink = setInterval(() => {
         if (bp('#countdown').innerText == '0') {clearInterval(adlink);ReadytoClick('#append > :nth-child(1)');}}, 2 * 1000);});
     BypassedByBloggerPemula(/(forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz|maos4alaw.online/, function() {
@@ -1972,6 +1973,7 @@
 
     // tii.la oko.sh final step
     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /ez4short.com\/[^\/]+\/\?token=[^\/]+$/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled2('#aaoii2o')}) : null;
 
     // shon.xyz, seen in mega-descargas-serie.blogspot.com
     /shon.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-main')}) : null;
@@ -2799,28 +2801,31 @@
 
         document.addEventListener('DOMContentLoaded', function() {
         //window.addEventListener('load', function() {
+            // Check its not ez4short because it won't work on that one
+            if (!(document.querySelectorAll('a[href*="ez4short.com"]').length > 0)) {
 
-            if (/tiktokcounter.net/.test(window.location.href)) {
+                if (/tiktokcounter.net/.test(window.location.href)) {
 
-                // Skip timer
-                setInterval(function(){window.wT9882=0;},1000);
+                    // Skip timer
+                    setInterval(function(){window.wT9882=0;},1000);
 
-                // Auto click buttons
-                if (navigator.userAgent.indexOf("Firefox") != -1) {
-                    if (document.querySelector('.h-captcha')) {
-                        let ctrsh = setInterval(() => {
-                            if (captchaIsSolved()) {
-                                clearInterval(ctrsh);
-                                ReadytoClick('#cbt', 1);
-                            }
-                        }, 1 * 1000);
-                    } else {
-                        let profitsfly = setInterval(() => {
-                            if (document.querySelector('#cbt').innerText == 'Continue') {
-                                clearInterval(profitsfly);
-                                ReadytoClick('#cbt', 2);
-                            }
-                        }, 2 * 1000);
+                    // Auto click buttons
+                    if (navigator.userAgent.indexOf("Firefox") != -1) {
+                        if (document.querySelector('.h-captcha')) {
+                            let ctrsh = setInterval(() => {
+                                if (captchaIsSolved()) {
+                                    clearInterval(ctrsh);
+                                    ReadytoClick('#cbt', 1);
+                                }
+                            }, 1 * 1000);
+                        } else {
+                            let profitsfly = setInterval(() => {
+                                if (document.querySelector('#cbt').innerText == 'Continue') {
+                                    clearInterval(profitsfly);
+                                    ReadytoClick('#cbt', 2);
+                                }
+                            }, 2 * 1000);
+                        }
                     }
                 }
             }

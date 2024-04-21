@@ -105,28 +105,31 @@
 
         document.addEventListener('DOMContentLoaded', function() {
         //window.addEventListener('load', function() {
+            // Check its not ez4short because it won't work on that one
+            if (!(document.querySelectorAll('a[href*="ez4short.com"]').length > 0)) {
 
-            if (/tiktokcounter.net/.test(window.location.href)) {
+                if (/tiktokcounter.net/.test(window.location.href)) {
 
-                // Skip timer
-                setInterval(function(){window.wT9882=0;},1000);
+                    // Skip timer
+                    setInterval(function(){window.wT9882=0;},1000);
 
-                // Auto click buttons
-                if (navigator.userAgent.indexOf("Firefox") != -1) {
-                    if (document.querySelector('.h-captcha')) {
-                        let ctrsh = setInterval(() => {
-                            if (captchaIsSolved()) {
-                                clearInterval(ctrsh);
-                                ReadytoClick('#cbt', 1);
-                            }
-                        }, 1 * 1000);
-                    } else {
-                        let profitsfly = setInterval(() => {
-                            if (document.querySelector('#cbt').innerText == 'Continue') {
-                                clearInterval(profitsfly);
-                                ReadytoClick('#cbt', 2);
-                            }
-                        }, 2 * 1000);
+                    // Auto click buttons
+                    if (navigator.userAgent.indexOf("Firefox") != -1) {
+                        if (document.querySelector('.h-captcha')) {
+                            let ctrsh = setInterval(() => {
+                                if (captchaIsSolved()) {
+                                    clearInterval(ctrsh);
+                                    ReadytoClick('#cbt', 1);
+                                }
+                            }, 1 * 1000);
+                        } else {
+                            let profitsfly = setInterval(() => {
+                                if (document.querySelector('#cbt').innerText == 'Continue') {
+                                    clearInterval(profitsfly);
+                                    ReadytoClick('#cbt', 2);
+                                }
+                            }, 2 * 1000);
+                        }
                     }
                 }
             }
