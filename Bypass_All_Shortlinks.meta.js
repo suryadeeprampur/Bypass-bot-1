@@ -780,6 +780,8 @@
 // @include     /short-url.link\/[^\/]+$/
 // @include     /urlx.one\/[^\/]+$/
 // @include     /trimorspacks.com|pastescript.com|updrop.link/
+// @include     /earnmoneyyt.com/
+// @include     /sheralinks.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
