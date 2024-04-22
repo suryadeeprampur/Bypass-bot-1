@@ -141,6 +141,7 @@
 // @include     /sheralinks.com/
 // @include     /go.bloggingaro.com/
 // @include     /land.povathemes.com/
+// @include     /pahe.plus/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -568,6 +569,8 @@
     //pahe.ink final step
     /linegee.net|intercelestial.com/.test(url) ? preventForcedFocusOnWindow() : null;
     /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('center a')}) : null;
+    /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('#invisibleCaptchaShortlink')}) : null;
+    /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8878055 / https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9061651
     if (/(loanoffering|djmp3world).in|moonplusnews.com/.test(url)) {afterDOMLoaded(function() {
