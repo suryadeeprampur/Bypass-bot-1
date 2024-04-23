@@ -715,7 +715,7 @@ r1.foxylinks.site
 /urls.cx/
 /sunci.net/
 /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
-/tiktokcounter.net/
+/antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca/
 /minimilionario.com\/noticia.php\?token=/
 /usandoapp.com/
 /v2links.(com|me)/
@@ -767,5 +767,4 @@ r1.foxylinks.site
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
-/^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz)(\/.*)/
 /(work.ink|workink.click)\/.*$/
