@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name        tiktokcounter firefox auto-skip
-// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz)(\/.*)/
 // @run-at      document-start
 // ==/UserScript==
 
 //----tiktokcounter auto-skip for firefox only--------
 (function() {
     'use strict';
-    if (/tiktokcounter.net/.test(window.location.href) && navigator.userAgent.indexOf("Firefox") != -1) {
+    if (/tiktokcounter.net|tpayr.xyz/.test(window.location.href)) {
         //---DEFINE FUNCTIONS---
 
         function ReadytoClick(selector, sleepTime = 0) {
@@ -105,10 +105,10 @@
 
         document.addEventListener('DOMContentLoaded', function() {
         //window.addEventListener('load', function() {
-            // Check its not ez4short because it won't work on that one
+            // Check its not ez4short because it won't work on that one - example https://ez4short.com/ar02kkolam
             if (!(document.querySelectorAll('a[href*="ez4short.com"]').length > 0)) {
 
-                if (/tiktokcounter.net/.test(window.location.href)) {
+                if (/tiktokcounter.net|tpayr.xyz/.test(window.location.href)) {
 
                     // Skip timer
                     setInterval(function(){window.wT9882=0;},1000);

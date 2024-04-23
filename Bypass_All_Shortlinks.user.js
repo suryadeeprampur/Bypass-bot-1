@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.21
+// @version        91.8.22
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -788,7 +788,7 @@
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
-// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz)(\/.*)/
 // @include     /(work.ink|workink.click)\/.*$/
 // @resource    NOTYF_CSS https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css
 // @require     https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js
@@ -2724,7 +2724,7 @@
 //----tiktokcounter auto-skip for firefox only--------
 (function() {
     'use strict';
-    if (/tiktokcounter.net/.test(window.location.href) && navigator.userAgent.indexOf("Firefox") != -1) {
+    if (/tiktokcounter.net|tpayr.xyz/.test(window.location.href)) {
         //---DEFINE FUNCTIONS---
 
         function ReadytoClick(selector, sleepTime = 0) {
@@ -2822,10 +2822,10 @@
 
         document.addEventListener('DOMContentLoaded', function() {
         //window.addEventListener('load', function() {
-            // Check its not ez4short because it won't work on that one
+            // Check its not ez4short because it won't work on that one - example https://ez4short.com/ar02kkolam
             if (!(document.querySelectorAll('a[href*="ez4short.com"]').length > 0)) {
 
-                if (/tiktokcounter.net/.test(window.location.href)) {
+                if (/tiktokcounter.net|tpayr.xyz/.test(window.location.href)) {
 
                     // Skip timer
                     setInterval(function(){window.wT9882=0;},1000);

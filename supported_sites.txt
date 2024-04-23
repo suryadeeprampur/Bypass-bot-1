@@ -767,5 +767,5 @@ r1.foxylinks.site
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
-/^(https?:\/\/)(.+)?(tiktokcounter.net)(\/.*)/
+/^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz)(\/.*)/
 /(work.ink|workink.click)\/.*$/
