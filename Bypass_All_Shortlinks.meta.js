@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.23
+// @version        91.8.24
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -736,7 +736,7 @@
 // @include     /urls.cx/
 // @include     /sunci.net/
 // @include     /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
-// @include     /antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca/
+// @include     /antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online/
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
 // @include     /v2links.(com|me)/

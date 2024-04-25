@@ -715,7 +715,7 @@ r1.foxylinks.site
 /urls.cx/
 /sunci.net/
 /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
-/antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca/
+/antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online/
 /minimilionario.com\/noticia.php\?token=/
 /usandoapp.com/
 /v2links.(com|me)/
