@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.24
+// @version        91.8.25
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -736,7 +736,7 @@
 // @include     /urls.cx/
 // @include     /sunci.net/
 // @include     /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
-// @include     /antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online/
+// @include     /antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online|waezf.xyz/
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
 // @include     /v2links.(com|me)/
@@ -2236,7 +2236,7 @@
 
     // psa.wf, olamovies.bar, https://ez4short.com/ar02kkolam - (adding here stuff missing from the main script)
     ///tiktokcounter.net/.test(url) ? preventForcedFocusOnWindow() : null;
-    /antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online/.test(url) ? setInterval(function(){window.wT9882=0;},1000) : null;
+    /antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online|waezf.xyz/.test(url) ? setInterval(function(){window.wT9882=0;},1000) : null;
     // /tiktokcounter.net/.test(url) ? afterDOMLoaded(function() {wT9982 = 0;}) : null; //Skip the timer
     // const clickTikTokCounterButtons = () => { let buttonSelector = 'button#cbt.btn.btn-warningbtn.btn-primary'; let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && button.innerHTML.includes('Continue')) { clearInterval(intervalId); isHoverDone = true; setTimeout(function() { button.click();}, 500) } }, 500); };
     // /tiktokcounter.net/.test(url) ? afterDOMLoaded(function() {clickTikTokCounterButtons()}) : null;
