@@ -620,6 +620,7 @@ bestlink.pro
 playstore.pw
 sigmalinks.in
 r1.foxylinks.site
+https://paster.so/*
 /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 /adbypass.eu/
 /(bypass.city|adbypass.org)\/bypass\?bypass=/

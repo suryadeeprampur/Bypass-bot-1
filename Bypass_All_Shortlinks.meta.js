@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.27
+// @version        91.8.28
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -641,6 +641,7 @@
 // @grant          GM_deleteValue
 // @grant        GM.xmlHttpRequest
 // @grant          GM_getResourceText
+// @match        https://paster.so/*
 // @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
