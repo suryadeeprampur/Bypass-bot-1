@@ -34,10 +34,11 @@
             overlay.style.top = '50%';
             overlay.style.right = '20px'; // Adjusted to appear in the middle right corner
             overlay.style.transform = 'translateY(-50%)';
-            overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
             overlay.style.padding = '10px';
             overlay.style.borderRadius = '5px';
             overlay.style.zIndex = '9999';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            overlay.style.color = '#fff';
 
             // Add title
             const title = document.createElement('h3');
