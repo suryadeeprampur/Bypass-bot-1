@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.8.28
+// @version        91.8.29
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -737,7 +737,7 @@
 // @include     /urls.cx/
 // @include     /sunci.net/
 // @include     /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
-// @include     /antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online|waezf.xyz/
+// @include     /antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online|waezf.xyz|ashrfd.xyz/
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
 // @include     /v2links.(com|me)/
@@ -789,7 +789,7 @@
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
-// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz|lifgam.online|waezf.xyz)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz|lifgam.online|waezf.xyz|ashrfd.xyz)(\/.*)/
 // @include     /(work.ink|workink.click)\/.*$/
 // @resource    NOTYF_CSS https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css
 // @require     https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js

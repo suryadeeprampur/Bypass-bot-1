@@ -716,7 +716,7 @@ https://paster.so/*
 /urls.cx/
 /sunci.net/
 /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
-/antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online|waezf.xyz/
+/antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online|waezf.xyz|ashrfd.xyz/
 /minimilionario.com\/noticia.php\?token=/
 /usandoapp.com/
 /v2links.(com|me)/
@@ -768,5 +768,5 @@ https://paster.so/*
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
-/^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz|lifgam.online|waezf.xyz)(\/.*)/
+/^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz|lifgam.online|waezf.xyz|ashrfd.xyz)(\/.*)/
 /(work.ink|workink.click)\/.*$/
