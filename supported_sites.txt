@@ -625,6 +625,7 @@ https://paster.so/*
 /adbypass.eu/
 /(bypass.city|adbypass.org)\/bypass\?bypass=/
 /(mundopolo.net|d.myfirstdollar.net)/
+/acorta2.com/
 /onlypc.net\/out#!/
 /comohoy.com/
 /sphinxanime.com\/short/

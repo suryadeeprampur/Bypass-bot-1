@@ -2,6 +2,7 @@
 // @name        extra bypasses
 // @description These bypasses are always merged into Bypass_All_Shortlinks.user.js
 // @include     /(mundopolo.net|d.myfirstdollar.net)/
+// @include     /acorta2.com/
 // @include     /onlypc.net\/out#!/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
@@ -171,6 +172,9 @@
 
     //peliculasgd.net, animesgd.net
     /(mundopolo.net|d.myfirstdollar.net)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    // librolandia.net
+    /acorta2.com/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
 
     // dw-anime.net
     /dw-anime.net\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
