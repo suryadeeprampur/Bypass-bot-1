@@ -671,18 +671,11 @@
 
     // sinsitio.site / dixva.com
     if (/www.(sinsitio.site|dixva.com)\/out\/\?go=/.test(url)) {
-        const decoder = (dictionary, encodedString) => {
-            const decodedArray = [];
-            for (const char of encodedString) {
-                if (dictionary[char] !== undefined) { decodedArray.push(dictionary[char]);
-                } else { return ''; }
-            }
-            return decodedArray.join('');
+        const decode = (encodedString) => {
+            const dictionary = {'0': 'z', '1': 'y', '2': 'x', '3': 'w', '4': 'v', '5': 'u', '6': 't', '7': 's', '8': 'r', '9': 'q', 'A': 'p', 'a': 'P', 'B': 'o', 'b': 'O', 'C': 'n', 'c': 'N', 'D': 'm', 'd': 'M', 'E': 'l', 'e': 'L', 'F': 'k', 'f': 'K', 'G': 'j', 'g': 'J', 'H': 'i', 'h': 'I', 'I': 'h', 'i': 'H', 'J': 'g', 'j': 'G', 'K': 'f', 'k': 'F', 'L': 'e', 'l': 'E', 'M': 'd', 'm': 'D', 'N': 'c', 'n': 'C', 'O': 'b', 'o': 'B', 'P': 'a', 'p': 'A', 'q': '9', 'Q': 'Z', 'r': '8', 'R': 'Y', 's': '7', 'S': 'X', 't': '6', 'T': 'W', 'u': '5', 'U': 'V', 'v': '4', 'V': 'U', 'w': '3', 'W': 'T', 'x': '2', 'X': 'S', 'y': '1', 'Y': 'R', 'z': '0', 'Z': 'Q'};
+            return encodedString.split('').map(char => dictionary[char] || char).join('');
         }
-        const myDictionary = {':': ':', '/': '/', '=': '=', '%': '%', '.': '.', '?': '?', 'I': 'h', 'h': 'I', '6': 't', 't': '6', 'A': 'p', 'p': 'A', '7': 's', 's': '7', '3': 'w', 'w': '3', 'H': 'i', 'i': 'H', 'C': 'n', 'n': 'C', 'B': 'o', 'o': 'B', 'L': 'e', 'e': 'L', '5': 'u', 'u': '5', 'x': '2', '2': 'x', 'k': 'F', 'F': 'k', 'M': 'd', 'd': 'M', 'm': 'D', 'D': 'm', 'E': 'l', 'l': 'E', 'P': 'a', 'a': 'P', 'y': '1', '1': 'y', 'q': '9', '9': 'q', 'v': '4', '4': 'v', '8': 'r', 'r': '8', 'N': 'c', 'c': 'N', 'R': 'Y', 'Y': 'R', 'X': 'S', 'S': 'X', 'J': 'g', 'g': 'J', 'Q': 'Z', 'Z': 'Q', 'W': 'T', 'T': 'W', 'j': 'G', 'G': 'j', 'z': '0', '0': 'z', 'b': 'O', 'O': 'b', 'V': 'U', 'U': 'V', 'f': 'K', 'K': 'f'};
-        let decodedString = atob(url.split('?go=')[1]);
-        decodedString = decoder(myDictionary, decodedString);
-        if (decodedString !== '') { redirect(decodedString); }
+        redirect(decode(atob(url.split('?go=')[1])));
     }
     /www.yitarx.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
