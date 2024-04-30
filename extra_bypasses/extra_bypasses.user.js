@@ -142,6 +142,8 @@
 // @include     /go.bloggingaro.com/
 // @include     /land.povathemes.com/
 // @include     /pahe.plus/
+// @include     /www.(sinsitio.site|dixva.com)\/out\/\?go=/
+// @include     /www.yitarx.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -662,6 +664,23 @@
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/36
     /trimorspacks.com|pastescript.com|updrop.link/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#wpsafe-link > a:nth-child(1)')}) : null;
+
+    // sinsitio.site / dixva.com
+    if (/www.(sinsitio.site|dixva.com)\/out\/\?go=/.test(url)) {
+        const decoder = (dictionary, encodedString) => {
+            const decodedArray = [];
+            for (const char of encodedString) {
+                if (dictionary[char] !== undefined) { decodedArray.push(dictionary[char]);
+                } else { return ''; }
+            }
+            return decodedArray.join('');
+        }
+        const myDictionary = {'I': 'h', '6': 't', 'A': 'p', '7': 's', ':': ':', '/': '/', '3': 'w', '.': '.', 'H': 'i', 'C': 'n', 'B': 'o', 'L': 'e', '5': 'u', '?': '?', '=': '=', '%': '%', 'w': '3', 'p': 'A', 'x': '2', 'k': 'F', 'M': 'd', '2': 'x', 'm': 'D', 'E': 'l', 'P': 'a', 't': '6', 'y': '1', 'q': '9', 'v': '4', '1': 'y', '8': 'r', 'N': 'c', 'D': 'm', 'R': 'Y', 'X': 'S', 'J': 'g', 'Y': 'R', 'Q': 'Z', 'W': 'T', 'h': 'I', 'g': 'J', '9': 'q', 'T': 'W', 'n': 'C', 'Z': 'Q', 'l': 'E', '4': 'v', 's': '7', 'u': '5', 'o': 'B', 'F': 'k', 'j': 'G'};
+        let decodedString = atob(url.split('?go=')[1]);
+        decodedString = decoder(myDictionary, decodedString);
+        if (decodedString !== '') { redirect(decodedString); }
+    }
+    /www.yitarx.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
 })();
 
