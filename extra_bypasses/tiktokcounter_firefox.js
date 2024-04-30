@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name        tiktokcounter firefox auto-skip
-// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz|lifgam.online|waezf.xyz|ashrfd.xyz)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn).xyz)(\/.*)/
 // @run-at      document-start
 // ==/UserScript==
 
 //----tiktokcounter auto-skip for firefox only--------
 (function() {
     'use strict';
-    const tiktokcounterRegex = /^(https?:\/\/)(.+)?(tiktokcounter.net|tpayr.xyz|lifgam.online|waezf.xyz|ashrfd.xyz)(\/.*)/
+    const tiktokcounterRegex = /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn).xyz)(\/.*)/
     if (tiktokcounterRegex.test(window.location.href)) {
         //---DEFINE FUNCTIONS---
 
@@ -102,6 +102,7 @@
 
         if (tiktokcounterRegex.test(window.location.href)) {
             preventForcedFocusOnWindow();
+            setInterval(function(){window.wT9882=0;},1000);
         }
 
         //document.addEventListener('DOMContentLoaded', function() {
