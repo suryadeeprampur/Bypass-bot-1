@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name        tiktokcounter firefox auto-skip
-// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn).xyz)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx).xyz)(\/.*)/
 // @run-at      document-start
 // ==/UserScript==
 
 //----tiktokcounter auto-skip for firefox only--------
 (function() {
     'use strict';
-    const tiktokcounterRegex = /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn).xyz)(\/.*)/
+    const tiktokcounterRegex = /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx).xyz)(\/.*)/
     if (tiktokcounterRegex.test(window.location.href)) {
         //---DEFINE FUNCTIONS---
 
