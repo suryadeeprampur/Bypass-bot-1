@@ -146,6 +146,7 @@
 // @include     /pahe.plus/
 // @include     /www.(sinsitio.site|dixva.com)\/out\/\?go=/
 // @include     /www.yitarx.com/
+// @include     /myshrinker.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -221,6 +222,10 @@
 
     //shrinkme.us
     /shrinkme.(us|site|cc)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+
+    //freecoursesite.com 2nd step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/43
+    /myshrinker.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /myshrinker.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     //test.shrinkurl.org https://github.com/FastForwardTeam/FastForward/issues/1365
     /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
