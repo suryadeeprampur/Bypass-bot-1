@@ -793,6 +793,7 @@
 // @include     /www.(sinsitio.site|dixva.com)\/out\/\?go=/
 // @include     /www.yitarx.com/
 // @include     /myshrinker.com/
+// @include     /thotpacks.xyz/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/

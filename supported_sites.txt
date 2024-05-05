@@ -772,6 +772,7 @@ https://paster.so/*
 /www.(sinsitio.site|dixva.com)\/out\/\?go=/
 /www.yitarx.com/
 /myshrinker.com/
+/thotpacks.xyz/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/

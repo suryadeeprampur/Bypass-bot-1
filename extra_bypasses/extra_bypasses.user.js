@@ -147,6 +147,7 @@
 // @include     /www.(sinsitio.site|dixva.com)\/out\/\?go=/
 // @include     /www.yitarx.com/
 // @include     /myshrinker.com/
+// @include     /thotpacks.xyz/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -687,6 +688,9 @@
         redirect(decode(atob(url.split('?go=')[1])));
     }
     /www.yitarx.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    // https://thotpacks.xyz/R7p2l
+    /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
 })();
 
