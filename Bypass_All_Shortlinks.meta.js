@@ -667,7 +667,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
-// @include     /exeo.app/
+// @include     /exeo.app|mrgec.com/
 // @include     /fc-lc.(xyz|com)/
 // @include     /tmail.io/
 // @include     /1v.to\/t/
