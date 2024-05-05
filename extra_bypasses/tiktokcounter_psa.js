@@ -102,7 +102,7 @@
 
         if (tiktokcounterRegex.test(window.location.href)) {
             preventForcedFocusOnWindow();
-            setInterval(function(){window.wT9882=0;},1000);
+            //setInterval(function(){window.wT9882=0;},1000);
         }
 
         //document.addEventListener('DOMContentLoaded', function() {
@@ -114,7 +114,9 @@
                 if (tiktokcounterRegex.test(window.location.href)) {
 
                     // Skip timer
-                    // setInterval(function(){window.wT9882=0;},1000);
+                    if (document.documentElement.outerHTML.includes("/psa'")) {
+                        setInterval(function(){window.wT9882=0;},1000);
+                    }
 
                     // Auto click buttons
                     if (true){
