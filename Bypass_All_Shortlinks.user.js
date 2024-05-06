@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.2
+// @version        91.9.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -249,7 +249,7 @@
 // @include /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
 // @match *://*.tmail.io/*
 // @include /^(https?:\/\/)(.+)?(exeo.app|exego.app)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((ashrfd|tpayr|poqzn|rezsx|tryzt).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz|maos4alaw.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((leaveadvice|mensventure).com)(\/.*)/
@@ -1527,7 +1527,7 @@
       if (elementExists('#next')) {SubmitIfExists('form.text-center', 3);} else {ClickIfExists('#surl', 5, 'setInterval');}});
     BypassedByBloggerPemula(/exeo.app|exego.app/, function() {ClickIfExists('#submit-button', 2);ClickIfExists('.link-button.button', 3);
       let exeo = setInterval(() => {if (bp('.timer').innerText == '0') {clearInterval(exeo);ReadytoClick('#submit-button');}}, 2 * 1000);});
-    BypassedByBloggerPemula(/(ashrfd|tpayr|poqzn|rezsx|tryzt).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online/, function() {let profitsfly = setInterval(() => {
+    BypassedByBloggerPemula(/(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online/, function() {let profitsfly = setInterval(() => {
       if (elementExists('.h-captcha') && Captchacheck() && bp('#cbt').innerText == 'Continue') {ClickIfExists('.btn-primary.btn-primarybtn.btn', 1);clearInterval(profitsfly);
       ReadytoClick('.btn-primary.btn-primarybtn.btn', 2);} else if (!elementExists('.h-captcha') && bp('.countdown').innerText == '0') {clearInterval(profitsfly);ReadytoClick('.btn-primary.btn-primarybtn.btn', 1);}}, 2 * 1000);});
     BypassedByBloggerPemula(/(on-scroll|diudemy|maqal360).com/, function() {EnableRCF();let adlink = setInterval(() => {
@@ -2939,9 +2939,9 @@
                 if (tiktokcounterRegex.test(window.location.href)) {
 
                     // Skip timer
-                    if (document.documentElement.outerHTML.includes("/psa'")) {
-                        setInterval(function(){window.wT9882=0;},1000);
-                    }
+                    //if (document.documentElement.outerHTML.includes("/psa'")) {
+                    //    setInterval(function(){window.wT9882=0;},1000);
+                    //}
 
                     // Auto click buttons
                     if (true){

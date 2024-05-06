@@ -114,9 +114,9 @@
                 if (tiktokcounterRegex.test(window.location.href)) {
 
                     // Skip timer
-                    if (document.documentElement.outerHTML.includes("/psa'")) {
-                        setInterval(function(){window.wT9882=0;},1000);
-                    }
+                    //if (document.documentElement.outerHTML.includes("/psa'")) {
+                    //    setInterval(function(){window.wT9882=0;},1000);
+                    //}
 
                     // Auto click buttons
                     if (true){

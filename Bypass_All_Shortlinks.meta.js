@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.2
+// @version        91.9.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -249,7 +249,7 @@
 // @include /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
 // @match *://*.tmail.io/*
 // @include /^(https?:\/\/)(.+)?(exeo.app|exego.app)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((ashrfd|tpayr|poqzn|rezsx|tryzt).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz|maos4alaw.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((leaveadvice|mensventure).com)(\/.*)/

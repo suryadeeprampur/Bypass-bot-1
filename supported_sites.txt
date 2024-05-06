@@ -231,7 +231,7 @@ firefaucet.win
 uptobhai\.*|uplinkto\.*|shortlinkto\.*
 tmail.io
 exeo.app|exego.app
-(ashrfd|tpayr|poqzn|rezsx|tryzt).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online
+(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online
 (on-scroll|diudemy|maqal360).com
 (forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz|maos4alaw.online
 (leaveadvice|mensventure).com
