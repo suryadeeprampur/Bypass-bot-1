@@ -646,7 +646,7 @@ https://paster.so/*
 /(verpeliculasonline.org|subtituladas.com)\/enlace/
 /links.cuevana.ac\/short/
 /ouo.io/
-/exeo.app|mrgec.com/
+/exeo.app|mrgec.com|cety.app/
 /fc-lc.(xyz|com)/
 /tmail.io/
 /1v.to\/t/

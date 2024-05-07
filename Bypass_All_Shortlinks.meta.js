@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.4
+// @version        91.9.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -667,7 +667,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
-// @include     /exeo.app|mrgec.com/
+// @include     /exeo.app|mrgec.com|cety.app/
 // @include     /fc-lc.(xyz|com)/
 // @include     /tmail.io/
 // @include     /1v.to\/t/

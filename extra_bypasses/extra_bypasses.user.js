@@ -21,7 +21,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
-// @include     /exeo.app|mrgec.com/
+// @include     /exeo.app|mrgec.com|cety.app/
 // @include     /fc-lc.(xyz|com)/
 // @include     /tmail.io/
 // @include     /1v.to\/t/
@@ -270,8 +270,8 @@
     /ouo.io/.test(url) && url.includes('?s=') ? redirect(decodeURIComponent(url.split('?s=')[1])) : null;
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
-    //exeo.app
-    /exeo.app|mrgec.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
+    //cuty.io - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/46
+    /exeo.app|mrgec.com|cety.app/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
 
     //oko.sh
     /lnbz.la/.test(url) ? afterDOMLoaded(function() {timeSec = 0; afterElementVisible('form', function() {clickIfExists('button#getlink.btn-success');}) }) : null;
