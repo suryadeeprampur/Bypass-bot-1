@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name        tiktokcounter firefox auto-skip
-// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff).xyz|dawenet.com)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff|erzar).xyz|dawenet.com)(\/.*)/
 // @run-at      document-start
 // ==/UserScript==
 
 //----tiktokcounter auto-skip for firefox only--------
 (function() {
     'use strict';
-    const tiktokcounterRegex = /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff).xyz|dawenet.com)(\/.*)/
+    const tiktokcounterRegex = /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff|erzar).xyz|dawenet.com)(\/.*)/
     if (tiktokcounterRegex.test(window.location.href)) {
         //---DEFINE FUNCTIONS---
 
@@ -103,6 +103,8 @@
         if (tiktokcounterRegex.test(window.location.href)) {
             preventForcedFocusOnWindow();
             //setInterval(function(){window.wT9882=0;},1000);
+            setInterval(function(){window.isAdClickDone=true;},1000);
+            document.addEventListener('DOMContentLoaded', ()=> {const i = document.createElement('iframe');i.style = 'height:0;width:0;border:0';i.id = 'a';document.body.appendChild(i);i.focus();});
         }
 
         //document.addEventListener('DOMContentLoaded', function() {

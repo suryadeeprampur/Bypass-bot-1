@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.6
+// @version        91.9.7
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -797,7 +797,7 @@
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
-// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff).xyz|dawenet.com)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff|erzar).xyz|dawenet.com)(\/.*)/
 // @include     /(work.ink|workink.click)\/.*$/
 // @resource    NOTYF_CSS https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css
 // @require     https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js
@@ -2834,7 +2834,7 @@
 //----tiktokcounter auto-skip for firefox only--------
 (function() {
     'use strict';
-    const tiktokcounterRegex = /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff).xyz|dawenet.com)(\/.*)/
+    const tiktokcounterRegex = /^(https?:\/\/)(.+)?(tiktokcounter.net|lifgam.online|(tpayr|waezf|ashrfd|poqzn|rezsx|tryzt|ashrff|erzar).xyz|dawenet.com)(\/.*)/
     if (tiktokcounterRegex.test(window.location.href)) {
         //---DEFINE FUNCTIONS---
 
@@ -2930,6 +2930,8 @@
         if (tiktokcounterRegex.test(window.location.href)) {
             preventForcedFocusOnWindow();
             //setInterval(function(){window.wT9882=0;},1000);
+            setInterval(function(){window.isAdClickDone=true;},1000);
+            document.addEventListener('DOMContentLoaded', ()=> {const i = document.createElement('iframe');i.style = 'height:0;width:0;border:0';i.id = 'a';document.body.appendChild(i);i.focus();});
         }
 
         //document.addEventListener('DOMContentLoaded', function() {
