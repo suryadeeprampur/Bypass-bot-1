@@ -102,9 +102,13 @@
 
         if (tiktokcounterRegex.test(window.location.href)) {
             preventForcedFocusOnWindow();
-            //setInterval(function(){window.wT9882=0;},1000);
-            setInterval(function(){window.isAdClickDone=true;},1000);
-            document.addEventListener('DOMContentLoaded', ()=> {const i = document.createElement('iframe');i.style = 'height:0;width:0;border:0';i.id = 'a';document.body.appendChild(i);i.focus();});
+            document.addEventListener('DOMContentLoaded', function() {
+                if (document.documentElement.outerHTML.includes("/psa'")) {
+                    setInterval(function(){window.wT9882=0;},5000);
+                }
+                setInterval(function(){window.isAdClickDone=true;},500);
+                ()=> {const i = document.createElement('iframe');i.style = 'height:0;width:0;border:0';i.id = 'a';document.body.appendChild(i);i.focus();};
+            });
         }
 
         //document.addEventListener('DOMContentLoaded', function() {
