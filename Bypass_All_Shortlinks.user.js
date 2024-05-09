@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.10
+// @version        91.9.11
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -796,6 +796,7 @@
 // @include     /thotpacks.xyz/
 // @include     /readytechflip.com/
 // @include     /fitnessholic.net\/token.php\?post=/
+// @include     /fitnessholic.net/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -2424,7 +2425,8 @@
     /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // linkpays - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
-    /fitnessholic.net\/token.php\?post=/.test(url) ? redirect("https://exercise.fitnessholic.net/?go=" + url.split('?post=')[1]) : null;
+    /fitnessholic.net\/token.php\?post=/.test(url) ? redirect("https://exercise.fitnessholic.net/?go=" + url.split('?post=')[1]) : null; //works for firefox only
+    /fitnessholic.net/.test(url) ? afterDOMLoaded(function() {redirect("https://exercise.fitnessholic.net/?go=" + document.querySelector('div[id="btn11"]').querySelector('input[name="newwpsafelink"]').value)}) : null; //redudancy needed for chrome
     /readytechflip.com/.test(url) ? clickIfVisible('#tp-snp2') : null;
 
 })();

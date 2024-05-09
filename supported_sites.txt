@@ -775,6 +775,7 @@ https://paster.so/*
 /thotpacks.xyz/
 /readytechflip.com/
 /fitnessholic.net\/token.php\?post=/
+/fitnessholic.net/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
