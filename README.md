@@ -6,7 +6,7 @@ Automatically bypass many link shorteners.
 ## Install
 **Install with [this link](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)**
 
-(you need a userscript manager like [ViolentMonkey](https://violentmonkey.github.io/) installed in your web browser)
+(you need a userscript manager like [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) installed in your web browser)
 
 ## Improvements in this fork
 - **Added more bypasses and some fixes** through the scripts in the [extra_bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) directory.
