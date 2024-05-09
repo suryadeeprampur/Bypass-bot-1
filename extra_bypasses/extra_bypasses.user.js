@@ -148,6 +148,8 @@
 // @include     /www.yitarx.com/
 // @include     /myshrinker.com/
 // @include     /thotpacks.xyz/
+// @include     /readytechflip.com/
+// @include     /fitnessholic.net\/token.php\?post=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -691,6 +693,10 @@
 
     // https://thotpacks.xyz/R7p2l
     /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    // linkpays - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
+    /fitnessholic.net\/token.php\?post=/.test(url) ? redirect("https://exercise.fitnessholic.net/?go=" + url.split('?post=')[1]) : null;
+    /readytechflip.com/.test(url) ? clickIfVisible('#tp-snp2') : null;
 
 })();
 
