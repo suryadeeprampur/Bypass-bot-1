@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.11
+// @version        91.9.12
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -1824,7 +1824,7 @@
 // ----- Bypass ad-maven with adbypass.eu -----
 (function() {
     'use strict';
-    if (false) {
+    if (true) {
         var url = window.location.href;
         if (/((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/.test(url)) {
             GM_setValue('savedShortlink', url);
