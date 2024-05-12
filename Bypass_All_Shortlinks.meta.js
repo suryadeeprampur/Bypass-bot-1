@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.12
+// @version        91.9.13
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -649,7 +649,7 @@
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /(mundopolo.net|d.myfirstdollar.net)/
 // @include     /acorta2.com/
-// @include     /web.admoneyclick.net\/#!/
+// @include     /(web.admoneyclick.net|acortaphd.live)\/#!/
 // @include     /onlypc.net\/out#!/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.12
+// @version        91.9.13
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -649,7 +649,7 @@
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /(mundopolo.net|d.myfirstdollar.net)/
 // @include     /acorta2.com/
-// @include     /web.admoneyclick.net\/#!/
+// @include     /(web.admoneyclick.net|acortaphd.live)\/#!/
 // @include     /onlypc.net\/out#!/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
@@ -1912,7 +1912,7 @@
     /acorta2.com/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
 
     // pelishd4k.com
-    /web.admoneyclick.net\/#!/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+    /(web.admoneyclick.net|acortaphd.live)\/#!/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
 
     // dw-anime.net
     /dw-anime.net\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
