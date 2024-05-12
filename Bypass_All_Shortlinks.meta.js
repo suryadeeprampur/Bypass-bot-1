@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.13
+// @version        91.9.14
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -647,7 +647,8 @@
 // @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
-// @include     /(mundopolo.net|d.myfirstdollar.net)/
+// @include     /(mundopolo.net|myfirstdollar.net)/
+// @include     /(adsense.tupaste.top)\/#!/
 // @include     /acorta2.com/
 // @include     /(web.admoneyclick.net|acortaphd.live)\/#!/
 // @include     /onlypc.net\/out#!/

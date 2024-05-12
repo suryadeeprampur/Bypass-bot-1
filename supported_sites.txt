@@ -626,7 +626,8 @@ https://paster.so/*
 /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 /adbypass.eu/
 /(bypass.city|adbypass.org)\/bypass\?bypass=/
-/(mundopolo.net|d.myfirstdollar.net)/
+/(mundopolo.net|myfirstdollar.net)/
+/(adsense.tupaste.top)\/#!/
 /acorta2.com/
 /(web.admoneyclick.net|acortaphd.live)\/#!/
 /onlypc.net\/out#!/
