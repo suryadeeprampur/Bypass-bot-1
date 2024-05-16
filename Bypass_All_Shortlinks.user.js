@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.14
+// @version        91.9.15
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -640,12 +640,9 @@
 // @match *://*.playstore.pw/*
 // @match *://*.sigmalinks.in/*
 // @match *://*.r1.foxylinks.site/*
-// @grant          GM_deleteValue
 // @grant        GM.xmlHttpRequest
 // @grant          GM_getResourceText
 // @match        https://paster.so/*
-// @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
-// @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /(mundopolo.net|myfirstdollar.net)/
 // @include     /(adsense.tupaste.top)\/#!/
@@ -684,7 +681,7 @@
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
-// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium).com)\/s\?/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /epicload.com\/files/
 // @include     /www.gtaall.com\/get-manual/
@@ -1822,38 +1819,6 @@
 
 }})();
 
-// ----- Bypass ad-maven with adbypass.eu -----
-(function() {
-    'use strict';
-    if (true) {
-        var url = window.location.href;
-        if (/((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/.test(url)) {
-            GM_setValue('savedShortlink', url);
-            window.location.assign('https://adbypass.eu/');
-        } else if (/adbypass.eu/.test(url) && !url.includes('/unblock')) {
-            window.addEventListener("load", function(event) {
-                var savedShortlink = GM_getValue('savedShortlink', null);
-                var inputField = document.querySelector('#inputt');
-                if (savedShortlink && inputField) {
-                    inputField.value = savedShortlink;
-                    GM_deleteValue('savedShortlink');
-                    setTimeout(function() {let bypassButton = document.querySelector('#bttn');if (bypassButton) {bypassButton.click(); bypassButton.disabled = true;}}, 1000);
-                }
-            });
-        } else if (/adbypass.eu\/unblock/.test(url)) {
-            window.addEventListener('load', function() {
-                var linkElement = document.querySelector('.form__group > a:nth-child(5)');
-                if (linkElement && linkElement.href) {
-                    //if (confirm('Bypass done.\nRedirect to ' + linkElement.href + ' ?')) {
-                        window.location.assign(linkElement.href);
-                    //}
-                }
-            });
-        }
-    }
-})();
-// ----- ----- -----
-
 // ----- bypass.city redirect helper -----
 (function() {
     'use strict';
@@ -2117,8 +2082,8 @@
     // // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(bstlar.com)/
     // /bstlar.com/.test(url) ? solveThroughBypassCity(url) : null;
 
-    // Ad-maven (optionally solve through bypass.city, but currently solved through adbypass.eu)
-    // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
+    // Ad-maven
+    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
 
     // empebau.eu used by adbypass.eu
     /empebau.eu\/s/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#skip > p:nth-child(1) > a:nth-child(1)')}) : null;
