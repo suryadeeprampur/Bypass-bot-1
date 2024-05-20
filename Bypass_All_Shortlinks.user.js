@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.0.1
+// @version        92.0.2
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2010,18 +2010,18 @@
     }
 
     //dropgalaxy https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/2
-    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null;
-    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null;
-    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {
-        var intervalId = setInterval(function() {// Keep checking if link is available, every 1s
-            var downloadUrl = document.getElementById('dllink').getAttribute('action');
-            if (downloadUrl) {
-                clearInterval(intervalId);
-                alert('Press OK to go to the download link:\n' + downloadUrl);
-                redirect(downloadUrl)
-            }
-        }, 1000);
-    }) : null;
+    /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null; //1st page
+    // /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null; //2nd page
+    // /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {  //3rd page
+    //     var intervalId = setInterval(function() {// Keep checking if link is available, every 1s
+    //         var downloadUrl = document.getElementById('dllink').getAttribute('action');
+    //         if (downloadUrl) {
+    //             clearInterval(intervalId);
+    //             alert('Press OK to go to the download link:\n' + downloadUrl);
+    //             redirect(downloadUrl)
+    //         }
+    //     }, 1000);
+    // }) : null;
 
     // short-ly.co https://github.com/FastForwardTeam/FastForward/issues/1363
     /short-ly.co/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-secondary')}) : null;
