@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.0.2
+// @version        92.0.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -278,7 +278,7 @@
 // @include /^(https?:\/\/)(.+)?(shrinke\.*|shrinkme\.*|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu|pwrpa.cc|paylinks.cloud)(\/.*)/
 // @match *://*.revly.click/*
 // @include /^(https?:\/\/)(.+)?(theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan|techbixby).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan|techbixby).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|(lnbz|oei).la)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techyreviewx.com|desiupload.co)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((calmgram|adbitfly|blogsward).com|adbitfly.in)(\/.*)/
 // @match *://*.shorterall.com/*
@@ -750,7 +750,7 @@
 // @include     /(linkvip|blitly).io/
 // @include     /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
 // @include     /lnbz.la/
-// @include     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net/
+// @include     /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la/
 // @include     /ez4short.com\/[^\/]+\/\?token=[^\/]+$/
 // @include     /shon.xyz/
 // @include     /veganab.co\/\?link=/
@@ -1593,7 +1593,7 @@
       if (elementExists('#link-view')) {let srl = setInterval(() => {if (Captchacheck()) {SubmitIfExists('#link-view');}}, 1 * 1000);} else {SubmitIfExists('div.col-md-12 form', 2);}});
     BypassedByBloggerPemula(/theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id/, function() {
       var tform = bp('#landing');redirect(JSON.parse(atob(tform.newwpsafelink.value)).linkr, false);});
-    BypassedByBloggerPemula(/(blogscare|blogtechh|host2loan|techbixby).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la/, function() {ClickIfExists('button.btn.btn-primary', 2);SubmitIfExists('#nextpage', 2);
+    BypassedByBloggerPemula(/(blogscare|blogtechh|host2loan|techbixby).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|(lnbz|oei).la/, function() {ClickIfExists('button.btn.btn-primary', 2);SubmitIfExists('#nextpage', 2);
       SubmitIfExists('#getmylink', 3);let enit = setInterval(function() {if (Captchacheck()) {clearInterval(enit);ClickIfExists('.btn-captcha.btn-primary.btn');}}, 500);});
     BypassedByBloggerPemula(/techyreviewx.com|desiupload.co/, function() {ClickIfExists('.downloadbtn.btn-block.btn-primary.btn', 2);
       waitForElm('a.btn.btn-primary.btn-block.mb-4', rex => redirect(rex.href, false));});
@@ -1979,7 +1979,7 @@
     /lnbz.la/.test(url) ? afterDOMLoaded(function() {timeSec = 0; afterElementVisible('form', function() {clickIfExists('button#getlink.btn-success');}) }) : null;
 
     // tii.la oko.sh final step
-    /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
     /ez4short.com\/[^\/]+\/\?token=[^\/]+$/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled2('#aaoii2o')}) : null;
 
     // shon.xyz, seen in mega-descargas-serie.blogspot.com

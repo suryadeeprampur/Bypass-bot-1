@@ -260,7 +260,7 @@ solarchaine.com
 shrinke\.*|shrinkme\.*|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu|pwrpa.cc|paylinks.cloud
 revly.click
 theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id
-(blogscare|blogtechh|host2loan|techbixby).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la
+(blogscare|blogtechh|host2loan|techbixby).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|(lnbz|oei).la
 techyreviewx.com|desiupload.co
 (calmgram|adbitfly|blogsward).com|adbitfly.in
 shorterall.com
@@ -730,7 +730,7 @@ https://paster.so/*
 /(linkvip|blitly).io/
 /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
 /lnbz.la/
-/tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net/
+/tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la/
 /ez4short.com\/[^\/]+\/\?token=[^\/]+$/
 /shon.xyz/
 /veganab.co\/\?link=/
