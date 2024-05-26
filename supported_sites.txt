@@ -650,6 +650,7 @@ https://paster.so/*
 /tmail.io/
 /1v.to\/t/
 /linkspy.cc\/tr/
+/www.ovagames.com\/.*\.html$/
 /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 /dropgalaxy.(com|co)\/drive/
 /short-ly.co/

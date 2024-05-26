@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.0.3
+// @version        92.0.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -670,6 +670,7 @@
 // @include     /tmail.io/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
+// @include     /www.ovagames.com\/.*\.html$/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
@@ -2008,6 +2009,12 @@
         var urlParam = getParam(decodedUrl,'url');
         urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
     }
+    /www.ovagames.com\/.*\.html$/.test(url) ? afterWindowLoaded(function() {
+        document.querySelectorAll('a[href*="https://l4s.cc/q/e/1f/aHR0"]').forEach(link => {
+            let decodedUrl = atob(link.getAttribute('href').split('/1f/')[1]);
+            let urlParam = getParam(decodedUrl,'url');
+            urlParam ? link.href = atob(urlParam) : link.href = decodedUrl;
+        }); }) : null;
 
     //dropgalaxy https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/2
     /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null; //1st page
