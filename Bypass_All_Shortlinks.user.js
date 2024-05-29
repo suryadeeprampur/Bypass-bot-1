@@ -2094,7 +2094,7 @@
     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
 
     // empebau.eu after ad-maven links
-    /empebau.eu\/s\/linker\/.*/.test(url) ? afterDOMLoaded(function() {
+    /empebau.eu\/s\/linker\/.*/.test(url) ? afterWindowLoaded(function() {
         const targetUrl = document.querySelector('#box > p:nth-child(1) > a:nth-child(1)').href;
         if (!targetUrl.startsWith('https://empebau.eu')) {redirect(targetUrl)}
     }) : null;
