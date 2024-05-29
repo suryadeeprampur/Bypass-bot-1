@@ -709,7 +709,7 @@ https://paster.so/*
 /musicc.xyz/
 /(cravesandflames|codesnse).com/
 /go.(cravesandflames|codesnse).com/
-/empebau.eu\/s/
+/empebau.eu\/s\/linker/
 /cpmlink.net\/go/
 /10short.com/
 /zegtrends.com/

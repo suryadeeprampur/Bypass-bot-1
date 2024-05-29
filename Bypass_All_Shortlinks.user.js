@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.0.4
+// @version        92.0.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -729,7 +729,7 @@
 // @include     /musicc.xyz/
 // @include     /(cravesandflames|codesnse).com/
 // @include     /go.(cravesandflames|codesnse).com/
-// @include     /empebau.eu\/s/
+// @include     /empebau.eu\/s\/linker/
 // @include     /cpmlink.net\/go/
 // @include     /10short.com/
 // @include     /zegtrends.com/
@@ -2093,8 +2093,11 @@
     // Ad-maven
     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
 
-    // empebau.eu used by adbypass.eu
-    /empebau.eu\/s/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#skip > p:nth-child(1) > a:nth-child(1)')}) : null;
+    // empebau.eu after ad-maven links
+    /empebau.eu\/s\/linker\/.*/.test(url) ? afterDOMLoaded(function() {
+        const targetUrl = document.querySelector('#box > p:nth-child(1) > a:nth-child(1)').href;
+        if (!targetUrl.startsWith('https://empebau.eu')) {redirect(targetUrl)}
+    }) : null;
 
     // Loot-links (optionally solve through bypass.city, but currently solved locally)
     // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(url) ? solveThroughBypassCity(url) : null;

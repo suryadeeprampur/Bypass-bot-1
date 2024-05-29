@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.0.4
+// @version        92.0.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -729,7 +729,7 @@
 // @include     /musicc.xyz/
 // @include     /(cravesandflames|codesnse).com/
 // @include     /go.(cravesandflames|codesnse).com/
-// @include     /empebau.eu\/s/
+// @include     /empebau.eu\/s\/linker/
 // @include     /cpmlink.net\/go/
 // @include     /10short.com/
 // @include     /zegtrends.com/
