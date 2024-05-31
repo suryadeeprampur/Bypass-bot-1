@@ -64,8 +64,9 @@ def modify_file_with_my_fixes(destination):
     content = content.replace("|lnbz.la/", "|(lnbz|oei).la/")
 
     content = content.replace("/(newsbawa|utkarshonlinetest).com/", "/(newsbawa|utkarshonlinetest|techbezzie).com/")
-    
-    
+
+    content = content.replace("nayisahara|careersides).com", "nayisahara|careersides|edukaroo).com")
+
     content += "\n"
 
     with open(destination, 'w', encoding='utf-8') as file:
