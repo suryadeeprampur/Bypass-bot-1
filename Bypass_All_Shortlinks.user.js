@@ -638,15 +638,10 @@
 // @grant          GM_getResourceText
 // @match        https://paster.so/*
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
-// @include     /(mundopolo.net|myfirstdollar.net)/
-// @include     /(adsense.tupaste.top)\/#!/
-// @include     /acorta2.com/
-// @include     /(web.admoneyclick.net|acortaphd.live)\/#!/
-// @include     /onlypc.net\/out#!/
+// @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
 // @include     /japan-paw.net\/out/
-// @include     /link.manudatos.com\/#!/
 // @include     /(iconicblogger.com|segurosdevida.site)/
 // @include     /link.unlockner.com/
 // @include     /cybercityhelp.in/
@@ -1859,23 +1854,11 @@
         Object.defineProperty(document, 'visibilityState', {get() {return 'visible';}}); window.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true);
         window.addEventListener('focus', onfocus, true);document.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true); Object.defineProperty(document, 'hidden', {get() {return false;}});};
 
-    //peliculasgd.net, animesgd.net
-    /(mundopolo.net|myfirstdollar.net)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
-
-    // club-hd.com
-    /(adsense.tupaste.top)\/#!/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
-
-    // librolandia.net
-    /acorta2.com/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
-
-    // pelishd4k.com
-    /(web.admoneyclick.net|acortaphd.live)\/#!/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+    //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
+    /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
 
     // dw-anime.net
     /dw-anime.net\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
-
-    //programasvirtualespc.net
-    /onlypc.net\/out#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
 
     //leak.sx & pornleaks.in
     /comohoy.com/.test(url) ? redirect(atob(url.split('?url=')[1])) : null;
@@ -1885,9 +1868,6 @@
 
     //japan-paw.net
     /japan-paw.net\/out/.test(url) ? redirect(atob(url.split('out/?')[1])) : null;
-
-    //pasteprivado.blogspot.com
-    /link.manudatos.com\/#!/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
 
     //intercambiosvirtuales.org
     /1v.to\/t/.test(url) ? redirect(atob(atob(atob(atob( atob(url.split('/t/')[1]).replace('+P', '') ))))) : null;

@@ -638,15 +638,10 @@
 // @grant          GM_getResourceText
 // @match        https://paster.so/*
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
-// @include     /(mundopolo.net|myfirstdollar.net)/
-// @include     /(adsense.tupaste.top)\/#!/
-// @include     /acorta2.com/
-// @include     /(web.admoneyclick.net|acortaphd.live)\/#!/
-// @include     /onlypc.net\/out#!/
+// @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
 // @include     /japan-paw.net\/out/
-// @include     /link.manudatos.com\/#!/
 // @include     /(iconicblogger.com|segurosdevida.site)/
 // @include     /link.unlockner.com/
 // @include     /cybercityhelp.in/

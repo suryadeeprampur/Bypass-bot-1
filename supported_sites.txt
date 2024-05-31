@@ -618,15 +618,10 @@ sigmalinks.in
 r1.foxylinks.site
 https://paster.so/*
 /(bypass.city|adbypass.org)\/bypass\?bypass=/
-/(mundopolo.net|myfirstdollar.net)/
-/(adsense.tupaste.top)\/#!/
-/acorta2.com/
-/(web.admoneyclick.net|acortaphd.live)\/#!/
-/onlypc.net\/out#!/
+/(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 /comohoy.com/
 /sphinxanime.com\/short/
 /japan-paw.net\/out/
-/link.manudatos.com\/#!/
 /(iconicblogger.com|segurosdevida.site)/
 /link.unlockner.com/
 /cybercityhelp.in/
