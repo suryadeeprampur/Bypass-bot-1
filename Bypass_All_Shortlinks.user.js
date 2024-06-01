@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.1.1
+// @version        92.1.2
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -663,7 +663,7 @@
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
-// @include     /(shramikcard|pmkisanlists).in|cookad.net/
+// @include     /(shramikcard|pmkisanlists|techishant).in|cookad.net|tejtime24.com/
 // @include     /blogging.techworldx.net|10beasts.biz/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
@@ -785,6 +785,7 @@
 // @include     /readytechflip.com/
 // @include     /fitnessholic.net\/token.php\?post=/
 // @include     /fitnessholic.net/
+// @include     /linkshortify.in/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -1999,18 +2000,20 @@
     // short-ly.co https://github.com/FastForwardTeam/FastForward/issues/1363
     /short-ly.co/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-secondary')}) : null;
 
-    // multimovies.space
+    // multimovies.space, https://github.com/FastForwardTeam/FastForward/issues/1434
     //##Intermediate buttons
     const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector(buttonSelector); if (button && button.textContent.includes(targetText) && !(targetText == 'Get Link')) { setTimeout(() => button.click(), 500); } }, 2000));
-    if (/(shramikcard|pmkisanlists).in|cookad.net/.test(url)){
+    if (/(shramikcard|pmkisanlists|techishant).in|cookad.net|tejtime24.com/.test(url)){
         preventForcedFocusOnWindow();//preventForcedFocusOnWindow not working for this site apparently
         handleShamikcardButtons('#topButton', 'Click to Continue');
         handleShamikcardButtons('#topButton', 'Continue');
         handleShamikcardButtons('#bottomButton', 'Click to Continue');
         handleShamikcardButtons('#bottomButton', 'Continue');
+        handleShamikcardButtons('#bottomButton', 'Next'); // added for https://lksfy.com/59EhFF
         //##Final button
         (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))(); //Final button
     }
+    /linkshortify.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null; // added for https://lksfy.com/59EhFF
 
     // ssrmovies.rent mkvhub.rent hdhub4u.rsvp
     if (/blogging.techworldx.net|10beasts.biz/.test(url)) {
