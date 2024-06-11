@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.3
+// @version        92.2.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -660,6 +660,7 @@
 // @include     /tmail.io/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
+// @include     /linkspy.cc\/\/a/
 // @include     /www.ovagames.com\/.*\.html$/
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 // @include     /dropgalaxy.(com|co)\/drive/
@@ -1986,6 +1987,11 @@
             let urlParam = getParam(decodedUrl,'url');
             urlParam ? link.href = atob(urlParam) : link.href = decodedUrl;
         }); }) : null;
+    if (/linkspy.cc\/\/a/.test(url) && url.includes('aHR0')) {
+        var decodedUrl = atob('aHR0' + url.split('aHR0')[1]);
+        var urlParam = getParam(decodedUrl,'url');
+        urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
+    }
 
     //dropgalaxy https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/2
     /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null; //1st page
