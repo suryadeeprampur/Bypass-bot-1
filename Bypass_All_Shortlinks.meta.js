@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.2
+// @version        92.2.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -717,8 +717,8 @@
 // @include     /www.4fnet.org\/goto/
 // @include     /(linkmo.net|adpayl.ink)\/[^?]+\?data=.+$/
 // @include     /musicc.xyz/
-// @include     /(cravesandflames|codesnse).com/
-// @include     /go.(cravesandflames|codesnse).com/
+// @include     /(cravesandflames|codesnse|cloutgist).com/
+// @include     /go.(cravesandflames|codesnse|cloutgist).com/
 // @include     /empebau.eu\/s\/linker/
 // @include     /cpmlink.net\/go/
 // @include     /10short.com/

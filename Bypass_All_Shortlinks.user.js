@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.2
+// @version        92.2.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -717,8 +717,8 @@
 // @include     /www.4fnet.org\/goto/
 // @include     /(linkmo.net|adpayl.ink)\/[^?]+\?data=.+$/
 // @include     /musicc.xyz/
-// @include     /(cravesandflames|codesnse).com/
-// @include     /go.(cravesandflames|codesnse).com/
+// @include     /(cravesandflames|codesnse|cloutgist).com/
+// @include     /go.(cravesandflames|codesnse|cloutgist).com/
 // @include     /empebau.eu\/s\/linker/
 // @include     /cpmlink.net\/go/
 // @include     /10short.com/
@@ -2207,9 +2207,9 @@
     // musicc.xyz - https://github.com/FastForwardTeam/FastForward/issues/1234 (note: this one is already bypassed by the original script, because it runs on every domain. It was just necessary to let the script run on this domain)
     /musicc.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
-    // zshort.net, shotzon.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/5
-    /(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
-    /go.(cravesandflames|codesnse).com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
+    // zshort.net, shotzon.com - jnovels.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/5, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/59
+    /(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
+    /go.(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // olamovies.icu - https://v2links.me/q1z4ssolam //add stuff missing from the main script
     /v2links.(com|me)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
