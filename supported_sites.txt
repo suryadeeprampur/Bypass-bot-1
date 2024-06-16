@@ -760,7 +760,7 @@ https://paster.so/*
 /go.bloggingaro.com/
 /land.povathemes.com/
 /pahe.plus/
-/www.(sinsitio.site|dixva.com)\/out\/\?go=/
+/www.(sinsitio.site|dixva.com)\/code\/\?go=/
 /www.yitarx.com/
 /myshrinker.com/
 /thotpacks.xyz/

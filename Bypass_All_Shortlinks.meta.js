@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.5
+// @version        92.2.6
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -780,7 +780,7 @@
 // @include     /go.bloggingaro.com/
 // @include     /land.povathemes.com/
 // @include     /pahe.plus/
-// @include     /www.(sinsitio.site|dixva.com)\/out\/\?go=/
+// @include     /www.(sinsitio.site|dixva.com)\/code\/\?go=/
 // @include     /www.yitarx.com/
 // @include     /myshrinker.com/
 // @include     /thotpacks.xyz/
