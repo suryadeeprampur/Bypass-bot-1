@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.7
+// @version        92.2.8
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -788,6 +788,7 @@
 // @include     /fitnessholic.net\/token.php\?post=/
 // @include     /fitnessholic.net/
 // @include     /linkshortify.in/
+// @include     /tumangasdd.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/

@@ -768,6 +768,7 @@ https://paster.so/*
 /fitnessholic.net\/token.php\?post=/
 /fitnessholic.net/
 /linkshortify.in/
+/tumangasdd.com/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/

@@ -150,6 +150,7 @@
 // @include     /fitnessholic.net\/token.php\?post=/
 // @include     /fitnessholic.net/
 // @include     /linkshortify.in/
+// @include     /tumangasdd.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -177,6 +178,9 @@
 
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    // peliculasmf.com
+    /tumangasdd.com/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#')[1]))).split('url=')[1])) : null;
 
     // dw-anime.net
     /dw-anime.net\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
