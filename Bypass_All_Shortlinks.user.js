@@ -1873,7 +1873,7 @@
     /comohoy.com/.test(url) ? redirect(atob(url.split('?url=')[1])) : null;
 
     // sexyforums.com
-    /sexyforums.com\/redirect/.test(url) ? redirect(atob(url.split('?to=')[1])) : null;
+    /sexyforums.com\/redirect/.test(url) ? redirect(atob(url.split('?to=')[1]).replace('amp;', '')) : null;
 
     //sphinxanime.com
     /sphinxanime.com\/short/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
