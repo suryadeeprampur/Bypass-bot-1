@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.8
+// @version        92.2.9
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -789,6 +789,7 @@
 // @include     /fitnessholic.net/
 // @include     /linkshortify.in/
 // @include     /tumangasdd.com/
+// @include     /sexyforums.com\/redirect/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -1870,6 +1871,9 @@
 
     //leak.sx & pornleaks.in
     /comohoy.com/.test(url) ? redirect(atob(url.split('?url=')[1])) : null;
+
+    // sexyforums.com
+    /sexyforums.com\/redirect/.test(url) ? redirect(atob(url.split('?to=')[1])) : null;
 
     //sphinxanime.com
     /sphinxanime.com\/short/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
