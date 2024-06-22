@@ -46,4 +46,6 @@ Thanks to:
 - [StephenP](https://greasyfork.org/users/104167-stephenp) for the filecrypt bypass.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
 - [AdGuard filters](https://github.com/AdguardTeam/AdguardFilters/) for the mega-enlace bypass.
+- Contributers to this repository who have submitted pull requests: mouro, trapgod1, CaptainCaffeine.
+- Every user that has reported issues to this repository.
 
