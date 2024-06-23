@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.9
+// @version        92.2.10
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -642,7 +642,7 @@
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
-// @include     /japan-paw.net\/out/
+// @include     /japanpaw.com\/out/
 // @include     /(iconicblogger.com|segurosdevida.site)/
 // @include     /link.unlockner.com/
 // @include     /cybercityhelp.in/
@@ -790,6 +790,7 @@
 // @include     /linkshortify.in/
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
+// @include     /paste.japan-paw.net\/\?v=/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/

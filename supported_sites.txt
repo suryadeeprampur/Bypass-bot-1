@@ -622,7 +622,7 @@ https://paster.so/*
 /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 /comohoy.com/
 /sphinxanime.com\/short/
-/japan-paw.net\/out/
+/japanpaw.com\/out/
 /(iconicblogger.com|segurosdevida.site)/
 /link.unlockner.com/
 /cybercityhelp.in/
@@ -770,6 +770,7 @@ https://paster.so/*
 /linkshortify.in/
 /tumangasdd.com/
 /sexyforums.com\/redirect/
+/paste.japan-paw.net\/\?v=/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.9
+// @version        92.2.10
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -642,7 +642,7 @@
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
-// @include     /japan-paw.net\/out/
+// @include     /japanpaw.com\/out/
 // @include     /(iconicblogger.com|segurosdevida.site)/
 // @include     /link.unlockner.com/
 // @include     /cybercityhelp.in/
@@ -790,6 +790,7 @@
 // @include     /linkshortify.in/
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
+// @include     /paste.japan-paw.net\/\?v=/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -1878,8 +1879,12 @@
     //sphinxanime.com
     /sphinxanime.com\/short/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
 
-    //japan-paw.net
-    /japan-paw.net\/out/.test(url) ? redirect(atob(url.split('out/?')[1])) : null;
+    //japanpaw.com
+    /japanpaw.com\/out/.test(url) ? redirect(atob(url.split('out/?')[1])) : null;
+    /paste.japan-paw.net\/\?v=/.test(url) ? afterDOMLoaded(function() {
+        document.querySelectorAll('a[href*="https://shrinkme.io/st?api="]').forEach(link => {
+            link.href = decodeURIComponent("https://" + link.href.split('?s=')[1]);
+        }); }) : null;
 
     //intercambiosvirtuales.org
     /1v.to\/t/.test(url) ? redirect(atob(atob(atob(atob( atob(url.split('/t/')[1]).replace('+P', '') ))))) : null;
