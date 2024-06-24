@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.10
+// @version        92.2.11
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -791,6 +791,7 @@
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
 // @include     /paste.japan-paw.net\/\?v=/
+// @include     /ikramlar.online/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/

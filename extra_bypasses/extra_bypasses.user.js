@@ -153,6 +153,7 @@
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
 // @include     /paste.japan-paw.net\/\?v=/
+// @include     /ikramlar.online/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -206,8 +207,10 @@
     //intercambiosvirtuales.org
     /1v.to\/t/.test(url) ? redirect(atob(atob(atob(atob( atob(url.split('/t/')[1]).replace('+P', '') ))))) : null;
 
-    //anime-world.in and mandranime.com
-    /(iconicblogger.com|segurosdevida.site)/.test(url) ? afterDOMLoaded(function() {redirect(document.getElementById('wpsafe-link').querySelector('a').getAttribute('onclick').match(/window\.open\('([^']*)'/)[1])}) : null;
+    //mandranime.com
+    /ikramlar.online/.test(url) ? afterDOMLoaded(function() { 
+        redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]); 
+    }) : null;
 
     //anime-world.in 2nd step
     /link.unlockner.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn.get-link')}) : null;
