@@ -154,6 +154,8 @@
 // @include     /sexyforums.com\/redirect/
 // @include     /paste.japan-paw.net\/\?v=/
 // @include     /ikramlar.online/
+// @include     /mh.gourlpro.com/
+// @include     /playpastelinks.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -181,6 +183,10 @@
 
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    // descargasdirecta.com
+    /playpastelinks.com/.test(url) ? afterDOMLoaded(function() {setTimeout(() => { document.querySelector('#btn-redirect').click(); }, 9000)}) : null;
+    /mh.gourlpro.com/.test(url) ? redirect(atob(atob(atob(url.split('#')[1])))) : null;
 
     // peliculasmf.com
     /tumangasdd.com/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#')[1]))).split('url=')[1])) : null;

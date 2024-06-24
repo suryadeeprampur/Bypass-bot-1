@@ -772,6 +772,8 @@ https://paster.so/*
 /sexyforums.com\/redirect/
 /paste.japan-paw.net\/\?v=/
 /ikramlar.online/
+/mh.gourlpro.com/
+/playpastelinks.com/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
