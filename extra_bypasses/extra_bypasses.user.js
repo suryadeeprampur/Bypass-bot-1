@@ -156,6 +156,7 @@
 // @include     /ikramlar.online/
 // @include     /mh.gourlpro.com/
 // @include     /playpastelinks.com/
+// @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -724,6 +725,15 @@
     /fitnessholic.net\/token.php\?post=/.test(url) ? redirect("https://exercise.fitnessholic.net/?go=" + url.split('?post=')[1]) : null; //works for firefox only
     /fitnessholic.net/.test(url) ? afterDOMLoaded(function() {redirect("https://exercise.fitnessholic.net/?go=" + document.querySelector('div[id="btn11"]').querySelector('input[name="newwpsafelink"]').value)}) : null; //redudancy needed for chrome
     /readytechflip.com/.test(url) ? clickIfVisible('#tp-snp2') : null;
+
+    // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
+    if (/stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/.test(url)) {
+        const buttonTexts = ["Click here to proceed", "Start", "Begin", "Open", "Click here to start", "Verification", "Get Link", "Click here to verify", "Verify"];
+        window.addEventListener('load', function() {setTimeout(function() {
+            const buttons = document.querySelectorAll('button, input[type="button"], input[type="submit"]');
+            buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {button.click();}});
+        }, 6000);});
+    }
 
 })();
 
