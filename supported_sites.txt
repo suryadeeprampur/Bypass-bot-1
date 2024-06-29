@@ -722,7 +722,7 @@ https://paster.so/*
 /(linkvip|blitly).io/
 /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
 /lnbz.la/
-/tii.la|oko.sh|shrinke.me|clk.(wiki|kim)|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la/
+/tii.la|oko.sh|shrinke.me|clk.(wiki|kim)|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la|exego.app/
 /ez4short.com\/[^\/]+\/\?token=[^\/]+$/
 /shon.xyz/
 /veganab.co\/\?link=/
