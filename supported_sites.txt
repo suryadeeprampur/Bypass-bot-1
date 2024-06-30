@@ -764,9 +764,6 @@ https://paster.so/*
 /www.yitarx.com/
 /myshrinker.com/
 /thotpacks.xyz/
-/readytechflip.com/
-/fitnessholic.net\/token.php\?post=/
-/fitnessholic.net/
 /linkshortify.in/
 /tumangasdd.com/
 /sexyforums.com\/redirect/
@@ -777,6 +774,9 @@ https://paster.so/*
 /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
 /ielts-isa.edu.vn/
 /flash.getpczone.com/
+/surfsees.com|fitnessholic.net/
+/cgsonglyricz.in|www.techhubcap.com/
+/techyblogs.in|readytechflip.com/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.18
+// @version        92.2.19
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -784,9 +784,6 @@
 // @include     /www.yitarx.com/
 // @include     /myshrinker.com/
 // @include     /thotpacks.xyz/
-// @include     /readytechflip.com/
-// @include     /fitnessholic.net\/token.php\?post=/
-// @include     /fitnessholic.net/
 // @include     /linkshortify.in/
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
@@ -797,6 +794,9 @@
 // @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
+// @include     /surfsees.com|fitnessholic.net/
+// @include     /cgsonglyricz.in|www.techhubcap.com/
+// @include     /techyblogs.in|readytechflip.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/

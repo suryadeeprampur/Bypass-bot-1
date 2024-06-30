@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.18
+// @version        92.2.19
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -784,9 +784,6 @@
 // @include     /www.yitarx.com/
 // @include     /myshrinker.com/
 // @include     /thotpacks.xyz/
-// @include     /readytechflip.com/
-// @include     /fitnessholic.net\/token.php\?post=/
-// @include     /fitnessholic.net/
 // @include     /linkshortify.in/
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
@@ -797,6 +794,9 @@
 // @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
+// @include     /surfsees.com|fitnessholic.net/
+// @include     /cgsonglyricz.in|www.techhubcap.com/
+// @include     /techyblogs.in|readytechflip.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -2414,10 +2414,11 @@
     // https://thotpacks.xyz/R7p2l
     /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
-    // linkpays - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
-    /fitnessholic.net\/token.php\?post=/.test(url) ? redirect("https://exercise.fitnessholic.net/?go=" + url.split('?post=')[1]) : null; //works for firefox only
-    /fitnessholic.net/.test(url) ? afterDOMLoaded(function() {redirect("https://exercise.fitnessholic.net/?go=" + document.querySelector('div[id="btn11"]').querySelector('input[name="newwpsafelink"]').value)}) : null; //redudancy needed for chrome
-    /readytechflip.com/.test(url) ? clickIfVisible('#tp-snp2') : null;
+    // linkpays.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/88, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
+    /surfsees.com|fitnessholic.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#rtg')}) : null;
+    /surfsees.com|fitnessholic.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('.rtg-blue')}) : null;
+    /cgsonglyricz.in|www.techhubcap.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
+    /techyblogs.in|readytechflip.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
     if (/stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/.test(url)) {
