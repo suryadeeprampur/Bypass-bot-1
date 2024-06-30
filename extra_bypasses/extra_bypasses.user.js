@@ -158,6 +158,7 @@
 // @include     /playpastelinks.com/
 // @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
 // @include     /ielts-isa.edu.vn/
+// @include     /flash.getpczone.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -743,6 +744,9 @@
             buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {button.click();}});
         }, 6000);});
     }
+
+    // uploadrar - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/87
+    /flash.getpczone.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null;
 
 })();
 
