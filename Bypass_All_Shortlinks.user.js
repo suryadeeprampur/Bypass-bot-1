@@ -2243,7 +2243,7 @@
     /v2links.(com|me)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
     /(utkarshonlinetest|newsbawa).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#GetLink')}) : null;
 
-    // olamovies.rent
+    // olamovies.rent - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9904041
     /ielts-isa.edu.vn/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#monetiza');
         clickIfExists('button.yu-btn:nth-child(1)');
