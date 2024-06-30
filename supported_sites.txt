@@ -775,6 +775,7 @@ https://paster.so/*
 /mh.gourlpro.com/
 /playpastelinks.com/
 /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
+/ielts-isa.edu.vn/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/

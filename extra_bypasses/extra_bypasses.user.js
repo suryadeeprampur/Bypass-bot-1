@@ -157,6 +157,7 @@
 // @include     /mh.gourlpro.com/
 // @include     /playpastelinks.com/
 // @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
+// @include     /ielts-isa.edu.vn/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -555,9 +556,17 @@
     /(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
     /go.(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
-    // olamovies.icu - https://v2links.me/q1z4ssolam //add stuff missing from the main script
+    // olamovies.rent - https://v2links.me/q1z4ssolam //add stuff missing from the main script
     /v2links.(com|me)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
     /(utkarshonlinetest|newsbawa).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#GetLink')}) : null;
+
+    // olamovies.rent
+    /ielts-isa.edu.vn/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#monetiza');
+        clickIfExists('button.yu-btn:nth-child(1)');
+        clickIfExists('#btn6');
+    }) : null;
+    
 
     // psa.wf, olamovies.bar, https://ez4short.com/ar02kkolam - (adding here stuff missing from the main script)
     ///tiktokcounter.net/.test(url) ? preventForcedFocusOnWindow() : null;
