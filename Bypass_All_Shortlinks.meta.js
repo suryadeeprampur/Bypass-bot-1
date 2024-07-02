@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.19
+// @version        92.2.20
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -797,6 +797,8 @@
 // @include     /surfsees.com|fitnessholic.net/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /techyblogs.in|readytechflip.com/
+// @include     /kbconlinegame.com/
+// @include     /odijob.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/

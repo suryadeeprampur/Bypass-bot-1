@@ -159,6 +159,8 @@
 // @include     /surfsees.com|fitnessholic.net/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /techyblogs.in|readytechflip.com/
+// @include     /kbconlinegame.com/
+// @include     /odijob.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -748,6 +750,14 @@
 
     // uploadrar - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/87
     /flash.getpczone.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null;
+
+    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9934577
+    const clickIfExistsWithDelay = (selector, delay) => {setTimeout(function() {clickIfExists(selector);}, delay);};
+    /kbconlinegame.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#pro-continue');
+        clickIfExistsWithDelay('#pro-btn', 2000);
+    }) : null;
+    /odijob.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#my-btn')}) : null;
 
 })();
 
