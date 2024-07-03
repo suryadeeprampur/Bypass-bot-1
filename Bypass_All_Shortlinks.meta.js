@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.20
+// @version        92.2.21
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -784,7 +784,7 @@
 // @include     /www.yitarx.com/
 // @include     /myshrinker.com/
 // @include     /thotpacks.xyz/
-// @include     /linkshortify.in/
+// @include     /linkshortify.in|lksfy.com/
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
 // @include     /paste.japan-paw.net\/\?v=/

@@ -146,7 +146,7 @@
 // @include     /www.yitarx.com/
 // @include     /myshrinker.com/
 // @include     /thotpacks.xyz/
-// @include     /linkshortify.in/
+// @include     /linkshortify.in|lksfy.com/
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
 // @include     /paste.japan-paw.net\/\?v=/
@@ -352,7 +352,7 @@
     // short-ly.co https://github.com/FastForwardTeam/FastForward/issues/1363
     /short-ly.co/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-secondary')}) : null;
 
-    // multimovies.space, https://github.com/FastForwardTeam/FastForward/issues/1434
+    // multimovies.space, https://github.com/FastForwardTeam/FastForward/issues/1434, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/91
     //##Intermediate buttons
     const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector(buttonSelector); if (button && button.textContent.includes(targetText) && !(targetText == 'Get Link')) { setTimeout(() => button.click(), 500); } }, 2000));
     if (/(shramikcard|pmkisanlists|techishant).in|cookad.net|tejtime24.com/.test(url)){
@@ -365,7 +365,7 @@
         //##Final button
         (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))(); //Final button
     }
-    /linkshortify.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null; // added for https://lksfy.com/59EhFF
+    /linkshortify.in|lksfy.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null; // added for https://lksfy.com/59EhFF
 
     // ssrmovies.rent mkvhub.rent hdhub4u.rsvp
     if (/blogging.techworldx.net|10beasts.biz/.test(url)) {
