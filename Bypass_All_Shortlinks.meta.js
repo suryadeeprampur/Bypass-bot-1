@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.2.21
+// @version        92.2.22
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -253,7 +253,7 @@
 // @include /^(https?:\/\/)(.+)?((leaveadvice|mensventure).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(jameeltips.us|cryptonworld.space)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(hynews.biz|chamcuuhoc.com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(tii.la|oei.la)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(tii.la|oei.la|iir.la)(\/.*)/
 // @match *://*.skiplink.me/*
 // @match *://*.apanmusic.in/*
 // @match *://*.o-pro.online/*
@@ -799,6 +799,7 @@
 // @include     /techyblogs.in|readytechflip.com/
 // @include     /kbconlinegame.com/
 // @include     /odijob.com/
+// @include     /wp2host.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/

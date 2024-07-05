@@ -161,6 +161,7 @@
 // @include     /techyblogs.in|readytechflip.com/
 // @include     /kbconlinegame.com/
 // @include     /odijob.com/
+// @include     /wp2host.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -294,7 +295,7 @@
     /lnbz.la/.test(url) ? afterDOMLoaded(function() {timeSec = 0; afterElementVisible('form', function() {clickIfExists('button#getlink.btn-success');}) }) : null;
 
     // tii.la oko.sh final step
-    /tii.la|oko.sh|shrinke.me|clk.(wiki|kim)|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la|exego.app|link.theflash.eu.org/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /tii.la|oko.sh|shrinke.me|clk.(wiki|kim)|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la|iir.la|exego.app|link.theflash.eu.org/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
     /ez4short.com\/[^\/]+\/\?token=[^\/]+$/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled2('#aaoii2o')}) : null;
 
     // shon.xyz, seen in mega-descargas-serie.blogspot.com
@@ -562,6 +563,7 @@
     // olamovies.rent - https://v2links.me/q1z4ssolam //add stuff missing from the main script
     /v2links.(com|me)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
     /(utkarshonlinetest|newsbawa).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#GetLink')}) : null;
+    /wp2host.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn')}) : null;
 
     // olamovies.rent - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9904041
     /ielts-isa.edu.vn/.test(url) ? afterDOMLoaded(function() {

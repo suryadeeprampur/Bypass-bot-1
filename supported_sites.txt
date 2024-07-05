@@ -235,7 +235,7 @@ tmail.io
 (leaveadvice|mensventure).com
 jameeltips.us|cryptonworld.space
 hynews.biz|chamcuuhoc.com
-tii.la|oei.la
+tii.la|oei.la|iir.la
 skiplink.me
 apanmusic.in
 o-pro.online
@@ -779,6 +779,7 @@ https://paster.so/*
 /techyblogs.in|readytechflip.com/
 /kbconlinegame.com/
 /odijob.com/
+/wp2host.com/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
