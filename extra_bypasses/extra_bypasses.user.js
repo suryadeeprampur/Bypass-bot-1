@@ -163,6 +163,7 @@
 // @include     /odijob.com/
 // @include     /wp2host.com/
 // @include     /pahe.win/
+// @include     /ontechhindi.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -764,6 +765,12 @@
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/94
     /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;
+
+    // zipshort.net - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9971779
+    /ontechhindi.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#rtg > center:nth-child(2) > button:nth-child(1)');
+        clickIfExists('div.code-block:nth-child(4) > center:nth-child(1) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1)');
+    }) : null;
 
 })();
 

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.1
+// @version        92.3.2
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -769,6 +769,7 @@
 // @include     /odijob.com/
 // @include     /wp2host.com/
 // @include     /pahe.win/
+// @include     /ontechhindi.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -2382,6 +2383,12 @@
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/94
     /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;
+
+    // zipshort.net - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9971779
+    /ontechhindi.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#rtg > center:nth-child(2) > button:nth-child(1)');
+        clickIfExists('div.code-block:nth-child(4) > center:nth-child(1) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1)');
+    }) : null;
 
 })();
 
