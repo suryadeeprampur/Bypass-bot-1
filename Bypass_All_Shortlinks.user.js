@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3
+// @version        92.3.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -768,6 +768,7 @@
 // @include     /kbconlinegame.com/
 // @include     /odijob.com/
 // @include     /wp2host.com/
+// @include     /pahe.win/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -2378,6 +2379,9 @@
         clickIfExistsWithDelay('#pro-btn', 2000);
     }) : null;
     /odijob.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#my-btn')}) : null;
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/94
+    /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;
 
 })();
 

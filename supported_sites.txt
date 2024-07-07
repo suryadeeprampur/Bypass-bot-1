@@ -748,6 +748,7 @@ https://paster.so/*
 /kbconlinegame.com/
 /odijob.com/
 /wp2host.com/
+/pahe.win/
 /filecrypt.(cc|co)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/

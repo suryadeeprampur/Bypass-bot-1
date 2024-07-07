@@ -162,6 +162,7 @@
 // @include     /kbconlinegame.com/
 // @include     /odijob.com/
 // @include     /wp2host.com/
+// @include     /pahe.win/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -760,6 +761,9 @@
         clickIfExistsWithDelay('#pro-btn', 2000);
     }) : null;
     /odijob.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#my-btn')}) : null;
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/94
+    /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;
 
 })();
 
