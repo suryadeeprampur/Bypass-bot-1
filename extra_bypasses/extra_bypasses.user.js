@@ -164,6 +164,7 @@
 // @include     /wp2host.com/
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
+// @include     /newedutopics.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -770,6 +771,12 @@
     /ontechhindi.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#rtg > center:nth-child(2) > button:nth-child(1)');
         clickIfExists('div.code-block:nth-child(4) > center:nth-child(1) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1)');
+    }) : null;
+
+    // publicearn.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/99
+    /newedutopics.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#tp98');
+        clickIfExists('#btn6');
     }) : null;
 
 })();

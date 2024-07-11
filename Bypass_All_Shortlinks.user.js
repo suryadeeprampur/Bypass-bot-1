@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.2
+// @version        92.3.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -770,6 +770,7 @@
 // @include     /wp2host.com/
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
+// @include     /newedutopics.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /mega-enlace.com/
@@ -2388,6 +2389,12 @@
     /ontechhindi.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#rtg > center:nth-child(2) > button:nth-child(1)');
         clickIfExists('div.code-block:nth-child(4) > center:nth-child(1) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1)');
+    }) : null;
+
+    // publicearn.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/99
+    /newedutopics.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#tp98');
+        clickIfExists('#btn6');
     }) : null;
 
 })();
