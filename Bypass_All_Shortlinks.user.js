@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.5
+// @version        92.3.6
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -1665,7 +1665,7 @@
     BypassedByBloggerPemula(/(ashrfd|tpayr|poqzn|ashrfd|rezsx|tryzt|rezst|erzar|waezm|waezg).xyz|(tiktokrealtime|dawenet|vivuq|swgop|vbnmll|dshytb).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|(lifgam|telcoinfo).online|blackwoodacademy.org|cryptednews.space|mobprice.shop/, function() {
       let profitsfly = setInterval(() => {if (elementExists('.loading-spinner.spacer')) {} else if (!bp('#cbt').hasAttribute('disabled')) {clearInterval(profitsfly);ReadytoClick('button#cbt.pfbutton-primary', 1);}}, 2 * 1000);});
     BypassedByBloggerPemula(/(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc|unhearduniversity).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol|(aayurvedshastra|allnewspoint).in|chefslink.org/, () => {EnableRCF();
-      if (elementExists('.g-recaptcha')) {let mdn = setInterval(() => {if (Captchacheck()) {clearInterval(mdn);BypassHD('form[action]', 1);}}, 1 * 1000);} else {setTimeout(() => {BypassHD(GetForm('mdn'));}, 17 * 1000);}});
+      if (elementExists('.g-recaptcha')) {let mdn = setInterval(() => {if (Captchacheck()) {clearInterval(mdn);BypassHD('form[action]', 1);}}, 1 * 1000);} else {setTimeout(() => {BypassHD(GetForm('mdn'));}, 1 * 1000);}});
     BypassedByBloggerPemula(/shortit.pw/, function() {if (elementExists('.bg-light.container')) {
         $('.text-center.text-muted').text('IMPORTANT Note By BloggerPemula : Please Solve the Hcaptcha for Automatically , Dont Solve the Solvemedia . Regards...');}
       ClickIfExists('.pulse.btn-primary.btn', 3);let sorti = setInterval(function() {if (Captchacheck()) {clearInterval(sorti);ClickIfExists('#btn2');}}, 500);});
