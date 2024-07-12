@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.7
+// @version        92.3.8
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -771,6 +771,7 @@
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
 // @include     /newedutopics.com/
+// @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mega-enlace|acortados).com/
@@ -2395,6 +2396,12 @@
     /newedutopics.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#tp98');
         clickIfExists('#btn6');
+    }) : null;
+
+    // https://hyp.sh/Art07dr (hypershort) - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/101
+    /blog.jytechs.in|mi.miuiflash.com|hypershort.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#generatelink');
+        redirectIfExists('#gettinglink');
     }) : null;
 
 })();

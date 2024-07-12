@@ -165,6 +165,7 @@
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
 // @include     /newedutopics.com/
+// @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -777,6 +778,12 @@
     /newedutopics.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#tp98');
         clickIfExists('#btn6');
+    }) : null;
+
+    // https://hyp.sh/Art07dr (hypershort) - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/101
+    /blog.jytechs.in|mi.miuiflash.com|hypershort.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#generatelink');
+        redirectIfExists('#gettinglink');
     }) : null;
 
 })();
