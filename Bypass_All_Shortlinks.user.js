@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.10
+// @version        92.3.11
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -774,6 +774,7 @@
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 // @include     /mayas.travel/
 // @include     /animesgd.net/
+// @include     /tucinehd.com\/links/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mega-enlace|acortados).com/
@@ -1854,6 +1855,9 @@
 
     //intercambiosvirtuales.org
     /1v.to\/t/.test(url) ? redirect(atob(atob(atob(atob( atob(url.split('/t/')[1]).replace('+P', '') ))))) : null;
+
+    // tucinehd.com
+    /tucinehd.com\/links/.test(url) ? afterDOMLoaded(redirectIfExists('#link')) : null;
 
     //mandranime.com
     /ikramlar.online/.test(url) ? afterDOMLoaded(function() { 

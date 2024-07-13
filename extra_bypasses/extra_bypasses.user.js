@@ -168,6 +168,7 @@
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 // @include     /mayas.travel/
 // @include     /animesgd.net/
+// @include     /tucinehd.com\/links/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -236,6 +237,9 @@
 
     //intercambiosvirtuales.org
     /1v.to\/t/.test(url) ? redirect(atob(atob(atob(atob( atob(url.split('/t/')[1]).replace('+P', '') ))))) : null;
+
+    // tucinehd.com
+    /tucinehd.com\/links/.test(url) ? afterDOMLoaded(redirectIfExists('#link')) : null;
 
     //mandranime.com
     /ikramlar.online/.test(url) ? afterDOMLoaded(function() { 
