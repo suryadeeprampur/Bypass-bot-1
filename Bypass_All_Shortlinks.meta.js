@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.8
+// @version        92.3.9
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -772,6 +772,7 @@
 // @include     /ontechhindi.com/
 // @include     /newedutopics.com/
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
+// @include     /mayas.travel/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mega-enlace|acortados).com/

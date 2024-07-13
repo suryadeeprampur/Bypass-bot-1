@@ -166,6 +166,7 @@
 // @include     /ontechhindi.com/
 // @include     /newedutopics.com/
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
+// @include     /mayas.travel/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -193,6 +194,18 @@
 
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    // AdClicker (used in animesgd.net and many others)
+    if (/(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/.test(url)){
+        let decodedUrl = decodeURIComponent(atob(atob(atob(url.split('/url/#')[1]))));
+        if (decodedUrl.includes('&amp;url=')) {decodedUrl = decodedUrl.split('&amp;')[1];}
+        let urlParam = new URLSearchParams(decodedUrl).get('url');
+        if (urlParam) {redirect(urlParam);}
+    }
+
+    // mayas.travel used in fiuxy2.co
+    /mayas.travel\/api/.test(url) ? redirect(decodeURIComponent(url.split('&url=')[1].split('&')[0])) : null;
+    /mayas.travel\/\#/.test(url) ? redirect(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0]) : null;
 
     // descargasdirecta.com
     /playpastelinks.com/.test(url) ? afterDOMLoaded(function() {setTimeout(() => { document.querySelector('#btn-redirect').click(); }, 8000)}) : null;
@@ -600,14 +613,6 @@
 
     //suncy.net (upfiles.com) (seen used in fiuxy2.co)
     /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
-
-    // AdClicker (used in animesgd.net and many others)
-    if (/(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/.test(url)){
-        var decodedUrl = decodeURIComponent(atob(atob(atob(url.split('/url/#')[1]))));
-        if (decodedUrl.includes('&amp;url=')) {decodedUrl = decodedUrl.split('&amp;')[1];}
-        var urlParam = new URLSearchParams(decodedUrl).get('url');
-        if (urlParam) {redirect(urlParam);}
-    }
 
     // filmesmega.online
     /minimilionario.com\/noticia.php\?token=/.test(url) ? redirect(atob(url.split('?token=')[1])) : null;
