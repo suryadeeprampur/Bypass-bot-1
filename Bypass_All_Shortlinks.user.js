@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.9
+// @version        92.3.10
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -773,6 +773,7 @@
 // @include     /newedutopics.com/
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 // @include     /mayas.travel/
+// @include     /animesgd.net/
 // @include      /filecrypt.(cc|co)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mega-enlace|acortados).com/
@@ -1813,7 +1814,7 @@
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
 
-    // AdClicker (used in animesgd.net and many others)
+    // AdClicker
     if (/(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/.test(url)){
         let decodedUrl = decodeURIComponent(atob(atob(atob(url.split('/url/#')[1]))));
         if (decodedUrl.includes('&amp;url=')) {decodedUrl = decodedUrl.split('&amp;')[1];}
@@ -2293,6 +2294,12 @@
     /librospdfgratismundo.net/.test(url) ? afterDOMLoaded(function() {
         document.querySelectorAll('a[href*="https://librospdfgratismundo.net/rt?url="]').forEach(link => {
             link.href = atob(link.getAttribute('href').split('?url=')[1]);
+        }); }) : null;
+
+    // animesgd.net
+    /animesgd.net/.test(url) ? afterWindowLoaded(function() {
+        document.querySelectorAll('a[href*="https://domk5.net/redir3/?"]').forEach(link => {
+            link.href = link.getAttribute('href').split('/redir3/?')[1];
         }); }) : null;
 
     // platinsport.com
