@@ -752,6 +752,7 @@ https://paster.so/*
 /pahe.win/
 /ontechhindi.com/
 /newedutopics.com/
+/newshuta.in/
 /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 /mayas.travel/
 /animesgd.net/

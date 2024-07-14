@@ -166,6 +166,7 @@
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
 // @include     /newedutopics.com/
+// @include     /newshuta.in/
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 // @include     /mayas.travel/
 // @include     /animesgd.net/
@@ -798,6 +799,13 @@
     /newedutopics.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#tp98');
         clickIfExists('#btn6');
+    }) : null;
+
+    // inshorturl.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/104
+    /newshuta.in/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#tp98');
+        clickIfExists('#btn6');
+        clickIfNotDisabled('#gtelinkbtn');
     }) : null;
 
     // https://hyp.sh/Art07dr (hypershort) - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/101

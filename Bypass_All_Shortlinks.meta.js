@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.12
+// @version        92.3.13
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -772,6 +772,7 @@
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
 // @include     /newedutopics.com/
+// @include     /newshuta.in/
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 // @include     /mayas.travel/
 // @include     /animesgd.net/
