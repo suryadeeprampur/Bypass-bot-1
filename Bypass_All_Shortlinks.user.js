@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.11
+// @version        92.3.12
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -755,6 +755,7 @@
 // @include     /linkshortify.in|lksfy.com/
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
+// @include     /forum.sexyegirls.to\/redirect\?to=/
 // @include     /paste.japan-paw.net\/\?v=/
 // @include     /ikramlar.online/
 // @include     /mh.gourlpro.com/
@@ -1842,6 +1843,9 @@
 
     // sexyforums.com
     /sexyforums.com\/redirect/.test(url) ? redirect(atob(url.split('?to=')[1]).replace('amp;', '')) : null;
+
+    // forum.sexyegirls.to
+    /forum.sexyegirls.to\/redirect\?to=/.test(url) ? redirect(atob(url.split('?to=')[1])) : null;
 
     //sphinxanime.com
     /sphinxanime.com\/short/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;

@@ -735,6 +735,7 @@ https://paster.so/*
 /linkshortify.in|lksfy.com/
 /tumangasdd.com/
 /sexyforums.com\/redirect/
+/forum.sexyegirls.to\/redirect\?to=/
 /paste.japan-paw.net\/\?v=/
 /ikramlar.online/
 /mh.gourlpro.com/
