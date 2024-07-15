@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.13
+// @version        92.3.14
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -778,6 +778,7 @@
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
 // @include      /filecrypt.(cc|co)/
+// @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mega-enlace|acortados).com/
 // @include     /(work.ink|workink.click)\/.*$/

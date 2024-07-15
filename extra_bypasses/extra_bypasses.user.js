@@ -424,7 +424,7 @@
 
     // Linkvertise
     const solveThroughBypassCity = (linkShortenerUrl) => {if (!/(bypass.city|adbypass.org)/.test(linkShortenerUrl)) {redirect('https://adbypass.org/bypass?bypass=' + encodeURIComponent(linkShortenerUrl))}};
-    if (/linkvertise.com|(linkvertise|link-to).net/.test(url)) {
+    /* if (/linkvertise.com|(linkvertise|link-to).net/.test(url)) {
         //solve easy case locally
         let rParam = new URLSearchParams(window.location.search).get('r');
         if (rParam) {
@@ -433,7 +433,7 @@
         } else {
             solveThroughBypassCity(url);
         }
-    }
+    } */
 
     // bstlar.com - not supported by bypass.city anymore
     // // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(bstlar.com)/
