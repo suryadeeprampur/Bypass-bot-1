@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.14
+// @version        92.3.15
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -666,7 +666,6 @@
 // @include     /toonhub4u.net\/redirect\/main.php\?url=/
 // @include     /toonhub4u\.net\/([^\/]+)\/$/
 // @include     /mdsuuniversity.org|instander.me|jameen.xyz|dhamakamusic.ink|eternalcbse.i|financialstudy.me|(foreverhealth|newzwala.co|nhmgujarat|jobkijankari|jobwaala|learnwithsaif|lyricsx|smartsetkari|theringtonesworld|recruitmentrasta|mediniweb|pmyojanasarkari|netflixvip|mghindinews|gentletrail|w3hindi|ryzenmusic).in|(anumin|awolio|cgbsesupport|gptproguide|iplquotes|kaisekareblog|minijankari|news36tech|newsloti|odiamusicsong|sugargliderfaqs|picassoappk|geniuseducares|ndlifestylego|raidersixgameapk|sarkariexam365|potter-world|jankari4u|trancebazar|taazaalerts).com/
-// @include     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/
 // @include     /aipebel.com/
 // @include     /raretoonsindia.rtilinks.com/
 // @include     /(do|fast).rtilinks.com/
@@ -698,7 +697,7 @@
 // @include     /jobzspk.xyz/
 // @include     /urls.cx/
 // @include     /sunci.net/
-// @include     /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url\/\#/
+// @include     /(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url/
 // @include     /antonimos.de|tiktokcounter.net|tiktokrealtime.com|tpayr.xyz|quesignifi.ca|lifgam.online|waezf.xyz|ashrfd.xyz/
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
