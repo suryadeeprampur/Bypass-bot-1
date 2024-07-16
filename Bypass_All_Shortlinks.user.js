@@ -1926,7 +1926,7 @@
 
     //maxcine.net
     /links.cuevana.ac\/short/.test(url) ? afterDOMLoaded(function() {
-        var extractedUrl = document.documentElement.innerHTML.split('\n').find(line => line.includes("document.getElementById('contador').href = 'htt")).split("href")[1].match(/'([^']+)'/)[1];
+        let extractedUrl = document.documentElement.innerHTML.split('\n').find(line => line.includes("document.getElementById('contador').href = 'htt")).split("href")[1].match(/'([^']+)'/)[1];
         extractedUrl.includes('?s=') ? redirect(extractedUrl.split('?s=')[1]) : redirect(extractedUrl);
     }) : null;
 
@@ -1966,8 +1966,8 @@
 
     //ovagames.com - linkspy.cc & clicksfly.com|shrinkme.io|clk.sh|shrinkearn.com|clk.asia|clk.wiki concatenated - https://github.com/FastForwardTeam/FastForward/issues/1352
     if (/linkspy.cc\/tr/.test(url)){
-        var decodedUrl = atob(url.split('/tr/')[1]);
-        var urlParam = getParam(decodedUrl,'url');
+        let decodedUrl = atob(url.split('/tr/')[1]);
+        let urlParam = getParam(decodedUrl,'url');
         urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
     }
     /www.ovagames.com\/.*\.html$/.test(url) ? afterWindowLoaded(function() {
@@ -1977,8 +1977,8 @@
             urlParam ? link.href = atob(urlParam) : link.href = decodedUrl;
         }); }) : null;
     if (/linkspy.cc\/\/a/.test(url) && url.includes('aHR0')) {
-        var decodedUrl = atob('aHR0' + url.split('aHR0')[1]);
-        var urlParam = getParam(decodedUrl,'url');
+        let decodedUrl = atob('aHR0' + url.split('aHR0')[1]);
+        let urlParam = getParam(decodedUrl,'url');
         urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
     }
 
@@ -1986,8 +1986,8 @@
     /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null; //1st page
     // /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null; //2nd page
     // /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {  //3rd page
-    //     var intervalId = setInterval(function() {// Keep checking if link is available, every 1s
-    //         var downloadUrl = document.getElementById('dllink').getAttribute('action');
+    //     let intervalId = setInterval(function() {// Keep checking if link is available, every 1s
+    //         let downloadUrl = document.getElementById('dllink').getAttribute('action');
     //         if (downloadUrl) {
     //             clearInterval(intervalId);
     //             alert('Press OK to go to the download link:\n' + downloadUrl);
