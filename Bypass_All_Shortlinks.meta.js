@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.19
+// @version        92.3.20
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -604,6 +604,7 @@
 // @match *://*.r1.foxylinks.site/*
 // @grant        GM.xmlHttpRequest
 // @grant          GM_getResourceText
+// @match        https://acortalink.me/*
 // @match        https://paster.so/*
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/

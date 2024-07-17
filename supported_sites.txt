@@ -584,6 +584,7 @@ bestlink.pro
 playstore.pw
 sigmalinks.in
 r1.foxylinks.site
+https://acortalink.me/*
 https://paster.so/*
 /(bypass.city|adbypass.org)\/bypass\?bypass=/
 /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
