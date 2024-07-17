@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.15
+// @version        92.3.16
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -142,7 +142,7 @@
 // @include /^(https?:\/\/)(.+)?(delishwell.com|artiskini.com)(\/.*)/
 // @match *://*.kisalt.digital/*
 // @include /^(https?:\/\/)(.+)?(bildirim.in|bildirim.eu|bildirim.link)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(enlacito.com|acortalink.me)(\/.*)/
+// @match *://*.enlacito.com/*
 // @match *://*.webhostingtips.club/*
 // @match *://*.render-state.to/*
 // @include /^(https?:\/\/)(.+)?(michaelemad.com|7misr4day.com)(\/.*)/
@@ -765,8 +765,6 @@
 // @include     /surfsees.com|fitnessholic.net/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /techyblogs.in|readytechflip.com/
-// @include     /kbconlinegame.com/
-// @include     /odijob.com/
 // @include     /wp2host.com/
 // @include     /pahe.win/
 // @include     /ontechhindi.com/

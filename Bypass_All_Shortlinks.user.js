@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.15
+// @version        92.3.16
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -142,7 +142,7 @@
 // @include /^(https?:\/\/)(.+)?(delishwell.com|artiskini.com)(\/.*)/
 // @match *://*.kisalt.digital/*
 // @include /^(https?:\/\/)(.+)?(bildirim.in|bildirim.eu|bildirim.link)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(enlacito.com|acortalink.me)(\/.*)/
+// @match *://*.enlacito.com/*
 // @match *://*.webhostingtips.club/*
 // @match *://*.render-state.to/*
 // @include /^(https?:\/\/)(.+)?(michaelemad.com|7misr4day.com)(\/.*)/
@@ -765,8 +765,6 @@
 // @include     /surfsees.com|fitnessholic.net/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /techyblogs.in|readytechflip.com/
-// @include     /kbconlinegame.com/
-// @include     /odijob.com/
 // @include     /wp2host.com/
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
@@ -1302,7 +1300,7 @@
     BypassedByBloggerPemula(/kisalt.digital/, function() {if (BpParams.has('u')) {meta(atob(BpParams.get('u')));}});
     BypassedByBloggerPemula(/bildirim.in|bildirim.eu|bildirim.link/, function() {ClickIfExists('#btnPermission', 1);});
     //BypassedByBloggerPemula(/enlacito.com|acortalink.me/, function() {setTimeout(() => {redirect(window.DYykkzwP,false);}, 2 * 1000);});
-    BypassedByBloggerPemula(/enlacito.com|acortalink.me/, () => {let acorta = setInterval(function() {if (DYykkzwP) {redirect(DYykkzwP); clearInterval(acorta);}}, 500);});
+    BypassedByBloggerPemula(/enlacito.com/, () => {let acorta = setInterval(function() {if (DYykkzwP) {redirect(DYykkzwP); clearInterval(acorta);}}, 500);});
     BypassedByBloggerPemula(/webhostingtips.club/, {'/safe.php': ['link', 'https://jrlinks.in/safe2.php?link='],}, false);
     BypassedByBloggerPemula(/render-state.to/, function() {if (BpParams.has('link')) {meta(atob(BpParams.get('link')));}});
     BypassedByBloggerPemula(/michaelemad.com|7misr4day.com/, () => waitForElm('a.s-btn-f', mld => redirect(mld.href, false)));
@@ -2395,14 +2393,6 @@
 
     // uploadrar - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/87
     /flash.getpczone.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null;
-
-    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9934577
-    const clickIfExistsWithDelay = (selector, delay) => {setTimeout(function() {clickIfExists(selector);}, delay);};
-    /kbconlinegame.com/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('#pro-continue');
-        clickIfExistsWithDelay('#pro-btn', 2000);
-    }) : null;
-    /odijob.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#my-btn')}) : null;
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/94
     /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;

@@ -124,7 +124,7 @@ cooklike.info|model-tas-terbaru.com
 delishwell.com|artiskini.com
 kisalt.digital
 bildirim.in|bildirim.eu|bildirim.link
-enlacito.com|acortalink.me
+enlacito.com
 webhostingtips.club
 render-state.to
 michaelemad.com|7misr4day.com
@@ -745,8 +745,6 @@ https://paster.so/*
 /surfsees.com|fitnessholic.net/
 /cgsonglyricz.in|www.techhubcap.com/
 /techyblogs.in|readytechflip.com/
-/kbconlinegame.com/
-/odijob.com/
 /wp2host.com/
 /pahe.win/
 /ontechhindi.com/
