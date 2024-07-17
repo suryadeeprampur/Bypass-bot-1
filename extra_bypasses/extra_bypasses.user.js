@@ -806,6 +806,7 @@
 
     // render-state.to - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/108
     /render-state.to\/download\/\?link=/.test(url) ? afterDOMLoaded(function() {
+        if (document.querySelector('#megkey')) {alert(document.querySelector('#megkey').innerText + '\n' + document.getElementById('deckey').value);};
         popupsToRedirects();
         goToLink();
     }) : null;
