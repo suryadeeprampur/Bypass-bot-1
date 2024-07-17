@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.16
+// @version        92.3.17
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -144,7 +144,6 @@
 // @include /^(https?:\/\/)(.+)?(bildirim.in|bildirim.eu|bildirim.link)(\/.*)/
 // @match *://*.enlacito.com/*
 // @match *://*.webhostingtips.club/*
-// @match *://*.render-state.to/*
 // @include /^(https?:\/\/)(.+)?(michaelemad.com|7misr4day.com)(\/.*)/
 // @match *://*.shareus.io/*
 // @match *://*.adtival.network/*
@@ -774,6 +773,7 @@
 // @include     /mayas.travel/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
+// @include     /render-state.to\/download\/\?link=/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include      /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/

@@ -126,7 +126,6 @@ kisalt.digital
 bildirim.in|bildirim.eu|bildirim.link
 enlacito.com
 webhostingtips.club
-render-state.to
 michaelemad.com|7misr4day.com
 shareus.io
 adtival.network
@@ -754,6 +753,7 @@ https://paster.so/*
 /mayas.travel/
 /animesgd.net/
 /tucinehd.com\/links/
+/render-state.to\/download\/\?link=/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/

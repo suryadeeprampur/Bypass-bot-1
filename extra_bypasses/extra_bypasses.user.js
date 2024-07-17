@@ -168,6 +168,7 @@
 // @include     /mayas.travel/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
+// @include     /render-state.to\/download\/\?link=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -801,6 +802,12 @@
     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#generatelink');
         redirectIfExists('#gettinglink');
+    }) : null;
+
+    // render-state.to - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/108
+    /render-state.to\/download\/\?link=/.test(url) ? afterDOMLoaded(function() {
+        popupsToRedirects();
+        goToLink();
     }) : null;
 
 })();
