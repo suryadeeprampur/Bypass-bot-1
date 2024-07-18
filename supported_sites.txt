@@ -736,7 +736,7 @@ https://paster.so/*
 /sexyforums.com\/redirect/
 /forum.sexyegirls.to\/redirect\?to=/
 /paste.japan-paw.net\/\?v=/
-/ikramlar.online/
+/ikramlar.online|segurosdevida.site/
 /mh.gourlpro.com/
 /playpastelinks.com/
 /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/

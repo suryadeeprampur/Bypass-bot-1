@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.20
+// @version        92.3.21
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -756,7 +756,7 @@
 // @include     /sexyforums.com\/redirect/
 // @include     /forum.sexyegirls.to\/redirect\?to=/
 // @include     /paste.japan-paw.net\/\?v=/
-// @include     /ikramlar.online/
+// @include     /ikramlar.online|segurosdevida.site/
 // @include     /mh.gourlpro.com/
 // @include     /playpastelinks.com/
 // @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
@@ -1903,7 +1903,7 @@
     /tucinehd.com\/links/.test(url) ? afterDOMLoaded(redirectIfExists('#link')) : null;
 
     //mandranime.com
-    /ikramlar.online/.test(url) ? afterDOMLoaded(function() { 
+    /ikramlar.online|segurosdevida.site/.test(url) ? afterDOMLoaded(function() { 
         redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]); 
     }) : null;
 
