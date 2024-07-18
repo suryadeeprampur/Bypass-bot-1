@@ -150,6 +150,7 @@
 // @include     /sexyforums.com\/redirect/
 // @include     /forum.sexyegirls.to\/redirect\?to=/
 // @include     /paste.japan-paw.net\/\?v=/
+// @include     /pastesmkv.xyz\/\?v=/
 // @include     /ikramlar.online|segurosdevida.site/
 // @include     /mh.gourlpro.com/
 // @include     /playpastelinks.com/
@@ -236,6 +237,12 @@
     /paste.japan-paw.net\/\?v=/.test(url) ? afterDOMLoaded(function() {
         document.querySelectorAll('a[href*="https://shrinkme.io/st?api="]').forEach(link => {
             link.href = decodeURIComponent("https://" + link.href.split('?s=')[1]);
+        }); }) : null;
+
+    // mega-mkv.com
+    /pastesmkv.xyz\/\?v=/.test(url) ? afterWindowLoaded(function() {
+        document.querySelectorAll('a[href*="https://shrinkearn.com/full?api="]').forEach(link => {
+            link.href = atob(link.href.split('&url=')[1].split('&')[0]);
         }); }) : null;
 
     //intercambiosvirtuales.org

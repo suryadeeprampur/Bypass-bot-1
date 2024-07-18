@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.21
+// @version        92.3.22
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -756,6 +756,7 @@
 // @include     /sexyforums.com\/redirect/
 // @include     /forum.sexyegirls.to\/redirect\?to=/
 // @include     /paste.japan-paw.net\/\?v=/
+// @include     /pastesmkv.xyz\/\?v=/
 // @include     /ikramlar.online|segurosdevida.site/
 // @include     /mh.gourlpro.com/
 // @include     /playpastelinks.com/
