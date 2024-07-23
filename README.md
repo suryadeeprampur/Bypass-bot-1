@@ -44,8 +44,8 @@ Thanks to:
 - [lem6ns](https://greasyfork.org/en/users/937794-lem6ns) for the work.ink bypass.
 - [StephenP](https://greasyfork.org/users/104167-stephenp) for the filecrypt bypass.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
-- [AdGuard filters](https://github.com/AdguardTeam/AdguardFilters/) for the mega-enlace bypass.
-- [harryitz](https://github.com/FastForwardTeam/FastForward/commit/31bd3b0193e06b73d8c777d640b0970175bac816#diff-4b960ee94677b8b7a092fdc10412fcf4df7c1eeea35347ce95b8540f1b9eda60) for the l1nkv3rt1s3 bypass.
+- [AdamWr](https://github.com/AdamWr) from AdGuard for the mega-enlace and acortalink.me bypasses.
+- [harryitz](https://github.com/harryitz) from FastForward for the l1nkv3rt1s3 bypass.
 - Contributers to this repository who have submitted pull requests: mouro, trapgod1, CaptainCaffeine.
 - Every user that has reported issues to this repository.
 
