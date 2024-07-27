@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.25
+// @version        92.3.26
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -192,7 +192,7 @@
 // @match *://*.oii.io/*
 // @match *://*.cryptonetos.ru/*
 // @match *://*.cpu-miner.leaks.work/*
-// @include /^(https?:\/\/)(.+)?(mrproblogger.com|themezon.net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(mrproblogger.com|themezon.net|travelkuku.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(forex-golds.com|forex-trnd.com)(\/.*)/
 // @match *://*.1link.club/*
 // @match *://*.1mlink.vip/*
@@ -249,7 +249,7 @@
 // @include /^(https?:\/\/)(.+)?((leaveadvice|mensventure).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(jameeltips.us|cryptonworld.space)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(hynews.biz|chamcuuhoc.com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(tii.la|oei.la|iir.la)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(tii.la|oei.la|iir.la|tvi.la)(\/.*)/
 // @match *://*.skiplink.me/*
 // @match *://*.apanmusic.in/*
 // @match *://*.o-pro.online/*
@@ -275,7 +275,7 @@
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs|(forextrader|foxylinks).site|tinygo.co)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan|techbixby|wp2host).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan|techbixby|wp2host|insmyst|host-buzz).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techyreviewx.com|desiupload.co)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((calmgram|adbitfly|blogsward).com|adbitfly.in)(\/.*)/
 // @match *://*.shorterall.com/*
@@ -616,7 +616,7 @@
 // @include     /cybercityhelp.in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
-// @include     /shrinkme.(us|site|cc|vip)/
+// @include     /shrinkme.(us|site|cc|vip|dev)/
 // @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/
@@ -1364,7 +1364,7 @@
       ClickIfExists('#butt', 2, 'setInterval');ClickIfExists('#someId', 5);});
     BypassedByBloggerPemula(/cpu-miner.leaks.work/, function() {
       ClickIfExists('.xbtt.btn-primary.btn-lg.btn', 3, 'setInterval');});
-    BypassedByBloggerPemula(/mrproblogger.com|themezon.net/, function() {
+    BypassedByBloggerPemula(/mrproblogger.com|themezon.net|travelkuku.com/, function() {
       waitForElm('#btn2.tp-btn', mrBp => mrBp.click());
       waitForElm('div.center-link-items a', thz => redirect(thz.href, false));});
     BypassedByBloggerPemula(/forex-golds.com|forex-trnd.com/, function() {
@@ -1487,7 +1487,7 @@
       ClickIfExists('#alf_continue', 3, 'setInterval');});
     BypassedByBloggerPemula(/hynews.biz|chamcuuhoc.com/, function() {
       var bypasslinks = atob(`aH${bp("#landing [name='go']").value.split("aH").slice(1).join("aH")}`);redirect(bypasslinks);});
-    BypassedByBloggerPemula(/tii.la|oei.la|iir.la/, function() {if (elementExists('#link-view')) {
+    BypassedByBloggerPemula(/tii.la|oei.la|iir.la|tvi.la/, function() {if (elementExists('#link-view')) {
         let sbf = setInterval(function() {if (Captchacheck()) {clearInterval(sbf);ClickIfExists('#continue');}}, 500);}});
     BypassedByBloggerPemula(/skiplink.me/, function() {
       ClickIfExists('#alf_continue_captcha', 2);ClickIfExists('#alf_continue', 3, 'setInterval');});
@@ -1544,7 +1544,7 @@
       var tform = bp('#landing');redirect(JSON.parse(atob(tform.newwpsafelink.value)).linkr, false);});
     BypassedByBloggerPemula(/(theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs|(forextrader|foxylinks).site|tinygo.co/, function() {
       if (elementExists('#link-view')) {let srl = setInterval(() => {if (Captchacheck()) {ClickIfExists('#invisibleCaptchaShortlink');}}, 1 * 1000);}});
-    BypassedByBloggerPemula(/(blogscare|blogtechh|host2loan|techbixby|wp2host).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim/, function() {ClickIfExists('button.btn.btn-primary', 2);SubmitIfExists('#nextpage', 2);
+    BypassedByBloggerPemula(/(blogscare|blogtechh|host2loan|techbixby|wp2host|insmyst|host-buzz).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim/, function() {ClickIfExists('button.btn.btn-primary', 2);SubmitIfExists('#nextpage', 2);
       SubmitIfExists('#getmylink', 3);let enit = setInterval(function() {if (Captchacheck()) {clearInterval(enit);ClickIfExists('.btn-captcha.btn-primary.btn');}}, 500);});
     BypassedByBloggerPemula(/techyreviewx.com|desiupload.co/, function() {ClickIfExists('.downloadbtn.btn-block.btn-primary.btn', 2);
       waitForElm('a.btn.btn-primary.btn-block.mb-4', rex => redirect(rex.href, false));});
@@ -1937,7 +1937,9 @@
     /techtnet.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#originalLink')}) : null;
 
     //shrinkme.us
-    /shrinkme.(us|site|cc|vip)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /shrinkme.(us|site|cc|vip|dev)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+
+    // /travelkuku.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn2')}) : null;
 
     //freecoursesite.com 2nd step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/43
     /myshrinker.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
@@ -1992,7 +1994,7 @@
     /lnbz.la/.test(url) ? afterDOMLoaded(function() {timeSec = 0; afterElementVisible('form', function() {clickIfExists('button#getlink.btn-success');}) }) : null;
 
     // tii.la oko.sh final step
-    /tii.la|oko.sh|shrinke.me|clk.(wiki|kim)|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la|iir.la|exego.app|link.theflash.eu.org|get.instantearn.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /tii.la|oko.sh|shrinke.me|clk.(wiki|kim)|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la|iir.la|tvi.la|exego.app|link.theflash.eu.org|get.instantearn.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
     /ez4short.com\/[^\/]+\/\?token=[^\/]+$/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled2('#aaoii2o')}) : null;
 
     // shon.xyz, seen in mega-descargas-serie.blogspot.com

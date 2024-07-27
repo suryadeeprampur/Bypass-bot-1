@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.3.25
+// @version        92.3.26
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -192,7 +192,7 @@
 // @match *://*.oii.io/*
 // @match *://*.cryptonetos.ru/*
 // @match *://*.cpu-miner.leaks.work/*
-// @include /^(https?:\/\/)(.+)?(mrproblogger.com|themezon.net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(mrproblogger.com|themezon.net|travelkuku.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(forex-golds.com|forex-trnd.com)(\/.*)/
 // @match *://*.1link.club/*
 // @match *://*.1mlink.vip/*
@@ -249,7 +249,7 @@
 // @include /^(https?:\/\/)(.+)?((leaveadvice|mensventure).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(jameeltips.us|cryptonworld.space)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(hynews.biz|chamcuuhoc.com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(tii.la|oei.la|iir.la)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(tii.la|oei.la|iir.la|tvi.la)(\/.*)/
 // @match *://*.skiplink.me/*
 // @match *://*.apanmusic.in/*
 // @match *://*.o-pro.online/*
@@ -275,7 +275,7 @@
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs|(forextrader|foxylinks).site|tinygo.co)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan|techbixby|wp2host).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan|techbixby|wp2host|insmyst|host-buzz).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techyreviewx.com|desiupload.co)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((calmgram|adbitfly|blogsward).com|adbitfly.in)(\/.*)/
 // @match *://*.shorterall.com/*
@@ -616,7 +616,7 @@
 // @include     /cybercityhelp.in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
-// @include     /shrinkme.(us|site|cc|vip)/
+// @include     /shrinkme.(us|site|cc|vip|dev)/
 // @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/

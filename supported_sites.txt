@@ -174,7 +174,7 @@ yoshare.net|olhonagrana.com
 oii.io
 cryptonetos.ru
 cpu-miner.leaks.work
-mrproblogger.com|themezon.net
+mrproblogger.com|themezon.net|travelkuku.com
 forex-golds.com|forex-trnd.com
 1link.club
 1mlink.vip
@@ -231,7 +231,7 @@ tmail.io
 (leaveadvice|mensventure).com
 jameeltips.us|cryptonworld.space
 hynews.biz|chamcuuhoc.com
-tii.la|oei.la|iir.la
+tii.la|oei.la|iir.la|tvi.la
 skiplink.me
 apanmusic.in
 o-pro.online
@@ -257,7 +257,7 @@ revly.click
 trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se
 theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id
 (theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs|(forextrader|foxylinks).site|tinygo.co
-(blogscare|blogtechh|host2loan|techbixby|wp2host).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim
+(blogscare|blogtechh|host2loan|techbixby|wp2host|insmyst|host-buzz).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim
 techyreviewx.com|desiupload.co
 (calmgram|adbitfly|blogsward).com|adbitfly.in
 shorterall.com
@@ -596,7 +596,7 @@ https://paster.so/*
 /cybercityhelp.in/
 /www.akcartoons.in/
 /go.moonlinks.in/
-/shrinkme.(us|site|cc|vip)/
+/shrinkme.(us|site|cc|vip|dev)/
 /test.shrinkurl.org/
 /shareus.io/
 /shareus\.io\/go\?sid=/
