@@ -166,7 +166,7 @@
 // @include     /newedutopics.com/
 // @include     /newshuta.in/
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
-// @include     /mayas.travel/
+// @include     /mayas.travel|eldiario24hrs.com/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
 // @include     /render-state.to\/download\/\?link=/
@@ -207,8 +207,8 @@
     }
 
     // mayas.travel used in fiuxy2.co
-    /mayas.travel\/api/.test(url) ? redirect(decodeURIComponent(url.split('&url=')[1].split('&')[0])) : null;
-    /mayas.travel\/\#/.test(url) ? redirect(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0]) : null;
+    /(mayas.travel|eldiario24hrs.com)\/api/.test(url) ? redirect(decodeURIComponent(url.split('&url=')[1].split('&')[0])) : null;
+    /(mayas.travel|eldiario24hrs.com)\/\#/.test(url) ? redirect(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0]) : null;
 
     // descargasdirecta.com
     /playpastelinks.com/.test(url) ? afterDOMLoaded(function() {setTimeout(() => { document.querySelector('#btn-redirect').click(); }, 8000)}) : null;
