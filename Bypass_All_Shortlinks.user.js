@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.4.2
+// @version        92.4.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2270,7 +2270,7 @@
 
     //pahe.ink final step
     /linegee.net|intercelestial.com/.test(url) ? preventForcedFocusOnWindow() : null;
-    /spacetica.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('center a')}) : null;
+    /spacetica.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn-primary')}) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
