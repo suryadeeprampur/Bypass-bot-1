@@ -596,7 +596,12 @@
 
     // olamovies.rent - https://v2links.me/q1z4ssolam //add stuff missing from the main script
     /v2links.(com|me)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-    /(utkarshonlinetest|newsbawa).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#GetLink')}) : null;
+    /(utkarshonlinetest|newsbawa).com/.test(url) ? afterDOMLoaded(function() {
+        time = 0;
+        clickIfExists('.start_btn');
+        setTimeout(function() {clickIfExists('div.step_box.get_btn div.btn')}, 2000);
+        clickIfExists('a.btn');
+    }) : null;
     /wp2host.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn')}) : null;
 
     // olamovies.rent - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9904041
