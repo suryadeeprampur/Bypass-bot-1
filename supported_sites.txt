@@ -590,7 +590,7 @@ https://paster.so/*
 /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 /dropgalaxy.(com|co)\/drive/
 /short-ly.co/
-/(shramikcard|pmkisanlists|techishant).in|cookad.net|tejtime24.com/
+/(shramikcard|pmkisanlists|techishant|cinedesi).in|cookad.net|tejtime24.com/
 /blogging.techworldx.net|10beasts.biz/
 /starsddl.me\/short/
 /tech.unblockedgames.world/

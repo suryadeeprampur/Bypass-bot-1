@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.4.3
+// @version        92.4.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -610,7 +610,7 @@
 // @include     /((cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
-// @include     /(shramikcard|pmkisanlists|techishant).in|cookad.net|tejtime24.com/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi).in|cookad.net|tejtime24.com/
 // @include     /blogging.techworldx.net|10beasts.biz/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
