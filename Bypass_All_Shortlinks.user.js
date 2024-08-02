@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.4.4
+// @version        92.4.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2277,7 +2277,9 @@
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8878055 / https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9061651 / https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9296298
     if (/(loanoffering|djmp3world).in|moonplusnews.com/.test(url)) {afterDOMLoaded(function() {
         clickIfExists('#startButton'); clickIfExists('#verifybtn'); clickIfExists('#tp98'); clickIfExists('#tp44');
-        clickIfExists('#tp4'); clickIfExists('#tp3'); clickIfExists('#rtg-snp2'); })}
+        clickIfExists('#tp4'); clickIfExists('#tp3'); clickIfExists('#rtg-snp2');
+        clickIfExists('#tp444'); clickIfExists('#gtelinkbtn');
+    })}
     /modijiurl.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled2('a.get-link')}) : null;
 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8884375
