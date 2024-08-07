@@ -735,6 +735,5 @@ https://paster.so/*
 /render-state.to\/download\/\?link=/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
-/(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /(mega-enlace|acortados).com/
 /(work.ink|workink.click)\/.*$/
