@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.4.7
+// @version        92.4.8
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -586,6 +586,7 @@
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
+// @include     /privatenudes.com\/model/
 // @include     /sphinxanime.com\/short/
 // @include     /japanpaw.com\/out/
 // @include     /(iconicblogger.com|segurosdevida.site)/
@@ -1834,6 +1835,7 @@
 
     //leak.sx & pornleaks.in
     /comohoy.com/.test(url) ? redirect(atob(url.split('?url=')[1])) : null;
+    /privatenudes.com\/model/ ? afterDOMLoaded(function() {redirect(atob(document.querySelector('.btn-custom.btn-block.noads').href.split('?url=')[1]))}) : null;
 
     // sexyforums.com
     /sexyforums.com\/redirect/.test(url) ? redirect(atob(url.split('?to=')[1]).replace('amp;', '')) : null;

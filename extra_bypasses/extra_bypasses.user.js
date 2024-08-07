@@ -3,6 +3,7 @@
 // @description These bypasses are always merged into Bypass_All_Shortlinks.user.js
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
+// @include     /privatenudes.com\/model/
 // @include     /sphinxanime.com\/short/
 // @include     /japanpaw.com\/out/
 // @include     /(iconicblogger.com|segurosdevida.site)/
@@ -223,6 +224,7 @@
 
     //leak.sx & pornleaks.in
     /comohoy.com/.test(url) ? redirect(atob(url.split('?url=')[1])) : null;
+    /privatenudes.com\/model/ ? afterDOMLoaded(function() {redirect(atob(document.querySelector('.btn-custom.btn-block.noads').href.split('?url=')[1]))}) : null;
 
     // sexyforums.com
     /sexyforums.com\/redirect/.test(url) ? redirect(atob(url.split('?to=')[1]).replace('amp;', '')) : null;
