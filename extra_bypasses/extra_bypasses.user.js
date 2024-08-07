@@ -170,6 +170,7 @@
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
 // @include     /render-state.to\/download\/\?link=/
+// @include     /www.lanoticia.cc/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -827,6 +828,12 @@
             popupsToRedirects();
             goToLink();
         }
+    }) : null;
+
+    // pelismkvhd.com
+    /www.lanoticia.cc/.test(url) ? afterDOMLoaded(function() {
+        clickIfNotDisabled('#invisibleCaptchaShortlink');
+        redirectIfNotDisabled('a.get-link');
     }) : null;
 
 })();

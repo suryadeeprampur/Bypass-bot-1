@@ -733,6 +733,7 @@ https://paster.so/*
 /animesgd.net/
 /tucinehd.com\/links/
 /render-state.to\/download\/\?link=/
+/www.lanoticia.cc/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/

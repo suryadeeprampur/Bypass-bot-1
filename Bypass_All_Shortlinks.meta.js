@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.4.6
+// @version        92.4.7
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -753,6 +753,7 @@
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
 // @include     /render-state.to\/download\/\?link=/
+// @include     /www.lanoticia.cc/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
