@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.4.8
+// @version        92.4.9
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -738,7 +738,7 @@
 // @include     /ikramlar.online|segurosdevida.site/
 // @include     /mh.gourlpro.com/
 // @include     /playpastelinks.com/
-// @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
+// @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
 // @include     /surfsees.com|fitnessholic.net/

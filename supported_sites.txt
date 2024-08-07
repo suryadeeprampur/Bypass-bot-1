@@ -718,7 +718,7 @@ https://paster.so/*
 /ikramlar.online|segurosdevida.site/
 /mh.gourlpro.com/
 /playpastelinks.com/
-/stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
+/stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
 /ielts-isa.edu.vn/
 /flash.getpczone.com/
 /surfsees.com|fitnessholic.net/
