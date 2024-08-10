@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.4.10
+// @version        92.4.11
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -240,7 +240,7 @@
 // @match *://*.bigbtc.win/*
 // @match *://*.firefaucet.win/*
 // @include /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
-// @match *://*.tmail.io/*
+// @include /^(https?:\/\/)(.+)?(tmail.io|fitdynamos.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((exeo|exego).app|(mrgec|emxaw|ijvam).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz|(maos4alaw|offeergames|todogame).online)(\/.*)/
@@ -1425,7 +1425,7 @@
     BypassedByBloggerPemula(/firefaucet.win/, function() {if (elementExists("form[method='post']")) {let firefaucet = setInterval(() => {
       if (Captchacheck()) {ClickIfExists('button[type=submit]');}}, 2 * 1000);} else {ClickIfExists('#get_reward_button', 1);}});
     BypassedByBloggerPemula(/uptobhai\.*|uplinkto\.*|shortlinkto\.*/, function() { ClickIfExists('.btn-block.btn-primary.btn', 2);});
-    BypassedByBloggerPemula(/tmail.io/, function() {
+    BypassedByBloggerPemula(/tmail.io|fitdynamos.com/, function() {
       if (elementExists('#next')) {SubmitIfExists('form.text-center', 3);} else {ClickIfExists('#surl', 5, 'setInterval');}});
     BypassedByBloggerPemula(/(exeo|exego).app|(mrgec|emxaw|ijvam).com/, function() {ClickIfExists('#invisibleCaptchaShortlink', 2);SubmitIfExists('#before-captcha', 3);
       let exeo = setInterval(() => {if (bp('.timer').innerText == '0') {clearInterval(exeo);ReadytoClick('#submit-button');}}, 2 * 1000);});
