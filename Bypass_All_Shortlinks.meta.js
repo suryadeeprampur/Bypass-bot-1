@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.4.11
+// @version        92.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -273,7 +273,7 @@
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs|(forextrader|foxylinks).site|tinygo.co)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan|techbixby|wp2host|insmyst|rtusports|host-buzz).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan|techbixby|wp2host|insmyst|rtusports|host-buzz|tech-munch).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techyreviewx.com|desiupload.co)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((calmgram|adbitfly|blogsward).com|adbitfly.in)(\/.*)/
 // @match *://*.shorterall.com/*
@@ -315,7 +315,7 @@
 // @include /^(https?:\/\/)(.+)?(link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((tpayr|rezst).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|lifgam.online|blackwoodacademy.org|cryptednews.space)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc|unhearduniversity).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol|(aayurvedshastra|allnewspoint).in|chefslink.org)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc|businessuniqueidea).com|(yexolo|giftpros).net|(aayurvedshastra|allnewspoint).in|chefslink.org|worldtanr.xyz|lawyex.co|mdn.lol)(\/.*)/
 // @match *://*.shortit.pw/*
 // @include /^(https?:\/\/)(.+)?(short.croclix.me|adz7short.space)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(adshnk.com|adshrink.it)(\/.*)/
