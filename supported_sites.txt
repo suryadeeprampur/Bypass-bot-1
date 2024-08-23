@@ -735,6 +735,7 @@ https://paster.so/*
 /tucinehd.com\/links/
 /render-state.to\/download\/\?link=/
 /www.lanoticia.cc/
+/altearnativasa.com/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/

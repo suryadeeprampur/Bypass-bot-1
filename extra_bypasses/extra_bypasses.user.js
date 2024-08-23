@@ -172,6 +172,7 @@
 // @include     /tucinehd.com\/links/
 // @include     /render-state.to\/download\/\?link=/
 // @include     /www.lanoticia.cc/
+// @include     /altearnativasa.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -207,6 +208,9 @@
         let urlParam = new URLSearchParams(decodedUrl).get('url');
         if (urlParam) {redirect(urlParam);}
     }
+
+    // pelishd4k.com
+    /altearnativasa.com\/\#/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0])) : null;
 
     // mayas.travel used in fiuxy2.co
     /(mayas.travel|eldiario24hrs.com|comomedir.com)\/api/.test(url) ? redirect(decodeURIComponent(url.split('&url=')[1].split('&')[0])) : null;
