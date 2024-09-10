@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.7.1
+// @version        92.7.2
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2291,6 +2291,12 @@
         document.querySelectorAll('a[href*="https://domk5.net/redir3/?"]').forEach(link => {
             link.href = link.getAttribute('href').split('/redir3/?')[1];
         }); }) : null;
+
+    if (/animesgd.net\/out\/\?/.test(url)) { 
+        const decodedUrl = atob(url.split('/out/?')[1]);
+        if (decodedUrl.includes('url=')) {redirect(decodedUrl.split('url=')[1])}
+        if (decodedUrl.includes('redir3/?')) {redirect(decodedUrl.split('/redir3/?')[1])}
+    }
 
     // platinsport.com
     /platinsport.com/.test(url) ? afterDOMLoaded(function() {

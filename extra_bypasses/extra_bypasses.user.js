@@ -714,6 +714,12 @@
             link.href = link.getAttribute('href').split('/redir3/?')[1];
         }); }) : null;
 
+    if (/animesgd.net\/out\/\?/.test(url)) { 
+        const decodedUrl = atob(url.split('/out/?')[1]);
+        if (decodedUrl.includes('url=')) {redirect(decodedUrl.split('url=')[1])}
+        if (decodedUrl.includes('redir3/?')) {redirect(decodedUrl.split('/redir3/?')[1])}
+    }
+
     // platinsport.com
     /platinsport.com/.test(url) ? afterDOMLoaded(function() {
         document.querySelectorAll('a[href*="http://bc.vc/"]').forEach(link => {
