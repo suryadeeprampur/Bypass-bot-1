@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.7.2
+// @version        92.7.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2673,7 +2673,11 @@
                     if (getTargetPageRequest.status !== 200) return;
                     const targetPageResponse = await getTargetPageRequest.json();
                     const targetPageURL = targetPageResponse['data']['getDetailPageTarget']['url'];
-                    window.location.href = targetPageURL;
+                    if (targetPageURL === null || !targetPageURL || targetPageURL.trim() === "") {
+                        window.location.href = 'https://adbypass.org/bypass?bypass=' + window.location.href;
+                    } else {
+                        window.location.href = targetPageURL;
+                    }
                 }
             }
 
