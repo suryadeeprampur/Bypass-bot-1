@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.7.3
+// @version        92.7.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -737,7 +737,7 @@
 // @include     /newedutopics.com/
 // @include     /newshuta.in/
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
-// @include     /mayas.travel|eldiario24hrs.com|comomedir.com/
+// @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
 // @include     /render-state.to\/download\/\?link=/
