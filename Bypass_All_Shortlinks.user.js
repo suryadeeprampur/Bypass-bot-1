@@ -1845,9 +1845,15 @@
     /link.unlockner.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn.get-link')}) : null;
 
     //atozcartoonist.me
-    /cybercityhelp.in/.test(url) ? afterDOMLoaded(function() {document.querySelector('#username').value = 'https://www.thomann.de/' + Math.random().toString(36).substring(2, 12)}) : null;
-    /cybercityhelp.in/.test(url) ? afterDOMLoaded(function() {document.querySelector('#tp982').click()}) : null;
-    /cybercityhelp.in/.test(url) ? afterDOMLoaded(function() {if (!document.querySelector('#tp982')) {redirect(document.querySelector('a[href*="go.moonlinks.in"]'))}}) : null;
+    /cybercityhelp.in/.test(url) ? afterDOMLoaded(function() {
+        const formSubmitButton = document.querySelector('#tp982');
+        if (formSubmitButton) {
+            document.querySelector('#username').value = 'https://www.thomann.de/' + Math.random().toString(36).substring(2, 12);
+            formSubmitButton.click();
+        } else {
+            redirect(document.querySelector('a[href*="go.moonlinks.in"]'));
+        }
+    }) : null;
     /go.moonlinks.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.btn')}) : null;
 
     // linkneverdie.net
