@@ -725,7 +725,7 @@
 // @include     /ikramlar.online|segurosdevida.site/
 // @include     /mh.gourlpro.com/
 // @include     /playpastelinks.com/
-// @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
+// @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
 // @include     /surfsees.com|fitnessholic.net/
