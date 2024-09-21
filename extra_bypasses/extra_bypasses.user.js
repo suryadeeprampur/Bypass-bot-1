@@ -155,7 +155,7 @@
 // @include     /ikramlar.online|segurosdevida.site/
 // @include     /mh.gourlpro.com/
 // @include     /playpastelinks.com/
-// @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/
+// @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
 // @include     /surfsees.com|fitnessholic.net/
@@ -798,7 +798,7 @@
     /techyblogs.in|readytechflip.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
-    if (/stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/.test(url)) {
+    if (/stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons).net/.test(url)) {
         const buttonTexts = ["Click here to proceed", "Start", "Begin", "Open", "Click here to start", "Verification", "Get Link", "Click here to verify", "Verify"];
         window.addEventListener('load', function() {setTimeout(function() {
             const buttons = document.querySelectorAll('button, input[type="button"], input[type="submit"]');
