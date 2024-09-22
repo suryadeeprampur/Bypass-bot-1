@@ -221,7 +221,7 @@ shortearn.net
 bigbtc.win
 firefaucet.win
 uptobhai\.*|uplinkto\.*|shortlinkto\.*
-tmail.io|fitdynamos.com
+tmail.io|fitdynamos.com|gamezizo.com
 (exeo|exego).app|(mrgec|emxaw|ijvam).com|evernia.site
 (on-scroll|diudemy|maqal360).com
 (forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|bedrat.xyz|(offeergames|todogame).online
