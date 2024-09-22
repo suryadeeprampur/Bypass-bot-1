@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.7.11
+// @version        92.7.12
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -736,7 +736,7 @@
 // @include     /ontechhindi.com/
 // @include     /thelatintwistcafe.com/
 // @include     /newshuta.in/
-// @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in/
+// @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
