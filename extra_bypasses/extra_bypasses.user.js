@@ -173,6 +173,8 @@
 // @include     /render-state.to\/download\/\?link=/
 // @include     /www.lanoticia.cc/
 // @include     /altearnativasa.com/
+// @include     /importantclass.com/
+// @include     /bebkub.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -824,6 +826,17 @@
         setTimeout(function() {document.querySelector('#tp98').click();}, 3000);
         setTimeout(function() {document.querySelector('#btn6').click();}, 3000);
         setTimeout(function() {document.querySelector('#.tp-blue').click();}, 3000);
+    }) : null;
+
+    // vnshortner - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/110, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/149
+    const clickWithDelay = (selector, delay) => { setTimeout(function() { document.querySelector(selector).click(); }, delay); };
+    /importantclass.com/.test(url) ? afterDOMLoaded(function() {
+        clickWithDelay('#my-btn', 3000);
+    }) : null;
+    /bebkub.com/.test(url) ? afterDOMLoaded(function() {
+        clickWithDelay('#pro-continue', 1000);
+        clickWithDelay('#VerifyBtn', 3000);
+        clickWithDelay('#pro-btn', 5000);
     }) : null;
 
     // inshorturl.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/104

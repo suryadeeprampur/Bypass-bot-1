@@ -743,6 +743,8 @@
 // @include     /render-state.to\/download\/\?link=/
 // @include     /www.lanoticia.cc/
 // @include     /altearnativasa.com/
+// @include     /importantclass.com/
+// @include     /bebkub.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
