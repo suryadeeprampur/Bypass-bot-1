@@ -164,7 +164,7 @@
 // @include     /wp2host.com/
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
-// @include     /newedutopics.com/
+// @include     /thelatintwistcafe.com/
 // @include     /newshuta.in/
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
@@ -818,10 +818,12 @@
         clickIfExists('div.code-block:nth-child(4) > center:nth-child(1) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1)');
     }) : null;
 
-    // publicearn.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/99
-    /newedutopics.com/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('#tp98');
-        clickIfExists('#btn6');
+    // publicearn.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/99, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/161
+    /thelatintwistcafe.com/.test(url) ? afterDOMLoaded(function() {
+        count = 0;
+        setTimeout(function() {document.querySelector('#tp98').click();}, 3000);
+        setTimeout(function() {document.querySelector('#btn6').click();}, 3000);
+        setTimeout(function() {document.querySelector('#.tp-blue').click();}, 3000);
     }) : null;
 
     // inshorturl.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/104

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.7.8
+// @version        92.7.9
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -734,7 +734,7 @@
 // @include     /wp2host.com/
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
-// @include     /newedutopics.com/
+// @include     /thelatintwistcafe.com/
 // @include     /newshuta.in/
 // @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
