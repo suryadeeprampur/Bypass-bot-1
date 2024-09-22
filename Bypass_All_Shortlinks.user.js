@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.7.10
+// @version        92.7.11
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -315,7 +315,7 @@
 // @include /^(https?:\/\/)(.+)?(hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|edprivatedqu|stownrusis|ebaticalfel|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc|businessuniqueidea|plumptofit|cookingpumpkin|fishingbreeze).com|(yexolo|giftpros).net|(aayurvedshastra|allnewspoint).in|chefslink.org|worldtanr.xyz|lawyex.co|mdn.lol)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc|businessuniqueidea|plumptofit|cookingpumpkin|fishingbreeze|ionclub777).com|(yexolo|giftpros).net|(aayurvedshastra|allnewspoint).in|chefslink.org|worldtanr.xyz|lawyex.co|mdn.lol)(\/.*)/
 // @match *://*.shortit.pw/*
 // @include /^(https?:\/\/)(.+)?(short.croclix.me|adz7short.space)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(adshnk.com|adshrink.it)(\/.*)/
@@ -736,7 +736,7 @@
 // @include     /ontechhindi.com/
 // @include     /thelatintwistcafe.com/
 // @include     /newshuta.in/
-// @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com/
+// @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
@@ -1598,7 +1598,7 @@
       if (/^\/([^\/]+)/.test(location.pathname)) {redirect('https://adbypass.org/bypass?bypass=' + location.href, false);}});
     BypassedByBloggerPemula(/(tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space/, function() {
       let profitsfly = setInterval(() => {if (elementExists('.loading-spinner.spacer')) {} else if (!elementExists('.h-captcha') && !bp('#cbt').hasAttribute('disabled')) {clearInterval(profitsfly);ReadytoClick('button#cbt.pfbutton-primary', 1);}}, 2 * 1000);});
-    BypassedByBloggerPemula(/(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc|businessuniqueidea|plumptofit|cookingpumpkin|fishingbreeze).com|(yexolo|giftpros).net|(aayurvedshastra|allnewspoint).in|chefslink.org|worldtanr.xyz|lawyex.co|mdn.lol/, () => {EnableRCF();
+    BypassedByBloggerPemula(/(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc|businessuniqueidea|plumptofit|cookingpumpkin|fishingbreeze|ionclub777).com|(yexolo|giftpros).net|(aayurvedshastra|allnewspoint).in|chefslink.org|worldtanr.xyz|lawyex.co|mdn.lol/, () => {EnableRCF();
       if (elementExists('.g-recaptcha')) {let mdn = setInterval(() => {if (Captchacheck()) {clearInterval(mdn);BypassHD('form[action]', 1);}}, 1 * 1000);} else {setTimeout(() => {BypassHD(GetForm('mdn'));}, 17 * 1000);}});
     BypassedByBloggerPemula(/shortit.pw/, function() {if (elementExists('.bg-light.container')) {
         $('.text-center.text-muted').text('IMPORTANT Note By BloggerPemula : Please Solve the Hcaptcha for Automatically , Dont Solve the Solvemedia . Regards...');}
@@ -2424,8 +2424,8 @@
         clickIfNotDisabled('#gtelinkbtn');
     }) : null;
 
-    // https://hyp.sh/Art07dr (hypershort) - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/101
-    /blog.jytechs.in|mi.miuiflash.com|hypershort.com/.test(url) ? afterDOMLoaded(function() {
+    // https://hyp.sh/Art07dr (hypershort) - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/101 - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/158
+    /blog.jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#generatelink');
         redirectIfExists('#gettinglink');
     }) : null;
