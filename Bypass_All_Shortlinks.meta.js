@@ -552,7 +552,6 @@
 // @grant          GM_getResourceText
 // @match        https://acortalink.me/*
 // @match        https://paster.so/*
-// @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
 // @include     /privatenudes.com\/model/

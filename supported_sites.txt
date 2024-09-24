@@ -532,7 +532,6 @@ linksfly.top
 playstore.pw
 https://acortalink.me/*
 https://paster.so/*
-/(bypass.city|adbypass.org)\/bypass\?bypass=/
 /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 /comohoy.com/
 /privatenudes.com\/model/

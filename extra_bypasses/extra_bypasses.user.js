@@ -820,7 +820,7 @@
         clickIfExists('div.code-block:nth-child(4) > center:nth-child(1) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1)');
     }) : null;
 
-    // publicearn.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/99, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/161
+    // publicearn.com - https://t.me/edutechvn - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/99, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/161
     /thelatintwistcafe.com/.test(url) ? afterDOMLoaded(function() {
         count = 0;
         setTimeout(function() {document.querySelector('#tp98').click();}, 3000);
