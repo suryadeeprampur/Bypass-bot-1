@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8
+// @version        92.8.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -726,6 +726,9 @@
 // @include     /altearnativasa.com/
 // @include     /importantclass.com/
 // @include     /bebkub.com/
+// @include     /secure.moderngyan.com/
+// @include     /earnbox.sattakingcharts.in/
+// @include     /set.seturl.in/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/

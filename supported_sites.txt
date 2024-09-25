@@ -706,6 +706,9 @@ https://paster.so/*
 /altearnativasa.com/
 /importantclass.com/
 /bebkub.com/
+/secure.moderngyan.com/
+/earnbox.sattakingcharts.in/
+/set.seturl.in/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/
