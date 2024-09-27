@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.1
+// @version        92.8.2
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -666,7 +666,6 @@
 // @include     /spacetica.com/
 // @include     /linegee.net|intercelestial.com/
 // @include     /(loanoffering|djmp3world).in|moonplusnews.com/
-// @include     /modijiurl.com/
 // @include     /4hi.in/
 // @include     /lnk.news/
 // @include     /imagereviser.com/

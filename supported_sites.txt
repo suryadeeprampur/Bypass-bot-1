@@ -646,7 +646,6 @@ https://paster.so/*
 /spacetica.com/
 /linegee.net|intercelestial.com/
 /(loanoffering|djmp3world).in|moonplusnews.com/
-/modijiurl.com/
 /4hi.in/
 /lnk.news/
 /imagereviser.com/
