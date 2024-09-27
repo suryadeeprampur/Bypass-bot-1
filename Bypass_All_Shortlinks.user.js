@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.2
+// @version        92.8.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -25,7 +25,6 @@
 // @match *://*.cyberstockofficial.in/*
 // @match *://*.mkvflix.org/*
 // @match *://*.link.bicolink.net/*
-// @match *://*.link.vipurl.in/*
 // @match *://*.infinityskull.com/*
 // @match *://*.sakarnewz.com/*
 // @match *://*.link.linksfire.co/*
@@ -926,7 +925,7 @@
   BypassedByBloggerPemula(/cyberstockofficial.in/, {'/cook.php': [RexBp, 'http://cyberurl.in/'],}, false);
   BypassedByBloggerPemula(/mkvflix.org/, {'/verify/': [RexBp, 'http://go.superfastdownloads.net/'],}, false);
   BypassedByBloggerPemula(/link.bicolink.net/, function() {location = location.href.replace('link', 'go');});
-  BypassedByBloggerPemula(/link.vipurl.in/, function() {location = location.href.replace('link', 'count');});
+  //BypassedByBloggerPemula(/link.vipurl.in/, function() {location = location.href.replace('link', 'count');});
   BypassedByBloggerPemula(/infinityskull.com/, {'/safe.php': ['link', 'https://go.publicearn.com/'],}, false);
   BypassedByBloggerPemula(/sakarnewz.com/, {'/multi/': [RexBp, 'http://multiquality.xyz/download/'],}, false);
   BypassedByBloggerPemula(/link.linksfire.co/, function() {location = location.href.replace('link', 'blog');});

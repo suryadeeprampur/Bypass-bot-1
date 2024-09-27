@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.2
+// @version        92.8.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -25,7 +25,6 @@
 // @match *://*.cyberstockofficial.in/*
 // @match *://*.mkvflix.org/*
 // @match *://*.link.bicolink.net/*
-// @match *://*.link.vipurl.in/*
 // @match *://*.infinityskull.com/*
 // @match *://*.sakarnewz.com/*
 // @match *://*.link.linksfire.co/*
