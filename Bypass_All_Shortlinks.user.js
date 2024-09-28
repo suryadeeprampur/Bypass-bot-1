@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.3
+// @version        92.8.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -727,6 +727,7 @@
 // @include     /secure.moderngyan.com/
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
+// @include     /wikijankari.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
@@ -2178,14 +2179,15 @@
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
-    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8878055 / https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9061651 / https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9296298
-/*     if (/alljntuworld.in/.test(url)) {afterDOMLoaded(function() {
-        //clickIfExists('#tp444');
-        //clickIfExists('#rtg-snp2');
-        //clickIfExists('#gtelinkbtn');
+    // modijiurl - https://t.me/+e1NruB69YZZlNmIx
+     if (/wikijankari.com/.test(url)) {afterDOMLoaded(function() {
+        window.count = 0;
+        clickWithDelay('#tp444', 2000);
+        clickWithDelay('#rtg-snp2', 2000);
+        clickWithDelay('#gtelinkbtn', 2000);
     })}
-    /^(https?:\/\/)(.+)?(modijiurl.com)(\/.*)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled2('a.get-link')}) : null;
- */
+    // /^(https?:\/\/)(.+)?(modijiurl.com)(\/.*)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled2('a.get-link')}) : null;
+ 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8884375
     if (/4hi.in/.test(url)) { afterDOMLoaded(function() {
         clickIfExists('.btn-warning:not(.btn-captcha)');
