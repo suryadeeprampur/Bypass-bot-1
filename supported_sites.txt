@@ -708,6 +708,8 @@ https://paster.so/*
 /earnbox.sattakingcharts.in/
 /set.seturl.in/
 /wikijankari.com/
+/links.kmhd.net\/file/
+/mastramstories.com\/api.php\?api/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/

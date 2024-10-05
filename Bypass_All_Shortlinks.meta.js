@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.7
+// @version        92.8.8
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -728,6 +728,8 @@
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
 // @include     /wikijankari.com/
+// @include     /links.kmhd.net\/file/
+// @include     /mastramstories.com\/api.php\?api/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/

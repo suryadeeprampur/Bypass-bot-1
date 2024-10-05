@@ -178,6 +178,8 @@
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
 // @include     /wikijankari.com/
+// @include     /links.kmhd.net\/file/
+// @include     /mastramstories.com\/api.php\?api/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -880,6 +882,10 @@
         clickIfNotDisabled('#invisibleCaptchaShortlink');
         redirectIfNotDisabled('a.get-link');
     }) : null;
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/168
+    /mastramstories.com\/api.php\?api/.test(url) ? redirect(atob(url.split('?api=')[1])) : null;
+    /links.kmhd.net\/file/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
 
 })();
 
