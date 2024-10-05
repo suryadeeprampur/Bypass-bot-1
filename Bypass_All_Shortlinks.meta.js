@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.6
+// @version        92.8.7
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -731,6 +731,7 @@
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech).com)(\/.*)/
 // @include     /(work.ink|workink.click)\/.*$/
 // @resource    NOTYF_CSS https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css
 // @require     https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js

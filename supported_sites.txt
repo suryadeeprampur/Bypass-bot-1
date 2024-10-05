@@ -711,4 +711,5 @@ https://paster.so/*
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/
+/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech).com)(\/.*)/
 /(work.ink|workink.click)\/.*$/
