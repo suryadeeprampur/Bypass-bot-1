@@ -25,9 +25,10 @@
             function checkForMessage() {
                 const paragraphs = document.getElementsByTagName("p");
                 for (let p of paragraphs) {
-                    if (p.textContent.includes("Click Any Ad & Keep It Open For 15 Seconds To Continue") || p.textContent.includes("Click Any Ad &amp; Keep It Open For 15 Seconds To Unlock Captcha")) {
-                        console.log("Detected the message. Reloading the page...");
-                        //alert("Unbypassable page type. Reloading the page...");
+                    if (p.textContent.includes("Click Any Ad & Keep It Open For 15 Seconds To Continue")) {
+                        location.reload(); // Reload the page
+                        return; // Exit the function after reloading
+                    } else if (p.textContent.includes("Click Any Ad & Keep It Open For 15 Seconds To Unlock Captcha") && isElementVisibleAndEnabled(p)) {
                         location.reload(); // Reload the page
                         return; // Exit the function after reloading
                     }
