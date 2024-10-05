@@ -881,6 +881,11 @@
         redirectIfNotDisabled('a.get-link');
     }) : null;
 
+    // for rinku.me
+    if (/(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech).com/.test(url)) {
+        preventForcedFocusOnWindow();
+    }
+
 })();
 
 (function() {
