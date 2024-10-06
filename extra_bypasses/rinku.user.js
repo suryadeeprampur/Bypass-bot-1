@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Rinku autoclick
-// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech).com|askerlikforum.com.tr)(\/.*)/
 // @run-at       document-start
 // ==/UserScript==
 
@@ -10,7 +10,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech).com/
+    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech).com|askerlikforum.com.tr/
 
     if (domainRegex.test(window.location.href)) {
 
