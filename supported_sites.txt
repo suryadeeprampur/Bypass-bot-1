@@ -710,6 +710,7 @@ https://paster.so/*
 /wikijankari.com/
 /links.kmhd.net\/file/
 /mastramstories.com\/api.php\?api/
+/onlinetntextbooks.com/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/

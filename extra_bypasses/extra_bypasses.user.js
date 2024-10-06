@@ -180,6 +180,7 @@
 // @include     /wikijankari.com/
 // @include     /links.kmhd.net\/file/
 // @include     /mastramstories.com\/api.php\?api/
+// @include     /onlinetntextbooks.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -886,6 +887,9 @@
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/168
     /mastramstories.com\/api.php\?api/.test(url) ? redirect(atob(url.split('?api=')[1])) : null;
     /links.kmhd.net\/file/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
+
+    // https://droplink.co/4eSowGz4 used by leechpremium.link step 2
+    /onlinetntextbooks.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#go_d2');}) : null;
 
 })();
 
