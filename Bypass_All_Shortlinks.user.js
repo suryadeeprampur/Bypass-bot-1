@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.11
+// @version        92.8.12
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2812,10 +2812,7 @@
             function checkForMessage() {
                 const paragraphs = document.getElementsByTagName("p");
                 for (let p of paragraphs) {
-                    if (p.textContent.includes("Click Any Ad & Keep It Open For 15 Seconds To Continue")) {
-                        location.reload(); // Reload the page
-                        return; // Exit the function after reloading
-                    } else if (p.textContent.includes("Click Any Ad & Keep It Open For 15 Seconds To Unlock Captcha") && isElementVisibleAndEnabled(p)) {
+                    if (/.*Click.+Ad.*To Continue.*/is.test(p.textContent) || (/.*Click.+Ad.*To.+Unlock.+Captcha.*/is.test(p.textContent) && isElementVisibleAndEnabled(p))) {
                         location.reload(); // Reload the page
                         return; // Exit the function after reloading
                     }
