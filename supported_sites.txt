@@ -711,6 +711,7 @@ https://paster.so/*
 /links.kmhd.net\/file/
 /mastramstories.com\/api.php\?api/
 /onlinetntextbooks.com/
+/www.saferoms.com\/\?go=/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/

@@ -181,6 +181,7 @@
 // @include     /links.kmhd.net\/file/
 // @include     /mastramstories.com\/api.php\?api/
 // @include     /onlinetntextbooks.com/
+// @include     /www.saferoms.com\/\?go=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -890,6 +891,14 @@
 
     // https://droplink.co/4eSowGz4 used by leechpremium.link step 2
     /onlinetntextbooks.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#go_d2');}) : null;
+
+    // saferoms.com
+    /www.saferoms.com\/\?go=/.test(url) ? afterDOMLoaded(function() {
+        let dlLink = document.querySelector('#wpsafe-link > a:nth-child(1)').href;
+        dlLink = decodeURIComponent(atob(dlLink.split('safelink_redirect=')[1]));
+        dlLink = dlLink.match(/"safelink":"(.*?)"/)[1];
+        if (confirm(`Confirm to redirect to \n${dlLink.split('https://href.li/?')[1]}\n`)) {redirect(dlLink);}
+    }) : null;
 
 })();
 
