@@ -893,12 +893,12 @@
     /onlinetntextbooks.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#go_d2');}) : null;
 
     // saferoms.com
-    /www.saferoms.com\/\?go=/.test(url) ? afterDOMLoaded(function() {
+    /* /www.saferoms.com\/\?go=/.test(url) ? afterDOMLoaded(function() {
         let dlLink = document.querySelector('#wpsafe-link > a:nth-child(1)').href;
         dlLink = decodeURIComponent(atob(dlLink.split('safelink_redirect=')[1]));
         dlLink = dlLink.match(/"safelink":"(.*?)"/)[1];
         if (confirm(`Confirm to redirect to \n${dlLink.split('https://href.li/?')[1]}\n`)) {redirect(dlLink);}
-    }) : null;
+    }) : null; */
 
 })();
 
