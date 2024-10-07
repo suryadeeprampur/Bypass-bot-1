@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.14
+// @version        92.8.15
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2802,9 +2802,34 @@
     "use strict";
 
     const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi).com|askerlikforum.com.tr/
-
     if (domainRegex.test(window.location.href)) {
 
+        // Backup the current Rinku.me Code in case we get to 404 and we need to try again
+            // Function to get rinku code from URL parameters (example: https://listofthis.com/backup/w/?get=uPmc5&short=rinku.me)
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                const results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+            // Save rinku code in memory
+            if (window.location.href.includes('/backup/w/')) {
+                //alert('Saving Rinku.me code in memory... The code is ' + getUrlParameter('get'));
+                localStorage.setItem('shortParam', getUrlParameter('short'));
+            }
+        // Try again when getting to 404 page (example: https://listofthis.com/bypass.php)
+        if (window.location.href.includes('/bypass.php')) {
+            const savedGetParam = localStorage.getItem('getParam');
+            if (savedGetParam) {
+                //Wait for the DOM to be fully loaded (to see that it is a 404 page)
+                window.addEventListener('load', function() {
+                    //alert('Press OK to try again going to:\n' + `https://rinku.me/${savedGetParam}`);
+                    window.location.href = `https://rinku.me/${savedGetParam}`;
+                });
+            }
+        }
+
+        // Wait for page to be fully loaded
         window.addEventListener('load', function() {
 
             // Override the hasFocus function
