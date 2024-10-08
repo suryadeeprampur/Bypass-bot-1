@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.15
+// @version        92.8.16
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2385,12 +2385,12 @@
     /onlinetntextbooks.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#go_d2');}) : null;
 
     // saferoms.com
-    /* /www.saferoms.com\/\?go=/.test(url) ? afterDOMLoaded(function() {
+    /www.saferoms.com\/\?go=/.test(url) ? afterDOMLoaded(function() {
         let dlLink = document.querySelector('#wpsafe-link > a:nth-child(1)').href;
         dlLink = decodeURIComponent(atob(dlLink.split('safelink_redirect=')[1]));
         dlLink = dlLink.match(/"safelink":"(.*?)"/)[1];
         if (confirm(`Confirm to redirect to \n${dlLink.split('https://href.li/?')[1]}\n`)) {redirect(dlLink);}
-    }) : null; */
+    }) : null;
 
 })();
 
@@ -2823,8 +2823,9 @@
             }
             // Save rinku code in memory
             if (window.location.href.includes('/backup/w/')) {
-                //alert('Saving Rinku.me code in memory... The code is ' + getUrlParameter('get'));
-                localStorage.setItem('shortParam', getUrlParameter('short'));
+                const codeParameter = 'get';
+                //alert('Saving Rinku.me code in memory... The code is ' + getUrlParameter(codeParameter));
+                localStorage.setItem('getParam', getUrlParameter(codeParameter));
             }
         // Try again when getting to 404 page (example: https://listofthis.com/bypass.php)
         if (window.location.href.includes('/bypass.php')) {

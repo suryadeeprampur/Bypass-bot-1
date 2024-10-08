@@ -23,8 +23,9 @@
             }
             // Save rinku code in memory
             if (window.location.href.includes('/backup/w/')) {
-                //alert('Saving Rinku.me code in memory... The code is ' + getUrlParameter('get'));
-                localStorage.setItem('shortParam', getUrlParameter('short'));
+                const codeParameter = 'get';
+                //alert('Saving Rinku.me code in memory... The code is ' + getUrlParameter(codeParameter));
+                localStorage.setItem('getParam', getUrlParameter(codeParameter));
             }
         // Try again when getting to 404 page (example: https://listofthis.com/bypass.php)
         if (window.location.href.includes('/bypass.php')) {
