@@ -727,7 +727,6 @@
 // @include     /secure.moderngyan.com/
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
-// @include     /wikijankari.com/
 // @include     /links.kmhd.net\/file/
 // @include     /mastramstories.com\/api.php\?api/
 // @include     /onlinetntextbooks.com/
@@ -2184,15 +2183,6 @@
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
-    // modijiurl - https://t.me/+e1NruB69YZZlNmIx
-     if (/wikijankari.com/.test(url)) {afterDOMLoaded(function() {
-        window.count = 0;
-        clickWithDelay('#tp444', 2000);
-        clickWithDelay('#rtg-snp2', 2000);
-        clickWithDelay('#gtelinkbtn', 2000);
-    })}
-    // /^(https?:\/\/)(.+)?(modijiurl.com)(\/.*)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled2('a.get-link')}) : null;
- 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8884375
     if (/4hi.in/.test(url)) { afterDOMLoaded(function() {
         clickIfExists('.btn-warning:not(.btn-captcha)');

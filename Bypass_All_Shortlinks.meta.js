@@ -727,7 +727,6 @@
 // @include     /secure.moderngyan.com/
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
-// @include     /wikijankari.com/
 // @include     /links.kmhd.net\/file/
 // @include     /mastramstories.com\/api.php\?api/
 // @include     /onlinetntextbooks.com/

@@ -707,7 +707,6 @@ https://paster.so/*
 /secure.moderngyan.com/
 /earnbox.sattakingcharts.in/
 /set.seturl.in/
-/wikijankari.com/
 /links.kmhd.net\/file/
 /mastramstories.com\/api.php\?api/
 /onlinetntextbooks.com/
