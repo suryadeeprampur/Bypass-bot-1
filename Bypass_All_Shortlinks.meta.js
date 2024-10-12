@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.20
+// @version        92.8.21
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -731,6 +731,7 @@
 // @include     /mastramstories.com\/api.php\?api/
 // @include     /onlinetntextbooks.com/
 // @include     /www.saferoms.com\/\?go=/
+// @include     /hdpastes.com\/\?v=/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/

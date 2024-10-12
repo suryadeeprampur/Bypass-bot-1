@@ -181,6 +181,7 @@
 // @include     /mastramstories.com\/api.php\?api/
 // @include     /onlinetntextbooks.com/
 // @include     /www.saferoms.com\/\?go=/
+// @include     /hdpastes.com\/\?v=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -889,6 +890,10 @@
         dlLink = dlLink.match(/"safelink":"(.*?)"/)[1];
         if (confirm(`Confirm to redirect to \n${dlLink.split('https://href.li/?')[1]}\n`)) {redirect(dlLink);}
     }) : null;
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/170
+    const clickIfRecaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (window.grecaptcha.getResponse().length !== 0) { clearInterval(intervalId); button.click(); } }, 1000); }; 
+    /hdpastes.com\/\?v=/.test(url) ? afterDOMLoaded(function() {clickIfRecaptchaSolved('.btn-success');}) : null;
 
 })();
 
