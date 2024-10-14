@@ -558,7 +558,8 @@ https://paster.so/*
 /((infytips|remixodiadj).in|(cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 /dropgalaxy.(com|co)\/drive/
 /short-ly.co/
-/(shramikcard|pmkisanlists|techishant|cinedesi).in|cookad.net|tejtime24.com/
+/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
+/uqozy.com|posterify.net|drinkspartner.com/
 /blogging.techworldx.net|10beasts.biz/
 /starsddl.me\/short/
 /tech.unblockedgames.world/
@@ -712,6 +713,7 @@ https://paster.so/*
 /onlinetntextbooks.com/
 /www.saferoms.com\/\?go=/
 /hdpastes.com\/\?v=/
+/shrinkforearn.in/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.22
+// @version        92.8.23
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -578,7 +578,8 @@
 // @include     /((infytips|remixodiadj).in|(cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
-// @include     /(shramikcard|pmkisanlists|techishant|cinedesi).in|cookad.net|tejtime24.com/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
+// @include     /uqozy.com|posterify.net|drinkspartner.com/
 // @include     /blogging.techworldx.net|10beasts.biz/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
@@ -732,6 +733,7 @@
 // @include     /onlinetntextbooks.com/
 // @include     /www.saferoms.com\/\?go=/
 // @include     /hdpastes.com\/\?v=/
+// @include     /shrinkforearn.in/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
@@ -1910,10 +1912,26 @@
     /short-ly.co/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-secondary')}) : null;
 
     // multimovies.space, https://github.com/FastForwardTeam/FastForward/issues/1434, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/91
-    //##Intermediate buttons
-    const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector(buttonSelector); if (button && button.textContent.includes(targetText) && !(targetText == 'Get Link')) { setTimeout(() => button.click(), 500); } }, 2000));
-    if (/(shramikcard|pmkisanlists|techishant|cinedesi).in|cookad.net|tejtime24.com/.test(url)){
+    function modifyScript(searchText, replacementText) {
+        document.querySelectorAll('script').forEach(script => {
+            if (script.innerText.includes(searchText)) {
+                script.remove();
+                document.body.appendChild(Object.assign(document.createElement('script'), {
+                    text: script.innerText.replace(new RegExp(searchText, 'g'), replacementText)
+                }));
+            }
+        });
+    }
+    const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => {
+        const button = document.querySelector(buttonSelector);
+        if (button && button.textContent.includes(targetText) && !(targetText == 'Get Link')) {
+            setTimeout(() => button.click(), 500);
+        }
+    }, 2000));
+    if (/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/.test(url)){
         preventForcedFocusOnWindow();//preventForcedFocusOnWindow not working for this site apparently
+        afterWindowLoaded(function() {modifyScript('timeLeft = duration', 'timeLeft = 0')}); // skip timers
+        //##Intermediate buttons
         handleShamikcardButtons('#topButton', 'Click to Continue');
         handleShamikcardButtons('#topButton', 'Continue');
         handleShamikcardButtons('#bottomButton', 'Click to Continue');
@@ -1923,6 +1941,22 @@
         (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))(); //Final button
     }
     /linkshortify.in|lksfy.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.get-link')}) : null; // added for https://lksfy.com/59EhFF
+
+    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10649981
+    // https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/263369
+    // https://shrinkforearn.xyz/vAs1ikmO - leechpremium.link
+    const clickWithDelay = (selector, delay) => { setTimeout(function() { document.querySelector(selector).click(); }, delay); };
+    if (/uqozy.com|posterify.net|drinkspartner.com/.test(url)) {
+        afterDOMLoaded(function() {
+            modifyScript('timeLeft = duration', 'timeLeft = 0'); // skip timers
+            clickWithDelay('#bottomButton', 2000);
+            clickWithDelay('#open-link', 6000);
+        });
+    }
+    /shrinkforearn.in/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.get-link')}) : null;
+
+    // https://droplink.co/4eSowGz4 used by leechpremium.link step 2
+    /onlinetntextbooks.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#go_d2');}) : null;
 
     // ssrmovies.rent mkvhub.rent hdhub4u.rsvp
     if (/blogging.techworldx.net|10beasts.biz/.test(url)) {
@@ -2330,7 +2364,6 @@
     }) : null;
 
     // vnshortner - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/110, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/149
-    const clickWithDelay = (selector, delay) => { setTimeout(function() { document.querySelector(selector).click(); }, delay); };
     /importantclass.com/.test(url) ? afterDOMLoaded(function() {
         clickWithDelay('#my-btn', 3000);
     }) : null;
@@ -2371,9 +2404,6 @@
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/168
     /mastramstories.com\/api.php\?api/.test(url) ? redirect(atob(url.split('?api=')[1])) : null;
     /links.kmhd.net\/file/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
-
-    // https://droplink.co/4eSowGz4 used by leechpremium.link step 2
-    /onlinetntextbooks.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#go_d2');}) : null;
 
     // saferoms.com
     /www.saferoms.com\/\?go=/.test(url) ? afterDOMLoaded(function() {

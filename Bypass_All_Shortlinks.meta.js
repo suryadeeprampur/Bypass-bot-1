@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.22
+// @version        92.8.23
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -578,7 +578,8 @@
 // @include     /((infytips|remixodiadj).in|(cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top)/
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
-// @include     /(shramikcard|pmkisanlists|techishant|cinedesi).in|cookad.net|tejtime24.com/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
+// @include     /uqozy.com|posterify.net|drinkspartner.com/
 // @include     /blogging.techworldx.net|10beasts.biz/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
@@ -732,6 +733,7 @@
 // @include     /onlinetntextbooks.com/
 // @include     /www.saferoms.com\/\?go=/
 // @include     /hdpastes.com\/\?v=/
+// @include     /shrinkforearn.in/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
