@@ -155,7 +155,7 @@
 // @include     /ikramlar.online|segurosdevida.site/
 // @include     /mh.gourlpro.com/
 // @include     /playpastelinks.com/
-// @include     /stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons).net/
+// @include     /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
 // @include     /surfsees.com|fitnessholic.net/
@@ -845,12 +845,64 @@
     /techyblogs.in|readytechflip.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
-    if (/stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons).net/.test(url)) {
-        const buttonTexts = ["Click here to proceed", "Start", "Begin", "Open", "Click here to start", "Verification", "Get Link", "Click here to verify", "Verify"];
-        window.addEventListener('load', function() {setTimeout(function() {
-            const buttons = document.querySelectorAll('button, input[type="button"], input[type="submit"]');
-            buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {button.click();}});
-        }, 6000);});
+    function checkCloudflareCaptchaSolved() {
+        if (document.querySelector('.cf-turnstile') || document.querySelector('#captcha-turnstile')) {
+            return window.turnstile.getResponse().length !== 0;
+        }
+        return true;
+    }
+    function checkGoogleRecaptchaSolved() {
+        if (document.querySelector('.g-recaptcha') || document.querySelector('#captchaShortlink') || document.querySelector('#captcha_container') || document.querySelector('#captchaShortlinker')) {
+            return window.grecaptcha.getResponse().length !== 0;
+        }
+        return true;
+    }
+    if (/stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/.test(url)) {
+        function clickAllValidButtons() {
+
+            function clickAvailableButtons(buttonTexts) {
+                let buttons = document.querySelectorAll('button, input[type="button"], input[type="submit"]:focus-visible');
+                buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {button.click();}});
+            }
+
+            //Different actions depending on current step
+            let currentStep = document.querySelector('span.text-center').innerText.trim();
+            let buttonTexts = [];
+            if (currentStep.includes('step 1')) {
+                buttonTexts = ['Click here to proceed'];
+                clickAvailableButtons(buttonTexts);
+            } else if (currentStep.includes('step 2')) {
+                buttonTexts = ['Click here to start', 'Start', 'Begin', 'Open'];
+                clickAvailableButtons(buttonTexts);
+                if (checkGoogleRecaptchaSolved() && checkCloudflareCaptchaSolved()) {
+                    buttonTexts = ['Verify', 'Click here to verify'];
+                    clickAvailableButtons(buttonTexts);
+                }
+            } else if (currentStep.includes('step 3')) {
+                if (document.querySelector('.progress-done').innerHTML.trim() === '0%'){
+                    buttonTexts = ['Click here to start', 'Start','Begin', 'Open'];
+                    clickAvailableButtons(buttonTexts);
+                } else if (document.querySelector('.progress-done').style.width === '100%'){
+                    buttonTexts = ['Verify', 'Click here to verify'];
+                    clickAvailableButtons(buttonTexts);
+                    setTimeout(function() {
+                        buttonTexts = ['Next Post', 'Next step', 'Get to next step', 'Go next', 'Continue'];
+                        clickAvailableButtons(buttonTexts);
+                    }, 2000);
+                }
+            } else if (currentStep.includes('step 4')) {
+                buttonTexts = ['Open', 'Start', 'Begin', 'Click here to start'];
+                clickAvailableButtons(buttonTexts);
+                setTimeout(function() {
+                    buttonTexts = ['Click here to verify', 'Verify', 'Please wait..', 'Loading..'];
+                    clickAvailableButtons(buttonTexts);
+                }, 8000)
+            }
+
+        }
+
+        window.addEventListener('load', function() {clickAllValidButtons();}); //Click all the valid buttons when the page loads
+        setInterval(function() {clickAllValidButtons();}, 2000); //Click all the valid buttons every 2 seconds
     }
 
     // uploadrar - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/87
