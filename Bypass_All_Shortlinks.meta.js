@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.25
+// @version        92.8.26
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -736,6 +736,7 @@
 // @include     /shrinkforearn.in/
 // @include     /encurtads.net/
 // @include     /shrtbr.com/
+// @include     /dramaday.me\/[^\/]+\/$/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/

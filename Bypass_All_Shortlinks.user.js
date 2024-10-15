@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.25
+// @version        92.8.26
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -736,6 +736,7 @@
 // @include     /shrinkforearn.in/
 // @include     /encurtads.net/
 // @include     /shrtbr.com/
+// @include     /dramaday.me\/[^\/]+\/$/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
@@ -1878,11 +1879,26 @@
     // desiremovies.wales
     /gyanigurus.net\/view/.test(url) ? afterDOMLoaded(function() {clickIfExists('#show_button')}) : null;
 
+    // dramaday.me - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/21
+    /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-1')}) : null;
+    /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-2')}) : null;
+    /moneyblink.com\/ready\/go\?u=/.test(url)? redirect(atob(url.split('?u=')[1])) : null;
+
+    // dramaday.me - linkspy.cc & droplink.co/st?api=...&url=... concatenated
     //ovagames.com - linkspy.cc & clicksfly.com|shrinkme.io|clk.sh|shrinkearn.com|clk.asia|clk.wiki concatenated - https://github.com/FastForwardTeam/FastForward/issues/1352
     if (/linkspy.cc\/tr/.test(url)){
-        let decodedUrl = atob(url.split('/tr/')[1]);
-        let urlParam = getParam(decodedUrl,'url');
-        urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
+        const decodedUrl = atob(url.split('/tr/')[1]);
+        const urlParam = getParam(decodedUrl,'url');
+        if (!urlParam) redirect(decodedUrl); //default case
+        redirect(urlParam); //case for dramaday.me
+        redirect(atob(urlParam)); //case for ovagames.com
+    }
+    if (/linkspy.cc\/\/a/.test(url) && url.includes('aHR0')) {
+        const decodedUrl = atob(url.split('_')[1]);
+        const urlParam = getParam(decodedUrl,'url');
+        if (!urlParam) redirect(decodedUrl); //default case
+        redirect(urlParam); //case for dramaday.me
+        redirect(atob(urlParam)); //case for ovagames.com
     }
     /www.ovagames.com\/.*\.html$/.test(url) ? afterWindowLoaded(function() {
         document.querySelectorAll('a[href*="https://l4s.cc/q/e/1f/aHR0"]').forEach(link => {
@@ -1890,11 +1906,10 @@
             let urlParam = getParam(decodedUrl,'url');
             urlParam ? link.href = atob(urlParam) : link.href = decodedUrl;
         }); }) : null;
-    if (/linkspy.cc\/\/a/.test(url) && url.includes('aHR0')) {
-        let decodedUrl = atob('aHR0' + url.split('aHR0')[1]);
-        let urlParam = getParam(decodedUrl,'url');
-        urlParam ? redirect(atob(urlParam)) : redirect(decodedUrl);
-    }
+    /dramaday.me\/[^\/]+\/$/.test(url) ? afterWindowLoaded(function() {
+        document.querySelectorAll('a[href*="https://l4s.cc/q/e/482/"]').forEach(link => {
+            link.href = atob(link.getAttribute('href').split('/482/')[1]);
+        }); }) : null;
 
     //dropgalaxy https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/2
     /dropgalaxy.(com|co)\/drive/.test(url) ? afterDOMLoaded(function() {clickIfExists('#method_free')}) : null; //1st page
@@ -2286,11 +2301,6 @@
         document.querySelectorAll('a[href*="https://toonhub4u.net/redirect/main.php?url="]').forEach(link => {
             link.href = atob(link.getAttribute('href').split('?url=')[1]);
         }); }) : null;
-
-    // dramaday.me - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/21
-    /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-1')}) : null;
-    /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-2')}) : null;
-    /moneyblink.com\/ready\/go\?u=/.test(url)? redirect(atob(url.split('?u=')[1])) : null;
 
     // megalinks (used in peliculasmega1k.com)
     /megalinks.info\/index.php\?v=/.test(url) ? clickIfExists('#continue') : null;

@@ -716,6 +716,7 @@ https://paster.so/*
 /shrinkforearn.in/
 /encurtads.net/
 /shrtbr.com/
+/dramaday.me\/[^\/]+\/$/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/
