@@ -1949,8 +1949,8 @@
     if (/uqozy.com|posterify.net|drinkspartner.com/.test(url)) {
         afterDOMLoaded(function() {
             modifyScript('timeLeft = duration', 'timeLeft = 0'); // skip timers
-            clickWithDelay('#bottomButton', 2000);
-            clickWithDelay('#open-link', 6000);
+            clickWithDelay('#bottomButton', 0);
+            clickWithDelay('#open-link', 3000);
         });
     }
     /shrinkforearn.in/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.get-link')}) : null;
