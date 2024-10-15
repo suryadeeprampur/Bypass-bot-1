@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Rinku autoclick
-// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
 // @run-at       document-start
 // ==/UserScript==
 
@@ -10,7 +10,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv).com|(makego|sakazi).net|askerlikforum.com.tr/
+    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber).com|(makego|sakazi).net|askerlikforum.com.tr/
     if (domainRegex.test(window.location.href)) {
 
         // Backup the current Rinku.me Code in case we get to 404 and we need to try again
@@ -51,7 +51,7 @@
             function checkForMessage() {
                 const paragraphs = document.getElementsByTagName("p");
                 for (let p of paragraphs) {
-                    if (/.*Click.+Ad.*To Continue.*/is.test(p.textContent) || (/.*Click.+Ad.*To.+Unlock.+Captcha.*/is.test(p.textContent) && isElementVisibleAndEnabled(p))) {
+                    if (/.*Click.+Ad.*To Continue.*/is.test(p.textContent) || (/.*Click.+Ad.*To.+Unlock.+Captcha.*/is.test(p.textContent) && isElementVisibleAndEnabled(p)) || ('You Must Click And Stay On The Ad Page To Continue!'.test(p.textContent) && isElementVisibleAndEnabled(p))) {
                         location.reload(); // Reload the page
                         return; // Exit the function after reloading
                     }

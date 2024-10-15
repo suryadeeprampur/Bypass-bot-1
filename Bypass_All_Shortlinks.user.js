@@ -739,7 +739,7 @@
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
-// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
 // @include     /(work.ink|workink.click)\/.*$/
 // @resource    NOTYF_CSS https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css
 // @require     https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js
@@ -2893,7 +2893,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv).com|(makego|sakazi).net|askerlikforum.com.tr/
+    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber).com|(makego|sakazi).net|askerlikforum.com.tr/
     if (domainRegex.test(window.location.href)) {
 
         // Backup the current Rinku.me Code in case we get to 404 and we need to try again
@@ -2934,7 +2934,7 @@
             function checkForMessage() {
                 const paragraphs = document.getElementsByTagName("p");
                 for (let p of paragraphs) {
-                    if (/.*Click.+Ad.*To Continue.*/is.test(p.textContent) || (/.*Click.+Ad.*To.+Unlock.+Captcha.*/is.test(p.textContent) && isElementVisibleAndEnabled(p))) {
+                    if (/.*Click.+Ad.*To Continue.*/is.test(p.textContent) || (/.*Click.+Ad.*To.+Unlock.+Captcha.*/is.test(p.textContent) && isElementVisibleAndEnabled(p)) || ('You Must Click And Stay On The Ad Page To Continue!'.test(p.textContent) && isElementVisibleAndEnabled(p))) {
                         location.reload(); // Reload the page
                         return; // Exit the function after reloading
                     }
