@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.23
+// @version        92.8.24
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -734,6 +734,8 @@
 // @include     /www.saferoms.com\/\?go=/
 // @include     /hdpastes.com\/\?v=/
 // @include     /shrinkforearn.in/
+// @include     /encurtads.net/
+// @include     /shrtbr.com/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/

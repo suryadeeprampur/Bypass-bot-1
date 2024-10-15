@@ -184,6 +184,8 @@
 // @include     /www.saferoms.com\/\?go=/
 // @include     /hdpastes.com\/\?v=/
 // @include     /shrinkforearn.in/
+// @include     /encurtads.net/
+// @include     /shrtbr.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -924,6 +926,10 @@
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/170
     const clickIfRecaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (window.grecaptcha.getResponse().length !== 0) { clearInterval(intervalId); button.click(); } }, 1000); }; 
     /hdpastes.com\/\?v=/.test(url) ? afterDOMLoaded(function() {clickIfRecaptchaSolved('.btn-success');}) : null;
+
+    // shrtbr.com/aaNEJEXp - t.me/xred2 - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/122
+    /encurtads.net/.test(url) ? afterDOMLoaded(function() { redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]);}) : null;
+    /shrtbr.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('a.get-link.btn.btn-lg.btn-success:not(.disabled):not(div.banner:nth-child(4) > div:nth-child(1) > a:nth-child(1))');}) : null;
 
 })();
 

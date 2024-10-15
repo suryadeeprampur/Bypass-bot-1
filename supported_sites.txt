@@ -714,6 +714,8 @@ https://paster.so/*
 /www.saferoms.com\/\?go=/
 /hdpastes.com\/\?v=/
 /shrinkforearn.in/
+/encurtads.net/
+/shrtbr.com/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/
