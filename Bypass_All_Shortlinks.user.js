@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.29
+// @version        92.8.30
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -232,6 +232,7 @@
 // @match *://*.bigbtc.win/*
 // @match *://*.firefaucet.win/*
 // @include /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
+// @include /^(https?:\/\/)(.+)?((gamezizo.com|tmail.io))(\/.*)/
 // @include /^(https?:\/\/)(.+)?((exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|bedrat.xyz|(offeergames|todogame).online)(\/.*)/
@@ -550,9 +551,6 @@
 // @grant          GM_getResourceText
 // @match        https://acortalink.me/*
 // @match       https://fitdynamos.com/*
-// @match       https://gamezizo.com/*
-// @match       https://tmail.io/*
-// @match       https://fc-lc.com/*
 // @match       https://fc-lc.xyz/*
 // @match        https://paster.so/*
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
@@ -1378,8 +1376,8 @@
     BypassedByBloggerPemula(/firefaucet.win/, function() {if (elementExists("form[method='post']")) {let firefaucet = setInterval(() => {
       if (Captchacheck()) {ClickIfExists('button[type=submit]');}}, 2 * 1000);} else {ClickIfExists('#get_reward_button', 1);}});
     BypassedByBloggerPemula(/uptobhai\.*|uplinkto\.*|shortlinkto\.*/, function() { ClickIfExists('.btn-block.btn-primary.btn', 2);});
-    /*BypassedByBloggerPemula(/fitdynamos.com|gamizo.com|tmail.io)/, function() {
-      if (elementExists('#next')) {SubmitIfExists('form.text-center', 3);} else {ClickIfExists('#surl', 5, 'setInterval');}});*/
+    BypassedByBloggerPemula(/(gamezizo.com|tmail.io)/, function() { //fc-lc type 2 - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/162
+      if (elementExists('#next')) {SubmitIfExists('form.text-center', 3);} else {ClickIfExists('#surl', 5, 'setInterval');}});
     BypassedByBloggerPemula(/(exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site/, function() {ClickIfExists('#invisibleCaptchaShortlink', 2);SubmitIfExists('#before-captcha', 3);
       let exeo = setInterval(() => {if (bp('.timer').innerText == '0') {clearInterval(exeo);ReadytoClick('#submit-button');}}, 2 * 1000);});
     BypassedByBloggerPemula(/(on-scroll|diudemy|maqal360).com/, function() {EnableRCF();let adlink = setInterval(() => {
@@ -1813,12 +1811,13 @@
     /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
-    //fc-lc
-    /^https:\/\/(fc-lc\.com|fc-lc\.xyz)\/.*$/.test(url) ? afterWindowLoaded(function() {
+    // fc-lc
+    /^https:\/\/(fc-lc.xyz)\/.*$/.test(url) ? afterWindowLoaded(function() {
         clickIfExists('#invisibleCaptchaShortlink');
     }) : null; 
-    // extra steps for some fc-lc cases: https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277
-    /^https:\/\/(fitdynamos\.com|gamizo\.com|tmail\.io)\/.*$/.test(url) ? afterWindowLoaded(function() {
+    //type 1:https://fc-lc.com/eA2fk - https://github.com/uBlockOrigin/uAssets/pull/20826 - https://github.com/uBlockOrigin/uAssets/issues/25210
+    //(different from type2: https://fc-lc.xyz/ymUtEPUB which leads to gamezizo.com, https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/162)
+    /^https:\/\/(fitdynamos.com)\/.*$/.test(url) ? afterWindowLoaded(function() {
         clickIfExists('#next');
         clickIfExists('#scroll:not(.hidden)');
         clickIfExists('#glink:not(.hidden)');

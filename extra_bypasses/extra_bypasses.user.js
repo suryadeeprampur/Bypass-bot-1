@@ -186,9 +186,6 @@
 // @include     /shrtbr.com/
 // @include     /dramaday.me\/[^\/]+\/$/
 // @match       https://fitdynamos.com/*
-// @match       https://gamezizo.com/*
-// @match       https://tmail.io/*
-// @match       https://fc-lc.com/*
 // @match       https://fc-lc.xyz/*
 // @run-at      document-start
 // ==/UserScript==
@@ -322,12 +319,13 @@
     /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
-    //fc-lc
-    /^https:\/\/(fc-lc\.com|fc-lc\.xyz)\/.*$/.test(url) ? afterWindowLoaded(function() {
+    // fc-lc
+    /^https:\/\/(fc-lc.xyz)\/.*$/.test(url) ? afterWindowLoaded(function() {
         clickIfExists('#invisibleCaptchaShortlink');
     }) : null; 
-    // extra steps for some fc-lc cases: https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277
-    /^https:\/\/(fitdynamos\.com|gamizo\.com|tmail\.io)\/.*$/.test(url) ? afterWindowLoaded(function() {
+    //type 1:https://fc-lc.com/eA2fk - https://github.com/uBlockOrigin/uAssets/pull/20826 - https://github.com/uBlockOrigin/uAssets/issues/25210
+    //(different from type2: https://fc-lc.xyz/ymUtEPUB which leads to gamezizo.com, https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/162)
+    /^https:\/\/(fitdynamos.com)\/.*$/.test(url) ? afterWindowLoaded(function() {
         clickIfExists('#next');
         clickIfExists('#scroll:not(.hidden)');
         clickIfExists('#glink:not(.hidden)');

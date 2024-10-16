@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.29
+// @version        92.8.30
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -232,6 +232,7 @@
 // @match *://*.bigbtc.win/*
 // @match *://*.firefaucet.win/*
 // @include /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
+// @include /^(https?:\/\/)(.+)?((gamezizo.com|tmail.io))(\/.*)/
 // @include /^(https?:\/\/)(.+)?((exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|bedrat.xyz|(offeergames|todogame).online)(\/.*)/
@@ -550,9 +551,6 @@
 // @grant          GM_getResourceText
 // @match        https://acortalink.me/*
 // @match       https://fitdynamos.com/*
-// @match       https://gamezizo.com/*
-// @match       https://tmail.io/*
-// @match       https://fc-lc.com/*
 // @match       https://fc-lc.xyz/*
 // @match        https://paster.so/*
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/

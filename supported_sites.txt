@@ -214,6 +214,7 @@ shortearn.net
 bigbtc.win
 firefaucet.win
 uptobhai\.*|uplinkto\.*|shortlinkto\.*
+(gamezizo.com|tmail.io)
 (exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site
 (on-scroll|diudemy|maqal360).com
 (forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|bedrat.xyz|(offeergames|todogame).online
@@ -530,9 +531,6 @@ linksfly.top
 playstore.pw
 https://acortalink.me/*
 https://fitdynamos.com/*
-https://gamezizo.com/*
-https://tmail.io/*
-https://fc-lc.com/*
 https://fc-lc.xyz/*
 https://paster.so/*
 /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
