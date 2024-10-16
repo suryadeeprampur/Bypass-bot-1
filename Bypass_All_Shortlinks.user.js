@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.28
+// @version        92.8.29
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -1814,17 +1814,15 @@
     /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     //fc-lc
-    /* /^https:\/\/(fc-lc\.com|fc-lc\.xyz)\/.*$/.test(url) ? afterWindowLoaded(function() {
-        if (checkCloudflareCaptchaSolved() && checkGoogleRecaptchaSolved()) {
-            clickWithDelay('#invisibleCaptchaShortlink', 3000);
-        }
-    }) : null; */
+    /^https:\/\/(fc-lc\.com|fc-lc\.xyz)\/.*$/.test(url) ? afterWindowLoaded(function() {
+        clickIfExists('#invisibleCaptchaShortlink');
+    }) : null; 
     // extra steps for some fc-lc cases: https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277
     /^https:\/\/(fitdynamos\.com|gamizo\.com|tmail\.io)\/.*$/.test(url) ? afterWindowLoaded(function() {
         clickIfExists('#next');
-        //clickIfVisible('#scroll');
-        //clickIfVisible('#glink');
-        //clickIfVisible('#surl');
+        clickIfExists('#scroll:not(.hidden)');
+        clickIfExists('#glink:not(.hidden)');
+        clickIfExists('#surl');
     }) : null;
 
     //cpmlink.net
