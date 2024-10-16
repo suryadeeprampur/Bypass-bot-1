@@ -1815,7 +1815,7 @@
     /^https:\/\/(fc-lc.xyz)\/.*$/.test(url) ? afterWindowLoaded(function() {
         clickIfExists('#invisibleCaptchaShortlink');
     }) : null; 
-    //type 1:https://fc-lc.com/eA2fk - https://github.com/uBlockOrigin/uAssets/pull/20826 - https://github.com/uBlockOrigin/uAssets/issues/25210
+    //type 1:https://fc-lc.xyz/aPxvk which leads to fitdynamos.com - https://github.com/uBlockOrigin/uAssets/pull/20826 - https://github.com/uBlockOrigin/uAssets/issues/25210
     //(different from type2: https://fc-lc.xyz/ymUtEPUB which leads to gamezizo.com, https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/162)
     /^https:\/\/(fitdynamos.com)\/.*$/.test(url) ? afterWindowLoaded(function() {
         clickIfExists('#next');
