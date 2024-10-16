@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.27
+// @version        92.8.28
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -232,7 +232,6 @@
 // @match *://*.bigbtc.win/*
 // @match *://*.firefaucet.win/*
 // @include /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
-// @include /^(https?:\/\/)(.+)?(tmail.io|(gamezizo|fitdynamos).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|bedrat.xyz|(offeergames|todogame).online)(\/.*)/
@@ -550,6 +549,11 @@
 // @grant        GM.xmlHttpRequest
 // @grant          GM_getResourceText
 // @match        https://acortalink.me/*
+// @match       https://fitdynamos.com/*
+// @match       https://gamezizo.com/*
+// @match       https://tmail.io/*
+// @match       https://fc-lc.com/*
+// @match       https://fc-lc.xyz/*
 // @match        https://paster.so/*
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
@@ -569,8 +573,6 @@
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
 // @include     /exeo.app|mrgec.com|cety.app/
-// @include     /fc-lc.(xyz|com)/
-// @include     /tmail.io/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
 // @include     /linkspy.cc\/\/a/
@@ -1376,8 +1378,8 @@
     BypassedByBloggerPemula(/firefaucet.win/, function() {if (elementExists("form[method='post']")) {let firefaucet = setInterval(() => {
       if (Captchacheck()) {ClickIfExists('button[type=submit]');}}, 2 * 1000);} else {ClickIfExists('#get_reward_button', 1);}});
     BypassedByBloggerPemula(/uptobhai\.*|uplinkto\.*|shortlinkto\.*/, function() { ClickIfExists('.btn-block.btn-primary.btn', 2);});
-    BypassedByBloggerPemula(/tmail.io|(gamezizo|fitdynamos).com/, function() {
-      if (elementExists('#next')) {SubmitIfExists('form.text-center', 3);} else {ClickIfExists('#surl', 5, 'setInterval');}});
+    /*BypassedByBloggerPemula(/fitdynamos.com|gamizo.com|tmail.io)/, function() {
+      if (elementExists('#next')) {SubmitIfExists('form.text-center', 3);} else {ClickIfExists('#surl', 5, 'setInterval');}});*/
     BypassedByBloggerPemula(/(exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site/, function() {ClickIfExists('#invisibleCaptchaShortlink', 2);SubmitIfExists('#before-captcha', 3);
       let exeo = setInterval(() => {if (bp('.timer').innerText == '0') {clearInterval(exeo);ReadytoClick('#submit-button');}}, 2 * 1000);});
     BypassedByBloggerPemula(/(on-scroll|diudemy|maqal360).com/, function() {EnableRCF();let adlink = setInterval(() => {
@@ -1812,12 +1814,18 @@
     /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     //fc-lc
-    /fc-lc.(xyz|com)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /* /^https:\/\/(fc-lc\.com|fc-lc\.xyz)\/.*$/.test(url) ? afterWindowLoaded(function() {
+        if (checkCloudflareCaptchaSolved() && checkGoogleRecaptchaSolved()) {
+            clickWithDelay('#invisibleCaptchaShortlink', 3000);
+        }
+    }) : null; */
     // extra steps for some fc-lc cases: https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277
-    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfExists('#next')}) : null;
-    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#scroll')}) : null;
-    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#glink')}) : null;
-    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#surl')}) : null;
+    /^https:\/\/(fitdynamos\.com|gamizo\.com|tmail\.io)\/.*$/.test(url) ? afterWindowLoaded(function() {
+        clickIfExists('#next');
+        //clickIfVisible('#scroll');
+        //clickIfVisible('#glink');
+        //clickIfVisible('#surl');
+    }) : null;
 
     //cpmlink.net
     /cpmlink.net\/go/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#btn-main')}) : null;

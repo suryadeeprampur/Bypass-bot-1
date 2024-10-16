@@ -19,8 +19,6 @@
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
 // @include     /exeo.app|mrgec.com|cety.app/
-// @include     /fc-lc.(xyz|com)/
-// @include     /tmail.io/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
 // @include     /linkspy.cc\/\/a/
@@ -187,6 +185,11 @@
 // @include     /encurtads.net/
 // @include     /shrtbr.com/
 // @include     /dramaday.me\/[^\/]+\/$/
+// @match       https://fitdynamos.com/*
+// @match       https://gamezizo.com/*
+// @match       https://tmail.io/*
+// @match       https://fc-lc.com/*
+// @match       https://fc-lc.xyz/*
 // @run-at      document-start
 // ==/UserScript==
 
@@ -320,12 +323,18 @@
     /test.shrinkurl.org/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     //fc-lc
-    /fc-lc.(xyz|com)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /* /^https:\/\/(fc-lc\.com|fc-lc\.xyz)\/.*$/.test(url) ? afterWindowLoaded(function() {
+        if (checkCloudflareCaptchaSolved() && checkGoogleRecaptchaSolved()) {
+            clickWithDelay('#invisibleCaptchaShortlink', 3000);
+        }
+    }) : null; */
     // extra steps for some fc-lc cases: https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277
-    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfExists('#next')}) : null;
-    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#scroll')}) : null;
-    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#glink')}) : null;
-    ///tmail.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#surl')}) : null;
+    /^https:\/\/(fitdynamos\.com|gamizo\.com|tmail\.io)\/.*$/.test(url) ? afterWindowLoaded(function() {
+        clickIfExists('#next');
+        //clickIfVisible('#scroll');
+        //clickIfVisible('#glink');
+        //clickIfVisible('#surl');
+    }) : null;
 
     //cpmlink.net
     /cpmlink.net\/go/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#btn-main')}) : null;
