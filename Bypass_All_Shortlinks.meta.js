@@ -743,6 +743,7 @@
 // @include     /www.udlinks.com/
 // @include     /techkhulasha.com/
 // @include     /golink.bloggerishyt.in/
+// @include     /skillheadlines.in/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/

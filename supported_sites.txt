@@ -723,6 +723,7 @@ https://paster.so/*
 /www.udlinks.com/
 /techkhulasha.com/
 /golink.bloggerishyt.in/
+/skillheadlines.in/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/
