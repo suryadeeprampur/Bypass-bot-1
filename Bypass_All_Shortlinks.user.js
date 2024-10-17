@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.31
+// @version        92.8.32
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -737,6 +737,12 @@
 // @include     /encurtads.net/
 // @include     /shrtbr.com/
 // @include     /dramaday.me\/[^\/]+\/$/
+// @include     /mobilenagari.com|defencewallah.in/
+// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in/
+// @include     /rocklinks.in/
+// @include     /www.udlinks.com/
+// @include     /techkhulasha.com/
+// @include     /golink.bloggerishyt.in/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
@@ -1935,8 +1941,10 @@
 
     // multimovies.space, https://github.com/FastForwardTeam/FastForward/issues/1434, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/91
     function modifyScript(searchText, replacementText) {
+        const isRegex = searchText instanceof RegExp;
+    
         document.querySelectorAll('script').forEach(script => {
-            if (script.innerText.includes(searchText)) {
+            if (isRegex ? searchText.test(script.innerText) : script.innerText.includes(searchText)) {
                 script.remove();
                 document.body.appendChild(Object.assign(document.createElement('script'), {
                     text: script.innerText.replace(new RegExp(searchText, 'g'), replacementText)
@@ -1944,6 +1952,7 @@
             }
         });
     }
+    
     const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => {
         const button = document.querySelector(buttonSelector);
         if (button && button.textContent.includes(targetText) && !(targetText == 'Get Link')) {
@@ -2077,14 +2086,6 @@
     /droplink.co/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.btn')}) : null;
     /lnks.primarchweb.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn--bg-primary')}) : null;
 
-    // toonshub.xyz - https://earnmoneyyt.com/safe.php?link=RNRm2b2H
-    /earnmoneyyt.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp98')}) : null;
-    /earnmoneyyt.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
-    /earnmoneyyt.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.tp-blue')}) : null;
-    /sheralinks.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-    /go.bloggingaro.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-    /land.povathemes.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-
     // gplinks, used in psa.wf sometimes, changes domains daily, use https://greasyfork.org/scripts/490365 instead
 /*     if (/mdsuuniversity.org|instander.me|jameen.xyz|dhamakamusic.ink|eternalcbse.i|financialstudy.me|(foreverhealth|newzwala.co|nhmgujarat|jobkijankari|jobwaala|learnwithsaif|lyricsx|smartsetkari|theringtonesworld|recruitmentrasta|mediniweb|pmyojanasarkari|netflixvip|mghindinews|gentletrail|w3hindi|ryzenmusic).in|(anumin|awolio|cgbsesupport|gptproguide|iplquotes|kaisekareblog|minijankari|news36tech|newsloti|odiamusicsong|sugargliderfaqs|picassoappk|geniuseducares|ndlifestylego|raidersixgameapk|sarkariexam365|potter-world|jankari4u|trancebazar|taazaalerts).com/.test(url)) {
         const clickIfVisible2 = (selector) => setInterval(() => { const button = document.querySelector(selector); if (button && button.style.display === 'block') { setTimeout(function() {button.click()}, 500);; clearInterval(intervalId); } }, 1000);
@@ -2096,6 +2097,38 @@
         });
     }
     /gplinks.co\/[^/#]+\/(?:#|\?pid=)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#link-btn > a')}) : null; */
+
+    // toonshub.xyz - https://earnmoneyyt.com/safe.php?link=RNRm2b2H
+    /earnmoneyyt.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp98')}) : null;
+    /earnmoneyyt.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
+    /earnmoneyyt.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.tp-blue')}) : null;
+    /sheralinks.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /go.bloggingaro.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /land.povathemes.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    // https://www.udlinks.com/kzrJRjj
+    /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in/.test(url) ? afterDOMLoaded(function() {
+        window.count = 0;
+        clickWithDelay('#tp98', 2000);
+        clickWithDelay('#btn6', 2000);
+    }) : null;
+    /www.udlinks.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    // https://rocklinks.in/1ZqZZ2B
+    /mobilenagari.com|defencewallah.in/.test(url) ? afterDOMLoaded(function() {
+        clickIfExistsNonStop('a.bt-success');
+        clickIfExists('#wpsafe-link > a:nth-child(1)');
+        clickIfExists('#wpsafelinkhuman');
+    }) : null;
+    /rocklinks.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+        
+    // https://www.techkhulasha.com/?token=T3VzT
+    /techkhulasha.com/.test(url) ? afterDOMLoaded(function() {
+        modifyScript(/9000|30000|1000/gm, '100');
+        clickIfExists('a.bt-success');
+        if (document.querySelector('#ad-top > h4:nth-child(2)').innerHTML.includes('step 2')) {clickIfExists('#gotolink')};
+    }) : null;
+    /golink.bloggerishyt.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // gtlinks, used in toonsouthindia.com
     /tech.hipsonyc.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.bt-success')}) : null;

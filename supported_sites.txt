@@ -717,6 +717,12 @@ https://paster.so/*
 /encurtads.net/
 /shrtbr.com/
 /dramaday.me\/[^\/]+\/$/
+/mobilenagari.com|defencewallah.in/
+/bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in/
+/rocklinks.in/
+/www.udlinks.com/
+/techkhulasha.com/
+/golink.bloggerishyt.in/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/

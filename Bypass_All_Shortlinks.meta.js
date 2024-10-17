@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.31
+// @version        92.8.32
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -737,6 +737,12 @@
 // @include     /encurtads.net/
 // @include     /shrtbr.com/
 // @include     /dramaday.me\/[^\/]+\/$/
+// @include     /mobilenagari.com|defencewallah.in/
+// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in/
+// @include     /rocklinks.in/
+// @include     /www.udlinks.com/
+// @include     /techkhulasha.com/
+// @include     /golink.bloggerishyt.in/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
