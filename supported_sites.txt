@@ -695,7 +695,7 @@ https://paster.so/*
 /pahe.win/
 /ontechhindi.com/
 /thelatintwistcafe.com/
-/newshuta.in/
+/newshuta.in|indiamaja.com/
 /blog.jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/
 /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 /animesgd.net/
