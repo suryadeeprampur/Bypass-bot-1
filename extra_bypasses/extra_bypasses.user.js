@@ -27,7 +27,7 @@
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
 // @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
-// @include     /uqozy.com|posterify.net|drinkspartner.com/
+// @include     /uqozy.com|posterify.net|drinkspartner.com|manishclasses.in/
 // @include     /blogging.techworldx.net|10beasts.biz/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
@@ -475,8 +475,9 @@
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10649981
     // https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/263369
     // https://shrinkforearn.xyz/vAs1ikmO - leechpremium.link
+    // https://www.reddit.com/r/uBlockOrigin/comments/1g50rur/unable_to_bypass_this_shortlink/
     const clickWithDelay = (selector, delay) => { setTimeout(function() { document.querySelector(selector).click(); }, delay); };
-    if (/uqozy.com|posterify.net|drinkspartner.com/.test(url)) {
+    if (/uqozy.com|posterify.net|drinkspartner.com|manishclasses.in/.test(url)) {
         afterDOMLoaded(function() {
             modifyScript('timeLeft = duration', 'timeLeft = 0'); // skip timers
             clickWithDelay('#bottomButton', 0);

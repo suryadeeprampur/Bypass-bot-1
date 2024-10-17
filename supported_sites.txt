@@ -559,7 +559,7 @@ https://paster.so/*
 /dropgalaxy.(com|co)\/drive/
 /short-ly.co/
 /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
-/uqozy.com|posterify.net|drinkspartner.com/
+/uqozy.com|posterify.net|drinkspartner.com|manishclasses.in/
 /blogging.techworldx.net|10beasts.biz/
 /starsddl.me\/short/
 /tech.unblockedgames.world/
