@@ -2038,8 +2038,11 @@
     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(url) ? solveThroughBypassCity(url) : null;
 
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
-    /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {redirectIfExists('.btn-primary')}) : null;
-    /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('.btn-getlink')}) : null;
+    /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {
+        modifyScript('var timer = 15', 'var timer = 0');
+        redirectIfExists('.btn-primary');
+        clickIfNotDisabled('.btn-getlink');
+    }) : null;
 
     // mirrorace, doodrive, tested in fluxyrepacks.site
     /woowebtools.com|pallabmobile.in/.test(url) ? afterDOMLoaded(function() {clickIfExistsNonStop('.hv-grid > div:nth-child(2) > div:nth-child(1) > form:nth-child(2) > button:nth-child(2)')}) : null; //continue button
