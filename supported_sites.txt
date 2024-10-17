@@ -719,7 +719,7 @@ https://paster.so/*
 /shrtbr.com/
 /dramaday.me\/[^\/]+\/$/
 /mobilenagari.com|defencewallah.in/
-/bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in/
+/bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com/
 /rocklinks.in/
 /www.udlinks.com/
 /techkhulasha.com/

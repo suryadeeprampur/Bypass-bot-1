@@ -739,7 +739,7 @@
 // @include     /shrtbr.com/
 // @include     /dramaday.me\/[^\/]+\/$/
 // @include     /mobilenagari.com|defencewallah.in/
-// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in/
+// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com/
 // @include     /rocklinks.in/
 // @include     /www.udlinks.com/
 // @include     /techkhulasha.com/
@@ -2108,8 +2108,8 @@
     /go.bloggingaro.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
     /land.povathemes.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
-    // https://www.udlinks.com/kzrJRjj
-    /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in/.test(url) ? afterDOMLoaded(function() {
+    // https://www.udlinks.com/kzrJRjj - https://publicearn.com/vrpNlNc
+    /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com/.test(url) ? afterDOMLoaded(function() {
         window.count = 0;
         clickWithDelay('#tp98', 2000);
         clickWithDelay('#btn6', 2000);
@@ -2123,7 +2123,7 @@
         clickIfExists('#wpsafelinkhuman');
     }) : null;
     /rocklinks.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-        
+
     // https://www.techkhulasha.com/?token=T3VzT
     /techkhulasha.com/.test(url) ? afterDOMLoaded(function() {
         modifyScript(/9000|30000|1000/gm, '100');

@@ -739,7 +739,7 @@
 // @include     /shrtbr.com/
 // @include     /dramaday.me\/[^\/]+\/$/
 // @include     /mobilenagari.com|defencewallah.in/
-// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in/
+// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com/
 // @include     /rocklinks.in/
 // @include     /www.udlinks.com/
 // @include     /techkhulasha.com/
