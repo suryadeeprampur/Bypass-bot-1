@@ -552,6 +552,7 @@
 // @match        https://acortalink.me/*
 // @match       https://fitdynamos.com/*
 // @match       https://fc-lc.xyz/*
+// @match       https://www.techkhulasha.com/*
 // @match        https://paster.so/*
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/

@@ -532,6 +532,7 @@ playstore.pw
 https://acortalink.me/*
 https://fitdynamos.com/*
 https://fc-lc.xyz/*
+https://www.techkhulasha.com/*
 https://paster.so/*
 /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 /comohoy.com/

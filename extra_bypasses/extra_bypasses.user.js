@@ -192,6 +192,7 @@
 // @include     /rocklinks.in/
 // @include     /www.udlinks.com/
 // @include     /techkhulasha.com/
+// @match       https://www.techkhulasha.com/*
 // @include     /golink.bloggerishyt.in/
 // @include     /skillheadlines.in/
 // @run-at      document-start
