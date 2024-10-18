@@ -725,6 +725,7 @@ https://paster.so/*
 /techkhulasha.com/
 /golink.bloggerishyt.in/
 /skillheadlines.in/
+/psccapk.in|secure.bgmiupdate.com.in/
 /filecrypt.(cc|co)/
 /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/

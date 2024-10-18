@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.32
+// @version        92.8.33
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -745,6 +745,7 @@
 // @include     /techkhulasha.com/
 // @include     /golink.bloggerishyt.in/
 // @include     /skillheadlines.in/
+// @include     /psccapk.in|secure.bgmiupdate.com.in/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
@@ -1801,6 +1802,13 @@
     // clicked by uBO already: /earning.bankshiksha.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2')}) : null;
     /earnbox.sattakingcharts.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2')}) : null;
     /set.seturl.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    // seturl.in used by animedekho.in
+    /psccapk.in|secure.bgmiupdate.com.in/.test(url) ? afterDOMLoaded(function() {
+        window.count = 0;
+        clickIfExists('#tp-snp2');
+        clickIfExists('#cross-snp2');
+    }) : null;
 
     // linkneverdie.net
     /techtnet.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;

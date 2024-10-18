@@ -195,6 +195,7 @@
 // @match       https://www.techkhulasha.com/*
 // @include     /golink.bloggerishyt.in/
 // @include     /skillheadlines.in/
+// @include     /psccapk.in|secure.bgmiupdate.com.in/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -309,6 +310,13 @@
     // clicked by uBO already: /earning.bankshiksha.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2')}) : null;
     /earnbox.sattakingcharts.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2')}) : null;
     /set.seturl.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    // seturl.in used by animedekho.in
+    /psccapk.in|secure.bgmiupdate.com.in/.test(url) ? afterDOMLoaded(function() {
+        window.count = 0;
+        clickIfExists('#tp-snp2');
+        clickIfExists('#cross-snp2');
+    }) : null;
 
     // linkneverdie.net
     /techtnet.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;

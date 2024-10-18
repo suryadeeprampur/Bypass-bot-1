@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.32
+// @version        92.8.33
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -745,6 +745,7 @@
 // @include     /techkhulasha.com/
 // @include     /golink.bloggerishyt.in/
 // @include     /skillheadlines.in/
+// @include     /psccapk.in|secure.bgmiupdate.com.in/
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
