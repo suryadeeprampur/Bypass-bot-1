@@ -544,17 +544,11 @@
     // // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(bstlar.com)/
     // /bstlar.com/.test(url) ? solveThroughBypassCity(url) : null;
 
-    // Ad-maven
-    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium|utopianleaks|kmendation|eofmukindwo|realiukzemydre|daughablelea|tonordersitye|bleleadersto).com)|best-links.org\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
-
     // empebau.eu after ad-maven links
     /empebau.eu\/s\/linker\/.*/.test(url) ? afterWindowLoaded(function() {
         const targetUrl = document.querySelector('#box > p:nth-child(1) > a:nth-child(1)').href;
         if (!targetUrl.startsWith('https://empebau.eu')) {redirect(targetUrl)}
     }) : null;
-
-    // Loot-links (optionally solve through bypass.city, but currently solved locally)
-    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(url) ? solveThroughBypassCity(url) : null;
 
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
     /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {

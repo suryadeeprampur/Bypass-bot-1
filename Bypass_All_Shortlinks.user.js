@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.34
+// @version        92.8.35
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -302,7 +302,6 @@
 // @include /^(https?:\/\/)(.+)?(slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(link.goto.com.np|(appkamods|bankvacency|otomi-games).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar|daughablelea|tonordersitye|bleleadersto).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space|chaosfun.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((awgrow|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|businessuniqueidea|plumptofit|cookingpumpkin|elishea|audioinspects|celebperson|dreamhomelabs|fishingbreeze).com|(financewrapper|recipes4all).net|(aayurvedshastra|allnewspoint).in|chefslink.org|lawyex.co|mdn.lol)(\/.*)/
 // @match *://*.shortit.pw/*
@@ -550,10 +549,15 @@
 // @grant        GM.xmlHttpRequest
 // @grant          GM_getResourceText
 // @match        https://acortalink.me/*
+// @match         https://bleleadersto.com/s?*
+// @match         https://tonordersitye.com/s?*
+// @match         https://daughablelea.com/s?*
+// @match         https://linkvertise.com/*
 // @match       https://fitdynamos.com/*
 // @match       https://fc-lc.xyz/*
 // @match       https://www.techkhulasha.com/*
 // @match        https://paster.so/*
+// @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
 // @include     /privatenudes.com\/model/
@@ -747,7 +751,6 @@
 // @include     /skillheadlines.in/
 // @include     /psccapk.in|secure.bgmiupdate.com.in/
 // @include      /filecrypt.(cc|co)/
-// @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
 // @include     /(work.ink|workink.click)\/.*$/
@@ -1570,8 +1573,8 @@
     BypassedByBloggerPemula(/hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org/, function() {
       ClickIfExists('#my-btn', 2);ClickIfExists('#wpsafe-link > .btn-secondary.btn', 2);
       waitForElm('#pro-link', nhk => redirect(nhk.href, false));waitForElm('#wpsafe-link a', hrl => redirect(strBetween(hrl.onclick.toString(), `window.open('`, `', '_self')`), false));});
-    BypassedByBloggerPemula(/(lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar|daughablelea|tonordersitye|bleleadersto).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro/, function() {
-      if (/^\/([^\/]+)/.test(location.pathname)) {redirect('https://adbypass.org/bypass?bypass=' + location.href, false);}});
+    /*BypassedByBloggerPemula(/(lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar|daughablelea|tonordersitye|bleleadersto).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro/, function() {
+      if (/^\/([^\/]+)/.test(location.pathname)) {redirect('https://adbypass.org/bypass?bypass=' + location.href, false);}});*/
     BypassedByBloggerPemula(/(tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space|chaosfun.online/, function() {
       let profitsfly = setInterval(() => {if (elementExists('.loading-spinner.spacer')) {} else if (!elementExists('.h-captcha') && !bp('#cbt').hasAttribute('disabled')) {clearInterval(profitsfly);ReadytoClick('button#cbt.pfbutton-primary', 1);}}, 2 * 1000);});
     BypassedByBloggerPemula(/(awgrow|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|businessuniqueidea|plumptofit|cookingpumpkin|elishea|audioinspects|celebperson|dreamhomelabs|fishingbreeze).com|(financewrapper|recipes4all).net|(aayurvedshastra|allnewspoint).in|chefslink.org|lawyex.co|mdn.lol/, () => {EnableRCF();
@@ -1690,6 +1693,37 @@
 
 })();
 // ----- ----- -----
+
+// ----- bypass.vip and bypass.city APIs------
+(function() {
+    'use strict';
+    const admavenRegex = /^https:\/\/(bleleadersto\.com|tonordersitye\.com|daughablelea\.com)\/s\?.*$/;
+    const linkvertiseRegex = /^https:\/\/linkvertise\.com\/.*$/;
+    const lootlinkRegex = /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
+
+    // Linkvertise easy case
+    if (linkvertiseRegex.test(window.location.href) && window.location.search.includes('r=')) {
+        const rParam = new URLSearchParams(window.location.search).get('r');
+        if (rParam) {window.location.assign(atob(rParam));};
+
+    // Linkvertise hard case and Admaven. First try bypass.vip, fallback to bypass.city
+    } else if (admavenRegex.test(window.location.href) || linkvertiseRegex.test(window.location.href) || lootlinkRegex.test(window.location.href)) {
+        fetch(`https://api.bypass.vip/bypass?url=${encodeURIComponent(window.location.href)}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.status == 'success') {
+                    window.location.assign(data.result);
+                } else {
+                    window.location.assign(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
+                }
+            })
+            .catch(err => {
+                window.location.assign(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
+            });
+    }
+})();
+// ----- ------ ----------
+
 
 // ----- Extra bypasses -----
 (function() {
@@ -2036,17 +2070,11 @@
     // // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(bstlar.com)/
     // /bstlar.com/.test(url) ? solveThroughBypassCity(url) : null;
 
-    // Ad-maven
-    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium|utopianleaks|kmendation|eofmukindwo|realiukzemydre|daughablelea|tonordersitye|bleleadersto).com)|best-links.org\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
-
     // empebau.eu after ad-maven links
     /empebau.eu\/s\/linker\/.*/.test(url) ? afterWindowLoaded(function() {
         const targetUrl = document.querySelector('#box > p:nth-child(1) > a:nth-child(1)').href;
         if (!targetUrl.startsWith('https://empebau.eu')) {redirect(targetUrl)}
     }) : null;
-
-    // Loot-links (optionally solve through bypass.city, but currently solved locally)
-    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(url) ? solveThroughBypassCity(url) : null;
 
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
     /epicload.com\/files/.test(url) ? afterDOMLoaded(function() {
@@ -2698,30 +2726,6 @@
 })();
 
 // ----- ----- -----
-
-// ----- Bypass Linkvertise ------
-(function() {
-    'use strict';
-
-    if (/^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/.test(window.location.href)) {
-
-        //easy case
-        let rParam = new URLSearchParams(window.location.search).get('r');
-        if (rParam) {
-            window.location.assign(atob(rParam));
-
-        // hard case
-        } else {
-
-            // Bypass using Bypass.city API
-            window.location.assign('https://adbypass.org/bypass?bypass=' + window.location.href);
-
-        }
-    }
-
-})();
-// ----- ------ ----------
-
 
 // ----- Bypass mega-enlace ( Taken from AdGuard https://github.com/AdguardTeam/AdguardFilters/blob/b1622e8b387148509ca355e8070ffa5cdcf87525/SpanishFilter/sections/general_extensions.txt#L108 / https://github.com/AdguardTeam/AdguardFilters/issues/174863#issuecomment-1996735239) -----
 // used in: pelisenhd.org latinomegahd.net gatonplayseries.com peliculasgd.net tododvdfull.com cinemaniahdd.net programasvirtualespc.net compucalitv.pro

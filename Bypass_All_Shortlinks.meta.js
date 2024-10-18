@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.34
+// @version        92.8.35
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -302,7 +302,6 @@
 // @include /^(https?:\/\/)(.+)?(slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(link.goto.com.np|(appkamods|bankvacency|otomi-games).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar|daughablelea|tonordersitye|bleleadersto).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space|chaosfun.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((awgrow|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|businessuniqueidea|plumptofit|cookingpumpkin|elishea|audioinspects|celebperson|dreamhomelabs|fishingbreeze).com|(financewrapper|recipes4all).net|(aayurvedshastra|allnewspoint).in|chefslink.org|lawyex.co|mdn.lol)(\/.*)/
 // @match *://*.shortit.pw/*
@@ -550,10 +549,15 @@
 // @grant        GM.xmlHttpRequest
 // @grant          GM_getResourceText
 // @match        https://acortalink.me/*
+// @match         https://bleleadersto.com/s?*
+// @match         https://tonordersitye.com/s?*
+// @match         https://daughablelea.com/s?*
+// @match         https://linkvertise.com/*
 // @match       https://fitdynamos.com/*
 // @match       https://fc-lc.xyz/*
 // @match       https://www.techkhulasha.com/*
 // @match        https://paster.so/*
+// @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
 // @include     /privatenudes.com\/model/
@@ -747,7 +751,6 @@
 // @include     /skillheadlines.in/
 // @include     /psccapk.in|secure.bgmiupdate.com.in/
 // @include      /filecrypt.(cc|co)/
-// @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
 // @include     /(work.ink|workink.click)\/.*$/

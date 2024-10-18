@@ -284,7 +284,6 @@ coins-town.com
 slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com
 link.goto.com.np|(appkamods|bankvacency|otomi-games).com
 hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org
-(lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar|daughablelea|tonordersitye|bleleadersto).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro
 (tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space|chaosfun.online
 (awgrow|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|businessuniqueidea|plumptofit|cookingpumpkin|elishea|audioinspects|celebperson|dreamhomelabs|fishingbreeze).com|(financewrapper|recipes4all).net|(aayurvedshastra|allnewspoint).in|chefslink.org|lawyex.co|mdn.lol
 shortit.pw
@@ -530,10 +529,15 @@ eazyurl.xyz
 linksfly.top
 playstore.pw
 https://acortalink.me/*
+https://bleleadersto.com/s?*
+https://tonordersitye.com/s?*
+https://daughablelea.com/s?*
+https://linkvertise.com/*
 https://fitdynamos.com/*
 https://fc-lc.xyz/*
 https://www.techkhulasha.com/*
 https://paster.so/*
+/^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 /comohoy.com/
 /privatenudes.com\/model/
@@ -727,7 +731,6 @@ https://paster.so/*
 /skillheadlines.in/
 /psccapk.in|secure.bgmiupdate.com.in/
 /filecrypt.(cc|co)/
-/^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 /(mega-enlace|acortados).com/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
 /(work.ink|workink.click)\/.*$/
