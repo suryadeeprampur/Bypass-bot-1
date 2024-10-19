@@ -722,7 +722,7 @@
 // @include     /ontechhindi.com/
 // @include     /thelatintwistcafe.com/
 // @include     /newshuta.in|indiamaja.com/
-// @include     /blog.jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/
+// @include     /jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
