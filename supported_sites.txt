@@ -735,4 +735,3 @@ https://paster.so/*
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
-/(work.ink|workink.click)\/.*$/
