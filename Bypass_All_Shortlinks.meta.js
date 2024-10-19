@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.35
+// @version        92.8.36
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -553,6 +553,8 @@
 // @match         https://tonordersitye.com/s?*
 // @match         https://daughablelea.com/s?*
 // @match         https://linkvertise.com/*
+// @match        https://bypass.city/bypass?bypass=*
+// @match        https://adbypass.org/bypass?bypass=*
 // @match       https://fitdynamos.com/*
 // @match       https://fc-lc.xyz/*
 // @match       https://www.techkhulasha.com/*

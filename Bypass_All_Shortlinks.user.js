@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.35
+// @version        92.8.36
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -553,6 +553,8 @@
 // @match         https://tonordersitye.com/s?*
 // @match         https://daughablelea.com/s?*
 // @match         https://linkvertise.com/*
+// @match        https://bypass.city/bypass?bypass=*
+// @match        https://adbypass.org/bypass?bypass=*
 // @match       https://fitdynamos.com/*
 // @match       https://fc-lc.xyz/*
 // @match       https://www.techkhulasha.com/*
@@ -1723,6 +1725,33 @@
     }
 })();
 // ----- ------ ----------
+
+
+//---Bypass.city clickable result----
+(function() {
+    'use strict';
+    if (/^https:\/\/(bypass\.city|adbypass\.org)\/bypass\?bypass=.*$/.test(window.location.href)) {
+        function checkForResolvedUrl() {
+            const xpath = '/html/body/div[1]/main/div/main/div[1]/div/div[2]/div/p';
+            const pElement = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            if (pElement && pElement.innerText.includes('The resolved url is: ')) {
+                const resolvedUrl = pElement.innerText.split('The resolved url is: ')[1];
+                if (resolvedUrl && !resolvedUrl.endsWith('...')) {
+                    const clickableLink = document.createElement('a');
+                    clickableLink.href = `https://${resolvedUrl}`;
+                    clickableLink.innerText = `The resolved url is: ${resolvedUrl}`;
+                    clickableLink.style.color = '#3366CC';
+                    clickableLink.style.display = 'block';
+                    pElement.innerHTML = ''; // Clear the original text
+                    pElement.appendChild(clickableLink);
+                }
+                clearInterval(intervalId);
+            }
+        }
+        const intervalId = setInterval(checkForResolvedUrl, 2000);
+    }
+})();
+//-------
 
 
 // ----- Extra bypasses -----
