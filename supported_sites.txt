@@ -732,6 +732,7 @@ https://paster.so/*
 /golink.bloggerishyt.in/
 /skillheadlines.in/
 /psccapk.in|secure.bgmiupdate.com.in/
+/www.spaste.com/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/

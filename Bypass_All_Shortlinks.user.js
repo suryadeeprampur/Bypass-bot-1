@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.8.36
+// @version        92.8.37
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -751,6 +751,7 @@
 // @include     /golink.bloggerishyt.in/
 // @include     /skillheadlines.in/
 // @include     /psccapk.in|secure.bgmiupdate.com.in/
+// @include     /www.spaste.com/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
@@ -2584,6 +2585,28 @@
 
     // https://f.technicalatg.in/6iTpuM1 - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10954732
     /skillheadlines.in/.test(url) ? afterDOMLoaded(function() { redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]);}) : null;
+
+    // spaste.com use in pahe.ink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/77
+    function checkHCaptchaSolved() {
+        if (document.querySelector('.h-captcha')) {
+            return window.hcaptcha.getResponse().length !== 0;
+        }
+        return true;
+    }
+    function clickIfHCaptchaSolved(selector) {
+        let intervalId = setInterval(() => {
+            if (checkHCaptchaSolved()) {
+                clearInterval(intervalId);
+                document.querySelector(selector).click();
+            }
+        }, 1000);
+    }
+    /www.spaste.com\/site\/checkPasteUrl\?c=/.test(url) ? afterDOMLoaded(function() {
+        clickIfHCaptchaSolved('#template-contactform-submit');
+    } ) : null;
+    /www.spaste.com\/p\?c=/.test(url) ? afterDOMLoaded(function() {
+        redirectIfExists('#template-contactform-message > a:nth-child(3)');
+    }) : null;
 
 })();
 
