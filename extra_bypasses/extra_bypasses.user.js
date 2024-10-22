@@ -778,7 +778,11 @@
 
     //pahe.ink final step
     /linegee.net|intercelestial.com/.test(url) ? preventForcedFocusOnWindow() : null;
-    ///spacetica.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn-primary')}) : null;
+    /spacetica.com/.test(url) ? afterDOMLoaded(function() {
+        if (!document.querySelector('.form-group')){
+            clickIfExists('a.btn-primary.btn-xs');
+        }
+    }) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
