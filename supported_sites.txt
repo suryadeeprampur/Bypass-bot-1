@@ -101,13 +101,13 @@ filedm.com
 gogodl.com
 turbobit.net
 4shared.com
-1ink.cc
 keeplinks.org
 1short.io
 earnlink.io
 mkomsel.com
 onimports.com.br
 1shortlink.com
+1ink.cc|cuturl.cc
 jameeltips.us
 post.copydev.com
 linegee.net
@@ -150,7 +150,7 @@ nullscript.info|freebinance.top
 (aduzz|tutorialsaya|indobo|baristakesehatan).com|deltabtc.xyz|bit4me.info
 cryptfaucet.com|izseo.net
 (cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in
-(netflixrelease|mangareleasedate|freemodapp|cryptoprolife|diethim|zutiza|hitjankari|phixshop|mp4news|trancebazar|taazaalerts|mazheshetkari|uskloans|ssbytes).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|rrbntpc2024.net|mdsuuniversity.org|odishadjs.link
+(netflixrelease|mangareleasedate|freemodapp|zutiza|phixshop|mp4news|trancebazar|taazaalerts|uskloans|feedaso).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|rrbntpc2024.net|mdsuuniversity.org|odishadjs.link
 (crypto2u|bestcoinsites).xyz
 fansonlinehub.com
 (howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista|blog-myst|tech-bixby|webhostsec).com|ss7.info
@@ -202,7 +202,7 @@ leitup.com
 offeroc.com
 azmath.info|expertvn.com
 newassets.hcaptcha.com
-(ez4mods|tensailab|game5s).com|tech5s.co
+(ez4mods|tensailab|game5s|supermodsmenus).com|tech5s.co
 (bnbfree|freeth).in
 freebitco.in
 mazen-ve3.com
@@ -232,9 +232,8 @@ getzen.cash
 deportealdia.live|noweconomy.live|techgeek.digital
 nishankhatri.xyz|(bebkub|importantclass).com
 writedroid.eu.org|modmania.eu.org|writedroid.in|mytop5.club
-computerpedia.in
+computerpedia.in|advicefunda.com
 linkatla.com
-myprivatejobs.com
 claimfreetrx.online
 offers4crypto.xyz|ewall.biz
 dl.lk21static.xyz
@@ -242,6 +241,7 @@ easylink.gamingwithtr.com
 copy-paste-fonts.com|cryptednews.space
 solarchaine.com
 (remixsounds|helpowi|helpdeep|thinksrace|tipsloanusa).com|(remixone|webseriesreel).in|uprwssp.org|securitywaittimes.us
+(computerpedia|techconnection).in|(myprivatejobs|advicefunda).com|bestloanoffer.net
 shrinke\.*|shrinkme\.*|(linkvhoriz|paid4link|icashfly).com|bicolink.net|wordcounter.icu|pwrpa.cc|paylinks.cloud
 revly.click
 trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se|handydecor.com.vn
@@ -284,7 +284,7 @@ coins-town.com
 slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com
 link.goto.com.np|(appkamods|bankvacency|otomi-games).com
 hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org
-(tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space|chaosfun.online
+(tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn|historyofyesterday).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space|chaosfun.online
 (awgrow|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|businessuniqueidea|plumptofit|cookingpumpkin|elishea|audioinspects|celebperson|dreamhomelabs|fishingbreeze).com|(financewrapper|recipes4all).net|(aayurvedshastra|allnewspoint).in|chefslink.org|lawyex.co|mdn.lol
 shortit.pw
 short.croclix.me|adz7short.space
