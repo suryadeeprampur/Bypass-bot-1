@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Rinku autoclick
-// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
 // @run-at       document-start
 // ==/UserScript==
 
@@ -10,7 +10,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine).com|(makego|sakazi).net|askerlikforum.com.tr/
+    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk).com|(makego|sakazi).net|askerlikforum.com.tr/
     if (domainRegex.test(window.location.href)) {
 
         // Backup the current Rinku.me Code in case we get to 404 and we need to try again
@@ -47,14 +47,23 @@
                 return true; // Always return true
             };
 
-            // Function to check for "Click Any Ad & Keep It Open For 15 Seconds To Continue" and reload the page if it exists
-            function checkForMessage() {
+            // Functions to check for "Click Any Ad & Keep It Open For 15 Seconds To Continue" and reload the page if it exists
+            function checkForMessage_fallback() {
                 const paragraphs = document.getElementsByTagName("p");
                 for (let p of paragraphs) {
-                    if (/.*Click.+Ad.*To Continue.*/is.test(p.textContent) || (/.*Click.+Ad.*To.+Unlock.+Captcha.*/is.test(p.textContent) && isElementVisibleAndEnabled(p)) || ('You Must Click And Stay On The Ad Page To Continue!'.test(p.textContent) && isElementVisibleAndEnabled(p))) {
+                    if ((/.*Click.+Ad.*To.+Continue.*/is.test(p.textContent) || /.*Click.+Ad.*To.+Unlock.+Captcha.*/is.test(p.textContent) || /.*Open.*To.+Unlock.+Captcha.*/is.test(p.textContent) || /.*Open.*To.+Continue.*/is.test(p.textContent)) && isElementVisibleAndEnabled(p)) {
                         location.reload(); // Reload the page
                         return; // Exit the function after reloading
                     }
+                }
+            }
+
+            function checkForMessage() {
+                const p = document.getElementById("click");
+                if (!p) {
+                    checkForMessage_fallback();
+                } else if (p.textContent.trim() !== "" && isElementVisibleAndEnabled(p)) {
+                    location.reload(); // Reload the page
                 }
             }
 

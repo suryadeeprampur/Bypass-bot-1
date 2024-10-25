@@ -735,4 +735,4 @@ https://paster.so/*
 /www.spaste.com/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
-/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
+/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
