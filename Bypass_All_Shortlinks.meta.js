@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.9
+// @version        92.9.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -585,7 +585,7 @@
 // @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
 // @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
-// @include     /uqozy.com|posterify.net|drinkspartner.com|manishclasses.in/
+// @include     /uqozy.com|posterify.net|drinkspartner.com|manishclasses.in|boiscd.com/
 // @include     /blogging.techworldx.net|10beasts.biz/
 // @include     /starsddl.me\/short/
 // @include     /tech.unblockedgames.world/
