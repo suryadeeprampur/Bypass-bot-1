@@ -12,7 +12,7 @@
 (function() {
     'use strict';
     const admavenRegex = /^https:\/\/(bleleadersto\.com|tonordersitye\.com|daughablelea\.com)\/s\?.*$/;
-    const linkvertiseRegex = /^https:\/\/linkvertise\.com\/.*$/;
+    const linkvertiseRegex = /^https:\/\/linkvertise\.com\/.+$/;
     const lootlinkRegex = /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 
     // Linkvertise easy case
