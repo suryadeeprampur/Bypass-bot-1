@@ -2909,6 +2909,8 @@
                 } else if (extractedURLs.length > 1) {
                     addURLsToOverlay(extractedURLs); // Add URLs to overlay if more than one URL is found
                     overlayCreated = true;
+                } else {
+                    window.location.assign(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
                 }
             }
         });
