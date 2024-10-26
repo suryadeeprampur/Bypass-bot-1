@@ -639,7 +639,7 @@
 // @include     /musicc.xyz/
 // @include     /(cravesandflames|codesnse|cloutgist).com/
 // @include     /go.(cravesandflames|codesnse|cloutgist).com/
-// @include     /empebau.eu\/s\/linker/
+// @include     /empebau.eu\/s/
 // @include     /cpmlink.net\/go/
 // @include     /10short.com/
 // @include     /zegtrends.com/
@@ -2096,10 +2096,13 @@
     // // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(bstlar.com)/
     // /bstlar.com/.test(url) ? solveThroughBypassCity(url) : null;
 
-    // empebau.eu after ad-maven links
-    /empebau.eu\/s\/linker\/.*/.test(url) ? afterWindowLoaded(function() {
-        const targetUrl = document.querySelector('#box > p:nth-child(1) > a:nth-child(1)').href;
-        if (!targetUrl.startsWith('https://empebau.eu')) {redirect(targetUrl)}
+    // empebau.eu used in t.me/barkofleaks
+    ///empebau.eu\/s\/linker\/.*/.test(url) ? afterWindowLoaded(function() {
+    //    const targetUrl = document.querySelector('#box > p:nth-child(1) > a:nth-child(1)').href;
+    //    if (!targetUrl.startsWith('https://empebau.eu')) {redirect(targetUrl)}
+    //}) : null;
+    /empebau.eu\/s/.test(url) ? afterDOMLoaded(function() {
+        window.location.assign(document.documentElement.innerHTML.match(/let url = "(https?:\/\/[^"]+)";/)[1]);
     }) : null;
 
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)

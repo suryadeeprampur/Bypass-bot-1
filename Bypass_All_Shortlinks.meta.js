@@ -639,7 +639,7 @@
 // @include     /musicc.xyz/
 // @include     /(cravesandflames|codesnse|cloutgist).com/
 // @include     /go.(cravesandflames|codesnse|cloutgist).com/
-// @include     /empebau.eu\/s\/linker/
+// @include     /empebau.eu\/s/
 // @include     /cpmlink.net\/go/
 // @include     /10short.com/
 // @include     /zegtrends.com/

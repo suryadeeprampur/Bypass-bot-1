@@ -620,7 +620,7 @@ https://paster.so/*
 /musicc.xyz/
 /(cravesandflames|codesnse|cloutgist).com/
 /go.(cravesandflames|codesnse|cloutgist).com/
-/empebau.eu\/s\/linker/
+/empebau.eu\/s/
 /cpmlink.net\/go/
 /10short.com/
 /zegtrends.com/
