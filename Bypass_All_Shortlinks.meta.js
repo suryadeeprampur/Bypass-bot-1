@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.9.2
+// @version        92.9.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -752,6 +752,7 @@
 // @include     /skillheadlines.in/
 // @include     /psccapk.in|secure.bgmiupdate.com.in/
 // @include     /www.spaste.com/
+// @include     /click.convertkit-mail.com/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin).com|(makego|sakazi|momge).net|askerlikforum.com.tr)(\/.*)/

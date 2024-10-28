@@ -197,6 +197,7 @@
 // @include     /skillheadlines.in/
 // @include     /psccapk.in|secure.bgmiupdate.com.in/
 // @include     /www.spaste.com/
+// @include     /click.convertkit-mail.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1063,6 +1064,9 @@
     /www.spaste.com\/p\?c=/.test(url) ? afterDOMLoaded(function() {
         redirectIfExists('#template-contactform-message > a:nth-child(3)');
     }) : null;
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/184
+    /click.convertkit-mail.com/.test(url) ? redirect(atob(url.match(/.*(aHR0.*)/)[1])) : null;
 
 })();
 

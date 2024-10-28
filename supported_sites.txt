@@ -733,6 +733,7 @@ https://paster.so/*
 /skillheadlines.in/
 /psccapk.in|secure.bgmiupdate.com.in/
 /www.spaste.com/
+/click.convertkit-mail.com/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin).com|(makego|sakazi|momge).net|askerlikforum.com.tr)(\/.*)/
