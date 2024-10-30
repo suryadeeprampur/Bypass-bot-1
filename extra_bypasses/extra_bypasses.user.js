@@ -182,7 +182,7 @@
 // @include     /www.saferoms.com\/\?go=/
 // @include     /hdpastes.com\/\?v=/
 // @include     /shrinkforearn.in/
-// @include     /encurtads.net/
+// @include     /encurtads.net|financacerta.com/
 // @include     /shrtbr.com/
 // @include     /dramaday.me\/[^\/]+\/$/
 // @match       https://fitdynamos.com/*
@@ -1037,7 +1037,7 @@
     /hdpastes.com\/\?v=/.test(url) ? afterDOMLoaded(function() {clickIfRecaptchaSolved('.btn-success');}) : null;
 
     // shrtbr.com/aaNEJEXp - t.me/xred2 - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/122
-    /encurtads.net/.test(url) ? afterDOMLoaded(function() { redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]);}) : null;
+    /encurtads.net|financacerta.com/.test(url) ? afterDOMLoaded(function() { redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]);}) : null;
     /shrtbr.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('a.get-link.btn.btn-lg.btn-success:not(.disabled):not(div.banner:nth-child(4) > div:nth-child(1) > a:nth-child(1))');}) : null;
 
     // https://f.technicalatg.in/6iTpuM1 - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10954732

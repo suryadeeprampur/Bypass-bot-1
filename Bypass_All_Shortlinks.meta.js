@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.9.4
+// @version        92.9.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -740,7 +740,7 @@
 // @include     /www.saferoms.com\/\?go=/
 // @include     /hdpastes.com\/\?v=/
 // @include     /shrinkforearn.in/
-// @include     /encurtads.net/
+// @include     /encurtads.net|financacerta.com/
 // @include     /shrtbr.com/
 // @include     /dramaday.me\/[^\/]+\/$/
 // @include     /mobilenagari.com|defencewallah.in/

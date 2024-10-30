@@ -721,7 +721,7 @@ https://paster.so/*
 /www.saferoms.com\/\?go=/
 /hdpastes.com\/\?v=/
 /shrinkforearn.in/
-/encurtads.net/
+/encurtads.net|financacerta.com/
 /shrtbr.com/
 /dramaday.me\/[^\/]+\/$/
 /mobilenagari.com|defencewallah.in/
