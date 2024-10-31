@@ -736,4 +736,4 @@ https://paster.so/*
 /click.convertkit-mail.com/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
-/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat).com|(makego|sakazi|momge).net|askerlikforum.com.tr)(\/.*)/
+/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat).com|(makego|sakazi|momge).net|askerlikforum.com.tr|forp.xyz)(\/.*)/
