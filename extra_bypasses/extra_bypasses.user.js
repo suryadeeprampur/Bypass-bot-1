@@ -935,6 +935,10 @@
                 if (checkGoogleRecaptchaSolved() && checkCloudflareCaptchaSolved()) {
                     buttonTexts = ['Verify', 'Click here to verify'];
                     clickAvailableButtons(buttonTexts);
+                    setTimeout(function() {
+                        buttonTexts = ['Next Post', 'Next step', 'Get to next step', 'Go next', 'Continue'];
+                      clickAvailableButtons(buttonTexts);
+                    }, 2000);
                 }
             } else if (currentStep.includes('step 3')) {
                 if (document.querySelector('.progress-done').innerHTML.trim() === '0%'){

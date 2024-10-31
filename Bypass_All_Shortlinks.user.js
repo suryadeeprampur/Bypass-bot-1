@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.9.7
+// @version        92.9.8
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2486,6 +2486,10 @@
                 if (checkGoogleRecaptchaSolved() && checkCloudflareCaptchaSolved()) {
                     buttonTexts = ['Verify', 'Click here to verify'];
                     clickAvailableButtons(buttonTexts);
+                    setTimeout(function() {
+                        buttonTexts = ['Next Post', 'Next step', 'Get to next step', 'Go next', 'Continue'];
+                      clickAvailableButtons(buttonTexts);
+                    }, 2000);
                 }
             } else if (currentStep.includes('step 3')) {
                 if (document.querySelector('.progress-done').innerHTML.trim() === '0%'){
