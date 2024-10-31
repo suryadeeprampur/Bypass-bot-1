@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        92.9.6
+// @version        92.9.7
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -753,6 +753,7 @@
 // @include     /psccapk.in|secure.bgmiupdate.com.in/
 // @include     /www.spaste.com/
 // @include     /click.convertkit-mail.com/
+// @include     /bloggingvector.shop\/re2/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat).com|(makego|sakazi|momge).net|askerlikforum.com.tr|forp.xyz)(\/.*)/
@@ -1955,8 +1956,8 @@
         else redirectOrClickIfExistsEnabledWithDelay('.rd_btn');
     }
 
-    // worldfree4u
-    //bloggingvector.shop\/re/.test(url) ? redirect(atob(url.split('/re/')[1].split('?')[0])) : null; // not necessary, the site does this one by itself for now
+    // hubcloud telegram link - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/185
+    /bloggingvector.shop\/re2/.test(url) ? redirect(atob(url.split('/re2/')[1])) : null;
 
     // desiremovies.cymru
     /gyanigurus.net\/view/.test(url) ? afterDOMLoaded(function() {clickIfExists('#show_button')}) : null;
