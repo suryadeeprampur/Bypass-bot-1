@@ -1804,7 +1804,7 @@
     /dw-anime.net\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
 
     //leak.sx & pornleaks.in
-    /comohoy.com/.test(url) ? redirect(atob(url.split('?url=')[1])) : null;
+    /comohoy.com/.test(url) ? redirect(atob(url.split('?url1=')[1])) : null;
     /privatenudes.com\/model/ ? afterDOMLoaded(function() {redirect(atob(document.querySelector('.btn-custom.btn-block.noads').href.split('?url=')[1]))}) : null;
 
     // sexyforums.com
