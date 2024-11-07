@@ -737,4 +737,4 @@ https://paster.so/*
 /hubcloud.club\/tg\/go.php\?re=/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
-/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec).com|(makego|sakazi|momge).net|askerlikforum.com.tr|forp.xyz)(\/.*)/
+/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec).com|(makego|sakazi|momge).net|askerlikforum.com.tr|(forp|bevery).xyz)(\/.*)/
