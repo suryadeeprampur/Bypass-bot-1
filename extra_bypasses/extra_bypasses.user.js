@@ -198,7 +198,6 @@
 // @include     /psccapk.in|secure.bgmiupdate.com.in/
 // @include     /www.spaste.com/
 // @include     /click.convertkit-mail.com/
-// @include     /bloggingvector.shop\/re2/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -406,7 +405,7 @@
     }
 
     // hubcloud telegram link - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/185
-    /bloggingvector.shop\/re2/.test(url) ? redirect(atob(url.split('/re2/')[1])) : null;
+    // /bloggingvector.shop\/re2/.test(url) ? redirect(atob(url.split('/re2/')[1])) : null;
 
     // desiremovies.cymru
     /gyanigurus.net\/view/.test(url) ? afterDOMLoaded(function() {clickIfExists('#show_button')}) : null;
