@@ -284,7 +284,7 @@ coins-town.com
 slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com
 link.goto.com.np|(appkamods|bankvacency|otomi-games).com
 hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org
-(tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn|historyofyesterday).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space|chaosfun.online
+(tpayr|viralfeed).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240|retrotechreborn|historyofyesterday|tradeshowrating).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|blackwoodacademy.org|cryptednews.space|chaosfun.online
 (awgrow|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|businessuniqueidea|plumptofit|cookingpumpkin|elishea|audioinspects|celebperson|dreamhomelabs|fishingbreeze).com|(financewrapper|recipes4all).net|(aayurvedshastra|allnewspoint).in|chefslink.org|lawyex.co|mdn.lol
 shortit.pw
 short.croclix.me|adz7short.space
@@ -737,4 +737,5 @@ https://paster.so/*
 /hubcloud.club\/tg\/go.php\?re=/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
+/^https:\/\/.*\.(tradeshowrating\.com|historyofyesterday\.com)\/.*/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec).com|(makego|sakazi|momge).net|askerlikforum.com.tr|(forp|bevery).xyz)(\/.*)/
