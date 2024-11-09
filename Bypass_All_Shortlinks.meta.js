@@ -705,7 +705,7 @@
 // @include     /linkshortify.in|lksfy.com/
 // @include     /tumangasdd.com/
 // @include     /sexyforums.com\/redirect/
-// @include     /forum.sexyegirls.to\/redirect\?to=/
+// @include     /forum.(sexyegirls|sorrymother).to\/redirect\?to=/
 // @include     /paste.japan-paw.net\/\?v=/
 // @include     /pastesmkv.xyz\/\?v=/
 // @include     /ikramlar.online|segurosdevida.site/

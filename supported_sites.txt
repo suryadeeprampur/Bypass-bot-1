@@ -686,7 +686,7 @@ https://paster.so/*
 /linkshortify.in|lksfy.com/
 /tumangasdd.com/
 /sexyforums.com\/redirect/
-/forum.sexyegirls.to\/redirect\?to=/
+/forum.(sexyegirls|sorrymother).to\/redirect\?to=/
 /paste.japan-paw.net\/\?v=/
 /pastesmkv.xyz\/\?v=/
 /ikramlar.online|segurosdevida.site/
