@@ -554,9 +554,7 @@
 // @match         https://linkvertise.com/*
 // @match        https://bypass.city/bypass?bypass=*
 // @match        https://adbypass.org/bypass?bypass=*
-// @match       https://fitdynamos.com/*
 // @match       https://fc-lc.xyz/*
-// @match       https://www.techkhulasha.com/*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
@@ -743,17 +741,20 @@
 // @include     /encurtads.net|financacerta.com/
 // @include     /shrtbr.com/
 // @include     /dramaday.me\/[^\/]+\/$/
+// @include     /^https:\/\/(fitdynamos.com|labgame.io)\/.*$/
 // @include     /mobilenagari.com|defencewallah.in/
-// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com/
+// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com|dear-lottery.org/
 // @include     /rocklinks.in/
 // @include     /www.udlinks.com/
-// @include     /techkhulasha.com/
+// @include     /techkhulasha.com|blog.bloggerishyt.in/
 // @include     /golink.bloggerishyt.in/
 // @include     /skillheadlines.in/
-// @include     /psccapk.in|secure.bgmiupdate.com.in/
+// @include     /psccapk.in|secure.bgmiupdate.com.in|money.hustlershub.in|rg.sattakingcharts.in/
 // @include     /www.spaste.com/
 // @include     /click.convertkit-mail.com/
 // @include     /hubcloud.club\/tg\/go.php\?re=/
+// @include     /stockwallah.com/
+// @include     /^https:\/\/relampagomovies\.com\/.+/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(tradeshowrating\.com|historyofyesterday\.com)\/.*/
@@ -1766,7 +1767,7 @@
     const afterWindowLoaded = (callback) => window.addEventListener('load', callback);
     const isValidUrl = url => /^(?:https?|ftp):\/\/(?:\w+\.){1,3}\w+(?:\/\S*)?$/.test(url);
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
-    const redirectIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button.href) { clearInterval(intervalId); redirect(button.href) } }, 500); };
+    const redirectIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button.href && isValidUrl(button.href)) { clearInterval(intervalId); redirect(button.href) } }, 500); };
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton && !linkButton.href.includes('/undefined')) { clearInterval(intervalId); setTimeout(function() {redirect(linkButton.href);}, 500) } }, 500); };
     const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && !button.classList.contains('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 500) } }, 500); };
@@ -1867,7 +1868,7 @@
     /set.seturl.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // seturl.in used by animedekho.in
-    /psccapk.in|secure.bgmiupdate.com.in/.test(url) ? afterDOMLoaded(function() {
+    /psccapk.in|secure.bgmiupdate.com.in|money.hustlershub.in|rg.sattakingcharts.in/.test(url) ? afterDOMLoaded(function() {
         window.count = 0;
         clickIfExists('#tp-snp2');
         clickIfExists('#cross-snp2');
@@ -1896,7 +1897,7 @@
     }) : null; 
     //type 1:https://fc-lc.xyz/aPxvk which leads to fitdynamos.com - https://github.com/uBlockOrigin/uAssets/pull/20826 - https://github.com/uBlockOrigin/uAssets/issues/25210
     //(different from type2: https://fc-lc.xyz/ymUtEPUB which leads to gamezizo.com, https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/162)
-    /^https:\/\/(fitdynamos.com)\/.*$/.test(url) ? afterWindowLoaded(function() {
+    /^https:\/\/(fitdynamos.com|labgame.io)\/.*$/.test(url) ? afterWindowLoaded(function() {
         clickIfExists('#next');
         clickIfExists('#scroll:not(.hidden)');
         clickIfExists('#glink:not(.hidden)');
@@ -1946,7 +1947,7 @@
     // shon.xyz, seen in mega-descargas-serie.blogspot.com
     /shon.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-main')}) : null;
 
-    //vegamovies, worldfree4u, desiremovies.cymru, hdhub4u.joburg, moviesdrive.world ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
+    //vegamovies, worldfree4u, desiremovies.cymru, hdhub4u.capetown, moviesdrive.world ... https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8508217
     const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
         let intervalId = setInterval(() => { //Check every 0.5s
           let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
@@ -1956,6 +1957,13 @@
         if (url.includes('?r=')) redirect(atob(url.split('?r=')[1]));
         else redirectOrClickIfExistsEnabledWithDelay('.rd_btn');
     }
+
+    // hdhub4u.capetown
+    /stockwallah.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('a#verify_btn');
+        redirectIfExists('a#verify_btn');
+    }) : null;
+    
 
     // hubcloud telegram link - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/185
     // /bloggingvector.shop\/re2/.test(url) ? redirect(atob(url.split('/re2/')[1])) : null;
@@ -2170,7 +2178,7 @@
     /land.povathemes.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // https://www.udlinks.com/kzrJRjj - https://publicearn.com/vrpNlNc
-    /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com/.test(url) ? afterDOMLoaded(function() {
+    /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com|dear-lottery.org/.test(url) ? afterDOMLoaded(function() {
         window.count = 0;
         clickWithDelay('#tp98', 2000);
         clickWithDelay('#btn6', 2000);
@@ -2185,9 +2193,11 @@
     }) : null;
     /rocklinks.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
-    // https://www.techkhulasha.com/?token=T3VzT
-    /techkhulasha.com/.test(url) ? afterDOMLoaded(function() {
+    // https://www.techkhulasha.com/?token=T3VzT - gyanilinks
+    /techkhulasha.com|blog.bloggerishyt.in/.test(url) ? afterDOMLoaded(function() {
         modifyScript(/9000|30000|1000/gm, '100');
+        clickIfExists('#popup-button');
+        clickIfExists('#gotolink');
         clickIfExists('a.bt-success');
         if (document.querySelector('#ad-top > h4:nth-child(2)').innerHTML.includes('step 2')) {clickIfExists('#gotolink')};
     }) : null;
@@ -2627,6 +2637,17 @@
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/184
     /click.convertkit-mail.com/.test(url) ? redirect(atob(url.match(/.*(aHR0.*)/)[1])) : null;
 
+    // relampagomovies.com
+    if (/^https:\/\/relampagomovies\.com\/.+/.test(url)) {
+        afterWindowLoaded(function() {
+            clickIfExists('#countdown > a:nth-child(1)');
+            clickIfExists('#dllink');
+            redirectIfExists('div.content2 a');
+            redirectIfExists('a[href*="filemoon.sx"]');
+        });
+    }
+
+
 })();
 
 (function() {
@@ -2645,6 +2666,8 @@
 
     // dramaday.me - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/21
     /besargaji.com/.test(url) ? boostTimers() : null;
+
+    /^https:\/\/relampagomovies\.com\/.+/.test(url) ? boostTimers() : null;
 
 })();
 // ----- ----- -----
