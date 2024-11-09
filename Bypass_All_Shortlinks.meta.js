@@ -743,7 +743,7 @@
 // @include     /dramaday.me\/[^\/]+\/$/
 // @include     /^https:\/\/(fitdynamos.com|labgame.io)\/.*$/
 // @include     /mobilenagari.com|defencewallah.in/
-// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com|dear-lottery.org/
+// @include     /bgmiupdatehub.com|novelquote.com|superheromaniac.com|sabarpratham.in|pubprofit.in|taazaloans.com|dear-lottery.org|jkssbalerts.com/
 // @include     /rocklinks.in/
 // @include     /www.udlinks.com/
 // @include     /techkhulasha.com|blog.bloggerishyt.in/
