@@ -49,3 +49,9 @@ Thanks to:
 - Contributers to this repository who have submitted pull requests: mouro, trapgod1, CaptainCaffeine, Anon991299.
 - Every user that has reported issues to this repository.
 
+## Optional extra tools
+- For AdMaven links, these can't be easily bypassed with an userscript, because the page redirects you before the userscript has the chance to run. I recommend the browser extension [Redirector](https://einaregilsson.com/redirector/). 
+Create a new redirect rule. Use the following settings: 
+    - Include pattern: `^https:\/\/([^\/]*)\/s\?([a-zA-Z0-9]{1,8})$`
+    - Redirect to: `https://bypass.city/bypass?bypass=https://$1/s?$2`
+    - Pattern Type: `Regular expression`
