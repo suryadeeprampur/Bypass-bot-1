@@ -751,6 +751,7 @@
 // @include     /hubcloud.club\/tg\/go.php\?re=/
 // @include     /stockwallah.com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(tradeshowrating\.com|historyofyesterday\.com)\/.*/
@@ -2031,7 +2032,7 @@
         });
     }
     
-    /* const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => {
+    const handleShamikcardButtons = (buttonSelector, targetText) => afterDOMLoaded(() => setInterval(() => {
         const button = document.querySelector(buttonSelector);
         if (button && button.textContent.includes(targetText) && !(targetText == 'Get Link')) {
             setTimeout(() => button.click(), 500);
@@ -2049,7 +2050,7 @@
         //##Final button
         (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))(); //Final button
     }
-    /linkshortify.in|lksfy.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.get-link')}) : null; // added for https://lksfy.com/59EhFF */
+    /linkshortify.in|lksfy.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.get-link')}) : null; // added for https://lksfy.com/59EhFF
 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10649981
     // https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/263369

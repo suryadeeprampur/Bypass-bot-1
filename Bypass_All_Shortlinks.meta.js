@@ -751,6 +751,7 @@
 // @include     /hubcloud.club\/tg\/go.php\?re=/
 // @include     /stockwallah.com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(tradeshowrating\.com|historyofyesterday\.com)\/.*/
