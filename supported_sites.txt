@@ -730,4 +730,4 @@ https://paster.so/*
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
 /^https:\/\/.*\.(tradeshowrating\.com|historyofyesterday\.com)\/.*/
-/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec).com|(makego|sakazi|momge).net|askerlikforum.com.tr|(forp|bevery).xyz)(\/.*)/
+/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass).com|(makego|sakazi|momge).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz)(\/.*)/
