@@ -199,6 +199,7 @@
 // @include     /stockwallah.com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
 // @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
+// @include     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1094,6 +1095,13 @@
         });
     }
 
+    // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11280464
+    /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/.test(url) ? afterWindowLoaded(function() {
+        const form = document.querySelector('#link-view > form');
+        if (form) {
+            form.action = document.querySelector('#link-view > form > input[name=url]').value;
+        }
+    }) : null;
 
 })();
 
