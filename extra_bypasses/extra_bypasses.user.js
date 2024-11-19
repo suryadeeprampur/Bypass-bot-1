@@ -201,7 +201,7 @@
 // @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
 // @include     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/
 // @include     /^https?:\/\/(?:phonesparrow.com|rajasthantopnews.com|stocks.mewatjobs.com|samaysuchi.com|alljntuworld.in|mazijob.in|asaura.com|updatewallah.in|wikijankari.com|newsonnline.com|creditcarred.com|accucaptions.com)\/safe.php\?link=.*$/
-// @include     /^https:\/\/modijiurl\.com\/NJW7do\/\?mid=.*$/
+// @include     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1107,7 +1107,7 @@
 
     // modijiurl - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11295970
     /^https?:\/\/(?:phonesparrow.com|rajasthantopnews.com|stocks.mewatjobs.com|samaysuchi.com|alljntuworld.in|mazijob.in|asaura.com|updatewallah.in|wikijankari.com|newsonnline.com|creditcarred.com|accucaptions.com)\/safe.php\?link=.*$/.test(url) ? window.location.assign(new URLSearchParams(window.location.search).get('link')) : null;
-    /^https:\/\/modijiurl\.com\/NJW7do\/\?mid=.*$/.test(url) ? redirectIfNotDisabled('#getLinkButton') : null;
+    /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) ? redirectIfNotDisabled('#getLinkButton') : null;
 
 })();
 

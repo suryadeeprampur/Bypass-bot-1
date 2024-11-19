@@ -749,7 +749,7 @@
 // @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
 // @include     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/
 // @include     /^https?:\/\/(?:phonesparrow.com|rajasthantopnews.com|stocks.mewatjobs.com|samaysuchi.com|alljntuworld.in|mazijob.in|asaura.com|updatewallah.in|wikijankari.com|newsonnline.com|creditcarred.com|accucaptions.com)\/safe.php\?link=.*$/
-// @include     /^https:\/\/modijiurl\.com\/NJW7do\/\?mid=.*$/
+// @include     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(tradeshowrating\.com|historyofyesterday\.com)\/.*/
