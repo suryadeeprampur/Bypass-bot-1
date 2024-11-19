@@ -1106,7 +1106,7 @@
     }) : null;
 
     // modijiurl - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11295970
-    /^https?:\/\/(?:phonesparrow.com|rajasthantopnews.com|stocks.mewatjobs.com|samaysuchi.com|alljntuworld.in|mazijob.in|asaura.com|updatewallah.in|wikijankari.com|newsonnline.com|creditcarred.com|accucaptions.com)\/safe.php\?link=.*$/.test(url) ? window.location.assign(new URLSearchParams(window.location.search).get('link')) : null;
+    /^https?:\/\/(?:phonesparrow.com|rajasthantopnews.com|stocks.mewatjobs.com|samaysuchi.com|alljntuworld.in|mazijob.in|asaura.com|updatewallah.in|wikijankari.com|newsonnline.com|creditcarred.com|accucaptions.com)\/safe.php\?link=.*$/.test(url) && navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ? window.location.assign(new URLSearchParams(window.location.search).get('link')) : null;
     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) ? redirectIfNotDisabled('#getLinkButton') : null;
 
 })();
