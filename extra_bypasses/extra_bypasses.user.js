@@ -525,11 +525,36 @@
     // starsddl.me
     /starsddl.me\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
 
-    // uhdmovies.dad
-    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('span.block > a:nth-child(1)')}) : null;
+    // uhdmovies.icu, topmovies.icu (modlist.in)
+
+    // button-clicking method
+    /* /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('span.block > a:nth-child(1)')}) : null;
     /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('#verify_button')}) : null;
     /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('#verify_button2')}) : null;
-    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#two_steps_btn')}) : null;
+    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#two_steps_btn')}) : null; */
+
+    //alt method (thanks to https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11063787)
+    if (/tech.unblockedgames.world/.test(url)) {
+        afterDOMLoaded(function() {
+            // First step
+            const landingElement = document.querySelector("#landing");
+            if (landingElement) {
+                landingElement.submit();
+            // Second step
+            } else {
+                // Extract the target URL from the script contents and redirect to it
+                const scriptElements = Array.from(document.getElementsByTagName("script"));
+                const matchedUrl = scriptElements
+                    .map((script) => script.textContent.match(/https:\/\/tech\.unblockedgames\.world\/\?go=pepe-[\w-]+/))
+                    .filter((match) => match) // Filter out null values
+                    .map((match) => match[0])[0]; // Get the first matching URL
+
+                if (matchedUrl) {
+                    window.location.href = matchedUrl;
+                }
+            }
+        });
+    }
 
     // seriezloaded.com.ng
     /seriezloaded.com.ng\/sl-download\/\?link=/ .test(url) ? afterDOMLoaded(function() { redirect(document.querySelector('.sl-button').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1]) }) : null;
