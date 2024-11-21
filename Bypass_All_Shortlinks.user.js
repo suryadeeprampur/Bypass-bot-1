@@ -750,6 +750,7 @@
 // @include     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/
 // @include     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 // @include     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
+// @include     /delpez.com/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(tradeshowrating\.com|historyofyesterday\.com)\/.*/
@@ -2620,6 +2621,12 @@
 
     // https://f.technicalatg.in/6iTpuM1 - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10954732
     /skillheadlines.in/.test(url) ? afterDOMLoaded(function() { redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]);}) : null;
+
+    // https://delpez.com/?go=1ad8bb46 - https://t.me/heroelink - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10954732
+    /delpez.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('.btn-primary');
+        redirect(decodeURIComponent(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]));
+    }) : null;
 
     // spaste.com use in pahe.ink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/77
     function checkHCaptchaSolved() {
