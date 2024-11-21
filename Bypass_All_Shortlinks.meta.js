@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.1.8
+// @version        93.1.9
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -734,7 +734,7 @@
 // @include     /dramaday.me\/[^\/]+\/$/
 // @include     /^https:\/\/(fitdynamos.com|labgame.io)\/.*$/
 // @include     /mobilenagari.com|defencewallah.in/
-// @include     /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify).com|(sabarpratham|pubprofit).in|dear-lottery.org/
+// @include     /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime).com|(sabarpratham|pubprofit|sarkariyojnaa).in|dear-lottery.org/
 // @include     /rocklinks.in/
 // @include     /www.udlinks.com/
 // @include     /techkhulasha.com|blog.bloggerishyt.in/

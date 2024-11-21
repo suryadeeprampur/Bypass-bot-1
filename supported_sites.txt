@@ -715,7 +715,7 @@ https://paster.so/*
 /dramaday.me\/[^\/]+\/$/
 /^https:\/\/(fitdynamos.com|labgame.io)\/.*$/
 /mobilenagari.com|defencewallah.in/
-/(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify).com|(sabarpratham|pubprofit).in|dear-lottery.org/
+/(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime).com|(sabarpratham|pubprofit|sarkariyojnaa).in|dear-lottery.org/
 /rocklinks.in/
 /www.udlinks.com/
 /techkhulasha.com|blog.bloggerishyt.in/
