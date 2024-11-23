@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.1.9
+// @version        93.1.10
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2991,12 +2991,15 @@
     const domainRegex = /^https:\/\/.*\.(tradeshowrating\.com|historyofyesterday\.com)\/.*/;
     if (domainRegex.test(window.location.href)) {
         window.addEventListener('load', function() {
+            let reloading = false;
+
             // Functions to check for messages like "Click any ad & keep it open for 15 seconds to continue" and reload the page if one exists
             function checkForMessage() {
                 const paragraphs = document.getElementsByTagName("p");
                 for (let p of paragraphs) {
                     if (/.*click.+ad.*to.+continue.*/is.test(p.textContent) && isElementVisibleAndEnabled(p)) {
-                        location.reload(); // Reload the page
+                        if (!reloading) location.reload(); // Reload the page
+                        reloading = true;
                         return; // Exit the function after reloading
                     }
                 }
