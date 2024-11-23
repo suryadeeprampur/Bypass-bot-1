@@ -1142,6 +1142,13 @@
     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) && browserIsFirefox() ? redirect(url.split('?link=')[1]) : null;
     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) ? redirectIfNotDisabled('#getLinkButton') : null;
 
+    // profitsfly partly skip timer
+    /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online)\/.*/.test(url) ? (() => {
+        afterDOMLoaded(function() {
+            window.wT9882 = 5;
+        });
+    })() : null;
+
 })();
 
 (function() {

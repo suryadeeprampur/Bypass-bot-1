@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.1.11
+// @version        93.1.12
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2675,6 +2675,13 @@
     function browserIsFirefox() {return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;}
     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) && browserIsFirefox() ? redirect(url.split('?link=')[1]) : null;
     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) ? redirectIfNotDisabled('#getLinkButton') : null;
+
+    // profitsfly partly skip timer
+    /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online)\/.*/.test(url) ? (() => {
+        afterDOMLoaded(function() {
+            window.wT9882 = 5;
+        });
+    })() : null;
 
 })();
 
