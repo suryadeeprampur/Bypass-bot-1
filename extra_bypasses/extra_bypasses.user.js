@@ -1145,9 +1145,16 @@
     // profitsfly partly skip timer
     /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online)\/.*/.test(url) ? (() => {
         afterDOMLoaded(function() {
+            function setTimer() {
+                if (window.wT9882 > 5) {
+                    window.wT9882 = 1;
+                }
+            }
             window.wT9882 = 5;
+            setInterval(setTimer, 1000);
         });
     })() : null;
+
 
 })();
 

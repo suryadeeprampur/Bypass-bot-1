@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.1.14
+// @version        93.1.15
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2679,9 +2679,16 @@
     // profitsfly partly skip timer
     /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online)\/.*/.test(url) ? (() => {
         afterDOMLoaded(function() {
+            function setTimer() {
+                if (window.wT9882 > 5) {
+                    window.wT9882 = 1;
+                }
+            }
             window.wT9882 = 5;
+            setInterval(setTimer, 1000);
         });
     })() : null;
+
 
 })();
 
