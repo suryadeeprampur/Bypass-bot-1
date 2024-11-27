@@ -23,6 +23,11 @@
                         return; // Exit the function after reloading
                     }
                 }
+                if (document.body.textContent.includes("Less than 18 seconds have passed between actions. Robot verification failed, please try again...")) {
+                    if (!reloading) location.reload(); // Reload the page
+                    reloading = true;
+                    return; // Exit the function after reloading
+                }
             }
 
             // Helper function to determine if an element is visible and enabled

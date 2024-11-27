@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.1.16
+// @version        93.1.17
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -3017,6 +3017,11 @@
                         reloading = true;
                         return; // Exit the function after reloading
                     }
+                }
+                if (document.body.textContent.includes("Less than 18 seconds have passed between actions. Robot verification failed, please try again...")) {
+                    if (!reloading) location.reload(); // Reload the page
+                    reloading = true;
+                    return; // Exit the function after reloading
                 }
             }
 
