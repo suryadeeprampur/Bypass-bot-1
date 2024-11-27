@@ -46,7 +46,7 @@ Thanks to:
 - [StephenP](https://greasyfork.org/users/104167-stephenp) for the filecrypt bypass.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
 - [AdamWr](https://github.com/AdamWr) from AdGuard for the mega-enlace and acortalink.me bypasses.
-- Contributers to this repository who have submitted pull requests: mouro, trapgod1, CaptainCaffeine, Anon991299.
+- Contributers to this repository who have submitted pull requests: mouro, trapgod1, CaptainCaffeine, Anon991299, IntNinja.
 - Every user that has reported issues to this repository.
 
 ## Optional extra tools
