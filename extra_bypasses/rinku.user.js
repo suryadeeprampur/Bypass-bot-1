@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Rinku autoclick
-// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem).com|(makego|sakazi|momge).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash).com|(makego|sakazi|momge).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz)(\/.*)/
 // @run-at       document-start
 // ==/UserScript==
 
@@ -10,7 +10,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem).com|(makego|sakazi|momge).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz/
+    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash).com|(makego|sakazi|momge).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz/
     if (domainRegex.test(window.location.href)) {
 
         // Backup the current Rinku.me Code in case we get to 404 and we need to try again
@@ -124,6 +124,12 @@
             observeButtons();
             checkForMessage();
             clickStepButton();
+
+            // Hide "Hey, thanks for your visit, good day!!" modal
+            const interstitial = document.getElementById("interstitial");
+            if (interstitial) {
+                interstitial.style.display = "none";
+            }
 
         });
 
