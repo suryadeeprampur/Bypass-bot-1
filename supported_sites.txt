@@ -735,5 +735,5 @@ https://paster.so/*
 /delpez.com/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
-/^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online)\/.*/
+/^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash).com|(makego|sakazi|momge).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz)(\/.*)/

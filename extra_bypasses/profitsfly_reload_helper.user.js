@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        profitsfly reload helper
-// @include     /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online)\/.*/
+// @include     /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -8,7 +8,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online)\/.*/;
+    const domainRegex = /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/;
     if (domainRegex.test(window.location.href)) {
         window.addEventListener('load', function() {
             let reloading = false;
