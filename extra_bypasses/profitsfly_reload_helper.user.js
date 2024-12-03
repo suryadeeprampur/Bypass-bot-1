@@ -10,10 +10,39 @@
 
     const domainRegex = /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/;
     if (domainRegex.test(window.location.href)) {
-        window.addEventListener('load', function() {
-            let reloading = false;
+        // Back up the current ref url
+        if (window.location.href.includes("/ref.php")) {
+            GM_setValue("profitsflyLocation", window.location.href);
+        }
 
-            // Functions to check for messages like "Click any ad & keep it open for 15 seconds to continue" and reload the page if one exists
+        window.addEventListener('load', function() {
+            // Check if the current URL is just the domain
+            const url = new URL(window.location.href);
+            const path = url.pathname;
+            if (path === "/" || path === "") {
+                if (document.body.textContent.includes("You have 2 active sessions.")) {
+                    // Click the continue button if a backed up url was loaded in the last 5 seconds
+                    if ((Date.now() - GM_getValue("profitsflyGoBackTime", 0)) < 5000) {
+                        for (const button of document.querySelectorAll("button")) {
+                            if (button.textContent.trim() === "Continue") {
+                                button.click();
+                                break;
+                            }
+                        }
+                    }
+                } else {
+                    // Load the backed up url
+                    const lastLocation = GM_getValue("profitsflyLocation");
+                    if (lastLocation) {
+                        GM_setValue("profitsflyGoBackTime", Date.now());
+                        GM_setValue("profitsflyOverrideLocation", lastLocation);
+                        window.location.href = lastLocation;
+                    }
+                }
+            }
+
+            // Function to check for messages like "Click any ad & keep it open for 15 seconds to continue" and reload the page if one exists
+            let reloading = false;
             function checkForMessage() {
                 const paragraphs = document.getElementsByTagName("p");
                 for (let p of paragraphs) {
@@ -50,3 +79,4 @@
     }
 })();
 //-------
+
