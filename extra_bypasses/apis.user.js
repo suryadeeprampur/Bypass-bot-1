@@ -20,20 +20,9 @@
         const rParam = new URLSearchParams(window.location.search).get('r');
         if (rParam) {window.location.assign(atob(rParam));};
 
-    // Linkvertise hard case and Admaven. First try bypass.vip, fallback to bypass.city
+    // Linkvertise hard case and Admaven using bypass.city
     } else if (admavenRegex.test(window.location.href) || linkvertiseRegex.test(window.location.href) || lootlinkRegex.test(window.location.href)) {
-        fetch(`https://api.bypass.vip/bypass?url=${encodeURIComponent(window.location.href)}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.status == 'success') {
-                    window.location.assign(data.result);
-                } else {
-                    window.location.assign(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
-                }
-            })
-            .catch(err => {
-                window.location.assign(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
-            });
+        window.location.assign(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
     }
 })();
 // ----- ------ ----------

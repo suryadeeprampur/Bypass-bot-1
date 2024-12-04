@@ -41,8 +41,7 @@ You can help by:
 This script contains code I took, or redirects to free services from other developers for certain bypasses.
 Thanks to:
 - [BloggerPemula](https://greasyfork.org/users/810571-bloggerpemula)
-- [bypass.vip](https://bypass.vip/) Free API used for l1nkv3rt1s3, Admaven and Loot-link.
-- [bypass.city](https://bypass.city/) / [2](https://adbypass.org/) Fallback for bypass.vip.
+- [bypass.city](https://bypass.city/) / [2](https://adbypass.org/) used for l1nkv3rt1s3, Admaven and Loot-link.
 - [StephenP](https://greasyfork.org/users/104167-stephenp) for the filecrypt bypass.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
 - [AdamWr](https://github.com/AdamWr) from AdGuard for the mega-enlace and acortalink.me bypasses.
