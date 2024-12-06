@@ -752,6 +752,7 @@
 // @include     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 // @include     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 // @include     /delpez.com/
+// @include     /mendationforc.info/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/
