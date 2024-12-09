@@ -741,7 +741,7 @@
 // @include     /techkhulasha.com|blog.bloggerishyt.in/
 // @include     /golink.bloggerishyt.in/
 // @include     /skillheadlines.in/
-// @include     /psccapk.in|secure.bgmiupdate.com.in|money.hustlershub.in|rg.sattakingcharts.in/
+// @include     /psccapk.in|secure.bgmiupdate.com.in|money.hustlershub.in|rg.sattakingcharts.in|payalgaming.co.in/
 // @include     /www.spaste.com/
 // @include     /click.convertkit-mail.com/
 // @include     /hubcloud.club\/tg\/go.php\?re=/
@@ -1846,7 +1846,7 @@
     /set.seturl.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // seturl.in used by animedekho.in
-    /psccapk.in|secure.bgmiupdate.com.in|money.hustlershub.in|rg.sattakingcharts.in/.test(url) ? afterDOMLoaded(function() {
+    /psccapk.in|secure.bgmiupdate.com.in|money.hustlershub.in|rg.sattakingcharts.in|payalgaming.co.in/.test(url) ? afterDOMLoaded(function() {
         window.count = 0;
         clickIfExists('#tp-snp2');
         clickIfExists('#cross-snp2');

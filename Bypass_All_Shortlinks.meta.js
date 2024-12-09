@@ -741,7 +741,7 @@
 // @include     /techkhulasha.com|blog.bloggerishyt.in/
 // @include     /golink.bloggerishyt.in/
 // @include     /skillheadlines.in/
-// @include     /psccapk.in|secure.bgmiupdate.com.in|money.hustlershub.in|rg.sattakingcharts.in/
+// @include     /psccapk.in|secure.bgmiupdate.com.in|money.hustlershub.in|rg.sattakingcharts.in|payalgaming.co.in/
 // @include     /www.spaste.com/
 // @include     /click.convertkit-mail.com/
 // @include     /hubcloud.club\/tg\/go.php\?re=/
