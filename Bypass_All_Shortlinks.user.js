@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.2.8
+// @version        93.2.9
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -233,7 +233,7 @@
 // @match *://*.firefaucet.win/*
 // @include /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
 // @include /^(https?:\/\/)(.+)?(tmail.io|(gamezizo|fitdynamos).com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site|cuty.me)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|(offeergames|todogame).online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((leaveadvice|mensventure).com)(\/.*)/
@@ -568,7 +568,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
-// @include     /exeo.app|mrgec.com|cety.app/
+// @include     /exeo.app|mrgec.com|cety.app|cuty.me/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
 // @include     /linkspy.cc\/\/a/
@@ -1393,7 +1393,7 @@
     BypassedByBloggerPemula(/uptobhai\.*|uplinkto\.*|shortlinkto\.*/, function() { ClickIfExists('.btn-block.btn-primary.btn', 2);});
     BypassedByBloggerPemula(/tmail.io|(gamezizo|fitdynamos).com/, function() { //fc-lc type 2 - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8736277, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/162
       if (elementExists('#next')) {SubmitIfExists('form.text-center', 3);ClickIfExists('#next', 2);ClickIfExists('#glink.button', 15);} else {ClickIfExists('#surl', 5, 'setInterval');}});
-    BypassedByBloggerPemula(/(exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site/, function() {ClickIfExists('#invisibleCaptchaShortlink', 2);SubmitIfExists('#before-captcha', 3);
+    BypassedByBloggerPemula(/(exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site|cuty.me/, function() {ClickIfExists('#invisibleCaptchaShortlink', 2);SubmitIfExists('#before-captcha', 3);
       let exeo = setInterval(() => {if (bp('.timer').innerText == '0') {clearInterval(exeo);ReadytoClick('#submit-button');}}, 2 * 1000);});
     BypassedByBloggerPemula(/(on-scroll|diudemy|maqal360).com/, function() {EnableRCF();let adlink = setInterval(() => {
         if (bp('#countdown').innerText == '0') {clearInterval(adlink);ReadytoClick('#append > :nth-child(1)');}}, 2 * 1000);});
@@ -1913,7 +1913,7 @@
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
     //cuty.io - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/46
-    /exeo.app|mrgec.com|cety.app/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
+    /exeo.app|mrgec.com|cety.app|cuty.me/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
 
     //oko.sh
     /lnbz.la/.test(url) ? afterDOMLoaded(function() {timeSec = 0; afterElementVisible('form', function() {clickIfExists('button#getlink.btn-success');}) }) : null;

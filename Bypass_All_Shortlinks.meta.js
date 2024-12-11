@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.2.8
+// @version        93.2.9
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -233,7 +233,7 @@
 // @match *://*.firefaucet.win/*
 // @include /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
 // @include /^(https?:\/\/)(.+)?(tmail.io|(gamezizo|fitdynamos).com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site|cuty.me)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|(offeergames|todogame).online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((leaveadvice|mensventure).com)(\/.*)/
@@ -568,7 +568,7 @@
 // @include     /(verpeliculasonline.org|subtituladas.com)\/enlace/
 // @include     /links.cuevana.ac\/short/
 // @include     /ouo.io/
-// @include     /exeo.app|mrgec.com|cety.app/
+// @include     /exeo.app|mrgec.com|cety.app|cuty.me/
 // @include     /1v.to\/t/
 // @include     /linkspy.cc\/tr/
 // @include     /linkspy.cc\/\/a/
