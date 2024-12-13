@@ -1147,19 +1147,6 @@
     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) && browserIsFirefox() ? redirect(url.split('?link=')[1]) : null;
     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) ? redirectIfNotDisabled('#getLinkButton') : null;
 
-    // profitsfly partly skip timer
-//    /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/.test(url) ? (() => {
-//        afterDOMLoaded(function() {
-//            function setTimer() {
-//                if (window.wT9882 > 5) {
-//                    window.wT9882 = 1;
-//                }
-//            }
-//            window.wT9882 = 5;
-//            setInterval(setTimer, 1000);
-//        });
-//    })() : null;
-
     // sittingonclouds.com .net
     /paster.gg/.test(url) ? redirect(decodeURIComponent(url.split('&link=')[1].split('&')[0])) : null;
 

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.2.11
+// @version        93.2.12
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2673,19 +2673,6 @@
     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) && browserIsFirefox() ? redirect(url.split('?link=')[1]) : null;
     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) ? redirectIfNotDisabled('#getLinkButton') : null;
 
-    // profitsfly partly skip timer
-//    /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/.test(url) ? (() => {
-//        afterDOMLoaded(function() {
-//            function setTimer() {
-//                if (window.wT9882 > 5) {
-//                    window.wT9882 = 1;
-//                }
-//            }
-//            window.wT9882 = 5;
-//            setInterval(setTimer, 1000);
-//        });
-//    })() : null;
-
     // sittingonclouds.com .net
     /paster.gg/.test(url) ? redirect(decodeURIComponent(url.split('&link=')[1].split('&')[0])) : null;
 
@@ -3004,6 +2991,8 @@
 
     const domainRegex = /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/;
     if (domainRegex.test(window.location.href)) {
+
+        // ---RELOAD DEAD-END PAGES---
         if (window.location.href.includes("/ref.php")) {
             // Back up the current ref url
             GM_setValue("profitsflyLocation", window.location.href);
@@ -3075,10 +3064,67 @@
 
             setInterval(checkForMessage, 1000);
         }
+
+
+        // ---SKIP TIMERS---
+        document.addEventListener('DOMContentLoaded', function() {
+            function setTimer() {
+                if (window.wT9882 > 3) {
+                    window.wT9882 = 1;
+                }
+            }
+            window.wT9882 = 3;
+            setInterval(setTimer, 1000);
+
+            /* ------------ Protect buttons from being removed ------------ */
+            // Protect all buttons currently in the DOM
+            function protectButtons() {
+                const buttons = document.querySelectorAll("button");
+                buttons.forEach((button) => protectElement(button));
+            }
+
+            // Protect a specific button by overriding its removal methods
+            function protectElement(element) {
+                if (element.__protected) return; // Avoid double protection
+
+                // Override remove()
+                const originalRemove = element.remove;
+                element.remove = () => {};
+
+                // Flag element as protected
+                element.__protected = true;
+            }
+
+            // Monitor the DOM for dynamically added buttons
+            const observer = new MutationObserver((mutationsList) => {
+                mutationsList.forEach((mutation) => {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.tagName === "BUTTON") {
+                            // Protect new button
+                            protectElement(node);
+                        }
+                    });
+
+                    mutation.removedNodes.forEach((node) => {
+                        if (node.tagName === "BUTTON") {
+                            // A button was removed. Re-add it:
+                            mutation.target.appendChild(node); // Re-add the button
+                            protectElement(node); // Re-protect it
+                        }
+                    });
+                });
+            });
+
+            // Start observing the document for changes
+            observer.observe(document.body, { childList: true, subtree: true });
+
+            // Protect buttons already in the DOM
+            protectButtons();
+        });
+
     }
 })();
 //-------
-
 
 // ----- Bypass Rinku ------
 // source: https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/165
