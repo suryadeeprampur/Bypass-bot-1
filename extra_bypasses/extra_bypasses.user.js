@@ -204,6 +204,7 @@
 // @include     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 // @include     /delpez.com/
 // @include     /mendationforc.info/
+// @include     /paster.gg/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1159,6 +1160,8 @@
         });
     })() : null;
 
+    // sittingonclouds.com .net
+    /paster.gg/.test(url) ? redirect(decodeURIComponent(url.split('&link=')[1].split('&')[0])) : null;
 
 })();
 

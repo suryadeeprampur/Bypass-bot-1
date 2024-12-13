@@ -734,6 +734,7 @@ https://paster.so/*
 /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 /delpez.com/
 /mendationforc.info/
+/paster.gg/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
 /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/

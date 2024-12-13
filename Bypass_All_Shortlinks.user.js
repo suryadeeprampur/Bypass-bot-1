@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.2.9
+// @version        93.2.10
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -753,6 +753,7 @@
 // @include     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 // @include     /delpez.com/
 // @include     /mendationforc.info/
+// @include     /paster.gg/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/
@@ -2685,6 +2686,8 @@
         });
     })() : null;
 
+    // sittingonclouds.com .net
+    /paster.gg/.test(url) ? redirect(decodeURIComponent(url.split('&link=')[1].split('&')[0])) : null;
 
 })();
 
