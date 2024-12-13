@@ -3069,11 +3069,11 @@
         // ---SKIP TIMERS---
         document.addEventListener('DOMContentLoaded', function() {
             function setTimer() {
-                if (window.wT9882 > 3) {
+                if (window.wT9882 > 5) {
                     window.wT9882 = 1;
                 }
             }
-            window.wT9882 = 3;
+            window.wT9882 = 5;
             setInterval(setTimer, 1000);
 
             /* ------------ Protect buttons from being removed ------------ */
