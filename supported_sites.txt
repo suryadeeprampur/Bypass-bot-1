@@ -735,6 +735,7 @@ https://paster.so/*
 /delpez.com/
 /mendationforc.info/
 /paster.gg/
+/go.zovo.ink/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
 /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/

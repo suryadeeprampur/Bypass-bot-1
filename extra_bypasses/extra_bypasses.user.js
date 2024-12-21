@@ -205,6 +205,7 @@
 // @include     /delpez.com/
 // @include     /mendationforc.info/
 // @include     /paster.gg/
+// @include     /go.zovo.ink/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1149,6 +1150,12 @@
 
     // sittingonclouds.com .net
     /paster.gg/.test(url) ? redirect(decodeURIComponent(url.split('&link=')[1].split('&')[0])) : null;
+
+    // dodi-repacks.site
+    /go.zovo.ink/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('button.btn:nth-child(4)');
+        redirectIfNotDisabled('a.get-link');
+    }) : null;
 
 })();
 
