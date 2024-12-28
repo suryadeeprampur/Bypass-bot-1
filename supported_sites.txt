@@ -132,7 +132,7 @@ gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online
 gameblog.in
 sharetext.me
 btcsatoshi.net
-(cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|gamco.online
+(cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|gamco.online|exe-urls.com
 sfl.gl|moneyblink.com
 comohoy.com
 apkw.ru
@@ -215,7 +215,7 @@ bigbtc.win
 firefaucet.win
 uptobhai\.*|uplinkto\.*|shortlinkto\.*
 tmail.io|(gamezizo|fitdynamos).com
-(exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site|cuty.me
+(exeo|exego).app|(mrgec|emxaw|ijvam|falpus|exe-urls).com|evernia.site|cuty.me
 (on-scroll|diudemy|maqal360).com
 (forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|(offeergames|todogame).online
 (leaveadvice|mensventure).com
@@ -633,7 +633,7 @@ https://paster.so/*
 /(linkvip|blitly).io/
 /^https:\/\/megalink.pro\/[a-zA-Z0-9]+$/
 /lnbz.la/
-/dekhe.click|indianshortner.com|lnbz.la|oii.la|falpus.com|tii.la|oko.sh|tpi.li|shrinke.me|clk.(wiki|kim)|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la|exego.app|link.theflash.eu.org|get.instantearn.in|mrproblogger.com/
+/dekhe.click|indianshortner.com|lnbz.la|oii.la|falpus.com|tii.la|oko.sh|tpi.li|shrinke.me|clk.(wiki|kim)|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la|exego.app|link.theflash.eu.org|get.instantearn.in|mrproblogger.com|exe-urls.com/
 /ez4short.com\/[^\/]+\/\?token=[^\/]+$/
 /shon.xyz/
 /veganab.co\/\?link=/
