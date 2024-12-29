@@ -168,7 +168,7 @@
 // @include /^(https?:\/\/)(.+)?((10short|lollty).pro|mamahawa.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((aduzz|tutorialsaya|indobo|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(cryptfaucet.com|izseo.net)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts|agecalculatorexpert).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts|agecalculatorexpert).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|(paidinsurance|gujdigital).in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((netflixrelease|mangareleasedate|freemodapp|zutiza|phixshop|mp4news|uskloans|feedaso|djhindustan).com|(myfirstname|ignoupur).in|(mdsuuniversity|sarkarisahayata).org|(rrbntpc2024|kisannews).net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((crypto2u|bestcoinsites).xyz)(\/.*)/
 // @match *://*.fansonlinehub.com/*
@@ -1267,7 +1267,7 @@
     BypassedByBloggerPemula(/(10short|lollty).pro|mamahawa.com/, function() {ReadytoClick('center > .btn-success.btn', 3);waitForElm('a#makingdifferenttimer', st1 => redirect(st1.href, false));waitForElm('a#proceed', st2 => redirect(st2.href, false));});
     BypassedByBloggerPemula(/(aduzz|tutorialsaya|indobo|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/cryptfaucet.com|izseo.net/, function() {window.checkTimeRemaining = true;let cryptf = bp("div[id^=wpsafe] > a[rel=nofollow]");setTimeout(() => {redirect(strBetween(cryptf.onclick.toString(), `window.open('`, `', '_self')`), false);}, 5 * 1000);});
-    BypassedByBloggerPemula(/(cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts|agecalculatorexpert).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
+    BypassedByBloggerPemula(/(cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts|agecalculatorexpert).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|(paidinsurance|gujdigital).in/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
     BypassedByBloggerPemula(/(netflixrelease|mangareleasedate|freemodapp|zutiza|phixshop|mp4news|uskloans|feedaso|djhindustan).com|(myfirstname|ignoupur).in|(mdsuuniversity|sarkarisahayata).org|(rrbntpc2024|kisannews).net/, function() {ClickIfExists('#VerifyBtn', 3);ClickIfExists('#NextBtn', 5, 'setInterval');});
     BypassedByBloggerPemula(/(crypto2u|bestcoinsites).xyz/, function() {if (/^\/shortlink\/([^\/]+)/.test(location.pathname)) {waitForElm('a#btn.btn.btn-success', c2u => redirect(c2u.href, false));} else if (elementExists('.shadow.card')) {waitForElm('a.btn.btn-lg.btn-success.px-4', c2u2 => redirect(c2u2.href, false));}});
     BypassedByBloggerPemula(/fansonlinehub.com/, async function() {setInterval(() => {window.scrollBy(0, 1);window.scrollTo(0,-1);ReadytoClick('.active.btn > span');}, 3 * 1000);});

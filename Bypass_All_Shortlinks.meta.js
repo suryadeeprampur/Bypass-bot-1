@@ -168,7 +168,7 @@
 // @include /^(https?:\/\/)(.+)?((10short|lollty).pro|mamahawa.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((aduzz|tutorialsaya|indobo|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(cryptfaucet.com|izseo.net)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts|agecalculatorexpert).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts|agecalculatorexpert).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|(paidinsurance|gujdigital).in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((netflixrelease|mangareleasedate|freemodapp|zutiza|phixshop|mp4news|uskloans|feedaso|djhindustan).com|(myfirstname|ignoupur).in|(mdsuuniversity|sarkarisahayata).org|(rrbntpc2024|kisannews).net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((crypto2u|bestcoinsites).xyz)(\/.*)/
 // @match *://*.fansonlinehub.com/*
