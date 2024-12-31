@@ -1034,6 +1034,7 @@
 
     // vnshortner - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/110, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/149
     /importantclass.com/.test(url) ? afterDOMLoaded(function() {
+        window.countdown = 0;
         clickWithDelay('#my-btn', 3000);
     }) : null;
     /bebkub.com/.test(url) ? afterDOMLoaded(function() {
