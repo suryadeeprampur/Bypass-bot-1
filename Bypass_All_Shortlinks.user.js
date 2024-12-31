@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4
+// @version        93.4.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -450,7 +450,6 @@
 // @match *://*.rocklinks.net/*
 // @match *://*.megafly.in/*
 // @match *://*.usalink.io/*
-// @match *://*.adrinolinks.in/*
 // @match *://*.10short.com/*
 // @match *://*.urlpay.in/*
 // @match *://*.mdiskshortner.link/*
@@ -677,6 +676,7 @@
 // @include     /altearnativasa.com/
 // @include     /importantclass.com/
 // @include     /bebkub.com/
+// @include     /owoanime.com/
 // @include     /secure.moderngyan.com/
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
@@ -936,7 +936,7 @@
       case 'linkfly.me': case 'linksfire.co': case 'adlink.click': case 'linkjust.com': case 'linkbulks.com': case 'traffic1s.com': case 'link4rev.site':
       case 'linkrex.net': case 'opli.xyz': case 'linksly.co': case 'ninjaurl.net': case 'shortyearn.com': case 'upshrink.com': case 'tr.link': case 'megaurl.in':
       case 'adshort.co': case 'atglinks.com': case 'shrinkforearn.in': case 'shorti.io': case 'try2link.com': case 'terafly.me': case 'www.wts.pw':
-      case 'clk.sh': case 'web1s.com': case 'rocklinks.net': case 'megafly.in': case 'usalink.io': case 'adrinolinks.in': case '10short.com': case 'urlpay.in':
+      case 'clk.sh': case 'web1s.com': case 'rocklinks.net': case 'megafly.in': case 'usalink.io': case '10short.com': case 'urlpay.in':
       case 'mdiskshortner.link': case 'cbshort.com': case 'droplink.co': case 'adpaylink.com': case 'paid4link.com': case 'cuty.io': case 'doshrink.com':
       case 'revly.click': case 'shorterall.com': case 'shrinkearn.com': case 'shrinkme.io': case 'shortox.com': case 'linksfly.link': case 'oii.io':
       case 'ay.live': case 'urlstox.com': var ApiandUrl = h.searchParams.has('api') && h.searchParams.has('url');
@@ -2479,6 +2479,11 @@
     /bebkub.com/.test(url) ? afterDOMLoaded(function() {
         clickWithDelay('#pro-continue', 1000);
         clickWithDelay('#VerifyBtn', 3000);
+        clickWithDelay('#pro-btn', 5000);
+    }) : null;
+    /owoanime.com/.test(url) ? afterDOMLoaded(function() {
+        window.countdown = 0;
+        clickWithDelay('#pro-continue', 3000);
         clickWithDelay('#pro-btn', 5000);
     }) : null;
 

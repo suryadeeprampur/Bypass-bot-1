@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4
+// @version        93.4.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -450,7 +450,6 @@
 // @match *://*.rocklinks.net/*
 // @match *://*.megafly.in/*
 // @match *://*.usalink.io/*
-// @match *://*.adrinolinks.in/*
 // @match *://*.10short.com/*
 // @match *://*.urlpay.in/*
 // @match *://*.mdiskshortner.link/*
@@ -677,6 +676,7 @@
 // @include     /altearnativasa.com/
 // @include     /importantclass.com/
 // @include     /bebkub.com/
+// @include     /owoanime.com/
 // @include     /secure.moderngyan.com/
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/

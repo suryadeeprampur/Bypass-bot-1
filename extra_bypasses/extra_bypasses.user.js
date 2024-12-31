@@ -171,6 +171,7 @@
 // @include     /altearnativasa.com/
 // @include     /importantclass.com/
 // @include     /bebkub.com/
+// @include     /owoanime.com/
 // @include     /secure.moderngyan.com/
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
@@ -1038,6 +1039,11 @@
     /bebkub.com/.test(url) ? afterDOMLoaded(function() {
         clickWithDelay('#pro-continue', 1000);
         clickWithDelay('#VerifyBtn', 3000);
+        clickWithDelay('#pro-btn', 5000);
+    }) : null;
+    /owoanime.com/.test(url) ? afterDOMLoaded(function() {
+        window.countdown = 0;
+        clickWithDelay('#pro-continue', 3000);
         clickWithDelay('#pro-btn', 5000);
     }) : null;
 

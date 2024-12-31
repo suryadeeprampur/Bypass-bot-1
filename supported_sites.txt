@@ -432,7 +432,6 @@ web1s.com
 rocklinks.net
 megafly.in
 usalink.io
-adrinolinks.in
 10short.com
 urlpay.in
 mdiskshortner.link
@@ -658,6 +657,7 @@ https://paster.so/*
 /altearnativasa.com/
 /importantclass.com/
 /bebkub.com/
+/owoanime.com/
 /secure.moderngyan.com/
 /earnbox.sattakingcharts.in/
 /set.seturl.in/
