@@ -37,7 +37,7 @@
 
             // Load the backed up url
             if (GM_getValue("profitsflyLocation")
-                && !document.body.textContent.includes("Less than 18 seconds have passed between actions. Robot verification failed, please try again...")
+                && !/Less than.+passed between actions.+try again/.test(document.body.textContent)
                 && !document.body.textContent.includes("Please wait...")) {
                 const lastLocation = GM_getValue("profitsflyLocation");
                 if (lastLocation) {
@@ -59,7 +59,7 @@
                         return; // Exit the function after reloading
                     }
                 }
-                if (document.body.textContent.includes("Less than 18 seconds have passed between actions. Robot verification failed, please try again...")) {
+                if (/Less than.+passed between actions.+try again/.test(document.body.textContent)) {
                     if (!reloading) location.reload(); // Reload the page
                     reloading = true;
                     return; // Exit the function after reloading
