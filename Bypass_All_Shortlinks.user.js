@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.5
+// @version        93.4.6
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -666,7 +666,7 @@
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
 // @include     /thelatintwistcafe.com/
-// @include     /newshuta.in|indiamaja.com/
+// @include     /newshuta.in|indiamaja.com|thespotifypremium.com/
 // @include     /jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 // @include     /animesgd.net/
@@ -2488,8 +2488,9 @@
         clickWithDelay('#pro-btn', 5000);
     }) : null;
 
-    // inshorturl.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/104
-    /newshuta.in|indiamaja.com/.test(url) ? afterDOMLoaded(function() {
+    // inshorturl.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/104, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/212, https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10744404
+    /newshuta.in|indiamaja.com|thespotifypremium.com/.test(url) ? afterDOMLoaded(function() {
+        window.count = 0;
         clickIfExists('#tp98');
         clickIfExists('#btn6');
         clickIfNotDisabled('#gtelinkbtn');
