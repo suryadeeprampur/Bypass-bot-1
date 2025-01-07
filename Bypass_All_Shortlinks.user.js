@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.6
+// @version        93.4.7
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2443,6 +2443,17 @@
                 setTimeout(function() {
                     buttonTexts = ['Click here to verify', 'Verify', 'Please wait..', 'Loading..'];
                     clickAvailableButtons(buttonTexts);
+                    setTimeout(function() {
+                        buttonTexts = ['Next Post', 'Next step', 'Get to next step', 'Go next', 'Continue'];
+                        clickAvailableButtons(buttonTexts);
+                    }, 2000);
+                }, 8000)
+            } else if (currentStep.includes('step 5')) {
+                buttonTexts = ['Open', 'Start', 'Begin', 'Click here to start'];
+                clickAvailableButtons(buttonTexts);
+                setTimeout(function() {
+                    buttonTexts = ['Click here to verify', 'Verify', 'Please wait..', 'Loading..'];
+                    clickAvailableButtons(buttonTexts);
                 }, 8000)
             }
 
@@ -2533,7 +2544,11 @@
     /hdpastes.com\/\?v=/.test(url) ? afterDOMLoaded(function() {clickIfRecaptchaSolved('.btn-success');}) : null;
 
     // shrtbr.com/aaNEJEXp - t.me/xred2 - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/122
-    /encurtads.net|financacerta.com/.test(url) ? afterDOMLoaded(function() { redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]);}) : null;
+    /encurtads.net|financacerta.com/.test(url) ? afterDOMLoaded(function() {
+        //redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"second_safelink_url":"(.*?)"/)[1]);
+        //redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]);
+        clickIfExists('#wpsafe-link > a:nth-child(1) > button:nth-child(1)');
+    }) : null;
     /shrtbr.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('a.get-link.btn.btn-lg.btn-success:not(.disabled):not(div.banner:nth-child(4) > div:nth-child(1) > a:nth-child(1))');}) : null;
 
     // https://f.technicalatg.in/6iTpuM1 - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10954732
