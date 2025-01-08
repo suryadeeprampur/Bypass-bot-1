@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.7
+// @version        93.4.8
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -711,6 +711,7 @@
 // @include     /mendationforc.info/
 // @include     /paster.gg/
 // @include     /go.zovo.ink/
+// @include     /^https:\/\/kisalt\.com\/.*/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/

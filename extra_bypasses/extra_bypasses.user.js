@@ -207,6 +207,7 @@
 // @include     /mendationforc.info/
 // @include     /paster.gg/
 // @include     /go.zovo.ink/
+// @include     /^https:\/\/kisalt\.com\/.*/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1179,6 +1180,9 @@
         clickIfExists('button.btn:nth-child(4)');
         redirectIfNotDisabled('a.get-link');
     }) : null;
+
+    // kisalt - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/213
+    /kisalt.com\/.*/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn.btn-primary');}) : null;
 
 })();
 

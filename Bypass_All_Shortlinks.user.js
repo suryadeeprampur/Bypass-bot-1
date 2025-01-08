@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.7
+// @version        93.4.8
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -711,6 +711,7 @@
 // @include     /mendationforc.info/
 // @include     /paster.gg/
 // @include     /go.zovo.ink/
+// @include     /^https:\/\/kisalt\.com\/.*/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/
@@ -2619,6 +2620,9 @@
         clickIfExists('button.btn:nth-child(4)');
         redirectIfNotDisabled('a.get-link');
     }) : null;
+
+    // kisalt - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/213
+    /kisalt.com\/.*/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn.btn-primary');}) : null;
 
 })();
 

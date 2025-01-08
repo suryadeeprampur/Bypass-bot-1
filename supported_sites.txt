@@ -692,6 +692,7 @@ https://paster.so/*
 /mendationforc.info/
 /paster.gg/
 /go.zovo.ink/
+/^https:\/\/kisalt\.com\/.*/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
 /^https:\/\/.*\.(tradeshowrating.com|historyofyesterday.com|playonpc.online|quins.us)\/.*/
