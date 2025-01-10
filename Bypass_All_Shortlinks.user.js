@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.10
+// @version        93.4.11
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -1885,7 +1885,7 @@
         redirect(atob(urlParam)); //case for ovagames.com
     }
     if (/linkspy.cc\/\/a/.test(url) && url.includes('aHR0')) {
-        const decodedUrl = atob(url.split('_')[1]);
+        const decodedUrl = atob('aHR0' + url.split('aHR0')[1]);
         const urlParam = getParam(decodedUrl,'url');
         if (!urlParam) redirect(decodedUrl); //default case
         redirect(urlParam); //case for dramaday.me

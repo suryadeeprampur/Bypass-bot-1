@@ -445,7 +445,7 @@
         redirect(atob(urlParam)); //case for ovagames.com
     }
     if (/linkspy.cc\/\/a/.test(url) && url.includes('aHR0')) {
-        const decodedUrl = atob(url.split('_')[1]);
+        const decodedUrl = atob('aHR0' + url.split('aHR0')[1]);
         const urlParam = getParam(decodedUrl,'url');
         if (!urlParam) redirect(decodedUrl); //default case
         redirect(urlParam); //case for dramaday.me
