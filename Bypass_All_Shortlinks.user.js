@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.9
+// @version        93.4.10
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -504,6 +504,8 @@
 // @match        https://bypass.city/bypass?bypass=*
 // @match        https://adbypass.org/bypass?bypass=*
 // @match       https://fc-lc.xyz/*
+// @match       *://*.ukrupdate.com/*
+// @match       *://*.aryx.xyz/*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
@@ -2623,6 +2625,15 @@
 
     // kisalt - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/213
     /kisalt.com\/.*/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn.btn-primary');}) : null;
+
+    // Anylinks.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/220
+    if (/ukrupdate.com|aryx.xyz/.test(window.location.href)) {
+        let delay = 10000;
+        if (/aryx.xyz/.test(window.location.href)) delay = 1000;
+        window.addEventListener('load', function() {
+            setTimeout(() => document.getElementById('btn6').click(), delay);
+        });
+    }
 
 })();
 

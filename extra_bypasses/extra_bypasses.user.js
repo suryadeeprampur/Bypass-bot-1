@@ -208,6 +208,8 @@
 // @include     /paster.gg/
 // @include     /go.zovo.ink/
 // @include     /^https:\/\/kisalt\.com\/.*/
+// @match       *://*.ukrupdate.com/*
+// @match       *://*.aryx.xyz/*
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1183,6 +1185,15 @@
 
     // kisalt - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/213
     /kisalt.com\/.*/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn.btn-primary');}) : null;
+
+    // Anylinks.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/220
+    if (/ukrupdate.com|aryx.xyz/.test(window.location.href)) {
+        let delay = 10000;
+        if (/aryx.xyz/.test(window.location.href)) delay = 1000;
+        window.addEventListener('load', function() {
+            setTimeout(() => document.getElementById('btn6').click(), delay);
+        });
+    }
 
 })();
 
