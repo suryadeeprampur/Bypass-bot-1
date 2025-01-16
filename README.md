@@ -11,6 +11,7 @@ Save time with automation or bypasses for many link shorteners.
 ## FAQ
 - **How effective is this?** It depends on each website. Sometimes it can bypass completely, sometimes it only accelerates the timers, other times it can only auto-click the buttons for you after waiting for the timers to run out. People who contribute here need to add new specific code for each website after we find the vulnerabilities.
 - **Why is this called "debloated" when now it's a bigger script than the original one?** Initially I just wanted to remove the extra ads and tracking that the original script used to have. Then I started to support a lot more websites, so the script is bigger. I guess I could change the name but I'm not sure that's practical at this point so I'm keeping the name for now.
+- **What are shortlinks, where do I need this script if at all?** The type of "shortlinks" or "link shorteners" that we care about here are intermediate pages that users are forced to go through before getting to the page that we really want. They often force you to click ads so that the person posting these links can make a bit of money, 1 or 2 cents, each time somebody clicks them. This is used often in p1r4cy websites that offer direct downloads (DDL). You can find the best ones in listed in [FMHY](https://fmhy.net/downloadpiracyguide#video-sites)
 
 ## Improvements in this fork
 - **Added more bypasses and some fixes** through the scripts in the [extra_bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) directory.
