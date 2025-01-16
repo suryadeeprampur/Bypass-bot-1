@@ -111,7 +111,7 @@
 // @include     /tawda.xyz\/tag/
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
-// @include     /linegee.net|intercelestial.com/
+// @include     /linegee.net|intercelestial.com|teknoasian.com/
 // @include     /(loanoffering|djmp3world).in|moonplusnews.com/
 // @include     /4hi.in/
 // @include     /lnk.news/
@@ -830,7 +830,7 @@
     /megalink.pro\/[a-zA-Z0-9]+$/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {clickIfNotDisabled('a.btn:nth-child(1)')}, 3000)}) : null;
 
     //pahe.ink final step
-    /linegee.net|intercelestial.com/.test(url) ? preventForcedFocusOnWindow() : null;
+    /linegee.net|intercelestial.com|teknoasian.com/.test(url) ? preventForcedFocusOnWindow() : null;
     /spacetica.com/.test(url) ? afterDOMLoaded(function() {
         if (!document.querySelector('.form-group')){
             clickIfExists('a.btn-primary.btn-xs');
@@ -838,6 +838,33 @@
     }) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    /old.pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfExists('a.btn:nth-child(1)')}) : null;
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/94
+    /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;
+
+    // spaste.com use in pahe.ink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/77
+    function checkHCaptchaSolved() {
+        if (document.querySelector('.h-captcha')) {
+            return window.hcaptcha.getResponse().length !== 0;
+        }
+        return true;
+    }
+    function clickIfHCaptchaSolved(selector) {
+        let intervalId = setInterval(() => {
+            if (checkHCaptchaSolved()) {
+                clearInterval(intervalId);
+                document.querySelector(selector).click();
+            }
+        }, 1000);
+    }
+    /www.spaste.com\/site\/checkPasteUrl\?c=/.test(url) ? afterDOMLoaded(function() {
+        clickIfHCaptchaSolved('#template-contactform-submit');
+    } ) : null;
+    /www.spaste.com\/p\?c=/.test(url) ? afterDOMLoaded(function() {
+        redirectIfExists('#template-contactform-message > a:nth-child(3)');
+    }) : null;
 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8884375
     if (/4hi.in/.test(url)) { afterDOMLoaded(function() {
@@ -1029,9 +1056,6 @@
     // uploadrar - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/87
     /flash.getpczone.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null;
 
-    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/94
-    /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;
-
     // zipshort.net - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9971779
     /ontechhindi.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#rtg > center:nth-child(2) > button:nth-child(1)');
@@ -1125,28 +1149,6 @@
 
     // https://github.com/FastForwardTeam/FastForward/issues/1515
     /mendationforc.info/.test(url) ? redirect(decodeURIComponent(atob(url.split('&cc=')[1]).match(/"link":"(.*?)"/)[1]) ) : null;
-
-    // spaste.com use in pahe.ink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/77
-    function checkHCaptchaSolved() {
-        if (document.querySelector('.h-captcha')) {
-            return window.hcaptcha.getResponse().length !== 0;
-        }
-        return true;
-    }
-    function clickIfHCaptchaSolved(selector) {
-        let intervalId = setInterval(() => {
-            if (checkHCaptchaSolved()) {
-                clearInterval(intervalId);
-                document.querySelector(selector).click();
-            }
-        }, 1000);
-    }
-    /www.spaste.com\/site\/checkPasteUrl\?c=/.test(url) ? afterDOMLoaded(function() {
-        clickIfHCaptchaSolved('#template-contactform-submit');
-    } ) : null;
-    /www.spaste.com\/p\?c=/.test(url) ? afterDOMLoaded(function() {
-        redirectIfExists('#template-contactform-message > a:nth-child(3)');
-    }) : null;
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/184
     /click.convertkit-mail.com/.test(url) ? redirect(atob(url.match(/.*(aHR0.*)/)[1])) : null;

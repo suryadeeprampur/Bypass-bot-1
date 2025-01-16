@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.12
+// @version        93.4.13
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -506,6 +506,8 @@
 // @match       https://fc-lc.xyz/*
 // @match       *://*.ukrupdate.com/*
 // @match       *://*.aryx.xyz/*
+// @match       *://linegee.net/*
+// @match       *://teknoasian.com/*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
@@ -618,7 +620,7 @@
 // @include     /tawda.xyz\/tag/
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
-// @include     /linegee.net|intercelestial.com/
+// @include     /linegee.net|intercelestial.com|teknoasian.com/
 // @include     /(loanoffering|djmp3world).in|moonplusnews.com/
 // @include     /4hi.in/
 // @include     /lnk.news/

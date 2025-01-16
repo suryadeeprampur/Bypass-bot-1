@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.12
+// @version        93.4.13
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -506,6 +506,8 @@
 // @match       https://fc-lc.xyz/*
 // @match       *://*.ukrupdate.com/*
 // @match       *://*.aryx.xyz/*
+// @match       *://linegee.net/*
+// @match       *://teknoasian.com/*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
@@ -618,7 +620,7 @@
 // @include     /tawda.xyz\/tag/
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
-// @include     /linegee.net|intercelestial.com/
+// @include     /linegee.net|intercelestial.com|teknoasian.com/
 // @include     /(loanoffering|djmp3world).in|moonplusnews.com/
 // @include     /4hi.in/
 // @include     /lnk.news/
@@ -2270,7 +2272,7 @@
     /megalink.pro\/[a-zA-Z0-9]+$/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {clickIfNotDisabled('a.btn:nth-child(1)')}, 3000)}) : null;
 
     //pahe.ink final step
-    /linegee.net|intercelestial.com/.test(url) ? preventForcedFocusOnWindow() : null;
+    /linegee.net|intercelestial.com|teknoasian.com/.test(url) ? preventForcedFocusOnWindow() : null;
     /spacetica.com/.test(url) ? afterDOMLoaded(function() {
         if (!document.querySelector('.form-group')){
             clickIfExists('a.btn-primary.btn-xs');
@@ -2278,6 +2280,33 @@
     }) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    /old.pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfExists('a.btn:nth-child(1)')}) : null;
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/94
+    /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;
+
+    // spaste.com use in pahe.ink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/77
+    function checkHCaptchaSolved() {
+        if (document.querySelector('.h-captcha')) {
+            return window.hcaptcha.getResponse().length !== 0;
+        }
+        return true;
+    }
+    function clickIfHCaptchaSolved(selector) {
+        let intervalId = setInterval(() => {
+            if (checkHCaptchaSolved()) {
+                clearInterval(intervalId);
+                document.querySelector(selector).click();
+            }
+        }, 1000);
+    }
+    /www.spaste.com\/site\/checkPasteUrl\?c=/.test(url) ? afterDOMLoaded(function() {
+        clickIfHCaptchaSolved('#template-contactform-submit');
+    } ) : null;
+    /www.spaste.com\/p\?c=/.test(url) ? afterDOMLoaded(function() {
+        redirectIfExists('#template-contactform-message > a:nth-child(3)');
+    }) : null;
 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-8884375
     if (/4hi.in/.test(url)) { afterDOMLoaded(function() {
@@ -2469,9 +2498,6 @@
     // uploadrar - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/87
     /flash.getpczone.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#downloadbtn')}) : null;
 
-    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/94
-    /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;
-
     // zipshort.net - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9971779
     /ontechhindi.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#rtg > center:nth-child(2) > button:nth-child(1)');
@@ -2565,28 +2591,6 @@
 
     // https://github.com/FastForwardTeam/FastForward/issues/1515
     /mendationforc.info/.test(url) ? redirect(decodeURIComponent(atob(url.split('&cc=')[1]).match(/"link":"(.*?)"/)[1]) ) : null;
-
-    // spaste.com use in pahe.ink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/77
-    function checkHCaptchaSolved() {
-        if (document.querySelector('.h-captcha')) {
-            return window.hcaptcha.getResponse().length !== 0;
-        }
-        return true;
-    }
-    function clickIfHCaptchaSolved(selector) {
-        let intervalId = setInterval(() => {
-            if (checkHCaptchaSolved()) {
-                clearInterval(intervalId);
-                document.querySelector(selector).click();
-            }
-        }, 1000);
-    }
-    /www.spaste.com\/site\/checkPasteUrl\?c=/.test(url) ? afterDOMLoaded(function() {
-        clickIfHCaptchaSolved('#template-contactform-submit');
-    } ) : null;
-    /www.spaste.com\/p\?c=/.test(url) ? afterDOMLoaded(function() {
-        redirectIfExists('#template-contactform-message > a:nth-child(3)');
-    }) : null;
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/184
     /click.convertkit-mail.com/.test(url) ? redirect(atob(url.match(/.*(aHR0.*)/)[1])) : null;
@@ -2869,6 +2873,52 @@
 })();
 // ----- ----- -----
 
+
+// ----- Bypass pahe.ink soractrl ------
+// source: https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/14#issuecomment-2588262
+
+(function() {
+    const domainRegex = /linegee.net|teknoasian.com/
+    if (domainRegex.test(window.location.href)) {
+
+      const fakeEvent = {isTrusted: true, originalEvent: {isTrusted: true}};
+
+      // Wait for jQuery to load
+      const waitForJQuery = setInterval(() => {
+          if (typeof jQuery !== "undefined") {
+              clearInterval(waitForJQuery);
+
+              // Override jQuery's `.on` method
+              const originalOn = unsafeWindow.jQuery.fn.on;
+
+              unsafeWindow.jQuery.fn.on = function(eventType, selector, handler, ...args) {
+                  // Check if it's a "click" event on #soralink-human-verif-main
+                  if (eventType === "click" && (this.is("#soralink-human-verif-main") || this.is(selector === "#generater") || this.is("#showlink"))) {
+                      // Call the function immediately if handler is directly passed
+                      if (typeof selector === "function") {
+                          selector(fakeEvent); // Call the function
+                      } else if (typeof handler === "function") {
+                          handler(fakeEvent); // Call the handler
+                      }
+                  }
+
+                  // Call the original .on method
+                  return originalOn.call(this, eventType, selector, handler, ...args);
+              };
+
+              // Check if the element #soralink-human-verif-main exists
+              if (!document.getElementById("soralink-human-verif-main")) {
+                  // This is the second and third step with #generater and #showlink
+                  setInterval(() => {
+                      unsafeWindow.jQuery("#pleasewaits").hide();
+                      unsafeWindow.jQuery("#showlink").show();
+                  }, 1000);
+              }
+          }
+      }, 10); // Check every 10ms
+    }
+})();
+// ----- -----
 
 // ----- Bypass paster.so ------
 (function() {
