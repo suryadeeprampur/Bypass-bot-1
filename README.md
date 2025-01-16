@@ -8,6 +8,10 @@ Automatically bypass many link shorteners.
 
 (you need a userscript manager like [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) installed in your web browser)
 
+## FAQ
+- **How effective is this?** It depends on each website. Sometimes it can bypass completely, sometimes it only accelerates the timers, other times it can only auto-click the buttons for you after waiting for the timers to run out. People who contribute here need to add new specific code for each website after we find the vulnerabilities.
+- **Why is this called "debloated" when now it's a bigger script than the original one?** Initially I just wanted to remove the extra ads and tracking that the original script used to have. Then I started to support a lot more websites, so the script is bigger. I guess I could change the name but I'm not sure that's practical at this point so I'm keeping the name for now.
+
 ## Improvements in this fork
 - **Added more bypasses and some fixes** through the scripts in the [extra_bypasses](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) directory.
 - **No loading the script indiscriminately on every site.** The script will be loaded only for the sites that are supported (the original userscript is loaded in most of the sites you visit, which is not necessary). Also, by default the script won't run on some sites that have optional bypasses made, but are sensitive like YouTube or Google. These can be re-enabled manually in your userscript manager, adding [optional matching rules](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/docs/optional_matching_rules.md) in the script _settings_.
@@ -42,10 +46,10 @@ This script contains code I took, or redirects to free services from other devel
 Thanks to:
 - [BloggerPemula](https://greasyfork.org/users/810571-bloggerpemula)
 - [bypass.city](https://bypass.city/) / [2](https://adbypass.org/) used for l1nkv3rt1s3, Admaven and Loot-link.
+- Contributers to this repository who have submitted pull requests: Anon991299, mouro, trapgod1, CaptainCaffeine, IntNinja.
 - [StephenP](https://greasyfork.org/users/104167-stephenp) for the filecrypt bypass.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
 - [AdamWr](https://github.com/AdamWr) from AdGuard for the mega-enlace and acortalink.me bypasses.
-- Contributers to this repository who have submitted pull requests: mouro, trapgod1, CaptainCaffeine, Anon991299, IntNinja.
 - Every user that has reported issues to this repository.
 
 ## Optional extra tools
