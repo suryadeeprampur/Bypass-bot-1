@@ -210,6 +210,7 @@
 // @include     /^https:\/\/kisalt\.com\/.*/
 // @match       *://*.ukrupdate.com/*
 // @match       *://*.aryx.xyz/*
+// @include     /app.link2unlock.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1202,6 +1203,15 @@
     // paid4link last step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/222
     //const redirectIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); redirect(button.href); } }, 1000); };
     /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfExists('#get-link-button');}) : null;
+
+    // adsafelink / link2unlock - https://github.com/realodix/AdBlockID/issues/1874
+    const clickIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); button.click(); } }, 1000); };
+    /app.link2unlock.com/.test(url) ? afterDOMLoaded(function() { 
+        clickIfExists('#btn-1');
+        clickIfExists('#btn-2');
+        clickIfCloudflareCaptchaSolved('#btn-3');
+        clickIfExists('#submit-button');
+    }) : null;
 
 })();
 

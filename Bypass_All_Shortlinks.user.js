@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.16
+// @version        93.4.17
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -716,6 +716,7 @@
 // @include     /paster.gg/
 // @include     /go.zovo.ink/
 // @include     /^https:\/\/kisalt\.com\/.*/
+// @include     /app.link2unlock.com/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.((tradeshowrating|historyofyesterday|insurelean).com|playonpc.online|quins.us)\/.*/
@@ -2644,6 +2645,15 @@
     // paid4link last step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/222
     //const redirectIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); redirect(button.href); } }, 1000); };
     /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfExists('#get-link-button');}) : null;
+
+    // adsafelink / link2unlock - https://github.com/realodix/AdBlockID/issues/1874
+    const clickIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); button.click(); } }, 1000); };
+    /app.link2unlock.com/.test(url) ? afterDOMLoaded(function() { 
+        clickIfExists('#btn-1');
+        clickIfExists('#btn-2');
+        clickIfCloudflareCaptchaSolved('#btn-3');
+        clickIfExists('#submit-button');
+    }) : null;
 
 })();
 

@@ -697,6 +697,7 @@ https://paster.so/*
 /paster.gg/
 /go.zovo.ink/
 /^https:\/\/kisalt\.com\/.*/
+/app.link2unlock.com/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
 /^https:\/\/.*\.((tradeshowrating|historyofyesterday|insurelean).com|playonpc.online|quins.us)\/.*/
