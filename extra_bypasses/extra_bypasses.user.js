@@ -50,7 +50,7 @@
 // @include     /techfizia.com/
 // @include     /tech5s.co/
 // @include     /ez4mods.com/
-// @include     /ez4short.com/
+// @include     /ez4short.com|zshort.io/
 // @include     /learnmany.in/
 // @include     /lksfy.in/
 // @include     /droplink.co/
@@ -400,7 +400,6 @@
 
     // tii.la oko.sh final step
     /dekhe.click|indianshortner.com|lnbz.la|oii.la|falpus.com|tii.la|oko.sh|tpi.li|shrinke.me|clk.(wiki|kim)|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net|oei.la|iir.la|tvi.la|exego.app|link.theflash.eu.org|get.instantearn.in|mrproblogger.com|exe-urls.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-    /ez4short.com\/[^\/]+\/\?token=[^\/]+$/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled2('#aaoii2o')}) : null;
 
     // shon.xyz, seen in mega-descargas-serie.blogspot.com
     /shon.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-main')}) : null;
@@ -526,6 +525,9 @@
         });
     }
     /shrinkforearn.in/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.get-link')}) : null;
+
+    // leechpremium.link
+    /(ez4short.com|zshort.io)\/[^\/]+\/\?token=[^\/]+$/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#aaoii2o')}) : null;
 
     // https://droplink.co/4eSowGz4 used by leechpremium.link step 2
     /onlinetntextbooks.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#go_d2');}) : null;

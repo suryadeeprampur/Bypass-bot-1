@@ -540,7 +540,7 @@ https://paster.so/*
 /techfizia.com/
 /tech5s.co/
 /ez4mods.com/
-/ez4short.com/
+/ez4short.com|zshort.io/
 /learnmany.in/
 /lksfy.in/
 /droplink.co/

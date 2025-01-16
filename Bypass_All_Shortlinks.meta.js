@@ -559,7 +559,7 @@
 // @include     /techfizia.com/
 // @include     /tech5s.co/
 // @include     /ez4mods.com/
-// @include     /ez4short.com/
+// @include     /ez4short.com|zshort.io/
 // @include     /learnmany.in/
 // @include     /lksfy.in/
 // @include     /droplink.co/
