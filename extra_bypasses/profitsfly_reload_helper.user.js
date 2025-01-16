@@ -12,41 +12,13 @@
     if (domainRegex.test(window.location.href)) {
 
         // ---RELOAD DEAD-END PAGES---
-        if (window.location.href.includes("/ref.php")) {
-            // Back up the current ref url
-            GM_setValue("profitsflyLocation", window.location.href);
-        } else if (document.readyState === "complete") {
+        if (document.readyState === "complete") {
             onWindowLoad();
         } else {
             window.addEventListener('load', onWindowLoad);
         }
 
         function onWindowLoad() {
-            // Click the continue button if a backed up url was loaded in the last 5 seconds
-            if (document.body.textContent.includes("You have 2 active sessions.")) {
-                if ((Date.now() - GM_getValue("profitsflyGoBackTime", 0)) < 5000) {
-                    for (const button of document.querySelectorAll("button")) {
-                        if (button.textContent.trim() === "Continue") {
-                            button.click();
-                            break;
-                        }
-                    }
-                }
-                return;
-            }
-
-            // Load the backed up url
-            if (GM_getValue("profitsflyLocation")
-                && !/Less than.+passed between actions.+try again/.test(document.body.textContent)
-                && !document.body.textContent.includes("Please wait...")) {
-                const lastLocation = GM_getValue("profitsflyLocation");
-                if (lastLocation) {
-                    GM_setValue("profitsflyGoBackTime", Date.now());
-                    GM_setValue("profitsflyOverrideLocation", lastLocation);
-                    window.location.href = lastLocation;
-                }
-                return;
-            }
 
             // Function to check for messages like "Click any ad & keep it open for 15 seconds to continue" and reload the page if one exists
             let reloading = false;
