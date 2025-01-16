@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.15
+// @version        93.4.16
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2642,8 +2642,8 @@
     }
 
     // paid4link last step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/222
-    const redirectIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); redirect(button.href); } }, 1000); };
-    /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfCloudflareCaptchaSolved('#get-link-button');}) : null;
+    //const redirectIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); redirect(button.href); } }, 1000); };
+    /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfExists('#get-link-button');}) : null;
 
 })();
 

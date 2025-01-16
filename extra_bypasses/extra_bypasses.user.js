@@ -1200,8 +1200,8 @@
     }
 
     // paid4link last step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/222
-    const redirectIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); redirect(button.href); } }, 1000); };
-    /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfCloudflareCaptchaSolved('#get-link-button');}) : null;
+    //const redirectIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); redirect(button.href); } }, 1000); };
+    /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfExists('#get-link-button');}) : null;
 
 })();
 
