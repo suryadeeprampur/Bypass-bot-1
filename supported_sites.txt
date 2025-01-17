@@ -126,7 +126,7 @@ sfl.gl|moneyblink.com
 comohoy.com
 apkw.ru
 cryptomonitor.in|2the.space|imbb.online
-(newsbawa|utkarshonlinetest|techbezzie).com
+(newsbawa|utkarshonlinetest|techbezzie|financewada).com
 programasvirtualespc.net
 horoscop.info|infonerd.org
 (blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro
@@ -585,7 +585,7 @@ https://paster.so/*
 /minimilionario.com\/noticia.php\?token=/
 /usandoapp.com/
 /v2links.(com|me)/
-/(utkarshonlinetest|newsbawa).com/
+/(newsbawa|utkarshonlinetest|techbezzie|financewada).com/
 /techtnet.com/
 /asideway.com/
 /web1s.asia\/api-mode/

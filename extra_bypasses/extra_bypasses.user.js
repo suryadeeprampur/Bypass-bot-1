@@ -95,7 +95,7 @@
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
 // @include     /v2links.(com|me)/
-// @include     /(utkarshonlinetest|newsbawa).com/
+// @include     /(newsbawa|utkarshonlinetest|techbezzie|financewada).com/
 // @include     /techtnet.com/
 // @include     /asideway.com/
 // @include     /web1s.asia\/api-mode/
@@ -772,7 +772,7 @@
 
     // olamovies.rent - https://v2links.me/q1z4ssolam //add stuff missing from the main script
     /v2links.(com|me)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-    /(utkarshonlinetest|newsbawa).com/.test(url) ? afterDOMLoaded(function() {
+    /(newsbawa|utkarshonlinetest|techbezzie|financewada).com/.test(url) ? afterDOMLoaded(function() {
         time = 0;
         clickIfExists('.start_btn');
         setTimeout(function() {clickIfExists('div.step_box.get_btn div.btn')}, 2000);

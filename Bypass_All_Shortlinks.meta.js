@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.17
+// @version        93.4.18
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -144,7 +144,7 @@
 // @match *://*.comohoy.com/*
 // @match *://*.apkw.ru/*
 // @include /^(https?:\/\/)(.+)?(cryptomonitor.in|2the.space|imbb.online)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((newsbawa|utkarshonlinetest|techbezzie).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((newsbawa|utkarshonlinetest|techbezzie|financewada).com)(\/.*)/
 // @match *://*.programasvirtualespc.net/*
 // @include /^(https?:\/\/)(.+)?(horoscop.info|infonerd.org)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro)(\/.*)/
@@ -604,7 +604,7 @@
 // @include     /minimilionario.com\/noticia.php\?token=/
 // @include     /usandoapp.com/
 // @include     /v2links.(com|me)/
-// @include     /(utkarshonlinetest|newsbawa).com/
+// @include     /(newsbawa|utkarshonlinetest|techbezzie|financewada).com/
 // @include     /techtnet.com/
 // @include     /asideway.com/
 // @include     /web1s.asia\/api-mode/
