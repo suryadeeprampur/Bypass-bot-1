@@ -210,6 +210,8 @@
 // @match       *://*.ukrupdate.com/*
 // @match       *://*.aryx.xyz/*
 // @include     /app.link2unlock.com/
+// @include     /freemodsapp.in/
+// @include     /pandaznetwork.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1211,6 +1213,11 @@
         clickIfCloudflareCaptchaSolved('#btn-3');
         clickIfExists('#submit-button');
     }) : null;
+
+    // pandaznetwork - https://t.me/hubcloud_movies, https://t.me/latest_movies_2025_1
+    /freemodsapp.in/.test(url) ? popupsToRedirects() : null;
+    /freemodsapp.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
+    /pandaznetwork.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
 })();
 

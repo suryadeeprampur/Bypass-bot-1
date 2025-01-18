@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.22
+// @version        93.4.23
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -715,6 +715,8 @@
 // @include     /go.zovo.ink/
 // @include     /^https:\/\/kisalt\.com\/.*/
 // @include     /app.link2unlock.com/
+// @include     /freemodsapp.in/
+// @include     /pandaznetwork.com/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.((tradeshowrating|historyofyesterday|insurelean).com|playonpc.online|quins.us)\/.*/
