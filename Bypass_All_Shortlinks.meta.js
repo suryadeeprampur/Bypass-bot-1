@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.20
+// @version        93.4.21
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -105,7 +105,6 @@
 // @include /^(https?:\/\/)(.+)?(file-upload.com|file-upload.org)(\/.*)/
 // @match *://*.downloader.tips/*
 // @match *://*.hitfile.net/*
-// @include /^(https?:\/\/)(.+)?((thecubexguide|miuiflash).com|(djxmaza|jytechs).in)(\/.*)/
 // @match *://*.filedm.com/*
 // @match *://*.gogodl.com/*
 // @match *://*.turbobit.net/*
@@ -671,7 +670,6 @@
 // @include     /ontechhindi.com/
 // @include     /thelatintwistcafe.com/
 // @include     /newshuta.in|indiamaja.com|thespotifypremium.com/
-// @include     /jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/

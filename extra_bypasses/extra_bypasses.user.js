@@ -162,7 +162,6 @@
 // @include     /ontechhindi.com/
 // @include     /thelatintwistcafe.com/
 // @include     /newshuta.in|indiamaja.com|thespotifypremium.com/
-// @include     /jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
@@ -1098,10 +1097,10 @@
     }) : null;
 
     // https://hyp.sh/Art07dr (hypershort) - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/101 - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/158
-    /jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('#generatelink');
-        redirectIfExists('#gettinglink');
-    }) : null;
+//    /jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/.test(url) ? afterDOMLoaded(function() {
+//        clickIfExists('#generatelink');
+//        redirectIfExists('#gettinglink');
+//    }) : null;
 
     // render-state.to - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/108
     /render-state.to\/download\/\?link=/.test(url) ? afterDOMLoaded(function() {

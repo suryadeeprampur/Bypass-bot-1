@@ -87,7 +87,6 @@ dropgalaxy.com
 file-upload.com|file-upload.org
 downloader.tips
 hitfile.net
-(thecubexguide|miuiflash).com|(djxmaza|jytechs).in
 filedm.com
 gogodl.com
 turbobit.net
@@ -652,7 +651,6 @@ https://paster.so/*
 /ontechhindi.com/
 /thelatintwistcafe.com/
 /newshuta.in|indiamaja.com|thespotifypremium.com/
-/jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/
 /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 /animesgd.net/
 /tucinehd.com\/links/
