@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.19
+// @version        93.4.20
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -3063,8 +3063,16 @@
         }
 
 
-        // ---SKIP TIMERS---
+        // ---After DOM loaded---
         document.addEventListener('DOMContentLoaded', function() {
+
+            // ---Remove YouTube modal and banner--- 
+            // (alternative with uBO : https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11864776)
+            if (unsafeWindow.youtubeVideoStepProceed) { unsafeWindow.youtubeVideoStepProceed();}
+            const stickyBanner = document.querySelector(".mg-sticky-banner");
+            if (stickyBanner) {stickyBanner.style.display = "none";}
+
+            // ---Skip timers---
             function setTimer() {
                 if (window.wT9882 > 5) {
                     window.wT9882 = 1;
