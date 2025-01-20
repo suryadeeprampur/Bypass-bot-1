@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.23
+// @version        93.4.24
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2607,6 +2607,16 @@
             redirectIfExists('a[href*="filemoon.sx"]');
         });
     }
+
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/224
+    /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/.test(url) ? afterDOMLoaded(function() {
+        const regex = /aHR0c[^"]+/g;
+        const matches = document.documentElement.innerHTML.match(regex);
+        if (matches && matches.length > 0) {
+          const decodedUrl = atob(matches[0]);
+          window.location.href = decodedUrl;
+        }
+    }) : null;
 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11280464
     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/.test(url) ? afterWindowLoaded(function() {

@@ -1167,6 +1167,16 @@
         });
     }
 
+    // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/224
+    /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/.test(url) ? afterDOMLoaded(function() {
+        const regex = /aHR0c[^"]+/g;
+        const matches = document.documentElement.innerHTML.match(regex);
+        if (matches && matches.length > 0) {
+          const decodedUrl = atob(matches[0]);
+          window.location.href = decodedUrl;
+        }
+    }) : null;
+
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11280464
     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/.test(url) ? afterWindowLoaded(function() {
         const form = document.querySelector('#link-view > form');
