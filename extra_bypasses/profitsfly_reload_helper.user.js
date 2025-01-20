@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        profitsfly reload helper
-// @include     /^https:\/\/.*\.((tradeshowrating|historyofyesterday|insurelean).com|playonpc.online|quins.us)\/.*/
+// @include     /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop)\/.*/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -8,7 +8,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /^https:\/\/.*\.((tradeshowrating|historyofyesterday|insurelean).com|playonpc.online|quins.us)\/.*/;
+    const domainRegex = /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop)\/.*/;
     if (domainRegex.test(window.location.href)) {
 
         // ---RELOAD DEAD-END PAGES---
@@ -68,11 +68,11 @@
 
             // ---Skip timers---
             function setTimer() {
-                if (window.wT9882 > 5) {
-                    window.wT9882 = 1;
+                if (window.wT9882 > 10) {
+                    window.wT9882 = 10;
                 }
             }
-            window.wT9882 = 5;
+            window.wT9882 = 10;
             setInterval(setTimer, 1000);
 
             /* ------------ Protect buttons from being removed ------------ */
