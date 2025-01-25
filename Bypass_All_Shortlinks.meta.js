@@ -507,6 +507,7 @@
 // @match       *://teknoasian.com/*
 // @match       *://upfiles.app/*
 // @match       https://datanodes.to/download
+// @match       *://dailyuploads.net/*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/

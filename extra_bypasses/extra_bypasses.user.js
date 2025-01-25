@@ -215,6 +215,7 @@
 // @match       *://teknoasian.com/*
 // @match       *://upfiles.app/*
 // @match       https://datanodes.to/download
+// @match       *://dailyuploads.net/*
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1243,14 +1244,20 @@
     /upfiles.app\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
         clickIfCorrectText('#link-button', 'Continue');
         clickIfRecaptchaSolved('#link-button');
-        redirectIfNotDisabled('a#link-button');
+        //redirectIfNotDisabled('a#link-button');
     }) : null;
 
-    // datanodes
+    // datanodes - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/140
     /datanodes.to\/download/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#method_free')
         clickIfCorrectText('button.py-3', 'Download')
-        setTimeout(function() {clickIfCorrectText('button.py-3', 'Continue')}, 6000)
+        //setTimeout(function() {clickIfCorrectText('button.py-3', 'Continue')}, 6000)
+    }) : null;
+
+    // dailyuploads - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/123
+    /dailyuploads.net\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
+        clickIfRecaptchaSolved('#downloadbtn');
+        //redirectIfExists('a#fbtn1');
     }) : null;
 
 })();
