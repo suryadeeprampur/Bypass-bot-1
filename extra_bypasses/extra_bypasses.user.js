@@ -1187,8 +1187,8 @@
 
     // modijiurl - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11295970
     function browserIsFirefox() {return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;}
-    /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) && browserIsFirefox() ? redirect(url.split('?link=')[1]) : null;
-    /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) ? redirectIfNotDisabled('#getLinkButton') : null;
+    // /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) && browserIsFirefox() ? redirect(url.split('?link=')[1]) : null;
+    // /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/.test(url) ? redirectIfNotDisabled('#getLinkButton') : null;
 
     // sittingonclouds.com .net
     /paster.gg/.test(url) ? redirect(decodeURIComponent(url.split('&link=')[1].split('&')[0])) : null;
