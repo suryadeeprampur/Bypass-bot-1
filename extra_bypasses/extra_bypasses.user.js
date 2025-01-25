@@ -214,6 +214,7 @@
 // @include     /pandaznetwork.com/
 // @match       *://teknoasian.com/*
 // @match       *://upfiles.app/*
+// @match       https://datanodes.to/download
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1243,6 +1244,13 @@
         clickIfCorrectText('#link-button', 'Continue');
         clickIfRecaptchaSolved('#link-button');
         redirectIfNotDisabled('a#link-button');
+    }) : null;
+
+    // datanodes
+    /datanodes.to\/download/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#method_free')
+        clickIfCorrectText('button.py-3', 'Download')
+        setTimeout(function() {clickIfCorrectText('button.py-3', 'Continue')}, 6000)
     }) : null;
 
 })();
