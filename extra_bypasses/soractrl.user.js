@@ -1,15 +1,16 @@
 // ==UserScript==
-// @name        pahe.ink soractrl linegee.net
-// @match       *://linegee.net/*
-// @match       *://teknoasian.com/*
+// @name        soractrl partial autoclicks
+// @include     /quickeemail.com/
 // @run-at      document-start
 // ==/UserScript==
 
-// ----- Bypass pahe.ink soractrl ------
+// ----- partial autoclicker for soractrl used by moviesnipipay.me,... ------
+// sites with similar pages not autoclicked for now: ssrmovies.promo, mkvcinemas.phd, freecoursesite.com
 // source: https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/14#issuecomment-2588262
+// optional uBO filter for easier clicking: quickeemail.com###landing, .soractrl:others()
 
 (function() {
-    const domainRegex = /linegee.net|teknoasian.com/
+    const domainRegex = /quickeemail.com/
     if (domainRegex.test(window.location.href)) {
 
       const fakeEvent = {isTrusted: true, originalEvent: {isTrusted: true}};

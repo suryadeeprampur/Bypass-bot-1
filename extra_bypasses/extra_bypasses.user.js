@@ -212,6 +212,7 @@
 // @include     /app.link2unlock.com/
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
+// @match       *://teknoasian.com/*
 // @run-at      document-start
 // ==/UserScript==
 

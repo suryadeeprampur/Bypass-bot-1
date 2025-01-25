@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.29
+// @version        93.4.30
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -504,7 +504,6 @@
 // @match       https://fc-lc.xyz/*
 // @match       *://*.ukrupdate.com/*
 // @match       *://*.aryx.xyz/*
-// @match       *://linegee.net/*
 // @match       *://teknoasian.com/*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
@@ -720,6 +719,7 @@
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop)\/.*/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
+// @include     /quickeemail.com/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|gsshort|substitutefor|github|freeoseocheck|greenenez|aliyun|reddit|bing|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|(login|signup|account|officeapps|api|mail|hotmail).live|basketballsavvy|healthyfollicles|hauntingrealm|pluginmixer|boredboard|boardgamechick|healthyfollicles|atlassian|pinterest|twitter|facebook|tiktok|instagram|linkedin|fastbull|tradingview).com|(coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|doubleclick|luckydice).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|insurancegold.in|coinscap.info|chefknives.expert|(sleeptube|englishwritingsite|documentaryplanet|gsgames).xyz|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
 // @exclude-match *://aylink.co/*
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
@@ -2916,52 +2916,6 @@
 // ----- ----- -----
 
 
-// ----- Bypass pahe.ink soractrl ------
-// source: https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/14#issuecomment-2588262
-
-(function() {
-    const domainRegex = /linegee.net|teknoasian.com/
-    if (domainRegex.test(window.location.href)) {
-
-      const fakeEvent = {isTrusted: true, originalEvent: {isTrusted: true}};
-
-      // Wait for jQuery to load
-      const waitForJQuery = setInterval(() => {
-          if (typeof jQuery !== "undefined") {
-              clearInterval(waitForJQuery);
-
-              // Override jQuery's `.on` method
-              const originalOn = unsafeWindow.jQuery.fn.on;
-
-              unsafeWindow.jQuery.fn.on = function(eventType, selector, handler, ...args) {
-                  // Check if it's a "click" event on #soralink-human-verif-main
-                  if (eventType === "click" && (this.is("#soralink-human-verif-main") || this.is(selector === "#generater") || this.is("#showlink"))) {
-                      // Call the function immediately if handler is directly passed
-                      if (typeof selector === "function") {
-                          selector(fakeEvent); // Call the function
-                      } else if (typeof handler === "function") {
-                          handler(fakeEvent); // Call the handler
-                      }
-                  }
-
-                  // Call the original .on method
-                  return originalOn.call(this, eventType, selector, handler, ...args);
-              };
-
-              // Check if the element #soralink-human-verif-main exists
-              if (!document.getElementById("soralink-human-verif-main")) {
-                  // This is the second and third step with #generater and #showlink
-                  setInterval(() => {
-                      unsafeWindow.jQuery("#pleasewaits").hide();
-                      unsafeWindow.jQuery("#showlink").show();
-                  }, 1000);
-              }
-          }
-      }, 10); // Check every 10ms
-    }
-})();
-// ----- -----
-
 // ----- Bypass paster.so ------
 (function() {
     'use strict';
@@ -3289,3 +3243,51 @@
     }
 })();
 // ----- End Bypass Rinku -----
+
+// ----- partial autoclicker for soractrl used by moviesnipipay.me,... ------
+// sites with similar pages not autoclicked for now: ssrmovies.promo, mkvcinemas.phd, freecoursesite.com
+// source: https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/14#issuecomment-2588262
+// optional uBO filter for easier clicking: quickeemail.com###landing, .soractrl:others()
+
+(function() {
+    const domainRegex = /quickeemail.com/
+    if (domainRegex.test(window.location.href)) {
+
+      const fakeEvent = {isTrusted: true, originalEvent: {isTrusted: true}};
+
+      // Wait for jQuery to load
+      const waitForJQuery = setInterval(() => {
+          if (typeof jQuery !== "undefined") {
+              clearInterval(waitForJQuery);
+
+              // Override jQuery's `.on` method
+              const originalOn = unsafeWindow.jQuery.fn.on;
+
+              unsafeWindow.jQuery.fn.on = function(eventType, selector, handler, ...args) {
+                  // Check if it's a "click" event on #soralink-human-verif-main
+                  if (eventType === "click" && (this.is("#soralink-human-verif-main") || this.is(selector === "#generater") || this.is("#showlink"))) {
+                      // Call the function immediately if handler is directly passed
+                      if (typeof selector === "function") {
+                          selector(fakeEvent); // Call the function
+                      } else if (typeof handler === "function") {
+                          handler(fakeEvent); // Call the handler
+                      }
+                  }
+
+                  // Call the original .on method
+                  return originalOn.call(this, eventType, selector, handler, ...args);
+              };
+
+              // Check if the element #soralink-human-verif-main exists
+              if (!document.getElementById("soralink-human-verif-main")) {
+                  // This is the second and third step with #generater and #showlink
+                  setInterval(() => {
+                      unsafeWindow.jQuery("#pleasewaits").hide();
+                      unsafeWindow.jQuery("#showlink").show();
+                  }, 1000);
+              }
+          }
+      }, 10); // Check every 10ms
+    }
+})();
+// ----- -----
