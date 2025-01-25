@@ -489,6 +489,8 @@ https://fc-lc.xyz/*
 *://upfiles.app/*
 https://datanodes.to/download
 *://dailyuploads.net/*
+*://www.ryuugames.com/?eroge=*
+*://anchoreth.com/r-adsh?t=i&v=*
 https://paster.so/*
 /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/

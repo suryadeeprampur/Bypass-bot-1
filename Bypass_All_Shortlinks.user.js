@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.32
+// @version        93.4.33
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -508,6 +508,8 @@
 // @match       *://upfiles.app/*
 // @match       https://datanodes.to/download
 // @match       *://dailyuploads.net/*
+// @match       *://www.ryuugames.com/?eroge=*
+// @match       *://anchoreth.com/r-adsh?t=i&v=*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
@@ -2699,6 +2701,12 @@
         clickIfRecaptchaSolved('#downloadbtn');
         //redirectIfExists('a#fbtn1');
     }) : null;
+
+    // ryuugames
+    /www.ryuugames.com\/\?eroge=.*$/.test(url) ? afterDOMLoaded(function() {
+        redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').href.split('?safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]);
+    }) : null;
+    /anchoreth.com\/r-adsh\?t=i&v=.*$/.test(url) ? redirect(atob(url.split('&v=')[1].split('&')[0])) : null;
 
 })();
 
