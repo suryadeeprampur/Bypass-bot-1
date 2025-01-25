@@ -2702,9 +2702,11 @@
     // pahe.ink
     /teknoasian.com/.test(url) ? boostTimers() : null;
 
+    // goo.st - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/215
+    /goo.st|(businesssoftwarehere|freevpshere|softwaresolutionshere|travelironguide).com/.test(url) ? boostTimers() : null;
+
 })();
 // ----- ----- -----
-
 
 // ----- Bypass FileCrypt( imported from https://greasyfork.org/scripts/403170) -----
 (function() {
