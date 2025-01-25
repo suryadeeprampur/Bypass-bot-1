@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.30
+// @version        93.4.31
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -505,6 +505,7 @@
 // @match       *://*.ukrupdate.com/*
 // @match       *://*.aryx.xyz/*
 // @match       *://teknoasian.com/*
+// @match       *://upfiles.app/*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
@@ -2675,6 +2676,13 @@
         clickWithDelay('.myButton', 2000);
         clickWithDelay('.myButton', 3000);
         clickWithDelay('.myButton', 4000);
+    }) : null;
+
+    // upfiles.app
+    /upfiles.app\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
+        clickIfCorrectText('#link-button', 'Continue');
+        clickIfRecaptchaSolved('#link-button');
+        redirectIfNotDisabled('a#link-button');
     }) : null;
 
 })();

@@ -213,6 +213,7 @@
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
 // @match       *://teknoasian.com/*
+// @match       *://upfiles.app/*
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1235,6 +1236,13 @@
         clickWithDelay('.myButton', 2000);
         clickWithDelay('.myButton', 3000);
         clickWithDelay('.myButton', 4000);
+    }) : null;
+
+    // upfiles.app
+    /upfiles.app\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
+        clickIfCorrectText('#link-button', 'Continue');
+        clickIfRecaptchaSolved('#link-button');
+        redirectIfNotDisabled('a#link-button');
     }) : null;
 
 })();
