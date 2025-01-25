@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.26
+// @version        93.4.27
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2669,6 +2669,13 @@
     /freemodsapp.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
     /pandaznetwork.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
+    // pahe.ink
+    /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
+        clickWithDelay('.myButton', 2000);
+        clickWithDelay('.myButton', 3000);
+        clickWithDelay('.myButton', 4000);
+    }) : null;
+
 })();
 
 (function() {
@@ -2688,7 +2695,11 @@
     // dramaday.me - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/21
     /besargaji.com/.test(url) ? boostTimers() : null;
 
+    // relampagomovies.com
     /^https:\/\/relampagomovies\.com\/.+/.test(url) ? boostTimers() : null;
+
+    // pahe.ink
+    /teknoasian.com/.test(url) ? boostTimers() : null;
 
 })();
 // ----- ----- -----
