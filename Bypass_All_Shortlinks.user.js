@@ -719,6 +719,7 @@
 // @include     /app.link2unlock.com/
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
+// @include     /app2.olamovies.download\/generate\/\?id=/
 // @include      /filecrypt.(cc|co)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop)\/.*/
@@ -2567,9 +2568,11 @@
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/168
     /mastramstories.com\/api.php\?api/.test(url) ? redirect(atob(url.split('?api=')[1])) : null;
     /links.kmhd.net\/file/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
-
     // katmoviehd.wales
     /links.kmhd.net\/locked\?redirect=/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
+
+    // olamovies link generator
+    /app2.olamovies.download\/generate\/\?id=/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
 
     // saferoms.com
     /www.saferoms.com\/\?go=/.test(url) ? afterDOMLoaded(function() {

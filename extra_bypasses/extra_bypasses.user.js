@@ -217,6 +217,7 @@
 // @match       *://dailyuploads.net/*
 // @match       *://www.ryuugames.com/?eroge=*
 // @match       *://anchoreth.com/r-adsh?t=i&v=*
+// @include     /app2.olamovies.download\/generate\/\?id=/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1127,9 +1128,11 @@
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/168
     /mastramstories.com\/api.php\?api/.test(url) ? redirect(atob(url.split('?api=')[1])) : null;
     /links.kmhd.net\/file/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
-
     // katmoviehd.wales
     /links.kmhd.net\/locked\?redirect=/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
+
+    // olamovies link generator
+    /app2.olamovies.download\/generate\/\?id=/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
 
     // saferoms.com
     /www.saferoms.com\/\?go=/.test(url) ? afterDOMLoaded(function() {

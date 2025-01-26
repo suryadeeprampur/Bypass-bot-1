@@ -700,6 +700,7 @@ https://paster.so/*
 /app.link2unlock.com/
 /freemodsapp.in/
 /pandaznetwork.com/
+/app2.olamovies.download\/generate\/\?id=/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
 /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop)\/.*/
