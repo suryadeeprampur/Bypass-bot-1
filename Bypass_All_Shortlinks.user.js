@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.33
+// @version        93.4.34
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -502,8 +502,6 @@
 // @match        https://bypass.city/bypass?bypass=*
 // @match        https://adbypass.org/bypass?bypass=*
 // @match       https://fc-lc.xyz/*
-// @match       *://*.ukrupdate.com/*
-// @match       *://*.aryx.xyz/*
 // @match       *://teknoasian.com/*
 // @match       *://upfiles.app/*
 // @match       https://datanodes.to/download
@@ -717,6 +715,7 @@
 // @include     /paster.gg/
 // @include     /go.zovo.ink/
 // @include     /^https:\/\/kisalt\.com\/.*/
+// @include     /(ukrupdate|mastkhabre).com|aryx.xyz/
 // @include     /app.link2unlock.com/
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
@@ -2648,8 +2647,8 @@
     // kisalt - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/213
     /kisalt.com\/.*/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn.btn-primary');}) : null;
 
-    // Anylinks.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/220
-    if (/ukrupdate.com|aryx.xyz/.test(window.location.href)) {
+    // Anylinks.in .site - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/220
+    if (/(ukrupdate|mastkhabre).com|aryx.xyz/.test(window.location.href)) {
         let delay = 10000;
         if (/aryx.xyz/.test(window.location.href)) delay = 1000;
         window.addEventListener('load', function() {

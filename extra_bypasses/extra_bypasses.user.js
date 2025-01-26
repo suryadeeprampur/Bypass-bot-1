@@ -207,8 +207,7 @@
 // @include     /paster.gg/
 // @include     /go.zovo.ink/
 // @include     /^https:\/\/kisalt\.com\/.*/
-// @match       *://*.ukrupdate.com/*
-// @match       *://*.aryx.xyz/*
+// @include     /(ukrupdate|mastkhabre).com|aryx.xyz/
 // @include     /app.link2unlock.com/
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
@@ -1208,8 +1207,8 @@
     // kisalt - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/213
     /kisalt.com\/.*/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn.btn-primary');}) : null;
 
-    // Anylinks.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/220
-    if (/ukrupdate.com|aryx.xyz/.test(window.location.href)) {
+    // Anylinks.in .site - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/220
+    if (/(ukrupdate|mastkhabre).com|aryx.xyz/.test(window.location.href)) {
         let delay = 10000;
         if (/aryx.xyz/.test(window.location.href)) delay = 1000;
         window.addEventListener('load', function() {

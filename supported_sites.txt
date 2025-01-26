@@ -483,8 +483,6 @@ https://linkvertise.com/*
 https://bypass.city/bypass?bypass=*
 https://adbypass.org/bypass?bypass=*
 https://fc-lc.xyz/*
-*://*.ukrupdate.com/*
-*://*.aryx.xyz/*
 *://teknoasian.com/*
 *://upfiles.app/*
 https://datanodes.to/download
@@ -698,6 +696,7 @@ https://paster.so/*
 /paster.gg/
 /go.zovo.ink/
 /^https:\/\/kisalt\.com\/.*/
+/(ukrupdate|mastkhabre).com|aryx.xyz/
 /app.link2unlock.com/
 /freemodsapp.in/
 /pandaznetwork.com/
