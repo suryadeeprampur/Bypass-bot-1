@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.34
+// @version        93.4.35
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -683,7 +683,7 @@
 // @include     /secure.moderngyan.com/
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
-// @include     /links.kmhd.net\/file/
+// @include     /links.kmhd.net/
 // @include     /mastramstories.com\/api.php\?api/
 // @include     /onlinetntextbooks.com/
 // @include     /www.saferoms.com\/\?go=/

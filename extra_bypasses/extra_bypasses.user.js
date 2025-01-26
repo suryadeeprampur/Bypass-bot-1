@@ -174,7 +174,7 @@
 // @include     /secure.moderngyan.com/
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
-// @include     /links.kmhd.net\/file/
+// @include     /links.kmhd.net/
 // @include     /mastramstories.com\/api.php\?api/
 // @include     /onlinetntextbooks.com/
 // @include     /www.saferoms.com\/\?go=/
@@ -1127,6 +1127,9 @@
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/168
     /mastramstories.com\/api.php\?api/.test(url) ? redirect(atob(url.split('?api=')[1])) : null;
     /links.kmhd.net\/file/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
+
+    // katmoviehd.wales
+    /links.kmhd.net\/locked\?redirect=/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.inline-flex');}) : null;
 
     // saferoms.com
     /www.saferoms.com\/\?go=/.test(url) ? afterDOMLoaded(function() {

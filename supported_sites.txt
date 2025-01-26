@@ -664,7 +664,7 @@ https://paster.so/*
 /secure.moderngyan.com/
 /earnbox.sattakingcharts.in/
 /set.seturl.in/
-/links.kmhd.net\/file/
+/links.kmhd.net/
 /mastramstories.com\/api.php\?api/
 /onlinetntextbooks.com/
 /www.saferoms.com\/\?go=/
