@@ -651,7 +651,7 @@ https://paster.so/*
 /pahe.win/
 /ontechhindi.com/
 /thelatintwistcafe.com/
-/newshuta.in|indiamaja.com|thespotifypremium.com/
+/(newshuta|5ghindi).in|(indiamaja|thespotifypremium).com/
 /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 /animesgd.net/
 /tucinehd.com\/links/
