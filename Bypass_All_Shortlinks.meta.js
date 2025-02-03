@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.37
+// @version        93.4.38
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -538,7 +538,7 @@
 // @include     /uqozy.com|posterify.net|drinkspartner.com|manishclasses.in|boiscd.com/
 // @include     /blogging.techworldx.net|10beasts.biz/
 // @include     /starsddl.me\/short/
-// @include     /tech.unblockedgames.world/
+// @include     /(tech|technews).unblockedgames.world/
 // @include     /seriezloaded.com.ng\/sl-download\/\?link=/
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/

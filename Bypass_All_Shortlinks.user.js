@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.37
+// @version        93.4.38
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -538,7 +538,7 @@
 // @include     /uqozy.com|posterify.net|drinkspartner.com|manishclasses.in|boiscd.com/
 // @include     /blogging.techworldx.net|10beasts.biz/
 // @include     /starsddl.me\/short/
-// @include     /tech.unblockedgames.world/
+// @include     /(tech|technews).unblockedgames.world/
 // @include     /seriezloaded.com.ng\/sl-download\/\?link=/
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
@@ -1983,16 +1983,17 @@
     // starsddl.me
     /starsddl.me\/short\/\?anonym=/.test(url) ? redirect(atob(url.split('?anonym=')[1])) : null;
 
-    // uhdmovies.icu, topmovies.icu (modlist.in)
-
+    // uhdmovies.icu, topmovies.icu (modlist.in), moviesmod.cash
+    //uBO filter bypass: https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11995191
     // button-clicking method
-    /* /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('span.block > a:nth-child(1)')}) : null;
-    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('#verify_button')}) : null;
-    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {clickIfExists('#verify_button2')}) : null;
-    /tech.unblockedgames.world/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#two_steps_btn')}) : null; */
-
+    /(tech|technews).unblockedgames.world/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('span.block > a:nth-child(1)');
+        clickIfExists('#verify_button');
+        clickIfExists('#verify_button2');
+        redirectIfExists('#two_steps_btn');
+    }) : null;
     //alt method (thanks to https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11063787)
-    if (/tech.unblockedgames.world/.test(url)) {
+    if (/(tech|technews).unblockedgames.world/.test(url)) {
         afterDOMLoaded(function() {
             // First step
             const landingElement = document.querySelector("#landing");
