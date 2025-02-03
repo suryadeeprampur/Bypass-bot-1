@@ -70,11 +70,11 @@
             const forcedTimerInitialValue = 7;
             function setTimer() {
                 if (window.wT9882 > forcedTimerInitialValue) {
-                    window.wT9882 = forcedTimerInitialValue - 1;
+                    window.wT9882 = 1;
                 }
             }
             window.wT9882 = forcedTimerInitialValue;
-            setInterval(setTimer, 1000);
+            setInterval(setTimer, 1000); //This function exists because if the site detects an adblocker, it switches the timer to 30, and that only happens in the last second or so
 
             /* ------------ Protect buttons from being removed ------------ */
             // Protect all buttons currently in the DOM
