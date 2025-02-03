@@ -161,7 +161,7 @@
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
 // @include     /thelatintwistcafe.com/
-// @include     /(newshuta|5ghindi).in|(indiamaja|thespotifypremium).com/
+// @include     /(newshuta|5ghindi|gujaratalert|mahitimanch).in|(indiamaja|thespotifypremium).com/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
@@ -564,7 +564,7 @@
                 // Extract the target URL from the script contents and redirect to it
                 const scriptElements = Array.from(document.getElementsByTagName("script"));
                 const matchedUrl = scriptElements
-                    .map((script) => script.textContent.match(/https:\/\/tech\.unblockedgames\.world\/\?go=pepe-[\w-]+/))
+                    .map((script) => script.textContent.match(/https:\/\/technews\.unblockedgames\.world\/\?go=pepe-[\w-]+/))
                     .filter((match) => match) // Filter out null values
                     .map((match) => match[0])[0]; // Get the first matching URL
 
@@ -1098,7 +1098,7 @@
     }) : null;
 
     // inshorturl.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/104, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/212, https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10744404
-    /(newshuta|5ghindi).in|(indiamaja|thespotifypremium).com/.test(url) ? afterDOMLoaded(function() {
+    /(newshuta|5ghindi|gujaratalert|mahitimanch).in|(indiamaja|thespotifypremium).com/.test(url) ? afterDOMLoaded(function() {
         window.count = 0;
         clickIfExists('#tp98');
         clickIfExists('#btn6');

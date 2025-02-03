@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.38
+// @version        93.4.39
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -670,7 +670,7 @@
 // @include     /pahe.win/
 // @include     /ontechhindi.com/
 // @include     /thelatintwistcafe.com/
-// @include     /(newshuta|5ghindi).in|(indiamaja|thespotifypremium).com/
+// @include     /(newshuta|5ghindi|gujaratalert|mahitimanch).in|(indiamaja|thespotifypremium).com/
 // @include     /mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org/
 // @include     /animesgd.net/
 // @include     /tucinehd.com\/links/
