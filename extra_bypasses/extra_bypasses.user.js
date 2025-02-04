@@ -221,6 +221,8 @@
 // @include     /app2.olamovies.download\/generate\/\?id=/
 // @match       *://psa.btcut.io/*
 // @match       *://linkslice.io/*
+// @match       *://zshort.io/*
+// @match       *://easy4skip.com/*
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1282,7 +1284,7 @@
     }) : null;
     /anchoreth.com\/r-adsh\?t=i&v=.*$/.test(url) ? redirect(atob(url.split('&v=')[1].split('&')[0])) : null;
 
-    // button click for psa.btcut.io, linkslice.io, ... (#aaoii2o button) - after profitsfly
+    // button click for button after profitsfly (#aaoii2o button)
     function redirectToAnyLinkWithMatchingTextContent(textContent) {
         let intervalId = setInterval(() => {
             document.querySelectorAll("a").forEach(link => {
@@ -1293,7 +1295,7 @@
             });
         }, 500);
     }
-    /(psa.btcut|linkslice).io\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
+    /((psa.btcut|linkslice|zshort).io|easy4skip.com)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
         redirectToAnyLinkWithMatchingTextContent("Get Link");
     }) : null;
 

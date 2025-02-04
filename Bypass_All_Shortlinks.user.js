@@ -510,6 +510,8 @@
 // @match       *://anchoreth.com/r-adsh?t=i&v=*
 // @match       *://psa.btcut.io/*
 // @match       *://linkslice.io/*
+// @match       *://zshort.io/*
+// @match       *://easy4skip.com/*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
@@ -2722,7 +2724,7 @@
     }) : null;
     /anchoreth.com\/r-adsh\?t=i&v=.*$/.test(url) ? redirect(atob(url.split('&v=')[1].split('&')[0])) : null;
 
-    // button click for psa.btcut.io, linkslice.io, ... (#aaoii2o button) - after profitsfly
+    // button click for button after profitsfly (#aaoii2o button)
     function redirectToAnyLinkWithMatchingTextContent(textContent) {
         let intervalId = setInterval(() => {
             document.querySelectorAll("a").forEach(link => {
@@ -2733,7 +2735,7 @@
             });
         }, 500);
     }
-    /(psa.btcut|linkslice).io\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
+    /((psa.btcut|linkslice|zshort).io|easy4skip.com)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
         redirectToAnyLinkWithMatchingTextContent("Get Link");
     }) : null;
 

@@ -510,6 +510,8 @@
 // @match       *://anchoreth.com/r-adsh?t=i&v=*
 // @match       *://psa.btcut.io/*
 // @match       *://linkslice.io/*
+// @match       *://zshort.io/*
+// @match       *://easy4skip.com/*
 // @match        https://paster.so/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
