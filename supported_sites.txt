@@ -265,7 +265,7 @@ slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.c
 link.goto.com.np|(appkamods|bankvacency|otomi-games).com
 hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org
 (homeculina|ionclub777|ineedskin|auntmanny|businessuniqueidea|plumptofit|cookingpumpkin|elishea|audioinspects|celebperson|dreamhomelabs|fishingbreeze|unhearduniversity).com|(financewrapper|recipes4all|solidcoins).net|(aayurvedshastra|allnewspoint).in|chefslink.org|lawyex.co|mdn.lol
-playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz
+playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net
 shortit.pw
 short.croclix.me|adz7short.space
 adshnk.com|adshrink.it
@@ -490,6 +490,7 @@ https://datanodes.to/download
 *://www.ryuugames.com/?eroge=*
 *://anchoreth.com/r-adsh?t=i&v=*
 *://psa.btcut.io/*
+*://linkslice.io/*
 https://paster.so/*
 /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
@@ -645,8 +646,9 @@ https://paster.so/*
 /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 /ielts-isa.edu.vn/
 /flash.getpczone.com/
-/surfsees.com|fitnessholic.net/
+/(surfsees|travelagancy|venzoars).com|fitnessholic.net|stockinsights.in/
 /cgsonglyricz.in|www.techhubcap.com/
+/cryptings.in|vbnmx.online/
 /techyblogs.in|readytechflip.com/
 /wp2host.com/
 /pahe.win/
@@ -704,6 +706,6 @@ https://paster.so/*
 /app2.olamovies.download\/generate\/\?id=/
 /filecrypt.(cc|co)/
 /(mega-enlace|acortados).com/
-/^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz)\/.*/
+/^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 /quickeemail.com/

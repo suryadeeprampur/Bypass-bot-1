@@ -154,8 +154,9 @@
 // @include     /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
-// @include     /surfsees.com|fitnessholic.net/
+// @include     /(surfsees|travelagancy|venzoars).com|fitnessholic.net|stockinsights.in/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
+// @include     /cryptings.in|vbnmx.online/
 // @include     /techyblogs.in|readytechflip.com/
 // @include     /wp2host.com/
 // @include     /pahe.win/
@@ -219,6 +220,7 @@
 // @match       *://anchoreth.com/r-adsh?t=i&v=*
 // @include     /app2.olamovies.download\/generate\/\?id=/
 // @match       *://psa.btcut.io/*
+// @match       *://linkslice.io/*
 // @run-at      document-start
 // ==/UserScript==
 
@@ -983,9 +985,14 @@
     // https://thotpacks.xyz/R7p2l
     /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
-    // linkpays.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/88, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
-    /surfsees.com|fitnessholic.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#rtg')}) : null;
-    /surfsees.com|fitnessholic.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('.rtg-blue')}) : null;
+    // linkpays.in - t.me/canvapro365free - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/88, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
+    /(surfsees|travelagancy|venzoars).com|fitnessholic.net|stockinsights.in/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#tp98');
+        clickIfNotDisabled('#rtg');
+        clickIfNotDisabled('.rtg-blue');
+        redirectIfExists('#btn6');
+    }) : null;
+    /cryptings.in|vbnmx.online/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#rtg-btn > a:nth-child(1)')}) : null;
     /cgsonglyricz.in|www.techhubcap.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
     /techyblogs.in|readytechflip.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
@@ -1275,19 +1282,21 @@
     }) : null;
     /anchoreth.com\/r-adsh\?t=i&v=.*$/.test(url) ? redirect(atob(url.split('&v=')[1].split('&')[0])) : null;
 
-    // button click for psa.btcut.io (#aaoii2o button) - psa.wf
-    /psa.btcut.io/.test(url) ? afterDOMLoaded(function() {
-        let clicked = false;
-        function tryClickLink() {
+    // button click for psa.btcut.io, linkslice.io, ... (#aaoii2o button) - after profitsfly
+    function redirectToAnyLinkWithMatchingTextContent(textContent) {
+        let intervalId = setInterval(() => {
             document.querySelectorAll("a").forEach(link => {
-                if (!clicked && link.textContent.includes("Get Link") && link.href) {
-                    clicked = true;
-                    window.location = link.href;
+                if (link.textContent.includes("Get Link") && link.href) {
+                    clearInterval(intervalId);
+                    window.location.assign(link.href);
                 }
             });
-        }
-        setInterval(tryClickLink, 500);
+        }, 500);
+    }
+    /(psa.btcut|linkslice).io\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
+        redirectToAnyLinkWithMatchingTextContent("Get Link");
     }) : null;
+
 
 })();
 
