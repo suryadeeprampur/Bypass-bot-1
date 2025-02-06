@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.45
+// @version        93.4.46
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2931,6 +2931,22 @@
 
     const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop/
     if (domainRegex.test(window.location.href)) {
+
+        // Replace addEventListener to prevent adblock detection
+            // This replicates "aeld" from uBO - https://github.com/gorhill/ublock/wiki/Resources-Library#addeventlistener-defuserjs-
+            // Based on filter by Suurp from https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-12079375
+            // Save the original addEventListener method
+                const originalAddEventListener = document.addEventListener;
+                // Override the addEventListener method
+                document.addEventListener = function(type, listener, options) {
+                    // Check if the event type is 'DOMContentLoaded' and the listener matches the one we want to block
+                    if (type === 'DOMContentLoaded' && listener.toString().includes('function(e)')) {
+                        console.log('Blocked DOMContentLoaded event listener:', listener);
+                        return; // Prevent the listener from being added
+                    }
+                    // Call the original addEventListener method for other cases
+                    originalAddEventListener.call(document, type, listener, options);
+                };
 
         // Backup the current Rinku.me Code in case we get to 404 and we need to try again
             // Function to get rinku code from URL parameters (example: https://listofthis.com/backup/w/?get=uPmc5&short=rinku.me)
