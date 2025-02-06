@@ -214,6 +214,7 @@
 // @include     /pandaznetwork.com/
 // @match       *://teknoasian.com/*
 // @match       *://upfiles.app/*
+// @match       *://haxi.online/*
 // @match       https://datanodes.to/download
 // @match       *://dailyuploads.net/*
 // @match       *://www.ryuugames.com/?eroge=*
@@ -822,9 +823,6 @@
     /jobzspk.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn5')}) : null;
     /urls.cx/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.video-button')}) : null;
 
-    //suncy.net (upfiles.com) (seen used in fiuxy2.co)
-    /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
-
     // filmesmega.online
     /minimilionario.com\/noticia.php\?token=/.test(url) ? redirect(atob(url.split('?token=')[1])) : null;
 
@@ -1258,8 +1256,11 @@
         clickWithDelay('.myButton', 4000);
     }) : null;
 
+    //suncy.net (upfiles.com) (seen used in fiuxy2.co)
+    /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
+
     // upfiles.app
-    /upfiles.app\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
+    /(upfiles.app|haxi.online)\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
         clickIfCorrectText('#link-button', 'Continue');
         clickIfRecaptchaSolved('#link-button');
         //redirectIfNotDisabled('a#link-button');

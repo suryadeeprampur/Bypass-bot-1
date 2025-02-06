@@ -485,6 +485,7 @@ https://adbypass.org/bypass?bypass=*
 https://fc-lc.xyz/*
 *://teknoasian.com/*
 *://upfiles.app/*
+*://haxi.online/*
 https://datanodes.to/download
 *://dailyuploads.net/*
 *://www.ryuugames.com/?eroge=*
@@ -707,7 +708,7 @@ https://paster.so/*
 /pandaznetwork.com/
 /app2.olamovies.download\/generate\/\?id=/
 /filecrypt.(cc|co)/
+/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 /(mega-enlace|acortados).com/
 /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/
-/^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 /quickeemail.com/

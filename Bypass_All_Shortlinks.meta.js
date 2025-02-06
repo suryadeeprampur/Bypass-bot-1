@@ -504,6 +504,7 @@
 // @match       https://fc-lc.xyz/*
 // @match       *://teknoasian.com/*
 // @match       *://upfiles.app/*
+// @match       *://haxi.online/*
 // @match       https://datanodes.to/download
 // @match       *://dailyuploads.net/*
 // @match       *://www.ryuugames.com/?eroge=*
@@ -726,9 +727,9 @@
 // @include     /pandaznetwork.com/
 // @include     /app2.olamovies.download\/generate\/\?id=/
 // @include      /filecrypt.(cc|co)/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/
-// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /quickeemail.com/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|gsshort|substitutefor|github|freeoseocheck|greenenez|aliyun|reddit|bing|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|(login|signup|account|officeapps|api|mail|hotmail).live|basketballsavvy|healthyfollicles|hauntingrealm|pluginmixer|boredboard|boardgamechick|healthyfollicles|atlassian|pinterest|twitter|facebook|tiktok|instagram|linkedin|fastbull|tradingview).com|(coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|doubleclick|luckydice).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|insurancegold.in|coinscap.info|chefknives.expert|(sleeptube|englishwritingsite|documentaryplanet|gsgames).xyz|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
 // @exclude-match *://aylink.co/*

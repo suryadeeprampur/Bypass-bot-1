@@ -504,6 +504,7 @@
 // @match       https://fc-lc.xyz/*
 // @match       *://teknoasian.com/*
 // @match       *://upfiles.app/*
+// @match       *://haxi.online/*
 // @match       https://datanodes.to/download
 // @match       *://dailyuploads.net/*
 // @match       *://www.ryuugames.com/?eroge=*
@@ -726,9 +727,9 @@
 // @include     /pandaznetwork.com/
 // @include     /app2.olamovies.download\/generate\/\?id=/
 // @include      /filecrypt.(cc|co)/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/
-// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /quickeemail.com/
 // @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|gsshort|substitutefor|github|freeoseocheck|greenenez|aliyun|reddit|bing|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|(login|signup|account|officeapps|api|mail|hotmail).live|basketballsavvy|healthyfollicles|hauntingrealm|pluginmixer|boredboard|boardgamechick|healthyfollicles|atlassian|pinterest|twitter|facebook|tiktok|instagram|linkedin|fastbull|tradingview).com|(coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|doubleclick|luckydice).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|insurancegold.in|coinscap.info|chefknives.expert|(sleeptube|englishwritingsite|documentaryplanet|gsgames).xyz|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
 // @exclude-match *://aylink.co/*
@@ -2262,9 +2263,6 @@
     /jobzspk.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn5')}) : null;
     /urls.cx/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.video-button')}) : null;
 
-    //suncy.net (upfiles.com) (seen used in fiuxy2.co)
-    /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
-
     // filmesmega.online
     /minimilionario.com\/noticia.php\?token=/.test(url) ? redirect(atob(url.split('?token=')[1])) : null;
 
@@ -2698,8 +2696,11 @@
         clickWithDelay('.myButton', 4000);
     }) : null;
 
+    //suncy.net (upfiles.com) (seen used in fiuxy2.co)
+    /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
+
     // upfiles.app
-    /upfiles.app\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
+    /(upfiles.app|haxi.online)\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
         clickIfCorrectText('#link-button', 'Continue');
         clickIfRecaptchaSolved('#link-button');
         //redirectIfNotDisabled('a#link-button');
@@ -2915,6 +2916,138 @@
 })();
 
 // ----- ----- -----
+
+// ----- Bypass Fly Inc (rinku.me, 7mb.io, ...) ------
+// source: https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/165
+(function() {
+    "use strict";
+
+    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop/
+    if (domainRegex.test(window.location.href)) {
+
+        // Backup the current Rinku.me Code in case we get to 404 and we need to try again
+            // Function to get rinku code from URL parameters (example: https://listofthis.com/backup/w/?get=uPmc5&short=rinku.me)
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                const results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+            // Save rinku code in memory
+            if (window.location.href.includes('/backup/w/')) {
+                const codeParameter = 'get';
+                //alert('Saving Rinku.me code in memory... The code is ' + getUrlParameter(codeParameter));
+                localStorage.setItem('getParam', getUrlParameter(codeParameter));
+            }
+        // Try again when getting to 404 page (example: https://listofthis.com/bypass.php)
+        if (window.location.href.includes('/bypass.php')) {
+            const savedGetParam = localStorage.getItem('getParam');
+            if (savedGetParam) {
+                //Wait for the DOM to be fully loaded (to see that it is a 404 page)
+                window.addEventListener('load', function() {
+                    //alert('Press OK to try again going to:\n' + `https://rinku.me/${savedGetParam}`);
+                    window.location.href = `https://rinku.me/${savedGetParam}`;
+                });
+            }
+        }
+
+        // Wait for page to be fully loaded
+        window.addEventListener('load', function() {
+
+            // Override the hasFocus function
+            document.hasFocus = function() {
+                return true; // Always return true
+            };
+
+            // Functions to check for "Click Any Ad & Keep It Open For 15 Seconds To Continue" and reload the page if it exists
+            function checkForMessage_fallback() {
+                const paragraphs = document.getElementsByTagName("p");
+                for (let p of paragraphs) {
+                    if ((/.*Click.+Ad.*To.+Continue.*/is.test(p.textContent) || /.*Click.+Ad.*To.+Unlock.+Captcha.*/is.test(p.textContent) || /.*Open.*To.+Unlock.+Captcha.*/is.test(p.textContent) || /.*Open.*To.+Continue.*/is.test(p.textContent)) && isElementVisibleAndEnabled(p)) {
+                        location.reload(); // Reload the page
+                        return; // Exit the function after reloading
+                    }
+                }
+            }
+
+            function checkForMessage() {
+                const p = document.getElementById("click");
+                if (!p) {
+                    checkForMessage_fallback();
+                } else if (p.textContent.trim() !== "" && isElementVisibleAndEnabled(p)) {
+                    location.reload(); // Reload the page
+                }
+            }
+
+            // Function to check and click the button
+            function clickStepButton() {
+                const buttons = document.querySelectorAll("button");
+                for (let button of buttons) {
+                    if (button.textContent.includes("Step") && isElementVisibleAndEnabled(button)) {
+                        button.click();
+                        console.log("Clicked the button: ", button);
+                        return; // Stop after clicking the first found button
+                    }
+                }
+            }
+
+            // Function to observe button changes
+            function observeButtons() {
+                const buttons = document.querySelectorAll("button");
+                buttons.forEach(button => {
+                    const observer = new MutationObserver(() => {
+                        // Check if the button is enabled or visibility changed
+                        if (isElementVisibleAndEnabled(button)) {
+                            clickStepButton(); // Attempt to click if it meets criteria
+                        }
+                    });
+                    observer.observe(button, {
+                        attributes: true,
+                        attributeFilter: ["disabled"] // Observe changes to the disabled attribute
+                    });
+                });
+            }
+
+            // Helper function to determine if an element is visible and enabled
+            function isElementVisibleAndEnabled(el) {
+                // Check if the element and all its parents are visible
+                let currentElement = el;
+                while (currentElement) {
+                    const style = getComputedStyle(currentElement);
+                    if (style.display === "none" || style.visibility === "hidden") {
+                        return false; // Element or parent is not visible
+                    }
+                    currentElement = currentElement.parentElement; // Move up the DOM tree
+                }
+                // Check if the button is enabled
+                return !el.disabled;
+            }
+
+            // Create a MutationObserver to detect DOM changes
+            const observer = new MutationObserver(clickStepButton);
+
+            // Observe changes in the entire document
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+
+            // Initial checks
+            observeButtons();
+            checkForMessage();
+            clickStepButton();
+
+            // Hide "Hey, thanks for your visit, good day!!" modal
+            const interstitial = document.getElementById("interstitial");
+            if (interstitial) {
+                interstitial.style.display = "none";
+            }
+
+        });
+
+    }
+})();
+// ----- End Bypass Rinku -----
 
 // ----- Bypass mega-enlace ( Taken from AdGuard https://github.com/AdguardTeam/AdguardFilters/blob/b1622e8b387148509ca355e8070ffa5cdcf87525/SpanishFilter/sections/general_extensions.txt#L108 / https://github.com/AdguardTeam/AdguardFilters/issues/174863#issuecomment-1996735239) -----
 // used in: pelisenhd.org latinomegahd.net gatonplayseries.com peliculasgd.net tododvdfull.com cinemaniahdd.net programasvirtualespc.net compucalitv.pro
@@ -3179,139 +3312,6 @@
     }
 })();
 //-------
-
-// ----- Bypass Rinku ------
-// source: https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/165
-// example: https://rinku.me/0XLi6
-(function() {
-    "use strict";
-
-    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop/
-    if (domainRegex.test(window.location.href)) {
-
-        // Backup the current Rinku.me Code in case we get to 404 and we need to try again
-            // Function to get rinku code from URL parameters (example: https://listofthis.com/backup/w/?get=uPmc5&short=rinku.me)
-            function getUrlParameter(name) {
-                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-                const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-                const results = regex.exec(location.search);
-                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-            }
-            // Save rinku code in memory
-            if (window.location.href.includes('/backup/w/')) {
-                const codeParameter = 'get';
-                //alert('Saving Rinku.me code in memory... The code is ' + getUrlParameter(codeParameter));
-                localStorage.setItem('getParam', getUrlParameter(codeParameter));
-            }
-        // Try again when getting to 404 page (example: https://listofthis.com/bypass.php)
-        if (window.location.href.includes('/bypass.php')) {
-            const savedGetParam = localStorage.getItem('getParam');
-            if (savedGetParam) {
-                //Wait for the DOM to be fully loaded (to see that it is a 404 page)
-                window.addEventListener('load', function() {
-                    //alert('Press OK to try again going to:\n' + `https://rinku.me/${savedGetParam}`);
-                    window.location.href = `https://rinku.me/${savedGetParam}`;
-                });
-            }
-        }
-
-        // Wait for page to be fully loaded
-        window.addEventListener('load', function() {
-
-            // Override the hasFocus function
-            document.hasFocus = function() {
-                return true; // Always return true
-            };
-
-            // Functions to check for "Click Any Ad & Keep It Open For 15 Seconds To Continue" and reload the page if it exists
-            function checkForMessage_fallback() {
-                const paragraphs = document.getElementsByTagName("p");
-                for (let p of paragraphs) {
-                    if ((/.*Click.+Ad.*To.+Continue.*/is.test(p.textContent) || /.*Click.+Ad.*To.+Unlock.+Captcha.*/is.test(p.textContent) || /.*Open.*To.+Unlock.+Captcha.*/is.test(p.textContent) || /.*Open.*To.+Continue.*/is.test(p.textContent)) && isElementVisibleAndEnabled(p)) {
-                        location.reload(); // Reload the page
-                        return; // Exit the function after reloading
-                    }
-                }
-            }
-
-            function checkForMessage() {
-                const p = document.getElementById("click");
-                if (!p) {
-                    checkForMessage_fallback();
-                } else if (p.textContent.trim() !== "" && isElementVisibleAndEnabled(p)) {
-                    location.reload(); // Reload the page
-                }
-            }
-
-            // Function to check and click the button
-            function clickStepButton() {
-                const buttons = document.querySelectorAll("button");
-                for (let button of buttons) {
-                    if (button.textContent.includes("Step") && isElementVisibleAndEnabled(button)) {
-                        button.click();
-                        console.log("Clicked the button: ", button);
-                        return; // Stop after clicking the first found button
-                    }
-                }
-            }
-
-            // Function to observe button changes
-            function observeButtons() {
-                const buttons = document.querySelectorAll("button");
-                buttons.forEach(button => {
-                    const observer = new MutationObserver(() => {
-                        // Check if the button is enabled or visibility changed
-                        if (isElementVisibleAndEnabled(button)) {
-                            clickStepButton(); // Attempt to click if it meets criteria
-                        }
-                    });
-                    observer.observe(button, {
-                        attributes: true,
-                        attributeFilter: ["disabled"] // Observe changes to the disabled attribute
-                    });
-                });
-            }
-
-            // Helper function to determine if an element is visible and enabled
-            function isElementVisibleAndEnabled(el) {
-                // Check if the element and all its parents are visible
-                let currentElement = el;
-                while (currentElement) {
-                    const style = getComputedStyle(currentElement);
-                    if (style.display === "none" || style.visibility === "hidden") {
-                        return false; // Element or parent is not visible
-                    }
-                    currentElement = currentElement.parentElement; // Move up the DOM tree
-                }
-                // Check if the button is enabled
-                return !el.disabled;
-            }
-
-            // Create a MutationObserver to detect DOM changes
-            const observer = new MutationObserver(clickStepButton);
-
-            // Observe changes in the entire document
-            observer.observe(document.body, {
-                childList: true,
-                subtree: true
-            });
-
-            // Initial checks
-            observeButtons();
-            checkForMessage();
-            clickStepButton();
-
-            // Hide "Hey, thanks for your visit, good day!!" modal
-            const interstitial = document.getElementById("interstitial");
-            if (interstitial) {
-                interstitial.style.display = "none";
-            }
-
-        });
-
-    }
-})();
-// ----- End Bypass Rinku -----
 
 // ----- partial autoclicker for soractrl used by moviesnipipay.me,... ------
 // sites with similar pages not autoclicked for now: ssrmovies.promo, mkvcinemas.phd, freecoursesite.com

@@ -1,12 +1,11 @@
 // ==UserScript==
-// @name         Rinku autoclick
+// @name         Fly Inc autoclick (rinku.me, 7mb.io, ...)
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @run-at       document-start
 // ==/UserScript==
 
-// ----- Bypass Rinku ------
+// ----- Bypass Fly Inc (rinku.me, 7mb.io, ...) ------
 // source: https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/165
-// example: https://rinku.me/0XLi6
 (function() {
     "use strict";
 
