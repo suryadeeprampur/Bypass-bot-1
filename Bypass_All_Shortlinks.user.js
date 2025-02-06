@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.43
+// @version        93.4.44
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -726,6 +726,7 @@
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
 // @include     /app2.olamovies.download\/generate\/\?id=/
+// @include     /foodtechnos.in/
 // @include      /filecrypt.(cc|co)/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna).com|(makego|sakazi|momge|englishgrammarpro).net|askerlikforum.com.tr|misterio.ro|(forp|bevery).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
@@ -2738,6 +2739,12 @@
     }
     /((psa.btcut|linkslice|zshort).io|easy4skip.com)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
         redirectToAnyLinkWithMatchingTextContent("Get Link");
+    }) : null;
+
+    // 10drives - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/233
+    /foodtechnos.in/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('a.btn:nth-child(1)');
+        redirectIfExists('a#lsdwnbtn');
     }) : null;
 
 

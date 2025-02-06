@@ -224,6 +224,7 @@
 // @match       *://linkslice.io/*
 // @match       *://zshort.io/*
 // @match       *://easy4skip.com/*
+// @include     /foodtechnos.in/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1298,6 +1299,12 @@
     }
     /((psa.btcut|linkslice|zshort).io|easy4skip.com)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
         redirectToAnyLinkWithMatchingTextContent("Get Link");
+    }) : null;
+
+    // 10drives - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/233
+    /foodtechnos.in/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('a.btn:nth-child(1)');
+        redirectIfExists('a#lsdwnbtn');
     }) : null;
 
 
