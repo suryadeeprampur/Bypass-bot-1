@@ -120,7 +120,7 @@ adtival.network
 gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online
 gameblog.in
 sharetext.me
-(cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|gamco.online|exe-urls.com
+(cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|(jixo|gamco).online|exe-urls.com
 sfl.gl|moneyblink.com
 comohoy.com
 apkw.ru

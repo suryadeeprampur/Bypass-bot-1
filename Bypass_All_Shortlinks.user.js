@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.44
+// @version        93.4.45
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -138,7 +138,7 @@
 // @include /^(https?:\/\/)(.+)?(gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online)(\/.*)/
 // @match *://*.gameblog.in/*
 // @match *://*.sharetext.me/*
-// @include /^(https?:\/\/)(.+)?((cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|gamco.online|exe-urls.com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|(jixo|gamco).online|exe-urls.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(sfl.gl|moneyblink.com)(\/.*)/
 // @match *://*.comohoy.com/*
 // @match *://*.apkw.ru/*
@@ -1190,7 +1190,7 @@
     BypassedByBloggerPemula(/gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online/, function() {ClickIfExists('#mdt', 3);});
     BypassedByBloggerPemula(/gameblog.in/, function() {EnableRCF();SubmitBp('input[type=hidden]', 3);ClickIfExists("div[id^=wpsafe-link] > a", 4);});
     BypassedByBloggerPemula(/sharetext.me/, function() {if (location.href.includes('/redirect') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
-    BypassedByBloggerPemula(/(cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|gamco.online|exe-urls.com/, function(){ClickIfExists('#submit-button', 5, 'setInterval');});
+    BypassedByBloggerPemula(/(cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|(jixo|gamco).online|exe-urls.com/, function(){ClickIfExists('#submit-button', 5, 'setInterval');});
     BypassedByBloggerPemula(/sfl.gl|moneyblink.com/, function() {if (location.href.includes('/ready') && BpParams.has('u')) {meta(atob(BpParams.get('u')));}});
     BypassedByBloggerPemula(/comohoy.com/, function() {if (location.href.includes('/grab/out.html') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
     BypassedByBloggerPemula(/apkw.ru/, function() {if (location.href.includes('/away')) {let apkw = location.href.split('/').slice(-1);redirect(atob(apkw),false);}});

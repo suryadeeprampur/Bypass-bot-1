@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.44
+// @version        93.4.45
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -138,7 +138,7 @@
 // @include /^(https?:\/\/)(.+)?(gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online)(\/.*)/
 // @match *://*.gameblog.in/*
 // @match *://*.sharetext.me/*
-// @include /^(https?:\/\/)(.+)?((cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|gamco.online|exe-urls.com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((cutnet|cutsy|cutlink).net|(cutty|exego|cety).app|(jixo|gamco).online|exe-urls.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(sfl.gl|moneyblink.com)(\/.*)/
 // @match *://*.comohoy.com/*
 // @match *://*.apkw.ru/*
