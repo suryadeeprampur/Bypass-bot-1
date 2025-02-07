@@ -503,7 +503,7 @@ https://paster.so/*
 /japanpaw.com\/out/
 /(iconicblogger.com|segurosdevida.site)/
 /link.unlockner.com/
-/cybercityhelp.in/
+/(cybercityhelp|akcartoons).in/
 /www.akcartoons.in/
 /go.moonlinks.in/
 /shrinkme.(us|site|cc|vip|dev|ink)/

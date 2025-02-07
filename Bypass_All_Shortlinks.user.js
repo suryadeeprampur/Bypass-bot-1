@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.46
+// @version        93.4.47
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -522,7 +522,7 @@
 // @include     /japanpaw.com\/out/
 // @include     /(iconicblogger.com|segurosdevida.site)/
 // @include     /link.unlockner.com/
-// @include     /cybercityhelp.in/
+// @include     /(cybercityhelp|akcartoons).in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
 // @include     /shrinkme.(us|site|cc|vip|dev|ink)/
@@ -1759,7 +1759,7 @@
     /link.unlockner.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn.get-link')}) : null;
 
     //atozcartoonist.me
-    /cybercityhelp.in/.test(url) ? afterDOMLoaded(function() {
+    /(cybercityhelp|akcartoons).in/.test(url) ? afterDOMLoaded(function() {
         const formSubmitButton = document.querySelector('#tp982');
         if (formSubmitButton) {
             document.querySelector('#username').value = 'https://www.thomann.de/' + Math.random().toString(36).substring(2, 12);
