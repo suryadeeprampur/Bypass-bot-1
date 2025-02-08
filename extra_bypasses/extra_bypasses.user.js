@@ -209,7 +209,7 @@
 // @include     /paster.gg/
 // @include     /go.zovo.ink/
 // @include     /^https:\/\/kisalt\.com\/.*/
-// @include     /(ukrupdate|mastkhabre).com|aryx.xyz/
+// @include     /((ukrupdate|mastkhabre).com|aryx.xyz)/
 // @include     /app.link2unlock.com/
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
@@ -1233,8 +1233,8 @@
     /kisalt.com\/.*/.test(url) ? afterDOMLoaded(function() {clickIfExists('.btn.btn-primary');}) : null;
 
     // Anylinks.in .site - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/220
-    if (/(ukrupdate|mastkhabre).com|aryx.xyz/.test(window.location.href)) {
-        let delay = 10000;
+    if (/((ukrupdate|mastkhabre).com|aryx.xyz)/.test(window.location.href)) {
+        let delay = 12000;
         if (/aryx.xyz/.test(window.location.href)) delay = 1000;
         window.addEventListener('load', function() {
             setTimeout(() => document.getElementById('btn6').click(), delay);
