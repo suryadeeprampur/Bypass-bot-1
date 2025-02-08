@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.47
+// @version        93.4.48
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -712,7 +712,8 @@
 // @include     /hubcloud.club\/tg\/go.php\?re=/
 // @include     /stockwallah.com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
-// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/
+// @include     /linkshortify.in|lksfy.com/
 // @include     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/
 // @include     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 // @include     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/

@@ -199,7 +199,8 @@
 // @include     /hubcloud.club\/tg\/go.php\?re=/
 // @include     /stockwallah.com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
-// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/
+// @include     /linkshortify.in|lksfy.com/
 // @include     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/
 // @include     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
 // @include     /^https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
@@ -513,7 +514,7 @@
             setTimeout(() => button.click(), 500);
         }
     }, 2000));
-    if (/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|tejtime24.com/.test(url)){
+    if (/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/.test(url)){
         preventForcedFocusOnWindow();//preventForcedFocusOnWindow not working for this site apparently
         afterWindowLoaded(function() {modifyScript('timeLeft = duration', 'timeLeft = 0')}); // skip timers
         //##Intermediate buttons
@@ -525,7 +526,15 @@
         //##Final button
         (() => afterDOMLoaded(() => setInterval(() => { const button = document.querySelector('#bottomButton'); if (button && button.textContent.includes('Get Link') && button.style.display === 'block') { setTimeout(() => button.click(), 2000); } }, 1000)))(); //Final button
     }
-    /linkshortify.in|lksfy.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('a.get-link')}) : null; // added for https://lksfy.com/59EhFF
+    /linkshortify.in|lksfy.com/.test(url) ? afterDOMLoaded(function() {
+        let intervalId = setInterval(() => {
+            const button = document.querySelector('a.get-link');
+            if (button && checkCloudflareCaptchaSolved() && !button.classList.contains('disabled')) {
+                clearInterval(intervalId);
+                button.click();
+            }
+        }, 1000);
+    }) : null;
 
     // https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10649981
     // https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/263369
