@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.4.50
+// @version        93.4.51
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -700,7 +700,7 @@
 // @include     /dramaday.me\/[^\/]+\/$/
 // @include     /^https:\/\/(fitdynamos.com|labgame.io)\/.*$/
 // @include     /mobilenagari.com|defencewallah.in/
-// @include     /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime).com|(sabarpratham|pubprofit|sarkariyojnaa).in|dear-lottery.org/
+// @include     /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime|careersides).com|(sabarpratham|pubprofit|sarkariyojnaa).in|dear-lottery.org/
 // @include     /rocklinks.in/
 // @include     /www.udlinks.com/
 // @include     /techkhulasha.com|blog.bloggerishyt.in/
@@ -2128,12 +2128,20 @@
     /land.povathemes.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // https://www.udlinks.com/kzrJRjj - https://publicearn.com/vrpNlNc
-    /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime).com|(sabarpratham|pubprofit|sarkariyojnaa).in|dear-lottery.org/.test(url) ? afterDOMLoaded(function() {
+    /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime|careersides).com|(sabarpratham|pubprofit|sarkariyojnaa).in|dear-lottery.org/.test(url) ? afterDOMLoaded(function() {
         window.count = 0;
         clickWithDelay('#tp98', 2000);
         clickWithDelay('#btn6', 2000);
     }) : null;
     /www.udlinks.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+
+    // publicearn.com - https://t.me/edutechvn - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/99, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/161
+    /thelatintwistcafe.com/.test(url) ? afterDOMLoaded(function() {
+        count = 0;
+        setTimeout(function() {document.querySelector('#tp98').click();}, 3000);
+        setTimeout(function() {document.querySelector('#btn6').click();}, 3000);
+        setTimeout(function() {document.querySelector('#.tp-blue').click();}, 3000);
+    }) : null;
 
     // https://rocklinks.in/1ZqZZ2B
     /mobilenagari.com|defencewallah.in/.test(url) ? afterDOMLoaded(function() {
@@ -2529,14 +2537,6 @@
     /ontechhindi.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#rtg > center:nth-child(2) > button:nth-child(1)');
         clickIfExists('div.code-block:nth-child(4) > center:nth-child(1) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1)');
-    }) : null;
-
-    // publicearn.com - https://t.me/edutechvn - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/99, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/161
-    /thelatintwistcafe.com/.test(url) ? afterDOMLoaded(function() {
-        count = 0;
-        setTimeout(function() {document.querySelector('#tp98').click();}, 3000);
-        setTimeout(function() {document.querySelector('#btn6').click();}, 3000);
-        setTimeout(function() {document.querySelector('#.tp-blue').click();}, 3000);
     }) : null;
 
     // vnshortner - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/110, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/149
