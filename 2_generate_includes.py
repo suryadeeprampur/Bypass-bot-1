@@ -5,6 +5,12 @@ def extract_regex_from_js(js_code):
     matches1 = re.findall(pattern1, js_code)
     matches1 = [match.strip('/') for match in matches1]
 
+    pattern1b = r'BypassedByBloggerPemula\(/\s*([a-zA-Z0-9.-]+)\s*/,'
+    matches1b = re.findall(pattern1b, js_code)
+
+    pattern1c = r'BypassedByBloggerPemula/\(([^)]+)\)/,'
+    matches1c = re.findall(pattern1c, js_code)
+
     pattern2 = r"(?<!//)BloggerPemula\('([^']+)',"
     matches2 = re.findall(pattern2, js_code)
 
@@ -17,7 +23,7 @@ def extract_regex_from_js(js_code):
     pattern5 = r"h\.href\.includes\('(.*?)'\)"
     matches5 = re.findall(pattern5, js_code)
 
-    return matches1+matches2+matches3+matches4+matches5
+    return matches1+matches1b+matches1c+matches2+matches3+matches4+matches5
 
 def write_list_of_strings_to_file(filename, lines):
     with open(filename, 'w', encoding='utf-8') as file:
@@ -56,6 +62,15 @@ def generate_include_lines(regex_list):
 
 
 def main():
+
+    # Clear the content of the files include_rules.txt, match_rules.txt, supported_sites.txt, includes.txt
+    write_list_of_strings_to_file('supported_sites.txt', [])
+    write_list_of_strings_to_file('match_rules.txt', [])
+    write_list_of_strings_to_file('include_rules.txt', [])
+    write_list_of_strings_to_file('includes.txt', [])
+
+
+
     file_path = 'untouched_Bypass_All_Shortlinks_patched.user.js'
 
     try:
