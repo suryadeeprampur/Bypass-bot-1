@@ -226,6 +226,7 @@
 // @match       *://zshort.io/*
 // @match       *://easy4skip.com/*
 // @include     /foodtechnos.in/
+// @include     /mixrootmod.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1294,6 +1295,11 @@
         redirect(atob(document.querySelector('#wpsafe-link > a:nth-child(1)').href.split('?safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]);
     }) : null;
     /anchoreth.com\/r-adsh\?t=i&v=.*$/.test(url) ? redirect(atob(url.split('&v=')[1].split('&')[0])) : null;
+
+    // mixrootmod
+    /mixrootmod.com/.test(url) ? afterDOMLoaded(function() {
+        redirect(decodeURIComponent(atob(document.querySelector('#wpsafe-link > a').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1]));
+    }) : null;
 
     // button click for button after profitsfly (#aaoii2o button)
     function redirectToAnyLinkWithMatchingTextContent(textContent) {

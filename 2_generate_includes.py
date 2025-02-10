@@ -8,8 +8,9 @@ def extract_regex_from_js(js_code):
     pattern1b = r'BypassedByBloggerPemula\(/\s*([a-zA-Z0-9.-]+)\s*/,'
     matches1b = re.findall(pattern1b, js_code)
 
-    pattern1c = r'BypassedByBloggerPemula/\(([^)]+)\)/,'
+    pattern1c = r'BypassedByBloggerPemula\((/[^/]*?/,)'
     matches1c = re.findall(pattern1c, js_code)
+    matches1c = [match.strip("/',") for match in matches1c]
 
     pattern2 = r"(?<!//)BloggerPemula\('([^']+)',"
     matches2 = re.findall(pattern2, js_code)
