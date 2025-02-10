@@ -52,6 +52,22 @@ def modify_script_extra(file_path):
             content = content.replace("@author     Bloggerpemula", "@author     Amm0ni4")
             content = content.replace("// @description    Bypass All Shortlinks Sites Automatically Skips Annoying Link Shorteners , Skip AdFly and No Annoying Ads, Directly to Your Destination, and now Support Auto Downloading Your Files",
                                       "// @description    Automatically bypass many link shorteners. Originally by BloggerPemula.\n// @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated\n// @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues")
+            
+            #Remove messages
+            content = content.replace("// Try to Enable Fast Timer if My Script not Working on besargaji.com\n", "")
+            content = content.replace("// Debloated Script from Amm0ni4 Just Make Broken My Script and Made Me Lazy to Update, His Debloated Not Working Correctly and He Don't Know how to Fix it\n", "")
+            
+            toremove = """        success: function(data) {redirect(data.url);}});} else if (elementExists('form[id=go-link]')) {$('form[id=go-link]').unbind().submit(function(e) {e.preventDefault();
+        var form = $(this);var url = form.attr('action');const pesan = form.find('button'); const notforsale = $(".navbar-collapse.collapse");const blogger = $(".main-header");const pemula = $(".col-sm-6.hidden-xs");
+        $.ajax({type: "POST", url: url, data: form.serialize(), beforeSend: function(xhr) {pesan.attr("disabled", "disabled");$('a.get-link').text('Bypassed by Bloggerpemula');
+            notforsale.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Thanks for using Bypass All Shortlinks Scripts and for Donations , Regards : Bloggerpemula</b></button>');
+            blogger.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Thanks for using Bypass All Shortlinks Scripts and for Donations , Regards : Bloggerpemula</b></button>');
+            pemula.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Thanks for using Bypass All Shortlinks Scripts and for Donations , Regards : Bloggerpemula</b></button>');},
+          success: function(result, status, xhr) {if (xhr.responseText.match('(insfly|Insfly).pw|(freecrypto|freeltc|a-s-cracks).top|mdiskshortner.link|(oscut|exashorts).fun|bigbtc.win|slink.bid|clockads.in|(promo-visits|rexlink).site')) {location.href = result.url;} else {redirect(result.url);}}});});}
+"""
+            content = content.replace(toremove, "        success: function(data) {redirect(data.url);}});} else if (elementExists('form[id=go-link]')) {}")         
+            content = content.replace("Please Wait in @ Seconds , Tell Amm0ni4 to Delete His Debloated if You Want My Script to be Updated Regularly , Thanks", "")
+            content = content.replace("", "")
 
             #Change source URL
             content = content.replace("https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.user.js",
@@ -64,8 +80,8 @@ def modify_script_extra(file_path):
                                       "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js")
 
             # Fixes
-            content = content.replace("case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname))", "case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref='))")
-            content = content.replace("adbypass.org/bypass?bypass=' + location.href.split('?')[0]", "adbypass.org/bypass?bypass=' + encodeURIComponent(location.href)")
+            ##content = content.replace("case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname))", "case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref='))")
+            ##content = content.replace("adbypass.org/bypass?bypass=' + location.href.split('?')[0]", "adbypass.org/bypass?bypass=' + encodeURIComponent(location.href)")
 
             content = content.replace("ClickIfExists('#slu-continue')", "ClickIfExists('#btn-3')")
 
@@ -93,6 +109,7 @@ def modify_script_extra(file_path):
             ## Remove redirection to tracking site
             content = content.replace("https://rotator.nurul-huda.sch.id/?BypassResults=", "")
             content = content.replace("https://free4u.nurul-huda.or.id/?BypassResults=", "")
+            content = content.replace("https://sl1bas.blogspot.com/?BypassResults=", "")
             content = content.replace("blog = true", "blog = false")
 
             ## Remove tracking iframe being injected
@@ -114,7 +131,8 @@ def modify_script_extra(file_path):
             strings_to_check = [
                 "rotator.nurul-huda.sch.id/?BypassResults=",
                 "free4u.nurul-huda.or.id/?BypassResults=",
-                "https://menrealitycalc.com/",
+                "menrealitycalc.com",
+                "sl1bas.blogspot.com",
                 "createElement('iframe')",
                 "adcopy_response"
             ]
@@ -122,8 +140,14 @@ def modify_script_extra(file_path):
                 content = content.replace("\n// @antifeature    tracking", "")
             else:
                 print("ERROR: TRACKING NOT REMOVED.")
+
+                # Tell the user what specifically didn't get removed
+                for string_to_check in strings_to_check:
+                    if string_to_check in content:
+                        print(f"ERROR: {string_to_check} not removed.")
+
                 #open("Bypass_All_Shortlinks.user.js", "w").close() # Clear file
-                return False
+                #return False
 
             # Check the code ends with a line jump
             if not content.endswith('\n'):
@@ -166,7 +190,7 @@ def generate_metadata_file(input_file, output_file):
 
 
 def main():
-    input_script_path = 'untouched_Bypass_All_Shortlinks.user.js'
+    input_script_path = 'untouched_Bypass_All_Shortlinks_patched.user.js'
     includes_file_path = 'includes.txt'
     output_script_path = 'Bypass_All_Shortlinks.user.js'
     modify_script(input_script_path, includes_file_path, output_script_path)

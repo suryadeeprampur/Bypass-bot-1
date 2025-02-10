@@ -1,7 +1,7 @@
 import re
 
 def extract_regex_from_js(js_code):
-    pattern1 = r'(?<!//)(?<!/\*)BypassedByBloggerPemula\((.*?),'
+    pattern1 = r"(?<!//)(?<!/\*)BypassedByBloggerPemula\('([^']+)',"
     matches1 = re.findall(pattern1, js_code)
     matches1 = [match.strip('/') for match in matches1]
 
@@ -35,8 +35,8 @@ def generate_include_lines(regex_list):
         #Use @include for more complex regex
         if any(char in regex for char in ['|', '(', ')', '*']):
             regex = '(' + regex + ')'
-            include_rule = "/^(https?:\/\/)(.+)?" + regex + "(\/.*)/"
-            include_rule = include_rule.replace( "\.*)(\/.*)/", "\.*)/" ) #clean excess in the regex
+            include_rule = r"/^(https?:\/\/)(.+)?" + regex + r"(\/.*)/"
+            include_rule = include_rule.replace(r"\.*)(\/.*)/", r"\.*)/")  # clean excess in the regex
             include_rules.append(include_rule)
             include_line = "// @include " + include_rule
             include_and_match_lines.append(include_line)
@@ -56,7 +56,7 @@ def generate_include_lines(regex_list):
 
 
 def main():
-    file_path = 'untouched_Bypass_All_Shortlinks.user.js'
+    file_path = 'untouched_Bypass_All_Shortlinks_patched.user.js'
 
     try:
         with open(file_path, 'r', encoding='utf-8') as file:

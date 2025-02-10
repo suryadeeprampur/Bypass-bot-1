@@ -13,17 +13,25 @@ def download_file(url, destination):
     except requests.exceptions.RequestException as e:
         print(f"Error downloading file: {e}")
 
-def modify_file_with_my_fixes(destination):
-    with open(destination, 'r', encoding='utf-8') as file:
+def download_file_if_not_exists(url, destination):
+    import os
+
+    if not os.path.exists(destination):
+        download_file(url, destination)
+    else:
+        print(f"File already exists: {destination}")
+
+def modify_file_with_my_fixes(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as file:
         content = file.read()
 
     # Fixes
-    content = content.replace("BloggerPemula('highkeyfinance.com'", "//BloggerPemula('highkeyfinance.com'")
+    #content = content.replace("BloggerPemula('highkeyfinance.com'", "//BloggerPemula('highkeyfinance.com'")
     content = content.replace("BypassedByBloggerPemula(/itscybertech.com", "/*BypassedByBloggerPemula(/itscybertech.com")
     content = content.replace("bp('#gtbtn2'))) {clearInterval(itscyber); window.fngo();}}, 1 * 1000);});", "bp('#gtbtn2'))) {clearInterval(itscyber); window.fngo();}}, 1 * 1000);});*/")
     content = content.replace("BypassedByBloggerPemula(/linkvertise.com/", "//BypassedByBloggerPemula(/linkvertise.com/")
     content = content.replace("/stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque|exploreera).net/", "/stfly.(cc|xyz|biz)|(techtrendmakers|gadnest|optimizepics).com|(blogbux|blogesque|exploreera|explorosity|torovalley).net/")
-    content = content.replace("BloggerPemula('financeyogi.net'", "//BloggerPemula('financeyogi.net'")
+    #content = content.replace("BloggerPemula('financeyogi.net'", "//BloggerPemula('financeyogi.net'")
     content = content.replace("case 'pixeldrain.com'", "//case 'pixeldrain.com'")
 
     content = content.replace("BypassedByBloggerPemula(/lootlinks", "//BypassedByBloggerPemula(/lootlinks")
@@ -49,7 +57,7 @@ def modify_file_with_my_fixes(destination):
 
     content = content.replace("/anhdep24.com|nguyenvanbao.com|xemsport.com|byboe.com/", "/(anhdep24|nguyenvanbao|xemsport|byboe|asideway).com/")
 
-    content = content.replace("BloggerPemula('veganab.co'", "//BloggerPemula('veganab.co'")
+    #content = content.replace("BloggerPemula('veganab.co'", "//BloggerPemula('veganab.co'")
     content = content.replace("atglinks|", "")
 
     content = content.replace("|vebma|majalahhewan).com/", "|vebma|majalahhewan).com|crm.cekresi.me|ai.tempatwisata.pro/")
@@ -67,15 +75,47 @@ def modify_file_with_my_fixes(destination):
 
     content = content.replace("nayisahara|careersides).com", "nayisahara|careersides|edukaroo).com")
 
+    content = content.replace("/(newsbawa|utkarshonlinetest|techbezzie).com/", "/(newsbawa|utkarshonlinetest|techbezzie|financewada).com/")
+
+    content = content.replace("blog-myst).com|ss7.info", "blog-myst|webhostsec).com|ss7.info")
+
+    content = content.replace("/azmath.info/", "/azmath.info|expertvn.com/")
+
+    content = content.replace("/tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li/", "/tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/")
+
+    content = content.replace("/trangchu.news|downfile.site|(techacode|expertvn|ziggame).com|azmath.info|aztravels.net|top10cafe.se|handydecor.com.vn/", "/trangchu.news|downfile.site|(techacode|expertvn|ziggame).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se|handydecor.com.vn/")
+
+    content = content.replace("/(theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks|briceka).com|galaxy-link.space|oke.io|forextrader.site|tinygo.co/", "/(theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks).com|happy-living.online|galaxy-link.space|oke.io|forextrader.site|tinygo.co/")
+
+    content = content.replace("/(blogtechh|host2loan|techbixby|wptohost|hosttbuzz|blog-blend|policiesreview|blogmystt|wp2hostt|advertisingcamps).com|clk.wiki|(oko|aii).sh|clk.kim|dekhe.click/", "/(blogtechh|host2loan|techbixby|wptohost|hosttbuzz|blog-blend|blog-myst|ins-myst|blogmystt|healthmyst|wp2hostt|policiesreview).com|clk.wiki|(oko|aii).sh|clk.kim|dekhe.click/")
+
+    content = content.replace("/(sekilastekno|miuiku|vebma|majalahhewan).com|tempatwisata.pro/", "/(sekilastekno|miuiku|vebma|majalahhewan).com|crm.cekresi.me|ai.tempatwisata.pro/")
+
+    content = content.replace("/(starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in/", "/(starxinvestor|hit-films|sevenjournals|funkeypagali|viewmyknowledge|wikifilmia|nayisahara|careersides|edukaroo).com|(iisfvirtual|bookszone|learnmany).in/")
+
+    linestoremove = """        case 'sl1bas.blogspot.com': if (h.pathname === '/' && h.searchParams.has('BypassResults')) {
+          result.link = decodeURIComponent(location.href.split('BypassResults=')[1].replace('&m=1', ''));
+          result.redirectDelay = cfg.get('SetDelay'); result.isNotifyNeeded = true; return result;} break;
+"""
+    content = content.replace(linestoremove, "")
+
+    content = content.replace("'lopteapi.com', '3link.co', 'web1s.com', 'vuotlink.vip'];let List1 = ['ay.live', 'gitlink.pro'", "'lopteapi.com', '3link.co', 'web1s.com', 'vuotlink.vip'];let List1 = ['ay.live', 'aylink.co', 'gitlink.pro'")
+
+    linestoremove = """    BypassedByBloggerPemula(/(youtube|youtube-nocookie).com/, function() {if (window.hasOwnProperty('_lact')) {window.setInterval(() => {window._lact = Date.now();}, 5 * 1000);
+      } else if (elementExists('#redirect-main-text')) {waitForElm('a#invalid-token-redirect-goto-site-button', yt => redirect(yt.href, false));} else {}});
+"""
+    content = content.replace(linestoremove, "")
+
     content += "\n"
 
-    with open(destination, 'w', encoding='utf-8') as file:
+    with open(output_file, 'w', encoding='utf-8') as file:
         file.write(content)
 
 if __name__ == "__main__":
     url1 = "https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.user.js"
     url2 = "https://openuserjs.org/install/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha.user.js"
-    destination = "untouched_Bypass_All_Shortlinks.user.js"
+    file_0 = "untouched_Bypass_All_Shortlinks_0.user.js"
+    file = "untouched_Bypass_All_Shortlinks_patched.user.js"
 
-    download_file(url1, destination)
-    modify_file_with_my_fixes(destination)
+    download_file_if_not_exists(url1, file_0)
+    modify_file_with_my_fixes(file_0, file)
