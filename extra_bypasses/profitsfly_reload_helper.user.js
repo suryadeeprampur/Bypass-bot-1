@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        profitsfly reload helper
-// @include     /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/
+// @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -8,7 +8,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /^https:\/\/.*\.(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/;
+    const domainRegex = /^https:\/\/(.*\.|)(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/;
     if (domainRegex.test(window.location.href)) {
 
         // ---RELOAD DEAD-END PAGES---
@@ -19,6 +19,12 @@
         }
 
         function onWindowLoad() {
+
+            // Continue immediately on the "Shortened link (Waiting)" page
+            if (document.title === "Shortened link (Waiting)" && !window.location.href.includes("continue=true")) {
+                // add continue=true to the URL
+                window.location.href = window.location.href + '&continue=true';
+            }
 
             // Function to check for messages like "Click any ad & keep it open for 15 seconds to continue" and reload the page if one exists
             let reloading = false;
