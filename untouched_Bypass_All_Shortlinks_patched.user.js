@@ -37,7 +37,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        93.7.2
+// @version        93.7.3
 // @match          *://*/*
 // @grant          GM_setValue
 // @grant          GM_getValue

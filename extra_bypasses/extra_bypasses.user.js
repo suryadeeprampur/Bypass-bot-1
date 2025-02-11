@@ -1262,9 +1262,11 @@
 
     // pahe.ink
     /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
-        clickWithDelay('.myButton', 2000);
-        clickWithDelay('.myButton', 3000);
-        clickWithDelay('.myButton', 4000);
+        let intervalId = setInterval(() => {
+            let button = document.querySelector('.myButton');
+            let buttonIsVisible = button && button.offsetParent !== null;
+            if (buttonIsVisible) {button.click();}
+        }, 500);
     }) : null;
 
     //suncy.net (upfiles.com) (seen used in fiuxy2.co)
@@ -1346,7 +1348,7 @@
     /^https:\/\/relampagomovies\.com\/.+/.test(url) ? boostTimers() : null;
 
     // pahe.ink
-    /teknoasian.com/.test(url) ? boostTimers() : null;
+    // /teknoasian.com/.test(url) ? boostTimers() : null;
 
     // goo.st - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/215
     /goo.st|(businesssoftwarehere|freevpshere|softwaresolutionshere|travelironguide).com/.test(url) ? boostTimers() : null;
