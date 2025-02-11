@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.7.3
+// @version        93.7.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -928,6 +928,7 @@
 // @include     /app2.olamovies.download\/generate\/\?id=/
 // @include     /foodtechnos.in/
 // @include     /mixrootmod.com/
+// @include     /zaku.pro/
 // @include      /filecrypt.(cc|co)/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
@@ -2858,6 +2859,14 @@
         redirectIfExists('a#lsdwnbtn');
     }) : null;
 
+    // zaku.pro/?adlinkfly= - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/236
+    /zaku.pro/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#wpsafe-link > a:nth-child(1)');
+        if (url.includes('go.zaku.pro')) {
+            clickIfExists('button.btn-primary');
+            redirectIfExists('a.get-link');
+        }
+    }) : null;
 
 })();
 

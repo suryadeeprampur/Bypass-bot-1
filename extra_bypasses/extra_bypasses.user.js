@@ -227,6 +227,7 @@
 // @match       *://easy4skip.com/*
 // @include     /foodtechnos.in/
 // @include     /mixrootmod.com/
+// @include     /zaku.pro/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1324,6 +1325,14 @@
         redirectIfExists('a#lsdwnbtn');
     }) : null;
 
+    // zaku.pro/?adlinkfly= - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/236
+    /zaku.pro/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#wpsafe-link > a:nth-child(1)');
+        if (url.includes('go.zaku.pro')) {
+            clickIfExists('button.btn-primary');
+            redirectIfExists('a.get-link');
+        }
+    }) : null;
 
 })();
 
