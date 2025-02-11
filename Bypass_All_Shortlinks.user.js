@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.7.4
+// @version        93.7.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2861,10 +2861,11 @@
 
     // zaku.pro/?adlinkfly= - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/236
     /zaku.pro/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('#wpsafe-link > a:nth-child(1)');
         if (url.includes('go.zaku.pro')) {
             clickIfExists('button.btn-primary');
-            redirectIfExists('a.get-link');
+            redirectIfNotDisabled('a.get-link');
+        } else {
+            clickIfExists('#wpsafe-link > a:nth-child(1)');
         }
     }) : null;
 
