@@ -96,6 +96,8 @@ def modify_script_extra(file_path):
           success: function(result, status, xhr) {if (xhr.responseText.match('(insfly|Insfly|linksly|cosmic-matter).pw|(freecrypto|freeltc|a-s-cracks).top|mdiskshortner.link|(oscut|exashorts).fun|bigbtc.win|gainl.ink|earnify.pro|clockads.in|(promo-visits|rexlink).site')) {location.href = result.url;} else {redirect(result.url);}}});});"""
             content = content.replace(code_to_replace, "")
 
+            content = content.replace("let List1 = ['ay.live', 'aylink.co', 'gitlink.pro']", "let List1 = ['ay.live', 'gitlink.pro']")
+
 
             # Remove unused
             content = content.replace("// @connect        nocaptchaai.com\n", "")
