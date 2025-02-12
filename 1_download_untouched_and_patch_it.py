@@ -106,6 +106,11 @@ def modify_file_with_my_fixes(input_file, output_file):
 """
     content = content.replace(linestoremove, "")
 
+    linestoremove = """    BypassedByBloggerPemula(/(lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar|tonordersitye|bleleadersto|daughablelea).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro/, function() {
+      if (/^\/([^\/]+)/.test(location.pathname)) {redirect('https://adbypass.org/bypass?bypass=' + location.href, false);}});
+"""
+    content = content.replace(linestoremove, "")
+
     content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:
