@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.7.8
+// @version        93.7.9
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -928,6 +928,7 @@
 // @include     /foodtechnos.in/
 // @include     /mixrootmod.com/
 // @include     /zaku.pro/
+// @include     /aylink.co|cpmlink.pro/
 // @include      /filecrypt.(cc|co)/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
@@ -2865,6 +2866,22 @@
             clickIfExists('#wpsafe-link > a:nth-child(1)');
         }
     }) : null;
+
+    // aylink, cpmlink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/238
+    function redirectIfOnclickElementHasLink(selector) {
+        let intervalId = setInterval(() => {
+            let onclickContent = document.querySelector(selector).getAttribute('onclick');
+            if (onclickContent) {
+                clearInterval(intervalId);
+                const targetLink = onclickContent.match(/window\.open\("([^"]+)",/)[1];
+                window.location.assign(targetLink);
+            }
+        }, 1000);
+    }
+    /aylink.co|cpmlink.pro/.test(url) ? afterWindowLoaded(function() {
+        clickIfExistsNonStop('a.btn-go');
+        redirectIfOnclickElementHasLink('#main');
+    } ) : null;
 
 })();
 
