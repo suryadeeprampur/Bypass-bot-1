@@ -864,8 +864,30 @@
     // megalink.pro - https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/235270 - https://megalink.pro/pD6wK (nsfw)
     /megalink.pro\/[a-zA-Z0-9]+$/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {clickIfNotDisabled('a.btn:nth-child(1)')}, 3000)}) : null;
 
-    //pahe.ink final step
+    // pahe.ink
     /linegee.net|intercelestial.com|teknoasian.com/.test(url) ? preventForcedFocusOnWindow() : null;
+
+    function clickNonStopIfVisible(selector, interval) {
+        let intervalId = setInterval(() => {
+            let button = document.querySelector(selector);
+            let buttonIsVisible = button && button.offsetParent !== null;
+            if (buttonIsVisible) {button.click();}
+        }, interval);
+    }
+    /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
+        let intervalId = setInterval(() => {
+            let button = document.querySelector('.myButton');
+            let buttonIsVisible = button && button.offsetParent !== null;
+            if (buttonIsVisible) {
+                button.click();
+                if (button.classList.contains('postnext')) {
+                    clearInterval(intervalId);
+                }
+            }
+        }, 1000);
+    }) : null;
+
+    //pahe.ink final step
     /spacetica.com/.test(url) ? afterDOMLoaded(function() {
         if (!document.querySelector('.form-group')){
             clickIfExists('a.btn-primary.btn-xs');
@@ -1261,15 +1283,6 @@
     /freemodsapp.in/.test(url) ? popupsToRedirects() : null;
     /freemodsapp.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
     /pandaznetwork.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-
-    // pahe.ink
-    /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
-        let intervalId = setInterval(() => {
-            let button = document.querySelector('.myButton');
-            let buttonIsVisible = button && button.offsetParent !== null;
-            if (buttonIsVisible) {button.click();}
-        }, 500);
-    }) : null;
 
     //suncy.net (upfiles.com) (seen used in fiuxy2.co)
     /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
