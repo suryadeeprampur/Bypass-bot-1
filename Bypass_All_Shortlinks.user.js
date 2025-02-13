@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.7.12
+// @version        93.7.13
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -1344,7 +1344,7 @@
     BypassedByBloggerPemula(/1ink.cc|cuturl.cc/, function() {ClickIfExists('#countingbtn', 1);});
     BypassedByBloggerPemula(/jameeltips.us/, function() {ClickIfExists('#continue_button_1', 1);});
     BypassedByBloggerPemula(/post.copydev.com/, function() {ClickIfExists('.btn-success.btn', 6);});
-    BypassedByBloggerPemula(/linegee.net/, function() {ClickIfExists('.btn-xs.btn-primary.btn', 2);});
+    //BypassedByBloggerPemula(/linegee.net/, function() {ClickIfExists('.btn-xs.btn-primary.btn', 2);});
     BypassedByBloggerPemula(/bedrat.xyz|uhtrdr47.online/, function() {ClickIfExists('#link1112', 5);});
     BypassedByBloggerPemula(/pro.sh/, function() {ClickIfExists('.btn-secondary', 3, 'setInterval');});
     BypassedByBloggerPemula(/proappapk.com|meclipstudy.in/, function() {ClickIfExists('#gotolink', 5);});
@@ -2483,11 +2483,20 @@
     }) : null;
 
     //pahe.ink final step
-    /spacetica.com/.test(url) ? afterDOMLoaded(function() {
-        if (!document.querySelector('.form-group')){
-            clickIfExists('a.btn-primary.btn-xs');
+    /linegee.net/.test(url) ? afterDOMLoaded(function() {
+        const scripts = document.getElementsByTagName('script');
+        for (let script of scripts) {
+            const content = script.innerHTML;
+            const match = content.match(/location\.href\s*=\s*atob\('([^']+)'\);/);
+            if (match) {
+                setTimeout(() => {
+                    window.location.assign(window.location.href + atob(match[1]));
+                }, 3000);
+                break;
+            }
         }
     }) : null;
+
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 

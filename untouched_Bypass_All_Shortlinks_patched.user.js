@@ -37,7 +37,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        93.7.12
+// @version        93.7.13
 // @match          *://*/*
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -501,7 +501,7 @@
     BypassedByBloggerPemula(/1ink.cc|cuturl.cc/, function() {ClickIfExists('#countingbtn', 1);});
     BypassedByBloggerPemula(/jameeltips.us/, function() {ClickIfExists('#continue_button_1', 1);});
     BypassedByBloggerPemula(/post.copydev.com/, function() {ClickIfExists('.btn-success.btn', 6);});
-    BypassedByBloggerPemula(/linegee.net/, function() {ClickIfExists('.btn-xs.btn-primary.btn', 2);});
+    //BypassedByBloggerPemula(/linegee.net/, function() {ClickIfExists('.btn-xs.btn-primary.btn', 2);});
     BypassedByBloggerPemula(/bedrat.xyz|uhtrdr47.online/, function() {ClickIfExists('#link1112', 5);});
     BypassedByBloggerPemula(/pro.sh/, function() {ClickIfExists('.btn-secondary', 3, 'setInterval');});
     BypassedByBloggerPemula(/proappapk.com|meclipstudy.in/, function() {ClickIfExists('#gotolink', 5);});

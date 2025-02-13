@@ -888,11 +888,20 @@
     }) : null;
 
     //pahe.ink final step
-    /spacetica.com/.test(url) ? afterDOMLoaded(function() {
-        if (!document.querySelector('.form-group')){
-            clickIfExists('a.btn-primary.btn-xs');
+    /linegee.net/.test(url) ? afterDOMLoaded(function() {
+        const scripts = document.getElementsByTagName('script');
+        for (let script of scripts) {
+            const content = script.innerHTML;
+            const match = content.match(/location\.href\s*=\s*atob\('([^']+)'\);/);
+            if (match) {
+                setTimeout(() => {
+                    window.location.assign(window.location.href + atob(match[1]));
+                }, 3000);
+                break;
+            }
         }
     }) : null;
+
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
     /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
