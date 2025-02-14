@@ -6,7 +6,7 @@ Save time with automation or bypasses for many link shorteners.
 ## Install
 **Install with [this link](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)**
 
-(you need a userscript manager like **[Violentmonkey](https://violentmonkey.github.io/)** or [Tampermonkey](https://www.tampermonkey.net/) installed in your web browser)
+(you need a userscript manager like [Violentmonkey](https://violentmonkey.github.io/) installed in your web browser)
 
 *I test the script with Firefox + uBlock Origin + Violentmonkey, so that is the supported setup.*
 
