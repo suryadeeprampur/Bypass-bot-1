@@ -2495,8 +2495,10 @@
         }
     }) : null;
 
-    /pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
-    /pahe.plus/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /pahe.plus/.test(url) ? afterDOMLoaded(function() {
+        clickIfNotDisabled('#invisibleCaptchaShortlink');
+        redirectIfNotDisabled('a.get-link');
+    }) : null;
 
     /old.pahe.plus/.test(url) ? afterDOMLoaded(function() {clickIfExists('a.btn:nth-child(1)')}) : null;
 
