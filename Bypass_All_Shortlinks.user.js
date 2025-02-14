@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.7.14
+// @version        93.7.15
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -927,6 +927,7 @@
 // @include     /mixrootmod.com/
 // @include     /zaku.pro/
 // @include     /aylink.co|cpmlink.pro/
+// @include     /hypershort.com/
 // @include      /filecrypt.(cc|co)/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
@@ -2753,11 +2754,11 @@
         clickIfNotDisabled('#gtelinkbtn');
     }) : null;
 
-    // https://hyp.sh/Art07dr (hypershort) - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/101 - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/158
-//    /jytechs.in|mi.miuiflash.com|hypershort.com|djxmaza.in|thecubexguide.com/.test(url) ? afterDOMLoaded(function() {
-//        clickIfExists('#generatelink');
-//        redirectIfExists('#gettinglink');
-//    }) : null;
+    // hyp.sh - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/101 - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/158 - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-12198432
+    /hypershort.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#generatelink');
+        redirectIfExists('#gettinglink');
+    }) : null;
 
     // render-state.to - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/108
     /render-state.to\/download\/\?link=/.test(url) ? afterDOMLoaded(function() {
@@ -2980,14 +2981,22 @@
         Object.defineProperty(window, 'setInterval', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsI.apply(this, arguments);}});
         };
     function boostTimers2() {
-        //based on nano-sib uBO Filter - https://github.com/gorhill/ublock/wiki/Resources-Library#adjust-setIntervaljs-
-        // Store the original setInterval function
+        // Store the original setInterval and setTimeout functions
         const originalSetInterval = window.setInterval;
+        const originalSetTimeout = window.setTimeout;
+    
         // Overwrite the setInterval function
         window.setInterval = function(func, delay, ...args) {
             // Modify the delay to 2% of its original value
             const newDelay = delay * 0.02;
             return originalSetInterval(func, newDelay, ...args);
+        };
+    
+        // Overwrite the setTimeout function
+        window.setTimeout = function(func, delay, ...args) {
+            // Modify the delay to 2% of its original value
+            const newDelay = delay * 0.02;
+            return originalSetTimeout(func, newDelay, ...args);
         };
     }
 
@@ -3011,6 +3020,9 @@
 
     //linkpays.in
     /((surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? boostTimers2() : null;
+
+    // hyp.sh hypershort
+    /hypershort.com/.test(url) ? boostTimers2() : null;
 
 })();
 // ----- ----- -----
