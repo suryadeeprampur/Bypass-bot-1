@@ -118,6 +118,11 @@ def modify_file_with_my_fixes(input_file, output_file):
     content = content.replace("BypassedByBloggerPemula('(surfsees|travelagancy).com'", "//BypassedByBloggerPemula('(surfsees|travelagancy).com'")
     content = content.replace("BypassedByBloggerPemula('stockinsights.in'", "//BypassedByBloggerPemula('stockinsights.in'")
 
+    linestoremove = """    BypassedByBloggerPemula(/dutchycorp.ovh|seulink.digital|oii.io|hamody.pro|metasafelink.site|(beingtek|fc-lc|10short).com|(zagl|shrinkforearn).in|wordcounter.icu|pwrpa.cc|flyad.vip|seulink.online|pahe.plus|tfly.link/, function() {
+      if (elementExists('.grecaptcha-badge') || elementExists('#captchaShortlink')) {var ticker = setInterval(function() {try {clearInterval(ticker); window.grecaptcha.execute();} catch (e) {}}, 3000);}});
+"""
+    content = content.replace(linestoremove, "")
+
     content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:
