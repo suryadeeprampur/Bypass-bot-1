@@ -933,7 +933,6 @@
 // @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/
 // @include     /quickeemail.com/
 // @exclude /^(https?:\/\/)([^\/]+\.)?((github|aliyun|reddit|bing|yahoo|microsoft|whatsapp|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|blogger|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|atlassian|pinterest|twitter|x|live|facebook|tiktok|instagram|linkedin|fastbull|tradingview|deepseek|chatgpt|openai|playghub|bilibili).com|proton.me|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|doubleclick.net|adoptimum.top|codepen.io|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
-// @exclude /(?!.*(safe\.php\?link=|&__cf_chl_tk=))/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
 // ==/UserScript==
@@ -2631,17 +2630,18 @@
     /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // linkpays.in - t.me/canvapro365free - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/88, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
+    function clickAnyVisibleButtonNonStop(interval){
+        let intervalId = setInterval(() => {
+            const buttons = document.querySelectorAll('button'); //, input[type="button"], input[type="submit"]:focus-visible');
+            buttons.forEach(function(button) {if (button.offsetParent !== null) {button.click();}});
+        }, interval);
+    }
+    /(surfsees.com|techyblogs.in)\/safe.php\?link=/.test(url) ? redirect('https://pokoarcade.com/token.php?id=' + url.split('link=')[1]) : null;
     /((surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {
-        //if (!url.includes('&__cf_chl_tk=') && !url.includes('safe.php?link=') && checkCloudflareCaptchaSolved()) {
-            clickIfExists('#tp98');
-            clickIfNotDisabled('#rtg');
-            clickIfNotDisabled('.rtg-blue');
-            clickIfExists('#rtg-snp2');
-            redirectIfExists('#btn6');
-        //}
+        clickAnyVisibleButtonNonStop(2000);
     }) : null;
-    /cryptings.in|vbnmx.online/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#rtg-btn > a:nth-child(1)')}) : null;
-    /cgsonglyricz.in|www.techhubcap.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
+    /(cryptings.in|vbnmx.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#rtg-btn > a:nth-child(1)')}) : null;
+    /(cgsonglyricz.in|www.techhubcap.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
     /(techyblogs.in|readytechflip.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
@@ -2979,6 +2979,17 @@
         Object.defineProperty(window, 'setTimeout', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsT.apply(this, arguments);}});
         Object.defineProperty(window, 'setInterval', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsI.apply(this, arguments);}});
         };
+    function boostTimers2() {
+        //based on nano-sib uBO Filter - https://github.com/gorhill/ublock/wiki/Resources-Library#adjust-setIntervaljs-
+        // Store the original setInterval function
+        const originalSetInterval = window.setInterval;
+        // Overwrite the setInterval function
+        window.setInterval = function(func, delay, ...args) {
+            // Modify the delay to 2% of its original value
+            const newDelay = delay * 0.02;
+            return originalSetInterval(func, newDelay, ...args);
+        };
+    }
 
     // www.gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
     /www.gtaall.com\/get-manual/.test(url) ? boostTimers() : null;
@@ -2997,6 +3008,9 @@
 
     // goo.st - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/215
     /goo.st|(businesssoftwarehere|freevpshere|softwaresolutionshere|travelironguide).com/.test(url) ? boostTimers() : null;
+
+    //linkpays.in
+    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? boostTimers2() : null;
 
 })();
 // ----- ----- -----
