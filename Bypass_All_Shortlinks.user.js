@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.7.13
+// @version        93.7.14
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -45,7 +45,6 @@
 // @match *://*.encurtaclik.com/*
 // @match *://*.appkamods.com/*
 // @match *://*.keepzem.com/*
-// @match *://*.venzoars.com/*
 // @match *://*.short.sharedp.com/*
 // @match *://*.earn.tensailab.com/*
 // @match *://*.postazap.com/*
@@ -61,7 +60,6 @@
 // @match *://*.tech.filohappy.in/*
 // @match *://*.kelasadsense.com/*
 // @match *://*.trust.bgmi32bitapk.in/*
-// @match *://*.stockinsights.in/*
 // @match *://*.news.topsarkariyojana.in/*
 // @include /^(https?:\/\/)(.+)?((cyberlynews|quizrent).com)(\/.*)/
 // @match *://*.cafe.warrenrahul.in/*
@@ -75,7 +73,6 @@
 // @match *://*.financeyogi.net/*
 // @match *://*.finance.marketrook.com/*
 // @include /^(https?:\/\/)(.+)?((gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia).com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((surfsees|travelagancy).com)(\/.*)/
 // @match *://*.newkhabar24.com/*
 // @include /^(https?:\/\/)(.+)?((diglies|indids).com|cryptings.in)(\/.*)/
 // @match *://*.ninjamodz.mtcremix.com/*
@@ -867,7 +864,7 @@
 // @include     /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
-// @include     /(surfsees|travelagancy|venzoars).com|fitnessholic.net|stockinsights.in/
+// @include     /(surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /cryptings.in|vbnmx.online/
 // @include     /techyblogs.in|readytechflip.com/
@@ -936,6 +933,7 @@
 // @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/
 // @include     /quickeemail.com/
 // @exclude /^(https?:\/\/)([^\/]+\.)?((github|aliyun|reddit|bing|yahoo|microsoft|whatsapp|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|blogger|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|atlassian|pinterest|twitter|x|live|facebook|tiktok|instagram|linkedin|fastbull|tradingview|deepseek|chatgpt|openai|playghub|bilibili).com|proton.me|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|doubleclick.net|adoptimum.top|codepen.io|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
+// @exclude /(?!.*(safe\.php\?link=|&__cf_chl_tk=))/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
 // ==/UserScript==
@@ -1076,7 +1074,7 @@
   BypassedByBloggerPemula('encurtaclik.com', 'link', 'https://go.encurtaclik.com/');
   BypassedByBloggerPemula('appkamods.com', 'link', 'https://go.shorturllinks.com/');
   BypassedByBloggerPemula('keepzem.com', 'link', 'https://ahtio.com/safe.php?link=');
-  BypassedByBloggerPemula('venzoars.com', 'link', 'https://indids.com/token.php?id=');
+  //BypassedByBloggerPemula('venzoars.com', 'link', 'https://indids.com/token.php?id=');
   BypassedByBloggerPemula('short.sharedp.com', 'id', 'https://link.sharedp.com/?id=');
   BypassedByBloggerPemula('earn.tensailab.com', 'adlinkfly', 'https://go.snaply.in/');
   BypassedByBloggerPemula('postazap.com', 'link', 'https://encurtador.postazap.com/');
@@ -1092,7 +1090,7 @@
   BypassedByBloggerPemula('tech.filohappy.in', 'link', 'https://happyfiles.dtglinks.in/');
   BypassedByBloggerPemula('kelasadsense.com', 'adlinkfly', 'https://link.paid4link.com/');
   BypassedByBloggerPemula('trust.bgmi32bitapk.in', 'grey', 'https://get.instantearn.in/');
-  BypassedByBloggerPemula('stockinsights.in', 'post', 'https://diglies.com/token.php?id=');
+  //BypassedByBloggerPemula('stockinsights.in', 'post', 'https://diglies.com/token.php?id=');
   BypassedByBloggerPemula('news.topsarkariyojana.in', 'link', 'https://go.just2earn.com/');
   BypassedByBloggerPemula('(cyberlynews|quizrent).com', 'id', 'https://linkshortify.com/');
   BypassedByBloggerPemula('cafe.warrenrahul.in', 'adlinkfly', 'https://go.warrenrahul.in/');
@@ -1106,7 +1104,7 @@
   BypassedByBloggerPemula('financeyogi.net', 'link', 'https://market.finclub.in/safe2.php?link=');
   BypassedByBloggerPemula('finance.marketrook.com', 'woo', 'https://marketrook.com/verify.php?see=');
   BypassedByBloggerPemula('(gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia).com', 'link', '');
-  BypassedByBloggerPemula('(surfsees|travelagancy).com', 'link', 'https://cryptings.in/token.php?id=');
+  //BypassedByBloggerPemula('(surfsees|travelagancy).com', 'link', 'https://cryptings.in/token.php?id=');
   BypassedByBloggerPemula('newkhabar24.com', 'link', 'https://news.topsarkariyojana.in/safe.php?link=');
   BypassedByBloggerPemula(/mixrootmods.com/, function() {EnableRCF();window.checkStatus = window.off;});
   BypassedByBloggerPemula(/go.link4rev.site/, function() {location = location.href.replace('go.', '');});
@@ -2633,15 +2631,18 @@
     /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // linkpays.in - t.me/canvapro365free - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/88, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
-    /(surfsees|travelagancy|venzoars).com|fitnessholic.net|stockinsights.in/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('#tp98');
-        clickIfNotDisabled('#rtg');
-        clickIfNotDisabled('.rtg-blue');
-        redirectIfExists('#btn6');
+    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {
+        //if (!url.includes('&__cf_chl_tk=') && !url.includes('safe.php?link=') && checkCloudflareCaptchaSolved()) {
+            clickIfExists('#tp98');
+            clickIfNotDisabled('#rtg');
+            clickIfNotDisabled('.rtg-blue');
+            clickIfExists('#rtg-snp2');
+            redirectIfExists('#btn6');
+        //}
     }) : null;
     /cryptings.in|vbnmx.online/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#rtg-btn > a:nth-child(1)')}) : null;
     /cgsonglyricz.in|www.techhubcap.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
-    /techyblogs.in|readytechflip.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
+    /(techyblogs.in|readytechflip.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
     function checkCloudflareCaptchaSolved() {

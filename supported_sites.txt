@@ -27,7 +27,6 @@ wikitraveltips.com
 encurtaclik.com
 appkamods.com
 keepzem.com
-venzoars.com
 short.sharedp.com
 earn.tensailab.com
 postazap.com
@@ -43,7 +42,6 @@ newshuta.in|60fpspubg.one
 tech.filohappy.in
 kelasadsense.com
 trust.bgmi32bitapk.in
-stockinsights.in
 news.topsarkariyojana.in
 (cyberlynews|quizrent).com
 cafe.warrenrahul.in
@@ -57,7 +55,6 @@ highkeyfinance.com
 financeyogi.net
 finance.marketrook.com
 (gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia).com
-(surfsees|travelagancy).com
 newkhabar24.com
 (diglies|indids).com|cryptings.in
 ninjamodz.mtcremix.com
@@ -848,7 +845,7 @@ https://paster.so/*
 /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 /ielts-isa.edu.vn/
 /flash.getpczone.com/
-/(surfsees|travelagancy|venzoars).com|fitnessholic.net|stockinsights.in/
+/(surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co/
 /cgsonglyricz.in|www.techhubcap.com/
 /cryptings.in|vbnmx.online/
 /techyblogs.in|readytechflip.com/

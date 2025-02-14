@@ -113,6 +113,11 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("BypassedByBloggerPemula(/linegee.net/", "//BypassedByBloggerPemula(/linegee.net/")
 
+    #linkpays.in
+    content = content.replace("BypassedByBloggerPemula('venzoars.com'", "//BypassedByBloggerPemula('venzoars.com'")
+    content = content.replace("BypassedByBloggerPemula('(surfsees|travelagancy).com'", "//BypassedByBloggerPemula('(surfsees|travelagancy).com'")
+    content = content.replace("BypassedByBloggerPemula('stockinsights.in'", "//BypassedByBloggerPemula('stockinsights.in'")
+
     content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:

@@ -154,7 +154,7 @@
 // @include     /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
-// @include     /(surfsees|travelagancy|venzoars).com|fitnessholic.net|stockinsights.in/
+// @include     /(surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /cryptings.in|vbnmx.online/
 // @include     /techyblogs.in|readytechflip.com/
@@ -1038,15 +1038,18 @@
     /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // linkpays.in - t.me/canvapro365free - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/88, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
-    /(surfsees|travelagancy|venzoars).com|fitnessholic.net|stockinsights.in/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('#tp98');
-        clickIfNotDisabled('#rtg');
-        clickIfNotDisabled('.rtg-blue');
-        redirectIfExists('#btn6');
+    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {
+        //if (!url.includes('&__cf_chl_tk=') && !url.includes('safe.php?link=') && checkCloudflareCaptchaSolved()) {
+            clickIfExists('#tp98');
+            clickIfNotDisabled('#rtg');
+            clickIfNotDisabled('.rtg-blue');
+            clickIfExists('#rtg-snp2');
+            redirectIfExists('#btn6');
+        //}
     }) : null;
     /cryptings.in|vbnmx.online/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#rtg-btn > a:nth-child(1)')}) : null;
     /cgsonglyricz.in|www.techhubcap.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
-    /techyblogs.in|readytechflip.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
+    /(techyblogs.in|readytechflip.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
     function checkCloudflareCaptchaSolved() {

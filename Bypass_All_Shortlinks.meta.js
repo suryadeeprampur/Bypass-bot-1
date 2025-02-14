@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.7.13
+// @version        93.7.14
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -45,7 +45,6 @@
 // @match *://*.encurtaclik.com/*
 // @match *://*.appkamods.com/*
 // @match *://*.keepzem.com/*
-// @match *://*.venzoars.com/*
 // @match *://*.short.sharedp.com/*
 // @match *://*.earn.tensailab.com/*
 // @match *://*.postazap.com/*
@@ -61,7 +60,6 @@
 // @match *://*.tech.filohappy.in/*
 // @match *://*.kelasadsense.com/*
 // @match *://*.trust.bgmi32bitapk.in/*
-// @match *://*.stockinsights.in/*
 // @match *://*.news.topsarkariyojana.in/*
 // @include /^(https?:\/\/)(.+)?((cyberlynews|quizrent).com)(\/.*)/
 // @match *://*.cafe.warrenrahul.in/*
@@ -75,7 +73,6 @@
 // @match *://*.financeyogi.net/*
 // @match *://*.finance.marketrook.com/*
 // @include /^(https?:\/\/)(.+)?((gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia).com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((surfsees|travelagancy).com)(\/.*)/
 // @match *://*.newkhabar24.com/*
 // @include /^(https?:\/\/)(.+)?((diglies|indids).com|cryptings.in)(\/.*)/
 // @match *://*.ninjamodz.mtcremix.com/*
@@ -867,7 +864,7 @@
 // @include     /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
-// @include     /(surfsees|travelagancy|venzoars).com|fitnessholic.net|stockinsights.in/
+// @include     /(surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /cryptings.in|vbnmx.online/
 // @include     /techyblogs.in|readytechflip.com/
@@ -936,6 +933,7 @@
 // @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(retrotechreborn|insurelean).com|gally.shop|qanin.xyz|evegor.net)\/.*/
 // @include     /quickeemail.com/
 // @exclude /^(https?:\/\/)([^\/]+\.)?((github|aliyun|reddit|bing|yahoo|microsoft|whatsapp|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|blogger|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|atlassian|pinterest|twitter|x|live|facebook|tiktok|instagram|linkedin|fastbull|tradingview|deepseek|chatgpt|openai|playghub|bilibili).com|proton.me|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|doubleclick.net|adoptimum.top|codepen.io|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
+// @exclude /(?!.*(safe\.php\?link=|&__cf_chl_tk=))/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
 // ==/UserScript==
