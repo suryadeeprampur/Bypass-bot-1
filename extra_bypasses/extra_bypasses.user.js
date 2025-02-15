@@ -1282,7 +1282,28 @@
         });
     }
 
-    // paid4link last step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/222
+    // go.paid4link.com 3rd step
+    function getURLwithSafelinkFromThePageScripts() {
+        const scripts = document.getElementsByTagName('script');
+        for (let script of scripts) {
+            const content = script.innerHTML;
+            // we try to match any URL that contains "safelink" and is from the same domain
+            const matches = content.match(/(https?:\/\/[^'"]+safelink[^'"]+)/g);
+            if (matches) {
+                for (let match of matches) {
+                    if (match.includes(window.location.hostname)) {
+                        return match;
+                    }
+                }
+            }
+        }
+    }
+    /(aduzz|tutorialsaya|indobo|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info/.test(url) ? afterDOMLoaded(function() {
+        const url = getURLwithSafelinkFromThePageScripts();
+        if (url) redirect(url);
+    }) : null;
+
+    // go.paid4link.com last step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/222
     //const redirectIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); redirect(button.href); } }, 1000); };
     /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfExists('#get-link-button');}) : null;
 
