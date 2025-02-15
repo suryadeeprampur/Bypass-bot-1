@@ -187,7 +187,7 @@
 // @include     /^https:\/\/(fitdynamos.com|labgame.io)\/.*$/
 // @match       https://fc-lc.xyz/*
 // @include     /mobilenagari.com|defencewallah.in/
-// @include     /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime|careersides).com|(sabarpratham|pubprofit|sarkariyojnaa).in|dear-lottery.org/
+// @include     /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime|careersides).com|(sabarpratham|pubprofit|sarkariyojnaa|reliablesp).in|dear-lottery.org/
 // @include     /rocklinks.in/
 // @include     /www.udlinks.com/
 // @include     /techkhulasha.com|blog.bloggerishyt.in/
@@ -692,7 +692,7 @@
     /land.povathemes.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // https://www.udlinks.com/kzrJRjj - https://publicearn.com/vrpNlNc
-    /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime|careersides).com|(sabarpratham|pubprofit|sarkariyojnaa).in|dear-lottery.org/.test(url) ? afterDOMLoaded(function() {
+    /(bgmiupdatehub|novelquote|superheromaniac|jkssbalerts|taazaloans|spatsify|sikhehindime|careersides).com|(sabarpratham|pubprofit|sarkariyojnaa|reliablesp).in|dear-lottery.org/.test(url) ? afterDOMLoaded(function() {
         window.count = 0;
         clickWithDelay('#tp98', 2000);
         clickWithDelay('#btn6', 2000);
