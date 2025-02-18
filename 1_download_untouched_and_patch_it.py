@@ -123,6 +123,8 @@ def modify_file_with_my_fixes(input_file, output_file):
 """
     content = content.replace(linestoremove, "")
 
+    content = content.replace("BypassedByBloggerPemula('api.gplinks.com', 'url', '');", "//BypassedByBloggerPemula('api.gplinks.com', 'url', '');")
+
     content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:

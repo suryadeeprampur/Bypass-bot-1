@@ -37,7 +37,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        93.8
+// @version        93.8.1
 // @match          *://*/*
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -200,7 +200,7 @@
 
   BypassedByBloggerPemula('gocmod.com', 'urls', '');
   BlockRead('(4d-bl0ck3r|ad-blocker)', 'setTimeout');
-  BypassedByBloggerPemula('api.gplinks.com', 'url', '');
+  //BypassedByBloggerPemula('api.gplinks.com', 'url', '');
   BypassedByBloggerPemula('writedroid.in', 'token', '');
   BypassedByBloggerPemula('web1s.com', 'token,url', '');
   BypassedByBloggerPemula('modmania.eu.org', 'token', '');

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.8
+// @version        93.8.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -17,7 +17,6 @@
 // @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated
 // @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues
 // @match *://*.gocmod.com/*
-// @match *://*.api.gplinks.com/*
 // @match *://*.writedroid.in/*
 // @match *://*.web1s.com/*
 // @match *://*.modmania.eu.org/*
@@ -1036,7 +1035,7 @@
 
   BypassedByBloggerPemula('gocmod.com', 'urls', '');
   BlockRead('(4d-bl0ck3r|ad-blocker)', 'setTimeout');
-  BypassedByBloggerPemula('api.gplinks.com', 'url', '');
+  //BypassedByBloggerPemula('api.gplinks.com', 'url', '');
   BypassedByBloggerPemula('writedroid.in', 'token', '');
   BypassedByBloggerPemula('web1s.com', 'token,url', '');
   BypassedByBloggerPemula('modmania.eu.org', 'token', '');
