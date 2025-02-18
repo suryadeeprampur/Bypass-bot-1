@@ -230,6 +230,7 @@
 // @include     /zaku.pro/
 // @include     /aylink.co|cpmlink.pro/
 // @include     /hypershort.com/
+// @include     /instaserve.net/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1406,6 +1407,9 @@
         clickIfExistsNonStop('a.btn-go');
         redirectIfOnclickElementHasLink('#main');
     } ) : null;
+
+    // adrinolinks.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/244
+    /instaserve.net/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2');}) : null;
 
 })();
 
