@@ -80,6 +80,9 @@ def main():
 
             regex_strings = extract_regex_from_js(js_code)
 
+            # remove duplicates from regex_strings
+            regex_strings = list(dict.fromkeys(regex_strings))
+
             # remove short domains (errors)
             regex_strings = [s for s in regex_strings if "." in s and len(s) >= 5]
 
