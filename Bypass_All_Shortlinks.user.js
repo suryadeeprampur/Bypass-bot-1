@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.8.2
+// @version        93.8.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -665,6 +665,7 @@
 // @include     /aylink.co|cpmlink.pro/
 // @include     /hypershort.com/
 // @include     /instaserve.net/
+// @include     /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
 // @include      /filecrypt.(cc|co)/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
@@ -1522,6 +1523,21 @@
 
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    // elitetorrent.com tomadivx.net infomaniakos.net divxatope.net
+    function caesarDecipher(str) {
+        const shift = 13;
+        return str.replace(/[a-zA-Z]/g, char => {
+          const base = char <= 'Z' ? 65 : 97;
+          return String.fromCharCode((char.charCodeAt(0) - base - shift + 26) % 26 + base);
+        });
+      }      
+    if (/(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/.test(url)){
+        const encodedURL = url.split('/s.php?i=')[1];
+        const decodedURL = atob(atob(atob(atob(atob(encodedURL)))));
+        const finalURL = caesarDecipher(decodedURL);
+        redirect(finalURL);
+    }
 
     // AdClicker
     if (/(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url/.test(url)){

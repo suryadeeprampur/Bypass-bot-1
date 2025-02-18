@@ -231,6 +231,7 @@
 // @include     /aylink.co|cpmlink.pro/
 // @include     /hypershort.com/
 // @include     /instaserve.net/
+// @include     /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -258,6 +259,21 @@
 
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    // elitetorrent.com tomadivx.net infomaniakos.net divxatope.net
+    function caesarDecipher(str) {
+        const shift = 13;
+        return str.replace(/[a-zA-Z]/g, char => {
+          const base = char <= 'Z' ? 65 : 97;
+          return String.fromCharCode((char.charCodeAt(0) - base - shift + 26) % 26 + base);
+        });
+      }      
+    if (/(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/.test(url)){
+        const encodedURL = url.split('/s.php?i=')[1];
+        const decodedURL = atob(atob(atob(atob(atob(encodedURL)))));
+        const finalURL = caesarDecipher(decodedURL);
+        redirect(finalURL);
+    }
 
     // AdClicker
     if (/(adclicker.(io|info)|(discoveryultrasecure|yourihollier).com)\/url/.test(url)){
