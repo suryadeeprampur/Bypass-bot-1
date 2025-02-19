@@ -221,7 +221,8 @@
 // @match       *://www.ryuugames.com/?eroge=*
 // @match       *://anchoreth.com/r-adsh?t=i&v=*
 // @include     /app2.olamovies.download\/generate\/\?id=/
-// @match       *://psa.btcut.io/*
+// @match       *://*.btcut.io/*
+// @match       *://btcut.io/*
 // @match       *://linkslice.io/*
 // @match       *://zshort.io/*
 // @match       *://easy4skip.com/*
@@ -1388,7 +1389,7 @@
             });
         }, 500);
     }
-    /((psa.btcut|linkslice|zshort).io|easy4skip.com)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
+    /((btcut|linkslice|zshort).io|easy4skip.com)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
         redirectToAnyLinkWithMatchingTextContent("Get Link");
     }) : null;
 
