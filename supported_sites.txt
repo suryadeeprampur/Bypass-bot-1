@@ -406,10 +406,11 @@ adnews.me
 kyshort.xyz
 eazyurl.xyz
 https://acortalink.me/*
-https://bleleadersto.com/s?*
-https://tonordersitye.com/s?*
-https://daughablelea.com/s?*
-https://linkvertise.com/*
+*://bleleadersto.com/s?*
+*://tonordersitye.com/s?*
+*://daughablelea.com/s?*
+*://mdlinkshub.com/s?*
+*://linkvertise.com/*
 *://bstlar.com/*
 https://bypass.city/bypass?bypass=*
 https://adbypass.org/bypass?bypass=*

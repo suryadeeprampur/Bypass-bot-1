@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.8.7
+// @version        93.8.8
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -425,10 +425,11 @@
 // @match *://*.eazyurl.xyz/*
 // @grant        GM.xmlHttpRequest
 // @match        https://acortalink.me/*
-// @match         https://bleleadersto.com/s?*
-// @match         https://tonordersitye.com/s?*
-// @match         https://daughablelea.com/s?*
-// @match         https://linkvertise.com/*
+// @match         *://bleleadersto.com/s?*
+// @match         *://tonordersitye.com/s?*
+// @match         *://daughablelea.com/s?*
+// @match         *://mdlinkshub.com/s?*
+// @match         *://linkvertise.com/*
 // @match        *://bstlar.com/*
 // @match        https://bypass.city/bypass?bypass=*
 // @match        https://adbypass.org/bypass?bypass=*
@@ -1393,7 +1394,7 @@
 // ----- bypass.vip and bypass.city APIs------
 (function() {
     'use strict';
-    const admavenRegex = /^https:\/\/(bleleadersto\.com|tonordersitye\.com|daughablelea\.com)\/s\?.*$/;
+    const admavenRegex = /^https:\/\/((bleleadersto|tonordersitye|daughablelea|mdlinkshub).com)\/s\?.*$/;
     const linkvertiseRegex = /^https:\/\/linkvertise\.com\/.+$/;
     const lootlinkRegex = /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 

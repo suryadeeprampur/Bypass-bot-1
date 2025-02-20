@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name          bypass.vip and bypass.city APIs
-// @match         https://bleleadersto.com/s?*
-// @match         https://tonordersitye.com/s?*
-// @match         https://daughablelea.com/s?*
-// @match         https://linkvertise.com/*
+// @match         *://bleleadersto.com/s?*
+// @match         *://tonordersitye.com/s?*
+// @match         *://daughablelea.com/s?*
+// @match         *://mdlinkshub.com/s?*
+// @match         *://linkvertise.com/*
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @run-at        document-start
 // ==/UserScript==
@@ -11,7 +12,7 @@
 // ----- bypass.vip and bypass.city APIs------
 (function() {
     'use strict';
-    const admavenRegex = /^https:\/\/(bleleadersto\.com|tonordersitye\.com|daughablelea\.com)\/s\?.*$/;
+    const admavenRegex = /^https:\/\/((bleleadersto|tonordersitye|daughablelea|mdlinkshub).com)\/s\?.*$/;
     const linkvertiseRegex = /^https:\/\/linkvertise\.com\/.+$/;
     const lootlinkRegex = /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 
