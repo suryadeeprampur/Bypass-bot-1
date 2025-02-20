@@ -896,7 +896,7 @@
             if (buttonIsVisible) {button.click();}
         }, interval);
     }
-    /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
+    /* /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
         let intervalId = setInterval(() => {
             let button = document.querySelector('.myButton');
             let buttonIsVisible = button && button.offsetParent !== null;
@@ -907,7 +907,7 @@
                 }
             }
         }, 1000);
-    }) : null;
+    }) : null; */
 
     //pahe.ink final step
     /linegee.net/.test(url) ? afterDOMLoaded(function() {

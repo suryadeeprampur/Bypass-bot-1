@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.8.5
+// @version        93.8.6
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -1348,6 +1348,7 @@
     while (data.status != "processed") {await sleep(1); data = await Request(url, { headers, responseType: 'json'}); console.log(data);}
     window.postMessage(JSON.stringify({ "source": "hcaptcha", "label": "challenge-closed", "id": settings.id, "contents": { "event": "challenge-passed", "response": data.token, "expiration": 120}}));});
 
+
 }})();
 
 // ----- Bypass Acortalink.me ( Taken from AdGuard https://github.com/AdguardTeam/AdguardFilters/commit/61d9949022b428939b5be4243b0e5331ea64afcb) -----
@@ -2159,7 +2160,7 @@
             if (buttonIsVisible) {button.click();}
         }, interval);
     }
-    /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
+    /* /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
         let intervalId = setInterval(() => {
             let button = document.querySelector('.myButton');
             let buttonIsVisible = button && button.offsetParent !== null;
@@ -2170,7 +2171,7 @@
                 }
             }
         }, 1000);
-    }) : null;
+    }) : null; */
 
     //pahe.ink final step
     /linegee.net/.test(url) ? afterDOMLoaded(function() {
