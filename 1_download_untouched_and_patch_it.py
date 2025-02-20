@@ -127,6 +127,8 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("|(retrotechreborn|insurelean).com|", "|(retrotechreborn|insurelean|ecosolardigest).com|")
 
+    content = content.replace("case 'clk.st': case 'clks.pro': case 'chainfo.xyz':", "case 'clk.st': case 'chainfo.xyz':")
+
     content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:

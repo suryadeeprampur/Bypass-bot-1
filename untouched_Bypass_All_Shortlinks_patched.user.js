@@ -37,7 +37,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        93.8.4
+// @version        93.8.5
 // @match          *://*/*
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -304,7 +304,7 @@
       case 'www.google.com': if (h.pathname === '/url' && h.searchParams.has('q')) {return h.searchParams.get('q');} break;
       case 'social-unlock.com': if (/^\/([^\/]+)/.test(h.pathname)) {return 'https://social-unlock.com/redirect/' + RegExp.$1;} break;
       //case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname)) {return 'https://adbypass.org/bypass?bypass=' + location.href.split('?')[0];} break;
-      case 'uii.io': case 'shortano.link': case 'shortino.link': case 'clk.st': case 'clks.pro': case 'chainfo.xyz': case 'clicksfly.com': case 'tryshort.in':
+      case 'uii.io': case 'shortano.link': case 'shortino.link': case 'clk.st': case 'chainfo.xyz': case 'clicksfly.com': case 'tryshort.in':
       case 'dailytime.store': case 'ez4short.com': case 'fc.lc': case 'cutp.in': case 'saly.io': case 'earnow.online': case 'gplinks.in':
       case 'linkfly.me': case 'linksfire.co': case 'adlink.click': case 'linkjust.com': case 'linkbulks.com': case 'traffic1s.com': case 'link4rev.site':
       case 'linkrex.net': case 'opli.xyz': case 'linksly.co': case 'ninjaurl.net': case 'shortyearn.com': case 'upshrink.com': case 'tr.link': case 'megaurl.in':

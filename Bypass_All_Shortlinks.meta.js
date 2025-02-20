@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.8.4
+// @version        93.8.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -354,7 +354,6 @@
 // @match *://*.shortano.link/*
 // @match *://*.shortino.link/*
 // @match *://*.clk.st/*
-// @match *://*.clks.pro/*
 // @match *://*.chainfo.xyz/*
 // @match *://*.clicksfly.com/*
 // @match *://*.tryshort.in/*
