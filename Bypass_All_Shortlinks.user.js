@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.8.6
+// @version        93.8.7
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2152,26 +2152,38 @@
 
     // pahe.ink
     /linegee.net|intercelestial.com|teknoasian.com/.test(url) ? preventForcedFocusOnWindow() : null;
+    function isWeirdButton(button) {
+        const suspiciousStyles = ['position: absolute;left: 99999px;'];
+        const suspiciousWords = ['patch'];
 
-    function clickNonStopIfVisible(selector, interval) {
-        let intervalId = setInterval(() => {
-            let button = document.querySelector(selector);
-            let buttonIsVisible = button && button.offsetParent !== null;
-            if (buttonIsVisible) {button.click();}
-        }, interval);
+        // Check for suspicious styles
+        const style = button.getAttribute('style');
+        if (style && suspiciousStyles.some(s => style.includes(s))) {
+            return true;
+        }
+
+        // Check for suspicious words in text content
+        const textContent = button.textContent.toLowerCase();
+        if (suspiciousWords.some(word => textContent.includes(word))) {
+            return true;
+        }
+
+        return false;
     }
-    /* /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
+    /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
         let intervalId = setInterval(() => {
-            let button = document.querySelector('.myButton');
-            let buttonIsVisible = button && button.offsetParent !== null;
-            if (buttonIsVisible) {
-                button.click();
-                if (button.classList.contains('postnext')) {
-                    clearInterval(intervalId);
+            let buttons = document.querySelectorAll('button.verify, button.skipcontent, button.postnext');
+            for (let button of buttons) {
+                let buttonIsVisible = button && button.offsetParent !== null;
+                if (buttonIsVisible && !isWeirdButton(button)) {
+                    button.click();
+                    if (button.classList.contains('postnext')) {
+                        clearInterval(intervalId);
+                    }
                 }
             }
         }, 1000);
-    }) : null; */
+    }) : null;
 
     //pahe.ink final step
     /linegee.net/.test(url) ? afterDOMLoaded(function() {
