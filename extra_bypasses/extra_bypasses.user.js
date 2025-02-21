@@ -231,7 +231,7 @@
 // @include     /zaku.pro/
 // @include     /aylink.co|cpmlink.pro/
 // @include     /hypershort.com/
-// @include     /instaserve.net/
+// @include     /instaserve.net|gomob.xyz/
 // @include     /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
 // @run-at      document-start
 // ==/UserScript==
@@ -1438,7 +1438,7 @@
     } ) : null;
 
     // adrinolinks.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/244
-    /instaserve.net/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2');}) : null;
+    /instaserve.net|gomob.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2');}) : null;
 
 })();
 
