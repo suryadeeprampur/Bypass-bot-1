@@ -51,7 +51,6 @@ Thanks to:
 - [BloggerPemula](https://greasyfork.org/users/810571-bloggerpemula)
 - [bypass.city](https://bypass.city/) / [2](https://adbypass.org/) used for l1nkv3rt1s3, Admaven and Loot-link.
 - Contributers to this repository who have submitted pull requests: Anon991299, mouro, trapgod1, CaptainCaffeine, IntNinja, Dxian.
-- [StephenP](https://greasyfork.org/users/104167-stephenp) for the filecrypt bypass.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
 - [AdamWr](https://github.com/AdamWr) from AdGuard for the mega-enlace and acortalink.me bypasses.
 - Every user that has reported issues to this repository.
@@ -62,3 +61,4 @@ Create a new redirect rule. Use the following settings:
     - Include pattern: `^https:\/\/([^\/]*)\/s\?([a-zA-Z0-9]{1,8})$`
     - Redirect to: `https://bypass.city/bypass?bypass=https://$1/s?$2`
     - Pattern Type: `Regular expression`
+- [Bypass FileCrypt](https://greasyfork.org/users/104167-stephenp)
