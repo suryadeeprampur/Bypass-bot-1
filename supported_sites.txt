@@ -417,7 +417,6 @@ https://acortalink.me/*
 https://bypass.city/bypass?bypass=*
 https://adbypass.org/bypass?bypass=*
 https://fc-lc.xyz/*
-*://teknoasian.com/*
 *://upfiles.app/*
 *://haxi.online/*
 https://datanodes.to/download
@@ -541,7 +540,7 @@ https://paster.so/*
 /tawda.xyz\/tag/
 /pastebin.com\/raw/
 /spacetica.com/
-/linegee.net|intercelestial.com|teknoasian.com/
+/linegee.net/
 /(loanoffering|djmp3world).in|moonplusnews.com/
 /4hi.in/
 /lnk.news/

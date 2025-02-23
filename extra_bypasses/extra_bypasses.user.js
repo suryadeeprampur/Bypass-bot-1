@@ -111,7 +111,7 @@
 // @include     /tawda.xyz\/tag/
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
-// @include     /linegee.net|intercelestial.com|teknoasian.com/
+// @include     /linegee.net/
 // @include     /(loanoffering|djmp3world).in|moonplusnews.com/
 // @include     /4hi.in/
 // @include     /lnk.news/
@@ -213,7 +213,6 @@
 // @include     /app.link2unlock.com/
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
-// @match       *://teknoasian.com/*
 // @match       *://upfiles.app/*
 // @match       *://haxi.online/*
 // @match       https://datanodes.to/download
@@ -887,7 +886,7 @@
     /megalink.pro\/[a-zA-Z0-9]+$/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {clickIfNotDisabled('a.btn:nth-child(1)')}, 3000)}) : null;
 
     // pahe.ink
-    /linegee.net|intercelestial.com|teknoasian.com/.test(url) ? preventForcedFocusOnWindow() : null;
+    /* /linegee.net|intercelestial.com|teknoasian.com/.test(url) ? preventForcedFocusOnWindow() : null;
     function isWeirdButton(button) {
         const suspiciousStyles = ['position: absolute;left: 99999px;'];
         const suspiciousWords = ['patch'];
@@ -919,7 +918,7 @@
                 }
             }
         }, 1000);
-    }) : null;
+    }) : null; */
 
     //pahe.ink final step
     /linegee.net/.test(url) ? afterDOMLoaded(function() {

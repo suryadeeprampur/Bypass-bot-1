@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.9.3
+// @version        93.9.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -435,7 +435,6 @@
 // @match        https://bypass.city/bypass?bypass=*
 // @match        https://adbypass.org/bypass?bypass=*
 // @match       https://fc-lc.xyz/*
-// @match       *://teknoasian.com/*
 // @match       *://upfiles.app/*
 // @match       *://haxi.online/*
 // @match       https://datanodes.to/download
@@ -559,7 +558,7 @@
 // @include     /tawda.xyz\/tag/
 // @include     /pastebin.com\/raw/
 // @include     /spacetica.com/
-// @include     /linegee.net|intercelestial.com|teknoasian.com/
+// @include     /linegee.net/
 // @include     /(loanoffering|djmp3world).in|moonplusnews.com/
 // @include     /4hi.in/
 // @include     /lnk.news/
