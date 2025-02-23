@@ -626,7 +626,7 @@ https://paster.so/*
 /www.spaste.com/
 /click.convertkit-mail.com/
 /hubcloud.club\/tg\/go.php\?re=/
-/stockwallah.com/
+/bgmiaimassist.in|(stockwallah|inventoryidea).com/
 /^https:\/\/relampagomovies\.com\/.+/
 /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/
 /linkshortify.in|lksfy.com/

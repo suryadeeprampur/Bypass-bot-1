@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        93.9.2
+// @version        93.9.3
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -644,7 +644,7 @@
 // @include     /www.spaste.com/
 // @include     /click.convertkit-mail.com/
 // @include     /hubcloud.club\/tg\/go.php\?re=/
-// @include     /stockwallah.com/
+// @include     /bgmiaimassist.in|(stockwallah|inventoryidea).com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
 // @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/
 // @include     /linkshortify.in|lksfy.com/
@@ -1711,13 +1711,13 @@
           let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
           if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);} //Redirect or click, with a 0.1s delay
         }, 500);});};
-    if (/((infytips|remixodiadj).in|(cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale|inventoryidea|gamerxyt|betsatta).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top|kvkparbhani.org|kk.offerboom.top)/.test(url)){
+    if (/((infytips|remixodiadj|bgmiaimassist).in|(cybertyrant|profitshort|technorozen|hubdrive.me|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale|inventoryidea|gamerxyt|betsatta|stockwallah).com|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|blog.offerboom.top|kvkparbhani.org|kk.offerboom.top)/.test(url)){
         if (url.includes('?r=')) redirect(atob(url.split('?r=')[1]));
         else redirectOrClickIfExistsEnabledWithDelay('.rd_btn');
     }
 
     // hdhub4u.capetown
-    /stockwallah.com/.test(url) ? afterDOMLoaded(function() {
+    /bgmiaimassist.in|(stockwallah|inventoryidea).com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('a#verify_btn');
         redirectIfExists('a#verify_btn');
     }) : null;
@@ -2752,6 +2752,9 @@
 
     // hyp.sh hypershort
     /hypershort.com/.test(url) ? boostTimers2() : null;
+
+    // hdhub4u
+    /bgmiaimassist.in|(stockwallah|inventoryidea).com/.test(url) ? boostTimers2() : null;
 
 })();
 // ----- ----- -----
