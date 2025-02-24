@@ -30,7 +30,8 @@ def write_list_of_strings_to_file(filename, lines):
     with open(filename, 'w', encoding='utf-8') as file:
         for line in lines:
             file.write(line + '\n')
-    print(f"OK: Generated {filename}")
+    if len(lines) > 0:
+        print(f"OK: Generated {filename}")
 
 def generate_include_lines(regex_list):
     include_rules = []
