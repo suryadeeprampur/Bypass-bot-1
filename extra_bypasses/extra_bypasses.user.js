@@ -232,6 +232,8 @@
 // @include     /hypershort.com/
 // @include     /instaserve.net|gomob.xyz/
 // @include     /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
+// @include     /tech.hipsonyc.com|itijobalert.in/
+// @include     /golink.(gyanitheme.com|bloggerishyt.in)/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -746,10 +748,11 @@
     /golink.bloggerishyt.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // gtlinks, used in toonsouthindia.com
-    /tech.hipsonyc.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.bt-success')}) : null;
-    /tech.hipsonyc.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#popup-button')}) : null;
-    /tech.hipsonyc.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#gotolink')}) : null;
-    /golink.gyanitheme.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /* /tech.hipsonyc.com|itijobalert.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('.bt-success')}) : null;
+    /tech.hipsonyc.com|itijobalert.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#popup-button')}) : null;
+    /tech.hipsonyc.com|itijobalert.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#gotolink')}) : null; */
+    /tech.itijobalert.in\/\?token\=/.test(url) ? redirect("https://golink.bloggerishyt.in/" + url.split('?token=')[1]) : null;
+    /golink.(gyanitheme.com|bloggerishyt.in)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/10
     // /veganab.co\/\?link=/.test(url) ? redirect('https://za.gl/' + url.split('?link=')[1]) : null;

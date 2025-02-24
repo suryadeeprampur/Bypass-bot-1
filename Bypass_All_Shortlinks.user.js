@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0
+// @version        94.0.1
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -664,6 +664,8 @@
 // @include     /hypershort.com/
 // @include     /instaserve.net|gomob.xyz/
 // @include     /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
+// @include     /tech.hipsonyc.com|itijobalert.in/
+// @include     /golink.(gyanitheme.com|bloggerishyt.in)/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(retrotechreborn|insurelean|ecosolardigest).com|gally.shop|qanin.xyz|evegor.net)\/.*/
@@ -1335,6 +1337,7 @@
     const url = data.url;while (data.status != "processed") {await sleep(1);data = await Request(url, {headers,responseType: 'json'});console.log(data);}
     window.postMessage(JSON.stringify({"source": "hcaptcha","label": "challenge-closed","id": settings.id,"contents": {"event": "challenge-passed","response": data.token,"expiration": 120}}));});});
 
+
 }})();
 
 // ----- Bypass Acortalink.me ( Taken from AdGuard https://github.com/AdguardTeam/AdguardFilters/commit/61d9949022b428939b5be4243b0e5331ea64afcb) -----
@@ -1997,10 +2000,11 @@
     /golink.bloggerishyt.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // gtlinks, used in toonsouthindia.com
-    /tech.hipsonyc.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('.bt-success')}) : null;
-    /tech.hipsonyc.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#popup-button')}) : null;
-    /tech.hipsonyc.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#gotolink')}) : null;
-    /golink.gyanitheme.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /* /tech.hipsonyc.com|itijobalert.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('.bt-success')}) : null;
+    /tech.hipsonyc.com|itijobalert.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#popup-button')}) : null;
+    /tech.hipsonyc.com|itijobalert.in/.test(url) ? afterDOMLoaded(function() {clickIfExists('#gotolink')}) : null; */
+    /tech.itijobalert.in\/\?token\=/.test(url) ? redirect("https://golink.bloggerishyt.in/" + url.split('?token=')[1]) : null;
+    /golink.(gyanitheme.com|bloggerishyt.in)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/10
     // /veganab.co\/\?link=/.test(url) ? redirect('https://za.gl/' + url.split('?link=')[1]) : null;
