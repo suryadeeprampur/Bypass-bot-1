@@ -61,4 +61,5 @@ Create a new redirect rule. Use the following settings:
     - Include pattern: `^https:\/\/([^\/]*)\/s\?([a-zA-Z0-9]{1,8})$`
     - Redirect to: `https://bypass.city/bypass?bypass=https://$1/s?$2`
     - Pattern Type: `Regular expression`
-- [Bypass FileCrypt](https://greasyfork.org/users/104167-stephenp)
+- [Bypass FileCrypt](https://greasyfork.org/en/scripts/403170-bypass-filecrypt)
+- [fr0stb1rd/ublock_filters](https://gitlab.com/fr0stb1rd/ublock_filters/)
