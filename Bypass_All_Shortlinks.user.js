@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.3
+// @version        94.0.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -598,7 +598,7 @@
 // @include     /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
-// @include     /(surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co/
+// @include     /(surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /cryptings.in|vbnmx.online/
 // @include     /techyblogs.in|readytechflip.com/
@@ -1386,14 +1386,16 @@
     const linkvertiseRegex = /^https:\/\/linkvertise\.com\/.+$/;
     const lootlinkRegex = /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 
+    const redirect = (finalUrl) => typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
+
     // Linkvertise easy case
     if (linkvertiseRegex.test(window.location.href) && window.location.search.includes('r=')) {
         const rParam = new URLSearchParams(window.location.search).get('r');
-        if (rParam) {window.location.assign(atob(rParam));};
+        if (rParam) {redirect(atob(rParam));};
 
     // Linkvertise hard case and Admaven using bypass.city
     } else if (admavenRegex.test(window.location.href) || linkvertiseRegex.test(window.location.href) || lootlinkRegex.test(window.location.href)) {
-        window.location.assign(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
+        redirect(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
     }
 })();
 // ----- ------ ----------
@@ -1442,7 +1444,9 @@
 
                 if (task_request.status !== 200) return;
                 const task_response = await task_request.text();
-                window.location.href = task_response;
+
+                const redirect = (finalUrl) => typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
+                redirect(task_response);
             }
         }
 
@@ -1492,21 +1496,23 @@
 // ----- Extra bypasses -----
 (function() {
     'use strict';
+
     const url = window.location.href
-    const redirect = finalUrl => window.location.assign(finalUrl);
+    const redirect = (finalUrl) => typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
+    const showClickMsg = () => typeof showAlert === 'function' ? showAlert("Button clicked...", 'success', 1000, '', 'secondary') : console.log("Button clicked...");
     const getParam = (url, param) => new URLSearchParams(url).get(param);
     const rot13 = str => str.replace(/[A-Za-z]/g, char => String.fromCharCode((char.charCodeAt(0) % 32 + 13) % 26 + (char < 'a' ? 65 : 97)));
     const popupsToRedirects = () => window.open = (url, target, features) => (window.location.href = url, window);
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const afterWindowLoaded = (callback) => window.addEventListener('load', callback);
     const isValidUrl = url => /^(?:https?|ftp):\/\/(?:\w+\.){1,3}\w+(?:\/\S*)?$/.test(url);
-    const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
+    const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); showClickMsg(); } }, 1000); };
     const redirectIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button.href && isValidUrl(button.href)) { clearInterval(intervalId); redirect(button.href) } }, 500); };
-    const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
+    const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); showClickMsg(); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton && !linkButton.href.includes('/undefined')) { clearInterval(intervalId); setTimeout(function() {redirect(linkButton.href);}, 500) } }, 500); };
-    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && !button.classList.contains('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 500) } }, 500); };
+    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && !button.classList.contains('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click(); showClickMsg();}, 500) } }, 500); };
     const checkElementVisible = element => element !== null && !!(element.offsetWidth || element.offsetHeight || element.getClientRects().length) && (!element.getAttribute('style') || !element.getAttribute('style').includes('display:none'));
-    const clickIfVisible = selector => { afterDOMLoaded(function() { let intervalId = setInterval(() => { let element = document.querySelector(selector); if (checkElementVisible(element)) { clearInterval(intervalId); element.click(); } }, 1000); }); };
+    const clickIfVisible = selector => { afterDOMLoaded(function() { let intervalId = setInterval(() => { let element = document.querySelector(selector); if (checkElementVisible(element)) { clearInterval(intervalId); element.click(); showClickMsg(); } }, 1000); }); };
     const preventForcedFocusOnWindow = () => {window.mouseleave = true; window.onmouseover = true; document.hasFocus = function() {return true;}; Object.defineProperty(document, 'webkitVisibilityState', {get() {return 'visible';}});
         Object.defineProperty(document, 'visibilityState', {get() {return 'visible';}}); window.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true);
         window.addEventListener('focus', onfocus, true);document.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true); Object.defineProperty(document, 'hidden', {get() {return false;}});};
@@ -1521,11 +1527,11 @@
           const base = char <= 'Z' ? 65 : 97;
           return String.fromCharCode((char.charCodeAt(0) - base - shift + 26) % 26 + base);
         });
-      }      
+    }
     if (/(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/.test(url)){
         const encodedURL = url.split('/s.php?i=')[1];
         const decodedURL = atob(atob(atob(atob(atob(encodedURL)))));
-        const finalURL = caesarDecipher(decodedURL);
+        const finalURL = caesarDecipher(decodedURL); // or rot13(decodedURL)
         redirect(finalURL);
     }
 
@@ -1702,7 +1708,7 @@
     const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
         let intervalId = setInterval(() => { //Check every 0.5s
           let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
-          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);} //Redirect or click, with a 0.1s delay
+          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click(); showClickMsg();}, 100);} //Redirect or click, with a 0.1s delay
         }, 500);});};
     if (/((infytips|remixodiadj|bgmiaimassist).in|(cybertyrant|profitshort|technorozen|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale|inventoryidea|gamerxyt|betsatta|stockwallah|gtxhosty|anyrojgar).com|mphealth.online|hubdrive.me|advisecreate.fun|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|offerboom.top|kvkparbhani.org)/.test(url)){
         if (url.includes('?r=')) redirect(atob(url.split('?r=')[1]));
@@ -1902,7 +1908,7 @@
     //    if (!targetUrl.startsWith('https://empebau.eu')) {redirect(targetUrl)}
     //}) : null;
     /empebau.eu\/s/.test(url) ? afterDOMLoaded(function() {
-        window.location.assign(document.documentElement.innerHTML.match(/let url = "(https?:\/\/[^"]+)";/)[1]);
+        redirect(document.documentElement.innerHTML.match(/let url = "(https?:\/\/[^"]+)";/)[1]);
     }) : null;
 
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
@@ -2076,6 +2082,7 @@
     /musicc.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
     // zshort.net, shotzon.com - jnovels.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/5, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/59
+    function checkRecaptchaSolved() { return window.grecaptcha && window.grecaptcha.getResponse().length !== 0; }
     const clickIfRecaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (window.grecaptcha.getResponse().length !== 0) { clearInterval(intervalId); button.click(); } }, 1000); };
     /cloutgist.com/.test(url) ? afterWindowLoaded(function() {clickIfRecaptchaSolved('.btn-captcha');}) : null;
     /(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
@@ -2183,7 +2190,7 @@
             const match = content.match(/location\.href\s*=\s*atob\('([^']+)'\);/);
             if (match) {
                 setTimeout(() => {
-                    window.location.assign(window.location.href + atob(match[1]));
+                    redirect(window.location.href + atob(match[1]));
                 }, 3000);
                 break;
             }
@@ -2325,22 +2332,27 @@
     /www.yitarx.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // https://thotpacks.xyz/R7p2l
-    /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {
+        //clickIfAllCaptchasSolved('#invisibleCaptchaShortlink');
+        //clickIfRecaptchaSolved('#invisibleCaptchaShortlink');
+        clickIfExists('#invisibleCaptchaShortlink');
+        redirectIfNotDisabled('a.get-link');
+    }) : null;
 
     // linkpays.in - t.me/canvapro365free - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/88, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
     function clickAnyVisibleButtonNonStop(interval){
         let intervalId = setInterval(() => {
             const buttons = document.querySelectorAll('button'); //, input[type="button"], input[type="submit"]:focus-visible');
-            buttons.forEach(function(button) {if (button.offsetParent !== null) {button.click();}});
+            buttons.forEach(function(button) {if (button.offsetParent !== null) {button.click(); showClickMsg();}});
         }, interval);
     }
-    /(surfsees.com|techyblogs.in)\/safe.php\?link=/.test(url) ? redirect('https://pokoarcade.com/token.php?id=' + url.split('link=')[1]) : null;
-    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {
+    // /(surfsees.com|techyblogs.in)\/safe.php\?link=/.test(url) ? redirect('https://pokoarcade.com/token.php?id=' + url.split('link=')[1]) : null;
+    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) && !url.includes('token.php') ? afterWindowLoaded(function() {
         clickAnyVisibleButtonNonStop(2000);
     }) : null;
-    /(cryptings.in|vbnmx.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#rtg-btn > a:nth-child(1)')}) : null;
-    /(cgsonglyricz.in|www.techhubcap.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
-    /(techyblogs.in|readytechflip.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
+    // /(cryptings.in|vbnmx.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#rtg-btn > a:nth-child(1)')}) : null;
+    // /(cgsonglyricz.in|www.techhubcap.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
+    // /(techyblogs.in|readytechflip.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
     function checkCloudflareCaptchaSolved() {
@@ -2362,7 +2374,7 @@
 
             function clickAvailableButtons(buttonTexts) {
                 let buttons = document.querySelectorAll('button, input[type="button"], input[type="submit"]:focus-visible');
-                buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {button.click();}});
+                buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {button.click(); showClickMsg();}});
             }
 
             //Different actions depending on current step
@@ -2533,7 +2545,7 @@
         const matches = document.documentElement.innerHTML.match(regex);
         if (matches && matches.length > 0) {
           const decodedUrl = atob(matches[0]);
-          window.location.href = decodedUrl;
+          redirect(decodedUrl);
         }
     }) : null;
 
@@ -2650,7 +2662,7 @@
             document.querySelectorAll("a").forEach(link => {
                 if (link.textContent.includes("Get Link") && link.href) {
                     clearInterval(intervalId);
-                    window.location.assign(link.href);
+                    redirect(link.href);
                 }
             });
         }, 500);
@@ -2682,7 +2694,7 @@
             if (onclickContent) {
                 clearInterval(intervalId);
                 const targetLink = onclickContent.match(/window\.open\("([^"]+)",/)[1];
-                window.location.assign(targetLink);
+                redirect(targetLink);
             }
         }, 1000);
     }
@@ -2693,6 +2705,23 @@
 
     // adrinolinks.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/244
     /instaserve.net|gomob.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2');}) : null;
+
+    // uii.io
+    function checkAllCaptchasSolved() {
+        return (checkCloudflareCaptchaSolved() && checkRecaptchaSolved() && checkHCaptchaSolved());
+    }
+    function clickIfAllCaptchasSolved(selector) {
+        let intervalId = setInterval(() => {
+            if (checkAllCaptchasSolved()) {
+                clearInterval(intervalId);
+                clickIfExists(selector);
+            }
+        }, 1000);
+    }
+    /wordcounter.icu/.test(url) ? afterDOMLoaded(function() {
+        //clickIfAllCaptchasSolved('#invisibleCaptchaShortlink');
+        clickIfExists('#invisibleCaptchaShortlink');
+    }) : null;
 
 })();
 
@@ -2742,7 +2771,7 @@
     /goo.st|(businesssoftwarehere|freevpshere|softwaresolutionshere|travelironguide).com/.test(url) ? boostTimers() : null;
 
     //linkpays.in
-    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? boostTimers2() : null;
+    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) && !url.includes('token.php') ? boostTimers2() : null;
 
     // hyp.sh hypershort
     /hypershort.com/.test(url) ? boostTimers2() : null;
@@ -2752,6 +2781,127 @@
 
 })();
 // ----- ----- -----
+
+//---Feedback for users---------------------------------------------------------------------
+/**
+ * Shows a styled alert popup with customizable type, duration and position
+ * @param {string} message - The message to display
+ * @param {string} type - Alert type: 'info', 'success', 'error', or 'warning'
+ * @param {number} duration - How long to show the alert in milliseconds
+ * @param {string} prefix - Text prefix before the message
+ * @param {string} position - Position of alert: 'primary' (top) or 'secondary' (below primary)
+ */
+function showAlert(message, type = 'info', duration = 1000, prefix = 'Bypass All Shortlinks Debloated: ', position = 'primary') {
+    // Create alert element
+    const alertDiv = document.createElement('div');
+    
+    // Set positioning styles
+    alertDiv.style.position = 'fixed';
+    alertDiv.style.left = '50%';
+    alertDiv.style.transform = 'translateX(-50%)';
+    alertDiv.style.zIndex = '9999';
+    alertDiv.style.padding = '10px 20px';
+    alertDiv.style.borderRadius = '5px';
+    alertDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+    alertDiv.style.textAlign = 'center';
+    alertDiv.style.fontFamily = 'Arial, sans-serif';
+    alertDiv.style.fontSize = '14px';
+    alertDiv.style.maxWidth = '80%';
+    alertDiv.style.transition = 'opacity 0.5s';
+    
+    // Set position based on parameter
+    if (position === 'secondary') {
+        alertDiv.style.top = '60px'; // Position below the primary alert
+        alertDiv.dataset.position = 'secondary';
+    } else {
+        alertDiv.style.top = '10px'; // Default primary position
+        alertDiv.dataset.position = 'primary';
+    }
+    
+    // Set colors based on alert type
+    switch(type) {
+        case 'success':
+            alertDiv.style.backgroundColor = '#4CAF50';
+            alertDiv.style.color = 'white';
+            prefix = '✅ ' + prefix + ':';
+            break;
+        case 'error':
+            alertDiv.style.backgroundColor = '#F44336';
+            alertDiv.style.color = 'white';
+            prefix = '❌ ' + prefix + ':';
+            break;
+        case 'warning':
+            alertDiv.style.backgroundColor = '#FF9800';
+            alertDiv.style.color = 'white';
+            prefix = '⚠️ ' + prefix + ':';
+            break;
+        default: // info
+            alertDiv.style.backgroundColor = '#2196F3';
+            alertDiv.style.color = 'white';
+            prefix = 'ℹ️ ' + prefix + ':';
+    }
+    
+    alertDiv.textContent = prefix + ' ' + message;
+    
+    // Check if any existing alerts would conflict
+    const clearExistingAlert = () => {
+        const existingAlerts = document.querySelectorAll(`div[data-position="${position}"]`);
+        existingAlerts.forEach(alert => {
+            if (alert.parentNode) {
+                alert.style.opacity = '0';
+                setTimeout(() => {
+                    if (alert.parentNode) {
+                        alert.parentNode.removeChild(alert);
+                    }
+                }, 300);
+            }
+        });
+    };
+    
+    // Check if body exists, if not wait for it
+    if (document.body) {
+        clearExistingAlert();
+        document.body.appendChild(alertDiv);
+        
+        // Remove after duration
+        setTimeout(() => {
+            alertDiv.style.opacity = '0';
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.parentNode.removeChild(alertDiv);
+                }
+            }, 500);
+        }, duration);
+    } else {
+        // Wait for body to be available
+        document.addEventListener('DOMContentLoaded', () => {
+            clearExistingAlert();
+            document.body.appendChild(alertDiv);
+            
+            // Remove after duration
+            setTimeout(() => {
+                alertDiv.style.opacity = '0';
+                setTimeout(() => {
+                    if (alertDiv.parentNode) {
+                        alertDiv.parentNode.removeChild(alertDiv);
+                    }
+                }, 500);
+            }, duration);
+        });
+    }
+    
+    // Also log to console for debugging
+    console.log(`[${prefix}] ${message}`);
+}
+
+showAlert("running...");
+
+function redirectWithMessage(url) {
+    showAlert("Redirecting to " + url, 'success', 3000, '', 'secondary');
+    setTimeout(function() {window.location.assign(url);}, 1000);
+}
+
+//-------------------------------------------------------------------------------------
 
 // ----- Bypass Fly Inc (rinku.me .pro, 7mb.io, ...) ------
 // source: https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/165
@@ -3026,13 +3176,14 @@
         window.addEventListener('load', () => {
             if (!overlayCreated) {
                 const extractedURLs = extractURLsFromPage();
+                const redirect = (finalUrl) => typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : redirect(finalUrl);
                 if (extractedURLs.length === 1) {
-                    window.location.assign(extractedURLs[0]); // Redirect to the URL if only one URL is found
+                    redirect(extractedURLs[0]); // Redirect to the URL if only one URL is found
                 } else if (extractedURLs.length > 1) {
                     addURLsToOverlay(extractedURLs); // Add URLs to overlay if more than one URL is found
                     overlayCreated = true;
                 } else {
-                    window.location.assign(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
+                    redirect(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
                 }
             }
         });

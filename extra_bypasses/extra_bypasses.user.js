@@ -154,7 +154,7 @@
 // @include     /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 // @include     /ielts-isa.edu.vn/
 // @include     /flash.getpczone.com/
-// @include     /(surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co/
+// @include     /(surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /cryptings.in|vbnmx.online/
 // @include     /techyblogs.in|readytechflip.com/
@@ -240,21 +240,23 @@
 // ----- Extra bypasses -----
 (function() {
     'use strict';
+
     const url = window.location.href
-    const redirect = finalUrl => window.location.assign(finalUrl);
+    const redirect = (finalUrl) => typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
+    const showClickMsg = () => typeof showAlert === 'function' ? showAlert("Button clicked...", 'success', 1000, '', 'secondary') : console.log("Button clicked...");
     const getParam = (url, param) => new URLSearchParams(url).get(param);
     const rot13 = str => str.replace(/[A-Za-z]/g, char => String.fromCharCode((char.charCodeAt(0) % 32 + 13) % 26 + (char < 'a' ? 65 : 97)));
     const popupsToRedirects = () => window.open = (url, target, features) => (window.location.href = url, window);
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const afterWindowLoaded = (callback) => window.addEventListener('load', callback);
     const isValidUrl = url => /^(?:https?|ftp):\/\/(?:\w+\.){1,3}\w+(?:\/\S*)?$/.test(url);
-    const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); } }, 1000); };
+    const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); showClickMsg(); } }, 1000); };
     const redirectIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button.href && isValidUrl(button.href)) { clearInterval(intervalId); redirect(button.href) } }, 500); };
-    const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); } }, 500); };
+    const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); showClickMsg(); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton && !linkButton.href.includes('/undefined')) { clearInterval(intervalId); setTimeout(function() {redirect(linkButton.href);}, 500) } }, 500); };
-    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && !button.classList.contains('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click();}, 500) } }, 500); };
+    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && !button.classList.contains('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click(); showClickMsg();}, 500) } }, 500); };
     const checkElementVisible = element => element !== null && !!(element.offsetWidth || element.offsetHeight || element.getClientRects().length) && (!element.getAttribute('style') || !element.getAttribute('style').includes('display:none'));
-    const clickIfVisible = selector => { afterDOMLoaded(function() { let intervalId = setInterval(() => { let element = document.querySelector(selector); if (checkElementVisible(element)) { clearInterval(intervalId); element.click(); } }, 1000); }); };
+    const clickIfVisible = selector => { afterDOMLoaded(function() { let intervalId = setInterval(() => { let element = document.querySelector(selector); if (checkElementVisible(element)) { clearInterval(intervalId); element.click(); showClickMsg(); } }, 1000); }); };
     const preventForcedFocusOnWindow = () => {window.mouseleave = true; window.onmouseover = true; document.hasFocus = function() {return true;}; Object.defineProperty(document, 'webkitVisibilityState', {get() {return 'visible';}});
         Object.defineProperty(document, 'visibilityState', {get() {return 'visible';}}); window.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true);
         window.addEventListener('focus', onfocus, true);document.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true); Object.defineProperty(document, 'hidden', {get() {return false;}});};
@@ -269,11 +271,11 @@
           const base = char <= 'Z' ? 65 : 97;
           return String.fromCharCode((char.charCodeAt(0) - base - shift + 26) % 26 + base);
         });
-      }      
+    }
     if (/(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/.test(url)){
         const encodedURL = url.split('/s.php?i=')[1];
         const decodedURL = atob(atob(atob(atob(atob(encodedURL)))));
-        const finalURL = caesarDecipher(decodedURL);
+        const finalURL = caesarDecipher(decodedURL); // or rot13(decodedURL)
         redirect(finalURL);
     }
 
@@ -450,7 +452,7 @@
     const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
         let intervalId = setInterval(() => { //Check every 0.5s
           let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
-          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click();}, 100);} //Redirect or click, with a 0.1s delay
+          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click(); showClickMsg();}, 100);} //Redirect or click, with a 0.1s delay
         }, 500);});};
     if (/((infytips|remixodiadj|bgmiaimassist).in|(cybertyrant|profitshort|technorozen|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale|inventoryidea|gamerxyt|betsatta|stockwallah|gtxhosty|anyrojgar).com|mphealth.online|hubdrive.me|advisecreate.fun|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|offerboom.top|kvkparbhani.org)/.test(url)){
         if (url.includes('?r=')) redirect(atob(url.split('?r=')[1]));
@@ -650,7 +652,7 @@
     //    if (!targetUrl.startsWith('https://empebau.eu')) {redirect(targetUrl)}
     //}) : null;
     /empebau.eu\/s/.test(url) ? afterDOMLoaded(function() {
-        window.location.assign(document.documentElement.innerHTML.match(/let url = "(https?:\/\/[^"]+)";/)[1]);
+        redirect(document.documentElement.innerHTML.match(/let url = "(https?:\/\/[^"]+)";/)[1]);
     }) : null;
 
     // Epicload (seen used in t.me/joinchat/3cfq_APl8Hs4N2Ux)
@@ -824,6 +826,7 @@
     /musicc.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
     // zshort.net, shotzon.com - jnovels.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/5, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/59
+    function checkRecaptchaSolved() { return window.grecaptcha && window.grecaptcha.getResponse().length !== 0; }
     const clickIfRecaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (window.grecaptcha.getResponse().length !== 0) { clearInterval(intervalId); button.click(); } }, 1000); };
     /cloutgist.com/.test(url) ? afterWindowLoaded(function() {clickIfRecaptchaSolved('.btn-captcha');}) : null;
     /(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
@@ -931,7 +934,7 @@
             const match = content.match(/location\.href\s*=\s*atob\('([^']+)'\);/);
             if (match) {
                 setTimeout(() => {
-                    window.location.assign(window.location.href + atob(match[1]));
+                    redirect(window.location.href + atob(match[1]));
                 }, 3000);
                 break;
             }
@@ -1073,22 +1076,27 @@
     /www.yitarx.com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
     // https://thotpacks.xyz/R7p2l
-    /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /thotpacks.xyz/.test(url) ? afterDOMLoaded(function() {
+        //clickIfAllCaptchasSolved('#invisibleCaptchaShortlink');
+        //clickIfRecaptchaSolved('#invisibleCaptchaShortlink');
+        clickIfExists('#invisibleCaptchaShortlink');
+        redirectIfNotDisabled('a.get-link');
+    }) : null;
 
     // linkpays.in - t.me/canvapro365free - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/88, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/48
     function clickAnyVisibleButtonNonStop(interval){
         let intervalId = setInterval(() => {
             const buttons = document.querySelectorAll('button'); //, input[type="button"], input[type="submit"]:focus-visible');
-            buttons.forEach(function(button) {if (button.offsetParent !== null) {button.click();}});
+            buttons.forEach(function(button) {if (button.offsetParent !== null) {button.click(); showClickMsg();}});
         }, interval);
     }
-    /(surfsees.com|techyblogs.in)\/safe.php\?link=/.test(url) ? redirect('https://pokoarcade.com/token.php?id=' + url.split('link=')[1]) : null;
-    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {
+    // /(surfsees.com|techyblogs.in)\/safe.php\?link=/.test(url) ? redirect('https://pokoarcade.com/token.php?id=' + url.split('link=')[1]) : null;
+    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) && !url.includes('token.php') ? afterWindowLoaded(function() {
         clickAnyVisibleButtonNonStop(2000);
     }) : null;
-    /(cryptings.in|vbnmx.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#rtg-btn > a:nth-child(1)')}) : null;
-    /(cgsonglyricz.in|www.techhubcap.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
-    /(techyblogs.in|readytechflip.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
+    // /(cryptings.in|vbnmx.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#rtg-btn > a:nth-child(1)')}) : null;
+    // /(cgsonglyricz.in|www.techhubcap.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn6')}) : null;
+    // /(techyblogs.in|readytechflip.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
     function checkCloudflareCaptchaSolved() {
@@ -1110,7 +1118,7 @@
 
             function clickAvailableButtons(buttonTexts) {
                 let buttons = document.querySelectorAll('button, input[type="button"], input[type="submit"]:focus-visible');
-                buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {button.click();}});
+                buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {button.click(); showClickMsg();}});
             }
 
             //Different actions depending on current step
@@ -1281,7 +1289,7 @@
         const matches = document.documentElement.innerHTML.match(regex);
         if (matches && matches.length > 0) {
           const decodedUrl = atob(matches[0]);
-          window.location.href = decodedUrl;
+          redirect(decodedUrl);
         }
     }) : null;
 
@@ -1398,7 +1406,7 @@
             document.querySelectorAll("a").forEach(link => {
                 if (link.textContent.includes("Get Link") && link.href) {
                     clearInterval(intervalId);
-                    window.location.assign(link.href);
+                    redirect(link.href);
                 }
             });
         }, 500);
@@ -1430,7 +1438,7 @@
             if (onclickContent) {
                 clearInterval(intervalId);
                 const targetLink = onclickContent.match(/window\.open\("([^"]+)",/)[1];
-                window.location.assign(targetLink);
+                redirect(targetLink);
             }
         }, 1000);
     }
@@ -1441,6 +1449,23 @@
 
     // adrinolinks.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/244
     /instaserve.net|gomob.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2');}) : null;
+
+    // uii.io
+    function checkAllCaptchasSolved() {
+        return (checkCloudflareCaptchaSolved() && checkRecaptchaSolved() && checkHCaptchaSolved());
+    }
+    function clickIfAllCaptchasSolved(selector) {
+        let intervalId = setInterval(() => {
+            if (checkAllCaptchasSolved()) {
+                clearInterval(intervalId);
+                clickIfExists(selector);
+            }
+        }, 1000);
+    }
+    /wordcounter.icu/.test(url) ? afterDOMLoaded(function() {
+        //clickIfAllCaptchasSolved('#invisibleCaptchaShortlink');
+        clickIfExists('#invisibleCaptchaShortlink');
+    }) : null;
 
 })();
 
@@ -1490,7 +1515,7 @@
     /goo.st|(businesssoftwarehere|freevpshere|softwaresolutionshere|travelironguide).com/.test(url) ? boostTimers() : null;
 
     //linkpays.in
-    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? boostTimers2() : null;
+    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) && !url.includes('token.php') ? boostTimers2() : null;
 
     // hyp.sh hypershort
     /hypershort.com/.test(url) ? boostTimers2() : null;

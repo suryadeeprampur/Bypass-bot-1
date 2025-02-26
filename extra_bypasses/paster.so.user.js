@@ -64,13 +64,14 @@
         window.addEventListener('load', () => {
             if (!overlayCreated) {
                 const extractedURLs = extractURLsFromPage();
+                const redirect = (finalUrl) => typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : redirect(finalUrl);
                 if (extractedURLs.length === 1) {
-                    window.location.assign(extractedURLs[0]); // Redirect to the URL if only one URL is found
+                    redirect(extractedURLs[0]); // Redirect to the URL if only one URL is found
                 } else if (extractedURLs.length > 1) {
                     addURLsToOverlay(extractedURLs); // Add URLs to overlay if more than one URL is found
                     overlayCreated = true;
                 } else {
-                    window.location.assign(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
+                    redirect(`https://adbypass.org/bypass?bypass=${encodeURIComponent(window.location.href)}`);
                 }
             }
         });

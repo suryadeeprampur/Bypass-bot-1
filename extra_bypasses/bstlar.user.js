@@ -47,7 +47,9 @@
 
                 if (task_request.status !== 200) return;
                 const task_response = await task_request.text();
-                window.location.href = task_response;
+
+                const redirect = (finalUrl) => typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
+                redirect(task_response);
             }
         }
 
