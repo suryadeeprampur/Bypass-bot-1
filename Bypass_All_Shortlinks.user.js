@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.5
+// @version        94.0.6
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -616,6 +616,7 @@
 // @include     /importantclass.com/
 // @include     /bebkub.com/
 // @include     /owoanime.com/
+// @include     /keedabankingnews.com/
 // @include     /secure.moderngyan.com/
 // @include     /earnbox.sattakingcharts.in/
 // @include     /set.seturl.in/
@@ -2441,7 +2442,7 @@
         clickIfExists('div.code-block:nth-child(4) > center:nth-child(1) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1)');
     }) : null;
 
-    // vnshortner - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/110, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/149
+    // vnshortener.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/110, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/149
     /importantclass.com/.test(url) ? afterDOMLoaded(function() {
         window.countdown = 0;
         clickWithDelay('#my-btn', 3000);
@@ -2455,6 +2456,10 @@
         window.countdown = 0;
         clickWithDelay('#pro-continue', 3000);
         clickWithDelay('#pro-btn', 5000);
+    }) : null;
+    /keedabankingnews.com/.test(url) ? afterWindowLoaded(function() {
+        window.count = 0;
+        clickIfExists('#tp-snp2');
     }) : null;
 
     // inshorturl.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/104, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/212, https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10744404
