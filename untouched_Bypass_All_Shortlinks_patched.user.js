@@ -37,7 +37,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        94.0.10
+// @version        94.0.11
 // @match          *://*/*
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -609,8 +609,6 @@
       DoIfExists('.oto > a:nth-child(1)', 1); waitForElm('.oto > a', linkjust => redirect(linkjust.href, false));});
     BypassedByBloggerPemula(/o-pro.online/, function() {waitForElm('#newbutton > a', opo => redirect(opo.href, false));
       waitForElm('a.btn.btn-default.btn-sm', opo2 => redirect(opo2.href, false));});
-    BypassedByBloggerPemula(/nishankhatri.xyz|(bebkub|importantclass|owoanime|hyperkhabar).com/, function() {
-      DoIfExists('#pro-btn', 5);DoIfExists('#pro-continue', 3);DoIfExists('#my-btn2', 5);DoIfExists('#my-btn', 7);});
     BypassedByBloggerPemula(/(kongutoday|proappapk|hipsonyc|teamtechnews).com|yotrickslog.tech/, function() {
       if (BpParams.has('safe')) {meta(atob(BpParams.get('safe')));}});
     BypassedByBloggerPemula(/writedroid.eu.org|modmania.eu.org|writedroid.in/, function() {

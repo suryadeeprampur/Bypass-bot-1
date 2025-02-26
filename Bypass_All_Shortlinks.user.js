@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.10
+// @version        94.0.11
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -308,7 +308,6 @@
 // @include /^(https?:\/\/)(.+)?((tmail|labgame).io|(gamezizo|fitdynamos).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((exeo|exego).app|(falpus|exe-urls).com|4ace.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye|mooonten).com|gold-24.net|(offeergames|todogame|asxwq).online|msic.site)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(nishankhatri.xyz|(bebkub|importantclass|owoanime|hyperkhabar).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((kongutoday|proappapk|hipsonyc|teamtechnews).com|yotrickslog.tech)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(writedroid.eu.org|modmania.eu.org|writedroid.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((travelironguide|businesssoftwarehere|softwaresolutionshere|freevpshere).com)(\/.*)/
@@ -1187,8 +1186,6 @@
       DoIfExists('.oto > a:nth-child(1)', 1); waitForElm('.oto > a', linkjust => redirect(linkjust.href, false));});
     BypassedByBloggerPemula(/o-pro.online/, function() {waitForElm('#newbutton > a', opo => redirect(opo.href, false));
       waitForElm('a.btn.btn-default.btn-sm', opo2 => redirect(opo2.href, false));});
-    BypassedByBloggerPemula(/nishankhatri.xyz|(bebkub|importantclass|owoanime|hyperkhabar).com/, function() {
-      DoIfExists('#pro-btn', 5);DoIfExists('#pro-continue', 3);DoIfExists('#my-btn2', 5);DoIfExists('#my-btn', 7);});
     BypassedByBloggerPemula(/(kongutoday|proappapk|hipsonyc|teamtechnews).com|yotrickslog.tech/, function() {
       if (BpParams.has('safe')) {meta(atob(BpParams.get('safe')));}});
     BypassedByBloggerPemula(/writedroid.eu.org|modmania.eu.org|writedroid.in/, function() {

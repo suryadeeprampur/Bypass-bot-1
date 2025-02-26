@@ -131,6 +131,11 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("/(forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|(offeergames|todogame).online/", "/(forexrw7|forex-articles|3rabsports|fx-22|watchtheeye|mooonten).com|gold-24.net|(offeergames|todogame|asxwq).online|msic.site/")
 
+    linestoremove = """    BypassedByBloggerPemula(/nishankhatri.xyz|(bebkub|importantclass|owoanime|hyperkhabar).com/, function() {
+      DoIfExists('#pro-btn', 5);DoIfExists('#pro-continue', 3);DoIfExists('#my-btn2', 5);DoIfExists('#my-btn', 7);});
+"""
+    content = content.replace(linestoremove, "")
+
     content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:
