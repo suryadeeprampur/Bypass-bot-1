@@ -414,8 +414,6 @@ https://acortalink.me/*
 https://bypass.city/bypass?bypass=*
 https://adbypass.org/bypass?bypass=*
 https://fc-lc.xyz/*
-*://upfiles.app/*
-*://haxi.online/*
 https://datanodes.to/download
 *://dailyuploads.net/*
 *://www.ryuugames.com/?eroge=*
@@ -639,6 +637,7 @@ https://paster.so/*
 /app.link2unlock.com/
 /freemodsapp.in/
 /pandaznetwork.com/
+/(upfiles.app|haxi.online|upfion.com)/
 /app2.olamovies.download\/generate\/\?id=/
 /foodtechnos.in/
 /mixrootmod.com/

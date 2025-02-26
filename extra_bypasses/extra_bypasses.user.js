@@ -214,8 +214,7 @@
 // @include     /app.link2unlock.com/
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
-// @match       *://upfiles.app/*
-// @match       *://haxi.online/*
+// @include     /(upfiles.app|haxi.online|upfion.com)/
 // @match       https://datanodes.to/download
 // @match       *://dailyuploads.net/*
 // @match       *://www.ryuugames.com/?eroge=*
@@ -1379,10 +1378,10 @@
     /sunci.net/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('button#link-button.btn-primary:not(.btn-download)')}) : null;
 
     // upfiles.app
-    /(upfiles.app|haxi.online)\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
+    /(upfiles.app|haxi.online|upfion.com)\/[^\/]+/.test(url) ? afterDOMLoaded(function() {
         clickIfCorrectText('#link-button', 'Continue');
         clickIfRecaptchaSolved('#link-button');
-        //redirectIfNotDisabled('a#link-button');
+        redirectIfNotDisabled('a#link-button');
     }) : null;
 
     // datanodes - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/140

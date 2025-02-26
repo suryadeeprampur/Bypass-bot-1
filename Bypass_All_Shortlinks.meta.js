@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.8
+// @version        94.0.9
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -432,8 +432,6 @@
 // @match        https://bypass.city/bypass?bypass=*
 // @match        https://adbypass.org/bypass?bypass=*
 // @match       https://fc-lc.xyz/*
-// @match       *://upfiles.app/*
-// @match       *://haxi.online/*
 // @match       https://datanodes.to/download
 // @match       *://dailyuploads.net/*
 // @match       *://www.ryuugames.com/?eroge=*
@@ -657,6 +655,7 @@
 // @include     /app.link2unlock.com/
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
+// @include     /(upfiles.app|haxi.online|upfion.com)/
 // @include     /app2.olamovies.download\/generate\/\?id=/
 // @include     /foodtechnos.in/
 // @include     /mixrootmod.com/
