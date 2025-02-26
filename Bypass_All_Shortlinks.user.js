@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.4
+// @version        94.0.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -662,7 +662,7 @@
 // @include     /zaku.pro/
 // @include     /aylink.co|cpmlink.pro/
 // @include     /hypershort.com/
-// @include     /instaserve.net|gomob.xyz/
+// @include     /instaserve.net|gomob.xyz|gamechilly.online/
 // @include     /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
 // @include     /tech.hipsonyc.com|itijobalert.in/
 // @include     /golink.(gyanitheme.com|bloggerishyt.in)/
@@ -2704,7 +2704,7 @@
     } ) : null;
 
     // adrinolinks.in - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/244
-    /instaserve.net|gomob.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2');}) : null;
+    /instaserve.net|gomob.xyz|gamechilly.online/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2');}) : null;
 
     // uii.io
     function checkAllCaptchasSolved() {

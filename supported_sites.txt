@@ -644,7 +644,7 @@ https://paster.so/*
 /zaku.pro/
 /aylink.co|cpmlink.pro/
 /hypershort.com/
-/instaserve.net|gomob.xyz/
+/instaserve.net|gomob.xyz|gamechilly.online/
 /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
 /tech.hipsonyc.com|itijobalert.in/
 /golink.(gyanitheme.com|bloggerishyt.in)/
