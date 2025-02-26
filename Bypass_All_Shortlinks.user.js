@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.6
+// @version        94.0.7
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -1501,17 +1501,21 @@
     const url = window.location.href
     const redirect = (finalUrl) => typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
     const showClickMsg = () => typeof showAlert === 'function' ? showAlert("Button clicked...", 'success', 1000, '', 'secondary') : console.log("Button clicked...");
+    const clickElementBySelectorWithMsg = (selector) => { document.querySelector(selector).click(); showClickMsg(); };
+    const clickElementBySelector = (selector) => { clickElementBySelectorWithMsg(selector); };
+    const clickElementWithMsg = (element) => { element.click(); showClickMsg(); };
+    const clickElement = (element) => { clickElementWithMsg(element); };
     const getParam = (url, param) => new URLSearchParams(url).get(param);
     const rot13 = str => str.replace(/[A-Za-z]/g, char => String.fromCharCode((char.charCodeAt(0) % 32 + 13) % 26 + (char < 'a' ? 65 : 97)));
     const popupsToRedirects = () => window.open = (url, target, features) => (window.location.href = url, window);
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const afterWindowLoaded = (callback) => window.addEventListener('load', callback);
     const isValidUrl = url => /^(?:https?|ftp):\/\/(?:\w+\.){1,3}\w+(?:\/\S*)?$/.test(url);
-    const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); button.click(); showClickMsg(); } }, 1000); };
+    const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); clickElement(button); } }, 1000); };
     const redirectIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button.href && isValidUrl(button.href)) { clearInterval(intervalId); redirect(button.href) } }, 500); };
-    const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { button.click(); showClickMsg(); } }, 500); };
+    const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { clickElement(button); } }, 500); };
     const redirectIfNotDisabled = (selector) => { let intervalId = setInterval(() => { let linkButton = document.querySelector(selector + ':not(.disabled)'); if (linkButton && !linkButton.href.includes('/undefined')) { clearInterval(intervalId); setTimeout(function() {redirect(linkButton.href);}, 500) } }, 500); };
-    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && !button.classList.contains('disabled')) { clearInterval(intervalId); setTimeout(function() {button.click(); showClickMsg();}, 500) } }, 500); };
+    const clickIfNotDisabled = (buttonSelector) => { let intervalId = setInterval(() => { let button = document.querySelector(buttonSelector); if (!button.hasAttribute('disabled') && !button.classList.contains('disabled')) { clearInterval(intervalId); setTimeout(function() {clickElement(button);}, 500) } }, 500); };
     const checkElementVisible = element => element !== null && !!(element.offsetWidth || element.offsetHeight || element.getClientRects().length) && (!element.getAttribute('style') || !element.getAttribute('style').includes('display:none'));
     const clickIfVisible = selector => { afterDOMLoaded(function() { let intervalId = setInterval(() => { let element = document.querySelector(selector); if (checkElementVisible(element)) { clearInterval(intervalId); element.click(); showClickMsg(); } }, 1000); }); };
     const preventForcedFocusOnWindow = () => {window.mouseleave = true; window.onmouseover = true; document.hasFocus = function() {return true;}; Object.defineProperty(document, 'webkitVisibilityState', {get() {return 'visible';}});
@@ -1709,7 +1713,7 @@
     const redirectOrClickIfExistsEnabledWithDelay = (selector) => { afterDOMLoaded(function() { //Wait for the page to load
         let intervalId = setInterval(() => { //Check every 0.5s
           let button = document.querySelector(selector + ':not(.disabled)'); //Check the element is not disabled
-          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : button.click(); showClickMsg();}, 100);} //Redirect or click, with a 0.1s delay
+          if (button) {setTimeout(() => { isValidUrl(button.href) ? redirect(button.href) : clickElement(button);}, 100);} //Redirect or click, with a 0.1s delay
         }, 500);});};
     if (/((infytips|remixodiadj|bgmiaimassist).in|(cybertyrant|profitshort|technorozen|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale|inventoryidea|gamerxyt|betsatta|stockwallah|gtxhosty|anyrojgar).com|mphealth.online|hubdrive.me|advisecreate.fun|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|offerboom.top|kvkparbhani.org)/.test(url)){
         if (url.includes('?r=')) redirect(atob(url.split('?r=')[1]));
@@ -1825,7 +1829,7 @@
     // https://greasyfork.org/en/scripts/431691-bypass-all-shortlinks/discussions/263369
     // https://shrinkforearn.xyz/vAs1ikmO - leechpremium.link
     // https://www.reddit.com/r/uBlockOrigin/comments/1g50rur/unable_to_bypass_this_shortlink/
-    const clickWithDelay = (selector, delay) => { setTimeout(function() { document.querySelector(selector).click(); }, delay); };
+    const clickWithDelay = (selector, delay) => { showAlert('Clicking button in ' + Math.round(delay / 1000) + 's', 'info', delay, '', 'secondary'); setTimeout(function() { clickElementBySelector(selector); }, delay); };
     if (/uqozy.com|posterify.net|drinkspartner.com|manishclasses.in|boiscd.com/.test(url)) {
         afterDOMLoaded(function() {
             modifyScript('timeLeft = duration', 'timeLeft = 0'); // skip timers
@@ -2344,7 +2348,7 @@
     function clickAnyVisibleButtonNonStop(interval){
         let intervalId = setInterval(() => {
             const buttons = document.querySelectorAll('button'); //, input[type="button"], input[type="submit"]:focus-visible');
-            buttons.forEach(function(button) {if (button.offsetParent !== null) {button.click(); showClickMsg();}});
+            buttons.forEach(function(button) {if (button.offsetParent !== null) {clickElement(button);}});
         }, interval);
     }
     // /(surfsees.com|techyblogs.in)\/safe.php\?link=/.test(url) ? redirect('https://pokoarcade.com/token.php?id=' + url.split('link=')[1]) : null;
@@ -2375,7 +2379,7 @@
 
             function clickAvailableButtons(buttonTexts) {
                 let buttons = document.querySelectorAll('button, input[type="button"], input[type="submit"]:focus-visible');
-                buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {button.click(); showClickMsg();}});
+                buttons.forEach(function(button) {if (buttonTexts.includes(button.textContent.trim())) {clickElement(button);}});
             }
 
             //Different actions depending on current step
@@ -2796,7 +2800,7 @@
  * @param {string} prefix - Text prefix before the message
  * @param {string} position - Position of alert: 'primary' (top) or 'secondary' (below primary)
  */
-function showAlert(message, type = 'info', duration = 1000, prefix = 'Bypass All Shortlinks Debloated: ', position = 'primary') {
+function showAlert(message, type = 'info', duration = 1000, prefix = 'Bypass script: ', position = 'primary') {
     // Create alert element
     const alertDiv = document.createElement('div');
     

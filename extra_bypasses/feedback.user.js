@@ -11,7 +11,7 @@
  * @param {string} prefix - Text prefix before the message
  * @param {string} position - Position of alert: 'primary' (top) or 'secondary' (below primary)
  */
-function showAlert(message, type = 'info', duration = 1000, prefix = 'Bypass All Shortlinks Debloated: ', position = 'primary') {
+function showAlert(message, type = 'info', duration = 1000, prefix = 'Bypass script: ', position = 'primary') {
     // Create alert element
     const alertDiv = document.createElement('div');
     
