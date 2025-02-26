@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.9
+// @version        94.0.10
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2445,18 +2445,20 @@
         clickIfExists('div.code-block:nth-child(4) > center:nth-child(1) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1)');
     }) : null;
 
-    // vnshortener.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/110, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/149
+    // vnshortener.com (pxanimeurdu.com) - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/110, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/149
     /importantclass.com/.test(url) ? afterDOMLoaded(function() {
         window.countdown = 0;
+        showPopup();
         clickWithDelay('#my-btn', 3000);
     }) : null;
-    /bebkub.com/.test(url) ? afterDOMLoaded(function() {
+    /* /bebkub.com/.test(url) ? afterDOMLoaded(function() {
         clickWithDelay('#pro-continue', 1000);
         clickWithDelay('#VerifyBtn', 3000);
         clickWithDelay('#pro-btn', 5000);
-    }) : null;
+    }) : null; */
     /owoanime.com/.test(url) ? afterDOMLoaded(function() {
         window.countdown = 0;
+        showPopup();
         clickWithDelay('#pro-continue', 3000);
         clickWithDelay('#pro-btn', 5000);
     }) : null;
