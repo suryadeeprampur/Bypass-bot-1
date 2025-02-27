@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.15
+// @version        94.0.16
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.15
+// @version        94.0.16
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2767,10 +2767,6 @@
 (function() {
     //'use strict';
     const url = window.location.href
-    const boostTimers = () => {const FsT = window.setTimeout; const FsI = window.setInterval;
-        Object.defineProperty(window, 'setTimeout', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsT.apply(this, arguments);}});
-        Object.defineProperty(window, 'setInterval', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsI.apply(this, arguments);}});
-        };
     function boostTimers2() {
         // Store the original setInterval and setTimeout functions
         const originalSetInterval = window.setInterval;
@@ -2791,35 +2787,26 @@
         };
     }
 
-    // www.gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
-    /www.gtaall.com\/get-manual/.test(url) ? boostTimers() : null;
-
-    // psa.wf (adding here stuff missing from the main script)
-    /motakhokhara.blogspot.com/.test(url) ? boostTimers() : null;
-
-    // dramaday.me - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/21
-    /besargaji.com/.test(url) ? boostTimers() : null;
-
-    // relampagomovies.com
-    /^https:\/\/relampagomovies\.com\/.+/.test(url) ? boostTimers() : null;
-
-    // pahe.ink
-    // /teknoasian.com/.test(url) ? boostTimers() : null;
-
-    // goo.st - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/215
-    /goo.st|(businesssoftwarehere|freevpshere|softwaresolutionshere|travelironguide).com/.test(url) ? boostTimers() : null;
-
-    //linkpays.in
-    /((surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) && !url.includes('token.php') ? boostTimers2() : null;
-
-    // hyp.sh hypershort
-    /hypershort.com/.test(url) ? boostTimers2() : null;
-
-    // hdhub4u
-    /bgmiaimassist.in|(stockwallah|inventoryidea).com/.test(url) ? boostTimers2() : null;
-
-    // vnshortener.com
-    /owoanime.com|importantclass.com/.test(url) ? boostTimers2() : null;
+    const urlPatternsForTimerBoost = [
+        /www.gtaall.com\/get-manual/, // gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
+        /motakhokhara.blogspot.com/, // psa.wf
+        /besargaji.com/, // dramaday.me - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/21
+        /^https:\/\/relampagomovies\.com\/.+/, // relampagomovies.com
+        /goo.st|(businesssoftwarehere|freevpshere|softwaresolutionshere|travelironguide).com/, // goo.st - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/215
+        /((surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/, // linkpays.in
+        /hypershort.com/, // hyp.sh hypershort
+        /bgmiaimassist.in|(stockwallah|inventoryidea).com/, // hdhub4u
+        /owoanime.com|importantclass.com/ // vnshortener.com
+    ];
+    for (const pattern of urlPatternsForTimerBoost) {
+        if (pattern.test(url)) {
+            boostTimers2();
+            if (typeof showAlert === 'function') {
+                showAlert('Timers boosted', 'success', 1000, '', 'secondary');
+            }
+            break;
+        }
+    }
 
 })();
 // ----- ----- -----
