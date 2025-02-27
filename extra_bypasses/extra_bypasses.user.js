@@ -1232,6 +1232,9 @@
             setCookie("pxcheck", "aTBvaGg4a1dFMzNwcUM1aWtTaVprUT09");
         }
     }
+    /pxanimeurdu.com\/redirect\/main.php\?url=/.test(url) ? afterDOMLoaded(function() {
+        redirectIfExists('.px-effect-btn');
+    }) : null;
 
 
     // inshorturl.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/104, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/212, https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10744404
