@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.14
+// @version        94.0.15
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -666,6 +666,8 @@
 // @include     /tech.hipsonyc.com|itijobalert.in/
 // @include     /golink.(gyanitheme.com|bloggerishyt.in)/
 // @include     /pxanimeurdu.com/
+// @include     /techarmor.xyz/
+// @include     /get.cloudfam.io/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(retrotechreborn|insurelean|ecosolardigest).com|gally.shop|qanin.xyz|evegor.net)\/.*/
@@ -2755,6 +2757,10 @@
         //clickIfAllCaptchasSolved('#invisibleCaptchaShortlink');
         clickIfExists('#invisibleCaptchaShortlink');
     }) : null;
+
+    // cloudfam.io (rockmods.net)
+    if (/techarmor.xyz/.test(url) && !url.includes('safe2.php')) {redirect("https://" + new URL(url).hostname + "/safe2.php");}
+    /get.cloudfam.io/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
 
 })();
 

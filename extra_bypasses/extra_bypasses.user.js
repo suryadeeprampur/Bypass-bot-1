@@ -235,6 +235,8 @@
 // @include     /tech.hipsonyc.com|itijobalert.in/
 // @include     /golink.(gyanitheme.com|bloggerishyt.in)/
 // @include     /pxanimeurdu.com/
+// @include     /techarmor.xyz/
+// @include     /get.cloudfam.io/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1502,6 +1504,10 @@
         //clickIfAllCaptchasSolved('#invisibleCaptchaShortlink');
         clickIfExists('#invisibleCaptchaShortlink');
     }) : null;
+
+    // cloudfam.io (rockmods.net)
+    if (/techarmor.xyz/.test(url) && !url.includes('safe2.php')) {redirect("https://" + new URL(url).hostname + "/safe2.php");}
+    /get.cloudfam.io/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
 
 })();
 
