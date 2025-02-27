@@ -238,6 +238,7 @@
 // @include     /pxanimeurdu.com/
 // @include     /techarmor.xyz/
 // @include     /get.cloudfam.io/
+// @include     /monoschinos.club/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -435,6 +436,11 @@
     /links.cuevana.ac\/short/.test(url) ? afterDOMLoaded(function() {
         let extractedUrl = document.documentElement.innerHTML.split('\n').find(line => line.includes("document.getElementById('contador').href = 'htt")).split("href")[1].match(/'([^']+)'/)[1];
         extractedUrl.includes('?s=') ? redirect(extractedUrl.split('?s=')[1]) : redirect(extractedUrl);
+    }) : null;
+
+    // monoschinos3.com
+    /monoschinos.club/.test(url) ? afterDOMLoaded(function() { 
+        redirect(atob(document.querySelector('#wpsafe-link > a').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1].replace(/\\/g, ""));
     }) : null;
 
     //ouo.io
