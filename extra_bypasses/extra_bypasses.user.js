@@ -1514,21 +1514,14 @@
 (function() {
     //'use strict';
     const url = window.location.href
-    function boostTimers2() {
-        // Store the original setInterval and setTimeout functions
+    function boostTimers2() { // Overwrite setInterval and setTimeout
         const originalSetInterval = window.setInterval;
         const originalSetTimeout = window.setTimeout;
-    
-        // Overwrite the setInterval function
         window.setInterval = function(func, delay, ...args) {
-            // Modify the delay to 2% of its original value
             const newDelay = delay * 0.02;
             return originalSetInterval(func, newDelay, ...args);
         };
-    
-        // Overwrite the setTimeout function
         window.setTimeout = function(func, delay, ...args) {
-            // Modify the delay to 2% of its original value
             const newDelay = delay * 0.02;
             return originalSetTimeout(func, newDelay, ...args);
         };
