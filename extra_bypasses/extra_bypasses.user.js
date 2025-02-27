@@ -234,6 +234,7 @@
 // @include     /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
 // @include     /tech.hipsonyc.com|itijobalert.in/
 // @include     /golink.(gyanitheme.com|bloggerishyt.in)/
+// @include     /pxanimeurdu.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1190,26 +1191,48 @@
     }) : null;
 
     // vnshortener.com (pxanimeurdu.com) - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/110, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/149
+    function clickIfVisible3(selector) {
+        let intervalId = setInterval(() => {
+            let button = document.querySelector(selector);
+            if (button && button.offsetParent !== null) {
+                clearInterval(intervalId);
+                clickElement(button);
+            }
+        }, 1000);
+    }
+    /owoanime.com/.test(url) ? afterWindowLoaded(function() {
+        window.countdown = 0;
+        showPopup();
+        clickIfVisible3('#pro-continue');
+        clickIfVisible3('#pro-btn');
+    }) : null;
     /importantclass.com/.test(url) ? afterDOMLoaded(function() {
         window.countdown = 0;
         showPopup();
-        clickWithDelay('#my-btn', 3000);
-    }) : null;
-    /* /bebkub.com/.test(url) ? afterDOMLoaded(function() {
-        clickWithDelay('#pro-continue', 1000);
-        clickWithDelay('#VerifyBtn', 3000);
-        clickWithDelay('#pro-btn', 5000);
-    }) : null; */
-    /owoanime.com/.test(url) ? afterDOMLoaded(function() {
-        window.countdown = 0;
-        showPopup();
-        clickWithDelay('#pro-continue', 3000);
-        clickWithDelay('#pro-btn', 5000);
+        clickIfVisible3('#my-btn');
+        clickIfVisible3('#my-btn2');
     }) : null;
     /keedabankingnews.com/.test(url) ? afterWindowLoaded(function() {
         window.count = 0;
         clickIfExists('#tp-snp2');
     }) : null;
+
+
+    // pxanimeurdu.com
+    function setCookie(name, value) {
+        document.cookie = name + "=" + value + "; path=/";
+    }
+    function getCookie(name) {
+        var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+    }
+    if (/pxanimeurdu.com/.test(url)){
+        let pxcheckValue = getCookie("pxcheck");
+        if (!pxcheckValue) {
+            setCookie("pxcheck", "aTBvaGg4a1dFMzNwcUM1aWtTaVprUT09");
+        }
+    }
+
 
     // inshorturl.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/104, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/212, https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-10744404
     /(newshuta|5ghindi|gujaratalert|mahitimanch).in|(indiamaja|thespotifypremium).com/.test(url) ? afterDOMLoaded(function() {
@@ -1532,6 +1555,9 @@
 
     // hdhub4u
     /bgmiaimassist.in|(stockwallah|inventoryidea).com/.test(url) ? boostTimers2() : null;
+
+    // vnshortener.com
+    /owoanime.com|importantclass.com/.test(url) ? boostTimers2() : null;
 
 })();
 // ----- ----- -----
