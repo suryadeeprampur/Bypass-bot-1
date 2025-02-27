@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.16
+// @version        94.0.17
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -612,6 +612,7 @@
 // @include     /altearnativasa.com/
 // @include     /importantclass.com/
 // @include     /bebkub.com/
+// @include     /kbconlinegame.com/
 // @include     /owoanime.com/
 // @include     /keedabankingnews.com/
 // @include     /secure.moderngyan.com/
@@ -2455,6 +2456,12 @@
             }
         }, 1000);
     }
+    /kbconlinegame.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfVisible3('#pro-continue');
+        setTimeout(function() {
+            clickIfVisible3('#pro-btn');
+        }, 2000);
+    }) : null;
     /owoanime.com/.test(url) ? afterWindowLoaded(function() {
         window.countdown = 0;
         showPopup();
@@ -2765,7 +2772,7 @@
 })();
 
 (function() {
-    //'use strict';
+    'use strict';
     const url = window.location.href
     function boostTimers2() { // Overwrite setInterval and setTimeout
         const originalSetInterval = window.setInterval;
