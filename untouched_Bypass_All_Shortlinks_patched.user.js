@@ -37,7 +37,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        94.0.21
+// @version        94.0.22
 // @match          *://*/*
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -501,7 +501,7 @@
     BypassedByBloggerPemula(/adtival.network/, function() {if (BpParams.has('shortid')) {meta(atob(BpParams.get('shortid')));}});
     BypassedByBloggerPemula(/tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/, () => {CaptchaDone(() => {DoIfExists('#continue');});});
     BypassedByBloggerPemula(/(bnbfree|freeth|freebitco).in/, () => {CaptchaDone(() => {DoIfExists('#free_play_form_button');});});
-    BypassedByBloggerPemula(/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online/, () => {DoIfExists('#submit-button', 5, 'setInterval');});
+    BypassedByBloggerPemula(/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online|cutyion.com/, () => {DoIfExists('#submit-button', 5, 'setInterval');});
     BypassedByBloggerPemula(/khaddavi.net|contentmenarik.com/, () => {parent.open = BpBlock();CaptchaDone(() => {DoIfExists('#slu-btn');});});
     BypassedByBloggerPemula(/gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online/, function() {DoIfExists('#mdt', 3);});
     BypassedByBloggerPemula(/travelinian.com/, () => {DoIfExists('#rtgli1', 2);DoIfExists('#rtg-snp2', 3);DoIfExists('#open-continue-btn', 4);});

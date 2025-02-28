@@ -457,7 +457,7 @@
     /ouo.io/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#btn-main')}) : null;
 
     //cuty.io - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/46
-    /exeo.app|mrgec.com|cety.app|cuty.me/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
+    /exeo.app|mrgec.com|cety.app|cuty.me|cutyion.com/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#submit-button')}) : null;
 
     //oko.sh
     /lnbz.la/.test(url) ? afterDOMLoaded(function() {timeSec = 0; afterElementVisible('form', function() {clickIfExists('button#getlink.btn-success');}) }) : null;

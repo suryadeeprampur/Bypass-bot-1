@@ -258,7 +258,7 @@ uptobhai\.*|uplinkto\.*|shortlinkto\.*
 michaelemad.com|7misr4day.com
 tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la
 (bnbfree|freeth|freebitco).in
-cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online
+cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online|cutyion.com
 khaddavi.net|contentmenarik.com
 gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online
 sfl.gl|moneyblink.com
