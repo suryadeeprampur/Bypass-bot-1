@@ -467,7 +467,7 @@
         redirect(atob(document.querySelector('#wpsafe-link > a').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1].replace(/\\/g, ""));
     }) : null;
 
-    // serieslandia.com, mega1link.com
+    // serieslandia.com, mega1link.com, peliculas-dvdrip.com
     /(pelistop.xyz|tuconstanteonline.com|librolandia.cc|posicionamientoweb.click)\/#/.test(url) ? (() => {
         redirect(decodeURIComponent(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0]));
     })() : null;
