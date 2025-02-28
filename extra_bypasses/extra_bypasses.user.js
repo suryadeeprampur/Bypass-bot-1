@@ -239,7 +239,7 @@
 // @include     /techarmor.xyz/
 // @include     /get.cloudfam.io/
 // @include     /monoschinos.club/
-// @include     /(pelistop.xyz|tuconstanteonline.com)\/#/
+// @include     /(pelistop.xyz|tuconstanteonline.com|librolandia.cc|posicionamientoweb.click)\/#/
 // @include     /subtituladas.org\/enlace/
 // @run-at      document-start
 // ==/UserScript==
@@ -467,8 +467,10 @@
         redirect(atob(document.querySelector('#wpsafe-link > a').getAttribute('onclick').match(/'(https:\/\/[^']+)'/)[1].split('safelink_redirect=')[1]).match(/"safelink":"(.*?)"/)[1].replace(/\\/g, ""));
     }) : null;
 
-    // serieslandia.com
-    /(pelistop.xyz|tuconstanteonline.com)\/#/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0])) : null;
+    // serieslandia.com, mega1link.com
+    /(pelistop.xyz|tuconstanteonline.com|librolandia.cc|posicionamientoweb.click)\/#/.test(url) ? (() => {
+        redirect(decodeURIComponent(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0]));
+    })() : null;
 
     // subtituladas.org
     /subtituladas.org\/enlace/.test(url) ? boostTimers() : null;
