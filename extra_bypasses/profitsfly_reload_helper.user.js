@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        profitsfly reload helper
-// @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest).com|gally.shop|qanin.xyz|evegor.net)\/.*/
+// @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240).com|gally.shop|qanin.xyz|evegor.net)\/.*/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -8,7 +8,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest).com|gally.shop|qanin.xyz|evegor.net)\/.*/;
+    const domainRegex = /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240).com|gally.shop|qanin.xyz|evegor.net)\/.*/;
     if (domainRegex.test(window.location.href)) {
 
         // ---RELOAD DEAD-END PAGES---

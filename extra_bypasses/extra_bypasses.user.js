@@ -50,7 +50,7 @@
 // @include     /techfizia.com/
 // @include     /tech5s.co/
 // @include     /ez4mods.com/
-// @include     /ez4short.com|zshort.io/
+// @include     /ez4short.com|zshort.io|lkfms.pro/
 // @include     /learnmany.in/
 // @include     /lksfy.in/
 // @include     /droplink.co/
@@ -226,6 +226,7 @@
 // @match       *://linkslice.io/*
 // @match       *://zshort.io/*
 // @match       *://easy4skip.com/*
+// @match       *://lkfms.pro/*
 // @include     /foodtechnos.in/
 // @include     /mixrootmod.com/
 // @include     /zaku.pro/
@@ -1493,7 +1494,7 @@
             });
         }, 500);
     }
-    /((btcut|linkslice|zshort).io|easy4skip.com)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
+    /((btcut|linkslice|zshort).io|easy4skip.com|lkfms.pro)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
         redirectToAnyLinkWithMatchingTextContent("Get Link");
     }) : null;
 
