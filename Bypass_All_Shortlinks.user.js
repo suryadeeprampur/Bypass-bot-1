@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.19
+// @version        94.0.20
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -1503,7 +1503,8 @@
     const isValidUrl = url => /^(?:https?|ftp):\/\/(?:\w+\.){1,3}\w+(?:\/\S*)?$/.test(url);
     function redirect(finalUrl) {
         if (isValidUrl(finalUrl)) {
-            typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
+            //typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
+            window.location.assign(finalUrl);
         } else {
             showAlert("Invalid URL: " + finalUrl, 'error', 3000, '', 'secondary');
         }
