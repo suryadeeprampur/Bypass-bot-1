@@ -671,7 +671,7 @@
 // @include     /techarmor.xyz/
 // @include     /get.cloudfam.io/
 // @include     /monoschinos.club/
-// @include     /(pelistop.xyz|tuconstanteonline.com|librolandia.cc|posicionamientoweb.click|dietadisociada.info)\/#/
+// @include     /(pelistop.xyz|tuconstanteonline.com|librolandia.cc|posicionamientoweb.click|dietadisociada.info)/
 // @include     /subtituladas.org\/enlace/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/

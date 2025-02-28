@@ -240,7 +240,7 @@
 // @include     /techarmor.xyz/
 // @include     /get.cloudfam.io/
 // @include     /monoschinos.club/
-// @include     /(pelistop.xyz|tuconstanteonline.com|librolandia.cc|posicionamientoweb.click|dietadisociada.info)\/#/
+// @include     /(pelistop.xyz|tuconstanteonline.com|librolandia.cc|posicionamientoweb.click|dietadisociada.info)/
 // @include     /subtituladas.org\/enlace/
 // @run-at      document-start
 // ==/UserScript==
