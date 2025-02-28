@@ -240,6 +240,7 @@
 // @include     /get.cloudfam.io/
 // @include     /monoschinos.club/
 // @include     /(pelistop.xyz|tuconstanteonline.com)\/#/
+// @include     /subtituladas.org\/enlace/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -279,6 +280,19 @@
     const preventForcedFocusOnWindow = () => {window.mouseleave = true; window.onmouseover = true; document.hasFocus = function() {return true;}; Object.defineProperty(document, 'webkitVisibilityState', {get() {return 'visible';}});
         Object.defineProperty(document, 'visibilityState', {get() {return 'visible';}}); window.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true);
         window.addEventListener('focus', onfocus, true);document.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true); Object.defineProperty(document, 'hidden', {get() {return false;}});};
+
+    function boostTimers() { // Overwrite setInterval and setTimeout
+        const originalSetInterval = window.setInterval;
+        const originalSetTimeout = window.setTimeout;
+        window.setInterval = function(func, delay, ...args) {
+            const newDelay = delay * 0.02;
+            return originalSetInterval(func, newDelay, ...args);
+        };
+        window.setTimeout = function(func, delay, ...args) {
+            const newDelay = delay * 0.02;
+            return originalSetTimeout(func, newDelay, ...args);
+        };
+    }
 
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
@@ -455,6 +469,10 @@
 
     // serieslandia.com
     /(pelistop.xyz|tuconstanteonline.com)\/#/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0])) : null;
+
+    // subtituladas.org
+    /subtituladas.org\/enlace/.test(url) ? boostTimers() : null;
+    /subtituladas.org\/enlace/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#link')}) : null;
 
     //ouo.io
     /ouo.io/.test(url) && url.includes('?s=') ? redirect(decodeURIComponent(url.split('?s=')[1])) : null;
@@ -1533,24 +1551,7 @@
     if (/techarmor.xyz/.test(url) && !url.includes('safe2.php')) {redirect("https://" + new URL(url).hostname + "/safe2.php");}
     /get.cloudfam.io/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
 
-})();
-
-(function() {
-    'use strict';
-    const url = window.location.href
-    function boostTimers2() { // Overwrite setInterval and setTimeout
-        const originalSetInterval = window.setInterval;
-        const originalSetTimeout = window.setTimeout;
-        window.setInterval = function(func, delay, ...args) {
-            const newDelay = delay * 0.02;
-            return originalSetInterval(func, newDelay, ...args);
-        };
-        window.setTimeout = function(func, delay, ...args) {
-            const newDelay = delay * 0.02;
-            return originalSetTimeout(func, newDelay, ...args);
-        };
-    }
-
+    // Timer boost list
     const urlPatternsForTimerBoost = [
         /www.gtaall.com\/get-manual/, // gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
         /motakhokhara.blogspot.com/, // psa.wf
@@ -1564,7 +1565,7 @@
     ];
     for (const pattern of urlPatternsForTimerBoost) {
         if (pattern.test(url)) {
-            boostTimers2();
+            boostTimers();
             if (typeof showAlert === 'function') {
                 showAlert('Timers boosted', 'success', 1000, '', 'secondary');
             }
@@ -1573,4 +1574,5 @@
     }
 
 })();
+
 // ----- ----- -----
