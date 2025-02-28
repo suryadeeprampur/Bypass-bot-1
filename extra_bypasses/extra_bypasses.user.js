@@ -247,7 +247,15 @@
     'use strict';
 
     const url = window.location.href
-    const redirect = (finalUrl) => typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
+    const isValidUrl = url => /^(?:https?|ftp):\/\/(?:\w+\.){1,3}\w+(?:\/\S*)?$/.test(url);
+    function redirect(finalUrl) {
+        if (isValidUrl(finalUrl)) {
+            typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
+        } else {
+            showAlert("Invalid URL: " + finalUrl, 'error', 3000, '', 'secondary');
+        }
+    }
+    const fastRedirect = (url) => window.location.assign(url);
     const showClickMsg = () => typeof showAlert === 'function' ? showAlert("Button clicked...", 'success', 1000, '', 'secondary') : console.log("Button clicked...");
     const clickElementBySelectorWithMsg = (selector) => { document.querySelector(selector).click(); showClickMsg(); };
     const clickElementBySelector = (selector) => { clickElementBySelectorWithMsg(selector); };
@@ -258,7 +266,7 @@
     const popupsToRedirects = () => window.open = (url, target, features) => (window.location.href = url, window);
     const afterDOMLoaded = (callback) => document.addEventListener('DOMContentLoaded', callback);
     const afterWindowLoaded = (callback) => window.addEventListener('load', callback);
-    const isValidUrl = url => /^(?:https?|ftp):\/\/(?:\w+\.){1,3}\w+(?:\/\S*)?$/.test(url);
+    
     const clickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); clickElement(button); } }, 1000); };
     const redirectIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button.href && isValidUrl(button.href)) { clearInterval(intervalId); redirect(button.href) } }, 500); };
     const clickIfExistsNonStop = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector + ':not(.disabled)'); if (button) { clickElement(button); } }, 500); };
@@ -492,21 +500,19 @@
     /besargaji.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn-2')}) : null;
     /moneyblink.com\/ready\/go\?u=/.test(url)? redirect(atob(url.split('?u=')[1])) : null;
 
-    // dramaday.me - linkspy.cc & droplink.co/st?api=...&url=... concatenated
-    //ovagames.com - linkspy.cc & clicksfly.com|shrinkme.io|clk.sh|shrinkearn.com|clk.asia|clk.wiki concatenated - https://github.com/FastForwardTeam/FastForward/issues/1352
-    if (/linkspy.cc\/tr/.test(url)){
-        const decodedUrl = atob(url.split('/tr/')[1]);
-        const urlParam = getParam(decodedUrl,'url');
-        if (!urlParam) redirect(decodedUrl); //default case
-        redirect(urlParam); //case for dramaday.me
-        redirect(atob(urlParam)); //case for ovagames.com
-    }
-    if (/linkspy.cc\/\/a/.test(url) && url.includes('aHR0')) {
+    // dramaday.me -  linkspy.cc & droplink.co/st?api=...&url=... concatenated
+    // ovagames.com - linkspy.cc & clicksfly.com|shrinkme.io|clk.sh|shrinkearn.com|clk.asia|clk.wiki concatenated - https://github.com/FastForwardTeam/FastForward/issues/1352
+    // l4s.cc
+    if (/linkspy.cc/.test(url) && url.includes('aHR0')) {
         const decodedUrl = atob('aHR0' + url.split('aHR0')[1]);
         const urlParam = getParam(decodedUrl,'url');
-        if (!urlParam) redirect(decodedUrl); //default case
-        redirect(urlParam); //case for dramaday.me
-        redirect(atob(urlParam)); //case for ovagames.com
+        if (!urlParam) { // general case
+            fastRedirect(decodedUrl);
+        } else if (isValidUrl(urlParam)) { //case for dramaday.me
+            fastRedirect(urlParam);
+        } else if (isValidUrl(atob(urlParam))) { //case for ovagames.com
+            fastRedirect(atob(urlParam));
+        }
     }
     /www.ovagames.com\/.*\.html$/.test(url) ? afterWindowLoaded(function() {
         document.querySelectorAll('a[href*="https://l4s.cc/q/e/1f/aHR0"]').forEach(link => {
