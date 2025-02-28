@@ -138,6 +138,8 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online/", "/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online|cutyion.com/")
 
+    content = content.replace("/playonpc.online|quins.us|(retrotechreborn|insurelean|ecosolardigest).com|gally.shop/", "/playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest).com|gally.shop/")
+
     content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:

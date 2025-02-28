@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        profitsfly reload helper
-// @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(retrotechreborn|insurelean|ecosolardigest).com|gally.shop|qanin.xyz|evegor.net)\/.*/
+// @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest).com|gally.shop|qanin.xyz|evegor.net)\/.*/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -8,7 +8,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /^https:\/\/(.*\.|)(playonpc.online|quins.us|(retrotechreborn|insurelean|ecosolardigest).com|gally.shop|qanin.xyz|evegor.net)\/.*/;
+    const domainRegex = /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest).com|gally.shop|qanin.xyz|evegor.net)\/.*/;
     if (domainRegex.test(window.location.href)) {
 
         // ---RELOAD DEAD-END PAGES---
@@ -29,14 +29,17 @@
             // Function to check for messages like "Click any ad & keep it open for 15 seconds to continue" and reload the page if one exists
             let reloading = false;
             function checkForMessage() {
-                const paragraphs = document.getElementsByTagName("p");
-                for (let p of paragraphs) {
-                    if (/.*click.+ad.*to.+continue.*/is.test(p.textContent) && isElementVisibleAndEnabled(p)) {
-                        if (!reloading) location.reload(); // Reload the page
-                        reloading = true;
-                        return; // Exit the function after reloading
-                    }
-                }
+
+                // "Click on ad to continue" can be ignored for now
+                // const paragraphs = document.getElementsByTagName("p");
+                // for (let p of paragraphs) {
+                //     if (/.*click.+ad.*to.+continue.*/is.test(p.textContent) && isElementVisibleAndEnabled(p)) {
+                //         if (!reloading) location.reload(); // Reload the page
+                //         reloading = true;
+                //         return; // Exit the function after reloading
+                //     }
+                // }
+
                 if (/Less than.+passed between actions.+try again/.test(document.body.textContent)) {
                     if (!reloading) location.reload(); // Reload the page
                     reloading = true;
@@ -68,6 +71,12 @@
 
             // Set auxiliary variables
             window.assDidCkeDone = true;
+
+            // Hide adblock detection; alternative with uBO: historyofyesterday.com##.unblocker-container
+            setInterval(() => {
+                const unblockerContainer = document.querySelector(".unblocker-container");
+                if (unblockerContainer) {unblockerContainer.style.display = "none";}
+            }, 1000);
 
             // ---Remove YouTube modal and banner--- 
             // (alternative with uBO : https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-11864776)
