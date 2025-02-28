@@ -249,12 +249,12 @@
     const url = window.location.href
     const isValidUrl = url => /^(?:https?|ftp):\/\/(?:\w+\.){1,3}\w+(?:\/\S*)?$/.test(url);
     function redirect(finalUrl) {
-        if (isValidUrl(finalUrl)) {
+        //if (isValidUrl(finalUrl)) {
             //typeof redirectWithMessage === 'function' ? redirectWithMessage(finalUrl) : window.location.assign(finalUrl);
             window.location.assign(finalUrl);
-        } else {
-            showAlert("Invalid URL: " + finalUrl, 'error', 3000, '', 'secondary');
-        }
+        //} else {
+        //    showAlert("Invalid URL: " + finalUrl, 'error', 3000, '', 'secondary');
+        //}
     }
     const fastRedirect = (url) => window.location.assign(url);
     const showClickMsg = () => typeof showAlert === 'function' ? showAlert("Button clicked...", 'success', 1000, '', 'secondary') : console.log("Button clicked...");
