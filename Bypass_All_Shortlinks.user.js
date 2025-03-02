@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.33
+// @version        94.0.34
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2835,7 +2835,9 @@
 
     // file-upload.org
     /file-upload.org/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('.btn.btn-outline-primary.submit-btn.m-2');
+        clickIfExists('.btn.btn-outline-primary.submit-btn.m-2[name="method_free"]');
+        clickIfHCaptchaSolved('#downloadbtn:not([disabled="disabled"])');
+        redirectIfNotDisabled('a#downloadButton');
     }) : null;
 
     // up-4ever.net

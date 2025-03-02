@@ -1582,7 +1582,9 @@
 
     // file-upload.org
     /file-upload.org/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('.btn.btn-outline-primary.submit-btn.m-2');
+        clickIfExists('.btn.btn-outline-primary.submit-btn.m-2[name="method_free"]');
+        clickIfHCaptchaSolved('#downloadbtn:not([disabled="disabled"])');
+        redirectIfNotDisabled('a#downloadButton');
     }) : null;
 
     // up-4ever.net
