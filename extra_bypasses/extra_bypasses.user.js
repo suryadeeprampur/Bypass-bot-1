@@ -243,6 +243,7 @@
 // @include     /(pelistop.xyz|tuconstanteonline.com|librolandia.cc|posicionamientoweb.click|dietadisociada.info)/
 // @include     /subtituladas.org\/enlace/
 // @include     /flycutlink.com/
+// @include     /drop.download/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1570,6 +1571,11 @@
         openHCaptchaWhenVisible();
         clickIfNotDisabled('#invisibleCaptchaShortlink');
         redirectIfNotDisabled('a.get-link');
+    }) : null;
+
+    // drop.download
+    /drop.download/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#method_free');
     }) : null;
 
     // Timer boost list
