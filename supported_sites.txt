@@ -414,7 +414,6 @@ https://bypass.city/bypass?bypass=*
 https://adbypass.org/bypass?bypass=*
 https://fc-lc.xyz/*
 https://datanodes.to/download
-*://dailyuploads.net/*
 *://www.ryuugames.com/?eroge=*
 *://anchoreth.com/r-adsh?t=i&v=*
 *://*.btcut.io/*
@@ -577,7 +576,7 @@ https://paster.so/*
 /playpastelinks.com/
 /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 /ielts-isa.edu.vn/
-/flash.getpczone.com/
+/flash.getpczone.com|get.rahim-soft.com/
 /(surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online/
 /cgsonglyricz.in|www.techhubcap.com/
 /cryptings.in|vbnmx.online/
@@ -639,6 +638,7 @@ https://paster.so/*
 /freemodsapp.in/
 /pandaznetwork.com/
 /(upfiles.app|haxi.online|upfion.com)/
+/dailyuploads.net/
 /app2.olamovies.download\/generate\/\?id=/
 /foodtechnos.in/
 /mixrootmod.com/
@@ -659,6 +659,9 @@ https://paster.so/*
 /drop.download/
 /file-upload.org/
 /up-4ever.net/
+/frdl.is/
+/mega4upload.net/
+/filespayouts.com/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 /(mega-enlace|acortados).com/
 /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|qanin.xyz|evegor.net)\/.*/

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.34
+// @version        94.0.35
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -432,7 +432,6 @@
 // @match        https://adbypass.org/bypass?bypass=*
 // @match       https://fc-lc.xyz/*
 // @match       https://datanodes.to/download
-// @match       *://dailyuploads.net/*
 // @match       *://www.ryuugames.com/?eroge=*
 // @match       *://anchoreth.com/r-adsh?t=i&v=*
 // @match       *://*.btcut.io/*
@@ -595,7 +594,7 @@
 // @include     /playpastelinks.com/
 // @include     /stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/
 // @include     /ielts-isa.edu.vn/
-// @include     /flash.getpczone.com/
+// @include     /flash.getpczone.com|get.rahim-soft.com/
 // @include     /(surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online/
 // @include     /cgsonglyricz.in|www.techhubcap.com/
 // @include     /cryptings.in|vbnmx.online/
@@ -657,6 +656,7 @@
 // @include     /freemodsapp.in/
 // @include     /pandaznetwork.com/
 // @include     /(upfiles.app|haxi.online|upfion.com)/
+// @include     /dailyuploads.net/
 // @include     /app2.olamovies.download\/generate\/\?id=/
 // @include     /foodtechnos.in/
 // @include     /mixrootmod.com/
@@ -677,6 +677,9 @@
 // @include     /drop.download/
 // @include     /file-upload.org/
 // @include     /up-4ever.net/
+// @include     /frdl.is/
+// @include     /mega4upload.net/
+// @include     /filespayouts.com/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|qanin.xyz|evegor.net)\/.*/
