@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.29
+// @version        94.0.30
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -2809,8 +2809,18 @@
     /get.cloudfam.io/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
 
     // flycutlink.com (daemonanime.net)
+    function openHCaptchaWhenVisible() {
+        let intervalId = setInterval(() => {
+            let hCaptchaWidget = document.querySelector('iframe[src*="hcaptcha.com"]');
+            if (hCaptchaWidget && hCaptchaWidget.offsetParent !== null) {
+                clearInterval(intervalId);
+                window.hcaptcha.execute();
+            }
+        }, 500);
+    }
     /flycutlink.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('button.btn-primary.btn:nth-child(4)');
+        openHCaptchaWhenVisible();
         clickIfNotDisabled('#invisibleCaptchaShortlink');
         redirectIfNotDisabled('a.get-link');
     }) : null;
@@ -3311,6 +3321,17 @@ function redirectWithMessage(url) {
             setInterval(checkForMessage, 1000);
         }
 
+        // -- Open captchas
+        function openHCaptchaWhenVisible() {
+            let intervalId = setInterval(() => {
+                let hCaptchaWidget = document.querySelector('iframe[src*="hcaptcha.com"]');
+                if (hCaptchaWidget && hCaptchaWidget.offsetParent !== null) {
+                    clearInterval(intervalId);
+                    window.hcaptcha.execute();
+                }
+            }, 500);
+        }
+        openHCaptchaWhenVisible();
 
         // ---After DOM loaded---
         document.addEventListener('DOMContentLoaded', function() {

@@ -65,6 +65,17 @@
             setInterval(checkForMessage, 1000);
         }
 
+        // -- Open captchas
+        function openHCaptchaWhenVisible() {
+            let intervalId = setInterval(() => {
+                let hCaptchaWidget = document.querySelector('iframe[src*="hcaptcha.com"]');
+                if (hCaptchaWidget && hCaptchaWidget.offsetParent !== null) {
+                    clearInterval(intervalId);
+                    window.hcaptcha.execute();
+                }
+            }, 500);
+        }
+        openHCaptchaWhenVisible();
 
         // ---After DOM loaded---
         document.addEventListener('DOMContentLoaded', function() {
