@@ -242,6 +242,7 @@
 // @include     /monoschinos.club/
 // @include     /(pelistop.xyz|tuconstanteonline.com|librolandia.cc|posicionamientoweb.click|dietadisociada.info)/
 // @include     /subtituladas.org\/enlace/
+// @include     /flycutlink.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1553,6 +1554,13 @@
     // cloudfam.io (rockmods.net)
     if (/techarmor.xyz/.test(url) && !url.includes('safe2.php')) {redirect("https://" + new URL(url).hostname + "/safe2.php");}
     /get.cloudfam.io/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
+
+    // flycutlink.com (daemonanime.net)
+    /flycutlink.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('button.btn-primary.btn:nth-child(4)');
+        clickIfNotDisabled('#invisibleCaptchaShortlink');
+        redirectIfNotDisabled('a.get-link');
+    }) : null;
 
     // Timer boost list
     const urlPatternsForTimerBoost = [
