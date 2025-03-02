@@ -244,6 +244,7 @@
 // @include     /subtituladas.org\/enlace/
 // @include     /flycutlink.com/
 // @include     /drop.download/
+// @include     /file-upload.org/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1576,6 +1577,11 @@
     // drop.download
     /drop.download/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('#method_free');
+    }) : null;
+
+    // file-upload.org
+    /file-upload.org/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('.btn.btn-outline-primary.submit-btn.m-2');
     }) : null;
 
     // Timer boost list
