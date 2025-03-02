@@ -245,6 +245,7 @@
 // @include     /flycutlink.com/
 // @include     /drop.download/
 // @include     /file-upload.org/
+// @include     /up-4ever.net/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1582,6 +1583,13 @@
     // file-upload.org
     /file-upload.org/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('.btn.btn-outline-primary.submit-btn.m-2');
+    }) : null;
+
+    // up-4ever.net
+    /up-4ever.net/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('input.btn-dark[name="method_free"]');
+        clickIfRecaptchaSolved('#downloadbtn:not(.disabled)');
+        redirectIfNotDisabled('a#downLoadLinkButton');
     }) : null;
 
     // Timer boost list
