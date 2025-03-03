@@ -251,6 +251,7 @@
 // @include     /filespayouts.com/
 // @include     /loanoffer.cc/
 // @include     /count.vipurl.in/
+// @include     /(smartfeecalculator|thecubexguide).com|(djxmaza|jytechs|gujjukhabar).in/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -302,6 +303,9 @@
             const newDelay = delay * 0.02;
             return originalSetTimeout(func, newDelay, ...args);
         };
+        if (typeof showAlert === 'function') {
+            showAlert('Timers boosted', 'success', 3000, '', 'secondary');
+        }
     }
 
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
@@ -1630,6 +1634,45 @@
         redirectIfNotDisabled('a#downLoadLinkButton');
     }) : null;
 
+    // devuploads
+    function clickIfVisible5(selector) {
+        let intervalId = setInterval(() => {
+            let element = document.querySelector(selector);
+            if (element && element.style.display === 'block') {
+                clearInterval(intervalId);
+                clickElement(element);
+            }
+        }, 500);
+    }
+
+    function popupsToRedirectsForUrlsIncludingText(text) {
+        window.open = (url, target, features) => {
+            if (url.includes(text)) {
+                showAlert('Redirecting to ' + url, 'success', 3000, '', 'secondary');
+                window.location.assign(url);
+            } else {
+                showAlert('Popup blocked. Link not allowed: ' + url, 'error', 3000, '', 'secondary');
+            }
+        };
+    }
+
+    if (/(smartfeecalculator|thecubexguide).com|(djxmaza|jytechs|gujjukhabar).in/.test(url)) {
+        boostTimers();
+        afterWindowLoaded(function() {
+            //modifyScript('isadblock = 1;', 'isadblock = 0;');
+            //modifyScript('"#sdl"', '"#dln"');
+            //window.isadblock = 0;
+            if (document.body.textContent.includes('Well Done! DL link generated.')) {
+                popupsToRedirectsForUrlsIncludingText('.devuploads');
+                setTimeout(function() {document.querySelector('#dln').click();}, 1000);
+                //clickWithDelay('#sdl', 3000);
+            } else {
+                clickIfVisible5('#gdl');
+                clickIfVisible5('#gdlf');
+            }
+        })
+    }
+
     // Timer boost list
     const urlPatternsForTimerBoost = [
         /www.gtaall.com\/get-manual/, // gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
@@ -1645,9 +1688,6 @@
     for (const pattern of urlPatternsForTimerBoost) {
         if (pattern.test(url)) {
             boostTimers();
-            if (typeof showAlert === 'function') {
-                showAlert('Timers boosted', 'success', 1000, '', 'secondary');
-            }
             break;
         }
     }
