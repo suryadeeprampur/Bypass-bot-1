@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.38
+// @version        94.0.39
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -108,14 +108,10 @@
 // @match *://*.krakenfiles.com/*
 // @match *://*.file-upload.net/*
 // @match *://*.hexupload.net/*
-// @match *://*.gofile.io/*
-// @match *://*.rapidgator.net/*
 // @match *://*.dbree.me/*
 // @match *://*.megaupto.com/*
-// @match *://*.karanpc.com/*
 // @match *://*.douploads.net/*
 // @match *://*.dataupload.net/*
-// @match *://*.buzzheavier.com/*
 // @match *://*.filemoon.sx/*
 // @match *://*.dailyuploads.net/*
 // @match *://*.bestfonts.pro/*
@@ -123,7 +119,6 @@
 // @match *://*.files.fm/*
 // @match *://*.megaup.net/*
 // @match *://*.mega4upload.net/*
-// @match *://*.financemonk.net/*
 // @match *://*.adoc.pub/*
 // @match *://*.pdfcoffee.com/*
 // @match *://*.uploady.io/*
@@ -132,14 +127,11 @@
 // @match *://*.mexa.sh/*
 // @match *://*.hitfile.net/*
 // @match *://*.4fnet.org/*
-// @match *://*.udrop.com/*
 // @match *://*.mp4upload.com/*
-// @match *://*.drop.download/*
 // @match *://*.workupload.com/*
 // @match *://*.send.cm/*
 // @match *://*.mega4up.org/*
 // @match *://*.uploadhaven.com/*
-// @match *://*.k2s.cc/*
 // @match *://*.ac.totsugeki.com/*
 // @match *://*.anonym.ninja/*
 // @match *://*.vosan.co/*
@@ -148,11 +140,9 @@
 // @match *://*.takefile.link/*
 // @match *://*.appsblaze.com/*
 // @match *://*.modcombo.com/*
-// @match *://*.1fichier.com/*
 // @match *://*.fileresources.net/*
 // @match *://*.freepreset.net/*
 // @match *://*.doodrive.com/*
-// @match *://*.mediafire.com/*
 // @match *://*.qiwi.gg/*
 // @match *://*.turbobit.net/*
 // @match *://*.sharemods.com/*

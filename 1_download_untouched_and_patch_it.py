@@ -142,6 +142,35 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("BypassedByBloggerPemula(/dropgalaxy", "//BypassedByBloggerPemula(/dropgalaxy")
 
+    content = content.replace('    AutoDL: {label: "Auto Download For Supported Sites", type: "checkbox", default: false,},},});', '    AutoDL: {label: "Auto Download For Supported Sites", type: "checkbox", default: true,},},});')
+
+    linestoremove = """    BypassedByBloggerPemula(/drop.download/, function() {
+      DoIfExists('#method_free', 2);DoIfExists('.btn-download', 2);});
+"""
+    content = content.replace(linestoremove, "")
+
+    linestoremove = """    BypassedByBloggerPemula(/k2s.cc/, function() {DoIfExists('.button-download-slow', 2);
+      waitForElm('a.link-to-file', k2s => redirect(k2s.href, false));});
+"""
+    content = content.replace(linestoremove, "")
+
+    linestoremove = """    BypassedByBloggerPemula(/1fichier.com/, function() {
+      if (elementExists('#pass')) {} else {DoIfExists('.btn-orange.btn-general.ok', 1);DoIfExists('.alc', 'submit', 1);}});
+"""
+    content = content.replace(linestoremove, "")
+
+    linestoremove = """    BypassedByBloggerPemula(/mediafire.com/, function() {var bass;var md = function closeWindows() {window.close();clearInterval(bass);};
+      var mf = bp('.download_link .input').getAttribute('href');console.log(mf);location.replace(mf);bass = setInterval(md, 1000 * 5);});
+"""
+    content = content.replace(linestoremove, "")
+
+    content = content.replace("BypassedByBloggerPemula(/financemonk.net", "//BypassedByBloggerPemula(/financemonk.net")
+    content = content.replace("BypassedByBloggerPemula(/buzzheavier.com", "//BypassedByBloggerPemula(/buzzheavier.com")
+    content = content.replace("BypassedByBloggerPemula(/gofile.io", "//BypassedByBloggerPemula(/gofile.io")
+    content = content.replace("BypassedByBloggerPemula(/rapidgator.net", "//BypassedByBloggerPemula(/rapidgator.net")
+    content = content.replace("BypassedByBloggerPemula(/karanpc.com", "//BypassedByBloggerPemula(/karanpc.com")
+    content = content.replace("BypassedByBloggerPemula(/udrop.com", "//BypassedByBloggerPemula(/udrop.com")
+
     content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:

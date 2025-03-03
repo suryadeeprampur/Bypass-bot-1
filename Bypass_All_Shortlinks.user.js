@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.38
+// @version        94.0.39
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -108,14 +108,10 @@
 // @match *://*.krakenfiles.com/*
 // @match *://*.file-upload.net/*
 // @match *://*.hexupload.net/*
-// @match *://*.gofile.io/*
-// @match *://*.rapidgator.net/*
 // @match *://*.dbree.me/*
 // @match *://*.megaupto.com/*
-// @match *://*.karanpc.com/*
 // @match *://*.douploads.net/*
 // @match *://*.dataupload.net/*
-// @match *://*.buzzheavier.com/*
 // @match *://*.filemoon.sx/*
 // @match *://*.dailyuploads.net/*
 // @match *://*.bestfonts.pro/*
@@ -123,7 +119,6 @@
 // @match *://*.files.fm/*
 // @match *://*.megaup.net/*
 // @match *://*.mega4upload.net/*
-// @match *://*.financemonk.net/*
 // @match *://*.adoc.pub/*
 // @match *://*.pdfcoffee.com/*
 // @match *://*.uploady.io/*
@@ -132,14 +127,11 @@
 // @match *://*.mexa.sh/*
 // @match *://*.hitfile.net/*
 // @match *://*.4fnet.org/*
-// @match *://*.udrop.com/*
 // @match *://*.mp4upload.com/*
-// @match *://*.drop.download/*
 // @match *://*.workupload.com/*
 // @match *://*.send.cm/*
 // @match *://*.mega4up.org/*
 // @match *://*.uploadhaven.com/*
-// @match *://*.k2s.cc/*
 // @match *://*.ac.totsugeki.com/*
 // @match *://*.anonym.ninja/*
 // @match *://*.vosan.co/*
@@ -148,11 +140,9 @@
 // @match *://*.takefile.link/*
 // @match *://*.appsblaze.com/*
 // @match *://*.modcombo.com/*
-// @match *://*.1fichier.com/*
 // @match *://*.fileresources.net/*
 // @match *://*.freepreset.net/*
 // @match *://*.doodrive.com/*
-// @match *://*.mediafire.com/*
 // @match *://*.qiwi.gg/*
 // @match *://*.turbobit.net/*
 // @match *://*.sharemods.com/*
@@ -713,7 +703,7 @@
     RightFC: {label: "Enable Context Menu ", type: "checkbox", default: false,},
     BlockFC: {label: "Enable Always Ready", type: "checkbox", default: false,},
     TimerFC: {label: "Enable Fast Timer ", type: "checkbox", default: false,},
-    AutoDL: {label: "Auto Download For Supported Sites", type: "checkbox", default: false,},},});
+    AutoDL: {label: "Auto Download For Supported Sites", type: "checkbox", default: true,},},});
 (function(){function BoostTimers() {const FsT = window.setTimeout; const FsI = window.setInterval;
   Object.defineProperty(window, 'setTimeout', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsT.apply(this, arguments);}});
   Object.defineProperty(window, 'setInterval', {value: function(func, delay) {if (delay === 1000) {delay = 50;} return FsI.apply(this, arguments);}});}
@@ -948,15 +938,15 @@
     BypassedByBloggerPemula(/file-upload.net/, () => {DoIfExists('#downbild.g-recaptcha', 2);});
     BypassedByBloggerPemula(/userscloud.com|dosya.co/, () => {DoIfExists('#btn_download', 2);});
     BypassedByBloggerPemula(/hexupload.net/, () => {DoIfExists('.btn-success.btn-lg.btn', 1);});
-    BypassedByBloggerPemula(/gofile.io/, () => {waitForElm('a.me-1', gfBtn => gfBtn.click());});
-    BypassedByBloggerPemula(/rapidgator.net/, () => {DoIfExists('.btn-free.act-link.link', 2);});
+    //BypassedByBloggerPemula(/gofile.io/, () => {waitForElm('a.me-1', gfBtn => gfBtn.click());});
+    //BypassedByBloggerPemula(/rapidgator.net/, () => {DoIfExists('.btn-free.act-link.link', 2);});
     BypassedByBloggerPemula(/dbree.me/, () => {DoIfExists('.center-block.btn-default.btn', 2);});
     //BypassedByBloggerPemula(/dropgalaxy.com/, () => {DoIfExists("button[id^='method_fre']", 2);});
     BypassedByBloggerPemula(/megaupto.com/, () => {DoIfExists('#direct_link > a:nth-child(1)', 2);});
-    BypassedByBloggerPemula(/karanpc.com/, () => {DoIfExists('#downloadButton > form', 'submit', 2);});
+    //BypassedByBloggerPemula(/karanpc.com/, () => {DoIfExists('#downloadButton > form', 'submit', 2);});
     BypassedByBloggerPemula(/douploads.net/, () => {DoIfExists('.btn-primary.btn-lg.btn-block.btn', 2);});
     BypassedByBloggerPemula(/dataupload.net/, async function() {await sleep(5000);ReadytoClick('.downloadbtn');});
-    BypassedByBloggerPemula(/buzzheavier.com/, function() {waitForElm('#download-link', bhvBtn => bhvBtn.click());});
+    //BypassedByBloggerPemula(/buzzheavier.com/, function() {waitForElm('#download-link', bhvBtn => bhvBtn.click());});
     BypassedByBloggerPemula(/filemoon.sx/, () => waitForElm('div.download2 a.button', fm => redirect(fm.href, false)));
     BypassedByBloggerPemula(/dailyuploads.net/, () => {CaptchaDone(() => {DoIfExists('#downloadbtn');});DoIfExists('#fbtn1', 2);});
     BypassedByBloggerPemula(/bestfonts.pro/, () => waitForElm('.download-font-button > a:nth-child(1)', pro => redirect(pro.href)));
@@ -964,7 +954,7 @@
     BypassedByBloggerPemula(/files.fm/, () => waitForElm('#head_download__all-files > div > div > a:nth-child(1)', flBtn => flBtn.click()));
     BypassedByBloggerPemula(/megaup.net/, function() {waitForElm('a.btn.btn-default', muBtn => muBtn.click());DoIfExists('#btndownload', 7);});
     BypassedByBloggerPemula(/mega4upload.net/, () => {DoIfExists("input[name=mega_free]",2);CaptchaDone(() => {DoIfExists('#downloadbtn');});});
-    BypassedByBloggerPemula(/financemonk.net/, () => {CaptchaDone(() => {DoIfExists('#downloadBtnClick');});DoIfExists('#dllink', 'submit', 3);});
+    //BypassedByBloggerPemula(/financemonk.net/, () => {CaptchaDone(() => {DoIfExists('#downloadBtnClick');});DoIfExists('#dllink', 'submit', 3);});
     BypassedByBloggerPemula(/usersdrive.com|ddownload.com/, () => {CaptchaDone(() => {DoIfExists('#downloadbtn');});DoIfExists('.btn-download.btn', 1);});
     BypassedByBloggerPemula(/adoc.pub/, () => {DoIfExists('.btn-block.btn-success.btn', 2);CaptchaDone(() => {DoIfExists('.mt-15.btn-block.btn-success.btn-lg.btn');});});
     BypassedByBloggerPemula(/pdfcoffee.com/, () => {DoIfExists('.btn-block.btn-success.btn', 2);CaptchaDone(() => {DoIfExists('.my-2.btn-block.btn-primary.btn-lg.btn');});});
@@ -976,11 +966,9 @@
     BypassedByBloggerPemula(/hitfile.net/, () => {CaptchaDone(() => {DoIfExists('#submit');});DoIfExists('.nopay-btn.btn-grey',2);waitForElm('#popunder2', hfl2 => redirect(hfl2.href, false),37);});
     BypassedByBloggerPemula(/4fnet.org/, function() {if (location.href.includes('/goto')) {let fnet = location.href.split('/').slice(-1);redirect(atob(fnet),false);}});
     BypassedByBloggerPemula(/oxy\.*/, function() {if (elementExists('#divdownload')) {let oxy = bp('.ocdsf233').getAttribute('data-source_url');redirect(oxy, false);}});
-    BypassedByBloggerPemula(/udrop.com/, () => waitForElm('.responsiveMobileMargin > button:nth-child(1)', udr => redirect(strBetween(udr.onclick.toString(), `openUrl('`, `')`), false)));
+    //BypassedByBloggerPemula(/udrop.com/, () => waitForElm('.responsiveMobileMargin > button:nth-child(1)', udr => redirect(strBetween(udr.onclick.toString(), `openUrl('`, `')`), false)));
     BypassedByBloggerPemula(/mp4upload.com/, function() {
       DoIfExists('#todl', 2);DoIfExists("form[name='F1']", 'submit', 1);});
-    BypassedByBloggerPemula(/drop.download/, function() {
-      DoIfExists('#method_free', 2);DoIfExists('.btn-download', 2);});
     BypassedByBloggerPemula(/workupload.com/, function() {
       if (elementExists('#download')) {DoIfExists('.btn-prio.btn', 2);}});
     BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, function() {
@@ -993,8 +981,6 @@
       if (elementExists('#uc-dl-icon')) {DoIfExists('#downloadForm', 'submit', 1);} else {}});
     BypassedByBloggerPemula(/uploadhaven.com/, function() {
       DoIfExists('.alert > a:nth-child(1)', 2);DoIfExists('#form-download', 'submit', 1);});
-    BypassedByBloggerPemula(/k2s.cc/, function() {DoIfExists('.button-download-slow', 2);
-      waitForElm('a.link-to-file', k2s => redirect(k2s.href, false));});
     BypassedByBloggerPemula(/ac.totsugeki.com/, function() {
       $("a[target='_blank']").removeAttr("target");DoIfExists('.btn-lg.btn-success.btn', 2);});
     BypassedByBloggerPemula(/anonym.ninja/, function() {
@@ -1013,8 +999,6 @@
     BypassedByBloggerPemula(/modcombo.com/, function() {
       if (location.href.includes('download/')) {waitForElm('div.item.item-apk a', mc => redirect(mc.href, false));
         DoIfExists('a.btn.btn-submit', 6);} else {DoIfExists('a.btn.btn-red.btn-icon.btn-download.br-50', 2);}});
-    BypassedByBloggerPemula(/1fichier.com/, function() {
-      if (elementExists('#pass')) {} else {DoIfExists('.btn-orange.btn-general.ok', 1);DoIfExists('.alc', 'submit', 1);}});
     BypassedByBloggerPemula(/fileresources.net/, function() {
       if (elementExists('.download-timer')) {waitForElm('a.btn.btn-default', fpr => redirect(fpr.href, false));} else {}});
     BypassedByBloggerPemula(/freepreset.net/, function() {
@@ -1025,8 +1009,6 @@
       if (elementExists('.view-app')) {bp('#no-link').removeAttribute('target');DoIfExists('.download-line-title', 2);}});
     BypassedByBloggerPemula(/(uploadrar|fingau|getpczone|wokaz).com|uptomega.me/, function() {DoIfExists('.mngez-free-download', 2);
       DoIfExists('#direct_link > a:nth-child(1)', 2);$('#downloadbtn').click();});
-    BypassedByBloggerPemula(/mediafire.com/, function() {var bass;var md = function closeWindows() {window.close();clearInterval(bass);};
-      var mf = bp('.download_link .input').getAttribute('href');console.log(mf);location.replace(mf);bass = setInterval(md, 1000 * 5);});
     BypassedByBloggerPemula(/qiwi.gg/, function() {if (elementExists("div [class^='page_DownloadPage']")) {
       DoIfExists("button[class^='DownloadButton_ButtonSoScraperCanTakeThisName']", 2);
         let qiwi = bp("a[class^='DownloadButton_DownloadButton']"); setTimeout(() => {redirect(qiwi.href, false);}, 3 * 1000);} else {}});
