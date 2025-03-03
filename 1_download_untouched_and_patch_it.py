@@ -138,7 +138,7 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online/", "/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online|cutyion.com/")
 
-    content = content.replace("/playonpc.online|quins.us|(retrotechreborn|insurelean|ecosolardigest).com|gally.shop/", "/playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop/")
+    content = content.replace("/playonpc.online|quins.us|(retrotechreborn|insurelean|ecosolardigest).com|gally.shop/", "/playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net/")
 
     content = content.replace("BypassedByBloggerPemula(/dropgalaxy", "//BypassedByBloggerPemula(/dropgalaxy")
 
