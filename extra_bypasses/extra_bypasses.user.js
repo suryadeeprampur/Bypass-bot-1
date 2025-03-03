@@ -251,6 +251,7 @@
 // @include     /loanoffer.cc/
 // @include     /count.vipurl.in/
 // @include     /(smartfeecalculator|thecubexguide).com|(djxmaza|jytechs|gujjukhabar).in/
+// @include     /goo.st/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1671,6 +1672,10 @@
             }
         })
     }
+
+    // goo.st
+    /goo.st/.test(url) ? afterDOMLoaded(function() { clickIfExists('button.btn.btn-primary') }) : null;
+    /(travelironguide|businesssoftwarehere|softwaresolutionshere|freevpshere).com/.test(url) ? window.adblockstatus = false : null;
 
     // Timer boost list
     const urlPatternsForTimerBoost = [
