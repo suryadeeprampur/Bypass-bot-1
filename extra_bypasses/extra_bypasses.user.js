@@ -249,6 +249,8 @@
 // @include     /frdl.is/
 // @include     /mega4upload.net/
 // @include     /filespayouts.com/
+// @include     /loanoffer.cc/
+// @include     /count.vipurl.in/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1482,12 +1484,6 @@
         redirectToAnyLinkWithMatchingTextContent("Get Link");
     }) : null;
 
-    // 10drives - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/233
-    /foodtechnos.in/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('a.btn:nth-child(1)');
-        redirectIfExists('a#lsdwnbtn');
-    }) : null;
-
     // zaku.pro/?adlinkfly= - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/236
     /zaku.pro/.test(url) ? afterDOMLoaded(function() {
         if (url.includes('go.zaku.pro')) {
@@ -1553,6 +1549,20 @@
         openHCaptchaWhenVisible();
         clickIfNotDisabled('#invisibleCaptchaShortlink');
         redirectIfNotDisabled('a.get-link');
+    }) : null;
+
+    // vipurl (chrome only)
+    /loanoffer.cc/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('a.bt-success');
+        clickIfExists('a.bt-success:nth-child(2)');
+        clickIfExists('a.bt-success:nth-child(3)');
+    }) : null;
+    /count.vipurl.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null; //
+
+    // 10drives - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/233
+    /foodtechnos.in/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('a.btn:nth-child(1)');
+        redirectIfExists('a#lsdwnbtn');
     }) : null;
 
     // upfiles.app

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.35
+// @version        94.0.36
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -680,6 +680,8 @@
 // @include     /frdl.is/
 // @include     /mega4upload.net/
 // @include     /filespayouts.com/
+// @include     /loanoffer.cc/
+// @include     /count.vipurl.in/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /(mega-enlace|acortados).com/
 // @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|qanin.xyz|evegor.net)\/.*/
@@ -2735,12 +2737,6 @@
         redirectToAnyLinkWithMatchingTextContent("Get Link");
     }) : null;
 
-    // 10drives - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/233
-    /foodtechnos.in/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('a.btn:nth-child(1)');
-        redirectIfExists('a#lsdwnbtn');
-    }) : null;
-
     // zaku.pro/?adlinkfly= - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/236
     /zaku.pro/.test(url) ? afterDOMLoaded(function() {
         if (url.includes('go.zaku.pro')) {
@@ -2806,6 +2802,20 @@
         openHCaptchaWhenVisible();
         clickIfNotDisabled('#invisibleCaptchaShortlink');
         redirectIfNotDisabled('a.get-link');
+    }) : null;
+
+    // vipurl (chrome only)
+    /loanoffer.cc/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('a.bt-success');
+        clickIfExists('a.bt-success:nth-child(2)');
+        clickIfExists('a.bt-success:nth-child(3)');
+    }) : null;
+    /count.vipurl.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null; //
+
+    // 10drives - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/233
+    /foodtechnos.in/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('a.btn:nth-child(1)');
+        redirectIfExists('a#lsdwnbtn');
     }) : null;
 
     // upfiles.app
