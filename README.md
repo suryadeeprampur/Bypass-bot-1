@@ -56,10 +56,11 @@ Thanks to:
 - Every user that has reported issues to this repository.
 
 ## Optional extra tools
-- [Redirector](https://einaregilsson.com/redirector/), configured for AdMaven links (example: `best-links.org/s?...`). These can't be easily bypassed with an userscript, because the page redirects you before the userscript has the chance to run.
+- [einaregilsson/Redirector](https://einaregilsson.com/redirector/), configured for AdMaven links (example: `best-links.org/s?...`). These can't be easily bypassed with an userscript, because the page redirects you before the userscript has the chance to run.
 In the extension settings, create a new redirect rule. Use the following settings: 
     - Include pattern: `^https:\/\/([^\/]*)\/s\?([a-zA-Z0-9]{1,8})$`
     - Redirect to: `https://bypass.city/bypass?bypass=https://$1/s?$2`
     - Pattern Type: `Regular expression`
 - [StephenP/Bypass FileCrypt](https://greasyfork.org/en/scripts/403170-bypass-filecrypt)
 - [fr0stb1rd/ublock_filters](https://gitlab.com/fr0stb1rd/ublock_filters/)
+- [hhoneeyy and MegaLime0/Pixeldrain Download Bypass](https://greasyfork.org/en/scripts/491326-pixeldrain-download-bypass)
