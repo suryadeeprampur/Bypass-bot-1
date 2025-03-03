@@ -63,4 +63,5 @@ In the extension settings, create a new redirect rule. Use the following setting
     - Pattern Type: `Regular expression`
 - [StephenP/Bypass FileCrypt](https://greasyfork.org/en/scripts/403170-bypass-filecrypt)
 - [fr0stb1rd/ublock_filters](https://gitlab.com/fr0stb1rd/ublock_filters/)
-- [hhoneeyy and MegaLime0/Pixeldrain Download Bypass](https://greasyfork.org/en/scripts/491326-pixeldrain-download-bypass)
+- [Pixeldrain Download Bypass](https://greasyfork.org/en/scripts/491326-pixeldrain-download-bypass)
+- [1Fichier Redirect to Fastdebrid](https://greasyfork.org/en/scripts/528673-1fichier-redirect-to-fastdebrid)
