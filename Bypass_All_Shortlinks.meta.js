@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.0.37
+// @version        94.0.38
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -111,7 +111,6 @@
 // @match *://*.gofile.io/*
 // @match *://*.rapidgator.net/*
 // @match *://*.dbree.me/*
-// @match *://*.dropgalaxy.com/*
 // @match *://*.megaupto.com/*
 // @match *://*.karanpc.com/*
 // @match *://*.douploads.net/*
@@ -172,7 +171,6 @@
 // @match *://*.jameeltips.us/*
 // @match *://*.post.copydev.com/*
 // @match *://*.1short.io/*
-// @match *://*.linegee.net/*
 // @match *://*.pro.sh/*
 // @match *://*.playpaste.com/*
 // @match *://*.1bitspace.com/*
@@ -311,7 +309,6 @@
 // @include /^(https?:\/\/)(.+)?((kongutoday|proappapk|hipsonyc|teamtechnews).com|yotrickslog.tech)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(writedroid.eu.org|modmania.eu.org|writedroid.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((travelironguide|businesssoftwarehere|softwaresolutionshere|freevpshere).com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(adclicker\.*|yourihollier.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((mgame|sportweb|bitcrypto).info)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((horoscop|videoclip).info|article24.online|writeprofit.org|docadvice.eu|trendzilla.club)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(coinhub.wiki|(vitalityvista|geekgrove).net)(\/.*)/
@@ -465,7 +462,6 @@
 // @include     /linkspy.cc\/\/a/
 // @include     /www.ovagames.com\/.*\.html$/
 // @include     /((infytips|remixodiadj|bgmiaimassist).in|(cybertyrant|profitshort|technorozen|bestadvise4u|newztalkies|aiotechnical|cryptonewzhub|techvybes|wizitales|101desires|gdspike|caronwhaley|maxxfour|thewizitale|inventoryidea|gamerxyt|betsatta|stockwallah|gtxhosty|anyrojgar).com|mphealth.online|hubdrive.me|advisecreate.fun|courselinkfree.us|10desires.(org|net)|theapknews.shop|trendzguruji.me|speedynews.xyz|nzarticles.pro|offerboom.top|kvkparbhani.org)/
-// @include     /dropgalaxy.(com|co)\/drive/
 // @include     /short-ly.co/
 // @include     /uqozy.com|posterify.net|drinkspartner.com|manishclasses.in|boiscd.com/
 // @include     /blogging.techworldx.net|10beasts.biz/

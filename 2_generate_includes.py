@@ -5,10 +5,10 @@ def extract_regex_from_js(js_code):
     matches1 = re.findall(pattern1, js_code)
     matches1 = [match.strip('/') for match in matches1]
 
-    pattern1b = r'BypassedByBloggerPemula\(/\s*([a-zA-Z0-9.-]+)\s*/,'
+    pattern1b = r'(?<!//)BypassedByBloggerPemula\(/\s*([a-zA-Z0-9.-]+)\s*/,'
     matches1b = re.findall(pattern1b, js_code)
 
-    pattern1c = r'BypassedByBloggerPemula\((/[^/]*?/,)'
+    pattern1c = r'(?<!//)BypassedByBloggerPemula\((/[^/]*?/,)'
     matches1c = re.findall(pattern1c, js_code)
     matches1c = [match.strip("/',") for match in matches1c]
 
@@ -24,7 +24,12 @@ def extract_regex_from_js(js_code):
     pattern5 = r"h\.href\.includes\('(.*?)'\)"
     matches5 = re.findall(pattern5, js_code)
 
-    return matches1+matches1b+matches1c+matches2+matches3+matches4+matches5
+    allmatches = matches1+matches1b+matches1c+matches2+matches3+matches4+matches5
+
+    # remove duplicates
+    allmatches = list(dict.fromkeys(allmatches))
+
+    return allmatches
 
 def write_list_of_strings_to_file(filename, lines):
     with open(filename, 'w', encoding='utf-8') as file:
