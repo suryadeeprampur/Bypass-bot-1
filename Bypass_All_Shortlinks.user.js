@@ -2905,9 +2905,16 @@
         })
     }
 
-    // goo.st
-    /goo.st/.test(url) ? afterDOMLoaded(function() { clickIfExists('button.btn.btn-primary') }) : null;
-    /(travelironguide|businesssoftwarehere|softwaresolutionshere|freevpshere).com/.test(url) ? window.adblockstatus = false : null;
+    // goo.st - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/215
+    /goo.st/.test(url) ? afterWindowLoaded(function() { clickIfExists('button.btn.btn-primary') }) : null;
+    /(travelironguide|businesssoftwarehere|softwaresolutionshere|freevpshere).com/.test(url) ? (function() {
+        boostTimers();
+        /* window.adblockstatus = false;
+        modifyScript('if(adblockstatus)', 'if(false)');
+        modifyScript('adblockstatus', 'false');
+        modifyScript('document.getElementById("secretsecret").remove();', '');
+        alert('Adblock status: ' + window.adblockstatus); */
+    })() : null;
 
     // Timer boost list
     const urlPatternsForTimerBoost = [
@@ -2915,7 +2922,6 @@
         /motakhokhara.blogspot.com/, // psa.wf
         /besargaji.com/, // dramaday.me - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/21
         /^https:\/\/relampagomovies\.com\/.+/, // relampagomovies.com
-        /goo.st|(businesssoftwarehere|freevpshere|softwaresolutionshere|travelironguide).com/, // goo.st - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/215
         /((surfsees|travelagancy|venzoars|webbooki|pokoarcade|edigitalizes|finquizy).com|(fitnessholic|myindigocard).net|stockinsights.in|pandagamepad.co|techsl.online)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/, // linkpays.in
         /hypershort.com/, // hyp.sh hypershort
         /bgmiaimassist.in|(stockwallah|inventoryidea).com/, // hdhub4u
