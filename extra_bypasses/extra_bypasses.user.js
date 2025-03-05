@@ -252,6 +252,7 @@
 // @include     /count.vipurl.in/
 // @include     /(smartfeecalculator|thecubexguide).com|(djxmaza|jytechs|gujjukhabar).in/
 // @include     /goo.st/
+// @include     /safez.es/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -311,6 +312,13 @@
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
 
+    // mayas.travel used in fiuxy2.co, gatonplayseries.com
+    /(mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org|constanteonline.com)\/api/.test(url) ? redirect(decodeURIComponent(url.split('&url=')[1].split('&')[0])) : null;
+    /(mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org|constanteonline.com)\/\#/.test(url) ? redirect(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0]) : null;
+
+    // peliculasgd.net
+    /safez.es/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('o.php?l=')[1].split('|')[0]))))) : null;
+
     // elitetorrent.com tomadivx.net infomaniakos.net divxatope.net
     function caesarDecipher(str) {
         const shift = 13;
@@ -336,10 +344,6 @@
 
     // pelishd4k.com
     /altearnativasa.com\/\#/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0])) : null;
-
-    // mayas.travel used in fiuxy2.co, gatonplayseries.com
-    /(mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org|constanteonline.com)\/api/.test(url) ? redirect(decodeURIComponent(url.split('&url=')[1].split('&')[0])) : null;
-    /(mayas.travel|eldiario24hrs.com|comomedir.com|aplicacionpara.org|constanteonline.com)\/\#/.test(url) ? redirect(atob(atob(atob(url.split('/#')[1]))).split('&url=')[1].split('&')[0]) : null;
 
     // descargasdirecta.com
     /playpastelinks.com/.test(url) ? afterDOMLoaded(function() {setTimeout(() => { document.querySelector('#btn-redirect').click(); }, 8000)}) : null;
