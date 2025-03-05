@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.1.3
+// @version        94.1.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -319,7 +319,7 @@
 // @include /^(https?:\/\/)(.+)?((sekilastekno|miuiku|vebma|majalahhewan).com|crm.cekresi.me|ai.tempatwisata.pro)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it|businessnews-nigeria|govaf|fahmysport).com|(hightrip|fx-gd|world-trips|otechno|bluetechno|to-travel).net|(newforex|forexit).online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(oncoin.info|nishankhatri.com.np|quanngon.org)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net|freeat30.org)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(short.croclix.me|adz7short.space)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(adshnk.com|adshrink.it)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techleets.xyz|sharphindi.in)(\/.*)/
@@ -605,9 +605,10 @@
 // @include     /(smartfeecalculator|thecubexguide).com|(djxmaza|jytechs|gujjukhabar).in/
 // @include     /goo.st/
 // @include     /safez.es/
+// @include     /acorte.xyz/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup).xyz|gamcabd.org|gamerking.shop)(\/.*)/
-// @include     /(mega-enlace|acortados).com/
-// @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net)\/.*/
+// @include     /(mega-enlace|acortados).com|tulink.org/
+// @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net|freeat30.org)\/.*/
 // @include     /quickeemail.com/
 // @exclude /^(https?:\/\/)([^\/]+\.)?((github|aliyun|reddit|bing|yahoo|microsoft|whatsapp|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|blogger|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet|docs|workspace|gemini).google|atlassian|pinterest|twitter|x|live|facebook|tiktok|instagram|linkedin|fastbull|tradingview|deepseek|chatgpt|openai|grok|playghub|bilibili).com|proton.me|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|doubleclick.net|adoptimum.top|meta.ai|codepen.io|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js

@@ -253,6 +253,7 @@
 // @include     /(smartfeecalculator|thecubexguide).com|(djxmaza|jytechs|gujjukhabar).in/
 // @include     /goo.st/
 // @include     /safez.es/
+// @include     /acorte.xyz/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -318,6 +319,9 @@
 
     // peliculasgd.net
     /safez.es/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('o.php?l=')[1].split('|')[0]))))) : null;
+
+    // latinomegahd.net
+    /acorte.xyz/.test(url) ? redirect(atob(url.split('&target=')[1])) : null;
 
     // elitetorrent.com tomadivx.net infomaniakos.net divxatope.net
     function caesarDecipher(str) {
@@ -1345,7 +1349,7 @@
     }) : null;
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/170
-    /hdpastes.com\/\?v=/.test(url) ? afterDOMLoaded(function() {clickIfRecaptchaSolved('.btn-success');}) : null;
+    /hdpastes.com\/\?v=/.test(url) ? afterDOMLoaded(function() {clickIfCloudflareCaptchaSolved('.btn-success');}) : null;
 
     // shrtbr.com/aaNEJEXp - t.me/xred2 - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/122
     /encurtads.net|financacerta.com/.test(url) ? afterDOMLoaded(function() {

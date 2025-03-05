@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.1.3
+// @version        94.1.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -319,7 +319,7 @@
 // @include /^(https?:\/\/)(.+)?((sekilastekno|miuiku|vebma|majalahhewan).com|crm.cekresi.me|ai.tempatwisata.pro)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it|businessnews-nigeria|govaf|fahmysport).com|(hightrip|fx-gd|world-trips|otechno|bluetechno|to-travel).net|(newforex|forexit).online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(oncoin.info|nishankhatri.com.np|quanngon.org)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net|freeat30.org)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(short.croclix.me|adz7short.space)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(adshnk.com|adshrink.it)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techleets.xyz|sharphindi.in)(\/.*)/
@@ -605,9 +605,10 @@
 // @include     /(smartfeecalculator|thecubexguide).com|(djxmaza|jytechs|gujjukhabar).in/
 // @include     /goo.st/
 // @include     /safez.es/
+// @include     /acorte.xyz/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup).xyz|gamcabd.org|gamerking.shop)(\/.*)/
-// @include     /(mega-enlace|acortados).com/
-// @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net)\/.*/
+// @include     /(mega-enlace|acortados).com|tulink.org/
+// @include     /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net|freeat30.org)\/.*/
 // @include     /quickeemail.com/
 // @exclude /^(https?:\/\/)([^\/]+\.)?((github|aliyun|reddit|bing|yahoo|microsoft|whatsapp|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|blogger|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet|docs|workspace|gemini).google|atlassian|pinterest|twitter|x|live|facebook|tiktok|instagram|linkedin|fastbull|tradingview|deepseek|chatgpt|openai|grok|playghub|bilibili).com|proton.me|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|doubleclick.net|adoptimum.top|meta.ai|codepen.io|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
 // @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
@@ -1193,7 +1194,7 @@
     BypassedByBloggerPemula('(cryptowidgets|gadgetbuzz|coinsvalue|coinstrend|coinsrise|webfreetools|wanderjourney|languagefluency|giftmagic).net|(freeoseocheck|insurancexguide|funplayarcade|origamiarthub|fitbodygenius|illustrationmaster|selfcareinsights|ecofriendlyz|virtualrealitieshub|brewmasterly).com|coinscap.info|bubblix.eu', () => {
       TrustMe();elementReady('#captcha-result .bg-success').then(ReadytoClick.bind(this, 'button'));elementReady('#loadingDiv[style*="display:block"] button, #loadingDiv[style*="display: block"] button').then(ReadytoClick.bind(this, 'button', 2));
       elementReady('#clickMessage[style*="display: block"], clickMessage[style*="display:block"]').then(function() {setActiveElement('[data-placement-id="revbid-leaderboard"]');fakeHidden();});});
-    BypassedByBloggerPemula(/playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net/, () => {CaptchaDone(() => {DoIfExists('button#cbt.pfbutton-primary', 1);ReadytoClick('button#cbt.pfbutton-primary', 2);});
+    BypassedByBloggerPemula(/playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net|freeat30.org/, () => {CaptchaDone(() => {DoIfExists('button#cbt.pfbutton-primary', 1);ReadytoClick('button#cbt.pfbutton-primary', 2);});
       let playonpc = setInterval(() => {if (!elementExists('.h-captcha') && !elementExists('.core-msg.spacer.spacer-top') && bp('#formButtomMessage').textContent == "Well done! You're ready to continue!" && !bp('#cbt').hasAttribute('disabled')) {
           clearInterval(playonpc);DoIfExists('button#cbt.pfbutton-primary', 1);ReadytoClick('button#cbt.pfbutton-primary', 2);}}, 3 * 1000);});
     BypassedByBloggerPemula(/shortit.pw/, () => {if (elementExists('#captchabox')) {
@@ -1466,6 +1467,9 @@
 
     // peliculasgd.net
     /safez.es/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('o.php?l=')[1].split('|')[0]))))) : null;
+
+    // latinomegahd.net
+    /acorte.xyz/.test(url) ? redirect(atob(url.split('&target=')[1])) : null;
 
     // elitetorrent.com tomadivx.net infomaniakos.net divxatope.net
     function caesarDecipher(str) {
@@ -2493,7 +2497,7 @@
     }) : null;
 
     // https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/170
-    /hdpastes.com\/\?v=/.test(url) ? afterDOMLoaded(function() {clickIfRecaptchaSolved('.btn-success');}) : null;
+    /hdpastes.com\/\?v=/.test(url) ? afterDOMLoaded(function() {clickIfCloudflareCaptchaSolved('.btn-success');}) : null;
 
     // shrtbr.com/aaNEJEXp - t.me/xred2 - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/122
     /encurtads.net|financacerta.com/.test(url) ? afterDOMLoaded(function() {
@@ -3137,7 +3141,7 @@ function redirectWithMessage(url) {
 // ----- Bypass mega-enlace ( Taken from AdGuard https://github.com/AdguardTeam/AdguardFilters/blob/b1622e8b387148509ca355e8070ffa5cdcf87525/SpanishFilter/sections/general_extensions.txt#L108 / https://github.com/AdguardTeam/AdguardFilters/issues/174863#issuecomment-1996735239) -----
 // used in: pelisenhd.org latinomegahd.net gatonplayseries.com peliculasgd.net tododvdfull.com cinemaniahdd.net programasvirtualespc.net compucalitv.pro
 (function() {
-    if (/(mega-enlace|acortados).com/.test(window.location.href)) {
+    if (/(mega-enlace|acortados).com|tulink.org/.test(window.location.href)) {
         const window = unsafeWindow; //Added so it works in ViolentMonkey instead of AdGuard
 
         //Adguard snippet expanded and modified
@@ -3278,7 +3282,7 @@ function redirectWithMessage(url) {
 (function() {
     "use strict";
 
-    const domainRegex = /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net)\/.*/;
+    const domainRegex = /^https:\/\/(.*\.|)(playonpc.online|quins.us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife).com|gally.shop|(qanin|ivnlnews).xyz|evegor.net|freeat30.org)\/.*/;
     if (domainRegex.test(window.location.href)) {
 
         // ---RELOAD DEAD-END PAGES---
