@@ -37,7 +37,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        94.1
+// @version        94.1.1
 // @match          *://*/*
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -375,8 +375,6 @@
       DoIfExists('#todl', 2);DoIfExists("form[name='F1']", 'submit', 1);});
     BypassedByBloggerPemula(/workupload.com/, function() {
       if (elementExists('#download')) {DoIfExists('.btn-prio.btn', 2);}});
-    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, function() {
-      DoIfExists('.btn-dow.btn', 2);DoIfExists("form[name='F1']", 'submit', 1);});
     BypassedByBloggerPemula(/send.cm/, function() {
       if (elementExists('#fileinfo')) {DoIfExists('#downloadbtn', 1);} else {}});
     BypassedByBloggerPemula(/mega4up.org/, function() {

@@ -171,6 +171,11 @@ def modify_file_with_my_fixes(input_file, output_file):
     content = content.replace("BypassedByBloggerPemula(/karanpc.com", "//BypassedByBloggerPemula(/karanpc.com")
     content = content.replace("BypassedByBloggerPemula(/udrop.com", "//BypassedByBloggerPemula(/udrop.com")
 
+    linestoremove = """    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, function() {
+      DoIfExists('.btn-dow.btn', 2);DoIfExists("form[name='F1']", 'submit', 1);});
+"""
+    content = content.replace(linestoremove, "")
+
     content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:
