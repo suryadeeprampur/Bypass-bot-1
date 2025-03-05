@@ -255,6 +255,7 @@
 // @include     /safez.es/
 // @include     /acorte.xyz/
 // @include     /sastainsurance.xyz/
+// @include     /link4earn.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -847,6 +848,10 @@
     }) : null;
     /shrtbr.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('a.get-link.btn.btn-lg.btn-success:not(.disabled):not(div.banner:nth-child(4) > div:nth-child(1) > a:nth-child(1))');}) : null;
 
+    // link4earn.com
+    /sastainsurance.xyz/.test(url) ? afterDOMLoaded(function() {clickIfExists('#wpsafe-link > a');}) : null;
+    /link4earn.com/.test(url) ? afterDOMLoaded(function() { redirectIfNotDisabled('a.get-link') }) : null;
+
     // https://rocklinks.in/1ZqZZ2B
     /mobilenagari.com|defencewallah.in/.test(url) ? afterDOMLoaded(function() {
         clickIfExistsNonStop('a.bt-success');
@@ -854,11 +859,6 @@
         clickIfExists('#wpsafelinkhuman');
     }) : null;
     /rocklinks.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
-
-    // link4earn.com
-    /sastainsurance.xyz/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('#wpsafe-link > a');
-    }) : null;
 
     // zaku.pro/?adlinkfly= - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/236
     /zaku.pro/.test(url) ? afterDOMLoaded(function() {
