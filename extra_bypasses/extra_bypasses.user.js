@@ -252,7 +252,6 @@
 // @include     /count.vipurl.in/
 // @include     /(smartfeecalculator|thecubexguide).com|(djxmaza|jytechs|gujjukhabar).in/
 // @include     /goo.st/
-// @include     /megadb.net/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1675,10 +1674,11 @@
     }
 
     // megadb - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/254
-    /megadb.net/.test(url) ? afterDOMLoaded(function() {
+    /*/megadb.net/.test(url) ? afterDOMLoaded(function() {
         popupsToRedirectsForUrlsIncludingText('.megadb');
         clickIfRecaptchaSolved('button#downloadbtn:not([disabled])');
-    }) : null;
+    }) : null; */
+     // not working and not too important
 
     // goo.st - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/215
     /goo.st/.test(url) ? afterWindowLoaded(function() { clickIfExists('button.btn.btn-primary') }) : null;
