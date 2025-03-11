@@ -66,7 +66,7 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("/(starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in/", "/(starxinvestor|hit-films|sevenjournals|funkeypagali|viewmyknowledge|wikifilmia|nayisahara|careersides).com|(iisfvirtual|bookszone|learnmany).in/")
 
-    content = content.replace("azmath.info", "azmath.info|expertvn.com")
+    #content = content.replace("azmath.info", "azmath.info|expertvn.com")
 
     content = content.replace("(blogscare|blogtechh|host2loan).com", "(blogscare|blogtechh|host2loan|techbixby).com")
     content = content.replace("|lnbz.la/", "|(lnbz|oei).la/")
