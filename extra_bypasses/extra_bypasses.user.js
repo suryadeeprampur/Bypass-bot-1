@@ -256,7 +256,6 @@
 // @include     /acorte.xyz/
 // @include     /sastainsurance.xyz/
 // @include     /link4earn.com/
-// @include     /linegee.net|intercelestial.com|teknoasian.com/
 // @run-at      document-start
 // ==/UserScript==
 
