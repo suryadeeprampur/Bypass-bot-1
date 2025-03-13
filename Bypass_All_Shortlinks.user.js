@@ -2268,10 +2268,11 @@
 
         return false;
     }
+
     /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
 
         // Delete links to pahe.ink
-        document.querySelectorAll('a[href*="pahe.ink"]').forEach(link => {link.href = '';});
+        document.querySelectorAll('[href*="pahe.ink"]').forEach(link => {link.href = '';});
 
         // Click all the right buttons
         let intervalId = setInterval(() => {
