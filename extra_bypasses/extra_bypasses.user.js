@@ -312,6 +312,97 @@
         }
     }
 
+    // --Captcha checks--
+    function checkRecaptchaSolved() {
+        return window.grecaptcha && window.grecaptcha.getResponse().length !== 0;
+    }
+    
+    const clickIfRecaptchaSolved = (selector) => {
+        let intervalId = setInterval(() => {
+            let button = document.querySelector(selector);
+            if (window.grecaptcha.getResponse().length !== 0) {
+                clearInterval(intervalId);
+                button.click();
+            }
+        }, 1000);
+    };
+    
+    function checkHCaptchaSolved() {
+        if (document.querySelector('.h-captcha')) {
+            return window.hcaptcha.getResponse().length !== 0;
+        }
+        return true;
+    }
+    
+    function clickIfHCaptchaSolved(selector) {
+        let intervalId = setInterval(() => {
+            if (checkHCaptchaSolved()) {
+                clearInterval(intervalId);
+                document.querySelector(selector).click();
+            }
+        }, 1000);
+    }
+    
+    function openHCaptchaWhenVisible() {
+        let intervalId = setInterval(() => {
+            let hCaptchaWidget = document.querySelector('iframe[src*="hcaptcha.com"]');
+            if (hCaptchaWidget && hCaptchaWidget.offsetParent !== null) {
+                clearInterval(intervalId);
+                window.hcaptcha.execute();
+            }
+        }, 500);
+    }
+    
+    function checkCloudflareCaptchaSolved() {
+        if (document.querySelector('.cf-turnstile') || document.querySelector('#captcha-turnstile')) {
+            return window.turnstile.getResponse().length !== 0;
+        }
+        return true;
+    }
+    
+    function checkGoogleRecaptchaSolved() {
+        if (document.querySelector('.g-recaptcha') || document.querySelector('#captchaShortlink') || document.querySelector('#captcha_container') || document.querySelector('#captchaShortlinker')) {
+            return window.grecaptcha.getResponse().length !== 0;
+        }
+        return true;
+    }
+    
+    const clickIfCloudflareCaptchaSolved = (selector) => {
+        let intervalId = setInterval(() => {
+            let button = document.querySelector(selector);
+            if (checkCloudflareCaptchaSolved()) {
+                clearInterval(intervalId);
+                button.click();
+            }
+        }, 1000);
+    };
+    
+    const redirectIfCloudflareCaptchaSolved = (selector) => {
+        let intervalId = setInterval(() => {
+            let button = document.querySelector(selector);
+            if (checkCloudflareCaptchaSolved()) {
+                clearInterval(intervalId);
+                redirect(button.href);
+            }
+        }, 1000);
+    };
+    
+    function checkAllCaptchasSolved() {
+        return (checkCloudflareCaptchaSolved() && checkRecaptchaSolved() && checkHCaptchaSolved());
+    }
+    
+    function clickIfAllCaptchasSolved(selector) {
+        let intervalId = setInterval(() => {
+            if (checkAllCaptchasSolved()) {
+                clearInterval(intervalId);
+                clickIfExists(selector);
+            }
+        }, 1000);
+    }
+
+
+    // --Bypasses--
+
     //peliculasgd.net, animesgd.net, club-hd.com, librolandia.net, pelishd4k.com, programasvirtualespc.net, pasteprivado.blogspot.com
     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
 
@@ -948,9 +1039,7 @@
     /musicc.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
     // zshort.net, shotzon.com - jnovels.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/5, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/59
-    function checkRecaptchaSolved() { return window.grecaptcha && window.grecaptcha.getResponse().length !== 0; }
-    const clickIfRecaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (window.grecaptcha.getResponse().length !== 0) { clearInterval(intervalId); button.click(); } }, 1000); };
-    /cloutgist.com/.test(url) ? afterWindowLoaded(function() {clickIfRecaptchaSolved('.btn-captcha');}) : null;
+    /cloutgist.com/.test(url) ? afterWindowLoaded(function() {clickIfCloudflareCaptchaSolved('.btn-captcha');}) : null;
     /(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
     /go.(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
 
@@ -1039,6 +1128,11 @@
         return false;
     }
     /teknoasian.com/.test(url) ? afterDOMLoaded(function() {
+
+        // Delete links to pahe.ink
+        document.querySelectorAll('a[href*="pahe.ink"]').forEach(link => {link.href = '';});
+
+        // Click all the right buttons
         let intervalId = setInterval(() => {
             let buttons = document.querySelectorAll('button.verify, button.skipcontent, button.postnext');
             for (let button of buttons) {
@@ -1081,20 +1175,7 @@
     /pahe.win/.test(url) ? afterWindowLoaded(function() {setTimeout(function() {redirectIfExists('.redirect');}, 6000);}) : null;
 
     // spaste.com use in pahe.ink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/77
-    function checkHCaptchaSolved() {
-        if (document.querySelector('.h-captcha')) {
-            return window.hcaptcha.getResponse().length !== 0;
-        }
-        return true;
-    }
-    function clickIfHCaptchaSolved(selector) {
-        let intervalId = setInterval(() => {
-            if (checkHCaptchaSolved()) {
-                clearInterval(intervalId);
-                document.querySelector(selector).click();
-            }
-        }, 1000);
-    }
+
     /www.spaste.com\/site\/checkPasteUrl\?c=/.test(url) ? afterDOMLoaded(function() {
         clickIfHCaptchaSolved('#template-contactform-submit');
     } ) : null;
@@ -1225,18 +1306,6 @@
     // /(techyblogs.in|readytechflip.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
-    function checkCloudflareCaptchaSolved() {
-        if (document.querySelector('.cf-turnstile') || document.querySelector('#captcha-turnstile')) {
-            return window.turnstile.getResponse().length !== 0;
-        }
-        return true;
-    }
-    function checkGoogleRecaptchaSolved() {
-        if (document.querySelector('.g-recaptcha') || document.querySelector('#captchaShortlink') || document.querySelector('#captcha_container') || document.querySelector('#captchaShortlinker')) {
-            return window.grecaptcha.getResponse().length !== 0;
-        }
-        return true;
-    }
     if (/stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/.test(url)) {
         preventForcedFocusOnWindow();
         
@@ -1484,11 +1553,9 @@
     }) : null;
 
     // go.paid4link.com last step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/222
-    //const redirectIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); redirect(button.href); } }, 1000); };
     /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfExists('#get-link-button');}) : null;
 
     // adsafelink / link2unlock - https://github.com/realodix/AdBlockID/issues/1874
-    const clickIfCloudflareCaptchaSolved = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (checkCloudflareCaptchaSolved()) { clearInterval(intervalId); button.click(); } }, 1000); };
     /app.link2unlock.com/.test(url) ? afterDOMLoaded(function() { 
         clickIfExists('#btn-1');
         clickIfExists('#btn-2');
@@ -1539,17 +1606,6 @@
     /instaserve.net|gomob.xyz|gamechilly.online/.test(url) ? afterDOMLoaded(function() {clickIfExists('#tp-snp2');}) : null;
 
     // uii.io
-    function checkAllCaptchasSolved() {
-        return (checkCloudflareCaptchaSolved() && checkRecaptchaSolved() && checkHCaptchaSolved());
-    }
-    function clickIfAllCaptchasSolved(selector) {
-        let intervalId = setInterval(() => {
-            if (checkAllCaptchasSolved()) {
-                clearInterval(intervalId);
-                clickIfExists(selector);
-            }
-        }, 1000);
-    }
     /wordcounter.icu|wordcount.im/.test(url) ? afterDOMLoaded(function() {
         //clickIfAllCaptchasSolved('#invisibleCaptchaShortlink');
         clickIfExists('#invisibleCaptchaShortlink');
@@ -1560,15 +1616,6 @@
     /get.cloudfam.io/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
 
     // flycutlink.com (daemonanime.net)
-    function openHCaptchaWhenVisible() {
-        let intervalId = setInterval(() => {
-            let hCaptchaWidget = document.querySelector('iframe[src*="hcaptcha.com"]');
-            if (hCaptchaWidget && hCaptchaWidget.offsetParent !== null) {
-                clearInterval(intervalId);
-                window.hcaptcha.execute();
-            }
-        }, 500);
-    }
     /flycutlink.com/.test(url) ? afterDOMLoaded(function() {
         clickIfExists('button.btn-primary.btn:nth-child(4)');
         openHCaptchaWhenVisible();
