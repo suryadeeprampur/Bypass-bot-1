@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Fly Inc autoclick (rinku.me .pro, 7mb.io, ...)
-// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup).xyz|gamcabd.org|gamerking.shop)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup|muskokay).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @run-at       document-start
 // ==/UserScript==
 
@@ -9,22 +9,36 @@
 (function() {
     "use strict";
 
-    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup).xyz|gamcabd.org|gamerking.shop/
+    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup|muskokay).xyz|gamcabd.org|gamerking.shop/
     if (domainRegex.test(window.location.href)) {
 
         // Anti anti-adblock
-        window.addEventListener('DOMContentLoaded', function() {
-            // Block the script from loading by overriding appendChild
-            const originalAppendChild = Element.prototype.appendChild;
-            Element.prototype.appendChild = function(element) {
-                if (element.tagName === 'SCRIPT' && element.src && element.src.includes('detectIncognito')) {
-                    console.log('Prevented loading of detectIncognito script');
-                    // Return a dummy element to prevent errors
-                    return document.createComment('Script blocked by userscript');
+        const interceptOnload = () => {
+            // Store the original descriptor
+            const originalDescriptor = Object.getOwnPropertyDescriptor(window, 'onload');
+    
+            // Define a new property descriptor that intercepts attempts to set onload
+            Object.defineProperty(window, 'onload', {
+                configurable: true,
+                enumerable: true,
+                get: function() {
+                    return originalDescriptor ? originalDescriptor.get.call(this) : null;
+                },
+                set: function(newValue) {
+                    // Check if the function contains 'handleFailure'
+                    if (newValue && newValue.toString().includes('handleFailure')) {
+                        console.log('Blocked assignment of onload handler containing handleFailure');
+                        return; // Block the assignment
+                    }
+    
+                    // Allow other onload handlers
+                    if (originalDescriptor && originalDescriptor.set) {
+                        originalDescriptor.set.call(this, newValue);
+                    }
                 }
-                return originalAppendChild.call(this, element);
-            };
-        });
+            });
+        };
+        interceptOnload();
 
         // Replace addEventListener to prevent adblock detection
             // This replicates "aeld" from uBO - https://github.com/gorhill/ublock/wiki/Resources-Library#addeventlistener-defuserjs-
