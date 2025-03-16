@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        94.2.5
+// @version        94.2.6
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -1245,6 +1245,7 @@
     const settings = Object.fromEntries(new URLSearchParams(element.src));let data = await Request("https://token.nocaptchaai.com/token", {method: "POST",headers,data: JSON.stringify({url: settings.host,type: "hcaptcha",sitekey: settings.sitekey,softid: "bloggerPemula-diego"})});
     const url = data.url;while (data.status != "processed") {await sleep(1);data = await Request(url, {headers, responseType: 'json' });console.log(data);}window.postMessage(JSON.stringify({"source": "hcaptcha","label": "challenge-closed","id": settings.id,"contents": {"event": "challenge-passed","response": data.token,"expiration": 120}}));})();});});
 
+
 }})();
 
 // ----- Bypass Acortalink.me ( Taken from AdGuard https://github.com/AdguardTeam/AdguardFilters/commit/61d9949022b428939b5be4243b0e5331ea64afcb) -----
@@ -2025,7 +2026,7 @@
     /veganab.co/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn-hover:nth-child(2)')}) : null;
     const extractLinkFromButtonOnclick = buttonElement => buttonElement.getAttribute("onclick").match(/window\.open\('([^']+)'/)[1];
     const redirectToOnclickIfExists = (selector) => { let intervalId = setInterval(() => { let button = document.querySelector(selector); if (button) { clearInterval(intervalId); redirect(extractLinkFromButtonOnclick(button)) } }, 500); };
-    /camdigest.com/.test(url) ? afterDOMLoaded(function() {redirectToOnclickIfExists('#wpsafe-link > a:nth-child(1) > button:nth-child(1)')}) : null;
+    /camdigest.com/.test(url) ? afterDOMLoaded(function() {redirectToOnclickIfExists('#wpsafe-link > a')}) : null;
     /pastebin.com\/raw/.test(url) ? afterDOMLoaded(function() { const rawContent = document.body.textContent.trim(); isValidUrl(rawContent) ? setTimeout(() => {redirect(rawContent)}, 1500) : null; }) : null; //for firefox, with afterDOMLoaded (must be first)
     /pastebin.com\/raw/.test(url) ? !function() {const rawContent = document.body.textContent.trim(); isValidUrl(rawContent) ? setTimeout(() => {redirect(rawContent)}, 1500) : null; }() : null; //for chrome, without afterDOMLoaded (must be second)
 
