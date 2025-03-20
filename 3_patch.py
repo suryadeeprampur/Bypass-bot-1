@@ -100,7 +100,7 @@ def modify_script_extra(file_path):
 
 
             # Remove unused
-            content = content.replace("// @connect        nocaptchaai.com\n", "")
+            content = content.replace("// @connect    nocaptchaai.com\n", "")
 
             # Add "@noframes"
             if not "@noframes" in content:
