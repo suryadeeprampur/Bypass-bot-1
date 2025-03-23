@@ -197,7 +197,7 @@
 // @include     /psccapk.in|secure.bgmiupdate.com.in|money.hustlershub.in|rg.sattakingcharts.in|payalgaming.co.in/
 // @include     /www.spaste.com/
 // @include     /click.convertkit-mail.com/
-// @include     /hubcloud.club\/tg\/go.php\?re=/
+// @include     /hubcloud.(club|dad)\/tg\/go.php\?re=/
 // @include     /bgmiaimassist.in|(stockwallah|inventoryidea).com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
 // @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/
@@ -620,7 +620,7 @@
 
     // hubcloud telegram link - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/185
     // /bloggingvector.shop\/re2/.test(url) ? redirect(atob(url.split('/re2/')[1])) : null;
-    /hubcloud.club\/tg\/go.php\?re=/.test(url) ? afterDOMLoaded(function() { document.body.innerHTML.trim().includes('Invalid Request - Please Come through Links again') ? setTimeout(() => {window.location.reload()}, 1500) : null}) : null;
+    /hubcloud.(club|dad)\/tg\/go.php\?re=/.test(url) ? afterDOMLoaded(function() { document.body.innerHTML.trim().includes('Invalid Request - Please Come through Links again') ? setTimeout(() => {window.location.reload()}, 1500) : null}) : null;
 
     // desiremovies.cymru
     /gyanigurus.net\/view/.test(url) ? afterDOMLoaded(function() {clickIfExists('#show_button')}) : null;
