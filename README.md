@@ -40,7 +40,7 @@ Executing these python scripts in order:
 ## Help make this better
 You can help by:
 - Reporting issues to the original script in [GreasyFork feedback](https://greasyfork.org/scripts/431691/feedback) or [OpenUserJS issues](https://openuserjs.org/scripts/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha/issues) (before doing this, check the issue is present in the original script)
-- Reporting issues here on the [issues](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues) tab. Post examples with the source link shortener and link source website. I want to always know what type of content the shortlink leads to before putting time into it. NSFW is acceptable. I will only add/fix content-sharing shortlinks, no faucet / crypto rewards.
+- Reporting issues here on the [issues](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues) tab. **Post examples with the source link shortener and link source website.** I want to always know what type of content the shortlink leads to before putting time into it. NSFW is acceptable. I will only add/fix content-sharing shortlinks, **no faucet / crypto rewards**.
 - Suggesting to merge other scripts into this one.
 - Editing/Adding code with pull requests.
 - If while using [uBlock Origin (recommended adblocker)](https://github.com/gorhill/uBlock?tab=readme-ov-file#ublock-origin-ubo), a link shortener is showing ads or detecting you have adblock, report it [here](https://github.com/uBlockOrigin/uAssets/discussions/27472).
