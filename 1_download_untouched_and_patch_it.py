@@ -93,12 +93,6 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("/(starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in/", "/(starxinvestor|hit-films|sevenjournals|funkeypagali|viewmyknowledge|wikifilmia|nayisahara|careersides|edukaroo).com|(iisfvirtual|bookszone|learnmany).in/")
 
-    linestoremove = """        case 'sl1bas.blogspot.com': if (h.pathname === '/' && h.searchParams.has('BypassResults')) {
-          result.link = decodeURIComponent(location.href.split('BypassResults=')[1].replace('&m=1', ''));
-          result.redirectDelay = cfg.get('SetDelay'); result.isNotifyNeeded = true; return result;} break;
-"""
-    content = content.replace(linestoremove, "")
-
     content = content.replace("'lopteapi.com', '3link.co', 'web1s.com', 'vuotlink.vip'];let List1 = ['ay.live', 'gitlink.pro'", "'lopteapi.com', '3link.co', 'web1s.com', 'vuotlink.vip'];let List1 = ['ay.live', 'aylink.co', 'gitlink.pro'")
 
     linestoremove = """    BypassedByBloggerPemula(/(youtube|youtube-nocookie).com/, function() {if (window.hasOwnProperty('_lact')) {window.setInterval(() => {window._lact = Date.now();}, 5 * 1000);
@@ -138,11 +132,9 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online/", "/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online|cutyion.com/")
 
-    content = content.replace("playonpc.online|quins.us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday).com|gally.shop|evegor.net|freeat30.org|ivnlnews.xyz", "playonpc.online|(quins|megahosting).us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday|tradeshowrating).com|gally.shop|evegor.net|freeat30.org|(qanin|ivnlnews).xyz")
+    content = content.replace("(playonpc|yolasblog).online|quins.us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday).com|gally.shop|freeat30.org|ivnlnews.xyz", "(playonpc|yolasblog).online|(quins|megahosting).us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday|tradeshowrating).com|gally.shop|evegor.net|freeat30.org|(qanin|ivnlnews).xyz")
 
     content = content.replace("BypassedByBloggerPemula(/dropgalaxy", "//BypassedByBloggerPemula(/dropgalaxy")
-
-    content = content.replace('    AutoDL: {label: "Auto Download For Supported Sites", type: "checkbox", default: false,},},});', '    AutoDL: {label: "Auto Download For Supported Sites", type: "checkbox", default: true,},},});')
 
     linestoremove = """    BypassedByBloggerPemula(/drop.download/, function() {
       DoIfExists('#method_free', 2);DoIfExists('.btn-download', 2);});
@@ -159,8 +151,8 @@ def modify_file_with_my_fixes(input_file, output_file):
 """
     content = content.replace(linestoremove, "")
 
-    linestoremove = """    BypassedByBloggerPemula(/mediafire.com/, function() {var bass;var md = function closeWindows() {window.close();clearInterval(bass);};
-      var mf = bp('.download_link .input').getAttribute('href');console.log(mf);location.replace(mf);bass = setInterval(md, 1000 * 5);});
+    linestoremove = """    BypassedByBloggerPemula(/mediafire.com/, () => {
+      if (location.href.includes('file/')) {let mf = bp('.download_link .input').getAttribute('href');BpNote(mf);location.replace(mf);}});
 """
     content = content.replace(linestoremove, "")
 
@@ -176,7 +168,18 @@ def modify_file_with_my_fixes(input_file, output_file):
 """
     content = content.replace(linestoremove, "")
 
-    content += "\n"
+    content = content.replace("BypassedByBloggerPemula(/(facebook|instagram).com/", "//BypassedByBloggerPemula(/(facebook|instagram).com/")
+    content = content.replace("BypassedByBloggerPemula(/tiktok.com/", "//BypassedByBloggerPemula(/tiktok.com/")
+
+
+    linestoremove = """        case 'bloggerpemula.pythonanywhere.com': if (h.pathname === '/' && h.searchParams.has('BypassResults')) {
+          result.link = decodeURIComponent(location.href.split('BypassResults=')[1].replace('&m=1', ''));
+          result.redirectDelay = cfg.get('SetDelay'); result.isNotifyNeeded = true; return result;} break;
+"""
+    content = content.replace(linestoremove, "")
+
+    if not content.endswith("\n"):
+        content += "\n"
 
     with open(output_file, 'w', encoding='utf-8') as file:
         file.write(content)

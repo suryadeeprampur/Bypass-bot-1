@@ -1,3 +1,5 @@
+import re
+
 def modify_script(input_script_path, includes_file_path, output_script_path):
     # Read the content of the input script
     with open(input_script_path, 'r', encoding='utf-8') as input_file:
@@ -63,7 +65,7 @@ def modify_script_extra(file_path):
             notforsale.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Thanks for using Bypass All Shortlinks Scripts and for Donations , Regards : Bloggerpemula</b></button>');
             blogger.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Thanks for using Bypass All Shortlinks Scripts and for Donations , Regards : Bloggerpemula</b></button>');
             pemula.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Thanks for using Bypass All Shortlinks Scripts and for Donations , Regards : Bloggerpemula</b></button>');},
-          success: function(result, status, xhr) {if (xhr.responseText.match('(insfly|Insfly).pw|(freecrypto|freeltc|a-s-cracks).top|mdiskshortner.link|(oscut|exashorts).fun|bigbtc.win|slink.bid|clockads.in|(promo-visits|rexlink).site')) {location.href = result.url;} else {redirect(result.url);}}});});}
+          success: function(result, status, xhr) {if (xhr.responseText.match('(insfly|Insfly).pw|(freecrypto|freeltc|a-s-cracks).top|mdiskshortner.link|(oscut|exashorts).fun|bigbtc.win|slink.bid|clockads.in')) {location.href = result.url;} else {redirect(result.url);}}});});}
 """
             content = content.replace(toremove, "        success: function(data) {redirect(data.url);}});} else if (elementExists('form[id=go-link]')) {}")         
             content = content.replace("Please Wait in @ Seconds , Tell Amm0ni4 to Delete His Debloated if You Want My Script to be Updated Regularly , Thanks", "")
@@ -80,6 +82,9 @@ def modify_script_extra(file_path):
                                       "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js")
 
             # Fixes
+
+            content = content.replace("'Auto Download For Supported Sites',type: 'checkbox',default: false", "'Auto Download For Supported Sites',type: 'checkbox',default: true")
+
             ##content = content.replace("case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname))", "case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref='))")
             ##content = content.replace("adbypass.org/bypass?bypass=' + location.href.split('?')[0]", "adbypass.org/bypass?bypass=' + encodeURIComponent(location.href)")
 
@@ -109,24 +114,22 @@ def modify_script_extra(file_path):
             #Remove tracking
 
             ## Remove redirection to tracking site
-            content = content.replace("https://rotator.nurul-huda.sch.id/?BypassResults=", "")
-            content = content.replace("https://free4u.nurul-huda.or.id/?BypassResults=", "")
-            content = content.replace("https://sl1bas.blogspot.com/?BypassResults=", "")
+            content = re.sub(r"let respect = '(.*?)';", "let respect = '';", content)
             content = content.replace("blog = true", "blog = false")
 
             ## Remove tracking iframe being injected
             content = remove_lines_with_strings(content, ["https://menrealitycalc.com/"])
 
             ## Remove weird datalist "adcopy_response" injected
-            strings_to_remove = [
-                "    elementReady('[name=adcopy_response]')",
-                "    const PHRASES = ['1.21 gigawatts'",
-                "                     'heart break',",
-                "                     'rolling stone'",
-                "    const datalist = document.createElement('datalist')"
-            ]
-            content = remove_lines_with_strings(content, strings_to_remove)
-            content += '\n}})();\n' # Add closing bracket
+            # strings_to_remove = [
+            #     "    elementReady('[name=adcopy_response]')",
+            #     "    const PHRASES = ['1.21 gigawatts'",
+            #     "                     'heart break',",
+            #     "                     'rolling stone'",
+            #     "    const datalist = document.createElement('datalist')"
+            # ]
+            # content = remove_lines_with_strings(content, strings_to_remove)
+            # content += '\n}})();\n' # Add closing bracket
 
 
             ## Check known issues have been removed and remove antifeature label if corrected
