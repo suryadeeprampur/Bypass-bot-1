@@ -1106,7 +1106,7 @@
 
     // pahe.ink
     /linegee.net|intercelestial.com|teknoasian.com/.test(url) ? preventForcedFocusOnWindow() : null;
-    function isWeirdButton(button) {
+    /*function isWeirdButton(button) {
         const suspiciousStyles = ['position: absolute;left: 99999px;'];
         const suspiciousWords = ['patch'];
 
@@ -1150,7 +1150,7 @@
                 }
             }
         }, 1000);
-    }) : null;
+    }) : null; */
 
     //pahe.ink final step
     /linegee.net/.test(url) ? afterDOMLoaded(function() {
