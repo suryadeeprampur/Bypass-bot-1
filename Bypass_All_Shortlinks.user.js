@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version    95.1
+// @version    95.1.0
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -614,6 +614,8 @@
 // @include     /acorte.xyz/
 // @include     /sastainsurance.xyz/
 // @include     /link4earn.com/
+// @include     /kaomojihub.com/
+// @include     /vplink.in/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup|muskokay).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?((mega-enlace|acortados).com|tulink.org)/
 // @include     /^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox).xyz|evegor.net|freeat30.org)\/.*/
@@ -2952,6 +2954,14 @@
         modifyScript('document.getElementById("secretsecret").remove();', '');
         alert('Adblock status: ' + window.adblockstatus); */
     })() : null;
+
+    // vplink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/271
+    // make a regex for this bypass to run on these domains: kaomojihub.com,wastenews.xyz,myscheme.org.in,aiperceiver.com,electricalguider.com,mpsarkarihelp.in
+    /kaomojihub.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#notarobot');
+        clickIfExists('#btn7');
+    }) : null;
+    /vplink.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
 
     // Timer boost list
     const urlPatternsForTimerBoost = [

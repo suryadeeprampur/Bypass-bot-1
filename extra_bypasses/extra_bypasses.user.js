@@ -256,6 +256,8 @@
 // @include     /acorte.xyz/
 // @include     /sastainsurance.xyz/
 // @include     /link4earn.com/
+// @include     /kaomojihub.com/
+// @include     /vplink.in/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1759,6 +1761,14 @@
         modifyScript('document.getElementById("secretsecret").remove();', '');
         alert('Adblock status: ' + window.adblockstatus); */
     })() : null;
+
+    // vplink - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/271
+    // make a regex for this bypass to run on these domains: kaomojihub.com,wastenews.xyz,myscheme.org.in,aiperceiver.com,electricalguider.com,mpsarkarihelp.in
+    /kaomojihub.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfExists('#notarobot');
+        clickIfExists('#btn7');
+    }) : null;
+    /vplink.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
 
     // Timer boost list
     const urlPatternsForTimerBoost = [
