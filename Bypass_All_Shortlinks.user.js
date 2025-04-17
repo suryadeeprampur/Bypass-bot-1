@@ -2955,6 +2955,11 @@
         })
     }
 
+    //apkadmin
+    /apkadmin.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfNotDisabled('#downloadbtn');
+    }) : null;
+
     // megadb - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/254
     /*/megadb.net/.test(url) ? afterDOMLoaded(function() {
         popupsToRedirectsForUrlsIncludingText('.megadb');
