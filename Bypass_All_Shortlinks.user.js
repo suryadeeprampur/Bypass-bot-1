@@ -348,6 +348,7 @@
 // @match *://*.www.gifans.com/*
 // @match *://*.www.pythondunyasi.com/*
 // @match *://*.jrlinks.in/*
+// @grant      GM_deleteValue
 // @match        https://acortalink.me/*
 // @match         *://bleleadersto.com/s?*
 // @match         *://tonordersitye.com/s?*
@@ -3603,7 +3604,7 @@ function redirectWithMessage(url) {
         console.log('Retrieved saved URL:', savedLink);
 
         if (!savedLink) {
-            alert('No saved link found.');
+            console.error('No saved link found.');
             return;
         }
 
@@ -3619,6 +3620,9 @@ function redirectWithMessage(url) {
 
         // Fill the form with the saved link
         inputField.value = savedLink;
+
+        // Clear the variable
+        GM_deleteValue('savedLink');
 
         // Click the bypass button
         console.log('Clicking bypass button...');

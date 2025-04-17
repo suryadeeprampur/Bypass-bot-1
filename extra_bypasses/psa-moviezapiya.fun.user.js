@@ -4,6 +4,7 @@
 // @match        https://moviezapiya.fun/
 // @grant      GM_setValue
 // @grant      GM_getValue
+// @grant      GM_deleteValue
 // @run-at       document-start
 // ==/UserScript==
 
@@ -35,7 +36,7 @@
         console.log('Retrieved saved URL:', savedLink);
 
         if (!savedLink) {
-            alert('No saved link found.');
+            console.error('No saved link found.');
             return;
         }
 
@@ -51,6 +52,9 @@
 
         // Fill the form with the saved link
         inputField.value = savedLink;
+
+        // Clear the variable
+        GM_deleteValue('savedLink');
 
         // Click the bypass button
         console.log('Clicking bypass button...');

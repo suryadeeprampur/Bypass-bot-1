@@ -348,6 +348,7 @@
 // @match *://*.www.gifans.com/*
 // @match *://*.www.pythondunyasi.com/*
 // @match *://*.jrlinks.in/*
+// @grant      GM_deleteValue
 // @match        https://acortalink.me/*
 // @match         *://bleleadersto.com/s?*
 // @match         *://tonordersitye.com/s?*
