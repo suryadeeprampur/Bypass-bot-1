@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version    95.1.2
+// @version    95.3
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -62,21 +62,18 @@
 // @match *://*.earn.bankshiksha.in/*
 // @match *://*.techurlshort.in/*
 // @match *://*.ninjamodz.litonmods.com/*
-// @match *://*.kingyojana.com/*
-// @match *://*.sayphotobooth.com/*
-// @match *://*.odiadance.com/*
 // @match *://*.rajdhanimaja.com/*
 // @match *://*.highkeyfinance.com/*
 // @match *://*.financeyogi.net/*
 // @include /^(https?:\/\/)(.+)?((gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia).com)(\/.*)/
-// @match *://*.newkhabar24.com/*
 // @match *://*.ninjamodz.mtcremix.com/*
 // @match *://*.bharatbestdeals.com/*
 // @match *://*.earnbox.sattakingcharts.in/*
 // @match *://*.a1.payalgaming.co.in/*
 // @include /^(https?:\/\/)(.+)?((earnc1.bankshiksha|domain.bgmiupdate.com).in)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((cryptowidgets|melodyspot|carsmania|cookinguide|tvseriescentral|cinemascene|hobbymania|plantsguide|furtnitureplanet|petsguide|gputrends|gamestopia|ountriesguide|carstopia|makeupguide|gadgetbuzz|coinsvalue|coinstrend|coinsrise|webfreetools|wanderjourney|languagefluency|giftmagic).net|(freeoseocheck|insurancexguide|funplayarcade|origamiarthub|fitbodygenius|illustrationmaster|selfcareinsights|constructorspro|ecofriendlyz|virtualrealitieshub|wiki-topia|techiephone|brewmasterly).com|(bubblix|dailytech-news).eu|coinscap.info|insurancegold.in|wii.si)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(headlinerpost.com|posterify.net)(\/.*)/
 // @match *://*.go.link4rev.site/*
 // @match *://*.infinityskull.com/*
 // @match *://*.link.linksfire.co/*
@@ -147,7 +144,6 @@
 // @match *://*.earnlink.io/*
 // @match *://*.mkomsel.com/*
 // @match *://*.disheye.com/*
-// @match *://*.fc-lc.xyz/*
 // @match *://*.jameeltips.us/*
 // @match *://*.post.copydev.com/*
 // @match *://*.1short.io/*
@@ -159,9 +155,9 @@
 // @match *://*.shortlinks2btc.somee.com/*
 // @match *://*.kisalt.digital/*
 // @match *://*.firefaucet.win/*
+// @match *://*.rotizer.net/*
 // @match *://*.aryx.xyz/*
 // @match *://*.linkforearn.com/*
-// @match *://*.techsl.online/*
 // @match *://*.webhostingtips.club/*
 // @match *://*.downfile.site/*
 // @match *://*.importantclass.com/*
@@ -171,6 +167,7 @@
 // @match *://*.explorerlives.com/*
 // @match *://*.vuotnhanh.com/*
 // @match *://*.forex-trnd.com/*
+// @match *://*.modassir.exblog.jp/*
 // @match *://*.sharetext.me/*
 // @match *://*.comohoy.com/*
 // @match *://*.linkforearn.click/*
@@ -190,7 +187,8 @@
 // @match *://*.bigbtc.win/*
 // @match *://*.linkspy.cc/*
 // @match *://*.jobinmeghalaya.in/*
-// @match *://*.aylink.co/*
+// @match *://*.dinheiromoney.com/*
+// @match *://*.itijobalert.in/*
 // @match *://*.videolyrics.in/*
 // @match *://*.sub2get.com/*
 // @match *://*.leitup.com/*
@@ -203,6 +201,7 @@
 // @match *://*.linkatla.com/*
 // @match *://*.easylink.gamingwithtr.com/*
 // @match *://*.onlinetechsolution.link/*
+// @match *://*.indobo.com/*
 // @match *://*.playnano.online/*
 // @match *://*.rekonise.com/*
 // @match *://*.acortalink.me/*
@@ -236,7 +235,7 @@
 // @match *://*.sub2unlock.net/*
 // @match *://*.mboost.me/*
 // @match *://*.autofaucet.dutchycorp.space/*
-// @include /^(https?:\/\/)(.+)?((teachsansar|technicalatg|foodxor).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((g34new|dlgamingvn|v34down|phimsubmoi).com|nashib.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(appdrive\.*)/
 // @include /^(https?:\/\/)(.+)?(userscloud.com|dosya.co)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(usersdrive.com|ddownload.com)(\/.*)/
@@ -248,10 +247,10 @@
 // @include /^(https?:\/\/)(.+)?(1ink.cc|cuturl.cc)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(bedrat.xyz|uhtrdr47.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(proappapk.com|meclipstudy.in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((fc-lc|thotpacks).xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((devnote|formshelp).in|djbassking.live)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(offerwall.me|ewall.biz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(surl.li|surl.gd)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(cooklike.info|model-tas-terbaru.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((blogsward|coinjest).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
 // @include /^(https?:\/\/)(.+)?(dogefury.com|go.tfly.link|thanks.tinygo.co)(\/.*)/
@@ -260,21 +259,22 @@
 // @include /^(https?:\/\/)(.+)?(tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((bnbfree|freeth|freebitco).in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(loanifyt.site|topshare.in)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(financedoze.com|techhype.in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(techsl.online|jobmatric.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(khaddavi.net|contentmenarik.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(cutnet.net|(exego|cety).app|(jixo|gamco).online|cutyion.com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((financewada|utkarshonlinetest).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(financedoze.com|techhype.in|svream.net|rtjks.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(sfl.gl|moneyblink.com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((financewada|utkarshonlinetest).com|financenova.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(setroom.biz.id|travelinian.com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((fourlinez|newsonnline|phonesparrow|creditcarred|stockmarg).com|(alljntuworld|updatewallah|vyaapaarguru).in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((fourlinez|newsonnline|phonesparrow|creditcarred|stockmarg).com|(alljntuworld|updatewallah|vyaapaarguru|viralmp3.com).in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((keedabankingnews|aceforce2apk).com|themezon.net|healthvainsure.site|rokni.xyz|bloggingwow.store)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((10short|lollty).pro|mamahawa.com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((aduzz|tutorialsaya|indobo|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((aduzz|tutorialsaya|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista|blog-myst|webhostsec).com|ss7.info|sololevelingmanga.pics)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(largestpanel.in|(djremixganna|financebolo|emubliss).com|(earnme|usanewstoday).club|earningtime.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((viralxns|uploadsoon).com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(largestpanel.in|(djremixganna|financebolo).com|(earnme|usanewstoday).club)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(ouo.io|ouo.press)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(paste1s.com|note1s.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(yoshare.net|olhonagrana.com)(\/.*)/
@@ -284,13 +284,13 @@
 // @include /^(https?:\/\/)(.+)?((bestloansoffers|worldzc).com|earningtime.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((exeo|exego).app|(falpus|exe-urls|exnion).com|4ace.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(pubghighdamage.com|anmolbetiyojana.in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(aylink.co|cpmlink.pro)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((tmail|labgame).io|(gamezizo|fitdynamos).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(4hi.in|(10short|animerigel|encurt4).com|finish.wlink.us|passivecryptos.xyz|fbol.top|kut.li|shortie.sbs)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(infonerd.org|coingraph.us)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((blogmado|kredilerim|insuranceleadsinfo).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(azmath.info|expertvn.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(litecoin.host|cekip.site)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((ecryptly|equickle).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|(offeergames|todogame).online|whatgame.xyz|gold-24.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(nishankhatri.xyz|(bebkub|owoanime|hyperkhabar|hamroguide).com)(\/.*)/
@@ -298,8 +298,10 @@
 // @include /^(https?:\/\/)(.+)?(autodime.com|cryptorex.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(writedroid.eu.org|modmania.eu.org|writedroid.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((travelironguide|businesssoftwarehere|softwaresolutionshere|freevpshere).com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((marketrook|aiperceiver|governmentjobvacancies).com|(winezones|kabilnews|myscheme.org|mpsarkarihelp).in|biharhelp.co|wastenews.xyz)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((goodmorningimg|odiadance|newkhabar24|aiperceiver|kaomojihub).com|dvjobs.in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((marketrook|governmentjobvacancies).com|(winezones|kabilnews|myscheme.org|mpsarkarihelp).in|biharhelp.co|wastenews.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(stly.link|snaplessons.net|atravan.net|stfly.biz|airevue.net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((ecryptly|equickle).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((horoscop|videoclip|newscrypto).info|article24.online|writeprofit.org|docadvice.eu|trendzilla.club|worldwallpaper.top)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(revly.click|(clikern|kiddyshort).com|mitly.us|link.whf.bz|shortex.in|easyshort.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn|ziggame|gamezigg).com|azmath.info|aztravels.net|handydecor.com.vn)(\/.*)/
@@ -308,14 +310,14 @@
 // @include /^(https?:\/\/)(.+)?(techyreviewx.com|desiupload.co)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(exactpay.online|neverdims.com|sproutworkers.co)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((btcpany|zombiebtc|claimfey|thefastpost).com|(panytourism|statepany).online)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((fitnesswifi|earnmoneyyt|thardekho|dinoogaming|pokoarcade|hnablog|orbitlo|finquizy|indids).com|(ddieta|lmktec).net|vbnmx.online)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((admediaflex|cdrab|financekita).com|ecq.info|wpcheap.net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((fitnesswifi|earnmoneyyt|thardekho|dinoogaming|pokoarcade|hnablog|orbitlo|finquizy|indids|redfea).com|(ddieta|lmktec).net|vbnmx.online)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((admediaflex|cdrab|financekita|jobydt|foodxor|mealcoldnewsobjective).com|(ecq|cooklike).info|wpcheap.net|thecryptoworld.site|skyfreecoins.top|petly.lat|techreviewhub.store)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((tinybc|phimne).com|(mgame|sportweb|bitcrypto).info)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(tutwuri.id|(besargaji|link2unlock).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(hunterkiller.me|surflink.tech)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((lyricsbaazaar|ezeviral).com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((mangareleasedate|sabkiyojana|teqwit|bulkpit|odiafm).com|(loopmyhub|thepopxp).shop|cryptoblast.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((sekilastekno|miuiku|vebma|majalahhewan).com|crm.cekresi.me|ai.tempatwisata.pro)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((mangareleasedate|sabkiyojana|teqwit|bulkpit|odiafm).com|(loopmyhub|thepopxp).shop|cryptoblast.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it|businessnews-nigeria|govaf|fahmysport).com|(hightrip|fx-gd|world-trips|otechno|bluetechno|to-travel).net|(newforex|forexit).online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(oncoin.info|nishankhatri.com.np|quanngon.org)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((playonpc|yolasblog).online|(quins|megahosting).us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday|tradeshowrating).com|gally.shop|evegor.net|freeat30.org|(qanin|ivnlnews).xyz)(\/.*)/
@@ -327,21 +329,20 @@
 // @include /^(https?:\/\/)(.+)?((techleets|bonloan).xyz|sharphindi.in|nyushuemu.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(xonnews.net|toilaquantri.com|share4u.men|camnangvay.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((cricketgurupro|travelkuku).com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((financenube|mixrootmods|pastescript|trimorspacks|mealcold).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((financenube|mixrootmods|pastescript|trimorspacks).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(mbantul.my.id|crypto-fi.net|claimcrypto.cc|xtrabits.click|(web9academy|bioinflu|bico8).com|(ourcoincash|studyis).xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(dutchycorp.ovh|(beingtek|encurt4|10short).com|(zagl|shrinkforearn|beinglink).in|seulink.digital|oii.io|hamody.pro|metasafelink.site|wordcounter.icu|pwrpa.cc|flyad.vip|seulink.online|pahe.plus|tfly.link)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((remixsounds|helpdeep|thinksrace).com|uprwssp.org|gkfun.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(shrinke\.*|shrinkme\.*|(paid4link|linkbulks|linclik|up4cash|smoner|minimonetize|encurtadorcashlinks|yeifly).com|(wordcounter|shrink).icu|(dutchycorp|galaxy-link).space|dutchycorp.ovh|pahe.plus|(pwrpa|snipn).cc|paylinks.cloud|oke.io|tinygo.co|tlin.me|wordcount.im|link.freebtc.my.id|get.megafly.in|skyfreeshrt.top)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(virtuous-tech.net|newsminer.uno)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(coinclix.co|coinhub.wiki|(vitalityvista|geekgrove).net)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela|howtoconcepts|tuasy|skyrimer|foodxor|yodharealty|mobcupring|aiimsopd|advupdates|camdigest|heygirlish|blog4nx|todayheadliners|jobqwe|cryptonews.faucetbin|mobileflashtools).com|(paidinsurance|djstar|sevayojana|bjp.org).in|(sastainsurance|nashib).xyz|(cialisstrong|loanforuniversity).online|zaku.pro|veganab.co|cegen.org|skyfreecoins.top|manga4nx.site)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela|howtoconcepts|tuasy|skyrimer|yodharealty|mobcupring|aiimsopd|advupdates|camdigest|heygirlish|blog4nx|todayheadliners|jobqwe|cryptonews.faucetbin|mobileflashtools).com|(paidinsurance|djstar|sevayojana|bjp.org).in|(sastainsurance|nashib).xyz|(cialisstrong|loanforuniversity).online|zaku.pro|veganab.co|cegen.org|skyfreecoins.top|manga4nx.site)(\/.*)/
 // @match *://*.api.gplinks.com/*
 // @match *://*.venzoars.com/*
 // @include /^(https?:\/\/)(.+)?((surfsees|travelagancy).com)(\/.*)/
 // @match *://*.multiup.io/*
 // @match *://*.modsfire.com/*
 // @match *://*.social-unlock.com/*
-// @match *://*.gamerfang.in/*
 // @match *://*.blog.mphealth.online/*
 // @match *://*.mphealth.online/*
 // @match *://*.shrs.link/*
@@ -644,7 +645,7 @@
 
 (function() {// Please Remember , My Scripts Works Better Using Firefox Browser and Violentmonkey Extension
 'use strict';
-  const cfg = new MonkeyConfig({title: 'Bypass All Shortlinks Version 95.1 Settings',menuCommand: 'Open Bypass Settings',shadowWidth: '600px',shadowHeight: '400px',iframeWidth: '500px',iframeHeight: '350px',
+  const cfg = new MonkeyConfig({title: 'Bypass All Shortlinks Version 95.3 Settings',menuCommand: 'Open Bypass Settings',shadowWidth: '600px',shadowHeight: '400px',iframeWidth: '500px',iframeHeight: '350px',
   params: {Announcements: {type: 'textarea',label: 'Announcements',fontColor: "#0000ff",default: '1. Support My Works Via https://saweria.co/Bloggerpemula\n2. Red Menu=> Sometimes Causes Problems , use Your own Trial Error',column: 'top',labelAlign: 'center',rows: 3,cols: 50},
     SetDelay: {label: 'Default Redirect Delay in My Blog ',fontColor: "#0000ff",type: 'number',default: 5,column: 'top'},
     TimerFC: {label: 'Enable Faster Timer',type: 'checkbox',fontColor: "#ff0000",default: false,column: 'left'},
@@ -679,13 +680,12 @@
     if (selectors.length > 1) {return selectors.forEach(ReadytoClick);}if (sleepTime > 0) {return sleep(sleepTime * 1000).then(function() {ReadytoClick(selector, 0);});}
     elementReady(selector).then(function(element) {element.removeAttribute('disabled');element.removeAttribute('target');
         events.forEach(eventName => {const eventObject = new MouseEvent(eventName, {bubbles: true}); element.dispatchEvent(eventObject);});});}
-  function BpNote(message, level = 'info') {const timestamp = new Date().toLocaleTimeString();switch (level) {case 'warn':console.warn(`[BASS V95.1] ${timestamp} - WARNING: ${message}`);break;
-      case 'error':console.error(`[BASS V95.1] ${timestamp} - ERROR: ${message}`);break;default:console.log(`[BASS V95.1] ${timestamp} - INFO: ${message}`);}}
+  function BpNote(message, level = 'info') {const timestamp = new Date().toLocaleTimeString();switch (level) {case 'warn':console.warn(`[BASS V95.3] ${timestamp} - WARNING: ${message}`);break;
+      case 'error':console.error(`[BASS V95.3] ${timestamp} - ERROR: ${message}`);break;default:console.log(`[BASS V95.3] ${timestamp} - INFO: ${message}`);}}
+  function CloudPS(checkFrames = false) {if (checkFrames && window.self !== window.top) {BpNote('Bypass Function Canceled Because Iframe Detected ', 'info');return true;}
+    if (elementExists('body.no-js')) {BpNote("Bypass Function Canceled Because It's on the Cloudflare Check Page ", 'info');return true;} return false;}
   function DecodeBase64(string, times = 1) {let decodedString = string;for (let i = 0; i < times; i++) {decodedString = atob(decodedString);}return decodedString;}
   function Decrypter(string, shift = 13) {return string.replace(/[a-z]/gi, c => {const base = c <= 'Z' ? 90 : 122;return String.fromCharCode(base >= (c = c.charCodeAt(0) + shift) ? c : c - 26);});}
-  function TrustMe() {if (!elementExists('body.no-js')) {const originalAddEventListener = EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener = function(type, listener, options) {
-    const wrappedListener = function(event) {const clonedEvent = Object.create(event);Object.defineProperty(clonedEvent, "isTrusted", {value: true,writable: false});
-    return listener.call(this, clonedEvent);};return originalAddEventListener.call(this, type, wrappedListener, options);};}}
   function waitForElm(query, callback, maxWaitTime = 15, initialDelay = 5) {const startTime = Date.now();const maxWaitTimeMs = maxWaitTime * 1000;const initialDelayMs = initialDelay * 1000;
     setTimeout(() => {const observer = new MutationObserver(() => {if (elementExists(query)) {observer.disconnect();callback(bp(query));} else if (Date.now() - startTime >= maxWaitTimeMs + initialDelayMs) {
           observer.disconnect();BpNote(`Element ${query} not found within ${maxWaitTime + initialDelay} seconds`, 'warn');}});observer.observe(document.body, {childList: true,subtree: true});
@@ -693,14 +693,14 @@
   function SameTab() {Object.defineProperty(unsafeWindow, 'open', {value: function(url) {if (url) {location.href = url;BpNote(`Forced window.open to same tab: ${url}`);}return null;},writable: false,configurable: false});
     document.addEventListener('click', (e) => {const target = e.target.closest('a[target="_blank"]');if (target && target.href) {e.preventDefault();location.href = target.href;BpNote(`Redirected target="_blank" to same tab: ${target.href}`);}}, true);
     document.addEventListener('submit', (e) => {const form = e.target;if (form.target === '_blank' && form.action) {e.preventDefault();location.href = form.action;BpNote(`Redirected form target="_blank" to same tab: ${form.action}`);}}, true);}
-  function BlockRead(SearchString, nameFunc) {try {if (!elementExists('body.no-js')) {if (typeof window[nameFunc] !== 'function') {BpNote(`Function ${nameFunc} not found or not a function`, 'warn');return;}const target = window[nameFunc];
+  function BlockRead(SearchString, nameFunc) {if (CloudPS()) return;try {if (typeof window[nameFunc] !== 'function') {BpNote(`Function ${nameFunc} not found or not a function`, 'warn');return;}const target = window[nameFunc];
     window[nameFunc] = function(...args) {try {const callback = args[0];const stringFunc = callback && typeof callback === 'function' ? callback.toString() : '';const regex = new RegExp(SearchString, 'i');if (regex.test(stringFunc)) {args[0] = function() {};}
-    return target.call(this, ...args);} catch (err) {console.error(`Error in overridden ${nameFunc}:`, err);return target.call(this, ...args);}};}} catch (err) {console.error('Error in BlockRead:', err);}}
+    return target.call(this, ...args);} catch (err) {console.error(`Error in overridden ${nameFunc}:`, err);return target.call(this, ...args);}};} catch (err) {console.error('Error in BlockRead:', err);}}
   function strBetween(s, front, back, trim = false) {if (typeof s !== 'string' || s.indexOf(front) === -1 || s.indexOf(back) === -1) return '';const start = s.indexOf(front) + front.length;const end = s.indexOf(back, start);
     if (start >= end) return '';let result = s.slice(start, end);if (trim) {result = result.replaceAll(' ', '');result = result.trim();result = result.replaceAll('\n', ' ');} else {result = result.trim();}return result.replace(/['"]/g, '');}
-  function EnableRCF() {var events = ['contextmenu', 'copy', 'cut', 'paste', 'select', 'selectstart','dragstart', 'drop'];function preventDefaultActions(event) {event.stopPropagation();}events.forEach(function(eventName) {document.addEventListener(eventName, preventDefaultActions, true);});}
+  function EnableRCF() {if (CloudPS()) return;var events = ['contextmenu', 'copy', 'cut', 'paste', 'select', 'selectstart','dragstart', 'drop'];function preventDefaultActions(event) {event.stopPropagation();}events.forEach(function(eventName) {document.addEventListener(eventName, preventDefaultActions, true);});}
   function Request(url, options = {}) {return new Promise(function(resolve, reject) {GM_xmlhttpRequest({ method: options.method ?? "GET", url, responseType: options.responseType ?? "json", headers: options.headers, data: options.data, onload: function(response) {resolve(response.response);}});});}
-  function Listener(callback) {if (!elementExists('body.no-js')) {const originalOpen = XMLHttpRequest.prototype.open; XMLHttpRequest.prototype.open = function(method, url) {this.addEventListener("load", function() { this.method = method;this.url = url;callback(this);}); originalOpen.apply(this, arguments);};}}
+  function Listener(callback) {if (CloudPS()) return;const originalOpen = XMLHttpRequest.prototype.open; XMLHttpRequest.prototype.open = function(method, url) {this.addEventListener("load", function() { this.method = method;this.url = url;callback(this);}); originalOpen.apply(this, arguments);};}
   function AIORemover(action, target = null) {switch (action) {case 'removeRef': delete document.referrer;document.__defineGetter__('referrer', () => target || '');BpNote('Referrer removed or set to:', target || 'empty');break;
       case 'removeBp': if (!target) {BpNote('Selector is required for removeBp action.', 'error');return;}var elements = bp(target, true);elements.forEach(element => element.remove());BpNote(`Elements with selector "${target}" removed.`);break;
       case 'delCookie': if (!target) {BpNote('Cookie name is required for delCookie action.', 'error');return;}document.cookie = `${target}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;BpNote(`Cookie "${target}" deleted.`);break; default: BpNote('Invalid action. Use "removeRef", "removeBp", or "delCookie".', 'error');}}
@@ -708,28 +708,33 @@
     const expires = days ? `; expires=${date.toUTCString()}` : '';document.cookie = `${name}=${value}${expires}; path=/`;BpNote(`Cookie "${name}" telah diatur dengan nilai "${value}".`);} else if (action === 'read') {
     if (!name) {BpNote('Nama cookie harus disediakan untuk mode "read".', 'error');return;}const cookieName = name + "=";const decodedCookie = decodeURIComponent(document.cookie);const cookieArray = decodedCookie.split(';');
     for (let i = 0; i < cookieArray.length; i++) {let cookie = cookieArray[i];while (cookie.charAt(0) === ' ') {cookie = cookie.substring(1);}if (cookie.indexOf(cookieName) === 0) {return cookie.substring(cookieName.length, cookie.length);}}return "";} else {BpNote('Mode tidak valid. Gunakan "set" atau "read".', 'error');}}
-  function BypassedByBloggerPemula(domains, data, url = '', blog = false, all = false) {if (elementExists('body.no-js')) {BpNote("Bypass dibatalkan karena elemen 'body.no-js' ditemukan."); return;}if (!new RegExp(domains).test(location.host)) return;function extractFinalUrl() {const currentUrl = window.location.href;
+  function BypassedByBloggerPemula(domains, data, url = '', blog = false, all = false) {if (CloudPS()) return;if (!new RegExp(domains).test(location.host)) return;function extractFinalUrl() {const currentUrl = window.location.href;
     const urlMatches = currentUrl.match(/url=(https?:\/\/[^&]+)/g);if (!urlMatches) return null;let finalUrl = urlMatches[urlMatches.length - 1].replace('url=', '');try {finalUrl = decodeURIComponent(finalUrl);} catch (e) {BpNote('Error decoding URL:', e);}return finalUrl;}
     if (typeof data === 'function') return data();if (typeof data === 'string') {const params = data.split(',');if (params.every(p => BpParams.has(p))) {const use = params[0];let value = all ? BpParams.getAll(use).find(u => new RegExp(domains).test(u)) : BpParams.get(use);
     if (!value || value.includes('st?')) {value = extractFinalUrl();}if (value) redirect(url + value, blog);}return;}if (Array.isArray(data)) data = {'/': data};if (!(location.pathname in data)) return;const [key, value] = data[location.pathname];let finalValue = '';
     if (typeof key === 'object' && key.test(location.search)) {finalValue = value + RegExp.$1;} else if (BpParams.has(key)) {finalValue = value + BpParams.get(key);} else {finalValue = extractFinalUrl();}if (finalValue) redirect(url + finalValue, blog);}
+  function TrustMe() {if (CloudPS()) return;try {const sandbox = new Proxy(window, {get(target, key) {if (key === 'Object') {return new Proxy(Object, {get(objTarget, objKey) {if (objKey === 'freeze') {return function(obj) {BpNote('Object.freeze disabled in sandbox.', 'warn');return obj;};}return Reflect.get(objTarget, objKey);}});}return Reflect.get(target, key);}});
+    const originalAddEventListener = EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener = function(type, listener, options) {const wrappedListener = function(event) {const supportedEvents = [Event, MouseEvent, KeyboardEvent, MessageEvent];const isSupported = supportedEvents.some(EventType => event instanceof EventType);
+    if (!isSupported) {return listener.call(this, event);}const userInputEvents = ['click', 'mousedown', 'mouseup', 'keydown', 'keyup', 'input'];if (!userInputEvents.includes(type)) {return listener.call(this, event);}try {let clonedEvent;if (event instanceof MessageEvent) {clonedEvent = new MessageEvent(event.type, {data: event.data,origin: event.origin,
+    lastEventId: event.lastEventId,source: event.source,ports: event.ports});} else {clonedEvent = Object.create(event);}Object.defineProperty(clonedEvent, 'isTrusted', {value: true,writable: false});return listener.call(this, clonedEvent);} catch (e) {BpNote(`Error modifying event (${type}): ${e.message}`, 'error');return listener.call(this, event);}};
+    return originalAddEventListener.call(this, type, wrappedListener, options);};BpNote('TrustMe activated successfully.', 'info');} catch (e) {BpNote(`TrustMe initialization error: ${e.message}`, 'error');}}
   function notify(txt, clicktocopy = false, clicktoclose = false, duration = cfg.get('SetDelay')) {const m = document.createElement('div');m.style.padding = '10px 20px';m.style.zIndex = 10000;m.style.position = 'fixed';m.style.width = `970px`;m.style.top = '10px';m.style.transform = 'translateX(-50%)';
     m.style.left = '50%';m.style.fontFamily = 'Arial, sans-serif';m.style.fontSize = '16px';m.style.color = 'white';m.style.textAlign = 'center';m.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';m.style.boxSizing = 'border-box';m.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';m.style.cursor = 'pointer';
     const mainText = document.createElement('div');mainText.innerText = txt.replace('@', duration);m.appendChild(mainText);const actionText = document.createElement('span');actionText.style.position = 'absolute';actionText.style.right = '10px';actionText.style.bottom = '5px';actionText.style.fontSize = '12px';actionText.style.color = 'white';actionText.style.userSelect = 'none';
     if (clicktocopy) {actionText.innerText = 'Click to Copy';} else if (clicktoclose) {actionText.innerText = 'Click to Close';}m.appendChild(actionText);document.body.appendChild(m);m.addEventListener('click', () => {if (clicktocopy) {navigator.clipboard.writeText(txt.replace('@', duration)).then(() => {mainText.innerText = 'Copied to clipboard!';
     setTimeout(() => {document.body.removeChild(m);clearInterval(timerId);}, 1000);}).catch(err => {console.error('Failed to copy text: ', err);});}if (clicktoclose) {document.body.removeChild(m);clearInterval(timerId);}});const timerId = setInterval(() => {duration -= 1;if (duration <= 0) {clearInterval(timerId);} else {mainText.innerText = txt.replace('@', duration);}}, 1000);}
-  function NoFocus() {window.mouseleave = true;window.onmouseover = true;document.hasFocus = () => true;if (!Object.getOwnPropertyDescriptor(document, 'webkitVisibilityState')?.get) {Object.defineProperty(document, 'webkitVisibilityState', {get: () => 'visible',configurable: true});}
+  function NoFocus() {if (CloudPS(true)) {return;}window.mouseleave = true;window.onmouseover = true;document.hasFocus = () => true;if (!Object.getOwnPropertyDescriptor(document, 'webkitVisibilityState')?.get) {Object.defineProperty(document, 'webkitVisibilityState', {get: () => 'visible',configurable: true});}
     if (!Object.getOwnPropertyDescriptor(document, 'visibilityState')?.get) {Object.defineProperty(document, 'visibilityState', {get: () => 'visible',configurable: true});}if (!Object.getOwnPropertyDescriptor(document, 'hidden')?.get) {Object.defineProperty(document, 'hidden', {get: () => false,configurable: true});}
     const eventOptions = {capture: true,passive: true};const ensureVisibility = () => {if (document.hidden !== false) {Object.defineProperty(document, 'hidden', {get: () => false,configurable: true});}};ensureVisibility();window.addEventListener('focus', e => e.stopImmediatePropagation(), eventOptions);window.addEventListener('blur', e => e.stopImmediatePropagation(), eventOptions);}
-  function CaptchaDone(callback, checkInterval = 1000) {const window = unsafeWindow;if (typeof callback !== 'function') {BpNote('Callback harus berupa fungsi', 'error');return;}let intervalId;
-    const checkCaptcha = () => {try {if (elementExists('.iconcaptcha-holder.iconcaptcha-theme-light.iconcaptcha-success')) {clearInterval(intervalId);callback();return;}
+  function CaptchaDone(callback, checkInterval = 1000) {if (CloudPS()) return;const window = unsafeWindow;if (typeof callback !== 'function') {BpNote('Callback harus berupa fungsi', 'error');return;}let intervalId;
+    const checkCaptcha = () => {try {if (elementExists('.iconcaptcha-modal__body-checkmark')) {clearInterval(intervalId);callback();return;}
     if (elementExists("iframe[src^='https://newassets.hcaptcha.com']")) {if (window.hcaptcha && typeof window.hcaptcha.getResponse === 'function') {const response = window.hcaptcha.getResponse();if (response && response.length > 0) {clearInterval(intervalId);callback();return;}}}
-    if (elementExists("input[name='cf-turnstile-response']") && !elementExists('body.no-js')) {if (window.turnstile && typeof window.turnstile.getResponse === 'function') {const response = window.turnstile.getResponse();if (response && response.length > 0) {clearInterval(intervalId);callback();return;}}}
+    if (elementExists("input[name='cf-turnstile-response']")) {if (window.turnstile && typeof window.turnstile.getResponse === 'function') {const response = window.turnstile.getResponse();if (response && response.length > 0) {clearInterval(intervalId);callback();return;}}}
     if (elementExists("iframe[title='reCAPTCHA']")) {if (window.grecaptcha && typeof window.grecaptcha.getResponse === 'function') {const response = window.grecaptcha.getResponse();if (response && response.length > 0) {clearInterval(intervalId);callback();return;}}}} catch (error) {console.error('Error checking captcha:', error);}};intervalId = setInterval(checkCaptcha, checkInterval);}
-  function BoostTimers(targetDelay) {const wrapTimer = (orig, type) => (func, delay, ...args) => orig(func, (typeof delay === 'number' && delay >= targetDelay) ?(BpNote(`[BoostTimers] Accelerated ${type} from ${delay}ms to 50ms`), 50) : delay, ...args);
+  function BoostTimers(targetDelay) {if (CloudPS(true)) {return;}const wrapTimer = (orig, type) => (func, delay, ...args) => orig(func, (typeof delay === 'number' && delay >= targetDelay) ?(BpNote(`[BoostTimers] Accelerated ${type} from ${delay}ms to 50ms`), 50) : delay, ...args);
     try {Object.defineProperties(unsafeWindow, {setTimeout: { value: wrapTimer(unsafeWindow.setTimeout, 'setTimeout'), writable: true, configurable: true },setInterval: { value: wrapTimer(unsafeWindow.setInterval, 'setInterval'), writable: true, configurable: true }});} catch (e) {
     const proxyTimer = (orig, type) => new Proxy(orig, { apply: (t, _, a) => t(a[0], (typeof a[1] === 'number' && a[1] >= targetDelay) ? (BpNote(`[BoostTimers] Accelerated ${type} from ${a[1]}ms to 50ms`), 50) : a[1], ...a.slice(2)) });unsafeWindow.setTimeout = proxyTimer(unsafeWindow.setTimeout, 'setTimeout');unsafeWindow.setInterval = proxyTimer(unsafeWindow.setInterval, 'setInterval');}}
-  function DebugLog() {if (window.self !== window.top || elementExists('body.no-js')) {BpNote("DebugLog Skipped, Iframe or 'body.no-js' detected", 'info'); return;}const STORAGE_KEY = 'protection_tracker';let attemptCount = GM_getValue(STORAGE_KEY, 0);if (attemptCount > 0) setTimeout(() => GM_setValue(STORAGE_KEY, 0), 60000);const SavedMethods = {
+  function DebugLog() {if (CloudPS(true)) {return;}const STORAGE_KEY = 'protection_tracker';let attemptCount = GM_getValue(STORAGE_KEY, 0);if (attemptCount > 0) setTimeout(() => GM_setValue(STORAGE_KEY, 0), 60000);const SavedMethods = {
     output: BpNote,trace: typeof console.debug === 'function' ? console.debug : BpNote,alert: console.warn,notice: console.info,issue: console.error,grid: typeof console.table === 'function' ? console.table : BpNote,wipe: console.clear,funcBuilder: Function.prototype.constructor,makeElement: document.createElement};
     const limits = {grid: { max: 5, timeframe: 5000 },wipe: { max: 5, timeframe: 5000 },filteredOutput: { max: 5, timeframe: 5000 },blocker: { max: 1, timeframe: 15000, count: 0, timestamp: 0 }};function canReport(category) {const restriction = limits[category] || {count: 0};if (restriction.stopped) return false;
     const currentTime = Date.now();restriction.timestamp = restriction.timestamp || currentTime;if (currentTime - restriction.timestamp > restriction.timeframe) {restriction.count = 0;restriction.timestamp = currentTime;}if (++restriction.count > restriction.max) {restriction.stopped = true;SavedMethods.alert(`Max limit hit for ${category}`);return false;}return true;}
@@ -739,13 +744,13 @@
     GM_setValue(STORAGE_KEY, attemptCount);if (canReport("blocker")) SavedMethods.alert(`Blocked debugger (count: ${attemptCount})`);if (attemptCount > 100) {GM_setValue(STORAGE_KEY, 0);throw new Error("Debugger overload detected");}setTimeout(() => GM_setValue(STORAGE_KEY, Math.max(0, attemptCount - 1)), 1);inputs[0] = codeText.replaceAll("debugger", "");}return target.apply(context, inputs);}});
     document.createElement = new Proxy(SavedMethods.makeElement, {apply: (target, context, args) => {const newNode = target.apply(context, args);if (args[0].toLowerCase() === "iframe") {newNode.addEventListener("load", () => {try {newNode.contentWindow.console = { ...console };newNode.contentWindow.Function.prototype.constructor = window.Function.prototype.constructor;} catch (err) {}});}return newNode;}});
     Object.keys(SavedMethods).forEach(method => {if (method in console) Object.defineProperty(console, method, { configurable: false, writable: false });});if (cfg.get('AntiDebug')) {const baseTiming = performance.now;BpNote("Performance Modified For Anti-Debug Protection");performance.now = () => baseTiming() + Math.random() * 2;}}
-  function CheckVisibility(selector, operatorOrCallback, textCondition, callback, actionOnVisible = true) {function isElementVisible(elem) {if (!elem) return false;if (!elem.offsetHeight && !elem.offsetWidth && !elementExists('body.no-js')) return false;if (getComputedStyle(elem).visibility === 'hidden' && !elementExists('body.no-js')) return false;return true;}
+  function CheckVisibility(selector, operatorOrCallback, textCondition, callback, actionOnVisible = true) {if (CloudPS()) return;function isElementVisible(elem) {if (!elem) return false;if (!elem.offsetHeight && !elem.offsetWidth) return false;if (getComputedStyle(elem).visibility === 'hidden') return false;return true;}
     function checkTextCondition(textCondition) {try {const conditionParts = textCondition.split(/(==|!=)/);if (conditionParts.length !== 3) {console.error('Invalid text condition format:', textCondition);return false;}const selectorPart = conditionParts[0].trim();const selector = selectorPart.replace("bp('", "").replace("').innerText", "").trim();
     const expectedValue = conditionParts[2].trim().replace(/['"]/g, '');const elem = bp(selector);if (!elem) return false;const actualValue = elem.innerText.trim();if (conditionParts[1].trim() === '==') {return actualValue.includes(expectedValue);} else if (conditionParts[1].trim() === '!=') {return !actualValue.includes(expectedValue);}return false;} catch (error) {
     console.error('Error evaluating text condition:', error);return false;}}if (typeof operatorOrCallback === 'function') {const callbackFn = operatorOrCallback;const checkInterval = 1000;const intervalId = setInterval(() => {try {const elem = bp(selector);const isVisible = isElementVisible(elem);if ((actionOnVisible && isVisible) || (!actionOnVisible && !isVisible)) {clearInterval(intervalId);callbackFn();}} catch (error) {
     console.error('Error checking visibility:', error);}}, checkInterval);} else if (typeof operatorOrCallback === 'string' && (operatorOrCallback === '&&' || operatorOrCallback === '||')) {const operator = operatorOrCallback;const checkInterval = 1000;const intervalId = setInterval(() => {try {const elem = bp(selector);const isVisible = isElementVisible(elem);const isTextConditionMet = checkTextCondition(textCondition);
     if ((operator === '&&' && isVisible && isTextConditionMet) || (operator === '||' && (isVisible || isTextConditionMet))) {clearInterval(intervalId);callback();}} catch (error) {console.error('Error checking visibility and text condition:', error);}}, checkInterval);} else {console.error('Parameter tidak valid.');}}
-  function DoIfExists(query, actionOrTime = 'click', timeInSecOrFuncName = 1, funcName = 'setTimeout') {let action = 'click';let time = 1;let timerFuncName = 'setTimeout';if (typeof actionOrTime === 'number') {time = actionOrTime;timerFuncName = typeof timeInSecOrFuncName === 'string' ? timeInSecOrFuncName : 'setTimeout';} else if (typeof actionOrTime === 'string') {action = actionOrTime;time = typeof timeInSecOrFuncName === 'number' ? timeInSecOrFuncName : 1;timerFuncName = typeof funcName === 'string' ? funcName : 'setTimeout';}
+  function DoIfExists(query, actionOrTime = 'click', timeInSecOrFuncName = 1, funcName = 'setTimeout') {if (CloudPS()) return;let action = 'click';let time = 1;let timerFuncName = 'setTimeout';if (typeof actionOrTime === 'number') {time = actionOrTime;timerFuncName = typeof timeInSecOrFuncName === 'string' ? timeInSecOrFuncName : 'setTimeout';} else if (typeof actionOrTime === 'string') {action = actionOrTime;time = typeof timeInSecOrFuncName === 'number' ? timeInSecOrFuncName : 1;timerFuncName = typeof funcName === 'string' ? funcName : 'setTimeout';}
     function GetForm(FormName) {const forms = document.forms;for (let i = 0; i < forms.length; i++) {if (FormName === 'mdn') {const form = forms[i].innerHTML;if (form.includes('Step')) {return forms[i];}} else if (FormName === 'Allin1') {const bait = forms[i].action;if (/bypass.html|adblock.html/.test(bait)) continue;return forms[i];}}return null;}
     let element;if (query === 'mdn' || query === 'Allin1') {element = GetForm(query);} else {element = bp(query);}if (element) {if (typeof element[action] === 'function') {if (timerFuncName === 'setTimeout' || timerFuncName === 'setInterval') {const timerFunc = window[timerFuncName];if (timerFuncName === 'setTimeout') {timerFunc(() => {
     try {element[action]();BpNote(`Aksi "${action}" berhasil dijalankan pada elemen "${query}".`);} catch (error) {console.error(`Aksi "${action}" Gagal pada elemen "${query}":`, error);}}, time * 1000);} else if (timerFuncName === 'setInterval') {const intervalId = timerFunc(() => {try {if (elementExists(query)) {const currentElement = bp(query);currentElement[action]();BpNote(`Aksi "${action}" berhasil dijalankan pada elemen "${query}".`);} else {BpNote(`Elemen "${query}" tidak ditemukan.`,'error');
@@ -805,15 +810,11 @@
   BypassedByBloggerPemula('earn.bankshiksha.in', 'LinkShortUrlID', 'https://go.kingurl.in/');
   BypassedByBloggerPemula('techurlshort.in', 'grey', 'https://hrpunjab.in/savise.php?grey=');
   BypassedByBloggerPemula('ninjamodz.litonmods.com', 'adlinkfly', 'https://shortxlinks.in/');
-  BypassedByBloggerPemula('kingyojana.com', 'link', 'https://newkhabar24.com/safe.php?link=');
-  BypassedByBloggerPemula('sayphotobooth.com', 'babu', 'https://odiadance.com/safe2.php?link=');
-  BypassedByBloggerPemula('odiadance.com', 'link', 'https://shakib.quick91.com/safe2.php?link=');
   BypassedByBloggerPemula('rajdhanimaja.com', 'grey', 'https://techurlshort.in/inuser.php?grey=');
   BypassedByBloggerPemula('highkeyfinance.com', 'landhere', 'https://insurance.techymedies.com/');
   BypassedByBloggerPemula('financeyogi.net', 'link', 'https://market.finclub.in/safe2.php?link=');
   BypassedByBloggerPemula('(gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia).com', 'link', '');
   //BypassedByBloggerPemula('(surfsees|travelagancy).com', 'link', 'https://cryptings.in/token.php?id=');
-  BypassedByBloggerPemula('newkhabar24.com', 'link', 'https://news.topsarkariyojana.in/safe.php?link=');
   BypassedByBloggerPemula(/go.link4rev.site/, function() {location = location.href.replace('go.', '');});
   BypassedByBloggerPemula(/infinityskull.com/, {'/safe.php': ['link', 'https://go.publicearn.com/'],}, false);
   BypassedByBloggerPemula(/link.linksfire.co/, function() {location = location.href.replace('link', 'blog');});
@@ -828,7 +829,7 @@
   BypassedByBloggerPemula('(earnc1.bankshiksha|domain.bgmiupdate.com).in', 'grey', 'https://a1.payalgaming.co.in/click.php?LinkShortUrlID=');
   BypassedByBloggerPemula(/financedoze.com/, () => {if (BpParams.has('id')) {location = 'https://www.google.com/url?q=https://financedoze.com';}});
   BypassedByBloggerPemula(/vk.com/, () => {if (BpParams.has('to') && location.href.includes('/away.php')) {location = decodeURIComponent(BpParams.get('to'));}});
-  BypassedByBloggerPemula(/(teachsansar|technicalatg|foodxor).com/, () => waitForElm("#wpsafegenerate > #wpsafe-link > a[href]", safe => redirect(safe.href,false)));
+  BypassedByBloggerPemula(/(g34new|dlgamingvn|v34down|phimsubmoi).com|nashib.xyz/, () => waitForElm("#wpsafegenerate > #wpsafe-link > a[href]", safe => redirect(safe.href,false)));
   BypassedByBloggerPemula(/ouo.io/, function() {if (BpParams.has('s') && location.href.includes('link.nevcoins.club')) {location = 'https://' + BpParams.getAll('s');} else if (BpParams.has('s')) {location = BpParams.getAll('s');}});
   BypassedByBloggerPemula(/triggeredplay.com/, () => {if (location.href.includes('#')) {let trigger = new URLSearchParams(window.location.hash.substring(1));
       let redplay = trigger.get('url');if (redplay) {let decodedUrl = DecodeBase64(redplay);window.location.href = decodedUrl;}}});
@@ -839,6 +840,7 @@
     var observer = new MutationObserver(() => {if (location.href !== Tubeshort) {Tubeshort = location.href; if (location.href.includes('/shorts/')) location = location.href.replace('/shorts/', '/watch?v=');}});
     var short = {subtree: true,childList: true}; observer.observe(document, short);}}});
   BypassedByBloggerPemula(/linkbox.to/, () => {Listener(function(object) {if (object.url.includes('api/file/detail?itemId')) {BpNote(object.responseText);const {data: {itemInfo}} = JSON.parse(object.responseText);BpNote(itemInfo); redirect(itemInfo.url, false);}});});
+  BypassedByBloggerPemula('(cryptowidgets|melodyspot|carsmania|cookinguide|tvseriescentral|cinemascene|hobbymania|plantsguide|furtnitureplanet|petsguide|gputrends|gamestopia|ountriesguide|carstopia|makeupguide|gadgetbuzz|coinsvalue|coinstrend|coinsrise|webfreetools|wanderjourney|languagefluency|giftmagic).net|(freeoseocheck|insurancexguide|funplayarcade|origamiarthub|fitbodygenius|illustrationmaster|selfcareinsights|constructorspro|ecofriendlyz|virtualrealitieshub|wiki-topia|techiephone|brewmasterly).com|(bubblix|dailytech-news).eu|coinscap.info|insurancegold.in|wii.si', TrustMe);
   Object.defineProperty(document, 'querySelector', { value: document.querySelector, configurable: false, writable: false });
   const sl = (h => {
     switch (h.host) {case 'multiup.io': if (h.href.includes('/download/')) return h.href.replace('download/', 'en/mirror/'); break;
@@ -859,7 +861,6 @@
     } else if (List1.includes(location.host)) { var form = $('form[id=go-link]');$.ajax({type: 'POST', async: true, url: form.attr('action'),data: form.serialize(),dataType: 'json',
         success: function(data) {redirect(data.url);}});} else if (elementExists('form[id=go-link]')) {}    const bas = (h => {const b = h.pathname === '/verify/' && /^\?([^&]+)/.test(h.search); const result = {isNotifyNeeded: false,redirectDelay: 0,link: undefined};
       switch (h.host) {
-        case 'gamerfang.in': if (b) {meta('https://faux.gamerfang.in/tech/' + RegExp.$1);} break;
         case 'blog.mphealth.online': if (b) {meta('https://techyuth.xyz/blog/' + RegExp.$1);} break;
         case 'mphealth.online': if (b) {meta('https://blog.mphealth.online/verify/?' + RegExp.$1);} break;
         case 'shrs.link': case 'shareus.io':
@@ -994,7 +995,6 @@
     BypassedByBloggerPemula(/mkomsel.com/, function() {DoIfExists('#downloadfile', 12);});
     BypassedByBloggerPemula(/disheye.com/, () => {DoIfExists('#redirectForm', 'submit', 3);});
     BypassedByBloggerPemula(/1ink.cc|cuturl.cc/, function() {DoIfExists('#countingbtn', 1);});
-    BypassedByBloggerPemula(/fc-lc.xyz/, () => {DoIfExists('#invisibleCaptchaShortlink', 3);});
     BypassedByBloggerPemula(/jameeltips.us/, function() {DoIfExists('#continue_button_1', 1);});
     BypassedByBloggerPemula(/post.copydev.com/, function() {DoIfExists('.btn-success.btn', 6);});
     BypassedByBloggerPemula(/1short.io/, function() {DoIfExists('#countDownForm', 'submit', 7);});
@@ -1006,17 +1006,17 @@
     BypassedByBloggerPemula(/pro.sh/, function() {DoIfExists('.btn-secondary', 3, 'setInterval');});
     BypassedByBloggerPemula(/playpaste.com/, () => {CaptchaDone(() => {DoIfExists('button.btn');});});
     BypassedByBloggerPemula(/proappapk.com|meclipstudy.in/, function() {DoIfExists('#gotolink', 5);});
+    BypassedByBloggerPemula(/(fc-lc|thotpacks).xyz/, () => {DoIfExists('#invisibleCaptchaShortlink', 3);});
     BypassedByBloggerPemula(/(devnote|formshelp).in|djbassking.live/, () => {DoIfExists('#getlinks.btn', 2);});
     BypassedByBloggerPemula(/offerwall.me|ewall.biz/, () => {CaptchaDone(() => {DoIfExists('#submitBtn');});});
     BypassedByBloggerPemula(/shortlinks2btc.somee.com/, () => {CaptchaDone(() => {DoIfExists('#btLogin');});});
     BypassedByBloggerPemula(/kisalt.digital/, () => {if (BpParams.has('u')) {meta(atob(BpParams.get('u')));}});
     BypassedByBloggerPemula(/surl.li|surl.gd/, () => waitForElm('#redirect-button', surl => redirect(surl.href)));
-    BypassedByBloggerPemula(/cooklike.info|model-tas-terbaru.com/, {'/': ['link', 'https://yousm.link/'],}, false);
     BypassedByBloggerPemula(/firefaucet.win/, () => {CaptchaDone(() => {ReadytoClick('button[type=submit]',2);});});
+    BypassedByBloggerPemula(/rotizer.net/, () => {CaptchaDone(() => {DoIfExists('button:innerText("Confirm")');});});
     BypassedByBloggerPemula(/(blogsward|coinjest).com/, () => {waitForElm('#continueBtn', afBtn => afBtn.click());});
     BypassedByBloggerPemula(/aryx.xyz/, () => {DoIfExists('.container > div:nth-child(4) > button:nth-child(1)', 3);});
     BypassedByBloggerPemula(/linkforearn.com/, () => waitForElm('#shortLinkSection a', linkf => redirect(linkf.href)));
-    BypassedByBloggerPemula(/techsl.online/, () => {DoIfExists("form[name='rtg']", 'submit', 3);DoIfExists('#btn6', 4);});
     BypassedByBloggerPemula(/webhostingtips.club/, {'/safe.php': ['link', 'https://jrlinks.in/safe2.php?link='],}, false);
     BypassedByBloggerPemula(/downfile.site/, () => {DoIfExists('button.h-captcha', 2);DoIfExists('#megaurl-submit', 3);});
     BypassedByBloggerPemula(/importantclass.com/, () => {waitForElm('a#my-btn', vnshor => redirect(vnshor.href, false));});
@@ -1032,13 +1032,14 @@
     BypassedByBloggerPemula(/loanifyt.site|topshare.in/, () => {DoIfExists("form[name='tp']", 'submit', 3);DoIfExists('#btn6', 4);});
     BypassedByBloggerPemula(/explorerlives.com/, () => {DoIfExists('#link.tp-blue.tp-btn', 3);DoIfExists('#btn6.tp-blue.tp-btn', 4);});
     BypassedByBloggerPemula(/vuotnhanh.com/, () => waitForElm('a#result.safelink.btn.btn-lg.btn-success', vuot => redirect(vuot.href)));
-    BypassedByBloggerPemula(/financedoze.com|techhype.in/, () => {DoIfExists('#rtg', 'submit', 3);DoIfExists('#rtg-snp21 > button', 4);});
+    BypassedByBloggerPemula(/techsl.online|jobmatric.com/, () => {DoIfExists("form[name='rtg']", 'submit', 3);DoIfExists('#btn6', 4);});
     BypassedByBloggerPemula(/forex-trnd.com/, () => {elementReady('#exfoary-snp').then(() => DoIfExists('#exfoary-form', 'submit', 3));});
     BypassedByBloggerPemula(/khaddavi.net|contentmenarik.com/, () => {parent.open = BpBlock();CaptchaDone(() => {DoIfExists('#slu-btn');});});
     BypassedByBloggerPemula(/gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online/, function() {DoIfExists('#mdt', 3);});
     BypassedByBloggerPemula(/cutnet.net|(exego|cety).app|(jixo|gamco).online|cutyion.com/, () => {ReadytoClick("#submit-button:not([disabled])",2);});
-    BypassedByBloggerPemula(/(financewada|utkarshonlinetest).com/, () => {DoIfExists('.get_btn.step_box > .btn', 2);ReadytoClick('.get_btn a[href]', 3);});
+    BypassedByBloggerPemula(/modassir.exblog.jp/, () => {DoIfExists('span:innerText("Next Link")', 3);DoIfExists('font:innerText("Next Link")', 4);});
     BypassedByBloggerPemula(/sharetext.me/, function() {if (location.href.includes('/redirect') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
+    BypassedByBloggerPemula(/financedoze.com|techhype.in|svream.net|rtjks.xyz/, () => {DoIfExists('#rtg', 'submit', 3);DoIfExists('#open-continue-btn', 4);});
     BypassedByBloggerPemula(/sfl.gl|moneyblink.com/, function() {if (location.href.includes('/ready') && BpParams.has('u')) {meta(atob(BpParams.get('u')));}});
     BypassedByBloggerPemula(/comohoy.com/, function() {if (location.href.includes('/grab/out.html') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
     BypassedByBloggerPemula(/linkforearn.click/, () => waitForElm('#shortLinkSection.short-link-section a.btn', linkforearn => redirect(linkforearn.href, false)));
@@ -1046,16 +1047,17 @@
     BypassedByBloggerPemula(/apkw.ru/, function() {if (location.href.includes('/away')) {let apkw = location.href.split('/').slice(-1);redirect(atob(apkw),false);}});
     BypassedByBloggerPemula(/wp.thunder-appz.eu.org/, () => {DoIfExists("form[name='dsb']", 'submit', 3);waitForElm('#button3 > a', thun => redirect(thun.href, false));});
     BypassedByBloggerPemula(/programasvirtualespc.net/, () => {if (location.href.includes('out/')) {const pvc = location.href.split('?')[1]; redirect(atob(pvc),false);}});
+    BypassedByBloggerPemula(/(financewada|utkarshonlinetest).com|financenova.online/, () => {DoIfExists('.get_btn.step_box > .btn', 2);ReadytoClick('.get_btn a[href]', 3);});
     BypassedByBloggerPemula(/setroom.biz.id|travelinian.com/, () => {DoIfExists("form[name='dsb']", 'submit', 3);waitForElm(' a:nth-child(1) > button', setr => setr.click());});
-    BypassedByBloggerPemula(/(fourlinez|newsonnline|phonesparrow|creditcarred|stockmarg).com|(alljntuworld|updatewallah|vyaapaarguru).in/, () => {ReadytoClick('#continue-show', 3);});
     BypassedByBloggerPemula(/(blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro/, function() {if (BpParams.has('r')) {meta(atob(BpParams.get('r')));}});
+    BypassedByBloggerPemula(/(fourlinez|newsonnline|phonesparrow|creditcarred|stockmarg).com|(alljntuworld|updatewallah|vyaapaarguru|viralmp3.com).in/, () => {ReadytoClick('#continue-show', 3);});
     BypassedByBloggerPemula(/(keedabankingnews|aceforce2apk).com|themezon.net|healthvainsure.site|rokni.xyz|bloggingwow.store/, () => {DoIfExists("form[name='tp']", 'submit', 3);DoIfExists('#tp-snp2',4);});
     BypassedByBloggerPemula(/(10short|lollty).pro|mamahawa.com/, function() {ReadytoClick('center > .btn-success.btn', 3);waitForElm('a#makingdifferenttimer', st1 => redirect(st1.href, false));waitForElm('a#proceed', st2 => redirect(st2.href, false));});
-    BypassedByBloggerPemula(/(aduzz|tutorialsaya|indobo|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
+    BypassedByBloggerPemula(/(aduzz|tutorialsaya|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/fansonlinehub.com/, async function() {setInterval(() => {window.scrollBy(0, 1);window.scrollTo(0,-1);ReadytoClick('.active.btn > span');}, 3 * 1000);});
     BypassedByBloggerPemula(/(howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista|blog-myst|webhostsec).com|ss7.info|sololevelingmanga.pics/, () => {DoIfExists('#getlink', 3);});
+    BypassedByBloggerPemula(/largestpanel.in|(djremixganna|financebolo|emubliss).com|(earnme|usanewstoday).club|earningtime.in/, () => {DoIfExists('#tp-snp2', 1);});
     BypassedByBloggerPemula(/(viralxns|uploadsoon).com/, function(){DoIfExists('#tp-snp2.tp-blue.tp-btn', 2);DoIfExists('.tp-white.tp-btn', 3);});
-    BypassedByBloggerPemula(/largestpanel.in|(djremixganna|financebolo).com|(earnme|usanewstoday).club/, () => {DoIfExists('#tp-snp2', 1);});
     BypassedByBloggerPemula(/ouo.io|ouo.press/, async function() {await sleep(4000);ReadytoClick('button#btn-main.btn.btn-main');});
     BypassedByBloggerPemula(/lksfy.com/, () => {CaptchaDone(() => {DoIfExists('.get-link.btn-primary.btn');});});
     BypassedByBloggerPemula(/paste1s.com|note1s.com/, function() {DoIfExists('.btn-lg.btn-primary.btn', 2);});
@@ -1076,7 +1078,7 @@
     BypassedByBloggerPemula(/zegtrends.com/, () => {DoIfExists('#cln', 'submit', 5);
       DoIfExists('#bt1', 5);DoIfExists('#go', 5);});
     BypassedByBloggerPemula(/coincroco.com|surflink.tech|cointox.net/, () => {
-      SameTab();waitForElm('.mb-sm-0.mt-3.btnBgRed', ccBtn => ccBtn.click());});
+      waitForElm('.mb-sm-0.mt-3.btnBgRed', ccBtn => ccBtn.click());});
     BypassedByBloggerPemula(/solidcoins.net|fishingbreeze.com/, () => {
       CaptchaDone(() => {DoIfExists('form[action]', 'submit');});
       if (!elementExists('.g-recaptcha')) {DoIfExists('mdn', 'submit', 17);}});
@@ -1093,9 +1095,13 @@
       DoIfExists('#invisibleCaptchaShortlink', 2);DoIfExists('#before-captcha', 'submit', 3);});
     BypassedByBloggerPemula(/jobinmeghalaya.in/, () => {DoIfExists('#wpsafelink-landing', 'submit', 2);
       DoIfExists('#wpsafe-link > .bt-success', 3);});
+    BypassedByBloggerPemula(/dinheiromoney.com/, () => {DoIfExists("div[id^='button'] form", 'submit', 3);
+      waitForElm("div[id^='button'] center a", postazap => redirect(postazap.href, false));});
+    BypassedByBloggerPemula(/itijobalert.in/, () => {ReadytoClick('#waiting > div > .bt-success', 2);
+      ReadytoClick('#pop-button > .bt-success', 3);ReadytoClick('#gotolink.bt-success', 4);});
     BypassedByBloggerPemula(/pubghighdamage.com|anmolbetiyojana.in/, () => {SameTab();
       DoIfExists('#robot', 2);DoIfExists('#notarobot.button', 2);ReadytoClick('#gotolink.bt-success.btn', 3);});
-    BypassedByBloggerPemula(/aylink.co/, () => {DoIfExists('.btn.btn-go', 2);ReadytoClick('.btn-go', 3);
+    BypassedByBloggerPemula(/aylink.co|cpmlink.pro/, () => {DoIfExists('.btn.btn-go', 2);ReadytoClick('.btn-go', 3);
       waitForElm("#main", Aylink => redirect(strBetween(Aylink.onclick.toString(), 'window.open("', '"'), false));});
     BypassedByBloggerPemula(/videolyrics.in/, () => {ReadytoClick('a:contains("Continue")', 3);
       CheckVisibility("button[class^='py-2 px-4 font-semibold']", () => {DoIfExists('div[x-html="isTCompleted"] button');});});
@@ -1115,8 +1121,6 @@
       DoIfExists('button.h-captcha', 3);} else {DoIfExists('#megaurl-banner-page', 'submit', 2);}});
     BypassedByBloggerPemula(/litecoin.host|cekip.site/, () => {CaptchaDone(() => {DoIfExists('#ibtn');});
       if (elementExists('.pt-5.card-header')) {CheckVisibility('.btn-primary.btn', () => {DoIfExists('.btn-primary.btn');});}});
-    BypassedByBloggerPemula(/(ecryptly|equickle).com/, () => {if (BpParams.has('id')) {meta(atob(BpParams.get('id')));}
-      waitForElm('#open-continue-form > input:nth-child(3)', Chain => redirect(atob(Chain.value)));DoIfExists('#rtg-snp2', 2);});
     BypassedByBloggerPemula(/yitarx.com/, () => {if (location.href.includes('enlace/')) {let yitar = location.href.split('#!')[1];
       let arxUrl = DecodeBase64(yitar,3);redirect(arxUrl);}});
     BypassedByBloggerPemula(/coinsrev.com/, () => {parent.open = BpBlock();CaptchaDone(() => {DoIfExists('#wpsafelinkhuman > input');});
@@ -1149,9 +1153,11 @@
       waitForElm('button[onclick="validateCaptcha()"]', (button) => {sleep(1000).then(() => button.click());}, 15, 1);}, 15, 1);}, 15, 1);});
     BypassedByBloggerPemula(/linkatla.com/, function() {let katla = bp('head > script:nth-child(7)');let linka = strBetween(katla.text, '"', '"');
       if (elementExists('#redirectButton')) {setTimeout(() => {redirect(atob(linka), false);}, 2 * 1000);}});
+    BypassedByBloggerPemula(/(goodmorningimg|odiadance|newkhabar24|aiperceiver|kaomojihub).com|dvjobs.in/, () => {
+      elementReady('a #tp-snp2').then(() => DoIfExists('a #tp-snp2', 2));elementReady('a#btn7').then(() => DoIfExists('a#btn7', 3));});
     BypassedByBloggerPemula(/easylink.gamingwithtr.com/, function() {DoIfExists('#countdown', 2);
       waitForElm('a#pagelinkhref.btn.btn-lg.btn-success.my-4.px-3.text-center', gtr => redirect(gtr.href, false));});
-    BypassedByBloggerPemula(/(marketrook|aiperceiver|governmentjobvacancies).com|(winezones|kabilnews|myscheme.org|mpsarkarihelp).in|biharhelp.co|wastenews.xyz/, () => {
+    BypassedByBloggerPemula(/(marketrook|governmentjobvacancies).com|(winezones|kabilnews|myscheme.org|mpsarkarihelp).in|biharhelp.co|wastenews.xyz/, () => {
       DoIfExists('#btn6.ce-blue.ce-btn', 2);DoIfExists('#btn7 > .ce-blue.ce-btn', 3);DoIfExists('a #tp-snp2', 4);});
     BypassedByBloggerPemula('(on-scroll|diudemy|maqal360).com', () => {
       if (elementExists('.alertAd')) {notify('BloggerPemula : Try to viewing another tab if the countdown does not work');}
@@ -1160,6 +1166,8 @@
     BypassedByBloggerPemula(/stly.link|snaplessons.net|atravan.net|stfly.biz|airevue.net/, () => {
       CaptchaDone(() => {DoIfExists('button[class^=mt-4]');DoIfExists('button.mt-4:nth-child(2)', 3);});DoIfExists('button[class^=rounded]', 2);
       let stly = setInterval(() => {if (bp('.progress-done').innerText == '100%') {clearInterval(stly);ReadytoClick('button.mt-4:nth-child(6)', 1);DoIfExists('button.mt-4:nth-child(2)', 3);}}, 2 * 1000);});
+    BypassedByBloggerPemula(/(ecryptly|equickle).com/, () => {if (BpParams.has('id')) {meta(atob(BpParams.get('id')));}waitForElm('#open-continue-form > input:nth-child(3)', Chain => redirect(atob(Chain.value)));
+      elementReady('#open-continue-btn').then(button => {sleep(3000).then(() => {window.location.href = strBetween(button.getAttribute('onclick'), "window.location.href='", "';", false);});});DoIfExists('#rtg-snp2', 2);});
     BypassedByBloggerPemula(/(horoscop|videoclip|newscrypto).info|article24.online|writeprofit.org|docadvice.eu|trendzilla.club|worldwallpaper.top/, () => {CaptchaDone(() => {unsafeWindow.wpsafehuman();});
       CheckVisibility('center > .wpsafelink-button', () => {DoIfExists('center > .wpsafelink-button', 1);});CheckVisibility('#wpsafe-generate > a', '||', "bp('.base-timer').innerText == '0:00'", () => {unsafeWindow.wpsafegenerate();
         if (location.href.includes('article24.online')) {DoIfExists('#wpsafelink-landing > .wpsafelink-button', 1);} else {DoIfExists('#wpsafelink-landing2 > .wpsafelink-button', 1);}});});
@@ -1178,18 +1186,21 @@
         elementReady('[name="answer"]').then(function(element) {element.addEventListener('change', unsafeWindow.check3);});}});
     BypassedByBloggerPemula(/(btcpany|zombiebtc|claimfey|thefastpost).com|(panytourism|statepany).online/, function() {
       parent.open = BpBlock();DoIfExists('#link1s-form', 'submit', 1);DoIfExists('#next-step-button', 3);});
+    BypassedByBloggerPemula(/indobo.com/, () => {const scriptElement = bp('#wpsafegenerate > script:nth-child(4)');if (scriptElement) {
+      const scriptContent = scriptElement.textContent;const url = strBetween(scriptContent, 'window.location.href = "', '";', true);
+        if (url && url.startsWith('https://indobo.com?safelink_redirect=')) {setTimeout(() => redirect(url), 2000);}}});
     BypassedByBloggerPemula(/playnano.online/, function() {DoIfExists('#watch-link', 2);
       DoIfExists('.watch-next-btn.btn-primary.button', 2);DoIfExists('button.button.btn-primary.watch-next-btn', 5, 'setInterval');});
     BypassedByBloggerPemula(/rekonise.com/, () => {let xhr = new XMLHttpRequest();
       xhr.onload = () => redirect(JSON.parse(xhr.responseText).url);
       xhr.open("GET", "https://api.rekonise.com/social-unlocks" + location.pathname, true);xhr.send();});
-    BypassedByBloggerPemula(/(fitnesswifi|earnmoneyyt|thardekho|dinoogaming|pokoarcade|hnablog|orbitlo|finquizy|indids).com|(ddieta|lmktec).net|vbnmx.online/, () => {
+    BypassedByBloggerPemula(/(fitnesswifi|earnmoneyyt|thardekho|dinoogaming|pokoarcade|hnablog|orbitlo|finquizy|indids|redfea).com|(ddieta|lmktec).net|vbnmx.online/, () => {
       waitForElm("div[id^='rtg-'] > a:nth-child(1)", Linkpays => redirect(Linkpays.href, false));DoIfExists('#rtg', 'submit', 2);
       DoIfExists('#rtg-snp21 .rtg_btn', 3);DoIfExists('#rtg-snp2', 3);DoIfExists('#rtg-snp21 > button', 4);});
     BypassedByBloggerPemula(/acortalink.me/, () => {let acorta = setInterval(() => {let script = bp('body > script');
         if (script) {let text = script.text.trim(); let lines = text.split('\n'); let i = lines.findIndex(x => x.includes('acortalink.me'));
           let link = lines[i + 2].trim().split(',')[6].trim(); if (window[link]) {clearInterval(acorta); redirect(window[link]);}}}, 100);});
-    BypassedByBloggerPemula(/(admediaflex|cdrab|financekita).com|ecq.info|wpcheap.net/, () => {
+    BypassedByBloggerPemula(/(admediaflex|cdrab|financekita|jobydt|foodxor|mealcoldnewsobjective).com|(ecq|cooklike).info|wpcheap.net|thecryptoworld.site|skyfreecoins.top|petly.lat|techreviewhub.store/, () => {
       elementReady('#wpsafe-link a[onclick*="window.open"]').then((link) => {const onclick = link.getAttribute('onclick');const urlMatch = onclick.match(/window\.open\('([^']+)'/);
         if (urlMatch && urlMatch[1]) {const targetUrl = urlMatch[1];sleep(5000).then(() => redirect(targetUrl));}});});
     BypassedByBloggerPemula(/(tinybc|phimne).com|(mgame|sportweb|bitcrypto).info/, () => {
@@ -1212,8 +1223,6 @@
       waitForElm('div#wpsafe-snp center a', hunt => redirect(hunt.href, false));});
     BypassedByBloggerPemula(/(lyricsbaazaar|ezeviral).com/, () => {CaptchaDone(() => {DoIfExists('#btn6');});
       waitForElm('div.modal-content a', lyri => redirect(lyri.href, false));});
-    BypassedByBloggerPemula(/(mangareleasedate|sabkiyojana|teqwit|bulkpit|odiafm).com|(loopmyhub|thepopxp).shop|cryptoblast.online/, () => {
-      CheckVisibility('.VerifyBtn', () => {DoIfExists('#VerifyBtn', 1);ReadytoClick('#NextBtn', 2);});if (elementExists('#SmileyBanner')) {setActiveElement('[id="div-gpt-ad"]');fakeHidden();}});
     BypassedByBloggerPemula(/(sekilastekno|miuiku|vebma|majalahhewan).com|crm.cekresi.me|ai.tempatwisata.pro/, async function() {const window = unsafeWindow;const executor = async () => {let El = window?.livewire?.components?.components()[0];
         while (!El) {await sleep(100); BpNote(1); El = window?.livewire?.components?.components()[0];}
         const payload = {fingerprint: El.fingerprint, serverMemo: El.serverMemo, updates: [{payload: {event: 'getData', id: 'whathappen', params: [],}, type: 'fireEvent',}, ],};
@@ -1222,6 +1231,8 @@
       if (location.host === 'wp.sekilastekno.com') {if (elementExists("form[method='post']")) {const a = bp("form[method='post']"); BpNote('addRecord...'); const input = document.createElement('input');
           input.value = window.livewire_token; input.name = '_token'; input.hidden = true; a.appendChild(input); a.submit();}
       if (elementExists("button[x-text]")) { BpNote('getLink..'); executor();} return;} if (elementExists("div[class='max-w-5xl mx-auto']")) {BpNote('Executing..'); executor();}});
+    BypassedByBloggerPemula(/(mangareleasedate|sabkiyojana|teqwit|bulkpit|odiafm).com|(loopmyhub|thepopxp).shop|cryptoblast.online/, () => {const GPlinks = 2 / (24 * 60);RSCookie('set', 'adexp', '1', GPlinks);
+      CheckVisibility('.VerifyBtn', () => {DoIfExists('#VerifyBtn', 2);ReadytoClick('#NextBtn', 3);});if (elementExists('#SmileyBanner')) {setActiveElement('[id="div-gpt-ad"]');fakeHidden();}});
     BypassedByBloggerPemula(/socialwolvez.com/, () => {let xhr = new XMLHttpRequest();xhr.onload = () => redirect(JSON.parse(xhr.responseText).link.url);
       xhr.open("GET", "https://us-central1-social-infra-prod.cloudfunctions.net/linksService/link/guid/" + location.pathname.substr(7), true);xhr.send();});
     BypassedByBloggerPemula(/(mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it|businessnews-nigeria|govaf|fahmysport).com|(hightrip|fx-gd|world-trips|otechno|bluetechno|to-travel).net|(newforex|forexit).online/, function() {
@@ -1272,7 +1283,7 @@
     BypassedByBloggerPemula(/(cricketgurupro|travelkuku).com/, function() {DoIfExists("form[name='tp']", 'submit', 3);waitForElm('#page > center > a', cgp => redirect(cgp.href, false));});
     BypassedByBloggerPemula(/mirrored.to/, () => {waitForElm('div.col-sm.centered.extra-top a', mirr => redirect(mirr.href, false)); waitForElm('div.centerd > a', mir => redirect(mir.href, false));});
     BypassedByBloggerPemula(/sub2unlock.net/, function() {if (elementExists('.linkDiv_btns.col-xs-12.col-sm-12.col-md-12')){let stu = bp('#theLinkID').textContent;setTimeout(() => {redirect(stu,false);}, 2 * 1000);}});
-    BypassedByBloggerPemula(/(financenube|mixrootmods|pastescript|trimorspacks|mealcold).com/, () => {waitForElm('#wpsafe-link a', cdr => redirect(strBetween(cdr.onclick.toString(), `window.open('`, `', '_self')`), false));});
+    BypassedByBloggerPemula(/(financenube|mixrootmods|pastescript|trimorspacks).com/, () => {waitForElm('#wpsafe-link a', cdr => redirect(strBetween(cdr.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/mboost.me/, function() {if (elementExists('#firstsection')){let mbo = bp('#__NEXT_DATA__');let mbm = JSON.parse(mbo.textContent).props.pageProps.data.targeturl;setTimeout(() => {redirect(mbm,false);}, 2 * 1000);}});
     BypassedByBloggerPemula(/mbantul.my.id|crypto-fi.net|claimcrypto.cc|xtrabits.click|(web9academy|bioinflu|bico8).com|(ourcoincash|studyis).xyz/, () => {
       var bypasslink = atob(`aH${bp("#landing [name='go']").value.split("aH").slice(1).join("aH")}`); redirect(bypasslink, false);});
@@ -1296,12 +1307,16 @@
     BypassedByBloggerPemula(/coinclix.co|coinhub.wiki|(vitalityvista|geekgrove).net/, () => {const url = window.location.href;if (url.includes('go/')) {notify('BloggerPemula : Clear Cache and Cookies of this Site , if the Copied Key is Different', false, true);sleep(2000).then(() => {const link = bp('p.mb-2:nth-child(2) > strong > a');
       const key = bp('p.mb-2:nth-child(3) > kbd > code') || bp('p.mb-2:nth-child(4) > kbd > code');if (link && key) {const keyText = key.textContent.trim();GM_setClipboard(keyText);GM_setValue('lastKey', keyText);GM_openInTab(link.href, false);} else {const p = Array.from(BpT('p')).find(p => p.textContent.toLowerCase().includes('step 1') && p.textContent.toLowerCase().includes('google'));
       if (p) sleep(2000).then(() => {const t = p.textContent.toLowerCase();GM_openInTab(t.includes('geekgrove') ? 'https://www.google.com/url?q=https://geekgrove.net' : t.includes('vitalityvista') ? 'https://www.google.com/url?q=https://vitalityvista.net' : t.includes('coinhub') ? 'https://www.google.com/url?q=https://coinhub.wiki' : 'https://www.google.com/url?q=https://geekgrove.net', false);});}});}
-      if (['geekgrove.net', 'vitalityvista.net', 'coinhub.wiki'].some(site => url.includes(site))) {ReadytoClick('a.btn:has(.mdi-check)', 2);DoIfExists('#btn_link_start', 2);CheckVisibility('.iconcaptcha-modal__body-checkmark', () => {DoIfExists('#btn_link_continue', 1);});CheckVisibility('#btn_link_continue', () => {DoIfExists('#btn_link_continue');});
+      if (['geekgrove.net', 'vitalityvista.net', 'coinhub.wiki'].some(site => url.includes(site))) {ReadytoClick('a.btn:has(.mdi-check)', 2);DoIfExists('#btn_link_start', 2);CaptchaDone(() => {DoIfExists('#btn_link_continue');});CheckVisibility('#btn_link_continue', () => {if (!elementExists('.iconcaptcha-modal')) {DoIfExists('#btn_link_continue');} else {DoIfExists('.iconcaptcha-modal__body');}});
       CheckVisibility('.alert-success.alert-inline.alert', () => {DoIfExists('#btn_lpcont');});sleep(2000).then(() => {const input = bp('#link_input.form-control');if (input) {input.value = GM_getValue('lastKey', '');sleep(2000).then(() => bp('.btn-primary.btn-ripple')?.click());}const observer = new MutationObserver((mutations, obs) => {const codeEl = bp('.link_code');
       if (codeEl) {const code = codeEl.textContent.trim();GM_setClipboard(code);$('#link_result_footer > div > div').text(`The Copied Code is / Kode yang tersalin adalah: ${code} , Please Paste the Code on the coinclix.co Site Manually / Silahkan Paste Kodenya di Situs coinclix.co secara manual`);obs.disconnect();}});observer.observe(document.body, {childList: true,subtree: true});});}});
-    BypassedByBloggerPemula(/(cryptosparatodos|placementsmela|howtoconcepts|tuasy|skyrimer|foodxor|yodharealty|mobcupring|aiimsopd|advupdates|camdigest|heygirlish|blog4nx|todayheadliners|jobqwe|cryptonews.faucetbin|mobileflashtools).com|(paidinsurance|djstar|sevayojana|bjp.org).in|(sastainsurance|nashib).xyz|(cialisstrong|loanforuniversity).online|zaku.pro|veganab.co|cegen.org|skyfreecoins.top|manga4nx.site/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
+    BypassedByBloggerPemula('headlinerpost.com|posterify.net', () => {let dataValue = '';for (let script of bp('script', true)) {if (script.textContent.includes('data:')) {dataValue = strBetween(script.textContent, "data: '", "'", true); break;}}let stepValue = '', planValue = '';try {const plan = JSON.parse(RSCookie('read', 'plan') || '{}');stepValue = plan.lid || '';planValue = plan.page || '';} catch {}if (!dataValue || !stepValue) return;
+      const postData = {data: dataValue};const sid = RSCookie('read', 'sid');postData[sid ? 'step_2' : 'step_1'] = stepValue;if (sid) postData.id = sid;const isHeadliner = location.host === 'headlinerpost.com';const headers = {'Content-Type': 'application/x-www-form-urlencoded','Referer': isHeadliner ? 'https://headlinerpost.com/' : 'https://posterify.net/','Origin': isHeadliner ? 'https://headlinerpost.com' : 'https://posterify.net'};
+      GM_xmlhttpRequest({method: 'POST',url: 'https://shrinkforearn.in/link/new.php',headers,data: Object.keys(postData).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(postData[k])}`).join('&'),withCredentials: true, onload: ({responseText}) => {try {const result = JSON.parse(responseText);if (result.inserted_data?.id) {RSCookie('set', 'sid', result.inserted_data.id, 10 / (24 * 60));}
+      if ((result.inserted_data?.id || result.updated_data) && (sid || result.inserted_data?.id)) {const ShrinkUrl = isHeadliner ? `https://posterify.net/?id=${encodeURIComponent(stepValue)}&sid=${encodeURIComponent(result.inserted_data?.id || sid)}&plan=${encodeURIComponent(planValue)}` : `https://shrinkforearn.in/${encodeURIComponent(stepValue)}?sid=${encodeURIComponent(result.inserted_data?.id || sid)}`;setTimeout(() => redirect(ShrinkUrl), 3000);}} catch {}}});});
+    BypassedByBloggerPemula(/(cryptosparatodos|placementsmela|howtoconcepts|tuasy|skyrimer|yodharealty|mobcupring|aiimsopd|advupdates|camdigest|heygirlish|blog4nx|todayheadliners|jobqwe|cryptonews.faucetbin|mobileflashtools).com|(paidinsurance|djstar|sevayojana|bjp.org).in|(sastainsurance|nashib).xyz|(cialisstrong|loanforuniversity).online|zaku.pro|veganab.co|cegen.org|skyfreecoins.top|manga4nx.site/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
     BypassedByBloggerPemula('(cryptowidgets|melodyspot|carsmania|cookinguide|tvseriescentral|cinemascene|hobbymania|plantsguide|furtnitureplanet|petsguide|gputrends|gamestopia|ountriesguide|carstopia|makeupguide|gadgetbuzz|coinsvalue|coinstrend|coinsrise|webfreetools|wanderjourney|languagefluency|giftmagic).net|(freeoseocheck|insurancexguide|funplayarcade|origamiarthub|fitbodygenius|illustrationmaster|selfcareinsights|constructorspro|ecofriendlyz|virtualrealitieshub|wiki-topia|techiephone|brewmasterly).com|(bubblix|dailytech-news).eu|coinscap.info|insurancegold.in|wii.si', () => {
-      TrustMe();elementReady('#captcha-result .bg-success').then(() => ReadytoClick('button', 1));const tano = window.location.href;if (['freeoseocheck.com', 'dailytech-news.eu','wii.si'].some(tino => tano.includes(tino))) {elementReady('#loadingDiv[style*="display:block"] button, #loadingDiv[style*="display: block"] button').then(ReadytoClick.bind(this, 'button', 2));} else {CheckVisibility('#loadingDiv[style^="display"] > span', () => {const buttonText = strBetween(bp('#loadingDiv[style^="display"] > span').textContent, "Click", "To Start", false);elementReady(`#loadingDiv[style^="display"] .btn.btn-primary:contains("${buttonText}")`).then(buttonElement => {
+      elementReady('#captcha-result .bg-success').then(() => ReadytoClick('button', 1));const tano = window.location.href;if (['dailytech-news.eu','wii.si'].some(tino => tano.includes(tino))) {elementReady('#loadingDiv[style*="display:block"] button, #loadingDiv[style*="display: block"] button').then(ReadytoClick.bind(this, 'button', 2));} else {CheckVisibility('#loadingDiv[style^="display"] > span', () => {const buttonText = strBetween(bp('#loadingDiv[style^="display"] > span').textContent, "Click", "To Start", false);elementReady(`#loadingDiv[style^="display"] .btn.btn-primary:contains("${buttonText}")`).then(buttonElement => {
       const buttons = Array.from(bp('#loadingDiv[style^="display"] .btn.btn-primary', true));const index = buttons.indexOf(buttonElement);if (index === -1) return;const selectorOptions = ['button.btn:nth-child(2)', 'button.btn:nth-child(3)', 'button.btn:nth-child(4)', 'button.btn:nth-child(5)', 'button.btn:nth-child(6)'];const chosenSelector = selectorOptions[index];if (chosenSelector) sleep(2000).then(() => ReadytoClick(`#loadingDiv[style^="display"] ${chosenSelector}`));});});}elementReady('#clickMessage[style*="display: block"], clickMessage[style*="display:block"]').then(() => {setActiveElement('[data-placement-id="revbid-leaderboard"]');fakeHidden();});});}})();
 
 // ----- Bypass Acortalink.me ( Taken from AdGuard https://github.com/AdguardTeam/AdguardFilters/commit/61d9949022b428939b5be4243b0e5331ea64afcb) -----
