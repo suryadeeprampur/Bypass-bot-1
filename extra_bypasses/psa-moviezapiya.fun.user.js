@@ -45,7 +45,7 @@
         const bypassButton = document.querySelector('.container > button:nth-child(4)');
 
         if (!inputField || !bypassButton) {
-            alert('Required elements not found. Retrying in 1 second...');
+            console.log('Required elements not found. Retrying in 1 second...');
             setTimeout(processMoviezApiyaSite, 1000);
             return;
         }

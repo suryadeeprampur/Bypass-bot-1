@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version    95.3
+// @version    95.3.1
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -3633,7 +3633,7 @@ function redirectWithMessage(url) {
         const bypassButton = document.querySelector('.container > button:nth-child(4)');
 
         if (!inputField || !bypassButton) {
-            alert('Required elements not found. Retrying in 1 second...');
+            console.log('Required elements not found. Retrying in 1 second...');
             setTimeout(processMoviezApiyaSite, 1000);
             return;
         }
