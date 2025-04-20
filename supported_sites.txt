@@ -369,7 +369,6 @@ https://moviezapiya.fun/
 /(verpeliculasonline.org|subtituladas.com)\/enlace/
 /links.cuevana.ac\/short/
 /ouo.io/
-/exeo.app|mrgec.com|cety.app|cuty.me/
 /1v.to\/t/
 /linkspy.cc\/tr/
 /linkspy.cc\/\/a/
