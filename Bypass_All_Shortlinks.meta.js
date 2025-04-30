@@ -208,7 +208,7 @@
 // @include /^(https?:\/\/)(.+)?((viralxns|uploadsoon).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((techleets|bonloan).xyz|sharphindi.in|nyushuemu.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((jobmatric|carjankaari).com|techsl.online)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(cutnet.net|(exego|cety).app|(jixo|gamco).online|cutyion.com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(cutnet.net|(exego|cety).app|(jixo|gamco).online|(cutyion|cutynow).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(usersdrive.com|ddownload.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(xonnews.net|toilaquantri.com|share4u.men|camnangvay.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(oxy\.*)/
