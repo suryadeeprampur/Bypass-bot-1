@@ -66,4 +66,5 @@ In the extension settings, create a new redirect rule. Use the following setting
 - [fr0stb1rd/ublock_filters](https://gitlab.com/fr0stb1rd/ublock_filters/)
 - [Pixeldrain Download Bypass](https://greasyfork.org/en/scripts/491326-pixeldrain-download-bypass)
 - [1Fichier Redirect to Fastdebrid](https://greasyfork.org/en/scripts/528673-1fichier-redirect-to-fastdebrid)
+- [GoFile Bypass](https://greasyfork.org/en/scripts/527711)
 - [Terabox video link unlock](https://greasyfork.org/en/scripts/528908-terabox-video-link-unlock-redirect-to-embed)
