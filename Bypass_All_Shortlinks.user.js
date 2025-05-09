@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version    96.0
+// @version    96.0.1
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -18,6 +18,8 @@
 // @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
 // @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated
 // @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues
+// @include /^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/
+// @match *://*/recaptcha/api2/*
 // @match *://*.gocmod.com/*
 // @match *://*.api.gplinks.com/*
 // @match *://*.maloma3arbi.blogspot.com/*
@@ -608,7 +610,7 @@
   function fakeHidden() {Object.defineProperty(document, "hidden", {get: () => true,configurable: true});}
   function meta(href) {document.head.appendChild(Object.assign(document.createElement('meta'), {name: 'referrer',content: 'origin'}));
     Object.assign(document.createElement('a'), {href}).click();}
-  function redirect(url, blog = false) {location = blog && cfg.get('BlogDelay') ? 'https://bloggerpemula.pythonanywhere.com/?BypassResults=' + url : url;}
+  function redirect(url, blog = false) {location = blog && cfg.get('BlogDelay') ? '' + url : url;}
   function setActiveElement(selector) {elementReady(selector).then(element => {const temp = element.tabIndex;element.tabIndex = 0;element.focus();element.tabIndex = temp;});}
   function elementReady(selector) {return new Promise(function(resolve, reject) {let element = bp(selector);
       if (element) {resolve(element); return;} new MutationObserver(function(_, observer) {element = bp(selector);
