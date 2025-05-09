@@ -180,6 +180,9 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("/(ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in/", "/(ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in|creditbay.xyz/")
 
+    content = content.replace("ai.tempatwisata.pro",
+                              "(ai|go).tempatwisata.pro")
+
     if not content.endswith("\n"):
         content += "\n"
 
