@@ -132,7 +132,7 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online/", "/cutnet.net|(exego|cety).app|(jixo|jizo|gamco).online|cutyion.com/")
 
-    content = content.replace("(playonpc|yolasblog).online|quins.us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday).com|gally.shop|freeat30.org|ivnlnews.xyz", "(playonpc|yolasblog).online|(quins|megahosting).us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday|tradeshowrating).com|gally.shop|evegor.net|freeat30.org|(qanin|ivnlnews).xyz")
+    content = content.replace("/(playonpc|yolasblog).online|quins.us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday).com|gally.shop|freeat30.org|ivnlnews.xyz/", "/(playonpc|yolasblog|playarcade).online|(quins|megahosting).us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday|tradeshowrating).com|gally.shop|evegor.net|freeat30.org|(qanin|ivnlnews).xyz/")
 
     content = content.replace("BypassedByBloggerPemula(/dropgalaxy", "//BypassedByBloggerPemula(/dropgalaxy")
 
@@ -177,6 +177,8 @@ def modify_file_with_my_fixes(input_file, output_file):
           result.redirectDelay = cfg.get('SetDelay'); result.isNotifyNeeded = true; return result;} break;
 """
     content = content.replace(linestoremove, "")
+
+    # content = content.replace("/(ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in/", "/(ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in|creditbay.xyz/")
 
     if not content.endswith("\n"):
         content += "\n"
