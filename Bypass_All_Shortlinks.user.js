@@ -246,7 +246,7 @@
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|(offeergames|todogame).online|whatgame.xyz|gold-24.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((goodmorningimg|odiadance|newkhabar24|aiperceiver|kaomojihub).com|dvjobs.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn|ziggame|gamezigg).com|azmath.info|aztravels.net|handydecor.com.vn)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in|creditbay.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((marketrook|governmentjobvacancies|swachataparnibandh).com|(winezones|kabilnews|myscheme.org|mpsarkarihelp).in|biharhelp.co|wastenews.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(4hi.in|(10short|animerigel|encurt4).com|finish.wlink.us|passivecryptos.xyz|fbol.top|kut.li|shortie.sbs|zippynest.online|faucetsatoshi.site|tfly.link)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((ecryptly|equickle).com)(\/.*)/
@@ -293,12 +293,6 @@
 // @match       https://datanodes.to/download
 // @match       *://www.ryuugames.com/?eroge=*
 // @match       *://anchoreth.com/r-adsh?t=i&v=*
-// @match       *://*.btcut.io/*
-// @match       *://btcut.io/*
-// @match       *://linkslice.io/*
-// @match       *://zshort.io/*
-// @match       *://easy4skip.com/*
-// @match       *://lkfms.pro/*
 // @match        https://paster.so/*
 // @match        https://psa.wf/goto/*
 // @match        https://moviezapiya.fun/
@@ -517,6 +511,7 @@
 // @include     /(upfiles.app|haxi.online|upfion.com)/
 // @include     /dailyuploads.net/
 // @include     /app2.olamovies.download\/generate\/\?id=/
+// @include     /((btcut|linkslice|zshort).io|easy4skip.com|lkfms.pro|droplink.co)\/.*\?token=.*/
 // @include     /foodtechnos.in/
 // @include     /mixrootmod.com/
 // @include     /zaku.pro/
@@ -551,7 +546,7 @@
 // @include     /vplink.in/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup|muskokay).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?((mega-enlace|acortados).com|tulink.org)/
-// @include     /^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox).xyz|evegor.net|freeat30.org)\/.*/
+// @include     /^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox).xyz|evegor.net|freeat30.org|droplink.co)\/.*/
 // @include     /quickeemail.com/
 // @exclude /^(https?:\/\/)([^\/]+\.)?((cloudflare|github|aliyun|reddit|bing|yahoo|microsoft|whatsapp|amazon|ebay|payoneer|paypal|skrill|stripe|stripecdn|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|blogger|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet|docs|workspace|gemini|adservice|tagmanager).google|atlassian|pinterest|twitter|x|live|linkedin|fastbull|tradingview|deepseek|chatgpt|openai|grok|bilibili|indodax|bmcdn6|fbsbx|googlesyndication|amazon-adsystem|pubmatic|gstatic).com|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|(doubleclick|yahoo).net|proton.me|upload.ee|stripe.network|meta.ai|codepen.io|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
 // @exclude /^https?:\/\/([a-z0-9]+\.)*(facebook|instagram|tiktok)\.com\/(?!(flx\/warn\/|linkshim\/|link\/v2)).*/
@@ -1053,7 +1048,7 @@
       elementReady('#monetiza-generate').then(() => setTimeout(() => {unsafeWindow.monetizago();}, 3 * 1000));});
     BypassedByBloggerPemula(/filedm.com/, () => {if (!cfg.get('AutoDL')) {BpNote('Auto Download Feature Not Yet Activated!');return;}
       if (elementExists('#dlbutton')) {waitForElm('#dlbutton', fdm => redirect('http://cdn.directfiledl.com/getfile?id=' + fdm.href.split('_')[1], false));}});
-    BypassedByBloggerPemula(/(ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in/, () => {DoIfExists('div.text-center form', 'submit', 2);
+    BypassedByBloggerPemula(/(ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in|creditbay.xyz/, () => {DoIfExists('div.text-center form', 'submit', 2);
       ReadytoClick('#go_d', 1);waitForElm('a#go_d.submitBtn.btn.btn-primary', ez => redirect(ez.href));waitForElm('a#go_d2.submitBtn.btn.btn-primary', ez2 => redirect(ez2.href));});
     BypassedByBloggerPemula(/(marketrook|governmentjobvacancies|swachataparnibandh).com|(winezones|kabilnews|myscheme.org|mpsarkarihelp).in|biharhelp.co|wastenews.xyz/, () => {
       DoIfExists('#btn6.ce-blue.ce-btn', 2);DoIfExists('#btn7 > .ce-blue.ce-btn', 3);DoIfExists('a #tp-snp2', 4);});
@@ -2660,7 +2655,7 @@
             });
         }, 500);
     }
-    /((btcut|linkslice|zshort).io|easy4skip.com|lkfms.pro)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
+    /((btcut|linkslice|zshort).io|easy4skip.com|lkfms.pro|droplink.co)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
         redirectToAnyLinkWithMatchingTextContent("Get Link");
     }) : null;
 
@@ -3313,7 +3308,7 @@ function redirectWithMessage(url) {
 (function() {
     "use strict";
 
-    const domainRegex = /^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox).xyz|evegor.net|freeat30.org)\/.*/;
+    const domainRegex = /^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox).xyz|evegor.net|freeat30.org|droplink.co)\/.*/;
     if (domainRegex.test(window.location.href)) {
 
         // ---RELOAD DEAD-END PAGES---

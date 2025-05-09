@@ -219,12 +219,7 @@
 // @match       *://www.ryuugames.com/?eroge=*
 // @match       *://anchoreth.com/r-adsh?t=i&v=*
 // @include     /app2.olamovies.download\/generate\/\?id=/
-// @match       *://*.btcut.io/*
-// @match       *://btcut.io/*
-// @match       *://linkslice.io/*
-// @match       *://zshort.io/*
-// @match       *://easy4skip.com/*
-// @match       *://lkfms.pro/*
+// @include     /((btcut|linkslice|zshort).io|easy4skip.com|lkfms.pro|droplink.co)\/.*\?token=.*/
 // @include     /foodtechnos.in/
 // @include     /mixrootmod.com/
 // @include     /zaku.pro/
@@ -1584,7 +1579,7 @@
             });
         }, 500);
     }
-    /((btcut|linkslice|zshort).io|easy4skip.com|lkfms.pro)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
+    /((btcut|linkslice|zshort).io|easy4skip.com|lkfms.pro|droplink.co)\/.*\?token=.*/.test(url) ? afterDOMLoaded(function() {
         redirectToAnyLinkWithMatchingTextContent("Get Link");
     }) : null;
 

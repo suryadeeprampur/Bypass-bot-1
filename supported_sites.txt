@@ -224,7 +224,7 @@ litecoin.host|cekip.site
 (forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|(offeergames|todogame).online|whatgame.xyz|gold-24.net
 (goodmorningimg|odiadance|newkhabar24|aiperceiver|kaomojihub).com|dvjobs.in
 trangchu.news|downfile.site|(techacode|expertvn|ziggame|gamezigg).com|azmath.info|aztravels.net|handydecor.com.vn
-(ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in
+(ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in|creditbay.xyz
 (marketrook|governmentjobvacancies|swachataparnibandh).com|(winezones|kabilnews|myscheme.org|mpsarkarihelp).in|biharhelp.co|wastenews.xyz
 4hi.in|(10short|animerigel|encurt4).com|finish.wlink.us|passivecryptos.xyz|fbol.top|kut.li|shortie.sbs|zippynest.online|faucetsatoshi.site|tfly.link
 (ecryptly|equickle).com
@@ -270,12 +270,6 @@ https://fc-lc.xyz/*
 https://datanodes.to/download
 *://www.ryuugames.com/?eroge=*
 *://anchoreth.com/r-adsh?t=i&v=*
-*://*.btcut.io/*
-*://btcut.io/*
-*://linkslice.io/*
-*://zshort.io/*
-*://easy4skip.com/*
-*://lkfms.pro/*
 https://paster.so/*
 https://psa.wf/goto/*
 https://moviezapiya.fun/
@@ -494,6 +488,7 @@ https://moviezapiya.fun/
 /(upfiles.app|haxi.online|upfion.com)/
 /dailyuploads.net/
 /app2.olamovies.download\/generate\/\?id=/
+/((btcut|linkslice|zshort).io|easy4skip.com|lkfms.pro|droplink.co)\/.*\?token=.*/
 /foodtechnos.in/
 /mixrootmod.com/
 /zaku.pro/
@@ -528,5 +523,5 @@ https://moviezapiya.fun/
 /vplink.in/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup|muskokay).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 /^(https?:\/\/)(.+)?((mega-enlace|acortados).com|tulink.org)/
-/^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox).xyz|evegor.net|freeat30.org)\/.*/
+/^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox).xyz|evegor.net|freeat30.org|droplink.co)\/.*/
 /quickeemail.com/
