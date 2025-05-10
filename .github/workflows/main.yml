@@ -1,0 +1,30 @@
+name: Sync from Codeberg
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "gongchandang49"
+          git config --global user.email "170948611+gongchandang49@users.noreply.github.com"
+
+      - name: Pull from Codeberg
+        run: |
+          git remote add codeberg https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated.git
+          git fetch codeberg
+          git checkout codeberg/main -- .
+          git add .
+          git commit -m "Sync from Codeberg" || echo "No changes to commit"
+
+      - name: Push changes to GitHub
+        run: |
+          git push origin main
