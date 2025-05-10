@@ -18,8 +18,6 @@
 // @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
 // @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated
 // @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues
-// @include /^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/
-// @match *://*/recaptcha/api2/*
 // @match *://*.gocmod.com/*
 // @match *://*.api.gplinks.com/*
 // @match *://*.maloma3arbi.blogspot.com/*

@@ -26,12 +26,12 @@ def modify_script(input_script_path, includes_file_path, output_script_path):
     script_lines.insert(last_description_line_index + 1, includes_content)
 
     # Insert additional includes
-    additional_includes = [
-        "// @include /^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/",
-        "// @match *://*/recaptcha/api2/*"
-        "\n",
-    ]
-    script_lines.insert(last_description_line_index + 1, '\n'.join(additional_includes))
+    # additional_includes = [
+    #     "// @include /^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/",
+    #     "// @match *://*/recaptcha/api2/*"
+    #     "\n",
+    # ]
+    # script_lines.insert(last_description_line_index + 1, '\n'.join(additional_includes))
 
     # Write the modified script to the output file
     with open(output_script_path, 'w') as output_file:
