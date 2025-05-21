@@ -157,7 +157,7 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("BypassedByBloggerPemula(/financemonk.net", "//BypassedByBloggerPemula(/financemonk.net")
 
-    linestoremove = """    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, function() {
+    linestoremove = """    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, () => {if (!cfg.get('AutoDL')) {BpNote('Auto Download Feature Not Yet Activated!');return;}
       DoIfExists('.btn-dow.btn', 2);DoIfExists("form[name='F1']", 'submit', 1);});
 """
     content = content.replace(linestoremove, "")
@@ -189,6 +189,9 @@ def modify_file_with_my_fixes(input_file, output_file):
 """, "")
 
     content = content.replace("/.*/, /upfion.com/", "/upfion.com/")
+
+    content = content.replace("BypassedByBloggerPemula(/(shrinke|shrinkme)\.\w+|(paid4link", "//BypassedByBloggerPemula(/(shrinke|shrinkme)\.\w+|(paid4link")
+    content = content.replace("CaptchaDone(() => {if (/^(shrinke|shrinkme)\.\w+/", "//CaptchaDone(() => {if (/^(shrinke|shrinkme)\.\w+/")
 
     ##content = content.replace("/www.google.com|recaptcha.net/", "/^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/")
 
