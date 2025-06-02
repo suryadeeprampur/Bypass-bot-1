@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version    96.4.1
+// @version    96.4.3
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -382,8 +382,7 @@
 // @include     /www.4fnet.org\/goto/
 // @include     /(linkmo.net|adpayl.ink)\/[^?]+\?data=.+$/
 // @include     /musicc.xyz/
-// @include     /(cravesandflames|codesnse|cloutgist).com/
-// @include     /go.(cravesandflames|codesnse|cloutgist).com/
+// @include     /(cravesandflames|codesnse|cloutgist|kecapku).com/
 // @include     /empebau.eu\/s/
 // @include     /cpmlink.net\/go/
 // @include     /10short.com/
@@ -527,7 +526,7 @@
 // @include     /zaku.pro/
 // @include     /aylink.co|cpmlink.pro/
 // @include     /hypershort.com/
-// @include     /instaserve.net|gomob.xyz|gamechilly.online/
+// @include     /instaserve.net|gomob.xyz|gamechilly.online|instanders.app/
 // @include     /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
 // @include     /tech.hipsonyc.com|itijobalert.in/
 // @include     /golink.(gyanitheme.com|bloggerishyt.in)/

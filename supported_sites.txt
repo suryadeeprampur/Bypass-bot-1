@@ -359,8 +359,7 @@ https://moviezapiya.fun/
 /www.4fnet.org\/goto/
 /(linkmo.net|adpayl.ink)\/[^?]+\?data=.+$/
 /musicc.xyz/
-/(cravesandflames|codesnse|cloutgist).com/
-/go.(cravesandflames|codesnse|cloutgist).com/
+/(cravesandflames|codesnse|cloutgist|kecapku).com/
 /empebau.eu\/s/
 /cpmlink.net\/go/
 /10short.com/
@@ -504,7 +503,7 @@ https://moviezapiya.fun/
 /zaku.pro/
 /aylink.co|cpmlink.pro/
 /hypershort.com/
-/instaserve.net|gomob.xyz|gamechilly.online/
+/instaserve.net|gomob.xyz|gamechilly.online|instanders.app/
 /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
 /tech.hipsonyc.com|itijobalert.in/
 /golink.(gyanitheme.com|bloggerishyt.in)/
