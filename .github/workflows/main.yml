@@ -29,7 +29,7 @@ jobs:
 
       - name: Pull from Codeberg
         run: |
-          git remote add codeberg https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated.git
+          git remote add codeberg https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated.git
           git fetch codeberg
           git checkout codeberg/main -- .
           git add .
