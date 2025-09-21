@@ -1,5 +1,37 @@
 import re
 
+def update_version(content):
+    version_number_pattern = r'@version\s+(\d+(\.\d+){0,2})'
+    match = re.search(version_number_pattern, content)
+    
+    if match:
+        current_version = match.group(1)
+        print(f"Current version found: {current_version}")
+        
+        last_patch_version = "0.0.0"
+        if len(current_version.split('.')) == 3:
+            last_patch_version = current_version.split('.')[-1]
+        
+        appended_version_parts = list(map(int, last_patch_version.split('.')))
+        
+        if appended_version_parts[2] < 9:
+            appended_version_parts[2] += 1
+        else:
+            appended_version_parts[2] = 0
+            if appended_version_parts[1] < 9:
+                appended_version_parts[1] += 1
+            else:
+                appended_version_parts[1] = 0
+                appended_version_parts[0] += 1
+        
+        new_patch_version = '.'.join(map(str, appended_version_parts))
+        
+        updated_content = re.sub(version_number_pattern, f'@version    {current_version}-patch{new_patch_version}', content)
+        
+        return updated_content
+    else:
+        return "No version found.", "0.0.0"
+
 def modify_script(input_script_path, includes_file_path, output_script_path):
     # Read the content of the input script
     with open(input_script_path, 'r', encoding='utf-8') as input_file:
@@ -59,7 +91,7 @@ def modify_script_extra(file_path):
             #Change title
             content = content.replace("// @name       Bypass All Shortlinks", "// @name       Bypass All Shortlinks Debloated")
             content = content.replace("https://i.ibb.co/qgr0H1n/BASS-Blogger-Pemula.png", "https://cdn-icons-png.flaticon.com/512/14025/14025295.png")
-            content = content.replace("@author     Bloggerpemula", "@author     Amm0ni4")
+            content = content.replace("@author     Bloggerpemula", "@author     Amm0ni4, gongchandang49")
             content = content.replace("// @description    Bypass All Shortlinks Sites Automatically Skips Annoying Link Shorteners, Go Directly to Your Destination , Skip AdFly , Skip Annoying Ads, Block Adblock Detection , Block Annoying Popup And Prompts , Automatically Downloading Files , Flickr Images And Youtube Video And Much More",
                                       "// @description    Automatically bypass many link shorteners. Originally by BloggerPemula.\n// @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated\n// @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues")
             
@@ -129,6 +161,9 @@ def modify_script_extra(file_path):
             # Remove unused
             content = content.replace("// @connect    nocaptchaai.com\n", "")
 
+            # gongchandang49 - add patch version to distinguish from untouched and Ammonia
+            content = update_version(content)
+
             # Add "@noframes"
             if not "@noframes" in content:
                 content = content.replace("\n// @version", "\n// @noframes\n// @version")
@@ -153,6 +188,14 @@ def modify_script_extra(file_path):
             # content = remove_lines_with_strings(content, strings_to_remove)
             # content += '\n}})();\n' # Add closing bracket
 
+            # replace codeberg stale repo with my new fork
+            content = content.replace("codeberg.org/Amm0ni4", "codeberg.org/gongchandang49")
+
+            # translate indonesian log message
+            content = content.replace(
+                """try {element[action]();BpNote(`Aksi "${action}" berhasil dijalankan pada elemen "${query}".`);} catch (error) {console.error(`Aksi "${action}" Gagal pada elemen "${query}":`, error);}}, time * 1000);} else if (timerFuncName === 'setInterval') {const intervalId = timerFunc(() => {try {if (elementExists(query)) {const currentElement = bp(query);currentElement[action]();BpNote(`Aksi "${action}" berhasil dijalankan pada elemen "${query}".`);} else {BpNote(`Elemen "${query}" tidak ditemukan.`,'error');""",
+                """try {element[action]();BpNote(`Action "${action}" was successfully executed on element "${query}".`);} catch (error) {console.error(`Action "${action}" failed on element "${query}":`, error);}}, time * 1000);} else if (timerFuncName === 'setInterval') {const intervalId = timerFunc(() => {try {if (elementExists(query)) {const currentElement = bp(query);currentElement[action]();BpNote(`Action "${action}" was successfully executed on element "${query}".`);} else {BpNote(`Element "${query}" not found.`,'error');"""
+                )
 
             ## Check known issues have been removed and remove antifeature label if corrected
             strings_to_check = [
